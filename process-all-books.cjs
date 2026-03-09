@@ -34,15 +34,22 @@ files.forEach(file => {
     
     console.log(`Converting ${file} to GFM...`);
     try {
-        execSync(`"${pandocPath}" "${path.join(inputDir, file)}" -t gfm-raw_html --extract-media=public/images/${bookName} -o "${mdPath}"`);
+        // Clean folder name for media to avoid character issues in build
+        const mediaDirName = bookName.replace(/[^a-z0-9-]/g, '');
+        execSync(`"${pandocPath}" "${path.join(inputDir, file)}" -t gfm-raw_html --extract-media=public/images/${mediaDirName} -o "${mdPath}"`);
     } catch (e) {
         console.error(`Failed to convert ${file}: ${e.message}`);
         return;
     }
 
     console.log(`Splitting ${bookName}...`);
-    const content = fs.readFileSync(mdPath, 'utf8');
+    let content = fs.readFileSync(mdPath, 'utf8');
     
+    // Fix image paths in content if they contain special chars
+    const mediaDirName = bookName.replace(/[^a-z0-9-]/g, '');
+    const oldMediaPattern = new RegExp(`public/images/[^/]+/media`, 'g');
+    content = content.replace(oldMediaPattern, `public/images/${mediaDirName}/media`);
+
     const splitRegex = /\n(?=#+ \*\*)/;
     const sections = content.split(splitRegex);
     
@@ -54,13 +61,11 @@ files.forEach(file => {
         const headerMatch = trimmed.match(/^#+ \*\*(.*)\*\*/);
         let title = headerMatch ? headerMatch[1] : `Bölüm ${count + 1}`;
         
-        // Clean title
         title = title.replace(/\*\*/g, '').replace(/\\/g, '').trim();
         if (title.includes(' – ')) {
             title = title.split(' – ').pop();
         }
         
-        // Safety: if title is just dots/stars or empty, give it a name
         if (!title.match(/[a-zA-Z0-9İıĞğÜüŞşÖöÇç]/)) {
             title = `Bölüm ${count + 1}`;
         }
@@ -68,7 +73,6 @@ files.forEach(file => {
         count++;
         const filename = `${String(count).padStart(2, '0')}.md`;
         
-        // Use single quotes for title to be safer with YAML
         const safeTitle = title.replace(/'/g, "''");
         const frontmatter = `---
 title: '${safeTitle}'
