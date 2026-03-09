@@ -1,0 +1,98 @@
+---
+import { getCollection } from 'astro:content';
+import ReaderLayout from '../layouts/ReaderLayout.astro';
+
+// Filter for tr/ entries and get unique book names
+const allEntries = await getCollection('risale');
+const trEntries = allEntries.filter(entry => entry.slug.startsWith('tr/') && entry.data.book);
+const books = [...new Set(trEntries.map(entry => entry.data.book))].sort();
+
+// Pretty names mapping
+const bookTitles = {
+  'sozler': 'Sözler',
+  'mektubat': 'Mektubat',
+  'lemalar': 'Lem\'alar',
+  'suâlar': 'Şualar',
+  'asâ-yi-musa': 'Asâ-yı Musa',
+  'mesnevî-i̇-nuri̇ye': 'Mesnevî-i Nuriye',
+  'tari̇hce-i̇-hayati': 'Tarihçe-i Hayatı',
+  'kastamonu-lâhi̇kasi': 'Kastamonu Lâhikası',
+  'barla-lâhi̇kasi': 'Barla Lâhikası',
+  'emi̇rdag-lâhi̇kasi-–-1': 'Emirdağ Lâhikası 1',
+  'emi̇rdag-lâhi̇kasi-–-2': 'Emirdağ Lâhikası 2',
+  'si̇kke-i̇-tasdi̇k-i̇-gaybî': 'Sikke-i Tasdik-i Gaybî',
+  'gencli̇k-rehberi̇': 'Gençlik Rehberi',
+  'hanimlar-rehberi̇': 'Hanımlar Rehberi',
+  'hutbe-i̇-sami̇ye': 'Hutbe-i Şamiye',
+  'muhakemat': 'Muhakemat',
+  'munazarat': 'Münazarat',
+  'i̇saratu’l-i̇’caz': 'İşaratü\'l-İ\'caz',
+};
+
+const getPrettyTitle = (slug) => bookTitles[slug] || slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+
+const title = "Электронная библиотека Рисале-и Нур";
+---
+
+<ReaderLayout title={title}>
+	<div class="max-w-7xl mx-auto py-12 lg:py-20">
+		<div class="text-center mb-16 lg:mb-24">
+			<h1 class="text-6xl lg:text-8xl font-black text-slate-800 dark:text-white mb-8 tracking-tighter leading-none">
+				Рисале-и Нур <br/><span class="text-amber-600 underline decoration-amber-200 underline-offset-[12px]">Библиотека</span>
+			</h1>
+			<p class="text-xl text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed font-reader">
+				Современное многоязычное пространство для изучения трудов Бедиуззамана Саида Нурси. Поддержка русского и турецкого (Latin & Osmanlıca) языков.
+			</p>
+		</div>
+		
+		<div class="space-y-32">
+			<!-- Russian Section -->
+			<section>
+				<h2 class="text-3xl font-black text-slate-800 dark:text-slate-100 mb-12 border-l-8 border-amber-500 pl-6 uppercase tracking-widest flex items-center gap-4">
+          <span class="w-12 h-1 bg-amber-500"></span>
+          Русский перевод
+        </h2>
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<a href="/tr/sozler/01" class="group p-10 bg-white dark:bg-slate-900 rounded-[3rem] border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-2xl hover:border-amber-400 transition-all duration-500 relative overflow-hidden">
+						<div class="absolute -top-12 -right-12 w-32 h-32 bg-amber-50 dark:bg-amber-900/10 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
+						<div class="relative z-10">
+							<div class="text-[10px] font-bold text-amber-600 mb-4 uppercase tracking-[0.3em]">Книга</div>
+							<h3 class="text-4xl font-black mb-4 text-slate-800 dark:text-slate-100 group-hover:text-amber-600 transition-colors">Слова <br/><span class="text-xl font-normal opacity-50 italic font-reader tracking-normal lowercase">(Sözler)</span></h3>
+							<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-8">Фундаментальный труд, разъясняющий основы веры через притчи и логические доказательства.</p>
+							<div class="flex items-center text-amber-600 font-bold text-sm">
+								Читать (Turkish Latin)
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2 group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+								</svg>
+							</div>
+						</div>
+					</a>
+				</div>
+			</section>
+
+			<!-- Turkish Latin Section -->
+			<section>
+				<h2 class="text-3xl font-black text-slate-800 dark:text-slate-100 mb-12 border-r-8 border-amber-600 pr-6 uppercase tracking-widest text-right flex items-center justify-end gap-4">
+          Latin Türkçe
+          <span class="w-12 h-1 bg-amber-600"></span>
+        </h2>
+				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+					{books.map(book => (
+            <a href={`/tr/${book}/01`} class="group p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl hover:border-amber-500 transition-all hover:-translate-y-1 shadow-sm">
+              <div class="text-[9px] text-amber-600 font-bold uppercase tracking-widest mb-2 opacity-50">Risale-i Nur</div>
+              <h4 class="text-lg font-bold text-slate-800 dark:text-slate-100 group-hover:text-amber-600 transition-colors leading-tight">
+                {getPrettyTitle(book)}
+              </h4>
+              <div class="mt-4 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="text-[10px] text-slate-400 italic">Oku</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </div>
+            </a>
+          ))}
+				</div>
+			</section>
+		</div>
+	</div>
+</ReaderLayout>

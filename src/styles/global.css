@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --font-amiri: "Amiri", serif;
+  --font-lora: "Lora", serif;
+}
+
+:root {
+  --bg-primary: #ffffff;
+  --text-primary: #1e293b;
+}
+
+.dark {
+  --bg-primary: #0f172a;
+  --text-primary: #f8fafc;
+}
+
+html, body {
+  font-family: var(--font-inter);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  scroll-behavior: smooth;
+}
+
+.font-osmanli {
+  font-family: var(--font-amiri);
+  line-height: 2.5;
+  font-size: 1.4em;
+  text-align: right;
+  direction: rtl;
+}
+
+.font-reader {
+  font-family: var(--font-lora);
+  line-height: 1.8;
+}
+
+/* Custom typography for the library */
+.prose-risale {
+  max-width: 65ch;
+  margin: auto;
+}
+
+.prose-risale p {
+  margin-bottom: 1.5rem;
+}
+
+/* RTL support */
+[dir="rtl"] {
+  text-align: right;
+}
+
+/* Transitions */
+.transition-all-custom {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
