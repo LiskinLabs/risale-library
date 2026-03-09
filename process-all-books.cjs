@@ -34,7 +34,6 @@ files.forEach(file => {
     
     console.log(`Converting ${file} to GFM...`);
     try {
-        // Clean folder name for media to avoid character issues in build
         const mediaDirName = bookName.replace(/[^a-z0-9-]/g, '');
         execSync(`"${pandocPath}" "${path.join(inputDir, file)}" -t gfm-raw_html --extract-media=public/images/${mediaDirName} -o "${mdPath}"`);
     } catch (e) {
@@ -45,10 +44,12 @@ files.forEach(file => {
     console.log(`Splitting ${bookName}...`);
     let content = fs.readFileSync(mdPath, 'utf8');
     
-    // Fix image paths in content if they contain special chars
+    // IMPORTANT: Fix image paths for Astro build
+    // Remove "public/" prefix because Astro serves content of public/ from root
+    // Also use forward slashes
     const mediaDirName = bookName.replace(/[^a-z0-9-]/g, '');
-    const oldMediaPattern = new RegExp(`public/images/[^/]+/media`, 'g');
-    content = content.replace(oldMediaPattern, `public/images/${mediaDirName}/media`);
+    content = content.replace(/public\/images\//g, '/images/');
+    content = content.replace(/\\/g, '/');
 
     const splitRegex = /\n(?=#+ \*\*)/;
     const sections = content.split(splitRegex);
@@ -61,7 +62,7 @@ files.forEach(file => {
         const headerMatch = trimmed.match(/^#+ \*\*(.*)\*\*/);
         let title = headerMatch ? headerMatch[1] : `Bölüm ${count + 1}`;
         
-        title = title.replace(/\*\*/g, '').replace(/\\/g, '').trim();
+        title = title.replace(/\*\*/g, '').replace(/\//g, '').trim();
         if (title.includes(' – ')) {
             title = title.split(' – ').pop();
         }
