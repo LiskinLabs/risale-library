@@ -7512,7 +7512,7 @@ Mütercim
 
 [\[4\]](https://risaleinur.hizmetvakfi.org/bakara-suresi-23-24-ayetler/#_ftnref4)\*
 
-![iicaz_murekkeb](public/images/isaratu’l-i’caz/media/image1.png)
+![iicaz_murekkeb](public/images/isaratu-l-i-caz/media/image1.png)
 
 Diyarbakır’da Van Valisi Cevdet Bey’in evinde 19 Şubat 1330 tarihinde
 Cuma gecesi bu tefsirin ilk Arabî nüshasını tebyiz ederken şu şekl-i

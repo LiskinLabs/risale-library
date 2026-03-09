@@ -17,6 +17,7 @@ files.forEach(file => {
     const bookName = file.replace('.docx', '').toLowerCase()
         .replace(/ /g, '-')
         .normalize('NFD').replace(/[\u0300-\u036f]/g, "") 
+        .replace(/[’']/g, '-')
         .replace(/ı/g, 'i')
         .replace(/ğ/g, 'g')
         .replace(/ü/g, 'u')
