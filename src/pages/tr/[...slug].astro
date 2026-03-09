@@ -73,7 +73,7 @@ const getPrettyTitle = (slug) => bookTitles[slug] || slug.replace(/-/g, ' ').rep
               const isActive = chapter.id === entry.id;
               return (
                 <a 
-                  href={`/tr/${chapterSlug}`} 
+                  href={`/risale-library/tr/${chapterSlug}`} 
                   class={`block text-xs py-2 px-3 rounded-lg transition-all ${
                     isActive 
                       ? 'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 font-bold' 
@@ -96,7 +96,7 @@ const getPrettyTitle = (slug) => bookTitles[slug] || slug.replace(/-/g, ' ').rep
           <nav class="space-y-1">
             {otherBooks.map(book => (
               <a 
-                href={`/tr/${book}/01`} 
+                href={`/risale-library/tr/${book}/01`} 
                 class="block text-[11px] py-2 px-3 text-slate-500 dark:text-slate-500 hover:text-amber-600 transition-colors"
               >
                 {getPrettyTitle(book)}
@@ -127,7 +127,7 @@ const getPrettyTitle = (slug) => bookTitles[slug] || slug.replace(/-/g, ' ').rep
       <div class="mt-20 pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-6 text-sm">
         <div class="w-full sm:w-auto">
           {prevChapter && (
-            <a href={`/tr/${prevChapter.slug.replace('tr/', '')}`} class="group flex flex-col gap-1 items-start text-slate-500 hover:text-amber-600 transition-colors">
+            <a href={`/risale-library/tr/${prevChapter.slug.replace('tr/', '')}`} class="group flex flex-col gap-1 items-start text-slate-500 hover:text-amber-600 transition-colors">
               <span class="text-[10px] uppercase tracking-widest opacity-50">Önceki</span>
               <span class="font-bold flex items-center gap-2 group-hover:-translate-x-1 transition-transform">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -139,7 +139,7 @@ const getPrettyTitle = (slug) => bookTitles[slug] || slug.replace(/-/g, ' ').rep
           )}
         </div>
 
-        <a href="/" class="p-2 text-slate-400 hover:text-amber-600 transition-colors" title="Ana Sayfa">
+        <a href="/risale-library/" class="p-2 text-slate-400 hover:text-amber-600 transition-colors" title="Ana Sayfa">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
           </svg>
@@ -147,7 +147,7 @@ const getPrettyTitle = (slug) => bookTitles[slug] || slug.replace(/-/g, ' ').rep
 
         <div class="w-full sm:w-auto text-right">
           {nextChapter && (
-            <a href={`/tr/${nextChapter.slug.replace('tr/', '')}`} class="group flex flex-col gap-1 items-end text-slate-500 hover:text-amber-600 transition-colors">
+            <a href={`/risale-library/tr/${nextChapter.slug.replace('tr/', '')}`} class="group flex flex-col gap-1 items-end text-slate-500 hover:text-amber-600 transition-colors">
               <span class="text-[10px] uppercase tracking-widest opacity-50">Sonraki</span>
               <span class="font-bold flex items-center gap-2 group-hover:translate-x-1 transition-transform">
                 {nextChapter.data.title}
