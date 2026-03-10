@@ -1,0 +1,198 @@
+{
+  "abed": {
+    "page_count": 705,
+    "json_file": "Risale_Library_Extracted\\abed.json"
+  },
+  "abedF": {
+    "page_count": 0,
+    "json_file": "Risale_Library_Extracted\\abedF.json"
+  },
+  "cevsen": {
+    "page_count": 103,
+    "json_file": "Risale_Library_Extracted\\cevsen.json"
+  },
+  "cevsenF": {
+    "page_count": 0,
+    "json_file": "Risale_Library_Extracted\\cevsenF.json"
+  },
+  "lugat": {
+    "page_count": 0,
+    "json_file": "Risale_Library_Extracted\\lugat.json"
+  },
+  "mealler": {
+    "page_count": 0,
+    "json_file": "Risale_Library_Extracted\\mealler.json"
+  },
+  "searchbar_kitap_fihristi": {
+    "page_count": 0,
+    "json_file": "Risale_Library_Extracted\\searchbar_kitap_fihristi.json"
+  },
+  "hizbkuran": {
+    "page_count": 147,
+    "json_file": "Risale_Library_Extracted\\hizbkuran.json"
+  },
+  "hizbkuranF": {
+    "page_count": 0,
+    "json_file": "Risale_Library_Extracted\\hizbkuranF.json"
+  },
+  "hizbulhakaik": {
+    "page_count": 239,
+    "json_file": "Risale_Library_Extracted\\hizbulhakaik.json"
+  },
+  "hizbulhakaikF": {
+    "page_count": 0,
+    "json_file": "Risale_Library_Extracted\\hizbulhakaikF.json"
+  },
+  "kuran": {
+    "page_count": 608,
+    "json_file": "Risale_Library_Extracted\\kuran.json"
+  },
+  "kuranF": {
+    "page_count": 0,
+    "json_file": "Risale_Library_Extracted\\kuranF.json"
+  },
+  "kuranmeal": {
+    "page_count": 608,
+    "json_file": "Risale_Library_Extracted\\kuranmeal.json"
+  },
+  "kuranmealF": {
+    "page_count": 0,
+    "json_file": "Risale_Library_Extracted\\kuranmealF.json"
+  },
+  "resimlihizbulhakaikF": {
+    "page_count": 0,
+    "json_file": "Risale_Library_Extracted\\resimlihizbulhakaikF.json"
+  },
+  "resimlikuranF": {
+    "page_count": 0,
+    "json_file": "Risale_Library_Extracted\\resimlikuranF.json"
+  },
+  "rnk_asamusa_2018": {
+    "page_count": 249,
+    "json_file": "Risale_Library_Extracted\\rnk_asamusa_2018.json"
+  },
+  "rnk_asamusa_2018F": {
+    "page_count": 0,
+    "json_file": "Risale_Library_Extracted\\rnk_asamusa_2018F.json"
+  },
+  "rnk_barla_2018": {
+    "page_count": 394,
+    "json_file": "Risale_Library_Extracted\\rnk_barla_2018.json"
+  },
+  "rnk_barla_2018F": {
+    "page_count": 0,
+    "json_file": "Risale_Library_Extracted\\rnk_barla_2018F.json"
+  },
+  "rnk_emirdag1_2018": {
+    "page_count": 299,
+    "json_file": "Risale_Library_Extracted\\rnk_emirdag1_2018.json"
+  },
+  "rnk_emirdag1_2018F": {
+    "page_count": 0,
+    "json_file": "Risale_Library_Extracted\\rnk_emirdag1_2018F.json"
+  },
+  "rnk_emirdag2_2018": {
+    "page_count": 254,
+    "json_file": "Risale_Library_Extracted\\rnk_emirdag2_2018.json"
+  },
+  "rnk_emirdag2_2018F": {
+    "page_count": 0,
+    "json_file": "Risale_Library_Extracted\\rnk_emirdag2_2018F.json"
+  },
+  "rnk_imankufur_2018": {
+    "page_count": 205,
+    "json_file": "Risale_Library_Extracted\\rnk_imankufur_2018.json"
+  },
+  "rnk_imankufur_2018F": {
+    "page_count": 0,
+    "json_file": "Risale_Library_Extracted\\rnk_imankufur_2018F.json"
+  },
+  "rnk_isarat_2018": {
+    "page_count": 321,
+    "json_file": "Risale_Library_Extracted\\rnk_isarat_2018.json"
+  },
+  "rnk_isarat_2018F": {
+    "page_count": 0,
+    "json_file": "Risale_Library_Extracted\\rnk_isarat_2018F.json"
+  },
+  "rnk_kastamonu_2018": {
+    "page_count": 251,
+    "json_file": "Risale_Library_Extracted\\rnk_kastamonu_2018.json"
+  },
+  "rnk_kastamonu_2018F": {
+    "page_count": 0,
+    "json_file": "Risale_Library_Extracted\\rnk_kastamonu_2018F.json"
+  },
+  "rnk_lemalar_2018": {
+    "page_count": 495,
+    "json_file": "Risale_Library_Extracted\\rnk_lemalar_2018.json"
+  },
+  "rnk_lemalar_2018F": {
+    "page_count": 0,
+    "json_file": "Risale_Library_Extracted\\rnk_lemalar_2018F.json"
+  },
+  "rnk_mektubat_2018": {
+    "page_count": 572,
+    "json_file": "Risale_Library_Extracted\\rnk_mektubat_2018.json"
+  },
+  "rnk_mektubat_2018F": {
+    "page_count": 0,
+    "json_file": "Risale_Library_Extracted\\rnk_mektubat_2018F.json"
+  },
+  "rnk_mesnevi_2018": {
+    "page_count": 268,
+    "json_file": "Risale_Library_Extracted\\rnk_mesnevi_2018.json"
+  },
+  "rnk_mesnevi_2018F": {
+    "page_count": 0,
+    "json_file": "Risale_Library_Extracted\\rnk_mesnevi_2018F.json"
+  },
+  "rnk_muhakemat_2018": {
+    "page_count": 139,
+    "json_file": "Risale_Library_Extracted\\rnk_muhakemat_2018.json"
+  },
+  "rnk_muhakemat_2018F": {
+    "page_count": 0,
+    "json_file": "Risale_Library_Extracted\\rnk_muhakemat_2018F.json"
+  },
+  "rnk_sikke_2018": {
+    "page_count": 266,
+    "json_file": "Risale_Library_Extracted\\rnk_sikke_2018.json"
+  },
+  "rnk_sikke_2018F": {
+    "page_count": 0,
+    "json_file": "Risale_Library_Extracted\\rnk_sikke_2018F.json"
+  },
+  "rnk_sozler_2018": {
+    "page_count": 859,
+    "json_file": "Risale_Library_Extracted\\rnk_sozler_2018.json"
+  },
+  "rnk_sozler_2018F": {
+    "page_count": 0,
+    "json_file": "Risale_Library_Extracted\\rnk_sozler_2018F.json"
+  },
+  "rnk_sualar_2018": {
+    "page_count": 650,
+    "json_file": "Risale_Library_Extracted\\rnk_sualar_2018.json"
+  },
+  "rnk_sualar_2018F": {
+    "page_count": 0,
+    "json_file": "Risale_Library_Extracted\\rnk_sualar_2018F.json"
+  },
+  "rnk_tarihce_2018": {
+    "page_count": 716,
+    "json_file": "Risale_Library_Extracted\\rnk_tarihce_2018.json"
+  },
+  "rnk_tarihce_2018F": {
+    "page_count": 0,
+    "json_file": "Risale_Library_Extracted\\rnk_tarihce_2018F.json"
+  },
+  "tesbihat": {
+    "page_count": 35,
+    "json_file": "Risale_Library_Extracted\\tesbihat.json"
+  },
+  "tesbihatF": {
+    "page_count": 0,
+    "json_file": "Risale_Library_Extracted\\tesbihatF.json"
+  }
+}

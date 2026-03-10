@@ -14,37 +14,78 @@ const { entry } = Astro.props;
 const { Content, headings } = await entry.render();
 
 const allEntries = await getCollection('risale');
-const otherBooks = [...new Set(allEntries.filter(e => e.slug.startsWith('tr/') && e.data.book).map(e => e.data.book))]
-  .filter(b => b !== entry.data.book)
-  .sort();
+const trEntries = allEntries.filter(e => e.slug.startsWith('tr/') && e.data.book);
+
+// Categorize books for sidebar
+const mainBooksSlugs = ['sozler', 'mektubat', 'lemalar', 'sualar', 'asamusa', 'tarihce', 'barla', 'kastamonu', 'emirdag1', 'emirdag2', 'sikke', 'muhakemat', 'mesnevi', 'isarat', 'imankufur'];
+const mainBooks = trEntries.filter(e => mainBooksSlugs.includes(e.data.book)).sort((a, b) => a.data.book.localeCompare(b.data.book));
+const otherBooks = trEntries.filter(e => !mainBooksSlugs.includes(e.data.book)).sort((a, b) => a.data.book.localeCompare(b.data.book));
 
 const bookTitles = {
-  'lem-alar': 'Lem\'alar',
-  'isaratu-l-i-caz': 'İşaratü\'l-İ\'caz',
-  'nur-un-ilk-kapisi': 'Nur\'un İlk Kapısı',
-  'mesnevi-i-nuriye': 'Mesnevî-i Nuriye',
+  'lemalar': 'Lem\'alar',
+  'isarat': 'İşaratü\'l-İ\'caz',
+  'mesnevi': 'Mesnevî-i Nuriye',
   'sozler': 'Sözler',
   'mektubat': 'Mektubat',
   'sualar': 'Şualar',
-  'asa-yi-musa': 'Asâ-yı Musa',
-  'tarihce-i-hayati': 'Tarihçe-i Hayatı',
+  'asamusa': 'Asâ-yı Musa',
+  'tarihce': 'Tarihçe-i Hayatı',
+  'barla': 'Barla Lâhikası',
+  'kastamonu': 'Kastamonu Lâhikası',
+  'emirdag1': 'Emirdağ Lâhikası 1',
+  'emirdag2': 'Emirdağ Lâhikası 2',
+  'sikke': 'Sikke-i Tasdik-i Gaybî',
+  'muhakemat': 'Muhakemat',
+  'imankufur': 'Asâ-yı Musa (İman-Küfür)',
+  'kuranmeal': 'Kur\'an-ı Kerim Meali',
+  'kuran': 'Kur\'an-ı Kerim',
+  'cevsen': 'Cevşen-ül Kebir',
+  'tesbihat': 'Namaz Tesbihatı',
+  'abed': 'Âsâr-ı Bediiye',
+  'hizbkuran': 'Hizb-ül Kur\'an',
+  'hizbulhakaik': 'Hizb-ül Hakaik',
 };
 
-const getPrettyTitle = (slug) => bookTitles[slug] || slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+const getPrettyTitle = (slug, fallback) => bookTitles[slug] || fallback;
 ---
 
 <ReaderLayout title={`${entry.data.title} | Рисале-и Нур`}>
   <div class="flex flex-col lg:flex-row gap-8 max-w-[1600px] mx-auto px-4">
     
-    <!-- Left Sidebar: Other Books -->
+    <!-- Left Sidebar: Library Navigation -->
     <aside class="hidden xl:block w-64 flex-shrink-0">
-      <div class="sticky top-24 space-y-8">
+      <div class="sticky top-24 space-y-8 max-h-[calc(100vh-8rem)] overflow-y-auto pr-4 scrollbar-thin">
         <div>
-          <h3 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4">Другие книги</h3>
+          <h3 class="text-[10px] font-bold text-amber-600 uppercase tracking-widest mb-4">Külliyat</h3>
+          <nav class="space-y-1">
+            {mainBooks.map(book => (
+              <a 
+                href={`/risale-library/tr/${book.data.book}`} 
+                class={`block text-[11px] py-1.5 px-3 rounded-lg transition-colors ${
+                  book.data.book === entry.data.book 
+                    ? 'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 font-bold' 
+                    : 'text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-slate-100'
+                }`}
+              >
+                {getPrettyTitle(book.data.book, book.data.title)}
+              </a>
+            ))}
+          </nav>
+        </div>
+
+        <div>
+          <h3 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4">Diğer Eserler</h3>
           <nav class="space-y-1">
             {otherBooks.map(book => (
-              <a href={`/risale-library/tr/${book}`} class="block text-xs py-1.5 text-slate-500 hover:text-amber-600 transition-colors">
-                {getPrettyTitle(book)}
+              <a 
+                href={`/risale-library/tr/${book.data.book}`} 
+                class={`block text-[11px] py-1.5 px-3 rounded-lg transition-colors ${
+                  book.data.book === entry.data.book 
+                    ? 'bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-white font-bold' 
+                    : 'text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-slate-100'
+                }`}
+              >
+                {getPrettyTitle(book.data.book, book.data.title)}
               </a>
             ))}
           </nav>
@@ -56,7 +97,7 @@ const getPrettyTitle = (slug) => bookTitles[slug] || slug.replace(/-/g, ' ').rep
     <main class="flex-grow max-w-4xl bg-white dark:bg-slate-900 shadow-xl shadow-slate-200/50 dark:shadow-none rounded-3xl p-8 md:p-12 min-h-screen">
       <div class="mb-12 border-b border-slate-100 dark:border-slate-800 pb-8">
         <h1 class="text-5xl font-black text-slate-800 dark:text-white mb-4 tracking-tighter">
-          {entry.data.title}
+          {getPrettyTitle(entry.data.book, entry.data.title)}
         </h1>
         <div class="flex items-center gap-4 text-sm text-slate-400">
           <span class="px-3 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 rounded-full font-bold uppercase text-[10px]">Latin Türkçe</span>
@@ -120,16 +161,17 @@ const getPrettyTitle = (slug) => bookTitles[slug] || slug.replace(/-/g, ' ').rep
     content.addEventListener('click', (e) => {
       const target = e.target.closest('a');
       if (target && (target.hash.includes('fn') || target.id.includes('fnref'))) {
+        // MDX generates links like #fn-1
         e.preventDefault();
         const noteId = target.hash.substring(1);
         const noteElement = document.getElementById(noteId);
         
         if (noteElement) {
-          // Clone to avoid moving the element
-          const noteText = noteElement.innerHTML;
-          popupContent.innerHTML = noteText;
+          popupContent.innerHTML = noteElement.innerHTML;
+          // Remove backlink from content
+          const backlink = popupContent.querySelector('.footnote-backref');
+          if (backlink) backlink.remove();
           
-          // Show popup
           popup.classList.remove('hidden');
           setTimeout(() => {
             popup.classList.remove('translate-y-10', 'opacity-0');
@@ -146,7 +188,7 @@ const getPrettyTitle = (slug) => bookTitles[slug] || slug.replace(/-/g, ' ').rep
     }, 300);
   });
 
-  // Active heading highlighting in TOC
+  // Active heading highlighting
   const observerOptions = {
     root: null,
     rootMargin: '0px 0px -80% 0px',
@@ -172,30 +214,11 @@ const getPrettyTitle = (slug) => bookTitles[slug] || slug.replace(/-/g, ' ').rep
 </script>
 
 <style is:global>
-  /* Custom scrollbar for sidebar */
-  .scrollbar-thin::-webkit-scrollbar {
-    width: 4px;
-  }
-  .scrollbar-thin::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  .scrollbar-thin::-webkit-scrollbar-thumb {
-    @apply bg-slate-200 dark:bg-slate-800 rounded-full;
-  }
-  
-  /* Smooth scroll */
-  html {
-    scroll-behavior: smooth;
-  }
-
-  /* Style footnotes section at the bottom */
-  .footnotes {
-    @apply mt-20 pt-8 border-t border-slate-100 dark:border-slate-800 text-slate-400 text-xs;
-  }
+  .scrollbar-thin::-webkit-scrollbar { width: 4px; }
+  .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+  .scrollbar-thin::-webkit-scrollbar-thumb { @apply bg-slate-200 dark:bg-slate-800 rounded-full; }
+  html { scroll-behavior: smooth; }
+  .footnotes { @apply mt-20 pt-8 border-t border-slate-100 dark:border-slate-800 text-slate-400 text-xs; }
   .footnotes hr { display: none; }
-  
-  /* Style footnote links in text */
-  a[data-footnote-ref] {
-    @apply text-amber-600 font-bold no-underline hover:underline px-0.5;
-  }
+  a[data-footnote-ref] { @apply text-amber-600 font-bold no-underline hover:underline px-0.5; }
 </style>

@@ -27,3 +27,6 @@ pnpm-debug.log*
 *.log
 pandoc-3.9/
 
+
+migrate-json-to-md.cjs
+
