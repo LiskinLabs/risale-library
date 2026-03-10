@@ -1,3 +1,8 @@
+---
+title: 'MUHAKEMAT'
+book: 'muhakemat'
+---
+
 # **MUHAKEMAT**
 
 **Müellifi**
@@ -64,7 +69,7 @@ Beyt:
 
 <span dir="rtl">رُوبَه اَزْ حٖيلَه چِه سَانْ بِگُسَلَدْ اٖينْ سِلْسِلَه رَا</span>
 
-\*\*\*
+/*/*/*
 
 **Emma ba’d:** Şu fakir, garib Nursî ki “Bid’atüzzaman” lakabıyla
 müsemma olmaya lâyık iken haberi olmadan “Bedîüzzaman” ile meşhur olan
@@ -161,7 +166,7 @@ muasırlarımız, üçüncü asrın nihayetinden on üçüncü asra kadar geçmi
 olan asırların fihristesi veyahut enmuzeci veyahut melez bir
 kavimdirler. Hattâ bu zamanın çok bedihiyatı, onlarca mevhumat sayılır.
 
-\*\*\*
+/*/*/*
 
 #### **Mukaddime**
 
@@ -288,7 +293,7 @@ maskara olacaktır.
 Mazide nazarî olan bir şey, müstakbelde bedihî olabilir.
 
 Şöyle tahakkuk etmiştir: Âlemde meylü’l-istikmal vardır.
-(\*[\[1\]](https://risaleinur.hizmetvakfi.org/birinci-makale/#_ftn1))
+(/*[/[1/]](https://risaleinur.hizmetvakfi.org/birinci-makale/#_ftn1))
 Onun ile hilkat-i âlem, kanun-u tekâmüle tabidir. İnsan ise âlemin
 semerat ve eczasından olduğundan onda dahi meylü’l-istikmalden bir
 meylü’t-terakki mevcuddur. Bu meyil ise telahuk-u efkârdan istimdad ile
@@ -654,7 +659,7 @@ nakkaşı müttehem edecekler.
 
 Şimdi bu kaide, fenlerde aynen cereyan eder. Çaresi odur ki bir fenni
 esas tutup sair malûmatını avzen
-(\*[\[2\]](https://risaleinur.hizmetvakfi.org/birinci-makale/#_ftn2)) ve
+(/*[/[2/]](https://risaleinur.hizmetvakfi.org/birinci-makale/#_ftn2)) ve
 zenav gibi yapmaktır.
 
 Hem de âdât-ı müstemirredendir ki kitab-ı vâhidde ulûm-u kesîre tezahüm
@@ -1401,7 +1406,7 @@ asıl maksud olan ilim ise tebeî kalmakla beraber ibareleri bir derece
 mebzul olan ve silsile-i tahsile resmen geçen kitaplar; evkat, efkârı
 kendine hasredip harice çıkmasına meydan vermemeleridir.
 
-\*\*\*
+/*/*/*
 
 Ey birader-i vicdan! Zannediyorum: Şimdi şu mukaddimat üzerine terettüp
 edecek olan kütüb-ü selâseyi, ne mahiyette olduklarını görmek istiyorsun
@@ -2242,7 +2247,7 @@ etmiştir. Demek muhakkak oldu ki:
 belâgat-ı Arabiyenin madenindendir. Yoksa felsefe-i Yunaniyenin
 destgâhından değildir.
 
-\*\*\*
+/*/*/*
 
 Ey birader!
 
@@ -2262,7 +2267,7 @@ olduğumdan alaturka terziliğe alışamadım. Hem de şahsın üslub-u beyanı,
 şahsın timsal-i şahsiyetidir. Ben ise gördüğünüz veya işittiğiniz gibi
 halli müşkül bir muammayım… <span dir="rtl">تَمَّ تَم</span>َّ
 
-[\[1\]](https://risaleinur.hizmetvakfi.org/birinci-makale/#_ftnref1) \*
+[/[1/]](https://risaleinur.hizmetvakfi.org/birinci-makale/#_ftnref1) /*
 Bizim bir Kürt demiştir:
 
 Her zerrede temayül ayândır tekâmüle
@@ -2275,7 +2280,7 @@ Ol noktaya teveccüh ile yükselir hayat.
 
 Kahriyyat
 
-[\[2\]](https://risaleinur.hizmetvakfi.org/birinci-makale/#_ftnref2) \*
+[/[2/]](https://risaleinur.hizmetvakfi.org/birinci-makale/#_ftnref2) /*
 Kürtçedir.
 
 # **İkinci Makale**
@@ -2601,7 +2606,7 @@ kırmızı bir mendili bağlıyor. Öyle de sel, sahraya yükünü attığı gib
 ticaret-i hafiyeye benzer imtizacat-ı kimyeviye ile çiçeklerin
 nâzeninlerine güya rengârenk elbise alınır, dikilir. Hattâ çiçeklerin
 çobanı ıtlakına şâyan olan kefne
-(\*[\[1\]](https://risaleinur.hizmetvakfi.org/ikinci-makale/#_ftn1))
+(/*[/[1/]](https://risaleinur.hizmetvakfi.org/ikinci-makale/#_ftn1))
 başını kırmızılaştırıyor.
 
 Hem de:
@@ -2917,7 +2922,7 @@ istilhak ve neseblerini inkâr etmesin ve desin: “Onlar benim.” veyahut
 
 Hem de garazın mesîlinde ve kasdın mecrasında teferruk etmemek için
 sedad etmek, çeleçepe
-(\*[\[2\]](https://risaleinur.hizmetvakfi.org/ikinci-makale/#_ftn2))
+(/*[/[2/]](https://risaleinur.hizmetvakfi.org/ikinci-makale/#_ftn2))
 temayül etmemektir. Tâ canibler garazın kuvvetini teşerrüb etmekle
 ehemmiyetsiz etmesin. Belki köşeler, tazammun ettikleri taravet ve
 letafetiyle zenav gibi garaza imdat ve kuvvet vermek gerektir.
@@ -3085,15 +3090,15 @@ senin zihnine istidadat verebilsin.
 İşte “Unsur-u Akide”yi Üçüncü Makale’de arayacağız.
 
 İşte başlıyorum: “Nahu”…
-(\*[\[3\]](https://risaleinur.hizmetvakfi.org/ikinci-makale/#_ftn3))
+(/*[/[3/]](https://risaleinur.hizmetvakfi.org/ikinci-makale/#_ftn3))
 
-[\[1\]](https://risaleinur.hizmetvakfi.org/ikinci-makale/#_ftnref1) \*
+[/[1/]](https://risaleinur.hizmetvakfi.org/ikinci-makale/#_ftnref1) /*
 Dikenli, ihrak edilir bir dağ mahsulüdür.
 
-[\[2\]](https://risaleinur.hizmetvakfi.org/ikinci-makale/#_ftnref2) \*
+[/[2/]](https://risaleinur.hizmetvakfi.org/ikinci-makale/#_ftnref2) /*
 Bu kelime Kürtçedir.
 
-[\[3\]](https://risaleinur.hizmetvakfi.org/ikinci-makale/#_ftnref3) \*
+[/[3/]](https://risaleinur.hizmetvakfi.org/ikinci-makale/#_ftnref3) /*
 Kürtçedir.
 
 # **Üçüncü Makale**
@@ -3678,7 +3683,7 @@ pası ve zengârı hükmünde olan arzu-yu hilaf ve iltizam-ı taraf-ı muhalif
 ve mazur tutulmak için kendi evhamına bir hak vermek ve bir asla ircâ
 etmek ve mecmuun neticesini her bir fertten istemek –ki zafiyeti
 sebebiyle neticenin reddine bir istidad-ı seyyie verilir
-(\*[\[1\]](https://risaleinur.hizmetvakfi.org/ucuncu-makale/#_ftn1))–
+(/*[/[1/]](https://risaleinur.hizmetvakfi.org/ucuncu-makale/#_ftn1))–
 hem de bahaneli çocukluk tabiatı hem de mahaneli düşman seciyesi hem de
 yalnız ayıbı görmek şanında olan müşteri nazarı gibi emirlerden o
 mir’atı taskil ve tasfiye et, muvazene ve mukabele eyle. Ekser emaratın
@@ -3971,13 +3976,13 @@ temessük eden Muhammed’i (asm) a’lâ-yı illiyyîn-i şerefe i’lâ ve âl
 inkılab-ı azîmi îka ettiğinden şarktan garba kadar kizbden bu’d
 derecesini göstermekle kıymet-i âliyesini i’lâ etmek cihetiyle sûku ve
 metaını gayet nâfık ve râic etmiştir
-(\*[\[2\]](https://risaleinur.hizmetvakfi.org/ucuncu-makale/#_ftn2)).
+(/*[/[2/]](https://risaleinur.hizmetvakfi.org/ucuncu-makale/#_ftn2)).
 
 Ve kizb ise teşebbüsat-ı azîmeyi murdarların laşeleri gibi ruhsuz
 bıraktığı için nihayet-i kubhunu izhar ve onun ile temessük eden
 Müseylime ve emsali, esfel-i safilîn-i hıssete düşürdüğü cihetle, meta-ı
 zehr-âlûdu ve sûku gayet muattal ve kesad etmiştir
-(\*[\[3\]](https://risaleinur.hizmetvakfi.org/ucuncu-makale/#_ftn3)).
+(/*[/[3/]](https://risaleinur.hizmetvakfi.org/ucuncu-makale/#_ftn3)).
 
 İşte ehl-i izzet ve tefahur olan kavm-i Arab’ın tabiatlarındaki
 meylü’r-râic sâikasıyla müsabaka ederek o kâsid kizbi terk edip ve râic
@@ -4181,7 +4186,7 @@ etmekle beraber, iki âlemin saadetini temin eder. İnsaf edersen, bu ise
 yalnız o zamanın insanlarının değil belki nev-i beşerin tavkı haricinde
 göreceksin. Meğer evham-ı seyyie, senin şu tarafa müteveccih olan
 fıtratının tarfını
-(\*[\[4\]](https://risaleinur.hizmetvakfi.org/ucuncu-makale/#_ftn4))
+(/*[/[4/]](https://risaleinur.hizmetvakfi.org/ucuncu-makale/#_ftn4))
 çürütmüş ola…
 
 **Dördüncüsü:** Onuncu Mukaddime’de geçtiği gibi hem de ikinci nokta-i
@@ -4460,7 +4465,7 @@ değil midir? Evet
 بِالْخَيَالِ وَاِنَّ مَسْلَكَهُ الْحَقَّ اَغْنٰى وَ اَعْلٰى وَ اَنْزَهُ وَ اَرْفَعُ مِنْ اَنْ يُدَلِّسَ اَوْ يُغَالِطَ عَلَى
 النَّاس</span>ِ
 
-(\*[\[5\]](https://risaleinur.hizmetvakfi.org/ucuncu-makale/#_ftn5))
+(/*[/[5/]](https://risaleinur.hizmetvakfi.org/ucuncu-makale/#_ftn5))
 
 Neam, hayalin ne haddi vardır ki nur-efşan olan nazarına karşı kendini
 hakikat gösterebilsin. Evet, mesleği nefs-i hak ve mezhebi ayn-ı
@@ -4530,10 +4535,10 @@ müteavinenin nazarıyla bakınız! Tâ ki bir taraftan hücum eden evhamı,
 mütecavibe ve müteavine olan cevanib-i saire def’edebilsin.
 
 İşte şu halde Japonların suali olan
-(\*[\[6\]](https://risaleinur.hizmetvakfi.org/ucuncu-makale/#_ftn6))
+(/*[/[6/]](https://risaleinur.hizmetvakfi.org/ucuncu-makale/#_ftn6))
 <span dir="rtl">مَا الدَّلٖيلُ الْوَاضِحُ عَلٰى وُجُودِ الْاِلٰهِ الَّذٖى تَدْعُونَنَا
 اِلَيْه</span>ِ ye karşı derim: İşte Muhammed aleyhissalâtü
-vesselâm…(\*[\[7\]](https://risaleinur.hizmetvakfi.org/ucuncu-makale/#_ftn7))
+vesselâm…(/*[/[7/]](https://risaleinur.hizmetvakfi.org/ucuncu-makale/#_ftn7))
 
 **İşaret ve İrşad ve Tenbih:** Vaktâ kâinat tarafından, hükûmet-i hilkat
 canibinden müstantık ve sâil sıfatıyla gönderilen fenn-i hikmet,
@@ -4655,28 +4660,28 @@ besmele-keşidir.
 **İKİNCİ MAKSAT:** Kur’an’da işaret olunan haşre dair iki delilin
 beyanındadır. İşte <span dir="rtl">نخو بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحٖيم</span>ِ
 
-\*\*\*
+/*/*/*
 
-[\[1\]](https://risaleinur.hizmetvakfi.org/ucuncu-makale/#_ftnref1) \*
+[/[1/]](https://risaleinur.hizmetvakfi.org/ucuncu-makale/#_ftnref1) /*
 Dikkat lâzımdır.
 
-[\[2\]](https://risaleinur.hizmetvakfi.org/ucuncu-makale/#_ftnref2) \*
+[/[2/]](https://risaleinur.hizmetvakfi.org/ucuncu-makale/#_ftnref2) /*
 Şimdiki hürriyet gibi.
 
-[\[3\]](https://risaleinur.hizmetvakfi.org/ucuncu-makale/#_ftnref3) \*
+[/[3/]](https://risaleinur.hizmetvakfi.org/ucuncu-makale/#_ftnref3) /*
 Menfur casusluk gibi.
 
-[\[4\]](https://risaleinur.hizmetvakfi.org/ucuncu-makale/#_ftnref4) \*
+[/[4/]](https://risaleinur.hizmetvakfi.org/ucuncu-makale/#_ftnref4) /*
 Dikkat lâzımdır.
 
-[\[5\]](https://risaleinur.hizmetvakfi.org/ucuncu-makale/#_ftnref5) \*
+[/[5/]](https://risaleinur.hizmetvakfi.org/ucuncu-makale/#_ftnref5) /*
 Şu Arabiyyü’l-ibare iki mezheb-i bâtılın reddine işarettir.
 
-[<u>\[6\]</u>](https://risaleinur.hizmetvakfi.org/ucuncu-makale/#_ftnref6)
-\* Mâşâallah, güzel bir cevap.
+[<u>/[6/]</u>](https://risaleinur.hizmetvakfi.org/ucuncu-makale/#_ftnref6)
+/* Mâşâallah, güzel bir cevap.
 
-[<u>\[7\]</u>](https://risaleinur.hizmetvakfi.org/ucuncu-makale/#_ftnref7)
-\* Rus’u mağlup eden Japon’un başkumandanı Meşihat-ı İslâmiyeden bu
+[<u>/[7/]</u>](https://risaleinur.hizmetvakfi.org/ucuncu-makale/#_ftnref7)
+/* Rus’u mağlup eden Japon’un başkumandanı Meşihat-ı İslâmiyeden bu
 suali sormuş. Eski Said bu makam-ı sâlisle cevap vermiş.
 
 # **Takriz**

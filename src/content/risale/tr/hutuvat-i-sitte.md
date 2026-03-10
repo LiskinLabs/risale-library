@@ -1,3 +1,8 @@
+---
+title: 'Hutuvât-ı Sitte'
+book: 'hutuvat-i-sitte'
+---
+
 Müellifi
 
 Bediüzzaman Said-i Nursî

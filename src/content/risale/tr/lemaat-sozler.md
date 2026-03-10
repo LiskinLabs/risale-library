@@ -1,3 +1,8 @@
+---
+title: 'Lemaat (Sözler)'
+book: 'lemaat-sozler'
+---
+
 # **Lemaat (Sözler)**
 
 ## 
@@ -40,7 +45,7 @@ Risale-i Nur şakirdlerinden
 
 **Sungur, Mehmed Feyzi, Hüsrev**
 
-\*\*\*
+/*/*/*
 
 #### **İhtar**
 
@@ -83,23 +88,23 @@ iyidir.
 benim. Sen ise ey kāri müstemisin. Müstemiin tenkide hakkı yoktur;
 beğendiğini alır, beğenmediğine ilişmez. Şu eserim, bu mübarek ramazanın
 feyzi
-(\*[<u>\[1\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn1))
+(/*[<u>/[1/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn1))
 olduğundan, ümit ederim ki inşâallah din kardeşimin kalbine tesir eder
 de lisanı bana bir dua-i mağfiret bahşeder veya bir Fatiha okur.
 
 #### **Eddâî**
 
-(\*\*[<u>\[2\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn2))
+(/*/*[<u>/[2/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn2))
 Yıkılmış bir mezarım ki yığılmıştır içinde
 
 Said’den yetmiş dokuz emvat
-(\*\*\*[<u>\[3\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn3))
+(/*/*/*[<u>/[3/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn3))
 bâ-âsam âlâma.
 
 Sekseninci olmuştur, mezara bir mezar taş
 
 Beraber ağlıyor
-(\*\*\*\*[<u>\[4\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn4))
+(/*/*/*/*[<u>/[4/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn4))
 hüsran-ı İslâm’a.
 
 Mezar taşımla pür-emvat enîndar o mezarımla
@@ -114,7 +119,7 @@ Zira yemin-i yümn-ü imandır
 
 Verir emni eman ile enama…
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحٖيم</span>ِ
 
@@ -256,7 +261,7 @@ otuz sure münderic; bu bunlara sehergâh…
 
 <span dir="rtl">لَا يَعْلَمُ الْغَيْبَ اِلَّا اللّٰه</span>ُ
 
-\*\*\*
+/*/*/*
 
 ##### **Sebep sırf zahirîdir**
 
@@ -264,10 +269,10 @@ otuz sure münderic; bu bunlara sehergâh…
 aklın nazarında.
 
 Tevhid ve celal ister ki esbab-ı tabiî, dâmenkeş-i tesir-i hakiki ola
-(\*[<u>\[5\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn5))
+(/*[<u>/[5/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn5))
 kudret eserinde.
 
-\*\*\*
+/*/*/*
 
 ##### **Vücud, âlem-i cismanîde münhasır değil**
 
@@ -277,7 +282,7 @@ Vücudun hasra gelmez muhtelif envaını, münhasır olmaz, sıkışmaz şu
 Âlem-i cismanî bir tenteneli perde gibi şule-feşan gaybî avâlim
 üzerinde.
 
-\*\*\*
+/*/*/*
 
 ##### **Kalem-i kudrette ittihat, tevhidi ilan eder**
 
@@ -287,7 +292,7 @@ esbabının icadını.
 Nakş-ı kilkî ayn-ı kudret, hilkatin her noktasında bizzarure reddeder
 vesaitin vücudunu.
 
-\*\*\*
+/*/*/*
 
 ##### **Bir şey, her şeysiz olmaz**
 
@@ -306,7 +311,7 @@ namına etrafı görüştürür.
 Zîhayat her harfi, her bir cümleye müteveccih birer yüzü hem de nâzır
 birer gözü baktırır.
 
-\*\*\*
+/*/*/*
 
 ##### **Güneşin hareketi cazibe içindir, cazibe istikrar-ı manzumesi içindir**
 
@@ -316,7 +321,7 @@ yemişleri.
 Ger sükûtuyla sükûnet eylese cezbe kaçar, ağlar fezada muntazam
 meczupları.
 
-\*\*\*
+/*/*/*
 
 ##### **Küçük şeyler büyük şeylerle merbuttur**
 
@@ -329,7 +334,7 @@ nazmeylemiş.
 Gözde rü’yet, midede hem ihtiyacı dercedendir mutlaka, sema gözüne ziya
 sürmesi çekmiş, zemin yüzüne gıda sofrası sermiş.
 
-\*\*\*
+/*/*/*
 
 ##### **Kâinatın nazmında büyük bir i’caz var**
 
@@ -342,7 +347,7 @@ bi’l-imtisal
 Ederek secde ki <span dir="rtl">سُبْحَانَكَ لَا قُدْرَةَ فٖينَا رَبَّنَا اَنْتَ الْقَدٖيرُ
 الْاَزَلِىُّ ذُو الْجَلَال</span>ِ
 
-\*\*\*
+/*/*/*
 
 ##### **Kudrete nisbet her şey müsavidir**
 
@@ -355,7 +360,7 @@ nisbet tefavüt eylemez.
 Çünkü her şey bağlıdır her şey ile. Her şeyi yapamayan, bir şeyi de
 yapamaz.
 
-\*\*\*
+/*/*/*
 
 ##### **Kâinatı elinde tutamayan, zerreyi halk edemez**
 
@@ -367,7 +372,7 @@ olmasa
 
 Dünyada hiçbir şeyde dava-yı halk edip, iddia-yı icad edemez.
 
-\*\*\*
+/*/*/*
 
 ##### **İhya-yı nev, ihya-yı fert gibidir**
 
@@ -377,7 +382,7 @@ kudrete ağır gelmez.
 Şu dünyanın mevti de ihyası da öyledir. Bütün zîruh ihyası onda fazla
 nazlanmaz.
 
-\*\*\*
+/*/*/*
 
 ##### **Tabiat, bir sanat-ı İlahiyedir**
 
@@ -387,7 +392,7 @@ Değil fâil, o kabildir. Değil masdar, o mistardır.
 Değil nâzım, o nizamdır. Değil kudret, o kanundur. İradî bir şeriattır,
 değil hariç hakikattar.
 
-\*\*\*
+/*/*/*
 
 ##### **Vicdan, cezbesi ile Allah’ı tanır**
 
@@ -402,7 +407,7 @@ Bir Vâcibü’l-vücud’a, Sahib-i Celal ve Cemal; şu fıtrat-ı zîşuur kat
 
 Bir şahidi o cezbe hem diğeri incizab.
 
-\*\*\*
+/*/*/*
 
 ##### **Fıtratın şehadeti sadıkadır**
 
@@ -436,7 +441,7 @@ canı
 
 İki mücella camdır, akseder içinde cemal-i Lâyezalî hem de nur-u imanî.
 
-\*\*\*
+/*/*/*
 
 ##### **Nübüvvet beşerde zaruriyedir**
 
@@ -445,7 +450,7 @@ Karıncayı emîrsiz, arıları ya’subsuz bırakmayan kudret-i ezeliye elbette
 Beşeri de bırakmaz şeriatsız, nebisiz. Sırr-ı nizam-ı âlem, böyle ister
 elbette.
 
-\*\*\*
+/*/*/*
 
 ##### **Meleklerde mi’rac, insanlarda şakk-ı kamer gibidir**
 
@@ -461,7 +466,7 @@ nuru da görmüştür.
 Bu mi’racdır, âlem-i ervahtaki sakinlere en büyük bir mu’cize ki
 <span dir="rtl">سُبْحَانَ الَّذٖٓى اَسْرٰى</span> dır.
 
-\*\*\*
+/*/*/*
 
 ##### **Kelime-i şehadetin bürhanı içindedir**
 
@@ -471,7 +476,7 @@ bürhandır.
 Birincisi, sânîye bir bürhan-ı limmîdir. İkincisi, evvele bir bürhan-ı
 innîdir.
 
-\*\*\*
+/*/*/*
 
 ##### **Hayat bir çeşit tecelli-i vahdettir**
 
@@ -481,7 +486,7 @@ cilve-i vahdet eder kesretleri tevhid ve yekta.
 Hayat bir şeyi her şeye eder mâlik. Hayatsız şey, ona nisbet ademdir
 cümle eşya.
 
-\*\*\*
+/*/*/*
 
 ##### **Ruh, vücud-u haricî giydirilmiş bir kanundur**
 
@@ -502,7 +507,7 @@ biri bir ruh olur.
 Ger vücudu ruh çıkarsa, başından şuuru indirirse yine lâyemut kanun
 olur.
 
-\*\*\*
+/*/*/*
 
 ##### **Hayatsız vücud, adem gibidir**
 
@@ -512,7 +517,7 @@ olmazsa
 Vücud, adem-âlûddur; belki adem gibidir. Evet garib, yetimdir; hayatsız
 ger kamerse.
 
-\*\*\*
+/*/*/*
 
 ##### **Hayat sebebiyle karınca küreden büyük olur**
 
@@ -524,7 +529,7 @@ getirip koyarsan
 
 Karıncanın karşısına, o zîşuur başının nısfı bile olamaz.
 
-\*\*\*
+/*/*/*
 
 ##### **Nasraniyet İslâmiyet’e teslim olacak**
 
@@ -538,13 +543,13 @@ Perde yine yırtıldı, mutlak dalale düştü. Bir kısmı lâkin bazı
 yakınlaştı tevhide, onda felâh görecek.
 
 Hazırlanır şimdiden
-(\*[<u>\[6\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn6))
+(/*[<u>/[6/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn6))
 yırtılmaya başlıyor. Sönmezse safvet bulup İslâm’a mal olacak.
 
 Bu bir sırr-ı azîmdir, ona remz u işaret; Fahr-i Rusül demiştir: “İsa,
 Şer’im ile amel edip ümmetimden olacak.”
 
-\*\*\*
+/*/*/*
 
 ##### **Tebeî nazar, muhali mümkün görür**
 
@@ -565,7 +570,7 @@ Teşkil-i cümle enva fâilini göremez, düşer başına dalal.
 O hareket nerede? Nazzam-ı kevn nerede? Onu ona vehmetmek, muhal-ender
 muhal!
 
-\*\*\*
+/*/*/*
 
 ##### **Kur’an âyine ister, vekil istemez**
 
@@ -584,7 +589,7 @@ hadîstir. Onun malı, oradan her zaman istemeli.
 Kitaplar, içtihadlar Kur’an’ın âyinesi, yahut dürbün olmalı. Gölge,
 vekil istemez o Şems-i Mu’ciz-beyan.
 
-\*\*\*
+/*/*/*
 
 ##### **Mübtıl, bâtılı hak nazarıyla alır**
 
@@ -594,7 +599,7 @@ eline, bâtılı hak zanneder, koynunda saklıyor.
 Hakikati kazarken ihtiyarı olmadan dalal düşer başına; hakikattir
 zanneder, kafasına geçirir.
 
-\*\*\*
+/*/*/*
 
 ##### **Kudretin âyineleri çoktur**
 
@@ -611,7 +616,7 @@ Kulağınla nazar et âyine-i havaya: Kelime-i vâhide, olur milyon kelimat!
 
 Acib istinsah eder o kudretin kalemi, şu sırr-ı tenasülat…
 
-\*\*\*
+/*/*/*
 
 ##### **Temessülün aksamı muhtelifedir**
 
@@ -638,7 +643,7 @@ umum ile şefaatle görüşür.
 
 Velilerin ebdalı, çok yerlerde bir anda zuhur eder, görünür.
 
-\*\*\*
+/*/*/*
 
 ##### **Müstaid, müçtehid olabilir; müşerri’ olamaz**
 
@@ -653,7 +658,7 @@ kabul-ü cumhur, şart-ı evvel oluyor.
 
 Yoksa davet bid’attır, reddedilir. Ağzına tıkılır, onda daha çıkamaz.
 
-\*\*\*
+/*/*/*
 
 ##### **Nur-u akıl, kalpten gelir**
 
@@ -672,7 +677,7 @@ Basîretsiz basar da para etmez.
 Ger fikret-i beyzada süveyda-i kalp olmazsa halita-i dimağî ilim ve
 basîret olmaz. Kalpsiz akıl olamaz.
 
-\*\*\*
+/*/*/*
 
 ##### **Dimağda meratib-i ilim muhtelifedir, mültebise**
 
@@ -693,7 +698,7 @@ Tahayyülde safsata hasıl olur, mezcine eğer olmaz muktedir. Bâtıl
 
 Safi olan zihinleri cerhdir hem idlâli.
 
-\*\*\*
+/*/*/*
 
 ##### **Hazmolmayan ilim telkin edilmemeli**
 
@@ -703,7 +708,7 @@ Koyun verir kuzusuna hazmolmuş musaffâ sütünü.
 
 Kuş veriyor ferhine lüab-âlûd kayyını.
 
-\*\*\*
+/*/*/*
 
 ##### **Tahrip esheldir; zayıf, tahripçi olur**
 
@@ -713,7 +718,7 @@ ademiyle, tahrip eshel oluyor.
 Bundandır ki âciz adam, sebeb-i zuhur-u iktidar müsbete hiç yanaşmaz.
 Menfîce müteharrik, daim tahripkâr olur.
 
-\*\*\*
+/*/*/*
 
 ##### **Kuvvet hakka hizmetkâr olmalı**
 
@@ -723,13 +728,13 @@ kavaid birbiriyle olmazsa müstenid ve müstemid
 Cumhur-u nâsta olmaz, ne müsmir ve müessir. Şeriatta şeair; kalır
 mühmel, muattal. Umûr-u nâsta olmaz, müstenid ve mutemid.
 
-\*\*\*
+/*/*/*
 
 ##### **Bazen zıt, zıddını tazammun eder**
 
 Zaman olur zıt, zıddını saklarmış. Lisan-ı siyasette lafız, mananın
 zıddıdır. Adalet külahını
-(\*[<u>\[7\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn7))
+(/*[<u>/[7/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn7))
 
 Zulüm başına geçirmiş. Hamiyet libasını, hıyanet ucuz giymiş. Cihad ve
 hem gazâya, bağy ismi takılmış. Esaret-i hayvanî,
@@ -737,7 +742,7 @@ hem gazâya, bağy ismi takılmış. Esaret-i hayvanî,
 İstibdad-ı şeytanî; hürriyet nam verilmiş. Zıtlarda emsal olmuş,
 suretlerde tebadül, isimlerde tekabül, makamlarda becayiş-i mekânî.
 
-\*\*\*
+/*/*/*
 
 ##### **Menfaati esas tutan siyaset canavardır**
 
@@ -749,7 +754,7 @@ açar.
 
 Sonra döner, geliyor; tırnağının hem dişinin kirasını senden ister.
 
-\*\*\*
+/*/*/*
 
 ##### **Kuva-yı insaniye tahdid edilmediğinden cinayeti büyük olur**
 
@@ -758,7 +763,7 @@ hayr u şer, lâyetenahî gider.
 
 Onda olan hodgâmlık, bundan çıkan hodbinlik, gurur, inat birleşse; öyle
 günah oluyor
-(\*[<u>\[8\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn8)) ki
+(/*[<u>/[8/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn8)) ki
 beşer şimdiye kadar
 
 Ona isim bulmamış. Cehennemin lüzumuna delil olduğu gibi cezası da
@@ -769,7 +774,7 @@ felaketini kalben arzu eder.
 
 Şu zaman da gösterdi: Cehennem lüzumsuz olmaz, cennet ucuz değildir.
 
-\*\*\*
+/*/*/*
 
 ##### **Bazen hayır, şerre vasıta olur**
 
@@ -790,7 +795,7 @@ Taksim, tevzi edilir. Aşiret-i galipte hasıl olan şerefse: “Hasan Ağa,
 
 Efrada olur nefrin. Beşerde şerr-i hazîn!
 
-\*\*\*
+/*/*/*
 
 ##### **Gaye-i hayal olmazsa enaniyet kuvvetleşir**
 
@@ -800,7 +805,7 @@ zihinler enelere dönerler,
 Etrafında gezerler. Ene kuvvetleşiyor, bazen sinirleniyor. Delinmez, tâ
 “nahnü” olsun. Enesini sevenler, başkaları sevmezler.
 
-\*\*\*
+/*/*/*
 
 ##### **Hayat-ı ihtilal; mevt-i zekât, hayat-ı ribadan çıkmış**
 
@@ -822,7 +827,7 @@ zakkum-şecer münderic. Onun ırkını kesecek, ribanın hurmetidir.
 Beşer salah isterse, hayatını severse zekâtı vaz’etmeli, ribayı
 kaldırmalı.
 
-\*\*\*
+/*/*/*
 
 ##### **Beşer hayatını isterse enva-ı ribayı öldürmeli**
 
@@ -845,10 +850,10 @@ Kur’an’ın adaleti bab-ı âlemde durup ribaya der: “Yasaktır! Hakkın
 yoktur, dönmeli!”
 
 Dinlemedi bu emri, beşer yedi bir sille.
-(\*[<u>\[9\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn9))
+(/*[<u>/[9/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn9))
 Müdhişini yemeden bu emri dinlemeli.
 
-\*\*\*
+/*/*/*
 
 ##### **Beşer esirliği parçaladığı gibi ecîrliği de parçalayacaktır**
 
@@ -861,7 +866,7 @@ olmuştur; onun yükünü çeker, onu da parçalıyor.
 Beşerin başı ihtiyar, edvar-ı hamsesi var. Vahşet ve bedeviyet,
 memlûkiyet, esaret, şimdi dahi ecîrdir, başlamıştır geçiyor.
 
-\*\*\*
+/*/*/*
 
 ##### **Gayr-ı meşru tarîk, zıdd-ı maksuda gider**
 
@@ -874,7 +879,7 @@ mükâfat: Mahbubun gaddarane adâveti, cinayat…
 
 Fâsık-ı mahrum bulmaz, ne lezzet ve ne necat.
 
-\*\*\*
+/*/*/*
 
 ##### **Cebir ve İtizal’de birer dane-i hakikat bulunur**
 
@@ -887,7 +892,7 @@ Söz olur Cebriye. Müstakbel ve maâsi nazar olur teklife, söz olur
 Şurada barışırlar. Şu bâtıl mezheplerde birer dane-i hakikat mevcud
 mündericdir, mahsus mahalli vardır, bâtıl olan tamimdir.
 
-\*\*\*
+/*/*/*
 
 ##### **Acz ve cez’ bîçarelerin kârıdır**
 
@@ -895,7 +900,7 @@ Ger istersen hayatı, çareleri bulunan şeyde acze yapışma.
 
 Ger istersen rahatı, çaresi bulunmayan şeyde cez’a sarılma.
 
-\*\*\*
+/*/*/*
 
 ##### **Bazen küçük bir şey, büyük bir iş yapar**
 
@@ -905,7 +910,7 @@ a’lâ-yı illiyyîn
 Öyle hâlât oluyor ki küçük bir hareket, kâsibini indiriyor tâ esfel-i
 safilîn
 
-\*\*\*
+/*/*/*
 
 ##### **Bazılara bir an, bir senedir**
 
@@ -929,7 +934,7 @@ serâser…
 
 Barut gibi ahlâkı parlattırdı, oldular birer nur-u münevver.
 
-\*\*\*
+/*/*/*
 
 ##### **Yalan, bir lafz-ı kâfirdir**
 
@@ -948,7 +953,7 @@ Tâ leziz hayatı bulmalı.
 Hayat içinde hayattır, hüsn-ü zanda emeli. Sû-i zanla yeistir saadet
 muharribi hem de hayatın kātili.
 
-\*\*\*
+/*/*/*
 
 ##### **Bir meclis-i misalîde**
 
@@ -1064,7 +1069,7 @@ Ferdi, şahsı ahlâksız hem fakir eylemiştir. Bunun şahidi çoktur. Kurûn-u
 ûlâdaki mecmu-u vahşet ve cinayet hem gadir ve hem hıyanet
 
 Şu medeniyet-i habîse tek bir defada kustu. Midesi
-(\*[<u>\[10\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn10))
+(/*[<u>/[10/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn10))
 daha bulanır. Âlem-i İslâm’daki istinkâf-ı manidar hem de bir cây-ı
 dikkat.
 
@@ -1119,7 +1124,7 @@ Ruhu eder hizmetkâr, taneleri kuruyor. Şeytanın simasını beşerde
 gösteriyor. Hüda, hayateyne saadet veriyor. Dâreyne ziya neşrediyor.
 
 İnsanı yükseltiyor. Deccal-misal
-(\*[<u>\[11\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn11))
+(/*[<u>/[11/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn11))
 deha-yı a’ver, bir dâr ile bir hayatı anlar; madde-perest olur ve
 dünya-perver. İnsanı yapar birer canavar.
 
@@ -1195,7 +1200,7 @@ rüyadır,
 
 Rüya bir nevi yakazadır. Orada asrın vekili, burada Said-i Nursî…
 
-\*\*\*
+/*/*/*
 
 ##### **Cehil, mecazı eline alsa hakikat yapar**
 
@@ -1214,14 +1219,14 @@ Tekatu’ noktaları olan re’s ve zenebde arzın hayluletiyle bir emr-i
 İki kavs-i mevhume tinnineyn yâd edilmiş, hayalî bir teşbih ile isim,
 müsemma olmuş. Tinnin ise yılandır.
 
-\*\*\*
+/*/*/*
 
 ##### **Mübalağa zemm-i zımnîdir**
 
 Hangi şeyi vasfetsen olduğu gibi vasfet. Medhin mübalağası bence zemm-i
 zımnîdir. İhsan-ı İlahîden fazla ihsan, ihsan değildir.
 
-\*\*\*
+/*/*/*
 
 ##### **Şöhret zalimedir**
 
@@ -1233,7 +1238,7 @@ Gasb ve garetle şişti o namdar hayali.
 
 Hurafata karıştı, attı nev-i insanı.
 
-\*\*\*
+/*/*/*
 
 ##### **Din ile hayat kabil-i tefrik olduğunu zannedenler felakete sebeptirler**
 
@@ -1244,7 +1249,7 @@ Medeniyet müstemir, müstevli vehmeyledi. Saadet-i hayatı içinde
 görüyordu. Şimdi zaman gösterdi,
 
 Medeniyet sistemi
-(\*[<u>\[12\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn12))
+(/*[<u>/[12/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn12))
 bozuktu hem muzırdı, tecrübe-i kat’iye bize bunu gösterdi.
 
 Din hayatın hayatı hem nuru hem esası. İhya-yı din ile olur şu milletin
@@ -1255,7 +1260,7 @@ terakkisi. İhmali nisbetinde idi
 
 Milletin tedennisi. Tarihî bir hakikat, ondan olmuş tenasi.
 
-\*\*\*
+/*/*/*
 
 ##### **Mevt, tevehhüm edildiği gibi dehşetli değil**
 
@@ -1277,7 +1282,7 @@ yakazadır; hakiki lezzet alır, ona hakiki olur.
 Rüya misalin zılli, misal ise berzahın zılli olmuştur. Ondan onların
 düsturları birbirine benziyor.
 
-\*\*\*
+/*/*/*
 
 ##### **Siyaset, efkârın âleminde bir şeytandır; istiaze edilmeli!**
 
@@ -1302,7 +1307,7 @@ hem naziri. İkinci sırrı budur: Hodgâmî bir âdemî
 Hırs ve heves yolunda bir masumu öldürse, eğer elinden gelse, hevesine
 mani ise harap eder dünyayı, imha eder benî-Âdem’i.
 
-\*\*\*
+/*/*/*
 
 ##### **Zaaf, hasmı teşci eder. Allah abdini tecrübe eder. Abd Allah’ını tecrübe edemez.**
 
@@ -1323,14 +1328,14 @@ Dağdan kendini at. O da sana ne yapar?”
 
 İsa dedi: “Ey mel’un! Abd edemez Rabb’ini tecrübe ve imtihan!”
 
-\*\*\*
+/*/*/*
 
 ##### **Beğendiğin şeyde ifrat etme**
 
 Bir derdin dermanı, başka derde dert olur. Panzehiri zehir olur. Derman
 hadden geçerse dert getirir, öldürür.
 
-\*\*\*
+/*/*/*
 
 ##### **İnadın gözü, meleği şeytan görür**
 
@@ -1340,14 +1345,14 @@ okutur.
 Muhalif tarafında eğer meleği görse libasını değişmiş, onu şeytan
 zanneder; adâvet, lanet eder.
 
-\*\*\*
+/*/*/*
 
 ##### **Hakkı bulduktan sonra ehak için ihtilafı çıkarma**
 
 Ey talib-i hakikat, madem hakta ittifak, ehakta ihtilaftır. Bazen hak,
 ehaktan ehaktır. Hem de olur hasen, ahsenden ahsen.
 
-\*\*\*
+/*/*/*
 
 ##### **İslâmiyet, selm ve müsalemettir; dâhilde nizâ ve husumet istemez**
 
@@ -1393,7 +1398,7 @@ ittihat, vâhid oldu peygamber.
 Seviye bir olmadı, mezhep taaddüd etti. Terbiye-i vâhide kâfi geldiği
 zaman, ittihat eder mezhepler…
 
-\*\*\*
+/*/*/*
 
 ##### **İcad ve cem’-i ezdadda büyük bir hikmet var. Kudret elinde şems ve zerre birdir.**
 
@@ -1452,7 +1457,7 @@ mücella camını o lümey’a zücace dürri-misal parlıyor
 O şebnem-misal yıldız latîf gözü içinde, bir yer yapar lem’aya, lem’a
 olur bir sirac, gözü olur zücace, misbahı nurlanıyor.
 
-\*\*\*
+/*/*/*
 
 ##### **Meziyetin varsa hafâ türabında kalsın tâ neşv ü nema bulsun**
 
@@ -1491,7 +1496,7 @@ geldikçe güya adım atarak darağacına gidersin
 
 Şey’en şey’en üzülmek, vehim de teselli vermez, sen de rahat etmezsin…
 
-\*\*\*
+/*/*/*
 
 ##### **Allah’ın rahmet ve gazabından fazla tahassüs hatadır**
 
@@ -1501,7 +1506,7 @@ gazap edilmez.
 Öyle ise işi bırak o Âdil-i Rahîm’e. Fazla şefkat elemdir, fazla gazap
 zemîme…
 
-\*\*\*
+/*/*/*
 
 ##### **İsraf sefahetin, sefahet sefaletin kapısıdır**
 
@@ -1523,11 +1528,11 @@ vermek, olur şeytanî pîşe.
 İsrafın en sefihi, tebzirin en sakîmi, bir tarzdır bir çeşidi; heves
 etme bu işe…
 
-\*\*\*
+/*/*/*
 
 ##### **Zaika telgrafçıdır, telziz ile baştan çıkarma**
 
-(\*[<u>\[13\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn13))
+(/*[<u>/[13/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn13))
 Rububiyet-i İlah hikmet ve inayeti, ağızla hem burunla iki merkezi
 teşkil eylemiştir, içinde hudut karakolu, hem
 
@@ -1564,7 +1569,7 @@ iştiha sadık bir ihtiyaçtan. Bu lezzet-i kâfide, şah hem
 Geda beraber. Hem bâhemdir bir dinar ve bir dirhem o lezzet berhem-zened
 eleme olur merhem.
 
-\*\*\*
+/*/*/*
 
 ##### **Niyet gibi tarz-ı nazar dahi âdeti ibadete çevirir**
 
@@ -1583,13 +1588,13 @@ noktasında, “Zatında nasıl olmuş?” eğer etsen nigâhı,
 Bakarsan kâinata, daire-i fünunun daire-i cehil olur. Bîçare hakikatler,
 kıymetsiz eller kıymetsiz eder. Çoktur bunun güvahı.
 
-\*\*\*
+/*/*/*
 
 ##### **Böyle zamanda tereffühte izn-i Şer’î bizi muhtar bırakmaz**
 
 Lezaiz çağırdıkça “Sanki yedim.” demeli. Sanki yedim düstur eden, bir
 mescidi yemedi.
-(\*[<u>\[14\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn14))
+(/*[<u>/[14/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn14))
 
 Eskide ekser İslâm filcümle aç değildi. Tena’uma ihtiyar bir derece var
 idi.
@@ -1603,7 +1608,7 @@ besatetiyle onlara tabi olmak
 Bin kere müreccahtır, ekalliyet-i müsrife, ya bir kısım sefihe tagaddide
 tereffüh noktasında benzemek…
 
-\*\*\*
+/*/*/*
 
 ##### **Zaman olur ki adem-i nimet nimettir**
 
@@ -1613,7 +1618,7 @@ ona racihtir.
 Nisyan da bir nimettir. Yalnız her günün âlâmını çektirir, müterakim
 olmuş âlâmı unutturur.
 
-\*\*\*
+/*/*/*
 
 ##### **Her musibette, bir cihet-i nimet var**
 
@@ -1631,7 +1636,7 @@ misali, döner hakikat olur;
 
 Hakikatten ders alır. Sonra döner, başlıyor, kalbini tokatlıyor…
 
-\*\*\*
+/*/*/*
 
 ##### **Büyük görünme küçülürsün**
 
@@ -1647,7 +1652,7 @@ edecek, eğilecek.
 Kâmillerde, büyüklük mikyasıdır küçüklük. Nâkıslarda, küçüklük mizanıdır
 büyüklük…
 
-\*\*\*
+/*/*/*
 
 ##### **Hasletlerin yerleri değişse mahiyetleri değişir**
 
@@ -1683,7 +1688,7 @@ daha çoktur.
 Kur’an mutlak zikreder, salihat ve takvayı. İbhamında remzeder makamatın
 tesiri. Îcazı bir tafsildir. Sükûtu geniş sözdür.
 
-\*\*\*
+/*/*/*
 
 ##### **<span dir="rtl">اَلْحَقُّ يَعْلُو</span> bizzat hem âkıbet muraddır**
 
@@ -1757,7 +1762,7 @@ kazanmaz harbi. “Âkıbetü’l-müttakin” ona vurur bir darbe!
 İşte bâtıl mağluptur. <span dir="rtl">اَلْحَقُّ يَعْلُو</span> sırrı onu çarpar
 ikaba, işte hak da galiptir.
 
-\*\*\*
+/*/*/*
 
 ##### **Bir kısım desatir-i içtimaiye**
 
@@ -1773,14 +1778,14 @@ sefahetin menbaı sıkıntı olmuş. Sıkıntı ise madeni: Yeisle sû-i zandır
 
 Dalalet-i fikrîdir, zulümat-ı kalbîdir, israf-ı cesedîdir.
 
-\*\*\*
+/*/*/*
 
 ##### **Kadınlar yuvalarından çıkıp beşeri yoldan çıkarmış, yuvalarına dönmeli**
 
 <span dir="rtl">اِذَا تَاَنَّثَ الرِّجَالُ السُّفَهَاءُ بِالْهَوَسَاتِ § اِذًا تَرَجَّلَ النِّسَاءُ
 النَّاشِزَاتُ بِالْوَقَاحَات</span>ِ
 
-(\*[<u>\[15\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn15))
+(/*[<u>/[15/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn15))
 
 Mimsiz medeniyet, taife-i nisayı yuvalardan uçurmuş, hürmetleri de
 kırmış, mebzul metaı yapmış. Şer’-i İslâm onları
@@ -1800,12 +1805,12 @@ inkişafı, sebep olmuş beşerde ahlâk-ı seyyienin birdenbire inkişafı.
 Şu medeni beşerin hırçınlaşmış ruhunda, şu suretler denilen küçük
 cenazelerin, mütebessim meyyitlerin rolleri pek azîmdir hem müthiştir
 tesiri.
-(\*[<u>\[16\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn16))
+(/*[<u>/[16/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn16))
 
 Memnû heykel, suretler: Ya zulm-ü mütehaccir ya mütecessid riya ya
 müncemid hevestir. Ya tılsımdır, celbeder o habîs ervahları.
 
-\*\*\*
+/*/*/*
 
 ##### **Tasarruf-u kudretin vüs’ati, vesait ve muînleri reddeder**
 
@@ -1870,7 +1875,7 @@ müsavi. Nakkaş-ı Ezelî’nin sanatı her tarafta pür-cemal ve pür-kemal.
 Her tarafta böyledir. Derece-i kemalde kalemdeki ittihat, tevhidi ilan
 eder. Bu kelâm-ı pür-meal, iyi bir dikkate al!
 
-\*\*\*
+/*/*/*
 
 ##### **Melaike bir ümmettir, şeriat-ı fıtriye ile memurdur**
 
@@ -1889,7 +1894,7 @@ içtima. Melaike-i İlahî, bir ümmet-i azîme hem bir cünd-ü Sübhanî
 Birinci şer’a olmuş hamele-i mümtesil, amele-i mümessil. Hem onlardan
 bir kısmı ibad-ı müsebbihtir. Bir kısmı da müstağrak, arşın mukarrebîni.
 
-\*\*\*
+/*/*/*
 
 ##### **Madde, rikkat peyda ettikçe hayat, şiddet peyda eder**
 
@@ -1908,13 +1913,13 @@ zîhayat hüceyratından mürekkeb ve zîhayat bir hücre-i insanî.
 <span dir="rtl">اِنَّ الْاِنْسَانَ كَصُورَةِ (يٰسٓ) كُتِبَتْ فٖيهَا سُورَةُ (يٰسٓ) فَتَبَارَكَ اللّٰهُ
 اَحْسَنُ الْخَالِقٖين</span>َ
 
-\*\*\*
+/*/*/*
 
 ##### **Maddiyyunluk, bir taun-u manevîdir**
 
 Maddiyyunluk bir taun-u manevî, beşere de tutturdu şu müthiş bir
 sıtmayı.
-(\*[<u>\[17\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn17))
+(/*[<u>/[17/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn17))
 Hem de âni çarptırdı bir gazab-ı İlahî. Telkin hem de taklit,
 
 Tenkide kabiliyet-i tevessüü nisbeten, o taun da ediyor tevessü ve
@@ -1922,7 +1927,7 @@ intişar. Telkini fenden almış, medeniyetten taklit.
 
 Hürriyet, tenkit vermiş, gururundan dalalet çıkmış.
 
-\*\*\*
+/*/*/*
 
 ##### **Vücudda atalet yok. İşsiz adam, vücudda adem hesabına işler.**
 
@@ -1931,7 +1936,7 @@ Vücud içinde adem, hayat içinde mevttir.
 
 Sa’y ise: Vücudun hayatı hem hayatın yakazasıdır elbet!
 
-\*\*\*
+/*/*/*
 
 ##### **Riba, İslâm’a zarar-ı mutlaktır**
 
@@ -1949,9 +1954,9 @@ ismetsizdir; demi hederdir her
 
 De………m.
 
-\*\*\*
+/*/*/*
 
-##### **(\*[<u>\[18\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn18)) Kur’an, kendi kendini himaye edip hâkimiyetini idame eder**
+##### **(/*[<u>/[18/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn18)) Kur’an, kendi kendini himaye edip hâkimiyetini idame eder**
 
 Bir zatı gördüm ki yeis ile müptela, bedbinlikle hasta idi. Dedi: Ulema
 azaldı, kemiyet keyfiyeti. Korkarız dinimiz sönecek de bir zaman
@@ -2029,7 +2034,7 @@ ihtimalat-ı kesîre olur birer hasm-ı bîeman.
 Kalp ile vicdan, mahall-i iman. Hads ile ilham, delil-i iman. Bir hiss-i
 sâdis, tarîk-ı iman. Fikr ile dimağ, bekçi-i iman.
 
-\*\*\*
+/*/*/*
 
 ##### **Talim-i nazariyattan ziyade, tezkir-i müsellemata ihtiyaç var**
 
@@ -2037,7 +2042,7 @@ Zaruriyat-ı dinî, müsellemat-ı şer’î; kulûblerde hasıldır, ihtar ile
 huzuru, tezkir ile şuuru.
 
 Matlub da hasıl olur. İbare-i Arabî
-(\*[<u>\[19\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn19))
+(/*[<u>/[19/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftn19))
 daha ulvi ediyor tezkiri hem ihtarı.
 
 Onun için cumada hutbe-i Arabiye; zaruriyatı ihtar, müsellematı tezkir,
@@ -2046,7 +2051,7 @@ maalkifaye olur onun tarz-ı tezkiri.
 Nazariyatı talim onda maksud değildir. Hem İslâm’ın vahdanî simasında şu
 Arabî ibare bir nakş-ı vahdettir, kabul etmez teksiri.
 
-\*\*\*
+/*/*/*
 
 ##### **Hadîs der âyete: Sana yetişmek muhal!**
 
@@ -2056,7 +2061,7 @@ vahyin de mübelliği, o dahi bâliğ olmaz
 Belâgat-ı âyete. O da ona benzemez. Demek ki lisan-ı Ahmedîden gelen her
 bir kelâm her dem onun olamaz.
 
-\*\*\*
+/*/*/*
 
 ##### **Îcaz ile beyan i’caz-ı Kur’an**
 
@@ -2214,7 +2219,7 @@ Zira o kırk enva-ı i’cazından yalnız bir tekini ki cezalet-i nazmıdır;
 Yüz sahife tefsirim ona kâfi gelmedi. Senin gibi ruhanî ilhamları
 ziyade. Ben istiyorum senden tafsil ile beyanı!
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">اُولَاشْمَازْ دَسْتِ أَدَبِ غَرْبِ هَوَسْبَارِ هَوَاكَارِ دَهَادَار</span>ْ
 
@@ -2316,7 +2321,7 @@ hüzn-ü Kur’anî veya şevk-i Tenzilî veren âlet, zarar vermez.
 Eğer hüzn-ü yetimî veya şevk-i nefsanî verse âlet haramdır. Değişir
 eşhasa göre herkes birbirine benzemez.
 
-\*\*\*
+/*/*/*
 
 ##### **Dallar semeratı rahmet namına takdim ediyor**
 
@@ -2329,7 +2334,7 @@ dalları içinde sizlere uzatıyor.
 O yed-i rahmeti, siz de şükür ile öpünüz. O dest-i kudreti de minnetle
 takdis ediniz.
 
-\*\*\*
+/*/*/*
 
 ##### **Fatiha’nın âhirinde işaret olunan üç yolun beyanı**
 
@@ -2426,7 +2431,7 @@ müstakimi îsal eder o bizi.
 <span dir="rtl">اَللّٰهُمَّ اِهْدِنَا الصِّرَاطَ الْمُسْتَقٖيمَ صِرَاطَ الَّذٖينَ اَنْعَمْتَ عَلَيْهِمْ غَيْرِ
 الْمَغْضُوبِ عَلَيْهِمْ وَ لَاالضَّٓالّٖينَ ۞ اٰمٖين</span>َ
 
-\*\*\*
+/*/*/*
 
 ##### **Hakiki bütün elem dalalette, bütün lezzet imandadır**
 
@@ -2677,7 +2682,7 @@ sonra da buluşmak üzere ayrılırız…
 
 <span dir="rtl">اَللّٰهُمَّ اِهْدِنَا الصِّرَاطَ الْمُسْتَقٖيمَ ۞ اٰمٖين</span>َ
 
-\*\*\*
+/*/*/*
 
 ##### **Anglikan Kilisesine Cevap**
 
@@ -2720,79 +2725,79 @@ Buna dair şahidim:
 
 (Yüz mâşâallah bu cevaba.)
 
-\*\*\*
+/*/*/*
 
-[<u>\[1\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref1)
-**\*** Hattâ tarihi <span dir="rtl">نَجْمُ اَدَبٍ وُلِدَ لِهِلَالَىْ رَمَضَان</span>َ
+[<u>/[1/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref1)
+**/*** Hattâ tarihi <span dir="rtl">نَجْمُ اَدَبٍ وُلِدَ لِهِلَالَىْ رَمَضَان</span>َ
 çıkmış. Yani “Ramazanın iki hilâlinden doğmuş bir edep yıldızıdır.” (Bin
 üç yüz otuz yedi eder.)
 
-[<u>\[2\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref2)
-**\*\*** Bu kıta, onun imzasıdır.
+[<u>/[2/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref2)
+**/*/*** Bu kıta, onun imzasıdır.
 
-[<u>\[3\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref3)
-**\*\*\*** Her senede iki defa cisim tazelendiği için iki Said ölmüş
+[<u>/[3/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref3)
+**/*/*/*** Her senede iki defa cisim tazelendiği için iki Said ölmüş
 demektir. Hem bu sene Said yetmiş dokuz senesindedir. Her bir senede bir
 Said ölmüş demektir ki bu tarihe kadar Said yaşayacak.
 
-[<u>\[4\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref4)
-**\*\*\*\*** Yirmi sene sonraki bu şimdiki hali, hiss-i kable’l-vuku ile
+[<u>/[4/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref4)
+**/*/*/*/*** Yirmi sene sonraki bu şimdiki hali, hiss-i kable’l-vuku ile
 hissetmiş.
 
-[<u>\[5\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref5)
-**\*** Hakiki tesirden elini çeksin, icada karışmasın, demektir.
+[<u>/[5/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref5)
+**/*** Hakiki tesirden elini çeksin, icada karışmasın, demektir.
 
-[<u>\[6\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref6)
-**\*** Bu dehşetli Harb-i Umumî neticesindeki vaziyete işaret eder.
+[<u>/[6/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref6)
+**/*** Bu dehşetli Harb-i Umumî neticesindeki vaziyete işaret eder.
 Belki İkinci Harb-i Umumî’den tam haber verir.
 
-[<u>\[7\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref7)
-**\*** Bu zamanı tam görmüş gibi bahseder.
+[<u>/[7/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref7)
+**/*** Bu zamanı tam görmüş gibi bahseder.
 
-[<u>\[8\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref8)
-**\*** Bunda da bir işaret-i gaybiye var.
+[<u>/[8/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref8)
+**/*** Bunda da bir işaret-i gaybiye var.
 
-[<u>\[9\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref9)
-**\*** Kuvvetli bir işaret-i gaybiyedir. Evet beşer dinlemedi, İkinci
+[<u>/[9/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref9)
+**/*** Kuvvetli bir işaret-i gaybiyedir. Evet beşer dinlemedi, İkinci
 Harb-i Umumî ile bu dehşetli silleyi de yedi.
 
-[<u>\[10\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref10)
-**\*** Demek, daha dehşetli kusacak. Evet, iki harb-i umumî ile öyle
+[<u>/[10/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref10)
+**/*** Demek, daha dehşetli kusacak. Evet, iki harb-i umumî ile öyle
 kustu ki hava, deniz, kara yüzlerini bulandırdı, kanla lekeledi.
 
-[<u>\[11\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref11)
-**\*** Bunda da bir ince işaret var.
+[<u>/[11/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref11)
+**/*** Bunda da bir ince işaret var.
 
-[<u>\[12\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref12)
-**\*** Tam bir işaret-i gaybiyedir. Sekeratta olan dinsiz, zalim
+[<u>/[12/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref12)
+**/*** Tam bir işaret-i gaybiyedir. Sekeratta olan dinsiz, zalim
 medeniyete bakıyor.
 
-[<u>\[13\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref13)
-**\*** İktisat Risalesi’nin çekirdeğidir. Belki on sahife olan İktisat
+[<u>/[13/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref13)
+**/*** İktisat Risalesi’nin çekirdeğidir. Belki on sahife olan İktisat
 Risalesi’ni kable’l-vücud on satırda okumuş.
 
-[<u>\[14\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref14)
-**\*** İstanbul’da Sanki Yedim namında bir mescid var. “Sanki yedim.”
+[<u>/[14/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref14)
+**/*** İstanbul’da Sanki Yedim namında bir mescid var. “Sanki yedim.”
 diyen adam, hevesinden kurtardığı paralarla bina etmiş.
 
-[<u>\[15\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref15)
-**\*** Tesettür Risalesi’nin esasıdır. Yirmi sene sonra müellifinin
+[<u>/[15/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref15)
+**/*** Tesettür Risalesi’nin esasıdır. Yirmi sene sonra müellifinin
 mahkûmiyetine sebep gösteren bir mahkeme, kendini ve hâkimlerini ebedî
 mahkûm ve mahcup eylemiş.
 
-[<u>\[16\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref16)
-**\*** Nasıl meyyite bir karıya nefsanî nazarla bakmak, nefsin dehşetle
+[<u>/[16/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref16)
+**/*** Nasıl meyyite bir karıya nefsanî nazarla bakmak, nefsin dehşetle
 alçaklığını gösterir. Öyle de rahmete muhtaç bir bîçare meyyitenin güzel
 tasvirine müştehiyane bir nazarla bakmak, ruhun hissiyat-ı ulviyesini
 söndürür.
 
-[<u>\[17\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref17)
-**\*** Eski Harb-i Umumî’ye işaret eder.
+[<u>/[17/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref17)
+**/*** Eski Harb-i Umumî’ye işaret eder.
 
-[<u>\[18\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref18)
-**\*** Otuz beş sene evvel yazılan bu makam, bu sene yazılmış tarzını
+[<u>/[18/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref18)
+**/*** Otuz beş sene evvel yazılan bu makam, bu sene yazılmış tarzını
 gösteriyor. Demek, ramazan bereketiyle yazdırılmış bir nevi ihbar-ı
 gaybîdir.
 
-[<u>\[19\]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref19)
-**\*** On sene sonra gelen bir hâdiseyi hissetmiş, mukabeleye çalışmış.
+[<u>/[19/]</u>](https://risaleinur.hizmetvakfi.org/lemaat/#_ftnref19)
+**/*** On sene sonra gelen bir hâdiseyi hissetmiş, mukabeleye çalışmış.

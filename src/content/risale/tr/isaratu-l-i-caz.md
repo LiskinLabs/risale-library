@@ -1,3 +1,8 @@
+---
+title: 'İŞARATÜ’L-İ’CAZ'
+book: 'isaratu-l-i-caz'
+---
+
 **Risale-i Nur Külliyatı’ndan**
 
 # **İŞARATÜ’L-İ’CAZ**
@@ -81,7 +86,7 @@ kapaklarının kirpikleri ve belki göz bebeğinin zerreleri gibi kıymetli
 olduğunu hissetmiş ki o dehşetli harp içinde bu incecik saç gibi
 münasebetleri yazmaktan ve düşünmekten, avcı hattında düşman gülleleri
 onu şaşırtmamış, ondan vazgeçirmemiş.
-(Hâşiye[\[1\]](https://risaleinur.hizmetvakfi.org/tenbih/#_ftn1))
+(Hâşiye[/[1/]](https://risaleinur.hizmetvakfi.org/tenbih/#_ftn1))
 
 **Üçüncü Nükte:** Türkçeye tercümesi Arapçadaki cezalet, belâgat ve
 hârika kıymetini muhafaza edememiş. Bazen de muhtasar gitmiş. Onun için
@@ -98,7 +103,7 @@ kaybolmasın.
 
 **Said Nursî**
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -161,9 +166,9 @@ kavaid-i Arabiyeye ve usûl-ü nahve ve usûl-ü dine muhalif olmamak
 
 **Tahirî, Zübeyr, Sungur, Ziya, Ceylan, Bayram**
 
-\*\*\*
+/*/*/*
 
-[\[1\]](https://risaleinur.hizmetvakfi.org/tenbih/#_ftnref1) Hâşiye:
+[/[1/]](https://risaleinur.hizmetvakfi.org/tenbih/#_ftnref1) Hâşiye:
 Acaba böyle bir adam, hiç mümkün müdür ki dini siyasete, dünyaya âlet
 etsin. Bu ithamı yapanların ne derece adaletten hariç bir zulüm
 ettikleri anlaşılır.
@@ -221,7 +226,7 @@ manevîde bulunur.
 bulunmayan bu gibi şartlar, heyette bulunur. Böyle bir heyetin zuhurunu
 çoktan beri bekliyorken hiss-i kable’l-vuku kabîlinden olarak, memleketi
 yıkıp yakacak büyük bir zelzelenin arefesinde bulunduğumuz, zihne geldi
-(Hâşiye[\[1\]](https://risaleinur.hizmetvakfi.org/ifadetul-meram/#_ftn1)).
+(Hâşiye[/[1/]](https://risaleinur.hizmetvakfi.org/ifadetul-meram/#_ftn1)).
 
 “Bir şey tamamıyla elde edilemediği takdirde o şeyi tamamıyla terk etmek
 caiz değildir.” kaidesine binaen, acz ve kusurumla beraber; Kur’an’ın
@@ -242,7 +247,7 @@ ile şehitler arasında yazılıp giydirilen o yırtık ibarelerin tebdiline
 (şehitlerin kan ve elbiselerinin tebdiline cevaz verilmediği gibi) cevaz
 veremedim ve kalbim razı olmadı. Şimdi de razı değildir çünkü o
 zamandaki ihlas ve hulusu şimdi bulamıyorum.
-(Hâşiye[\[2\]](https://risaleinur.hizmetvakfi.org/ifadetul-meram/#_ftn2))
+(Hâşiye[/[2/]](https://risaleinur.hizmetvakfi.org/ifadetul-meram/#_ftn2))
 
 Maahâzâ kaleme aldığım şu İşaratü’l-İ’caz adlı eserimi, hakiki bir
 tefsir niyetiyle yapmadım ancak ulema-yı İslâm’dan ehl-i tahkikin
@@ -252,16 +257,16 @@ insanlarına bir yadigâr maksadıyla yaptım.
 
 **Said Nursî**
 
-\*\*\*
+/*/*/*
 
-[\[1\]](https://risaleinur.hizmetvakfi.org/ifadetul-meram/#_ftnref1)
+[/[1/]](https://risaleinur.hizmetvakfi.org/ifadetul-meram/#_ftnref1)
 Hâşiye: Evet, Van’da Horhor Medresemizin damında, esna-yı derste, büyük
 bir zelzelenin gelmekte olduğunu söyledi. Hakikaten söylediği gibi az
 bir zaman sonra Harb-i Umumî başladı.
 
 Hamza, Mehmed Şefik, Mehmed Mihri
 
-[\[2\]](https://risaleinur.hizmetvakfi.org/ifadetul-meram/#_ftnref2)
+[/[2/]](https://risaleinur.hizmetvakfi.org/ifadetul-meram/#_ftnref2)
 Hâşiye: Yeni Said, Risale-i Nur’daki hakiki ihlas ile yine o ihlası
 buldu. Yeni Said, aynı ihlas ile baktı, tashih yerini bulamadı. Demek
 sünuhat-ı Kur’aniye olduğundan i’caz-ı Kur’aniye onu yanlışlardan himaye
@@ -325,7 +330,7 @@ lâyık ve o meşrebi tenvir edecek ve her bir mesleğin mesâkına muvafık ve
 onu tasvir edecek birer risale ibraz eden mukaddes bir kütüphane
 hükmünde bir kitab-ı semavîdir.
 
-\*\*\*
+/*/*/*
 
 Kur’an arş-ı a’zamdan, ism-i a’zamdan, her ismin mertebe-i a’zamından
 geldiği için –On İkinci Söz’de beyan ve ispat edildiği gibi–
@@ -373,7 +378,7 @@ bi’l-hadsi’s-sadık makbul-ü melek ve ins ü cânn bir kitab-ı semavîdir.
 
 **Said Nursî**
 
-\*\*\*
+/*/*/*
 
 # **Fatiha Suresi**
 
@@ -1059,7 +1064,7 @@ ona manevî cennetlerin kapıları açılır.
 <span dir="rtl">اَللّٰهُمَّ بِحُرْمَةِ هٰذِهِ السُّورَةِ اِجْعَلْنَا مِنْ اَصْحَابِ الصِّرَاطِ الْمُسْتَقٖيمِ
 اٰمٖين</span>َ
 
-\*\*\*
+/*/*/*
 
 # **Bakara Suresi 1- 2- 3. âyetler**
 
@@ -1225,7 +1230,7 @@ ki Muhammed aleyhissalâtü vesselâm remizleri, îmaları ve en gizli
 ifade ettikleri manalara göre olmayıp ilm-i esrarü’l-hurufta beyan
 edildiği gibi adet ve sayılar misillü, harflerin arasında fıtrî
 münasebetlerin bulunduğuna işarettir.
-(Hâşiye[\[1\]](https://risaleinur.hizmetvakfi.org/bakara-suresi-1-2-3-ayetler/#_ftn1))
+(Hâşiye[/[1/]](https://risaleinur.hizmetvakfi.org/bakara-suresi-1-2-3-ayetler/#_ftn1))
 
 5- <span dir="rtl">الٓم</span>ٓ taktîiyle, bütün harflerin esas
 mahreçleri olan “halk, vasat, şefe” mahreçlerine işarettir. Ve
@@ -1724,7 +1729,7 @@ ancak ve ancak erkân-ı İslâmiyeden olan zekât ve zekâtın yavruları olan
 sadaka ve teberruatın heyet-i içtimaiyece yüksek bir düstur ittihaz
 edilmesiyle olur.
 
-[\[1\]](https://risaleinur.hizmetvakfi.org/bakara-suresi-1-2-3-ayetler/#_ftnref1)
+[/[1/]](https://risaleinur.hizmetvakfi.org/bakara-suresi-1-2-3-ayetler/#_ftnref1)
 Hâşiye: Kırk sene sonra Risale-i Nur, bu lem’a-i i’cazı körlere dahi
 göstermiştir.
 
@@ -2028,7 +2033,7 @@ hikmetlere dikkat et.
 Evet “fenn-i menafiü’l-aza”nın şerh ve beyan ettiği vecihle, insanın
 cisminde, her birisi bir menfaat için takriben iki yüz küsur kemik
 vardır. Ve her birisi bir fayda için altı bin damar vardır. Ve hüceyrata
-hizmet eden \[yüz\] yirmi dört bin mesame ve pencere vardır. O
+hizmet eden /[yüz/] yirmi dört bin mesame ve pencere vardır. O
 hüceyratta cazibe, dâfia, mümsike, musavvire, müvellide namıyla her
 birisi bir maslahat için beş kuvvet çalışıyor. Âlem-i asgar böyle olsa
 insan-ı ekber ondan geri kalır mı? Ruha nisbeten ehemmiyetsiz olan ceset
@@ -2445,7 +2450,7 @@ gibi o tabakaların pek çok dilekleri vardır. Kur’an-ı Kerîm
 <span dir="rtl">اَلْمُفْلِحُون</span>َ kelimesini âmm ve mutlak bırakmıştır ki
 herkes istediğini takip etsin.
 
-\*\*\*
+/*/*/*
 
 # **Bakara Suresi 6. âyet**
 
@@ -2764,7 +2769,7 @@ Kâinat ondan tevahhuş eder. Kalbi ahzan ve ekdar ile dolar.
 arasındaki müsavata nassederek <span dir="rtl">سَوَٓاء</span>ٌ kelimesine
 tekiddir.
 
-\*\*\*
+/*/*/*
 
 # **Bakara Suresi 7. âyet**
 
@@ -3200,7 +3205,7 @@ olan şe’nidir. Evet, dünyada çok namus sahipleri, cinayetlerinin
 hicabından kurtulmak için kendilerine cezanın tatbikini istemişlerdir ve
 isteyenler de vardır.
 
-\*\*\*
+/*/*/*
 
 # **Bakara Suresi 8. âyet**
 
@@ -3377,7 +3382,7 @@ insanlar olup mü’minîn sınıfından addedilmediklerine delâlet için
 <span dir="rtl">مَا</span> nın haberi üzerine <span dir="rtl">ب</span>
 dâhil olmuştur.
 
-\*\*\*
+/*/*/*
 
 # **Bakara Suresi 9-10. âyetler**
 
@@ -3698,7 +3703,7 @@ Ashab-ı Kiram’ı bütün insanlara tefevvuk ettiren sıdktır.
 Muhammed-i Hâşimî’yi (aleyhisselâm) meratib-i beşeriyenin en yükseğine
 çıkaran sıdktır.
 
-\*\*\*
+/*/*/*
 
 # **Bakara Suresi 11-12. âyetler**
 
@@ -3872,7 +3877,7 @@ etmişlerdir.
 dolayısıyla, nasihate ihtiyaçları olmadığına ve nasihat edenleri tezyif
 ettiklerine karşı bir müdafaadır.
 
-\*\*\*
+/*/*/*
 
 # **Bakara Suresi 13. âyet**
 
@@ -4052,7 +4057,7 @@ ki her bir akl-ı selim kabul etmek şanındadır.
 3- Onlardan i’raz etmek ve onlara itimad etmemek lâzımdır. Çünkü
 cehillerini bilmediklerinden nasihatin onlara tesiri olmuyor.
 
-\*\*\*
+/*/*/*
 
 # **Bakara Suresi 14-15. âyetler**
 
@@ -4334,7 +4339,7 @@ bütün mehasin ve kemalâtı tahrip ettiğine îmadır.
 ve mütereddid şahıslardır. Ne meslekleri var ve ne muayyen bir
 maksatları vardır.”
 
-\*\*\*
+/*/*/*
 
 # **Bakara Suresi 16. âyet**
 
@@ -4451,7 +4456,7 @@ cümlede surenin başındaki <span dir="rtl">هُدًى لِلْمُتَّقٖي
 gizli bir remiz vardır ki Kur’an-ı Kerim, hidayeti vermemiş değildir.
 Hidayeti vermiş de bunlar kabul etmemişlerdir.
 
-\*\*\*
+/*/*/*
 
 # **Bakara Suresi 17-18-19-20. âyetler**
 
@@ -5535,7 +5540,7 @@ tagayyürü kabul etmez. Ve kudret lâzımedir, ziyade ve noksana kabiliyeti
 yoktur. Ve kudret, “Rezzak, Gaffar, Muhyî, Mümit” gibi sıfât-ı
 fiiliyenin merci ve mizanıdır.
 
-\*\*\*
+/*/*/*
 
 # **Bakara Suresi 21-22. âyetler**
 
@@ -6439,7 +6444,7 @@ bir kādir-i mutlak olmadığını ve mün’iminizin bulunmadığını bilirsin
 Keza bilirsiniz ki onların uydurdukları âlihe ve esnam, bir şeye kādir
 olmayıp onlar da mahluk ve mec’ul şeylerdir.
 
-\*\*\*
+/*/*/*
 
 # **Bakara Suresi 23-24. âyetler**
 
@@ -6798,7 +6803,7 @@ yuttu. Zaten bu onun hakkı idi. Çünkü Nasâra ve Yahudilerin
 hurafelerinden bir şey çıkmadı.” İşte bu feylesof <span dir="rtl">فَاْتُوا
 بِسُورَةٍ مِنْ مِثْلِهٖ … فَاِنْ لَمْ تَفْعَلُوا وَلَنْ تَفْعَلُوا فَاتَّقُوا النَّارَ … الخ</span> olan
 âyet-i kerîmenin mealini tasdik etmiştir.
-(Hâşiye[\[1\]](https://risaleinur.hizmetvakfi.org/bakara-suresi-23-24-ayetler/#_ftn1))
+(Hâşiye[/[1/]](https://risaleinur.hizmetvakfi.org/bakara-suresi-23-24-ayetler/#_ftn1))
 
 Sual: Gerek Kur’an-ı Kerîm olsun, gerek tefsiri olan hadîs-i şerif
 olsun; her fenden her ilimden birer fezleke almışlardır. Bir kitap veya
@@ -6988,7 +6993,7 @@ vermek veya garib meselelerden bahsetmek; onların zihinlerini
 vermezdi.
 
 Mesela, Kur’an-ı Kerîm “Ey insanlar! Şemsin sükûnuna, arzın hareketine
-(Hâşiye[\[2\]](https://risaleinur.hizmetvakfi.org/bakara-suresi-23-24-ayetler/#_ftn2))
+(Hâşiye[/[2/]](https://risaleinur.hizmetvakfi.org/bakara-suresi-23-24-ayetler/#_ftn2))
 ve bir katre su içinde binlerce hayvanatın bulunduğuna dikkat ediniz ki
 azamet-i İlahiyeyi anlayasınız.” demiş olsaydı, bütün o zamanların
 insanlarını tekzibe sevk etmiş olurdu. Çünkü hiss-i zahirîye muhaliftir.
@@ -7016,7 +7021,7 @@ ibham ve ıtlaktır ki onlara bir şaşırtma olmasın.
 Fakat Kur’an-ı Kerîm, irşadını noksan bırakmamıştır. Bu zamanın
 fencilerini de istifadeden mahrum etmemek üzere, çok karine ve
 emarelerin vaz’ıyla, hakikatlere işaretler yapmıştır.
-(Hâşiye[\[3\]](https://risaleinur.hizmetvakfi.org/bakara-suresi-23-24-ayetler/#_ftn3))
+(Hâşiye[/[3/]](https://risaleinur.hizmetvakfi.org/bakara-suresi-23-24-ayetler/#_ftn3))
 
 Ey insafsız! Seni insafa davet ediyorum. Bir kere <span dir="rtl">كَلِّمِ
 النَّاسَ عَلٰى قَدَرِ عُقُولِهِم</span>ْ olan meşhur düsturu nazara almakla,
@@ -7126,7 +7131,7 @@ görünmesi ve malûm olması lâzım gelmez. Maahâzâ Hicaz matlaıyla
 matla’ları bir olan yerlerde, o gece yollarda bulunan kervan ve
 kafilelerden naklen, inşikakın vukua geldiği hakkında çok rivayetler
 vardır.
-(\*[\[4\]](https://risaleinur.hizmetvakfi.org/bakara-suresi-23-24-ayetler/#_ftn4))
+(/*[/[4/]](https://risaleinur.hizmetvakfi.org/bakara-suresi-23-24-ayetler/#_ftn4))
 
 Üçüncü nevi mu’cizelerin reisi ve en büyüğü, Kur’an-ı Azîmüşşan’dır ki
 yedi vecihle mu’cize olduğuna mezkûr âyetle işaret edilmiştir.
@@ -7809,14 +7814,14 @@ yerine ikame ile tamim yapmıştır. Takdir-i kelâm: <span dir="rtl">اُعِد
 لَكُمْ لِاَنَّكُمْ مِنَ الْكَافِرٖينَ وَالنَّارُ اُعِدَّتْ لِلْكَافِرٖين</span>َ Yani “Siz
 cehennemliksiniz zira kâfirlerdensiniz. Cehennem de kâfirler içindir.”
 
-\*\*\*
+/*/*/*
 
-[\[1\]](https://risaleinur.hizmetvakfi.org/bakara-suresi-23-24-ayetler/#_ftnref1)
+[/[1/]](https://risaleinur.hizmetvakfi.org/bakara-suresi-23-24-ayetler/#_ftnref1)
 Hâşiye: Kırk sene sonra neşrolan Risale-i Nur’da Carlyle, Goethe ve
 Bismark gibi kırk meşhur feylesofların tasdikleri beyan edilmiş.
 İnşâallah bu kitabın zeylinde dahi yazılacak.
 
-[\[2\]](https://risaleinur.hizmetvakfi.org/bakara-suresi-23-24-ayetler/#_ftnref2)
+[/[2/]](https://risaleinur.hizmetvakfi.org/bakara-suresi-23-24-ayetler/#_ftnref2)
 Hâşiye: Hasta halimde, nevm ile yakaza arasında ihtar edilen bir
 nüktedir:
 
@@ -7837,15 +7842,15 @@ meczupları.
 
 Mütercim
 
-[\[3\]](https://risaleinur.hizmetvakfi.org/bakara-suresi-23-24-ayetler/#_ftnref3)
+[/[3/]](https://risaleinur.hizmetvakfi.org/bakara-suresi-23-24-ayetler/#_ftnref3)
 Hâşiye: Mu’cizat-ı Kur’aniye risale-i nuriyesi tamamıyla bu hakikati
 ispat etmiş.
 
 Mütercim
 
-[\[4\]](https://risaleinur.hizmetvakfi.org/bakara-suresi-23-24-ayetler/#_ftnref4)\*
+[/[4/]](https://risaleinur.hizmetvakfi.org/bakara-suresi-23-24-ayetler/#_ftnref4)/*
 
-<img src="public/images/isaratu-l-i-caz/media/image1.png"
+<img src="/risale-library/images/isaratu-l-i-caz/media/image1.png"
 style="width:6.26772in;height:6.40278in" alt="iicaz_murekkeb" />
 
 Diyarbakır’da Van Valisi Cevdet Bey’in evinde 19 Şubat 1330 tarihinde
@@ -7947,7 +7952,7 @@ uğrayacak. Kötülüğü, şerri, zararı tevlid eden maddelerin bir tarafa
 çekilmesiyle cehennemin; iyiliği, hayrı, nef’i doğuran maddelerin de
 diğer tarafa çekilmesiyle cennetin teçhizatları ikmal edilecektir.
 
-\*\*\*
+/*/*/*
 
 **Mukaddime**
 
@@ -8130,7 +8135,7 @@ Cevap: Elemin def’i, lezzetin sebeplerinden biridir. Yoksa lezzet, ona
 münhasır değildir. Ve keza âlem-i ebedînin bu âleme benzetilmesi,
 kıyas-ı maalfârıktır. Yani aralarında çok farklar bulunduğundan
 birbirine benzemez. Cennet ile Horhor Bahçesinin
-(Hâşiye[\[1\]](https://risaleinur.hizmetvakfi.org/bakara-suresi-25-ayet/#_ftn1))
+(Hâşiye[/[1/]](https://risaleinur.hizmetvakfi.org/bakara-suresi-25-ayet/#_ftn1))
 arasında ne nisbet varsa cennetin lezzetleriyle dünyanın lezzetleri
 arasında da aynı o nisbet vardır. Cennetin Horhor Bahçesi’nden
 dereceleri ne kadar çok yüksek ise uhrevî lezzetler de dünya
@@ -8448,9 +8453,9 @@ güzellikte hurilerin derecelerine çıkacaklarına delâlet eder.
 <span dir="rtl">وَهُمْ فٖيهَا خَالِدُون</span>َ : Yani “Onlar da ezvacları da
 cennet de cennetin lezaizi de hep ebedîdirler.”
 
-\*\*\*
+/*/*/*
 
-[\[1\]](https://risaleinur.hizmetvakfi.org/bakara-suresi-25-ayet/#_ftnref1)
+[/[1/]](https://risaleinur.hizmetvakfi.org/bakara-suresi-25-ayet/#_ftnref1)
 Hâşiye: Horhor, Van’da müellifin medresesinin adıdır.
 
 # **Bakara Suresi 26-27. âyetler**
@@ -8538,7 +8543,7 @@ yine bilmezler mi ki Cenab-ı Hakk’ın azametine mikyas ancak mecmu
 âsârıdır, yalnız bir eser mikyas olamaz! Ve yine bilmezler mi ki Cenab-ı
 Hakk’ın tecellisine mizan olacak, kâffe-i kelimatıdır ki eşcar kalem,
 denizler mürekkep olsa o kelimatı yazıp bitiremezler.
-(Hâşiye[\[1\]](https://risaleinur.hizmetvakfi.org/bakara-suresi-26-27-ayetler/#_ftn1))
+(Hâşiye[/[1/]](https://risaleinur.hizmetvakfi.org/bakara-suresi-26-27-ayetler/#_ftn1))
 
 Mesela şems; âkıl, ihtiyar ve irade sahibi farz edilse ziyasını bütün
 âleme neşrettiği bir sırada pis, mülevves bir zerre de onun ziyasından
@@ -8613,7 +8618,7 @@ vahdet ve izzet-i İlahiye de kudretin bütün eşyaya şümulünü ve kelâmın
 her şeye ihatasını iktiza ederler. Maahâzâ bir zerre üstünde zerreler
 ile yazılan bir Kur’an, sahife-i semada yıldızlar ile yazılacak
 Kur’an’dan hüsün ve güzellikte aşağı değildir. Ve keza
-(Hâşiye[\[2\]](https://risaleinur.hizmetvakfi.org/bakara-suresi-26-27-ayetler/#_ftn2))
+(Hâşiye[/[2/]](https://risaleinur.hizmetvakfi.org/bakara-suresi-26-27-ayetler/#_ftn2))
 bir sivrisineğin yaratılışı, sanatça filin hilkatinden dûn değildir.
 
 Kelâm sıfatı da aynen kudret sıfatı gibidir. Bir çocukla konuşup söz
@@ -8630,7 +8635,7 @@ edemez. Çünkü her şeyi lâyıkına vermiştir. Binaenaleyh mümessel-i leh n
 kadar hakir olursa temsili de o kadar hakir olur ve ne kadar büyük
 olursa temsili de o kadar büyük olur. Evet sanemler pek âdi, hakir
 olduklarından Cenab-ı Hak, sineği
-(Hâşiye[\[3\]](https://risaleinur.hizmetvakfi.org/bakara-suresi-26-27-ayetler/#_ftn3))
+(Hâşiye[/[3/]](https://risaleinur.hizmetvakfi.org/bakara-suresi-26-27-ayetler/#_ftn3))
 onlara musallat kılmıştır; ve ibadetleri de o kadar çirkindir ki
 <span dir="rtl">نَسْجُ الْعَنْكَبُوت</span>ِ ile yani örümceğin ağıyla tabir
 edilmiştir.
@@ -9253,9 +9258,9 @@ işarettir. Mesela, vefa-i ahidde nakz ile hasaret ettiler; sıla-i
 rahimde kat’ ile, ıslahta ifsad ile, imanda küfür ile, saadet-i
 ebediyede şakavetle yaptıkları hasaretler gibi.
 
-\*\*\*
+/*/*/*
 
-[\[1\]](https://risaleinur.hizmetvakfi.org/bakara-suresi-26-27-ayetler/#_ftnref1)
+[/[1/]](https://risaleinur.hizmetvakfi.org/bakara-suresi-26-27-ayetler/#_ftnref1)
 Hâşiye: Bu mealdeki âyette bir mübalağa, bir müzayede görünür. Fakat
 hakikate, vakıa bakılırsa ziyadelik yoktur. Çünkü “kelime” bir manayı
 ifade eden şeye denir. Amma nahvîlerin lafız ile takyid ve tahsis
@@ -9280,7 +9285,7 @@ mübalağa, müzayede yoktur belki tenakus vardır.
 
 Mütercim Abdülmecid
 
-[\[2\]](https://risaleinur.hizmetvakfi.org/bakara-suresi-26-27-ayetler/#_ftnref2)
+[/[2/]](https://risaleinur.hizmetvakfi.org/bakara-suresi-26-27-ayetler/#_ftnref2)
 Hâşiye: Sivrisineğin başında mızrak gibi bir hortum vardır. Filin başına
 konar, hortumunu filin hortumuna batırır, fil kaçmaya başlar, hiçbir
 suretle elinden kurtulamaz. Demek Cenab-ı Hak, sivrisineği file galip ve
@@ -9289,7 +9294,7 @@ faiktir.
 
 Mütercim Abdülmecid
 
-[\[3\]](https://risaleinur.hizmetvakfi.org/bakara-suresi-26-27-ayetler/#_ftnref3)
+[/[3/]](https://risaleinur.hizmetvakfi.org/bakara-suresi-26-27-ayetler/#_ftnref3)
 Hâşiye: Bir a’rabînin taptığı bir sanemi varmış. Bir gün ibadete gitmiş.
 Bakmış ki bir tilki sanemin başına bevletmiş. Bu hali görünce
 <span dir="rtl">اَرَبٌّ يَبُولُ الثَّعْلَبَانُ بِرَاْسِه</span>ٖ demekle sanemi kırmış
@@ -9627,7 +9632,7 @@ levazımatıyla, terkibatıyla bizzat dest-i kudretten çıkarlar ve herkes
 hakiki Mâlik’ini bilir. İşte bunu anlayan, rücûun ne demek olduğunu
 anlar.
 
-\*\*\*
+/*/*/*
 
 # **Bakara Suresi 29. âyet**
 
@@ -10055,7 +10060,7 @@ bu kaidenin şümulünden hariç kalmıştır.
 <span dir="rtl">عَلٖيم</span>ٌ : Yani zatı ile ilim arasında zarurî,
 lüzumî bir sübut vardır.
 
-\*\*\*
+/*/*/*
 
 # **Bakara Suresi 30. âyet**
 
@@ -10433,7 +10438,7 @@ lâzımdır ki beşerin şeheviye ve gazabiye kuvvetleri kuvve-i akliyesine
 münkad ve mağlup olursa beşer, mücahedesinden dolayı melaikeye tefevvuk
 eder. Aksi halde hayvanattan daha aşağı olur çünkü özrü yoktur.
 
-\*\*\*
+/*/*/*
 
 # **Bakara Suresi 31-32-33. âyetler**
 
@@ -10469,7 +10474,7 @@ kerîmesinin hükmüne göre: Kur’an-ı Kerîm zahiren ve bâtınen, nassen ve
 delâleten, remzen ve işareten her zamanda vücuda gelmiş veya gelecek her
 şeyi ifade ediyor. Buna binaen gerek enbiyanın kıssa ve hikâyeleri gerek
 mu’cizeleri hakkında Kur’an-ı Kerîm’in işaratından fehmettiğime göre
-(Hâşiye[\[1\]](https://risaleinur.hizmetvakfi.org/bakara-suresi-31-32-33-ayetler/#_ftn1))
+(Hâşiye[/[1/]](https://risaleinur.hizmetvakfi.org/bakara-suresi-31-32-33-ayetler/#_ftn1))
 mu’cizat-ı enbiyadan iki gaye ve hikmet takip edilmiştir:
 
 **Birincisi:** Nübüvvetlerini halka tasdik ve kabul ettirmektir.
@@ -10684,9 +10689,9 @@ Müellifin küçük kardeşi ve Nur talebesi
 
 **Abdülmecid**
 
-\*\*\*
+/*/*/*
 
-[\[1\]](https://risaleinur.hizmetvakfi.org/bakara-suresi-31-32-33-ayetler/#_ftnref1)
+[/[1/]](https://risaleinur.hizmetvakfi.org/bakara-suresi-31-32-33-ayetler/#_ftnref1)
 Hâşiye: Eğer müellifin, Tenzil’in nazmından çıkardığı letaifte şüphen
 varsa ben derim ki: İbnü’l-Fârıd kitabından tefe’ül ederken şu beyit
 çıktı:
@@ -10729,7 +10734,7 @@ mehabetinde kemal-i hürmetle eğilirim.
 
 **Prens Bismarck**
 
-\*
+/*
 
 **En temiz ve en doğru din müslümanlıktır**
 
@@ -10749,13 +10754,13 @@ tarafından vuku bulacak dua ve niyazların günahkârları kurtaracağına
 dair ifadeleri yoktur. Çünkü bu gibi akideler, onları kabul edenleri
 alçaltmıştır.”
 
-\*
+/*
 
 **Zamanlar geçtikçe Kur’an’ın ulvi sırları inkişaf ediyor**
 
 Doktor Maurice (Moris), Le Parler Française Roman (Löparle Franses
 Roman) unvanlı gazetede Kur’an’ın Fransızca mütercimlerinden Selman
-Runah \[Salomon Reinach\]ın tenkidatına verdiği cevapta diyor ki:
+Runah /[Salomon Reinach/]ın tenkidatına verdiği cevapta diyor ki:
 
 Kur’an nedir? Her tenkidin fevkinde bir fesahat ve belâgat mu’cizesidir.
 Kur’an’ın, üç yüz elli milyon Müslüman’ın göğsünü haklı bir gururla
@@ -10821,7 +10826,7 @@ etmeye hâdim olur.
 
 **Doktor Maurice**
 
-\*
+/*
 
 (Nur Çeşmesi’nde ve Risale-i Nur’da yazılan bu nevi feylesoflardan kırk
 altıncısıdır.)
@@ -10848,7 +10853,7 @@ mukaddeste mebzuliyetle vardır.
 
 **John Davenport**
 
-\*
+/*
 
 **Kur’an serâpa samimiyet ve hakkaniyetle doludur**
 
@@ -10863,7 +10868,7 @@ tebliğ ettiği davet, hak ve hakikattir.
 
 **Carlyle**
 
-\*
+/*
 
 **Müslümanlık, tecessüd ve teslis akidesini reddeder**
 
@@ -10889,7 +10894,7 @@ seviyesinden daha yüksek bir dindir.
 
 **Edward Gibbon**
 
-\*
+/*
 
 **Hâlık’ın hukukuyla mahlukatın hukukunu en mükemmel surette ancak
 Müslümanlık tarif etmiştir**
@@ -10904,7 +10909,7 @@ Müslümanlar değil, Hristiyanlar da Musevîler de itiraf ediyorlar.
 
 **Marmaduke Pickthall**
 
-\*
+/*
 
 **Kur’an ile kavanin-i tabiiye arasında tam bir ahenk vardır**
 
@@ -10917,7 +10922,7 @@ Kur’an, her hürmete şâyan olan eserdir.
 
 **Levazaune**
 
-\*
+/*
 
 **Kur’an, bütün iyilik ve fazilet esaslarını muhtevidir. İnsanı her
 türlü dalaletlerden korur.**
@@ -10935,7 +10940,7 @@ kusurlarını, hatalarını i’tilâ ve kemale kalbeyler.
 
 **Müsteşrik Sedillot**
 
-\*
+/*
 
 **Kur’an öyle bir Peygamber sesidir ki onu bütün dünya dinleyebilir. Bu
 sesin aksi saraylarda, çöllerde, şehirlerde, devletlerde çınlar!**
@@ -10956,7 +10961,7 @@ bulmuştur.
 
 **Dr. Johnson**
 
-\*
+/*
 
 **Kur’an’ın cihan-şümul hakikati: Kur’an, Allah’ın birliğine inanmak
 hakikat-i kübrasını ilan eder**
@@ -10998,7 +11003,7 @@ tetebbua şâyan en faydalı mevzu sayılır.
 
 **Doktor Steingass**
 
-\*
+/*
 
 **Kur’an’ın lisanı, nezahet ve belâgat itibarıyla nazirsizdir. Kur’an
 bizatihî muhteşem bir mu’cizedir**
@@ -11032,7 +11037,7 @@ mevzuu ettiğim muhteşem âyetlerin birçoklarını okuyacaklardır.
 
 **George Sale**
 
-\*
+/*
 
 **Kur’an, beşeriyete İlahî bir lütuftur. Kur’an, muzaffer cumhuriyetler
 meydana getirmiştir**
@@ -11065,7 +11070,7 @@ ihraz etmişlerdir.
 
 **Rodwell**
 
-\*
+/*
 
 **Müslümanlık, dünyanın kıvamı olan bir dindir; cihan medeniyetinin
 istinad ettiği temelleri muhtevidir**
@@ -11095,7 +11100,7 @@ imkân yoktur!”
 
 **Gaston Care**
 
-\*
+/*
 
 **Kur’an bütün dinî kitaplara faiktir**
 
@@ -11116,7 +11121,7 @@ tahripkâr mikropları imha etmiştir.
 
 **Jochahim**
 
-\*
+/*
 
 **Kur’an âyetleri İslâmiyet’in muhteşem bünyesinde altın bir kordon gibi
 işlenmiştir**
@@ -11139,7 +11144,7 @@ sulh-perverlik, hakperestlik, her şeyden fazla Cenab-ı Hakk’a itimat ve
 tevekkül, Allah’a itaat… Müslümanlık nazarında hakiki iman esasları ve
 hakiki bir mü’minin başlıca sıfatları olarak gösterilmiştir.
 
-\*
+/*
 
 **Resul-i Ekrem idrak ve şuur timsalidir**
 
@@ -11178,7 +11183,7 @@ haiz olduğunda şüphe yoktur.
 
 **Edouard Montet**
 
-\*\*\*
+/*/*/*
 
 # **Mehmed Kayalar’ın Bir Müdafaası**
 
@@ -11427,7 +11432,7 @@ Emekli Yüzbaşı
 
 (Hâşiye): Bu müdafaanın serdedildiği muhakeme, beraetle neticelenmiştir.
 
-\*\*\*
+/*/*/*
 
 # **Dua (İşaratü’l-İ’caz)**
 
@@ -11453,51 +11458,51 @@ Umum Nur şakirdleri namına
 
 **Said Nursî**
 
-\*\*\*
+/*/*/*
 
 # **Fihrist (İşaratü’l-İ’caz)**
 
 #### **Fihrist**
 
-Tenbih\
-İfade-i Meram\
-Kur’an’ın Tarifi\
-Kur’an’ın Makasıd-ı Erbaası\
-Fatiha Suresi\
-Bakara Suresi\
-Tekrarat-ı Kur’aniye\
-Huruf-u Mukattaa\
-Belâgatın Esasları\
-İman\
-Namaz\
-Zekat ve Sadaka\
-Ehl-i Kitabı İmana Teşvik\
-Hâtemü’l-enbiya\
-Haşrin İspatı\
-Hidayet\
-Felâh ve Necat\
-Celalî ve Cemalî Tecelliler\
-Mahiyet-i Küfür\
-Ehl-i İtizal, Ehl-i Cebir, Ehl-i Sünnet\
-Kalplerin Mühürlenmesi\
-Kâfirin Cezası\
-Münafıklar Hakkında\
-1. Huda’ ve Hileleri\
-2. Fitne ve İfsadları\
-3. Temerrüd ve Tesfihleri\
-4. İstihza ve İstihfafları\
-Münafıkların Hasaretleri\
-Münafıkların Dehşetli Vaziyetlerinin Temsili\
-İbadet ve Takva, Tevhidin Delilleri\
-Nübüvvetin Tahkiki\
-Kur’an’ın Vücuh-u İ’cazı\
-Ahiret, Kıyamet ve Saadet-i ebediye\
-Nüket-i İ’caziye\
-Hayat ve Beka\
-Semavat ve Arz\
-Melaike ve Halife-i Arz\
-Talim-i Esma\
-Mütercimin İ’tizarı\
-Ecnebi Feylesofların Kur’an’a Dair Beyanatları\
-Mehmed Kayalar’ın bir Müdafaası\
+Tenbih/
+İfade-i Meram/
+Kur’an’ın Tarifi/
+Kur’an’ın Makasıd-ı Erbaası/
+Fatiha Suresi/
+Bakara Suresi/
+Tekrarat-ı Kur’aniye/
+Huruf-u Mukattaa/
+Belâgatın Esasları/
+İman/
+Namaz/
+Zekat ve Sadaka/
+Ehl-i Kitabı İmana Teşvik/
+Hâtemü’l-enbiya/
+Haşrin İspatı/
+Hidayet/
+Felâh ve Necat/
+Celalî ve Cemalî Tecelliler/
+Mahiyet-i Küfür/
+Ehl-i İtizal, Ehl-i Cebir, Ehl-i Sünnet/
+Kalplerin Mühürlenmesi/
+Kâfirin Cezası/
+Münafıklar Hakkında/
+1. Huda’ ve Hileleri/
+2. Fitne ve İfsadları/
+3. Temerrüd ve Tesfihleri/
+4. İstihza ve İstihfafları/
+Münafıkların Hasaretleri/
+Münafıkların Dehşetli Vaziyetlerinin Temsili/
+İbadet ve Takva, Tevhidin Delilleri/
+Nübüvvetin Tahkiki/
+Kur’an’ın Vücuh-u İ’cazı/
+Ahiret, Kıyamet ve Saadet-i ebediye/
+Nüket-i İ’caziye/
+Hayat ve Beka/
+Semavat ve Arz/
+Melaike ve Halife-i Arz/
+Talim-i Esma/
+Mütercimin İ’tizarı/
+Ecnebi Feylesofların Kur’an’a Dair Beyanatları/
+Mehmed Kayalar’ın bir Müdafaası/
 Hz. Üstadın Nâşirlere Duası

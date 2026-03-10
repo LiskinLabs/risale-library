@@ -1,3 +1,8 @@
+---
+title: 'KONFERANS'
+book: 'konferans'
+---
+
 **Risale-i Nur hakkında verilen bir**
 
 # **KONFERANS**
@@ -24,7 +29,7 @@ Pakistan Maarif Nâzır Muavini
 
 Ali Ekber Şah
 
-\*\*\*
+/*/*/*
 
 Teşrin-i sânî 1950’de Ankara Üniversitesinde, profesör ve mebuslarımız
 ile Pakistanlı misafirlerimiz ve muhtelif fakülte talebelerinin
@@ -198,7 +203,7 @@ intibah vermiş, dünya hayatının fâniliğini ihtar etmiş ve bâki bir
 âlemde, ebedî bir saadet içinde yaşamak hissini uyandırmıştır. Elbette
 böyle muazzam bir davayı, şaşırtıcı ve aldatıcı bir zamanda kazanabilmek
 için bir dava vekili bulmakta
-(Hâşiye[\[1\]](https://risaleinur.hizmetvakfi.org/konferans/#_ftn1)) çok
+(Hâşiye[/[1/]](https://risaleinur.hizmetvakfi.org/konferans/#_ftn1)) çok
 dikkatli olmamız lâzımdır. Bunun için tetkikatımızı biraz daha
 genişleteceğiz. Şöyle ki:
 
@@ -1046,7 +1051,7 @@ hükümran olacaktır.
 
 <span dir="rtl">وَ اٰخِرُ دَعْوٰيهُمْ اَنِ الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَمٖين</span>َ
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَهُ وَ اِنْ مِنْ شَىْءٍ اِلَّا يُسَبِّحُ بِحَمْدِه</span>ٖ
 
@@ -1065,7 +1070,7 @@ Kardeşleriniz
 
 Nazif, Tahirî, Sungur, Ceylan, Ziya, Bayram, Zübeyr
 
-\*\*\*
+/*/*/*
 
 (Bu bayram tebriği münasebetiyle, Üstadımızın altmış seneden beri
 tesisine çalıştığı ve şimdiki para ile yedi milyon kadar olan
@@ -1484,7 +1489,7 @@ Medresetü’z-Zehra Şakirdlerinden
 
 Nazif, Tahirî, Ceylan, Sungur, Ziya, Bayram, Zübeyr
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -1993,7 +1998,7 @@ Hasan Feyzi
 
 (Merhum)
 
-\*\*\*
+/*/*/*
 
 Merhum Hasan Feyzi, Nurlardan aldığı hakikat dersini, Nurlara işaret
 ederek güzel tanzim etmiş. Lâhika’ya girsin.
@@ -3245,7 +3250,7 @@ Mu’cizü’l-Beyan’ın işarat ve rumuzundan anlaşıldığı gibi rahmet-i
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 ##### **Reisicumhura ve Başvekile,**
 
@@ -3407,7 +3412,7 @@ namına sizden bekliyoruz.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 (Üniversiteli bir Nur talebesinin beraetle neticelenen mahkemedeki
 müdafaasıdır.)
@@ -3579,8 +3584,8 @@ sunarım.
 
 İbrahim
 
-\*\*\*
+/*/*/*
 
-[\[1\]](https://risaleinur.hizmetvakfi.org/konferans/#_ftnref1) Hâşiye:
+[/[1/]](https://risaleinur.hizmetvakfi.org/konferans/#_ftnref1) Hâşiye:
 Bu zamanda, böyle bir dava vekilinin, Risale-i Nur olduğuna Risale-i
 Nur’la imanlarını kurtaran milyonlarca kimseler şahittir.

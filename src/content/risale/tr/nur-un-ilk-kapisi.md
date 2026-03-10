@@ -1,3 +1,8 @@
+---
+title: 'NUR’UN İLK KAPISI'
+book: 'nur-un-ilk-kapisi'
+---
+
 **Risale-i Nur Külliyatı’ndan**
 
 # **NUR’UN İLK KAPISI**
@@ -60,7 +65,7 @@ kusurata ve tekrarata bakmayıp Nur şakirdleri onu neşretseler inşâallah
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحٖيم</span>ِ
 
@@ -861,7 +866,7 @@ vazifende muvaffık ve muîndir.
 Amma rızkın ve hayatın idamesi, emval ve evladın muhafazası, Hâlık’ına
 aittir. Fakat bazen seni şu vazifede istihdam eder ki hazain-i
 rahmetinin kapılarını kavil ve hal ve fiil ve sual ile dakk-ı bab etmek
-(\*[\[1\]](https://risaleinur.hizmetvakfi.org/nurun-ilk-kapisi/#_ftn1))
+(/*[/[1/]](https://risaleinur.hizmetvakfi.org/nurun-ilk-kapisi/#_ftn1))
 ile ubudiyet suretinde hizmet edersin.
 
 Hem nimetlerinin matbahlarına vâsıl edecek yollarda sülûk etmekle seni
@@ -2604,13 +2609,13 @@ meselelerin ne kıymette olduğunu anla. Onun şaşaa-i surîsine aldanıp
 Kur’an’ın gayet âlî ve fehme gayet karib olan beyan-ı mu’ciz-nümasına
 karşı hürmetsizlik etme.
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحٖيم</span>ِ
 
 <span dir="rtl">فَلَا تَغُرَّنَّكُمُ الْحَيٰوةُ الدُّنْيَا وَلَايَغُرَّنَّكُمْ بِاللّٰهِ الْغَرُور</span>ُ
 
-(Hâşiye[\[2\]](https://risaleinur.hizmetvakfi.org/nurun-ilk-kapisi/#_ftn2))
+(Hâşiye[/[2/]](https://risaleinur.hizmetvakfi.org/nurun-ilk-kapisi/#_ftn2))
 
 Ey birader! Düşman hariçte olsa insan silahsız o düşmanla geçinebilir.
 Fakat düşman kale içine girse ve gizlense o vakit o düşmana karşı
@@ -3173,7 +3178,7 @@ Müftehir seninle ins ü cin, zemin ü zaman
 
 Binler selâm sana ey mu’cize-i Kur’an
 
-\*\*\*
+/*/*/*
 
 Çok müşfik, çok kerîm Üstadım Efendim!
 
@@ -3301,7 +3306,7 @@ Günlerin olsun mübarek, hatırın bulsun safa
 
 İsm-i pâk-i hakkiçün Ahmed-i Muhammed Mustafa (asm)
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -3861,7 +3866,7 @@ mehabetinde kemal-i hürmetle eğilirim.
 
 Prens Bismarck
 
-\*
+/*
 
 ##### **En temiz ve en doğru din müslümanlıktır**
 
@@ -3881,7 +3886,7 @@ tarafından vuku bulacak dua ve niyazların günahkârları kurtaracağına
 dair ifadeleri yoktur. Çünkü bu gibi akideler, onları kabul edenleri
 alçaltmıştır.”
 
-\*
+/*
 
 ##### **Zamanlar geçtikçe Kur’an’ın ulvi sırları inkişaf ediyor**
 
@@ -3953,7 +3958,7 @@ etmeye hâdim olur.
 
 Doktor Maurice
 
-\*
+/*
 
 (Nur Çeşmesi’nde ve Risale-i Nur’da yazılan bu nevi feylesoflardan kırk
 altıncısıdır.)
@@ -3979,7 +3984,7 @@ mukaddeste mebzuliyetle vardır.
 
 John Davenport
 
-\*
+/*
 
 ##### **Kur’an serâpa samimiyet ve hakkaniyetle doludur**
 
@@ -3994,7 +3999,7 @@ tebliğ ettiği davet, hak ve hakikattir.
 
 Carlyle
 
-\*
+/*
 
 ##### **Müslümanlık, tecessüd ve teslis akidesini reddeder**
 
@@ -4020,7 +4025,7 @@ seviyesinden daha yüksek bir dindir.
 
 Edward Gibbon
 
-\*
+/*
 
 ##### **Hâlık’ın hukukuyla mahlukatın hukukunu en mükemmel surette ancak Müslümanlık tarif etmiştir**
 
@@ -4034,7 +4039,7 @@ Müslümanlar değil, Hristiyanlar da Musevîler de itiraf ediyorlar.
 
 Marmaduke Picktahall (Marmadük Piktol)
 
-\*
+/*
 
 ##### **Kur’an ile kavanin-i tabiiye arasında tam bir ahenk vardır**
 
@@ -4047,7 +4052,7 @@ Kur’an, her hürmete şâyan olan eserdir.
 
 Levazaune (Lövazon)
 
-\*
+/*
 
 ##### **Kur’an, bütün iyilik ve fazilet esaslarını muhtevidir. İnsanı her türlü dalaletlerden korur.**
 
@@ -4064,7 +4069,7 @@ kusurlarını, hatalarını i’tilâ ve kemale kalbeyler.
 
 Müsteşrik Sedillot
 
-\*
+/*
 
 ##### **Kur’an öyle bir Peygamber sesidir ki onu bütün dünya dinleyebilir. Bu sesin aksi saraylarda, çöllerde, şehirlerde, devletlerde çınlar!**
 
@@ -4084,7 +4089,7 @@ bulmuştur.
 
 Dr. Johnson
 
-\*
+/*
 
 ##### **Kur’an’ın cihan-şümul hakikati: Kur’an, Allah’ın birliğine inanmak hakikat-i kübrasını ilan eder**
 
@@ -4125,7 +4130,7 @@ tetebbua şâyan en faydalı mevzu sayılır.
 
 Doktor Steingass
 
-\*
+/*
 
 ##### **Kur’an’ın lisanı, nezahet ve belâgat itibarıyla nazirsizdir. Kur’an bizatihî muhteşem bir mu’cizedir**
 
@@ -4158,7 +4163,7 @@ mevzuu ettiğim muhteşem âyetlerin birçoklarını okuyacaklardır.
 
 **George Sale**
 
-\*
+/*
 
 ##### **Kur’an, beşeriyete İlahî bir lütuftur. Kur’an, muzaffer cumhuriyetler meydana getirmiştir**
 
@@ -4190,7 +4195,7 @@ ihraz etmişlerdir.
 
 Rodwell
 
-\*
+/*
 
 ##### **Müslümanlık, dünyanın kıvamı olan bir dindir; cihan medeniyetinin istinad ettiği temelleri muhtevidir**
 
@@ -4218,7 +4223,7 @@ olursa barışı devam ettirmeye imkân kalır mı? Hayır, buna imkân yoktur!
 
 Gaston Care
 
-\*
+/*
 
 ##### **Kur’an bütün dinî kitaplara faiktir**
 
@@ -4239,7 +4244,7 @@ tahripkâr mikropları imha etmiştir.
 
 Jochahim
 
-\*
+/*
 
 ##### **Kur’an âyetleri İslâmiyet’in muhteşem bünyesinde altın bir kordon gibi işlenmiştir**
 
@@ -4261,7 +4266,7 @@ sulh-perverlik, hakperestlik, her şeyden fazla Cenab-ı Hakk’a itimat ve
 tevekkül, Allah’a itaat… Müslümanlık nazarında hakiki iman esasları ve
 hakiki bir mü’minin başlıca sıfatları olarak gösterilmiştir.
 
-\*
+/*
 
 ##### **Resul-i Ekrem idrak ve şuur timsalidir**
 
@@ -4305,10 +4310,10 @@ etmişler…
 
 Said Nursî
 
-[\[1\]](https://risaleinur.hizmetvakfi.org/nurun-ilk-kapisi/#_ftnref1)
-\* Kapı çalmak demektir.
+[/[1/]](https://risaleinur.hizmetvakfi.org/nurun-ilk-kapisi/#_ftnref1)
+/* Kapı çalmak demektir.
 
-[\[2\]](https://risaleinur.hizmetvakfi.org/nurun-ilk-kapisi/#_ftnref2)
+[/[2/]](https://risaleinur.hizmetvakfi.org/nurun-ilk-kapisi/#_ftnref2)
 Hâşiye: Bu kısım, Üçüncü Ders’ten tâ Sekizinci Ders’in nihayetine kadar
 tafsilen yazıldığı halde, ehemmiyeti için burada bir hülâsası tekrar
 yazılması münasiptir.

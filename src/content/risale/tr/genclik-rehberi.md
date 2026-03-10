@@ -1,3 +1,8 @@
+---
+title: 'GENÇLİK REHBERİ'
+book: 'genclik-rehberi'
+---
+
 **Risale-i Nur Külliyatı’ndan**
 
 # **GENÇLİK REHBERİ**
@@ -20,7 +25,7 @@ her yerde küçük birer dershane-i Nuriye açmak lâzımdır” cümlesine
 ilişmişti. Demek, sonra hakikatini anlamış ki daha intişarına mani
 olmadı.
 
-\*\*\*
+/*/*/*
 
 “Hüve Nüktesi” gerçi derindir, herkes birden kavramaz.
 
@@ -35,7 +40,7 @@ Fakat çok ince olmasından neşredilmedi.
 
 Bedîüzzaman Said Nursî
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحٖيم</span>ِ
 
@@ -139,7 +144,7 @@ ondan bin derece daha belâhettir.
 Ey nefis, böyle ebleh olmamak istersen Allah namına ver, Allah namına
 al, Allah namına başla, Allah namına işle. Vesselâm.
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحٖيم</span>ِ
 
@@ -185,7 +190,7 @@ tasdik eden ve imza basan yüz yirmi dört milyon evliyanın aynı hakikate
 şehadetleri ve hadd ü hesaba gelmeyen muhakkiklerin kat’î delilleriyle o
 enbiya ve evliyanın verdikleri aynı haberleri aklen, ilmelyakîn
 derecesinde
-(\*[\[1\]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftn1))
+(/*[/[1/]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftn1))
 ispat ettikleri ve yüzde doksan dokuz ihtimal-i kat’î ile “İdam ve
 zindan-ı ebedîden kurtulmak ve o yolu saadet-i ebediyeye çevirmek,
 yalnız iman ve itaat iledir.” diye ittifaken haber veriyorlar.
@@ -252,7 +257,7 @@ güldüklerine yüz binlerce nefrin ve nefret edip ağlayacaktılar.
 Dünya ve âhirette ebedî ve daimî süruru isteyen, iman dairesindeki
 terbiye-i Muhammediyeyi (asm) kendine rehber etmek gerektir.
 
-\*\*\*
+/*/*/*
 
 Bir Zaman Eskişehir Hapishanesinin Penceresinde Oturmuştum
 
@@ -297,7 +302,7 @@ aklını başına al! O manevî cehennemden kurtulmak ve imanın bu dünyada
 dahi temin ettiği bir manevî cennete girmek ve saadet-i hayatiyeyi
 tatmak için Kur’an’ın dersini dinle. Cüz’î, fâni bir dakika lezzeti;
 küllî, bâki, daimî, imanî
-(\*[\[2\]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftn2))
+(/*[/[2/]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftn2))
 lezzetler ile mübadele et.
 
 Hem deme ki: “Ben hayvan gibi hayatımı geçireceğim.” Çünkü hayvana
@@ -336,7 +341,7 @@ tedenni ve tereddi ve sukut edip pis heves ve rezil nefse inkılab
 etmişler, mesholmuşlar. Elbette bu cihette, sana cehennemi ve mazlum
 ehl-i imana cenneti kazandıran bir muvakkat galeben olacak.
 
-\*\*\*
+/*/*/*
 
 Gençlik Rehberi’ne İlâve Edilmesi Lâzım Gelen Üstadımızın Bir Fıkrasıdır
 
@@ -357,7 +362,7 @@ iftiralarına medar olmuş. Şimdilik o iki sahife çıkarılsın. Yerine
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 Hâşiye:
 
@@ -372,7 +377,7 @@ Kadınlar da çıkarılan o iki sahifenin yerine “Kadınlarla Muhavere”
 namındaki İhtiyar ve Genç Hanımlar Rehberi’ni okusunlar. Ve çıkarılan
 iki sahifenin yerine, Üstadımızın yukarıdaki fıkrası konulsun.
 
-\*\*\*
+/*/*/*
 
 Birden İhtar Edilen Bir Mesele-i Mühimme
 
@@ -414,7 +419,7 @@ cemalinden daha şirin ve daha parlak bir tarzda kendine verileceği
 hadîste kat’iyetle sabittir. Eğer o güzelin zerre miktar aklı varsa bu
 güzel ve parlak ve ebedî neticeyi elinden kaçırmayacak…
 
-\*\*\*
+/*/*/*
 
 ### **Birkaç Bîçare Gençlere Verilen Bir Tenbih, Bir Ders, Bir İhtardır**
 
@@ -534,7 +539,7 @@ edilmez ve lâyık değildir.
 Cenab-ı Hak bizi ve sizi, bu zamanın cazibedar fitnesinden kurtarsın ve
 muhafaza eylesin, âmin!
 
-\*\*\*
+/*/*/*
 
 Risale-i Nur Talebeleri Tarafından Sorulan Bir Suale Cevap
 
@@ -594,7 +599,7 @@ malayani olur. Yalnız bu kadar var ki Risale-i Nur şakirdlerinin bir
 kısmı öteki davalar içinde bulunduğu ve lüzumsuz, sebepsiz bazen bize
 akılsızların tecavüzleri ve taarruzları zamanlarında zaruret
 derecesinde, istemeyerek bakmışız.
-(\*[\[3\]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftn3))
+(/*[/[3/]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftn3))
 
 Hem de bu hakiki ve pek büyük dava haricindeki davalara ve boğuşmalara
 alâkadarane fikren, kalben karışmak zararlıdır. Çünkü böyle geniş,
@@ -617,7 +622,7 @@ susturdum.
 
 Risale-i Nur Şakirdleri
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -716,7 +721,7 @@ altında düşman karşısında bir saat nöbet, bir sene ibadet hükmüne
 geçebilir. Öyle de sizin bu ağır şerait altında her bir saat ibadet
 zahmeti, çok saatler olup o zahmetleri rahmetlere çevirir.
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -780,7 +785,7 @@ ziyadeleşir.
 hizmeti, lillah için olsun. Hem bir şartı da sadakat ve şefkat ve sevinç
 ile ve minnet etmemek tarzda yardımlarına koşmaktır.
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَهُ وَ اِنْ مِنْ شَىْءٍ اِلَّا يُسَبِّحُ بِحَمْدِه</span>ٖ
 
@@ -826,7 +831,7 @@ teneffüse çıkmıyorlar. Onlara zulüm olur. Mert ve vicdanlı bir mü’min,
 küçük ve cüz’î bir hata veya menfaatle, yüzer zararı ehl-i imana vermez.
 Eğer hata etse verse çabuk tövbe etmek lâzımdır.
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَهُ وَ اِنْ مِنْ شَىْءٍ اِلَّا يُسَبِّحُ بِحَمْدِه</span>ٖ
 
@@ -859,7 +864,7 @@ helâl edip hatırlarını kırmamaya çalışacağımıza, Kur’an’ın ve im
 uhuvvet-i İslâmiyenin ve maslahatımızın emriyle ve irşadıyla karar
 verdik.” diyerek bu hapsi bir mübarek dershaneye çeviriniz.
 
-\*\*\*
+/*/*/*
 
 ### **On Üçüncü Söz’ün İkinci Makamı’nın Zeyli**
 
@@ -940,7 +945,7 @@ gelecek şiddetli belalara ve anarşiliğe karşı bir set olabilsin.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 Yirmi Altıncı Lem’a’dan
 
@@ -958,7 +963,7 @@ ihtiyarlığı; bana gayet hazîn ve rikkatli ve firkatli bir halet içinde,
 o yüksek kalede geçmiş zamanın derelerine ve gelecek zamanın dağlarına
 baktırdı ve baktım. Birbiri içinde beni ihata eden dört beş ihtiyarlık
 karanlıkları içinde, Ankara’da en kara bir halet-i ruhiye hissettiğimden
-(Hâşiye[\[4\]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftn4))
+(Hâşiye[/[4/]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftn4))
 bir nur, bir teselli, bir rica aradım.
 
 Sağa, yani mazi olan geçmiş zamana bakıp teselli ararken bana mazi,
@@ -1074,7 +1079,7 @@ kadar nurlu, lezzetli, sevimli, şirin defineler var ve madem
 ihtiyarlığımız bizi bu definenin içine daha ziyade sevk ediyor elbette
 imanlı ihtiyarlıktan şekva değil belki binler teşekkür etmeliyiz.
 
-\*\*\*
+/*/*/*
 
 Meyve Risalesi’nden
 
@@ -1240,7 +1245,7 @@ eder.
 <span dir="rtl">سُبْحَانَكَ لَا عِلْمَ لَنَٓا اِلَّا مَا عَلَّمْتَنَٓا اِنَّكَ اَنْتَ الْعَلٖيمُ
 الْحَكٖيم</span>ُ
 
-\*\*\*
+/*/*/*
 
 ### **Onuncu Söz’ün Mühim Bir Zeyli ve Lâhikasının Birinci Parçası**
 
@@ -1690,7 +1695,7 @@ ve hüccet-i kātıası beyan ve izah edilecek inşâallah.
 
 (Daha o makamat yazılmamış.)
 
-\*\*\*
+/*/*/*
 
 ### **Hüve Nüktesi**
 
@@ -1816,9 +1821,9 @@ Mütebâkisi şimdilik yazdırılmadı.
 
 Umuma binler selâm…
 
-\*\*\*
+/*/*/*
 
-### **On Yedinci Söz’ün İkinci Makamı([\[5\]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftn5))**
+### **On Yedinci Söz’ün İkinci Makamı([/[5/]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftn5))**
 
 Bırak bîçare feryadı, beladan gel tevekkül kıl!
 
@@ -1858,7 +1863,7 @@ Demek, değmez ki alınsa çürük maldır hep bu çarşıda.
 
 Öyle ise geç, iyi mallar dizilmiş arkasında.
 
-\*\*\*
+/*/*/*
 
 #### **Siyah Dutun Bir Meyvesi**
 
@@ -1909,14 +1914,14 @@ Ahbaba kavuşturur beni, kabirden darılmam, sen gibi kızmam.
 Rahmet kapısı, nur kapısı, hak kapısı, ondan sıkılmam, geri çekilmem.
 
 Bismillah diyerek çalıyorum
-(Hâşiye[\[6\]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftn6))
+(Hâşiye[/[6/]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftn6))
 arkama bakmam, dehşet de almam.
 
 Elhamdülillah diyerek rahat bulup yatacağım, zahmeti çekmem, vahşette
 kalmam.
 
 Allahu ekber diyerek ezan-ı haşri işitip kalkacağım
-(Hâşiye[\[7\]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftn7))
+(Hâşiye[/[7/]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftn7))
 mahşer-i ekberden çekinmem, mescid-i a’zamdan çekilmem.
 
 Lütf-u Yezdan, nur-u Kur’an, feyz-i iman sayesinde hiç üzülmem.
@@ -1924,7 +1929,7 @@ Lütf-u Yezdan, nur-u Kur’an, feyz-i iman sayesinde hiç üzülmem.
 Durmayıp koşacağım, arş-ı Rahman zılline uçacağım, sen gibi şaşmam
 inşâallah.
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَهُ وَ اِنْ مِنْ شَىْءٍ اِلَّا يُسَبِّحُ بِحَمْدِه</span>ٖ
 
@@ -1968,7 +1973,7 @@ Binaenaleyh senin huzurunda kemal-i hürmetle eğilirim.”
 Bismark
 
 diye imzasını atmış.
-(\*[\[8\]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftn8))
+(/*[/[8/]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftn8))
 Ve o fıkrasında tahrif ve nesholunan kütüb-ü münzeleyi ziyade tenkis
 ettiği için o cümleler yazılmamalı, ben de işaret ettim.
 
@@ -1981,7 +1986,7 @@ meşhur feylesofu olan Mister Karlayl dahi aynen Bismark gibi demiş:
 
 “Başka kitaplar, hiçbir cihette Kur’an’a yetişemez. Hakiki söz odur, onu
 dinlemeliyiz.” diye kat’î karar vermesi
-(\*[\[9\]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftn9))
+(/*[/[9/]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftn9))
 ve Nurların da her tarafta fütuhatı ve ileri gitmesi, büyük bir fâl-i
 hayırdır ki ecnebide çok Bismarklar ve Mister Karlayllar çıkacaklar ve
 emareleri de var diye Nurculara bir bayram hediyesi olarak takdim
@@ -1995,7 +2000,7 @@ Kardeşiniz
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 Ahmedlerin Mektubunda Bismark’ın Beyanatı
 
@@ -2032,7 +2037,7 @@ huzurunda kemal-i hürmetle eğilirim.”
 
 Bismark
 
-\*\*\*
+/*/*/*
 
 Otuz İkinci Söz’ün Üçüncü Mevkıfı’ndan
 
@@ -2425,7 +2430,7 @@ muhabbet-i İlahiyeyi ziyadeleştirir. Hem meşru bir muhabbettir. Hem
 ayn-ı lezzet bir şükürdür. Hem ayn-ı muhabbet bir fikirdir.
 
 Mesela, nasıl ki bir padişah-ı âlî,
-(Hâşiye[\[10\]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftn10))
+(Hâşiye[/[10/]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftn10))
 sana bir elmayı ihsan etse o elmaya iki muhabbet ve onda iki lezzet var:
 
 Biri; elma, elma olduğu için sevilir ve elmaya mahsus ve elma kadar bir
@@ -2594,7 +2599,7 @@ hattâ ölümleri, sohbetinize ve uhuvvetinize mani olmadığı için o manevî
 muhabbet ve ruhanî irtibattan istifade edersin. Ve mülakat lezzeti daimî
 olur. Lillah için olmazsa bir günlük mülakat lezzeti, yüz günlük firak
 elemini netice verir.
-(Hâşiye[\[11\]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftn11))
+(Hâşiye[/[11/]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftn11))
 
 Enbiya ve evliyaya muhabbetin ise: Ehl-i gaflete karanlıklı bir
 vahşetgâh görünen âlem-i berzah, o nuranilerin vücudlarıyla tenevvür
@@ -2825,7 +2830,7 @@ tahkikin ittifakıyla; dünyanın bin sene hayat-ı mesudanesi, bir saatine
 değmeyen cennet hayatı ve cennet hayatının dahi bin senesi, bir saat
 müşahedesine değmeyen bir kudsî, münezzeh cemal ve kemal sahibi olan
 Zat-ı Zülcelal’in müşahedesi, rü’yetidir ki
-(Hâşiye[\[12\]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftn12))
+(Hâşiye[/[12/]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftn12))
 hadîs-i kat’î ile ve Kur’an’ın nassıyla sabittir.
 
 Hazret-i Süleyman aleyhisselâm gibi muhteşem bir kemal ile meşhur bir
@@ -2845,7 +2850,7 @@ cemali ve kemali olan bir zatın rü’yeti, ne kadar mergub, merak-âver ve
 <span dir="rtl">اَللّٰهُمَّ صَلِّ وَ سَلِّمْ عَلٰى مَنْ اَرْسَلْتَهُ رَحْمَةً لِلْعَالَمٖينَ وَ عَلٰى اٰلِهٖ وَ
 صَحْبِهٖ اَجْمَعٖينَ اٰمٖين</span>َ
 
-\*\*\*
+/*/*/*
 
 On Dördüncü Lem’a’nın İkinci Makamı
 
@@ -3160,7 +3165,7 @@ Bismillahirrahmanirrahîm’dir. Ve en kolay bir anahtarı da salavattır.
 <span dir="rtl">سُبْحَانَكَ لَا عِلْمَ لَنَٓا اِلَّا مَا عَلَّمْتَنَٓا اِنَّكَ اَنْتَ الْعَلٖيمُ
 الْحَكٖيم</span>ُ
 
-\*\*\*
+/*/*/*
 
 ## **Yirmi Üçüncü Söz**
 
@@ -3501,7 +3506,7 @@ bütün kâinatın dualarını kendi duan içine al. Bir abd-i küllî ve bir
 vekil-i umumî gibi <span dir="rtl">اِيَّاكَ نَسْتَعٖين</span>ُ de. Kâinatın
 güzel bir takvimi ol.
 
-\*\*\*
+/*/*/*
 
 ### **İkinci Mebhas**
 
@@ -4031,7 +4036,7 @@ eder. Eskiden ne tarzda yazılmış, o tarzda bıraktım. Şiire benzer fakat
 
 <span dir="rtl">وَ اٰخِرُ دَعْوٰيهُمْ اَنِ الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَمٖين</span>َ
 
-\*\*\*
+/*/*/*
 
 #### **Risale-i Nur Nedir?**
 
@@ -4487,7 +4492,7 @@ Konya Nur Talebeleri namına
 
 Zübeyr Gündüzalp
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -4593,12 +4598,12 @@ Ve hâkeza binlerce vecizeler var.
 
 Dr. Mustafa Hilmi Ramazanoğlu
 
-\*\*\*
+/*/*/*
 
-[\[1\]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftnref1) \*
+[/[1/]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftnref1) /*
 Onlardan birisi Risale-i Nur’dur, meydandadır.
 
-[\[2\]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftnref2) \*
+[/[2/]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftnref2) /*
 Evet iman, bu dünyada dahi cennet lezaizini manen verebilir. Yüzer
 lezzetli ışıklarından bu tek faydasına bak:
 
@@ -4616,42 +4621,42 @@ bu dünyada dahi geldiğini gösteriyor ki: İman öyle bir çekirdektir ki
 ehl-i imana cenneti, bütün lezaiz ve mehasiniyle sümbül veriyor ve
 verecektir.
 
-[\[3\]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftnref3)
+[/[3/]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftnref3)
 Mahkemedeki müdafaatına işarettir.
 
-[\[4\]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftnref4)
+[/[4/]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftnref4)
 Hâşiye: O zaman bu halet-i ruhiye Farisî bir münâcat suretinde kalbe
 geldi, yazdım. Ankara’da Hubab Risalesi’nde tabedilmiştir.
 
-[\[5\]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftnref5)
+[/[5/]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftnref5)
 Hâşiye: Bu İkinci Makam’daki parçalar şiire benzer fakat şiir değiller.
 Kasdî nazmedilmemişler. Belki hakikatlerin kemal-i intizamı cihetinde,
 bir derece manzum suretini almışlar.
 
-[\[6\]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftnref6)
+[/[6/]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftnref6)
 Hâşiye: Eyvah diyerek kaçmıyorum.
 
-[\[7\]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftnref7)
+[/[7/]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftnref7)
 Hâşiye: İsrafil’in ezanını fecr-i haşirde işitip Allahu ekber diyerek
 kalkacağım. Salât-ı kübradan çekilmem, mecma-ı ekberden çekinmem.
 
-[\[8\]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftnref8) \*
+[/[8/]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftnref8) /*
 Ahmedlerin mektubunda işaret ettiğim gibi o fıkra, bu mektubumla beraber
 Rehber’e girebilir.
 
-[\[9\]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftnref9) \*
+[/[9/]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftnref9) /*
 Risale-i Nur’dan Arabî İşaratü’l-İ’caz tefsiri, otuz sene evvel, onun bu
 kıymetli hakperestane hükmüne işaret etmiş.
 
-[\[10\]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftnref10)
+[/[10/]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftnref10)
 Hâşiye: Bir zaman iki aşiret reisi, bir padişahın huzuruna girmişler,
 yazılan aynı vaziyette bulunmuşlar.
 
-[\[11\]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftnref11)
+[/[11/]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftnref11)
 Hâşiye: Lillah için bir saniye mülakat, bir senedir. Dünya için olsa bir
 sene, bir saniyedir.
 
-[\[12\]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftnref12)
+[/[12/]](https://risaleinur.hizmetvakfi.org/genclik-rehberi/#_ftnref12)
 Hâşiye: Hadîsin nassıyla “O şuhud, bütün lezaiz-i cennetin o derece
 fevkindedir ki onları unutturur. Ve şuhuddan sonra ehl-i şuhudun hüsn-ü
 cemali o derece fazlalaşır ki döndükleri vakit, saraylarındaki aileleri

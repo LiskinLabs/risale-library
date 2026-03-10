@@ -1,3 +1,8 @@
+---
+title: 'Konferans (Sözler)'
+book: 'konferans-sozler'
+---
+
 # **Konferans (Sözler)**
 
 ## **KONFERANS**
@@ -176,7 +181,7 @@ intibah vermiş, dünya hayatının fâniliğini ihtar etmiştir. Ve bâki bir
 âlemde, ebedî bir saadet içinde yaşamak hissini uyandırmıştır. Elbette
 böyle muazzam bir davayı, şaşırtıcı ve aldatıcı bir zamanda kazanabilmek
 için bir dava vekili bulmakta
-(Hâşiye[<u>\[1\]</u>](https://risaleinur.hizmetvakfi.org/konferans-sozler/#_ftn1))
+(Hâşiye[<u>/[1/]</u>](https://risaleinur.hizmetvakfi.org/konferans-sozler/#_ftn1))
 çok dikkatli olmamız lâzımdır. Bunun için tetkikatımızı biraz daha
 genişleteceğiz. Şöyle ki:
 
@@ -1026,7 +1031,7 @@ hükümran olacaktır.
 
 <span dir="rtl">وَ اٰخِرُ دَعْوٰيهُمْ اَنِ الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَمٖين</span>َ
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحٖيم</span>ِ
 
@@ -1048,8 +1053,8 @@ Umum Nur Şakirdleri namına
 
 **Said Nursî**
 
-\*\*\*
+/*/*/*
 
-[<u>\[1\]</u>](https://risaleinur.hizmetvakfi.org/konferans-sozler/#_ftnref1)
+[<u>/[1/]</u>](https://risaleinur.hizmetvakfi.org/konferans-sozler/#_ftnref1)
 **Hâşiye:** Bu zamanda, böyle bir dava vekilinin, Risale-i Nur olduğuna
 Risale-i Nur’la imanlarını kurtaran milyonlarca kimseler şahittir.

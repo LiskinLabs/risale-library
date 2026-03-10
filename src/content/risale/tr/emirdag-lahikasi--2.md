@@ -1,3 +1,8 @@
+---
+title: 'EMİRDAĞ LÂHİKASI – 2'
+book: 'emirdag-lahikasi--2'
+---
+
 **Risale-i Nur Külliyatı’ndan**
 
 **Yirmi Yedinci Mektup’tan**
@@ -16,7 +21,7 @@ muhakeme edilmiş ve Afyon hapsinde kaldığı yirmi ay zarfında yazdıkları
 mektup ve müdafaaları Şuâlar’da On Dördüncü Şuâ olarak ve kısmen
 Tarihçe-i Hayat’ta neşredilmiştir.
 
-\*\*\*
+/*/*/*
 
 # **Emirdağ Lâhikası – II s.6-26**
 
@@ -37,7 +42,7 @@ olursunuz.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 #### **Afyon Hapsinden Sonra Emirdağı’nda Yazılan Mektuplar**
 
@@ -71,7 +76,7 @@ müdafaatımı da size gönderiyorum. Ona göre sizin delâletinizle Nurların
 serbestiyetine çalışacak zatlara bir me’haz olarak göstermek niyetiyle
 gönderdik.
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -133,7 +138,7 @@ merak ettim: “Sen ne için bu rüyayı bana söyledin? Acaba onların başına
 bir zarar mı gelmiş?” diye bir gece sabaha kadar endişe ile
 müteessirdim. O rüya-yı sadıka az bir tabir ile çıktı.
 
-\*\*\*
+/*/*/*
 
 Sungur Ankara’da iken Üstadımıza yazdığı mektubun suretidir.
 
@@ -156,7 +161,7 @@ neşrederiz. İnşâallah tam ve parlak şekilde ileride neşrine
 
 Sungur
 
-\*\*\*
+/*/*/*
 
 Yirmi Dokuzuncu Mektup’un İkinci Makamı’nın en baş sahifesindeki sual ve
 cevaptan sonra şu nükte yazılacak:
@@ -174,7 +179,7 @@ bütün kusuratını ve israfatını affettirir.”
 
 Ben de kemal-i sürurla şükrettim, o kusurları unuttum.
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَهُ وَ اِنْ مِنْ شَىْءٍ اِلَّا يُسَبِّحُ بِحَمْدِه</span>ٖ
 
@@ -229,7 +234,7 @@ tarifatı ise o, Kur’an ile beraber tabedilmesin belki ayrıca bir küçük
 risalecik olarak ya Türkçe veya Arabîye güzelce çevirip öylece
 tabedilsin.
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -259,7 +264,7 @@ Hizmetinde bulunan
 
 Halil, Sadık, İbrahim
 
-\*\*\*
+/*/*/*
 
 Aziz, sıddık kardeşlerim!
 
@@ -274,7 +279,7 @@ ve berzaha Hâfız Ali ve Hasan Feyzi gibi kardeşlerinin yanına gitti.
 Cenab-ı Hak Risale-i Nur’un hurufatı adedince onun defter-i hasenatına
 hayırlar yazsın ve ruhuna rahmet eylesin, âmin!
 
-\*\*\*
+/*/*/*
 
 Aziz, sıddık kardeşlerim!
 
@@ -400,13 +405,13 @@ yüzer saat hükmünde hayırlar kazandırır.
 Umum kardeşlere ve hemşirelere selâm ve iki cihanda selâmetlerine dua
 eden ve dualarını isteyen kardeşiniz
 
-\*\*\*
+/*/*/*
 
 …Hakiki fedakâr Zübeyr, en lüzumlu ve hizmete şiddet-i ihtiyacım
 zamanında buraya imdadıma geldi. Yoksa Isparta’dan o sistemde birisini
 isteyecektim…
 
-\*\*\*
+/*/*/*
 
 Aziz, sıddık kardeşlerim!
 
@@ -441,7 +446,7 @@ gördüm. Fazla bakmak mesleğimce iznim olmadığından daha bakmadım.
 
 Hasta kardeşiniz Said Nursî
 
-\*\*\*
+/*/*/*
 
 Celal Bayar
 
@@ -452,7 +457,7 @@ hizmetinde muvaffak eylesin.
 
 Nur talebelerinden ve onların namına Said Nursî
 
-\*\*\*
+/*/*/*
 
 ##### **Reisicumhur Celal Bayar ve Heyet-i Vükelasına,**
 
@@ -494,7 +499,7 @@ Said Nursî
 Kardeşlerim; ben bunu böyle münasip gördüm, sizlerin meşveretine havale
 ediyorum.
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -534,7 +539,7 @@ muhtaç, hasta kardeşiniz
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -584,7 +589,7 @@ Bu vatan ve millete kendi yüzünden bir zarar gelmemesi için haysiyetini,
 
 Konyalı Zübeyr
 
-\*\*\*
+/*/*/*
 
 Aziz, sıddık kardeşlerim!
 
@@ -624,7 +629,7 @@ Nazif ve Ahmed Feyzi ve Halil İbrahim ve Hasan Âtıf ve Bucak’ta ve
 Eflani ve İstanbul’daki Nurcuların mektuplarına benim bedelime sizler
 cevap verirsiniz, sizleri tevkil ediyorum.
 
-\*\*\*
+/*/*/*
 
 Aziz, sıddık kardeşlerim!
 
@@ -659,7 +664,7 @@ Umum kardeş ve hemşirelerimin mübarek ramazanlarını ve umum gecelerini,
 manevî Leyle-i Kadirlerini tebrik ile selâm ve dua ve dualarını rica
 ediyoruz.
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -717,7 +722,7 @@ Emirdağ Nur talebeleri namına
 
 Mehmed, İbrahim, Ziya vesaire…
 
-\*\*\*
+/*/*/*
 
 ##### **Reisicumhura, Heyet-i Vekileye, Başbakanlığa, Adliye Bakanlığı Yüksek Katına, Diyanet Riyasetine,**
 
@@ -774,7 +779,7 @@ Nur Şakirdleri namına
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 Ehemmiyetli bir hakikat ve Demokratlarla Üniversite Nurcularının bir
 hasbihalidir.
@@ -834,7 +839,7 @@ Nur talebeleri ve Nurcu üniversite gençliği namına
 
 Sadık, Sungur, Ziya
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -870,7 +875,7 @@ ediyoruz.
 
 Üstadın hizmetinde bulunan kusurlu Sungur, Zübeyr, Ziya
 
-\*\*\*
+/*/*/*
 
 # **Emirdağ Lâhikası – II s.27-50**
 
@@ -890,7 +895,7 @@ Ankara’da bulunsa münasiptir.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -949,7 +954,7 @@ Nur talebeleri namına
 
 Hüsrev, Sungur
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -967,7 +972,7 @@ hürmetle ellerinizden öperiz.
 
 Ziya, Zübeyr
 
-\*\*\*
+/*/*/*
 
 Aziz ve çok kıymetli kahraman kardeşimiz Sungur!
 
@@ -993,7 +998,7 @@ gayretle çalışılmasını Üstadımız sizlere havale ediyor.
 
 Ziya, Zübeyr
 
-\*\*\*
+/*/*/*
 
 Devlet Bakanlığına!
 
@@ -1050,7 +1055,7 @@ ihbar eder ve hürmetlerimizi arz ederiz.
 
 Yusuf Ziya Arun
 
-\*\*\*
+/*/*/*
 
 (Bera-yı malûmat size gönderildi.)
 
@@ -1096,7 +1101,7 @@ yani düşman ehl-i salîb kumandanlarından, dini vurmakta daha hevesli
 olduğu ve örnekler vereceği ve bilhassa hudut dışı değil de hudut içi ve
 millî irade yaftası altında çalışacağı şüpheden vârestedir.
 
-\*\*\*
+/*/*/*
 
 ##### **Nihaî Vesika**
 
@@ -1151,7 +1156,7 @@ o ihbarın hakikatini gösterdiklerini ve yirmi beş seneden beri
 Nurcuların imhasına keyfî kanunlarla dehşetli zulümlerin hikmetini tam
 gösteriyor.
 
-\*\*\*
+/*/*/*
 
 Çok aziz, çok mübarek, çok sevgili, çok müşfik Üstadımız Efendimiz
 Hazretleri!
@@ -1174,7 +1179,7 @@ kendisine karşı gençliğin tezahüratı tesirini kaybetmiş.
 
 Sungur
 
-\*\*\*
+/*/*/*
 
 Aziz, sıddık kardeşlerim!
 
@@ -1227,7 +1232,7 @@ hârikasıdır. Umuma selâmlar.
 
 Hasta ve memnun kardeşiniz Said Nursî
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">اَلسَّلَامُ عَلَيْكُمْ وَ رَحْمَةُ اللّٰهِ وَ بَرَكَاتُهُ اَبَدًا دَائِمًا</span>
 
@@ -1258,7 +1263,7 @@ hizmetlerinin anlaşıldığına bir emaredir. Ve Nurcuların bütün çektikler
 zahmet ve Nur’un müsadereleri bu büyük neticeye vesile olması cihetiyle
 şekva değil, şükretmelidir.
 
-\*\*\*
+/*/*/*
 
 Aziz, sıddık kardeşlerimiz Ziya ve Abdülmuhsin!
 
@@ -1294,7 +1299,7 @@ edip yirmi beş sene tarz-ı hayatıyla ve emarelerle ispat etmiştir.
 
 Kardeşleriniz Sadık, İbrahim, Zübeyr
 
-\*\*\*
+/*/*/*
 
 Aziz, sıddık kardeşlerim!
 
@@ -1314,7 +1319,7 @@ ben de onunla size gönderdim.
 
 Umuma selâm…
 
-\*\*\*
+/*/*/*
 
 Aziz, sıddık kardeşlerim!
 
@@ -1340,7 +1345,7 @@ etsin.
 Biri de Isparta havalisinde Nur dairesindeki âlimler dahi Asâ-yı Musa’yı
 taksim suretinde her biri bir kısmını tercüme etsinler.
 
-\*\*\*
+/*/*/*
 
 Aziz, sıddık kardeşlerim!
 
@@ -1375,7 +1380,7 @@ yapmasına bir numunedir.
 
 Umum kardeşlerime ve hemşirelere binler selâm…
 
-\*\*\*
+/*/*/*
 
 Aziz, sıddık kardeşlerim!
 
@@ -1400,7 +1405,7 @@ malûmat size gönderdim.
 gönderdim. Bana gönderdiğiniz kitapları ve Sözler mecmuasını kalan
 borcuma hesap edersiniz. Pek acele oldu. Umuma pek çok selâm ederim.
 
-\*\*\*
+/*/*/*
 
 Aziz, sıddık kardeşlerim!
 
@@ -1470,7 +1475,7 @@ Bâki umumunuza selâm…
 
 Kardeşiniz Said Nursî
 
-\*\*\*
+/*/*/*
 
 Bu muallim Osman, Ceylan’ın hapis arkadaşıdır. Ondan tam ders almış.
 İkinci bir Ceylan olmak kabiliyeti var.
@@ -1487,7 +1492,7 @@ Kardeşlerim, siz dahi böylelerden gücenmeyiniz, münakaşa etmeyiniz.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَهُ وَ اِنْ مِنْ شَىْءٍ اِلَّا يُسَبِّحُ بِحَمْدِه</span>ٖ
 
@@ -1592,7 +1597,7 @@ Nur talebeleri namına
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَهُ وَ اِنْ مِنْ شَىْءٍ اِلَّا يُسَبِّحُ بِحَمْدِه</span>ٖ
 
@@ -1614,7 +1619,7 @@ mukabili size ne kadar borcum olabilir, bildiriniz.
 
 Kardeşiniz Said Nursî
 
-\*\*\*
+/*/*/*
 
 Aziz, sıddık kardeşim Osman Nuri!
 
@@ -1635,7 +1640,7 @@ olarak reyinize bırakıyorum.
 
 Kardeşiniz Said Nursî
 
-\*\*\*
+/*/*/*
 
 Aziz, sıddık ve mübarek kardeşlerim!
 
@@ -1668,7 +1673,7 @@ dualarınızı istiyorum.
 
 Kardeşiniz Said Nursî
 
-\*\*\*
+/*/*/*
 
 Aziz, sıddık kardeşlerim!
 
@@ -1715,7 +1720,7 @@ meşrep ihtilafı daha tesir etmeyecek.
 
 Hasta kardeşiniz Said Nursî
 
-\*\*\*
+/*/*/*
 
 Aziz, sıddık kardeşlerim, Medresetü’z-Zehra erkânları, Nur nâşirleri!
 
@@ -1759,7 +1764,7 @@ Said Nursî
 
 **Hâşiye:** Eğer kabul etseniz yanımdaki Lemaat sonra gönderilecek.
 
-\*\*\*
+/*/*/*
 
 Aziz, sıddık, sadık, muhlis ve hâlis kardeşlerim ve hemşirelerim!
 
@@ -1774,7 +1779,7 @@ ediyoruz.
 
 <span dir="rtl">اَلْبَاقٖى هُوَ الْبَاقٖى</span>
 
-\*\*\*
+/*/*/*
 
 Aziz, sıddık kardeşlerim!
 
@@ -1808,7 +1813,7 @@ Umum kardeşlerime binler selâm…
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 (Mahremdir. Şimdilik Medresetü’z-Zehra erkânlarına mahsustur.)
 
@@ -1886,7 +1891,7 @@ Said Nursî
 
 Hâşiye: Hemşireler ve genç kızlar Tesettür Risalesi’ni okumalıdırlar.
 
-\*\*\*
+/*/*/*
 
 ##### **Hapsin Latîf Bir Hatırası**
 
@@ -1911,7 +1916,7 @@ hizb ve uzv-u nâfi’ hükmüne geçtiler.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 # **Emirdağ Lâhikası – II s.51-70**
 
@@ -1946,7 +1951,7 @@ aralık Üstadımızı ziyaret edeceklerini konuşmuşlar.
 
 Abdullah, Sungur
 
-\*\*\*
+/*/*/*
 
 ##### **Mahkeme-i Kübraya Şekva ve Müdafaat’ın Bir Hâşiyesi Olan Parçanın Hülâsasıdır**
 
@@ -2003,7 +2008,7 @@ ecnebi parmağıyla aleyhimize dönen işlerden ve işkencelerden bizi ve
 âlem-i İslâm’ı pek çok sevindiren Demokratların dikkat edip Nurcuları
 kurtarmalarını, hürriyetperver hükûmetten rica ederiz.
 
-\*\*\*
+/*/*/*
 
 Aziz, sıddık kardeşlerim!
 
@@ -2046,7 +2051,7 @@ medrese mahsulü olan Nurlara sahip çıkacaklar. Şimdi de çok müftülerden
 ve çok ulemalardan Nurlara karşı çok iştiyak görülüyor ve istiyorlar.
 Şimdi en mühim tekyeler ehli, ehl-i tarîkattır. Bütün kuvvetleriyle Nur
 Risalelerini nurlandırmaları ve sahip çıkmaları lâzım ve elzemdir
-(Hâşiye[\[1\]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-51-70/#_ftn1)).
+(Hâşiye[/[1/]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-51-70/#_ftn1)).
 
 Şimdiye kadar ben yalnız iman hakikatini düşünüp “Tarîkat zamanı değil,
 bid’alar mani oluyor.” dedim. Fakat şimdi Sünnet-i Peygamberî dairesinde
@@ -2087,7 +2092,7 @@ Umuma binler selâm…
 
 Kardeşiniz Said Nursî
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَهُ وَ اِنْ مِنْ شَىْءٍ اِلَّا يُسَبِّحُ بِحَمْدِه</span>ٖ
 
@@ -2146,7 +2151,7 @@ maneviyelerini kırmaya çalışıyorlar.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 Aziz, sıddık kardeşlerim!
 
@@ -2159,7 +2164,7 @@ birer Said olarak benim bedelime sizi ziyaret ve tebrik edip sair
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 ##### **(Üstadımızın tebrik telgrafına Reisicumhur Celal Bayar’ın telgrafla verdiği cevaptır.)**
 
@@ -2171,7 +2176,7 @@ Samimi tebriklerinizden fevkalâde mütehassis olarak teşekkürler ederim.
 
 Celal Bayar
 
-\*\*\*
+/*/*/*
 
 Aziz, sıddık ve mübarek kardeşlerim!
 
@@ -2222,7 +2227,7 @@ Umuma binler selâm…
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 Aziz, sıddık ve mübarek kardeşlerim!
 
@@ -2293,7 +2298,7 @@ anarşilikten, zındıkadan ve onların dehşetli tahribatlarından kurtarmaya
 çalışmalarını rahmet-i İlahiyeden bütün ruh u canımızla niyaz ve rica
 ediyoruz.
 
-\*\*\*
+/*/*/*
 
 …Bir iki hafta evvel Mısır’ın Camiü’l-Ezherinin büyük bir müderrisi olan
 Ali Rıza buraya hususi bir adamı gönderdiği gibi iki gün evvel de aslen
@@ -2317,7 +2322,7 @@ Umum kardeşlerime ve hemşirelerime selâm ederim, dualarını isterim.
 
 Kardeşiniz Said Nursî
 
-\*\*\*
+/*/*/*
 
 **Evvela:** Hadsiz şükrolsun ki şimdi Ankara içinde küçük bir Medrese-i
 Nuriye manasında, küçük Saidler ve Nur’un fedakârları her gece birisi
@@ -2338,7 +2343,7 @@ dar olduğundan kısa kesiyorum.
 
 Umumunuza selâm…
 
-\*\*\*
+/*/*/*
 
 Hakikaten Eflani ve Safranbolu aynen Isparta’nın kahramanları gibi
 Nurlara mütemadiyen çalışıyorlar. Hattâ bu defa Rehberlerin bir kısmında
@@ -2346,7 +2351,7 @@ Münâcat yoktu. Eflani az bir zamanda yetmiş adet eski harfle Münâcatı
 yazıp bize göndermiştir. Biz de o Münâcatları Rehberlerin arkasına ilâve
 ettik. İnşâallah orada da çok Sungurlar çıkıyor ve çıkacak.
 
-\*\*\*
+/*/*/*
 
 ##### **Müdafaatın bir hâşiyesidir**
 
@@ -2420,7 +2425,7 @@ nazar-ı dikkatlerine arz ediyorum.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 Papalık Makam-ı Âlîsi
 
@@ -2444,7 +2449,7 @@ arza müsaraat eylerim. Bu vesile ile saygılarımı sunarım efendim.
 
 Vatikan Bayn Başkâtibi
 
-\*\*\*
+/*/*/*
 
 Aziz, sıddık kardeşlerim!
 
@@ -2486,7 +2491,7 @@ Hizb-i Nuriye’yi ona gönderiniz.
 Maarif Vekili lehimizdedir. Ve bize müjdeli haber geldi. Onun için beni
 merak etmeyiniz. Ben gelen sıkıntıdan manevî sürur duyuyorum.
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -2505,7 +2510,7 @@ etmişler.
 
 Seyyid Salih
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -2556,7 +2561,7 @@ Demek mukadder şimdi imiş.
 
 21.4.1951
 
-\*\*\*
+/*/*/*
 
 Bu sene Mısır radyosu perşembe gecesi mi’racdan çok bahsetmesinden hem
 perşembe ve hem de cuma gecesi Mi’rac yaptım.
@@ -2607,7 +2612,7 @@ gibi büyük mükâfatı görmek için otuz üç yaşında olacaklar, diye bir
 kısım tefsir bu noktayı izah etmeden umum çocuklara teşmil etmişler. Has
 iken âmm zannedilmiş.
 
-\*\*\*
+/*/*/*
 
 Aziz, sıddık, mütefekkir kardeşlerim!
 
@@ -2746,9 +2751,9 @@ olmuşlar.
 
 Kardeşiniz Said Nursî
 
-\*\*\*
+/*/*/*
 
-[\[1\]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-51-70/#_ftnref1)
+[/[1/]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-51-70/#_ftnref1)
 Hâşiye: İşte mühim bir numunesi: Seydişehirli Hacı Abdullah’ın bütün
 mensupları hem Kastamonu’da hem Isparta’da hem Eskişehir’de Risale-i Nur
 dairesini kendi tarîkat daireleri telakki etmişler ki onlardan Nurlara
@@ -2835,7 +2840,7 @@ veya tabi olabilir. O vakit dört yüz milyon ehl-i Kur’an’a kılınç
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 Aziz, sıddık kardeşlerim!
 
@@ -3009,7 +3014,7 @@ imana hizmet etmek hikmetiyle olmuş.
 
 <span dir="rtl">اَلْبَاقٖى هُوَ الْبَاقٖى</span>
 
-\*\*\*
+/*/*/*
 
 Aziz, sıddık kardeşlerim!
 
@@ -3041,7 +3046,7 @@ mağlup ederek adliyeleri de insafa getirmiştir.
 muarızlarından muhafaza ediyor. Muarızların hücumu ise Nurların
 parlamasına ve intişarına vesile oluyor.
 
-\*\*\*
+/*/*/*
 
 Üstadımız diyor ki:
 
@@ -3078,7 +3083,7 @@ vazifelerini tam yapabilsinler.
 
 Hizmetindeki Nur Talebeleri
 
-\*\*\*
+/*/*/*
 
 (Üstadımızın çok evvel yazmış olduğu zîrdeki mektubu, şahsî nüfuz temin
 ve dini siyasete âlet etmek ittihamlarına tam bir cevap olduğundan
@@ -3208,7 +3213,7 @@ Ben çok hastayım. Ne yazmaya ne söylemeye tâkatim kalmadı. Belki de
 bunlar son sözlerim olur. Medresetü’z-Zehranın Risale-i Nur talebeleri
 bu vasiyetimi unutmasınlar.
 
-\*\*\*
+/*/*/*
 
 Kardeşlerim!
 
@@ -3365,7 +3370,7 @@ altı adama ve bundan bir tek adamın bir sene mahkûm edilmesi, Nurcular
 aleyhindeki zalimane tazyikat hafifleşmesi ve def’olmasının alâmetidir.
 Onun için bir derece şiddetli kelimeler ta’dil edildi.
 
-\*\*\*
+/*/*/*
 
 ##### **Hazret-i Üstadın Emirdağı’nda Santral Sabri, Sıddık Süleyman’a Arabî İşaratü’l-İ’caz’dan verdiği derstir**
 
@@ -3428,7 +3433,7 @@ kudsî elfaz-ı Kur’aniye zımnî, remzî işaret ve delâlet eder denilebilir
 
 Hüsrev, Sungur, Hayri, Sadık, Sabri, Sıddık Süleyman
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">اِفَادَةُ الْمَرَام</span>ِ
 
@@ -3464,7 +3469,7 @@ Hüsrev, Sungur, Hayri, Sadık, Sabri, Sıddık Süleyman
 
 <span dir="rtl">سعيد النورسى</span>
 
-\_\_\_\_\_\_\_
+/_/_/_/_/_/_/_
 
 (١) <span dir="rtl">وقد اخبرنا مرارًا فى اثناء الدرس وقوع زلزلة عظيمة
 (بمعنى الحرب العمومية) فوقعت كما اخبر</span>.
@@ -3527,7 +3532,7 @@ muntazır ve daima bekliyordum. O ümit, küçüklüğümden beri gaye-i hayalim
 iken, birden hiss-i kable’l-vuku kabîlinden kalbime bir sünuhat oldu ki:
 
 Maddî ve manevî iki zelzele-i azîme yaklaşıyordu
-(\*[\[1\]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-70-90/#_ftn1)).
+(/*[/[1/]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-70-90/#_ftn1)).
 Ben de acz ve kusurumla, sözlerimdeki izahsızlık ve muğlaklık ile
 beraber Kur’an’ın nazmındaki i’cazın işaratını ve kalbimde tahattur eden
 nüktelerini kaydedip kaleme almak ve âyâtın bazı imanî hakikatlerini
@@ -3557,10 +3562,10 @@ devama ve ileri gitmeye teşci ve tergib ederler.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
-[\[1\]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-70-90/#_ftnref1)
-\* Evet, Üstadımız mükerreren Birinci Harb-i Umumî’den evvel çok defa
+[/[1/]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-70-90/#_ftnref1)
+/* Evet, Üstadımız mükerreren Birinci Harb-i Umumî’den evvel çok defa
 bize ulûm-u Arabiyeyi ders verdiği zaman bize kat’î bir tarzda “Büyük ve
 umumî bir zelzele yaklaşıyor, hazırlanınız. O zaman herkes benim gibi
 mücerredlere gıpta edecekler.” diye söylüyorlardı. Pek az zamanda, onun
@@ -3599,13 +3604,13 @@ Mehmed Sadık, Sabri, Mehmed Şefik, Mehmed Mihri, Hamza
 السعادة و تنمية الاستعدادات التى هى رأس مالنا، و أنا سيّدهم و خطيبهم. فها
 دونكم منشورى! و هو كلام ذلك السلطان الازلى يتلألأ عليه سكّة الإعجاز) – و
 المجيب عن هٰذه الأسئلة الجواب الصواب ليس إلا القراٰن ذلك الكتاب.- كان
-\[١\] هٰذه الأربعة عناصره الأساسية. فكما تترااٰ هٰذه المقاصد الاربعة فى كله
+/[١/] هٰذه الأربعة عناصره الأساسية. فكما تترااٰ هٰذه المقاصد الاربعة فى كله
 كذالك قد تتجلى فى سورة سورة بل قد يلمح بها فى كلام كلام بل قدير مز اليها
 فى كلمة كلمة لان كل جزء فجزء كالمراٰة لكل فكل متصاعدا كما ان الكل يترااٰ
 فى جزء فجزء متسلسلا و لهٰذه النكتة اعنى اشتراك الجزء مع الكل يعرّف القراٰن
 المشخص كالكلى ذى الجزئيات</span>
 
-\[١\] <span dir="rtl">جواب لما</span>.
+/[١/] <span dir="rtl">جواب لما</span>.
 
 ##### **Tercümesinin Bir Hülâsası**
 
@@ -3798,7 +3803,7 @@ ki her cihetle Zat-ı Akdes’i gösterir. Onun adı ve onun unvanıdır.
 “Esma-i Fiiliye” tabir edilir ki çok nevileri var. Mesela “Gaffar,
 Rezzak, Muhyî, Mümît, Mün’im, Muhsin.”
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -3937,7 +3942,7 @@ Mu’cizü’l-Beyan’ın işarat ve rumuzundan anlaşıldığı gibi rahmet-i
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَهُ وَ اِنْ مِنْ شَىْءٍ اِلَّا يُسَبِّحُ بِحَمْدِه</span>ٖ
 
@@ -3971,7 +3976,7 @@ olarak bütün ruh u canımızla tebrik ediyoruz.
 
 Hasta kardeşiniz Said Nursî
 
-\*\*\*
+/*/*/*
 
 #### **Emirdağı’nın Manidar Bir Hatırası**
 
@@ -4027,7 +4032,7 @@ kurtulmasına bir işarettir ki bu acib vaziyeti gösteriyorlar.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 18.11.1951
 
@@ -4067,7 +4072,7 @@ edildi. Ben de kardeşlerime beyan ediyorum.
 
 Hasta Kardeşiniz Said Nursî
 
-\*\*\*
+/*/*/*
 
 29.11.1951
 
@@ -4187,7 +4192,7 @@ etmiş.
 
 Duanıza muhtaç kardeşiniz Said Nursî
 
-\*\*\*
+/*/*/*
 
 Üstadımız diyor ki:
 
@@ -4261,7 +4266,7 @@ hatadır, bir cinayettir ve bu vatana da bir sû-i kasddır.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -4301,7 +4306,7 @@ bütün ruh u canımla o havaliye gitmek iştiyakımı bildirirsiniz.
 
 Hasta kardeşiniz Said Nursî
 
-\*\*\*
+/*/*/*
 
 # **Emirdağ Lâhikası – II s.110-128**
 
@@ -4466,7 +4471,7 @@ tam reddediyor.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَهُ وَ اِنْ مِنْ شَىْءٍ اِلَّا يُسَبِّحُ بِحَمْدِه</span>ٖ
 
@@ -4632,7 +4637,7 @@ zerreler, hadsiz bir kuvveti ve bir nuru kendilerinde taşımakla beraber;
 birden yüz kilometre yerlere elini uzatıp, karanlığı süpürüp, temizleyip
 nurları dolduracak. Bu ise bütün şeytanlar ve dinsizler, maddiyyunlar
 toplansalar bunu, bir sofestaîye de kabul ettiremezler
-(Hâşiye[\[1\]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-110-128/#_ftn1)).
+(Hâşiye[/[1/]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-110-128/#_ftn1)).
 Veyahut bütün kâinata hükmü geçen ve bütün nurlar, onun Nur isminden
 feyiz alan ve Nuru’n-Nur ve Hâlıku’n-Nur ve Müdebbiru’n-Nur olan Kadîr-i
 Zülcelal’in ve Allâmü’l-guyub’un ve Alîm-i Mutlak’ın kudreti ile ve
@@ -4690,7 +4695,7 @@ demeleri sünnet olması, bu büyük hakikatin şuâı olmasındandır.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -4751,7 +4756,7 @@ bundan olmuş.” demek veya küre-i havayı bir konferans meydanı ve zemin
 yüzünü bir dershane ve bir mekteb-i irfan hükmüne getiren ve hadsiz
 nimetleri tazammun eden ve hadsiz şükürler ile mukabele etmek lâzımken
 ve beşerin saadet-i ebediyesindeki ihsanat-ı İlahiyenin bir muaccel
-(Hâşiye[\[2\]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-110-128/#_ftn2))
+(Hâşiye[/[2/]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-110-128/#_ftn2))
 numunesi ve hiçbir şüpheyi bırakmayan ve doğrudan doğruya hazine-i
 rahmetten ihsan edilen bir hediye-i Rahmaniyeye radyo namını takmakla,
 bu elektrik ve havanın temevvücatı namını vermek ile o yüz bin nimetlere
@@ -4789,7 +4794,7 @@ edilsin.
 
 Duanıza muhtaç, hasta kardeşiniz Said Nursî
 
-\*\*\*
+/*/*/*
 
 ##### **Nur Âleminin Bir Anahtarı’nın Bir Hâşiyesi**
 
@@ -4896,7 +4901,7 @@ elzemdir ki insan, insan olsun.**
 <span dir="rtl">سُبْحَانَكَ لَا عِلْمَ لَنَٓا اِلَّا مَا عَلَّمْتَنَٓا اِنَّكَ اَنْتَ الْعَلٖيمُ
 الْحَكٖيم</span>ُ
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَهُ وَ اِنْ مِنْ شَىْءٍ اِلَّا يُسَبِّحُ بِحَمْدِهٖ وَ بِهٖ
 نَسْتَعٖين</span>ُ
@@ -4945,7 +4950,7 @@ kasda teşebbüs etmeyeceklerdi.”
 
 İşte <span dir="rtl">اَلْيَوْمَ نُنَجّٖيكَ بِبَدَنِك</span>َ âyetinde bir kelime ile
 bir mu’cize-i tarihiye gösterildiği gibi
-(Hâşiye[\[3\]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-110-128/#_ftn3))
+(Hâşiye[/[3/]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-110-128/#_ftn3))
 Mekke’de nâzil olan bu surenin de bu <span dir="rtl">لَوْ كَانُوا
 يَعْلَمُون</span>َ âyetinde görülen remiz ile Gār-ı Hira hâdisesinde hârika
 bir hıfz-ı İlahîye ve ihbar-ı gaybî nevinden bir mu’cize-i Nebeviyeye
@@ -4961,7 +4966,7 @@ harflerinde de vardır bildim.
 
 Hasta kardeşiniz Said Nursî
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -4980,7 +4985,7 @@ ilişiyorlar. Ve has Nurcuların az bir kısmına fütur vermek için
 
 Ezcümle bu mübarek günlerde İstanbul’dan Rehber hakkında dinsizlik
 damarı ile yazılan
-(Hâşiye[\[4\]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-110-128/#_ftn4))
+(Hâşiye[/[4/]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-110-128/#_ftn4))
 ehl-i vukuf raporunu bana gönderdiler. Ben şiddetli ve semli hastalığım
 için onlara cevap vermesini sizlere havale ediyorum.
 
@@ -4999,9 +5004,9 @@ ediyorum.
 
 Hasta kardeşiniz Said Nursî
 
-\*\*\*
+/*/*/*
 
-[\[1\]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-110-128/#_ftnref1)
+[/[1/]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-110-128/#_ftnref1)
 Hâşiye: Yalnız aldatmak için bazı derin ve ehemmiyetli hakikatlere bir
 isim takıp güya o hakikat anlaşılmış gibi âdileştiriyorlar. Mesela, bu
 elektrik kuvveti imiş deyip o ince ve derin hakikati ehemmiyetsiz yapıp
@@ -5018,10 +5023,10 @@ mahiyetine elektrik namını verip tenvirdeki hârika mu’cize-i kudreti
 takmakla, bunun gibi çok hârikulâde mu’cizat-ı kudret-i İlahiyeyi
 cahilane âdileştiriyorlar.
 
-[\[2\]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-110-128/#_ftnref2)
+[/[2/]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-110-128/#_ftnref2)
 Hâşiye: Bu kelimede büyük bir hakikat hazinesinin anahtarına işaret var.
 
-[\[3\]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-110-128/#_ftnref3)
+[/[3/]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-110-128/#_ftnref3)
 Hâşiye: Mu’cizat-ı Kur’aniye’de <span dir="rtl">اَلْيَوْمَ نُنَجّٖيكَ
 بِبَدَنِك</span>َ âyetiyle gark olan Firavun’a der: “Bugün gark olan
 cesedine necat vereceğim.” demesiyle umum Firavunların tenasüh fikrine
@@ -5036,7 +5041,7 @@ gaybiye ifade eder. (Hâşiyenin hâşiyesi)
 Hâşiyenin hâşiyesi: Bu asırda ecnebiler aynı Firavun’un cesedini
 bulmuşlar. Müzehanelerine götürdükleri, ceridelerle neşredilmiştir.
 
-[\[4\]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-110-128/#_ftnref4)
+[/[4/]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-110-128/#_ftnref4)
 Hâşiye: Size bera-yı malûmat bilâhare gönderilecektir.
 
 # **Emirdağ Lâhikası – II s.129-148**
@@ -5228,7 +5233,7 @@ yapanlardan mahkeme-i kübra-i haşirde bu hatasının sebebi sorulacak.
 
 Hasta Said Nursî
 
-\*\*\*
+/*/*/*
 
 ##### **1952’de İstanbul’da görülen Gençlik Rehberi mahkemesine, ehl-i vukufa cevaben verilen itiraznamedir**
 
@@ -5615,7 +5620,7 @@ Eskişehir Nur talebelerinden
 
 Yaşar, Osman Toprak, Ahmed, Osman, Ceylan, Şükrü, Bayram, Sungur, Hüsnü
 
-\*\*\*
+/*/*/*
 
 ##### **Heyet-i Sıhhiyeye**
 
@@ -5706,7 +5711,7 @@ verilmesini rica ederim.
 
 Emirdağı’nda Said Nursî
 
-\*\*\*
+/*/*/*
 
 Aziz ve mübarek, müşfik Üstadım!
 
@@ -5769,7 +5774,7 @@ müşfik Üstadımdan ebediyen razı olsun ve bütün maksadını hasıl eylesin
 
 Muhibb-i muhlisiniz Hulusi
 
-\*\*\*
+/*/*/*
 
 Çok sevgili, müşfik Üstadım Efendim Hazretleri!
 
@@ -5824,7 +5829,7 @@ gözlerinden öperim.
 
 Çok kusurlu ve hasta talebeniz Mehmed Feyzi
 
-\*\*\*
+/*/*/*
 
 # **Emirdağ Lâhikası – II s.149-170**
 
@@ -6014,7 +6019,7 @@ adedince “Eşşükrülillah, Elhamdülillah.”
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -6114,7 +6119,7 @@ getirmeyen kısmı dikkat etsinler, kendilerini onlara benzetmesinler.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -6200,7 +6205,7 @@ anarşistler olduğuna Kur’an işaret ediyor.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -6238,7 +6243,7 @@ dileriz.
 
 Kardeşleriniz Ceylan, Zübeyr
 
-\*\*\*
+/*/*/*
 
 ##### **Bu mektup Samsun’da münteşir Büyük Cihad gazetesinde intişar etmiştir. Müfterilerin tahrikatıyla Samsun’da muhakeme açılmasına sebep olmuştur. Muhakeme beraetle neticelenmiştir.**
 
@@ -6304,7 +6309,7 @@ tazimle öperiz.
 
 Ankara Üniversitesi Nur Talebeleri
 
-\*\*\*
+/*/*/*
 
 ##### **Kalbe İhtar Edilen İçtimaî Hayatımıza Ait Bir Hakikat**
 
@@ -6401,7 +6406,7 @@ ihtar edildi. Ve tabiratta lüzumsuz zararlı kelimeleri siz tebdil
 edebilirsiniz. Merkezlerden münasip gördüğünüz yerlere sû-i tesir
 yapmamak şartıyla gönderebilirsiniz.
 
-\*\*\*
+/*/*/*
 
 ##### **(Üstadımız Bedîüzzaman Said Nursî, Samsun’da münteşir Büyük Cihad gazetesinde neşrolup orada muhakemesi görülen bu müdafaayı İstanbul mahkemesinde okumuş ve mahkeme beraetle nihayet bulmuştur.)**
 
@@ -6506,7 +6511,7 @@ Ben değil dünyevî hayatı, lüzum olsa âhiret hayatımı da millet-i
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 ##### **Bağdat’ta çıkan “Eddifa” gazetesinin muharriri İsa Abdülkadir’in Arabî makalesinin tercümesi**
 
@@ -6541,7 +6546,7 @@ risale, bir Said hükmüne geçer.
 
 Hem ellerinden geldiği kadar ücretsiz istinsah ederler. Muhtaçlara
 mukabelesiz
-(\*[\[1\]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-149-170/#_ftn1))
+(/*[/[1/]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-149-170/#_ftn1))
 veriyorlar ki okusunlar ve dinlesinler. Bu suretle büyük bir memleket
 büyük bir dershane hükmünde oluyor.
 
@@ -6616,10 +6621,10 @@ mecbur bilmiyorlar.
 
 İsa Abdülkadir
 
-\*\*\*
+/*/*/*
 
-[\[1\]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-149-170/#_ftnref1)
-\* Yirmi beş sene müddetle el yazması ile Anadolu’da neşri bu şekilde
+[/[1/]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-149-170/#_ftnref1)
+/* Yirmi beş sene müddetle el yazması ile Anadolu’da neşri bu şekilde
 olmuştur.
 
 # **Emirdağ Lâhikası – II s.171-189**
@@ -6653,7 +6658,7 @@ tesiratlarına karşı bunlarla mukavemet gösteriyorlar kanaatindedirler.
 
 İsa Abdülkadir
 
-\*\*\*
+/*/*/*
 
 ##### **Risale-i Nur’un vatana, millete ve İslâmiyet’e büyük hizmetini kabul ve takdir eden Başvekil Adnan Menderes’e Üstadın yazdığı bir mektup**
 
@@ -6800,7 +6805,7 @@ hürriyetperverlere beyan etmekle iktifa ediyorum.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 ##### **Adnan Menderes’e gönderilmek niyetiyle evvelce yazılan içtimaî hayatımıza ait bir hakikatin hâşiyesini tekrar takdim ediyoruz**
 
@@ -6825,7 +6830,7 @@ yazdım.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -6895,7 +6900,7 @@ ediyorum. Beni konuşturmaktan ise ona baksınlar.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -6910,7 +6915,7 @@ ile şiddetli hastalığımdan yanımdaki camiye on defada ancak bir defa
 gidebiliyorum. Bu Samsun Mahkemesini yakınımızdaki Eskişehir’e naklini
 kanunen talep ediyorum.
 
-\*\*\*
+/*/*/*
 
 ##### **Gayet Ehemmiyetli Bir Hâdise, Bir İstida ve Bir Şekvadır**
 
@@ -6997,7 +7002,7 @@ ittihad-ı milleti istiyor; çabuk, Pakistan’ın dahi ehemmiyetle nazara
 alıp ve Essıddık mecmuasında neşrettiği risalenin intişarına müsaade
 etsin.
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -7036,7 +7041,7 @@ lâzım…
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -7057,7 +7062,7 @@ tekrar iade etmişler.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 ##### **Heyet-i Vekile’ye ve Tevfik İleri’ye,**
 
@@ -7097,7 +7102,7 @@ noktasında gidiyorsun. Halbuki şimdi Garplılara benzemek lâzım.”
 hükmünde, fünun-u cedide yanında ulûm-u diniye de lâzım ve elzemdir.
 Çünkü ekser enbiya Şark’ta ve ekser hükema Garp’ta gelmesi gösteriyor ki
 Şark’ın terakkiyatı din ile kaimdir
-(Hâşiye[\[1\]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-171-189/#_ftn1)).
+(Hâşiye[/[1/]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-171-189/#_ftn1)).
 Başka vilayetlerde sırf fünun-u cedide okutturursanız da Şark’ta
 herhalde millet, vatan maslahatı namına, ulûm-u diniye esas olmalıdır.
 Yoksa Türk olmayan Müslümanlar, Türk’e hakiki kardeşliği hissedemeyecek.
@@ -7124,7 +7129,7 @@ niyaz ediyorum.
 
 Çok hasta, çok ihtiyar, garib, tecrit içinde Said Nursî
 
-\*\*\*
+/*/*/*
 
 ##### **Doğu Üniversitesi Hakkında Tahrifçi Bir Gazeteye Cevaptır**
 
@@ -7209,7 +7214,7 @@ parlaklıkla lemean edecektir ve beynelmilel bir itibarı temin edecektir.
 Üstadımızın hastalığı münasebetiyle hizmetinde bulunan **Nur
 talebeleri**
 
-\*\*\*
+/*/*/*
 
 Mahkememizin tehiriyle işlerin Ankara Mahkemesine havale edilmesinde çok
 hayır var. Şimdi hem Isparta Mahkemesi hem Van’da Molla Hamid’in ve
@@ -7222,7 +7227,7 @@ intibaha vesile olacak.
 
 Kardeşiniz Zübeyr
 
-\*\*\*
+/*/*/*
 
 ##### **Üstadın Ziyaretçilere Dair Bir Mektubu**
 
@@ -7259,7 +7264,7 @@ Her sabah da dua ediyorum. Onun için de gücenmesinler…
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 Çok muhterem kardeşimiz Salih,
 
@@ -7303,9 +7308,9 @@ toprağıyla mübarektir. Ben çok hastayım. Onlar da bana dua etsinler.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
-[\[1\]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-171-189/#_ftnref1)
+[/[1/]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-171-189/#_ftnref1)
 Hâşiye: Hattâ o zamandan evvel Türk olmayan bir talebem vardı. Eski
 medresemde hamiyetli ve gayet zeki o talebem ulûm-u diniyeden aldığı
 hamiyet dersiyle her vakit derdi: “Salih bir Türk elbette fâsık
@@ -7392,7 +7397,7 @@ hastalığıma razı oldum. ‌<span dir="rtl">اَلْحَمْدُ لِلّٰه
 
 Kardeşiniz Said Nursî
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -7417,10 +7422,10 @@ konuşabilirim. Yirmi adamın hatırı için binler adamın hatırını rencide
 etmemek için konuşmaktan men’edildim ihtimali kavîdir. Hususi
 görüşmediğim için mazur görsünler.” Hattâ bayramda musafaha etmek ve ona
 bakmaya tahammül edemiyor.
-(Hâşiye[\[1\]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-190-210/#_ftn1))
+(Hâşiye[/[1/]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-190-210/#_ftn1))
 Onun için hatırları kırılmasın.
 
-\*\*\*
+/*/*/*
 
 (Dört sene evvel Üstadımız hastalığı yüzünden beni Ankara’da Risale-i
 Nur’un mahkemeleri ile alâkadar işlerini takip için tevkil ettiği zaman,
@@ -7477,7 +7482,7 @@ müddeamızın fevkalâde ehemmiyetini gösterir.
 
 Mustafa Sungur
 
-\*\*\*
+/*/*/*
 
 Yazıları beş vecihle iftira ve yalan olduğunu gördüğüm bir gazeteyi bana
 okudular. Böyle iftiraların hem Isparta’ya hem neşredenlere büyük zararı
@@ -7535,7 +7540,7 @@ ihanettir.
 
 Çok hasta ve çok ihtiyar Said Nursî
 
-\*\*\*
+/*/*/*
 
 (Üstadımızın köylerde dolaştığına dair çıkarılan uydurma habere karşı
 bir cevaptır, mûcib-i merak hiçbir şey yoktur.)
@@ -7676,7 +7681,7 @@ başka ve altı yüz bin talebeden hiçbir vukuatları olmadığı kat’î ispa
 eder ki asayişi Nur talebeleri muhafaza ediyorlar.” diye Afyon’da
 savcıya demiş ve susturmuştur.
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -7715,7 +7720,7 @@ ve şükürle karşıladık ve salimen sahile çıktık. ‌<span dir="rtl">اَ
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 Üstadımız diyor ki:
 
@@ -7767,7 +7772,7 @@ Hizmetinde bulunan Nur talebeleri
 
 Tahirî, Zübeyr, Sungur, Hüsnü, Bayram
 
-\*\*\*
+/*/*/*
 
 ##### **Üstadımızın Vasiyetnamesi**
 
@@ -7800,7 +7805,7 @@ manayı lüzumsuz ziyarete gelenlere bildirsinler.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 ##### **Menderes’in Konya Nutkuna Dair Açıklaması**
 
@@ -7874,15 +7879,15 @@ senet göstermekle Anadolu’daki Müslümanları ve Nur’un bütün talebeleri
 ona bir manevî kuvvet ve duacı yapmak, ezan-ı Muhammedînin ilanı onlara
 nasıl bir manevî kuvvet hükmüne geçti; bu nutukla Risale-i Nur’un
 serbestiyeti dahi ona bir manevî kuvvet hükmüne geçmesi için ona tebrik
-yerine, dava vekilimizin haklı müdafaasında bir hâşiye yaptık. (\*)
+yerine, dava vekilimizin haklı müdafaasında bir hâşiye yaptık. (/*)
 
 Rehber’in müsaderesine bahaneleri reddeden avukat Mihri’nin müdafaatı
 gibi Konya’da Başvekilin bu nutku da o bahaneleri reddeden bir
 hakikattir.
 
-(\*) Bu müdafaa, Eşref Edib’in neşrettiği küçük Tarihçe-i Hayattadır.
+(/*) Bu müdafaa, Eşref Edib’in neşrettiği küçük Tarihçe-i Hayattadır.
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -7908,7 +7913,7 @@ kadar fayda verip bu hayr-ı azîmin yarısını Ispartalılara kazandırdı.
 
 Hizmetinde bulunan Nur Talebeleri
 
-\*\*\*
+/*/*/*
 
 Üstadımız izzet-i ilmiyeyi muhafaza için eski zamandan beri en büyük
 reislere tezellül etmedi. Hem halkların hediyesini kabul etmiyordu.
@@ -7955,7 +7960,7 @@ men’etmeye mecbur edecek, dedi.
 
 Hizmetinde bulunan talebeleri
 
-\*\*\*
+/*/*/*
 
 ##### **Üstadımızın Afyon Mahkeme Heyetine Gönderdiği Yazının Suretidir**
 
@@ -7981,7 +7986,7 @@ olacak.
 
 Hasta Said Nursî
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -8012,7 +8017,7 @@ partinin iktidara gelmemesi için Demokrat Partiyi, Kur’an ve vatan ve
 Milletçilere gelince:
 
 Eğer bu partide sırf İslâmiyet esas olsa
-(Hâşiye[\[2\]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-190-210/#_ftn2))
+(Hâşiye[/[2/]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-190-210/#_ftn2))
 Demokrat Partiye yardım ettiği gibi muhalif ve muarız olmayarak iktidara
 gelmesine çalışmaz. Eğer bu partide ırkçılık ve Türkçülük fikri esas ise
 birden hakiki Türk olmayan bu vatandaki ekseriyetin ancak onda üçü
@@ -8047,7 +8052,7 @@ Demokratlar azalarından Nur talebeleri:
 Mustafa, Nuri, Nuri, Hamza, Süleyman, Hasan, Seydî, Receb, İbrahim,
 Faruk, Muzaffer, Tahir, Sadık, Mehmed
 
-\*\*\*
+/*/*/*
 
 ##### **Demokratlara Büyük Bir Hakikati İhtar**
 
@@ -8110,7 +8115,7 @@ kendine taraftar etsinler ve selâmeti bulsunlar.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 Medar-ı ibret ve hayret ve şükrandır ki:
 
@@ -8122,7 +8127,7 @@ adliyeler beşi kat’î beraet ve umum kitapları suç yok diye iadeye karar
 vermeleri ve geçen Malatya Hâdisesi münasebetiyle yine gizli
 düşmanlarımız hükûmetin ve adliyenin nazar-ı dikkatini bizlere çevirmeye
 çalıştıkları halde, yirmi üç mahkeme demişler ki: “Suç bulamıyoruz.”
-(Hâşiye[\[3\]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-190-210/#_ftn3)).
+(Hâşiye[/[3/]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-190-210/#_ftn3)).
 
 Acaba benim gibi dünya ehli ile münasebeti pek az ve Risale-i Nur gibi
 hakikati hiçbir şeye feda etmeyen, yüz otuz kitabında bu kadar
@@ -8154,19 +8159,19 @@ var.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
-[\[1\]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-190-210/#_ftnref1)
+[/[1/]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-190-210/#_ftnref1)
 Hâşiye: Şimdi hem Ankara hem İstanbul hem Samsun hem Antalya Risale-i
 Nur’un neşrine başladığı cihetle, gizli din düşmanı komiteler o
 neşriyata karşı bir evham vermemek için şimdilik has dostları da kabul
 etmemeye mecbur oldu tâ Sözler’in tabı tamam oluncaya kadar.
 
-[\[2\]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-190-210/#_ftnref2)
+[/[2/]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-190-210/#_ftnref2)
 Hâşiye: İslâmiyet milleti her şeye kâfidir. Din, dil bir ise millet de
 birdir. Din bir ise yine millet birdir.
 
-[\[3\]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-190-210/#_ftnref3)
+[/[3/]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-190-210/#_ftnref3)
 Hâşiye: Denizli’de bütün Risale-i Nur eczaları iade edilmesi ve
 İstanbul’da ve Ankara’da ele geçen bütün risaleleri iade etmeleri ve
 Tarsus-Mersin’de ellerine geçen umum risaleleri iade etmeleri ve dört ay
@@ -8206,7 +8211,7 @@ Onlara havale ederiz.
 
 Duanıza muhtaç kardeşiniz Said Nursî
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -8273,7 +8278,7 @@ imanda bir cennet çekirdeği var olduğunu gördüm.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -8324,7 +8329,7 @@ a’maline de yazılsın.” diye ruhlarına hediye ediyor.
 
 Hizmetinde bulunan Nur talebeleri
 
-\*\*\*
+/*/*/*
 
 ##### **(İleri gazetesinin 13 Nisan 1957 tarihli nüshasından alınmıştır)**
 
@@ -8340,7 +8345,7 @@ merasimle atılmış ve bu törene Isparta’da bulunan Risale-i Nur müellifi
 bir alâka ile karşılanan Üstad, törenden sonra uğurlu elleriyle temele
 ilk harcı koymuşlar ve dualarda bulunmuşlardır.
 
-\*\*\*
+/*/*/*
 
 ##### **Hüseyin Avni ve Tahsin Tola ile Bir Hasbihaldir**
 
@@ -8384,7 +8389,7 @@ dikkate almak lâzım gelirken tekrar mebus olsaydı bu hakikat nazara
 alınmayacaktı. Onun için bazı dinsiz zalimlerin parmağıyla
 kazanmadığından müteessir olmasın.
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -8443,7 +8448,7 @@ nezaretinde o düsturumun muhafaza edilmesini vasiyet ediyorum.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 ##### **(Bazı gazetelerde çıkan yalanlar hakkındaki bir tekzibi bera-yı malûmat gönderiyoruz.)**
 
@@ -8555,7 +8560,7 @@ Hastalığı münasebetiyle hizmetinde bulunan
 
 Tahirî, Zübeyr, Ceylan, Bayram, Sungur, Rüşdü
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -8617,7 +8622,7 @@ Mahkeme-i Kübraya Şekva’ya bir zeyl olarak neşredilebilir.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 ##### **Reisicumhura ve Başvekile,**
 
@@ -8788,7 +8793,7 @@ namına sizden bekliyoruz.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -8846,7 +8851,7 @@ sohbetten ve konuşmaktan men’edildiğini biz de görüyoruz.
 
 Üstadımızın hizmetinde bulunan Tahirî, Zübeyr, Ceylan, Hüsnü, Bayram
 
-\*\*\*
+/*/*/*
 
 ##### **Bera-yı malûmat hem resmî zatlara hem dostlara mühim bir hakikati beyan ediyoruz:**
 
@@ -8922,7 +8927,7 @@ görüşebilir.”
 Şiddetli hastalığı ve çok ihtiyarlığı için zarurî işlerini gören
 hizmetkârları
 
-\*\*\*
+/*/*/*
 
 # **Emirdağ Lâhikası – II s.230-247**
 
@@ -8956,7 +8961,7 @@ Said Nursî
 Ankara’daki iki emniyet müdürüne çok selâm ediyorum. Böyle şeylere
 ehemmiyet vermesinler.
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -9006,7 +9011,7 @@ Kardeşleriniz Tahirî, Zübeyr, Sungur, Ceylan, Bayram
 **Hâşiye:** Bu mektup aynı zamanda telgrafla veya mektupla Üstadımızın
 Leyle-i Beratlarını tebrik eden kardeşlerimize cevaptır.
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -9066,7 +9071,7 @@ ettiğini göstermiştir.
 
 Tahirî, Sungur, Ceylan
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -9080,7 +9085,7 @@ ki:
 Benim vefatımdan sonra, benim emaneten elimde bulunan Risale-i Nur
 sermayesi hem mu’cizatlı Kur’an’ımızı tabettirmek için Eskişehir’de
 muhafaza edilen sermaye, o Kur’an’ın tevafukla ve fotoğrafla tabına ait.
-(\*[\[1\]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-230-247/#_ftn1))
+(/*[/[1/]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-230-247/#_ftn1))
 Yanımızdaki sermaye ise Risale-i Nur’un sermayesidir. O sermaye Cenab-ı
 Erhamü’r-Râhimîn’e hadsiz şükür olsun ki yetmiş küsur sene evvel o
 zamanın âdetine muhalif olarak kendim fakirliğimle beraber onların
@@ -9113,7 +9118,7 @@ Evet biz, Üstadımızın bu vasiyetine şahidiz.
 Emirdağlı Çalışkan, Mustafa Acet, Safranbolulu Hüsnü, Ermenekli Zübeyr,
 Çoğollu Bayram
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -9149,7 +9154,7 @@ lâzımdır. Size bazı Kur’an’ın cüzleri ile birlikte gönderiyoruz ve pe
 
 Kardeşleriniz Tahirî, Zübeyr, Ceylan, Sungur
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -9208,7 +9213,7 @@ da kırılmasın.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -9297,7 +9302,7 @@ Evet, hizmetkârımın yazdığı doğrudur.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 ##### **(Müddeiumumîler hakkında Üstadımızın garib bir halet-i ruhiyesini beyan etmek zamanı geldi.)**
 
@@ -9336,7 +9341,7 @@ ediyorum.
 
 Talebesi Sungur
 
-\*\*\*
+/*/*/*
 
 ##### **Bedîüzzaman Said Nursî’nin Gazetelere Bir Mektubu**
 
@@ -9394,7 +9399,7 @@ kiraladığım Isparta’daki evimde bulunmak arzu ediyorum.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 ##### **Umum Nur talebelerine Üstad Bedîüzzaman’ın vefatından önce vermiş olduğu en son derstir**
 
@@ -9658,7 +9663,7 @@ dinlemeyerek Kur’an’ın bir harfinin bir nüktesini beyan etmiş.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
-[\[1\]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-230-247/#_ftnref1)
-\* On bin liradır.
+[/[1/]](https://risaleinur.hizmetvakfi.org/emirdag-lahikasi-ii-s-230-247/#_ftnref1)
+/* On bin liradır.

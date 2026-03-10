@@ -1,3 +1,8 @@
+---
+title: 'HUTBE-İ ŞAMİYE'
+book: 'hutbe-i-samiye'
+---
+
 **Risale-i Nur Külliyatı’ndan**
 
 # **HUTBE-İ ŞAMİYE**
@@ -12,7 +17,7 @@ beş yaşında iken Şam’da, Şam ulemasının ısrarı üzerine Cami-i Emevî
 o zaman Şam’da bir hafta içinde iki defa tabedilmiştir. Bilâhare müellif
 Bedîüzzaman Said Nursî tarafından tercümesi neşredilmiştir.
 
-\*\*\*
+/*/*/*
 
 ##### **Arabî Hutbe-i Şamiye’nin Mukaddimesidir**
 
@@ -39,7 +44,7 @@ ederim.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 Gayet mühim bir suale verilen çok ehemmiyetli bir cevabı burada yazmaya
 münasebet geldi. Çünkü kırk sene evvel Eski Said, o dersinde bir hiss-i
@@ -224,7 +229,7 @@ manevî çekirdeği ve küfür ise cehennem zakkumunun bir tohumu olduğunu
 gösteren Nur’un o gibi parçaları, kısacık bir tarzda bir mecmuacık
 olarak yazılacak ve inşâallah neşredilecek.
 
-\*\*\*
+/*/*/*
 
 ##### **Arabî Hutbe-i Şamiye Eserinin Tercümesi**
 
@@ -280,7 +285,7 @@ dünyeviyesi, bâhusus Osmanlıların saadeti ve bilhassa İslâm’ın terakkis
 onların intibahıyla olan Arab’ın saadetinin fecr-i sadıkının emareleri
 inkişafa başlıyor ve saadet güneşinin de çıkması yakınlaşmış. Yeisin
 burnunun rağmına olarak
-(Hâşiye[\[1\]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftn1))
+(Hâşiye[/[1/]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftn1))
 ben dünyaya işittirecek derecede kanaat-i kat’iyemle derim:
 
 İstikbal yalnız ve yalnız İslâmiyet’in olacak. Ve hâkim, hakaik-i
@@ -319,7 +324,7 @@ etbaları ise –hattâ en ziyade dinine taassup gösteren İngilizlerin ve
 eski Rusların– muhakeme-i akliye ile İslâmiyet’e dâhil olduklarını ve
 günden güne, bazı zaman takım takım kat’î bürhan ile İslâmiyet’e
 girdiklerini tarihler bize bildiriyorlar
-(Hâşiye[\[2\]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftn2)).
+(Hâşiye[/[2/]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftn2)).
 
 Eğer biz ahlâk-ı İslâmiyenin ve hakaik-i imaniyenin kemalâtını
 ef’alimizle izhar etsek, sair dinlerin tabileri elbette cemaatlerle
@@ -501,7 +506,7 @@ Birinci Cihet, maneviyat cihetinde terakkiyatı ispat ettiği gibi; bu
 kuvvetli gösteriyor. Çünkü âlem-i İslâm’ın şahs-ı manevîsinin kalbinde,
 gayet kuvvetli ve kırılmaz **beş kuvvet** içtima ve imtizaç edip
 yerleşmiş
-(Hâşiye[\[3\]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftn3)).
+(Hâşiye[/[3/]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftn3)).
 
 **Birincisi:** Bütün kemalâtın üstadı ve üç yüz yetmiş milyon nefisleri
 bir tek nefis hükmüne getirebilen ve hakiki bir medeniyetle ve müsbet ve
@@ -737,7 +742,7 @@ Bu sırra binaen kizb ve sıdkın ortasında hadsiz bir mesafe var, şark ve
 garp kadar birbirinden uzak olmak lâzım geliyor. Nâr ve nur gibi
 birbirine girmemek lâzım. Halbuki gaddar siyaset ve zalim propaganda
 birbirini karıştırmış, beşerin kemalâtını da karıştırmış.
-(Hâşiye[\[4\]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftn4))
+(Hâşiye[/[4/]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftn4))
 
 Bu sıdk ve kizb, küfür ve iman kadar birbirinden uzak. Asr-ı saadette
 sıdk vasıtasıyla Muhammed aleyhissalâtü vesselâmın a’lâ-yı illiyyîne
@@ -1038,7 +1043,7 @@ istimdad ile beraber hayat-ı şahsiye-i insaniyesi dayandığı gibi hayat-ı
 içtimaiyesi de yine imanın hakaikinden gelen şûra-yı şer’î ile
 yaşayabilir. O düşmanları durdurur, o hâcetlerin teminine yol açar.
 
-\*\*\*
+/*/*/*
 
 ##### **Arabî Hutbe-i Şamiye’nin Zeyli’nin Kısa Bir Tercümesi**
 
@@ -1227,7 +1232,7 @@ menfaat-i insaniyeden uzak bir hareket olduğunu; pek yakın bir zamanda
 intibaha gelmiş, başta İslâm olarak beşer, hissedecek; dünyanın ömrü
 kalmışsa Kur’an’ın hakaikine yapışacak.
 
-\*\*\*
+/*/*/*
 
 İşte sâbık temsil gibi eski zamanda, Hürriyet’in başında bazı dindar
 mebuslar, Eski Said’e dediler:
@@ -1323,7 +1328,7 @@ olabilir…
 
 (Hikâyenin hülâsası bitti.)
 
-\*\*\*
+/*/*/*
 
 Eğer beşer çabuk aklını başına alıp adalet-i İlahiye namına ve hakaik-i
 İslâmiye dairesinde mahkemeler açmazsa maddî ve manevî kıyametler
@@ -1333,7 +1338,7 @@ edecekler diye kalbe ihtar edildi.
 İşte bu hikâyeyi o zamandaki bazı dindar mebuslara Eski Said söylemiş.
 Ve iki defa tabedilen Arabî Hutbe-i Şamiye’nin Zeyli’nde kırk beş sene
 evvel yazılmış.
-(Hâşiye[\[5\]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftn5))
+(Hâşiye[/[5/]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftn5))
 
 Şimdi bu hikâye ile evvelki temsil, o zamandan ziyade tam bu zamanın
 dersi olmasından bera-yı malûmat hakiki dindar mebusların nazarına
@@ -1341,12 +1346,12 @@ medar-ı ibret için gösteriyoruz.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 ##### **HUTBE-İ ŞAMİYE’NİN ZEYLİNİN ZEYLİ**
 
 (Kırk iki
-(\*[\[6\]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftn6))
+(/*[/[6/]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftn6))
 sene evvel dinî ceridelerde neşredilen Said’in makalesidir.)
 
 ##### **Yaşasın Şeriat-ı Garra**
@@ -1426,7 +1431,7 @@ ve en cebîn ve âmî adamı en cesur ve en has adam gibi hiss-i hakiki-i
 terakki ve fedakârlık ve hubb-u vatanla mütehassis eden (26)
 
 ve hēdim-i medeniyet
-(\*[\[7\]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftn7))
+(/*[/[7/]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftn7))
 olan sefahet ve israfat ve havaic-i gayr-ı zaruriyeden bizi halâs eden
 (27)
 
@@ -1454,7 +1459,7 @@ Yaşasın şeriat-ı garra!..
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 ##### **Yaşasın Şeriat-ı Ahmedî (asm)**
 
@@ -1499,7 +1504,7 @@ davet ederiz.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 ##### **İhtar-ı Mahsus**
 
@@ -1514,7 +1519,7 @@ kadının kametinden istihsan ettiği libası giyinse maskara ve rezil olur.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 ##### **Hakikat**
 
@@ -1537,7 +1542,7 @@ Amma cihad-ı haricîyi şeriat-ı garranın berahin-i kātıasının elmas
 kılınçlarına havale edeceğiz. Zira medenilere galebe çalmak ikna iledir,
 söz anlamayan vahşiler gibi icbar ile değildir. Biz muhabbet
 fedaileriyiz, husumete vaktimiz yoktur. Cumhuriyet ki
-(Hâşiye[\[8\]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftn8))
+(Hâşiye[/[8/]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftn8))
 adalet ve meşveret ve kanunda inhisar-ı kuvvetten ibarettir. On üç asır
 evvel şeriat-ı garra teessüs ettiğinden, ahkâmda Avrupa’ya dilencilik
 etmek, din-i İslâm’a büyük bir cinayettir ve şimale müteveccihen namaz
@@ -1560,7 +1565,7 @@ için mütaliînin fikirlerine havale ediyorum.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 ##### **Sadâ-yı Hakikat**
 
@@ -1603,7 +1608,7 @@ itirazı varsa etsin, cevaba hazırız.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 Neşrettiğim fihriste-i makasıddan terk ettiğim bir fıkradır. Şöyle ki:
 
@@ -1620,7 +1625,7 @@ himmetine muhavveldir.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 ##### **Reddü’l-Evham**
 
@@ -1682,7 +1687,7 @@ tûba gibi neşv ü nema vermektir.
 
 **Elcevap:** Bu ihtimale ihtimal verenler mütevahhiştir. Zira merkez-i
 taassuplarında İslâmiyet’in ulviyetine dair konferanslarla
-(Hâşiye[\[9\]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftn9))
+(Hâşiye[/[9/]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftn9))
 takdis etmeleri bu ihtimali reddeder. Hem de düşmanlarımız onlar değil;
 asıl bizi bu kadar düşürüp i’lâ-yı kelimetullaha mani olan ve
 **cehalet** neticesi olan muhalefet-i şeriattır. Ve **zaruret** ve onun
@@ -1799,7 +1804,7 @@ Cemi’ mü’minlerin lisanıyla insanların adedi kadar deriz: Yaşasın
 
 Bedîüzzaman Said Nursî
 
-\*\*\*
+/*/*/*
 
 Biraderim Başmuharrir Bey’e!
 
@@ -1812,7 +1817,7 @@ yoktur.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 ##### **HUTBE-İ ŞAMİYE’NİN BİRİNCİ ZEYLİNİN ZEYLİNDEN SON PARÇADIR**
 
@@ -1848,7 +1853,7 @@ vesselâm) muhafazası da itaat iledir.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 ##### **Asakire Hitap**
 
@@ -1904,7 +1909,7 @@ Yaşasın şeriat-ı garra!.. Yaşasın askerler!..
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 ##### **Cemiyetlere İhtar-ı Mühim**
 
@@ -1920,7 +1925,7 @@ hükûmet-i meşruamız asıl büyük cemiyettir.
 
 Bedîüzzaman Said Nursî
 
-\*\*\*
+/*/*/*
 
 ##### **Hakikat Çekirdekleri**
 
@@ -2060,7 +2065,7 @@ silkinmezse yemişleri olan seyyarat düşüp dağılacaktır.
 
 29- Nur-u fikir, ziya-yı kalp ile ışıklanıp mezcolmazsa zulmettir, zulüm
 fışkırır. Gözün muzlim nehar-ı ebyazı, muzii
-(Hâşiye[\[10\]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftn10))
+(Hâşiye[/[10/]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftn10))
 leyle-i süveyda ile mezcolmazsa basarsız olduğu gibi fikret-i beyzada
 süveyda-i kalp bulunmazsa basîretsizdir.
 
@@ -2136,7 +2141,7 @@ izzet-i milliyenin yaraları pek derindir.
 
 48- Öyle zaman olur ki bir kelime bir orduyu batırır, bir gülle otuz
 milyonun mahvına sebep olur.
-(Hâşiye[\[11\]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftn11))
+(Hâşiye[/[11/]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftn11))
 Öyle şerait tahtında olur ki küçük bir hareket, insanı a’lâ-yı illiyyîne
 çıkarır ve öyle hal olur ki küçük bir fiil, insanı esfel-i safilîne
 indirir.
@@ -2250,7 +2255,7 @@ haddinden geçse dert getirir.
 
 73- Cemaatte vâhid-i sahih olmazsa; cem’ ve zam, kesir darbı gibi
 küçültür.
-(Hâşiye[\[12\]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftn12))
+(Hâşiye[/[12/]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftn12))
 
 74- Adem-i kabul, kabul-ü ademle iltibas olunur. Adem-i kabul; adem-i
 delil-i sübut, onun delilidir. Kabul-ü adem, delil-i adem ister. Biri
@@ -2429,7 +2434,7 @@ ona benzemez.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 ##### **Hutbe-i Şamiye’nin İkinci Zeyli’nin İkinci Kısmı**
 
@@ -2494,7 +2499,7 @@ istintak; solunda vicdanı istişhad; önünde hayır, hedefinde saadet-i
 dâreyn, nokta-i istinadı vahy-i mahzdır. Vehmin ne haddi var,
 girebilsin!
 
-\*\*\*
+/*/*/*
 
 Vicdanın anâsır-ı erbaası ve ruhun dört havassı olan irade, zihin, his,
 latîfe-i Rabbaniye, her birinin bir gayatü’l-gayatı var:
@@ -2510,7 +2515,7 @@ Latîfenin müşahedetullahtır.
 Takva denilen ibadet-i kâmile, dördünü tazammun eder. Şeriat şunları hem
 tenmiye hem tehzib hem bu gayatü’l-gayata sevk eder.
 
-\*\*\*
+/*/*/*
 
 Eğer icaddaki vasıta hakiki olsaydı ve hakiki tesir verilseydi hem bir
 şuur-u küllî verilmek lâzım idi hem de bizzarure eserde itkan-ı kemal-i
@@ -2537,7 +2542,7 @@ menba-ı feyz ve –güneşin ziyasından bir fikre göre istihale etmiş
 lambanın nuru gibi– birer maden-i nur nazarıyla bakıyorlar. Biz ise
 evliyaya mana-yı harfiyle yani âyine güneşin ziyasını neşrettiği gibi
 birer ma’kes-i tecelli nazarıyla bakıyoruz.
-(Hâşiye[\[13\]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftn13))
+(Hâşiye[/[13/]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftn13))
 
 Bu sırdandır ki bizde sülûk tevazudan başlar, mahviyetten geçer, fena
 fillah makamını görür. Gayr-ı mütenahî makamatta sülûka başlar. Ene ve
@@ -2546,7 +2551,7 @@ tahrif ve felsefe ile sarsılmış Hristiyan’da, ene levazımatıyla
 kuvvetleşir. Enesi kuvvetli, müteşahhıs, rütbeli, makam sahibi bir adam,
 Hristiyan olsa mütesallib olur. Fakat Müslüman olsa lâkayt olur.
 
-\*\*\*
+/*/*/*
 
 Kuvveden fiile geçmek olan faaliyetteki şedit ve mütenevvi lezzet,
 tagayyür-ü âlemin mâyesi ve kanun-u tekâmülün nüvesidir. Zindandan
@@ -2566,7 +2571,7 @@ Kalbin zahirini, sair şeylere müheyya etmiştir. Cinayetkâr hırs kalbi
 deler, sanemleri içine idhal eder. Allah darılır, maksudunun aksiyle
 mücazat eder.
 
-\*\*\*
+/*/*/*
 
 Hırs cihetiyle siyaset efkârını, İslâmiyet akaidinin yerlerine kadar
 îsal eden herifler şan ve şeref değil belki şeyn ü şenaate mazhar
@@ -2579,7 +2584,7 @@ Gece kalben nevmi merak edersin, bakiyyesini de kaçırıp uyanık kalırsın.
 İkincisine vermeyi daha ziyade arzu etmekliğin, şu geniş kanunun bir
 numunesidir.
 
-\*\*\*
+/*/*/*
 
 En müthiş maraz ve musibetimiz, cerbeze ve gurura istinad eden
 tenkittir. Tenkidi eğer insaf işletirse hakikati rendeçler. Eğer gurur
@@ -2599,7 +2604,7 @@ hüsn-ü zan ile temaşa etmek gerektir. “Bîtarafane muhakeme” dedikleri
 
 Zira hakikatbîn göz aldanmaz, hakperest kalp aldatmaz.
 
-\*\*\*
+/*/*/*
 
 ##### **Gıybetin Derece-i Şenaati**
 
@@ -2620,7 +2625,7 @@ mu ki ölüyü dişlerinle parçalıyorsun.
 Demek akıl, kalp, vicdan, insaniyet, rikkat-i cinsiye, tabiat, şeriat
 nazarında gıybet; merduddur, matruddur.
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">اِنَّ الْاِنْسَانَ الَّذٖى لَا يُدْرِكُ سِرَّ التَّعَاوُنِ لَهُوَ اَجْمَدُ مِنَ الْحَجَرِ اِذْ
 مِنَ الْحَجَرِ مَا يَتَقَوَّسُ لِمُعَاوَنَةِ اَخٖيهِ اِذِ الْحَجَرُ مَعَ حَجَرِيَّتِهٖ اِذَا خَرَجَ مِنْ يَدِ الْمُعَقِّدِ
@@ -2632,23 +2637,23 @@ Yani kubbelerde taşlar, baş başa vururlar tâ düşmesinler.
 Cüz-i lâyetecezza zerresinden insana, insandan şems-i şümusa müteselsil
 mahrutî silsilenin vasatındaki cevher-i ferîdi, insan-ı mükerremdir.
 
-\*\*\*
+/*/*/*
 
 İnsanın meşhur havassından başka havassı vardır. Zaika gibi bir hiss-i
 sâika hem bir hiss-i şâika vardır. Hem insanda gayr-ı meş’ur hisler
 çoktur.
 
-\*\*\*
+/*/*/*
 
 Bazen arzu, fikir suretini giyer. Şahs-ı muhteris, arzu-yu nefsaniyesini
 fikir zanneder.
 
-\*\*\*
+/*/*/*
 
 Garibdir ki bazı adam pis bir çamura düşer, kendini aldatmak için misk ü
 amber diye yüzüne gözüne bulaştırır.
 
-\*\*\*
+/*/*/*
 
 Şehit velidir. Cihad farz-ı kifaye iken farz-ı ayn olmuştur. Belki
 muzaaf bir farz-ı ayn hükmüne geçmiştir. Hac ve zekât gibi cihadda da
@@ -2659,7 +2664,7 @@ niyet hükmündedir. Demek zıdd-ı niyet, yakînen tebeyyün etmezse cihad,
 birdenbire on binler evliya inkişaf ve tezahür etse az bir mükâfat
 değildir.
 
-\*\*\*
+/*/*/*
 
 Bizde biri fâsık olsa galiben ahlâksız ve vicdansız olur. Zira arzu-yu
 masiyet, vicdandaki imanın sadâsını susturmakla inkişaf edebilir. Demek
@@ -2673,7 +2678,7 @@ olsunlar, imtisal etsinler. Yoksa yalnız vehim müteessir olur. Yalnız
 hükûmetin cezasından korkar eğer tahakkuk etse. Nâsın itabından çekinir
 eğer tebeyyün etse.
 
-\*\*\*
+/*/*/*
 
 Bir cani yüzünden, çok masumları ihtiva eden bir gemi batırılmaz. Bir
 cani sıfat yüzünden, çok evsaf-ı masumeyi muhtevi bir mü’mine adâvet
@@ -2691,7 +2696,7 @@ acımak manasında olabilir.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -2830,7 +2835,7 @@ Mu’cizü’l-Beyan’ın işarat ve rumuzundan anlaşıldığı gibi rahmet-i
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -2905,7 +2910,7 @@ muvaffak olalım.
 
 Abdülmuhsin
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -2940,7 +2945,7 @@ Ankara Üniversitesi Nur talebeleri namına
 
 Abdullah
 
-[\[1\]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftnref1)
+[/[1/]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftnref1)
 Hâşiye: Eski Said, hiss-i kable’l-vuku ile 1371’de –başta Arap
 devletleri– âlem-i İslâm’ın ecnebi esaretinden ve istibdadından kurtulup
 İslâmî devletler teşkil edeceklerini kırk beş sene evvel haber vermiş.
@@ -2948,7 +2953,7 @@ devletleri– âlem-i İslâm’ın ecnebi esaretinden ve istibdadından kurtulu
 1370’te olan vaziyeti 1327’de olacak gibi müjde vermiş, tehirinin
 sebebini nazara almamış.
 
-[\[2\]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftnref2)
+[/[2/]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftnref2)
 Hâşiye: İşte bu mezkûr davaya bir delil şudur ki: İki dehşetli harb-i
 umumînin ve şiddetli bir istibdad-ı mutlakın zuhuruyla beraber, bu
 davaya kırk beş sene sonra şimalin İsveç, Norveç, Finlandiya gibi küçük
@@ -2962,7 +2967,7 @@ karar vermesi ve yeni doğan İslâm devletlerini okşaması ve teşvik etmesi
 ve onlarla ittifaka çalışması, kırk beş sene evvel olan bu müddeayı
 ispat ediyor, kuvvetli bir şahit olur.
 
-[\[3\]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftnref3)
+[/[3/]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftnref3)
 Hâşiye: Evet Kur’an’ın üstadiyetinden ve dersinin işaratından
 fehmediyoruz ki: Kur’an’da mu’cizat-ı enbiyayı zikretmesiyle; beşerin
 istikbalde terakki edeceğini ve o mu’cizatın nazireleri istikbalde
@@ -2983,7 +2988,7 @@ istifade ediniz, taklitlerini yapınız.”
 İşte buna kıyasen Kur’an, her cihetle beşeri maddî manevî terakkiyata
 sevk etmek için ders veriyor, üstad-ı küll olduğunu ispat ediyor.
 
-[\[4\]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftnref4)
+[/[4/]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftnref4)
 Hâşiye: Ey kardeşlerim! Kırk beş sene evvel Eski Said’in bu dersinden
 anlaşılıyor ki o Said siyasetle, içtimaiyat-ı İslâmiye ile ziyade
 alâkadardır. Fakat sakın zannetmeyiniz ki o, dini siyasete âlet veya
@@ -3017,7 +3022,7 @@ Eski Said’in siyasete temas eden Hutbe-i Şamiye dersinin (onun yerine)
 tercümesi yazıldı.
 
 Hâşiye: Hem Üstadımızın yirmi yedi senelik hayatı ve yüz otuz parça
-kitabı ve mektupları, üç mahkeme (\*) ve hükûmet memurları tarafından
+kitabı ve mektupları, üç mahkeme (/*) ve hükûmet memurları tarafından
 tam tetkik edildiği ve aleyhinde çalışan zalim, mürted ve münafıklara
 karşı mecbur da olduğu halde, hattâ idamı için gizli emir verildiği
 halde, dini siyasete âlet ettiğine dair en ufak bir emare bulamamaları,
@@ -3028,9 +3033,9 @@ saymaktayız.
 
 Nur Şakirdleri
 
-(\*) Şimdi yüz mahkeme.
+(/*) Şimdi yüz mahkeme.
 
-[\[5\]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftnref5)
+[/[5/]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftnref5)
 Hâşiye: Hutbe-i Şamiye namında matbu Arabî risaleyi, Arabî bilmediğimiz
 için Üstadımızdan rica ettik ki: Bize bir iki gün ders ver. Birkaç gün
 zarfında söylediği dersin takririni kaleme aldık. Üstadımız ders verdiği
@@ -3053,33 +3058,33 @@ Said hesabına bir derstir.
 Tahirî, Zübeyr, Bayram, Ceylan, Sungur, Abdullah, Ziya, Sadık, Salih,
 Hüsnü, Hamza
 
-[\[6\]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftnref6) \*
+[/[6/]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftnref6) /*
 Bu tarih 1951 senesine aittir.
 
-[\[7\]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftnref7) \*
+[/[7/]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftnref7) /*
 Hēdim-i medeniyet: Medeniyeti yıkıcı.
 
-[\[8\]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftnref8)
+[/[8/]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftnref8)
 Hâşiye: O zaman meşrutiyet, şimdi o kelime yerine cumhuriyet konulmuş.
 
-[\[9\]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftnref9)
+[/[9/]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftnref9)
 Hâşiye: Bismark ve Mister Karlayl gibilerin malûm beyanatlarına işaret
 eder.
 
-[\[10\]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftnref10)
+[/[10/]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftnref10)
 Hâşiye: Meali: Gözün gündüze benzeyen beyazı, geceye benzeyen
 siyahlığıyla beraber olmazsa göz, göz olmaz.
 
-[\[11\]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftnref11)
+[/[11/]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftnref11)
 Hâşiye: Sırp bir neferin Avusturya Veliahdine attığı bir tek gülle, Eski
 Harb-i Umumî’yi patlattırdı; otuz milyon nüfusun mahvına sebep oldu.
 
-[\[12\]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftnref12)
+[/[12/]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftnref12)
 Hâşiye: Hesapta malûmdur ki darb ve cem’, ziyadeleştirir. Dört kere
 dört, on altı olur. Fakat kesirlerde darb ve cem’, bilakis küçültür.
 Sülüsü sülüs ile darbetmek, tüsü’ olur; yani dokuzda bir olur. Aynen
 onun gibi insanlarda sıhhat ve istikamet ile vahdet olmazsa
 ziyadeleşmekle küçülür, bozuk olur, kıymetsiz olur.
 
-[\[13\]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftnref13)
+[/[13/]](https://risaleinur.hizmetvakfi.org/hutbe-i-samiye/#_ftnref13)
 Hâşiye: Nakşibendî rabıtası bu sırra bina edilmiştir.

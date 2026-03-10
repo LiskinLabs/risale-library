@@ -1,0 +1,201 @@
+---
+import { getCollection } from 'astro:content';
+import ReaderLayout from '../../layouts/ReaderLayout.astro';
+
+export async function getStaticPaths() {
+  const trEntries = await getCollection('risale', ({ id }) => id.startsWith('tr/'));
+  return trEntries.map(entry => ({
+    params: { book: entry.data.book },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content, headings } = await entry.render();
+
+const allEntries = await getCollection('risale');
+const otherBooks = [...new Set(allEntries.filter(e => e.slug.startsWith('tr/') && e.data.book).map(e => e.data.book))]
+  .filter(b => b !== entry.data.book)
+  .sort();
+
+const bookTitles = {
+  'lem-alar': 'Lem\'alar',
+  'isaratu-l-i-caz': 'İşaratü\'l-İ\'caz',
+  'nur-un-ilk-kapisi': 'Nur\'un İlk Kapısı',
+  'mesnevi-i-nuriye': 'Mesnevî-i Nuriye',
+  'sozler': 'Sözler',
+  'mektubat': 'Mektubat',
+  'sualar': 'Şualar',
+  'asa-yi-musa': 'Asâ-yı Musa',
+  'tarihce-i-hayati': 'Tarihçe-i Hayatı',
+};
+
+const getPrettyTitle = (slug) => bookTitles[slug] || slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+---
+
+<ReaderLayout title={`${entry.data.title} | Рисале-и Нур`}>
+  <div class="flex flex-col lg:flex-row gap-8 max-w-[1600px] mx-auto px-4">
+    
+    <!-- Left Sidebar: Other Books -->
+    <aside class="hidden xl:block w-64 flex-shrink-0">
+      <div class="sticky top-24 space-y-8">
+        <div>
+          <h3 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4">Другие книги</h3>
+          <nav class="space-y-1">
+            {otherBooks.map(book => (
+              <a href={`/risale-library/tr/${book}`} class="block text-xs py-1.5 text-slate-500 hover:text-amber-600 transition-colors">
+                {getPrettyTitle(book)}
+              </a>
+            ))}
+          </nav>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-4xl bg-white dark:bg-slate-900 shadow-xl shadow-slate-200/50 dark:shadow-none rounded-3xl p-8 md:p-12 min-h-screen">
+      <div class="mb-12 border-b border-slate-100 dark:border-slate-800 pb-8">
+        <h1 class="text-5xl font-black text-slate-800 dark:text-white mb-4 tracking-tighter">
+          {entry.data.title}
+        </h1>
+        <div class="flex items-center gap-4 text-sm text-slate-400">
+          <span class="px-3 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 rounded-full font-bold uppercase text-[10px]">Latin Türkçe</span>
+          <span>Полное издание</span>
+        </div>
+      </div>
+
+      <article id="book-content" class="prose-risale dark:prose-invert font-reader leading-relaxed max-w-none">
+        <Content />
+      </article>
+    </main>
+
+    <!-- Right Sidebar: Interactive TOC -->
+    <aside class="lg:w-80 flex-shrink-0">
+      <div class="sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto pr-4 scrollbar-thin">
+        <h3 class="text-[10px] font-bold text-amber-600 uppercase tracking-[0.2em] mb-6 flex items-center gap-2">
+          <span class="w-4 h-px bg-amber-600"></span>
+          Оглавление
+        </h3>
+        <nav class="space-y-0.5" id="toc-nav">
+          {headings.map(h => (
+            <a 
+              href={`#${h.slug}`} 
+              class={`block py-1.5 px-3 text-xs rounded-lg transition-all border-l-2 border-transparent hover:bg-amber-50 dark:hover:bg-amber-900/20 ${
+                h.depth === 1 ? 'font-bold text-slate-800 dark:text-slate-200 mt-4' : 
+                h.depth === 2 ? 'pl-6 text-slate-600 dark:text-slate-400' : 
+                'pl-9 text-slate-500 dark:text-slate-500 italic'
+              }`}
+            >
+              {h.text}
+            </a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Footnote Popup System -->
+  <div id="footnote-popup" class="fixed bottom-8 left-1/2 -translate-x-1/2 max-w-lg w-[90%] bg-white dark:bg-slate-800 border-t-4 border-amber-500 shadow-2xl p-6 rounded-2xl hidden z-50 transform transition-all duration-300 translate-y-10 opacity-0">
+    <div class="flex justify-between items-start mb-4">
+      <span class="text-[10px] font-bold text-amber-600 uppercase tracking-widest">Примечание</span>
+      <button id="close-footnote" class="p-1 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <div id="footnote-content" class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-reader"></div>
+  </div>
+
+</ReaderLayout>
+
+<script>
+  // Intercept Footnote Clicks
+  const content = document.getElementById('book-content');
+  const popup = document.getElementById('footnote-popup');
+  const popupContent = document.getElementById('footnote-content');
+  const closeBtn = document.getElementById('close-footnote');
+
+  if (content) {
+    content.addEventListener('click', (e) => {
+      const target = e.target.closest('a');
+      if (target && (target.hash.includes('fn') || target.id.includes('fnref'))) {
+        e.preventDefault();
+        const noteId = target.hash.substring(1);
+        const noteElement = document.getElementById(noteId);
+        
+        if (noteElement) {
+          // Clone to avoid moving the element
+          const noteText = noteElement.innerHTML;
+          popupContent.innerHTML = noteText;
+          
+          // Show popup
+          popup.classList.remove('hidden');
+          setTimeout(() => {
+            popup.classList.remove('translate-y-10', 'opacity-0');
+          }, 10);
+        }
+      }
+    });
+  }
+
+  closeBtn?.addEventListener('click', () => {
+    popup?.classList.add('translate-y-10', 'opacity-0');
+    setTimeout(() => {
+      popup?.classList.add('hidden');
+    }, 300);
+  });
+
+  // Active heading highlighting in TOC
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px 0px -80% 0px',
+    threshold: 0
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        document.querySelectorAll('#toc-nav a').forEach(a => {
+          if (a.getAttribute('href') === `#${id}`) {
+            a.classList.add('text-amber-600', 'border-amber-500', 'bg-amber-50', 'dark:bg-amber-900/20');
+          } else {
+            a.classList.remove('text-amber-600', 'border-amber-500', 'bg-amber-50', 'dark:bg-amber-900/20');
+          }
+        });
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('h1, h2, h3').forEach(h => observer.observe(h));
+</script>
+
+<style is:global>
+  /* Custom scrollbar for sidebar */
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 4px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply bg-slate-200 dark:bg-slate-800 rounded-full;
+  }
+  
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Style footnotes section at the bottom */
+  .footnotes {
+    @apply mt-20 pt-8 border-t border-slate-100 dark:border-slate-800 text-slate-400 text-xs;
+  }
+  .footnotes hr { display: none; }
+  
+  /* Style footnote links in text */
+  a[data-footnote-ref] {
+    @apply text-amber-600 font-bold no-underline hover:underline px-0.5;
+  }
+</style>

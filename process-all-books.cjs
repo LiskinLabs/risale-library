@@ -6,12 +6,7 @@ const pandocPath = path.resolve('pandoc-3.9/pandoc.exe');
 const inputDir = path.resolve('RNK doc');
 const outputBaseDir = path.resolve('src/content/risale/tr');
 
-const targetBook = process.argv[2]; 
-let files = fs.readdirSync(inputDir).filter(f => f.endsWith('.docx'));
-
-if (targetBook) {
-    files = files.filter(f => f.toLowerCase().includes(targetBook.toLowerCase()));
-}
+const files = fs.readdirSync(inputDir).filter(f => f.endsWith('.docx'));
 
 files.forEach(file => {
     const bookName = file.replace('.docx', '').toLowerCase()
@@ -23,67 +18,43 @@ files.forEach(file => {
         .replace(/ü/g, 'u')
         .replace(/ş/g, 's')
         .replace(/ö/g, 'o')
-        .replace(/ç/g, 'c');
+        .replace(/ç/g, 'c')
+        .replace(/[^a-z0-9-]/g, '');
     
-    const bookOutputDir = path.join(outputBaseDir, bookName);
-    if (!fs.existsSync(bookOutputDir)) {
-        fs.mkdirSync(bookOutputDir, { recursive: true });
+    // We will save as one file: src/content/risale/tr/book-name.md
+    if (!fs.existsSync(outputBaseDir)) {
+        fs.mkdirSync(outputBaseDir, { recursive: true });
     }
 
     const mdPath = path.join(inputDir, file.replace('.docx', '.md'));
+    const finalOutputPath = path.join(outputBaseDir, `${bookName}.md`);
     
     console.log(`Converting ${file} to GFM...`);
     try {
-        const mediaDirName = bookName.replace(/[^a-z0-9-]/g, '');
-        execSync(`"${pandocPath}" "${path.join(inputDir, file)}" -t gfm-raw_html --extract-media=public/images/${mediaDirName} -o "${mdPath}"`);
+        const mediaDirName = bookName;
+        // Generate with footnotes enabled and gfm
+        execSync(`"${pandocPath}" "${path.join(inputDir, file)}" -t gfm --extract-media=public/images/${mediaDirName} -o "${mdPath}"`);
     } catch (e) {
         console.error(`Failed to convert ${file}: ${e.message}`);
         return;
     }
 
-    console.log(`Splitting ${bookName}...`);
+    console.log(`Processing ${bookName} as a single file...`);
     let content = fs.readFileSync(mdPath, 'utf8');
     
-    // IMPORTANT: Fix image paths for Astro build
-    // Remove "public/" prefix because Astro serves content of public/ from root
-    // Also use forward slashes
-    const mediaDirName = bookName.replace(/[^a-z0-9-]/g, '');
-    content = content.replace(/public\/images\//g, '/images/');
+    // Fix image paths
+    content = content.replace(/public\/images\//g, '/risale-library/images/');
     content = content.replace(/\\/g, '/');
 
-    const splitRegex = /\n(?=#+ \*\*)/;
-    const sections = content.split(splitRegex);
-    
-    let count = 0;
-    sections.forEach((section, index) => {
-        const trimmed = section.trim();
-        if (trimmed.length < 10) return;
-
-        const headerMatch = trimmed.match(/^#+ \*\*(.*)\*\*/);
-        let title = headerMatch ? headerMatch[1] : `Bölüm ${count + 1}`;
-        
-        title = title.replace(/\*\*/g, '').replace(/\//g, '').trim();
-        if (title.includes(' – ')) {
-            title = title.split(' – ').pop();
-        }
-        
-        if (!title.match(/[a-zA-Z0-9İıĞğÜüŞşÖöÇç]/)) {
-            title = `Bölüm ${count + 1}`;
-        }
-
-        count++;
-        const filename = `${String(count).padStart(2, '0')}.md`;
-        
-        const safeTitle = title.replace(/'/g, "''");
-        const frontmatter = `---
-title: '${safeTitle}'
+    // Add frontmatter
+    const bookTitle = file.replace('.docx', '');
+    const frontmatter = `---
+title: '${bookTitle.replace(/'/g, "''")}'
 book: '${bookName}'
-chapter: ${count}
 ---
 
 `;
-        fs.writeFileSync(path.join(bookOutputDir, filename), frontmatter + section, 'utf8');
-    });
+    fs.writeFileSync(finalOutputPath, frontmatter + content, 'utf8');
     
-    console.log(`Finished ${bookName}: ${count} chapters.`);
+    console.log(`Finished ${bookName}.`);
 });

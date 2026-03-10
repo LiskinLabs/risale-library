@@ -1,3 +1,8 @@
+---
+title: 'Fihrist (Sözler)'
+book: 'fihrist-sozler'
+---
+
 # **Fihrist (Sözler)**
 
 ## **Fihrist**
@@ -458,7 +463,7 @@ Teslim olmazsa da mülzem olur. Hususan âhirindeki “Remizli Nüktenin
 Sırrı” namıyla haşr-i ekberin esbab-ı mûcibesini ve hikmetlerini öyle
 bir tarzda beyan eder ki tılsım-ı kâinatın üç muammasından bir
 muammasını gayet parlak bir surette halleder.
-(Hâşiye[<u>\[1\]</u>](https://risaleinur.hizmetvakfi.org/fihrist-sozler/#_ftn1))
+(Hâşiye[<u>/[1/]</u>](https://risaleinur.hizmetvakfi.org/fihrist-sozler/#_ftn1))
 
 **OTUZUNCU SÖZ**:
 
@@ -591,9 +596,9 @@ KONFERANS:
 
 FİHRİST:
 
-\*\*\*
+/*/*/*
 
-[<u>\[1\]</u>](https://risaleinur.hizmetvakfi.org/fihrist-sozler/#_ftnref1)
+[<u>/[1/]</u>](https://risaleinur.hizmetvakfi.org/fihrist-sozler/#_ftnref1)
 **Hâşiye:** Yirmi Dokuzuncu Söz’ün göz ile görünen bir kerameti var.
 Ezcümle, on altı sahifesinde ihtiyarsız, tasannusuz her sahifenin
 satırlarının başlarında on altı elif gelmesidir. Bu tevafuku görmek

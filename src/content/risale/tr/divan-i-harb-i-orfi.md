@@ -1,3 +1,8 @@
+---
+title: 'DİVAN-I HARB-İ ÖRFÎ'
+book: 'divan-i-harb-i-orfi'
+---
+
 **Risale-i Nur Külliyatı’ndan**
 
 **İki Mekteb-i Musibetin Şehadetnamesi**
@@ -105,7 +110,7 @@ Bedîüzzaman’a zurefadan biri bir gün irfanıyla mütenasip bir esvab
 iktisaı lüzumundan bahseder. Müşarün-ileyh de: “Siz Avusturya’ya güya
 boykot yapıyorsunuz. Hem onun yolladığı kalpakları giyiyorsunuz. Ben ise
 bütün Avrupa’ya boykot yapıyorum
-(Hâşiye[\[1\]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftn1)),
+(Hâşiye[/[1/]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftn1)),
 onun için yalnız memleketimin maddî ve manevî mamulatını giyiyorum.”
 buyurmuştur.
 
@@ -123,7 +128,7 @@ Ahmed Ramiz
 
 (rahmetullahi aleyh)
 
-\*\*\*
+/*/*/*
 
 1327’de tabedilen
 
@@ -260,7 +265,7 @@ karışmayacağız. Zira hikmet-i hükûmeti bilmiyoruz.”
 
 İşte o hammalların, Avusturya’ya karşı –benim gibi bütün Avrupa’ya
 karşı–
-(\*[\[2\]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftn2))
+(/*[/[2/]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftn2))
 boykotları ve en müşevveş ve heyecanlı zamanlarda âkılane hareketlerinde
 bu nasihatin tesiri olmuştur.
 
@@ -557,7 +562,7 @@ Ben ki bir gedayım, bir büyük padişaha nasihat ettim, demek yarı cinayet
 ettim.
 
 Cinayetin öteki yarısını söylemek zamanı gelmedi.
-(Hâşiye[\[3\]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftn3))
+(Hâşiye[/[3/]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftn3))
 
 Yazık! Eyvahlar olsun! Saadetimiz olan meşrutiyet-i meşrua, bir menba-ı
 hayat-ı içtimaiyemiz ve İslâmiyet’e uygun olan maarif-i cedideye, millet
@@ -619,7 +624,7 @@ vurulsalar kaç tanesi sağlam çıkacaktır.
 
 Eğer meşrutiyet, bir fırkanın istibdadından ibaret ise ve hilaf-ı şeriat
 hareket ise <span dir="rtl">فَلْيَشْهَدِ الثَّقَلَانِ اَنّٖى مُرْتَجِع</span>ٌ
-(Hâşiye[\[4\]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftn4))
+(Hâşiye[/[4/]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftn4))
 Zira yalanlarla ittihat yalandır ve ifsadat üzerine müesses olan ism-i
 meşrutiyet fâsiddir. Müsemma-yı meşrutiyet; hak, sıdk, muhabbet ve
 imtiyazsızlık üzerine beka bulacaktır.
@@ -733,7 +738,7 @@ Ey paşalar, zabitler! Cinayetlerime ceza ve şimdi suallerime de cevap
 isterim. İslâmiyet ise insaniyet-i kübra ve şeriat ise medeniyet-i fuzla
 (en faziletli) olduğundan âlem-i İslâmiyet, medine-i fâzıla-i Eflatuniye
 olmaya sezadır.
-(Hâşiye[\[5\]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftn5))
+(Hâşiye[/[5/]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftn5))
 
 **Birinci Sual:** Gazetelerin aldatmalarıyla meşru bilerek, buradaki
 görenek ve âdete binaen cereyan-ı umumîye kapılan safdillerin cezası
@@ -810,7 +815,7 @@ mahkemesinden tarih celbnamesiyle celbolunsam, yine bu hakikatleri
 tevessü ve inbisat ile çatlayan bazı yerlerini yamalamakla beraber, taze
 olarak orada da göstereceğim.
 
-(Hâşiye[\[6\]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftn6))
+(Hâşiye[/[6/]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftn6))
 
 Demek, hakikat tahavvül etmez; hakikat haktır. <span dir="rtl">اَلْحَقُّ يَعْلُو
 وَلَا يُعْلٰى عَلَيْه</span>ِ
@@ -833,7 +838,7 @@ tenevvüü gibi bana geliyordu.
 
 Hem de geçen sene tımarhanede tahsil ettiğim dersi, şimdi bu mektepte
 itmam ettim.
-(Hâşiye[\[7\]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftn7))
+(Hâşiye[/[7/]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftn7))
 
 Musibet zamanının uzunluğundan uzun dersler gördüm. Dünyanın ruhanî
 lezzeti olan hüzn-ü masumane ve mazlumaneden, zayıfa şefkat ve gadre
@@ -913,7 +918,7 @@ Meşrutiyetin Bedîüzzamanı
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 ##### **HÂTİME**
 
@@ -1000,7 +1005,7 @@ cevherinden yapmalısınız.
 
 Bedîüzzaman Said Nursî
 
-\*\*\*
+/*/*/*
 
 ##### **Yaşasın Şeriat-ı Ahmedî (asm)**
 
@@ -1034,7 +1039,7 @@ Mesleğimiz ise ahlâk-ı Ahmediye aleyhissalâtü vesselâm ile tahalluk ve
 Sünnet-i Peygamberîyi ihya etmektir. Ve rehberimiz şeriat-ı garra ve
 kılıncımız da berahin-i kātıa ve maksadımız i’lâ-i kelimetullahtır.
 
-\*\*\*
+/*/*/*
 
 ##### **Hakikat**
 
@@ -1056,7 +1061,7 @@ Amma cihad-ı haricîyi şeriat-ı garranın berahin-i kātıasının elmas
 kılınçlarına havale edeceğiz. Zira medenilere galebe çalmak ikna iledir,
 söz anlamayan vahşiler gibi icbar ile değildir. Biz muhabbet
 fedaileriyiz, husumete vaktimiz yoktur. Cumhuriyet ki
-(Hâşiye[\[8\]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftn8))
+(Hâşiye[/[8/]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftn8))
 adalet ve meşveret ve kanunda inhisar-ı kuvvetten ibarettir. On üç asır
 evvel şeriat-ı garra teessüs ettiğinden, ahkâmda Avrupa’ya dilencilik
 etmek, din-i İslâm’a büyük bir cinayettir ve şimale müteveccihen namaz
@@ -1079,7 +1084,7 @@ için mütaliînin fikirlerine havale ediyorum.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 ##### **Sadâ-yı Hakikat**
 
@@ -1121,7 +1126,7 @@ etsin, cevaba hazırız.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 (Kırk beş sene evvel dinî ceridelerde neşredilen, Eski Said’in o dindar
 mebuslara hitaben bir makalesidir.)
@@ -1227,7 +1232,7 @@ Yaşasın Kur’an’ın kanun-u esasîleri!
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 ##### **Hürriyete Hitap**
 
@@ -1325,7 +1330,7 @@ ihtar ediyorum ki:
 
 Ey ebna-yı vatan! Hürriyeti sû-i tefsir etmeyiniz tâ elimizden kaçmasın.
 Ve müteaffin olan eski esareti başka kapta bize içirmekle bizi boğmasın.
-(Hâşiye[\[9\]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftn9))
+(Hâşiye[/[9/]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftn9))
 Zira hürriyet, müraat-ı ahkâm ve âdab-ı şeriat ve ahlâk-ı hasene ile
 tahakkuk ve neşv ü nema bulur. Sadr-ı evvelin yani sahabe-i kiramın o
 zamanda âlemde vahşet ve cebr-i istibdat hüküm-ferma olduğu halde,
@@ -1562,7 +1567,7 @@ dindar cemiyet-i Ahrar ve Nur talebeleri!
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 (Hâşiye): Medar-ı ibret ve hayrettir ki kırk üç sene evvel hürriyetin
 üçüncü gününde İstanbul’da hem sonra Selanik’te Meydan-ı Hürriyet’te
@@ -1578,36 +1583,36 @@ daha zalim olduklarını ispat eder.
 
 Said Nursî
 
-[\[1\]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftnref1)
+[/[1/]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftnref1)
 Hâşiye: Otuz sene cebir ve işkenceler altında sıkıştırıldığı halde,
 hiçbir defa Avrupa şapkasını başına koymadı.
 
-[\[2\]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftnref2)
-\* Bedîüzzaman’a zurefadan biri bir gün, irfanıyla mütenasip bir esvab
+[/[2/]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftnref2)
+/* Bedîüzzaman’a zurefadan biri bir gün, irfanıyla mütenasip bir esvab
 giymesi lüzumundan bahseder. Müşarün-ileyh de: “Siz, Avusturya’ya güya
 boykot yapıyorsunuz hem onun gönderdiği kalpakları giyiyorsunuz. Ben ise
 bütün Avrupa’ya boykot yapıyorum, onun için yalnız memleketimin maddî ve
 manevî mamulatını giyiyorum.” buyurmuştur.
 
-[\[3\]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftnref3)
+[/[3/]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftnref3)
 Hâşiye: O yarının zamanı; on beş sene sonra yirmi sekiz senedir
 müellifin sebeb-i hapsi olan, Siracünnur’un âhirindeki bahse bakınız.
 Tam o yarı cinayeti bileceksiniz.
 
-[\[4\]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftnref4)
+[/[4/]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftnref4)
 Hâşiye: Yani bütün dünya, cin ve ins şahit olsun ki ben mürteciyim.
 
-[\[5\]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftnref5)
+[/[5/]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftnref5)
 Hâşiye: Bu sualler, kırk elli masum mahpusun tahliyesine sebep oldu.
 
-[\[6\]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftnref6)
+[/[6/]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftnref6)
 Hâşiye: Şimdi Üstad Bedîüzzaman bu kırk beş senedeki dehşetli
 mahkemelerinde aynen bu on bir buçuk cinayetlerini ve on bir buçuk
 suallerini o Divan-ı Harb-i Örfîdeki gibi tekrar etmiştir ve etmektedir.
 
 Nur talebeleri namına Hüsrev
 
-[\[7\]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftnref7)
+[/[7/]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftnref7)
 Hâşiye: Üstad Bedîüzzaman Said Nursî Hazretleri kırk beş sene evvel
 tımarhane hükmündeki mahkeme-i zalimanede aldıkları dersi, şimdi bu
 gaddarane hazır mektepte imtihan vermişler ve böylece iki şehadetname
@@ -1615,9 +1620,9 @@ almışlardır.
 
 Nazif, Hüsrev
 
-[\[8\]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftnref8)
+[/[8/]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftnref8)
 Hâşiye: O zaman meşrutiyet, şimdi o kelime yerine cumhuriyet konulmuş.
 
-[\[9\]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftnref9)
+[/[9/]](https://risaleinur.hizmetvakfi.org/divan-i-harb-i-orfi/#_ftnref9)
 Hâşiye: Evet, daha dehşetli bir istibdat ile pek acı ve zehirli bir
 esareti bize içirdiler.

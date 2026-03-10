@@ -1,3 +1,8 @@
+---
+title: 'NUR ÇEŞMESİ'
+book: 'nur-cesmesi'
+---
+
 **Risale-i Nur Külliyatı’ndan**
 
 **Asâ-yı Musa’dan akan bir**
@@ -21,7 +26,7 @@ anlayabilir ve vehim ve vesveseleri bırakmaz.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 ### **Altıncı Mesele**
 
@@ -185,7 +190,7 @@ eder.
 <span dir="rtl">سُبْحَانَكَ لَا عِلْمَ لَنَٓا اِلَّا مَا عَلَّمْتَنَٓا اِنَّكَ اَنْتَ الْعَلٖيمُ
 الْحَكٖيم</span>ُ
 
-\*\*\*
+/*/*/*
 
 ### **Yedinci Mesele**
 
@@ -329,7 +334,7 @@ eden bir kudret, Muhammed ve Musa aleyhimessalâtü vesselâmların her
 birinin ümmetinin geçirdiği bin senelik zaman, karşı karşıya hayalen
 getirilip bakılsa haşrin ve neşrin bin misalini ve bin delilini iki bin
 baharda
-(\*[\[1\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn1))
+(/*[/[1/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn1))
 gösterdiği görülecek. Ve böyle bir kudretten haşr-i cismanîyi uzak
 görmek, bin derece körlük ve akılsızlıktır.
 
@@ -696,7 +701,7 @@ dahi delâlet ve şehadet ederler.
 
 İşte bak, bu rükn-ü imanî ne kadar kuvvetli ve kat’î olduğunu gör.
 
-\*\*\*
+/*/*/*
 
 ### **Sekizinci Meselenin Bir Hülâsası**
 
@@ -939,7 +944,7 @@ içtimaiyyun ve ahlâkiyyunların kulakları çınlasın!
 numunelerine sairleri kıyas edilse kat’î anlaşılır ki **iki cihanın ve
 iki hayatın medar-ı saadeti yalnız imandır.**
 
-\*\*\*
+/*/*/*
 
 #### **Münâcat Risalesi**
 
@@ -1007,7 +1012,7 @@ Ben dahi onların bütün tesbihatıyla, seni takdis ederim ey şiddet-i
 zuhurundan gizlenmiş ve ey azamet-i kibriyasından ihtifa etmiş olan
 Kadîr-i Zülcelal!
 
-\*
+/*
 
 Ey Kādir-i Mutlak!
 
@@ -1077,7 +1082,7 @@ gayet süratli ve âni emirlere ve çabuk ve acele kumandalara itaat
 ettiren âmir ve hâkimlerini takdis ederek, rahmetini medh ü sena
 ederler.
 
-\*
+/*
 
 Ey arz ve semavatın Hâlık-ı Zülcelali!
 
@@ -1170,7 +1175,7 @@ etmiş olan Zat-ı Akdes!
 Zeminin bütün takdisat ve tesbihatıyla seni kusurdan, aczden, şerikten
 takdis ve bütün tahmidat ve senalarıyla sana hamd ve şükrederim.
 
-\*
+/*
 
 Ey Rabbü’l-berri ve’l-bahr!
 
@@ -1230,7 +1235,7 @@ kudretin ile ve senin irade ve tedbirin ile senin mülkünde, senin emrine
 musahhardırlar. Ve lisan-ı halleriyle Hâlık’ını takdis edip “Allahu
 ekber” derler.
 
-\*
+/*
 
 Ey dağları zemin sefinesine hazineli direkler yapan Kadîr-i Zülcelal!
 
@@ -1294,7 +1299,7 @@ Dağlar ve içindeki mahluklar senin mülkünde ve senin kuvvet ve
 kudretinle ve ilim ve hikmetinle musahhar ve müddehardırlar. Onları bu
 tarzda tavzif ve teshir eden Hâlık’ını takdis ve tesbih ederler.
 
-\*
+/*
 
 Ey Hâlık-ı Rahman! Ve ey Rabb-i Rahîm!
 
@@ -1374,7 +1379,7 @@ Bütün eşcar ve nebatatın, bütün yaprak ve çiçek ve meyvelerinin
 dilleriyle ve adediyle; seni kusurdan, aczden, şerikten takdis ederek
 hamd ü sena ederim.
 
-\*
+/*
 
 Ey Fâtır-ı Kadîr! Ey Müdebbir-i Hakîm! Ey Mürebbi-i Rahîm!
 
@@ -1489,7 +1494,7 @@ perdelenmiş olan Zat-ı Akdes!
 Bütün zîruhların tesbihatıyla, seni takdis etmek niyet edip
 <span dir="rtl">سُبْحَانَكَ يَا مَنْ جَعَلَ مِنَ الْمَاءِ كُلَّ شَىْءٍ حَى</span>ٍّ diyorum.
 
-\*
+/*
 
 Yâ Rabbe’l-âlemîn! Yâ İlahe’l-evvelîne ve’l-âhirîn! Yâ Rabbe’s-semavati
 ve’l-aradîn!
@@ -1637,7 +1642,7 @@ Cevşenü’l-Kebir’i şefaatçi ederek rahmetinden affımı niyaz ediyorum.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 #### **On Birinci Hüccet-i İmaniye**
 
@@ -1706,10 +1711,10 @@ onun memurlarıdır.”
 
 Gel, her tarafa bak, her şeye dikkat et! Bütün bu işler içinde gizli bir
 el işliyor. Çünkü bak, bir dirhem
-(Hâşiye[\[2\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn2))
+(Hâşiye[/[2/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn2))
 kadar kuvveti olmayan bir çekirdek küçüklüğünde bir şey, binler batman
 yükü kaldırıyor. Zerre kadar şuuru olmayan,
-(Hâşiye[\[3\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn3))
+(Hâşiye[/[3/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn3))
 gayet hakîmane işler görüyor. Demek, bunlar kendi kendilerine
 işlemiyorlar. Onları işlettiren gizli bir kudret sahibi vardır. Eğer
 kendi başına olsa bütün baştan başa bu gördüğümüz memlekette her iş
@@ -1722,13 +1727,13 @@ Gel, bütün bu ovaları, bu meydanları, bu menzilleri süslendiren şeyler
 üstüne dikkat et! Her birisinde o gizli zattan haber veren işler var.
 Âdeta her biri birer turra, birer sikke gibi o gaybî zattan haber
 veriyorlar. İşte gözünün önünde, bak; bir dirhem pamuktan
-(Hâşiye[\[4\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn4))
+(Hâşiye[/[4/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn4))
 ne yapıyor. Bak, kaç top çuha ve patiska ve çiçekli kumaş çıktı. Bak,
 ondan ne kadar şekerlemeler, yuvarlak tatlı köfteler yapılıyor ki bizim
 gibi binler adam giyse ve yese kâfi gelir. Hem de bak, bu demiri,
 toprağı, suyu, kömürü, bakırı, gümüşü, altını gaybî avucuna aldı, bir et
 parçası
-(Hâşiye[\[5\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn5))
+(Hâşiye[/[5/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn5))
 yaptı; bak, gör. İşte ey akılsız adam! Bu işler öyle bir zata mahsustur
 ki bütün bu memleket, bütün eczasıyla onun mu’cize-i kuvveti altında
 duruyor, her arzusuna râm oluyor.
@@ -1736,7 +1741,7 @@ duruyor, her arzusuna râm oluyor.
 #### **Üçüncü Bürhan**
 
 Gel, bu müteharrik antika
-(Hâşiye[\[6\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn6))
+(Hâşiye[/[6/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn6))
 sanatlarına bak! Her birisi öyle bir tarzda yapılmış, âdeta bu koca
 sarayın bir küçük nüshasıdır. Bütün bu sarayda ne varsa o küçücük
 müteharrik makinelerde bulunuyor. Hiç mümkün müdür ki bu sarayın
@@ -1756,11 +1761,11 @@ memlekette bütün bu işler, bu şeyler değişti, değişiyor, bir halette
 durmuyor. Dikkat et ki bu gördüğümüz camid cisimler, hissiz kutular
 birer hâkim-i mutlak suretini aldılar. Âdeta her bir şey, bütün eşyaya
 hükmediyor. İşte bu yanımızdaki bu makineye bak,
-(Hâşiye[\[7\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn7))
+(Hâşiye[/[7/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn7))
 güya emrediyor. İşte onun tezyinatına ve işlemesine lâzım levazımat ve
 maddeler, uzak yerlerden koşup geliyorlar. İşte oraya bak, o şuursuz
 cisim
-(Hâşiye[\[8\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn8))
+(Hâşiye[/[8/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn8))
 güya bir işaret ediyor, en büyük bir cismi kendine hizmetkâr ediyor,
 kendi işlerinde çalıştırıyor. Daha başka şeyleri bunlara kıyas et. Âdeta
 her bir şey, bütün bu âlemdeki hilkatleri musahhar ediyor.
@@ -1789,7 +1794,7 @@ vakit ya bu memleketin her bir taşı, her bir otu, öyle mu’ciz-nüma
 nakkaş, öyle bir hârikulâde kâtip olması lâzım gelir ki bir harfte bin
 kitabı yazabilsin, bir nakışta milyonlar sanatı dercedebilsin. Çünkü bak
 bu taşlardaki nakşa,
-(Hâşiye[\[9\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn9))
+(Hâşiye[/[9/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn9))
 her birisinde bütün sarayın nakışları var, bütün şehrin tanzimat
 kanunları var, bütün memleketin teşkilat programları var. Demek, bu
 nakışları yapmak, bütün memleketi yapmak kadar hârikadır. Öyle ise her
@@ -1804,7 +1809,7 @@ nakşıyla bilinmesin?
 #### **Altıncı Bürhan**
 
 Gel, bu geniş ovaya çıkacağız
-(Hâşiye[\[10\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn10)).
+(Hâşiye[/[10/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn10)).
 İşte o ova içinde yüksek bir dağ var. Üstüne çıkacağız, tâ bütün etrafı
 görülsün. Hem her şeyi yakınlaştıracak güzel dürbünleri de beraber
 alacağız. Çünkü bu acib memlekette, acib işler oluyor. Her saatte hiç
@@ -1847,19 +1852,19 @@ külliyesini gözetip ona göre tevfik-i hareket ediyor. Birbirinden en
 uzak şeyler, birbirinin imdadına koşuyor.
 
 İşte bak, gaibden acib bir kafile
-(Hâşiye[\[11\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn11))
+(Hâşiye[/[11/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn11))
 çıkıp geliyor. Merkepleri ağaçlara, nebatlara, dağlara benzerler.
 Başlarında birer tabla-yı erzak taşıyorlar. İşte bak, bu tarafta
 bekleyen muhtelif hayvanatın erzaklarını getiriyorlar. Hem de bak, bu
 kubbede o azîm elektrik lambası
-(Hâşiye[\[12\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn12))
+(Hâşiye[/[12/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn12))
 onlara ışık verdiği gibi bütün taamlarını öyle güzel pişiriyor; yalnız,
 pişirilecek taamlar bir dest-i gaybî tarafından birer ipe takılıp
-(Hâşiye[\[13\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn13))
+(Hâşiye[/[13/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn13))
 ona karşı tutuluyor. Bu tarafa da bak, bu bîçare zayıf, nahif, kuvvetsiz
 hayvancıklar; nasıl onların başı önünde, latîf gıda ile dolu iki
 tulumbacık
-(Hâşiye[\[14\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn14))
+(Hâşiye[/[14/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn14))
 takılmış, iki çeşme gibi yalnız o kuvvetsiz mahluk, onu ağzına
 yapıştırması kâfidir.
 
@@ -1888,7 +1893,7 @@ aklını başına al, beni dinle!
 
 İşte bak, şu saray içinde bulunan ve memleketi ihata eden yeknesak
 unsurlar, madenler var
-(Hâşiye[\[15\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn15)).
+(Hâşiye[/[15/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn15)).
 Âdeta memleketten çıkan her şey, o maddelerden yapılıyor. Demek, o
 maddeler kimin mülkü ise bütün ondan yapılan şeyler de onundur. Tarla
 kimin ise mahsulat da onundur. Deniz kimin ise içindekiler de onundur.
@@ -1935,7 +1940,7 @@ sâni’i de bir olmak lâzım gelir.
 
 Bununla beraber sen buna dikkat et ki bir perde-i gaybdan kalınca bir ip
 çıkıyor.
-(Hâşiye[\[16\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn16)).
+(Hâşiye[/[16/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn16)).
 Bak, sonra binler ipler ondan uzanmış. Her bir ipin başına bak, birer
 elmas, birer nişan, birer ihsan, birer hediye takılmış. Herkese göre
 birer hediye veriyor. Acaba bilir misin ki böyle garib bir gayb
@@ -1966,7 +1971,7 @@ müşkülatlı olur. Çünkü her şey, bu saray kadar sanatlıdır. O vakit ne
 ucuzluk ve ne de mebzuliyet kalır. Belki bu gördüğümüz şeylerin birisi,
 değil elimize, hiç kimsenin eline geçmezdi. Sen, yalnız şu ipe takılan
 tatlı konserve kutusuna bak
-(Hâşiye[\[17\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn17)).
+(Hâşiye[/[17/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn17)).
 Eğer onun gizli matbaha-i mu’ciz-nümasından çıkmasa idi, şimdi kırk para
 ile aldığımız halde, yüz liraya alamazdık.
 
@@ -1993,7 +1998,7 @@ verilse birisi elde edilemez.
 #### **Onuncu Bürhan**
 
 Gel, ey bir parça insafa gelmiş arkadaş! On beş gündür
-(Hâşiye[\[18\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn18))
+(Hâşiye[/[18/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn18))
 biz buradayız. Eğer şu âlemin nizamlarını bilmezsek, padişahını
 tanımazsak cezaya müstahak oluruz. Özrümüz kalmadı. Zira on beş gün güya
 bize mühlet verilmiş gibi bize ilişmiyorlar. Elbette biz başıboş
@@ -2008,7 +2013,7 @@ ediyor. İşte bak, vakit be-vakit bir kabı doldurup boşaltmak gibi; şu
 sarayı, şu memleketi, şu şehri kemal-i intizamla doldurup kemal-i
 hikmetle boşalttırıyor. Bir sofrayı kaldırıp indirmek gibi koca
 memleketi baştan başa, çeşit çeşit sofralar
-(Hâşiye[\[19\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn19))
+(Hâşiye[/[19/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn19))
 bir dest-i gaybî tarafından kaldırır, indirir tarzında mütenevvi
 yemekleri sıra ile getirip yedirir. Onu kaldırıp başkasını getirir. Sen
 de görüyorsun ve aklın varsa anlarsın ki o dehşetli haşmet içinde hadsiz
@@ -2032,7 +2037,7 @@ bir tek zatın cilveleridir, nakışlarıdır, âyineleridir, sanatlarıdır.
 
 Gel, ey arkadaş! Şimdi sana geçmiş olan on bürhan kuvvetinde kat’î bir
 bürhan daha göstereceğim. Gel, bir gemiye bineceğiz;
-(Hâşiye[\[20\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn20))
+(Hâşiye[/[20/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn20))
 şu uzakta bir cezire var, oraya gideceğiz. Çünkü bu tılsımlı âlemin
 anahtarları orada olacak. Hem herkes o cezireye bakıyor, oradan bir
 şeyler bekliyor, oradan emirler alıyorlar.
@@ -2043,7 +2048,7 @@ görünüyor. İyi dikkat et. Bu cemiyet-i azîmenin bir reisi var. Gel daha
 yakın gideceğiz. O reisi tanımalıyız.
 
 İşte bak, ne kadar parlak ve binden
-(Hâşiye[\[21\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn21))
+(Hâşiye[/[21/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn21))
 ziyade nişanları var. Ne kadar kuvvetli söylüyor. Ne kadar tatlı bir
 sohbet ediyor. Şu on beş gün zarfında, bunların dediklerini ben bir
 parça öğrendim. Sen de benden öğren. Bak o zat, şu memleketin
@@ -2058,7 +2063,7 @@ emirlerini dinliyorlar ki yerlerinden kımıldanıyorlar. Şu ağaçlar,
 işaret ettiği yere gidiyorlar. Nerede istese su çıkarıyor. Hattâ
 parmağını da bir âb-ı kevser memesi gibi yapar, ondan âb-ı hayat
 içiriyor. Bak, şu sarayın kubbe-i âlîsinde mühim lamba,
-(Hâşiye[\[22\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn22))
+(Hâşiye[/[22/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn22))
 onun işaretiyle, bir iken ikileşiyor.
 
 Demek, bu memleket bütün mevcudatıyla onun memuriyetini tanıyor. Onu, o
@@ -2070,7 +2075,7 @@ olduğunu biliyorlar gibi onu dinleyip itaat ediyorlar.
 olanlar: “Evet, evet doğrudur.” derler, tasdik ederler. Belki şu
 memlekette dağlar, ağaçlar, bütün memleketleri ışıklandıran büyük nur
 lambası,
-(Hâşiye[\[23\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn23))
+(Hâşiye[/[23/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn23))
 onun işaret ve emirlerine baş eğmesiyle, “Evet, evet her dediğin
 doğrudur.” derler.
 
@@ -2090,7 +2095,7 @@ Gel, ey bir parça aklı başına gelen birader! Bütün on bir bürhan
 kuvvetinde bir bürhan daha göstereceğim. İşte bak, yukarıdan inen ve
 herkes ona hayretinden veya hürmetinden kemal-i dikkatle bakan, şu
 nurani fermana
-(Hâşiye[\[24\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn24))
+(Hâşiye[/[24/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn24))
 bak. O bin nişanlı zat, onun yanına durmuş, o fermanın mealini umuma
 beyan ediyor.
 
@@ -2126,7 +2131,7 @@ hikâye-i temsiliye tamam oldu. Fazl-ı Rahman, feyz-i Kur’an, nur-u iman
 sayesinde tevhid-i hakikinin güneşinden, hikâye-i temsiliyedeki on iki
 bürhana mukabil, on iki lem’a ile bir mukaddimeyi göstereceğiz.
 
-\*\*\*
+/*/*/*
 
 #### **Üçüncü Hüccet-i İmaniye**
 
@@ -2148,7 +2153,7 @@ feylesoflar kabul etmişler, o yolda gidiyorlar, hatıra geliyor.
 Evet onlar, mesleklerinin içyüzünü görememişler. Hem hakikat-i
 meslekleri ve mesleklerinin lâzımı ve muktezası odur ki yazılmış her bir
 muhalin ucunda beyan edilen o çirkin ve müstekreh ve gayr-ı makul
-(Hâşiye[\[25\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn25))
+(Hâşiye[/[25/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn25))
 hülâsa-i mezhepleri, mesleklerinin lâzımı ve zarurî muktezası olduğunu
 gayet bedihî ve kat’î bürhanlarla şüphesi olanlara tafsilen beyan ve
 ispat etmeye hazırım.
@@ -2486,7 +2491,7 @@ Nasıl ki karınca, o memuriyet cihetiyle Firavun’un sarayını harap
 ediyor. Ve sinek, o intisap ile Nemrut’u gebertiyor. Ve o intisap ile
 buğday tanesi gibi bir çam çekirdeği, koca çam ağacının bütün cihazatını
 yetiştiriyor.
-(Hâşiye[\[26\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn26))
+(Hâşiye[/[26/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn26))
 
 Eğer o intisap kesilse, o memuriyetten terhis edilse yapacağı işlerin
 cihazatını ve kuvvetini, belinde ve bileğinde taşımaya mecburdur. O
@@ -2731,7 +2736,7 @@ O diyor: Elhamdülillah, bu iki şüphem hallolmakla beraber, vahdaniyet-i
 lâyık olmadığına o kadar parlak ve kuvvetli iki delil gösterdin ki
 onları inkâr etmek, güneşi ve gündüzü inkâr etmek gibi bir mükâberedir.
 
-\*\*\*
+/*/*/*
 
 #### **Otuz İkinci Söz’ün Birinci Mevkıfı**
 
@@ -2764,7 +2769,7 @@ O zerre dahi hakikat lisanıyla ve hikmet-i Rabbanî diliyle der ki: “Ben
 hadsiz vazifeleri görüyorum. Ayrı ayrı her masnua girip işliyorum. Bütün
 o vezaifi bana gördürecek, sende ilim ve kudret varsa hem benim gibi
 hadd ü hesaba gelmeyen zerrat içinde beraber gezip
-(Hâşiye[\[27\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn27))
+(Hâşiye[/[27/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn27))
 iş görüyoruz. Eğer bütün emsalim o zerreleri de istihdam edip emir
 tahtına alacak bir hüküm ve iktidar sende varsa hem kemal-i intizam ile
 cüz olduğum mevcudlara, mesela kandaki küreyvat-ı hamraya hakiki mâlik
@@ -2825,7 +2830,7 @@ getiriyorlar. Küreyvat-ı beyza da bana hücum eden hastalıklara mukabele
 ediyorlar. İşim var, beni meşgul etme. Hem senin gibi âciz, camid,
 sağır, kör bir şey, bize hiçbir cihetle karışamaz. Çünkü bizde o derece
 ince ve nazik ve mükemmel bir intizam
-(Hâşiye[\[28\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn28))
+(Hâşiye[/[28/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn28))
 var ki eğer bize hükmeden bir Hakîm-i Mutlak ve Kadîr-i Mutlak ve Alîm-i
 Mutlak olmazsa intizamımız bozulur, nizamımız karışır.”
 
@@ -2896,7 +2901,7 @@ lisanıyla ve felsefe diliyle der ki: “Sende tasarruf edebilirim ve sana
 mâlikim veya sende hissem var.” diye dava eder.
 
 O vakit o gömlek
-(Hâşiye[\[29\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn29))
+(Hâşiye[/[29/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn29))
 o haliçe, hak ve hakikat namına, lisan-ı hikmetle o müddeîye der ki:
 “Eğer seneler, karnlar adedince yere giydirilip sonra intizam ile
 çıkarılıp geçmiş zamanın ipine asılan ve yeniden gelecek zamanlarda
@@ -2919,7 +2924,7 @@ olmayan bize sahip olamaz ve müdahale edemez.”
 
 Sonra o müddeî gider. “Belki küre-i arzı kandırıp orada bir yer
 bulurum.” der. Gider, küre-i arza
-(Hâşiye[\[30\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn30))
+(Hâşiye[/[30/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn30))
 yine esbab namına ve tabiat lisanıyla der ki: “Böyle serseri
 gezdiğinden, sahipsiz olduğunu gösteriyorsun. Öyle ise sen benim
 olabilirsin.”
@@ -2930,7 +2935,7 @@ olabilirim? Benim elbisemi ve elbisemin içindeki en küçük bir noktayı,
 bir ipi intizamsız bulmuş musun ve hikmetsiz ve sanatsız görmüş müsün ki
 bana sahipsiz, serseri dersin. Eğer hareket-i seneviyem ile takriben
 yirmi beş bin senelik
-(Hâşiye[\[31\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn31))
+(Hâşiye[/[31/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn31))
 bir mesafede, bir senede gezdiğim ve kemal-i mizan ve hikmetle vazife-i
 hizmetimi gördüğüm o daire-i azîmeye hakiki mâlik olabilirsen ve
 kardeşlerim ve benim gibi vazifedar olan on seyyareye ve gezdikleri
@@ -2995,7 +3000,7 @@ ve melaikelerin birer menzili, birer tayyaresi, birer mescidi ve
 avâlim-i ulviyenin birer lambası, birer güneşi ve saltanat-ı rububiyetin
 birer şahidi ve feza-yı âlemin birer ziyneti, birer kasrı, birer çiçeği
 ve sema denizinin birer nurani balığı ve gökyüzünün birer güzel gözü
-(Hâşiye[\[32\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn32))
+(Hâşiye[/[32/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn32))
 olduğumuz gibi heyet-i mecmuamızda sükûnet içinde bir sükût ve hikmet
 içinde bir hareket ve haşmet içinde bir ziynet ve intizam içinde bir
 hüsn-ü hilkat ve mevzuniyet içinde bir kemal-i sanat bulunduğundan
@@ -3006,7 +3011,7 @@ hizmetkârları, karmakarışıklık ve intizamsızlık ve vazifesizlik hattâ
 sahipsizlik ile ittiham ettiğinden tokada müstahaksın.” der. O müddeînin
 yüzüne recm-i şeytan gibi bir yıldız öyle bir tokat vurur ki
 yıldızlardan tâ cehennemin dibine onu atar. Ve beraberinde olan tabiatı
-(Hâşiye[\[33\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn33))
+(Hâşiye[/[33/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn33))
 evham derelerine ve tesadüfü adem kuyusuna ve şerikleri, imtina ve
 muhaliyet zulümatına ve din aleyhindeki felsefeyi, esfel-i safilînin
 dibine atar. Bütün yıldızlarla beraber o yıldız <span dir="rtl">لَوْ كَانَ
@@ -3020,7 +3025,7 @@ kadar şerike yer yoktur ki parmak karıştırsın.” diye ilan ederler.
 <span dir="rtl">اَللّٰهُمَّ صَلِّ وَ سَلِّمْ عَلٰى سَيِّدِنَا مُحَمَّدٍ سِرَاجِ وَحْدَتِكَ فٖى كَثْرَةِ
 مَخْلُوقَاتِكَ وَ دَلَّالِ وَحْدَانِيَّتِكَ فٖى مَشْهَرِ كَائِنَاتِكَ وَ عَلٰى اٰلِهٖ وَ صَحْبِهٖ اَجْمَعٖين</span>َ
 
-\*\*\*
+/*/*/*
 
 (Pencereler Risalesi’nden)
 
@@ -3102,7 +3107,7 @@ Hayatta hissiyat suretinde kaynayan memzuç nakışlar, pek çok esma ve
 tanımayanlara ve daha tam tasdik etmeyenlere karşı zamanı olmadığından
 kapıyı kapıyoruz.
 
-\*\*\*
+/*/*/*
 
 Hayat, kudret-i Rabbaniye mu’cizatının en nuranisidir, en güzelidir. Ve
 vahdaniyet bürhanlarının en kuvvetlisi ve en parlağıdır. Ve tecelliyat-ı
@@ -3151,7 +3156,7 @@ adam, zeminin yüzünü belki mazi ve müstakbeli dolduran zîhayatların
 vücudunu inkâr etmeli ve yüz derece hayvandan aşağı düşmeli. Hayat
 mertebesinden düşüp camid bir cahil-i echel olmalı.
 
-\*\*\*
+/*/*/*
 
 (Otuzuncu Lem’a’nın Beşinci Nüktesi’nden bazı parçalar)
 
@@ -3506,7 +3511,7 @@ dahi manen hayattar bir vücud-u manevîleri ve ruhlu birer sübut-u
 ilmîleri vardır ki levh-i kaza ve kader vasıtasıyla o manevî hayatın
 eseri, mukadderat namıyla görünür, tezahür eder.
 
-\*\*\*
+/*/*/*
 
 ##### **(Yirmi İkinci Söz’ün İkinci Makamı’ndan)**
 
@@ -3661,7 +3666,7 @@ işaret parmaklarıyla o esmayı gösterir, müsemmasına şehadet eder.
 Demek, hem kendini hem bütün kâinatı inkâr eden safsatacı gibi bir
 ahmak, yine Sâni’-i Zülcelal’in inkârına gitmemek gerektir.
 
-\*\*\*
+/*/*/*
 
 ##### **Risale-i Nur’un şimdi vuku bulan bir inkâra kırk sene evvel verdiği kat’î cevap**
 
@@ -3874,7 +3879,7 @@ iman ve İslâmiyet’in kanatlarıyla çıkılabilir.
 <span dir="rtl">اَللّٰهُمَّ يَا رَبَّ السَّمٰوَاتِ وَ الْاَرْضِ زَيِّنْ قُلُوبَ كَاتِبِ هٰذِهِ الرِّسَالَةِ وَ
 رُفَقَائِهٖ بِنُجُومِ حَقَائِقِ الْقُرْاٰنِ وَ الْاٖيمَانِ اٰمٖين</span>َ
 
-\*\*\*
+/*/*/*
 
 <span dir="rtl">بِاسْمِهٖ سُبْحَانَه</span>ُ
 
@@ -4013,7 +4018,7 @@ Mu’cizü’l-Beyan’ın işarat ve rumuzundan anlaşıldığı gibi rahmet-i
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 372 senesi Şevval’in 13. Perşembe günü Üstadımız Samsun Mahkemesi
 münasebetiyle İstanbul Mahkemesinde mahkemenin suallerine aynen bu
@@ -4034,7 +4039,7 @@ Nur talebeleri namına
 
 Zübeyr
 
-\*\*\*
+/*/*/*
 
 (Büyük Cihad gazetesinin 20.6.1952 tarih 67 no’lu nüshasında
 neşredilmiştir.)
@@ -4140,7 +4145,7 @@ Ben değil dünyevî hayatı, lüzum olsa âhiret hayatımı da millet-i
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 ##### **Urfa kahramancıklarının oranın savcılarını susturan müdafaalarıdır**
 
@@ -4357,7 +4362,7 @@ Kadıoğlu Camii mevkiinde mukim
 
 Abdullah Yeğin
 
-\*\*\*
+/*/*/*
 
 Asliye Ceza Mahkemesi Yüksek Makamına
 
@@ -4504,7 +4509,7 @@ derimizi kâğıt ve kanımızı mürekkep yapıp yine Risale-i Nur’u yazacağ
 Heyet-i hâkime bilsinler ki: Halife-i rûy-i zemin Hazret-i Ömer (ra)
 hilafeti zamanında âdi bir Hristiyan ile birlikte mahkemede muhakeme
 oldular
-(\*[\[34\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn34)).
+(/*[/[34/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftn34)).
 Halbuki o Hristiyan, İslâm hükûmetinin mukaddes rejimlerine, dinlerine,
 kanunlarına muhalif iken mahkemede onun o hali nazara alınmaması açıkça
 gösterir ki: Adalet hiçbir cereyana kapılmaz, hiçbir tarafgirlik
@@ -4539,7 +4544,7 @@ Urfa, Yusufpaşa Mahallesinde
 
 Hüsnü Bayram
 
-\*\*\*
+/*/*/*
 
 ##### **Bir Zeyl**
 
@@ -4584,7 +4589,7 @@ ispat ettiği için kısa kesiyoruz.
 
 Said Nursî
 
-\*\*\*
+/*/*/*
 
 ##### **Zeyl**
 
@@ -4885,19 +4890,19 @@ Kur’an’ı Tasdik Eden Feylesoflar Münasebetiyle Bir Sual ve Cevap 227
 
 Avrupa Feylesoflarının Kur’an-ı Kerîm Hakkındaki Beyanatları 229
 
-[\[1\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref1) \*
+[/[1/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref1) /*
 Sâbık her bir bahar; kıyameti kopmuş, ölmüş ve karşısındaki bahar, onun
 haşri hükmündedir.
 
-[\[2\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref2)
+[/[2/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref2)
 Hâşiye: Ağaçları başlarında taşıyan çekirdeklere işarettir.
 
-[\[3\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref3)
+[/[3/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref3)
 Hâşiye: Kendi kendine yükselmeyen ve meyvelerin sıkletine dayanmayan
 üzüm çubukları gibi nâzenin nebatatın başka ağaçlara latîf eller atıp
 sarmalarına ve onlara yüklenmelerine işarettir.
 
-[\[4\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref4)
+[/[4/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref4)
 Hâşiye: Tohuma işarettir. Mesela, zerre gibi bir afyon büzrü, bir dirhem
 gibi bir zerdali nüvatı, bir kavun çekirdeği, nasıl çuhadan daha güzel
 dokunmuş yapraklar, patiskadan daha beyaz ve sarı çiçekler, şekerlemeden
@@ -4905,82 +4910,82 @@ daha tatlı ve köftelerden ve konserve kutularından daha latîf daha leziz
 daha şirin meyveleri hazine-i rahmetten getiriyorlar, bize takdim
 ediyorlar.
 
-[\[5\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref5)
+[/[5/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref5)
 Hâşiye: Unsurlardan cism-i hayvanîyi halk ve nutfeden zîhayatı icad
 etmeye işarettir.
 
-[\[6\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref6)
+[/[6/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref6)
 Hâşiye: Hayvanlara ve insanlara işarettir. Zira hayvan, şu âlemin küçük
 bir fihristesi ve mahiyet-i insaniye, şu kâinatın bir misal-i musağğarı
 olduğundan âdeta âlemde ne varsa insanda numunesi vardır.
 
-[\[7\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref7)
+[/[7/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref7)
 Hâşiye: Makine, meyvedar ağaçlara işarettir. Çünkü yüzer tezgâhları,
 fabrikaları incecik dallarında taşıyor gibi hayret-nüma yaprakları,
 çiçekleri, meyveleri dokuyor, süslendiriyor, pişiriyor, bizlere
 uzatıyor. Halbuki çam ve katran gibi muhteşem ağaçlar, kuru bir taşta
 tezgâhını atmış, çalışıp duruyorlar.
 
-[\[8\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref8)
+[/[8/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref8)
 Hâşiye: Hububata, tohumlara, sineklerin tohumcuklarına işarettir.
 Mesela, bir sinek bir kara ağacın yaprağında yumurtasını bırakır. Birden
 o koca kara ağaç, yapraklarını o yumurtalara bir rahm-ı mader, bir
 beşik, bal gibi bir gıda ile dolu bir mahzene çeviriyor. Âdeta o
 meyvesiz ağaç, o surette zîruh meyveler veriyor.
 
-[\[9\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref9)
+[/[9/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref9)
 Hâşiye: Şecere-i hilkatin meyvesi olan insana ve kendi ağacının
 programını ve fihristesini taşıyan meyveye işarettir. Zira kalem-i
 kudret, âlemin kitab-ı kebirinde ne yazmış ise icmalini mahiyet-i
 insaniyede yazmıştır. Kalem-i kader, dağ gibi bir ağaçta ne yazmış ise
 tırnak gibi meyvesinde dahi dercetmiştir.
 
-[\[10\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref10)
+[/[10/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref10)
 Hâşiye: Bahar ve yaz mevsiminde zeminin yüzüne işarettir. Zira yüz
 binler muhtelif mahlukatın taifeleri, birbiri içinde beraber icad
 edilir, rûy-i zeminde yazılır. Galatsız, kusursuz, kemal-i intizamla
 değiştirilir. Binler sofra-i Rahman açılır, kaldırılır, taze taze gelir.
 Her bir ağaç birer tablacı, her bir bostan birer kazan hükmüne geçer.
 
-[\[11\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref11)
+[/[11/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref11)
 Hâşiye: Umum hayvanatın erzakını taşıyan, nebatat ve eşcar
 kafileleridir.
 
-[\[12\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref12)
+[/[12/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref12)
 Hâşiye: O azîm elektrik lambası, Güneşe işarettir.
 
-[\[13\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref13)
+[/[13/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref13)
 Hâşiye: İp ve ipe takılan taam ise ağacın ince dalları ve leziz
 meyveleridir.
 
-[\[14\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref14)
+[/[14/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref14)
 Hâşiye: İki tulumbacık ise validelerin memelerine işarettir.
 
-[\[15\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref15)
+[/[15/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref15)
 Hâşiye: Unsurlar, madenler ise pek çok muntazam vazifeleri bulunan ve
 izn-i Rabbanî ile her muhtacın imdadına koşan ve emr-i İlahî ile her bir
 yere giren, meded veren ve hayatın levazımatını yetiştiren ve zîhayatı
 emziren ve masnuat-ı İlahiyenin nescine, nakşına menşe ve müvellid ve
 beşik olan hava, su, ziya, toprak unsurlarına işarettir.
 
-[\[16\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref16)
+[/[16/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref16)
 Hâşiye: Kalınca bir ip, meyvedar ağaca; binler ipler ise dallarına ve
 ipler başındaki elmas, nişan, ihsan, hediyeler ise çiçeklerin aksamına
 ve meyvelerin envaına işarettir.
 
-[\[17\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref17)
+[/[17/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref17)
 Hâşiye: Konserve kutusu; kudret konserveleri olan kavun, karpuz, nar,
 süt kutusu Hindistan cevizi gibi rahmet hediyelerine işarettir.
 
-[\[18\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref18)
+[/[18/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref18)
 Hâşiye: On beş gün, sinn-i teklif olan on beş seneye işarettir.
 
-[\[19\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref19)
+[/[19/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref19)
 Hâşiye: Sofralar ise yazda zeminin yüzüne işarettir ki yüzer taze taze
 ve ayrı ayrı olarak matbaha-i rahmetten çıkan Rahmanî sofralar serilir,
 değişirler. Her bir bostan bir kazan, her bir ağaç bir tablacıdır.
 
-[\[20\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref20)
+[/[20/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref20)
 Hâşiye: Gemi, tarihe ve cezire ise asr-ı saadete işarettir. Şu asrın
 zulümatlı sahilinde, mimsiz medeniyetin giydirdiği libastan soyunup,
 zamanın denizine girip, tarih ve siyer sefinesine binip, asr-ı saadet
@@ -4989,28 +4994,28 @@ başında ziyaret etmekle biliriz ki o zat o kadar parlak bir bürhan-ı
 tevhiddir ki zeminin baştan başa yüzünü ve zamanın geçmiş ve gelecek iki
 yüzünü ışıklandırmış, küfür ve dalalet zulümatını dağıtmıştır.
 
-[\[21\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref21)
+[/[21/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref21)
 Hâşiye: Bin nişan ise ehl-i tahkik yanında bine bâliğ olan mu’cizat-ı
 Ahmediyedir (asm).
 
-[\[22\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref22)
+[/[22/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref22)
 Hâşiye: Mühim lamba Kamer’dir ki onun işaretiyle iki parça olmuş. Yani
 Mevlana Câmî’nin dediği gibi “Hiç yazı yazmayan o ümmi zat, parmak
 kalemiyle sahife-i semavîde bir elif yazmış, bir kırkı iki elli yapmış.”
 Yani şaktan evvel, kırk olan mime benzer; şaktan sonra iki hilâl oldu,
 elliden ibaret olan iki nuna benzedi.
 
-[\[23\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref23)
+[/[23/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref23)
 Hâşiye: Büyük bir nur lambası Güneştir ki Arzın şarktan geri dönmesiyle
 yeniden Güneşin görünmesi, kucağında Peygamber’in (asm) yatmasıyla
 ikindi namazını kılmayan İmam-ı Ali (ra) o mu’cizeye binaen ikindi
 namazını edaen kılmış.
 
-[\[24\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref24)
+[/[24/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref24)
 Hâşiye: Nurani ferman Kur’an’a ve üstündeki turra ise i’cazına
 işarettir.
 
-[\[25\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref25)
+[/[25/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref25)
 Hâşiye: Bu risalenin sebeb-i telifi; gayet mütecavizane ve gayet çirkin
 bir tarz ile hakaik-i imaniyeyi tezyif edip, bozulmuş aklı yetişmediği
 şeye hurafe deyip, dinsizliği tabiata bağlayarak, Kur’an’a hücum
@@ -5020,7 +5025,7 @@ mezheplilere yedirdi.
 
 Yoksa Risale-i Nur’un mesleği, nezihane ve nazikane ve kavl-i leyyindir.
 
-[\[26\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref26)
+[/[26/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref26)
 Hâşiye: Evet, eğer intisap olsa o çekirdek, kader-i İlahîden bir emir
 alır, o hârika işlere mazhar olur. Eğer o intisap kesilse o çekirdeğin
 hilkati, koca çam ağacının hilkatinden daha ziyade cihazat ve iktidar ve
@@ -5030,7 +5035,7 @@ manevî ağaçta mevcud bulunması lâzım gelir. Çünkü o koca ağacın
 fabrikası, o çekirdektir. İçindeki kaderî ağaç, kudretle hariçte tezahür
 eder, cismanî çam ağacı olur.
 
-[\[27\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref27)
+[/[27/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref27)
 Hâşiye: Evet müteharrik her bir şey, zerrattan seyyarata kadar,
 kendilerinde olan sikke-i samediyet ile vahdeti gösterdikleri gibi;
 harekâtlarıyla dahi gezdikleri bütün yerleri vahdet namına zapt ederler.
@@ -5044,7 +5049,7 @@ vahdet namına Sâni’lerinin mektubu olduğunu gösterirler.
 Elhasıl: Her bir şey, hareketiyle bütün eşyayı vahdet namına zapt eder.
 Demek, bütün yıldızları elinde tutmayan, bir tek zerreye Rab olamaz.
 
-[\[28\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref28)
+[/[28/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref28)
 Hâşiye: Sâni’-i Hakîm, beden-i insanı gayet muntazam bir şehir hükmünde
 halk etmiştir.
 
@@ -5096,12 +5101,12 @@ hem nâr-ı hayatı iş’al ediyor. Çıktığı vakit ağızda mu’cizat-ı k
 İlahiye olan kelime meyvelerini veriyor. <span dir="rtl">فَسُبْحَانَ مَنْ تَحَيَّرَ
 فٖى صُنْعِهِ الْعُقُول</span>ُ
 
-[\[29\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref29)
+[/[29/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref29)
 Hâşiye: Fakat şu haliçe hem hayattardır hem intizamlı bir ihtizazdadır.
 Her vakit nakışları kemal-i hikmet ve intizam ile tebeddül eder. Tâ ki
 nessacının muhtelif cilve-i esmasını ayrı ayrı göstersin.
 
-[\[30\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref30)
+[/[30/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref30)
 Hâşiye: Elhasıl: Zerre, o müddeîyi küreyvat-ı hamraya havale eder.
 Küreyvat-ı hamra onu hüceyreye, hüceyre dahi beden-i insana, beden-i
 insan ise nev-i insana, nev-i insan onu zîhayat envaından dokunan arzın
@@ -5113,18 +5118,18 @@ mağlup etmezsen beni ele geçiremezsin.”
 Demek, bütün yıldızlara sözünü geçiremeyen, bir tek zerreye rububiyetini
 dinletemez.
 
-[\[31\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref31)
+[/[31/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref31)
 Hâşiye: Bir dairenin takriben nısf-ı kutru, yüz seksen milyon kilometre
 olsa o daire (kendisi) takriben yirmi beş bin senelik mesafe olur.
 
-[\[32\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref32)
+[/[32/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref32)
 Hâşiye: Cenab-ı Hakk’ın acayib-i masnuatına bakıp, temaşa edip ve
 ettiren işaretleriz. Yani semavat, hadsiz gözlerle zemindeki acayib-i
 sanat-ı İlahiyeyi temaşa eder gibi görünüyor. Semanın melaikeleri gibi
 yıldızlar dahi mahşer-i acayip ve garaib olan arza bakıyorlar ve
 zîşuurları dikkatle baktırıyorlar, demektir.
 
-[\[33\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref33)
+[/[33/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref33)
 Hâşiye: Fakat sukuttan sonra tabiat tövbe etti. Hakiki vazifesi, tesir
 ve fiil olmadığını, belki kabul ve infial olduğunu anladı. Ve kendisi
 kader-i İlahînin bir nevi defteri –fakat tebeddül ve tagayyüre kabil bir
@@ -5133,5 +5138,5 @@ Zülcelal’in bir nevi fıtrî şeriatı ve bir nevi mecmua-i kavanini
 olduğunu bildi. Kemal-i acz ve inkıyad ile vazife-i ubudiyetini takındı.
 Ve fıtrat-ı İlahiye ve sanat-ı Rabbaniye ismini aldı.
 
-[\[34\]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref34) \*
+[/[34/]](https://risaleinur.hizmetvakfi.org/nur-cesmesi/#_ftnref34) /*
 Bu hakikati Üstadımız İstanbul Adliyesinde beyan etmiştir.
