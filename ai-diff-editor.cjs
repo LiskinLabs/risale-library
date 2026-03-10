@@ -7,23 +7,25 @@ const progressFile = 'ai_progress.log';
 
 const data = JSON.parse(fs.readFileSync(bookJson, 'utf8'));
 const pages = data.pages;
+const totalPages = pages.length;
 
 const MODEL = "deepseek-v3.1:671b-cloud";
 
-// Improved word-level diff that ignores HTML tags logic
-function generateDiff(oldText, newText) {
+// Surgical word-diff to highlight changes in green
+function generateVisualDiff(oldText, newText) {
     const oldWords = oldText.split(/\s+/);
     const newWords = newText.split(/\s+/);
     let result = '';
     
-    // Simple visualization: focus on what AI added/changed
     newWords.forEach(word => {
+        // Skip diffing for HTML tags
         if (word.includes('<span') || word.includes('</span>') || word.includes('data-translation')) {
-            result += word + ' '; // Don't diff HTML tags
+            result += word + ' ';
             return;
         }
+        // If word is new or changed, wrap in green highlight
         if (!oldText.includes(word)) {
-            result += `<ins>${word}</ins> `;
+            result += `<ins style="background: #dcfce7; color: #166534; text-decoration: none; padding: 0 2px; border-radius: 2px;">${word}</ins> `;
         } else {
             result += word + ' ';
         }
@@ -32,16 +34,22 @@ function generateDiff(oldText, newText) {
 }
 
 async function askAI(text) {
-    const prompt = `You are an expert Risale-i Nur editor. 
+    const prompt = `You are a professional editor for Risale-i Nur. 
+    YOUR TASK: Perfect the Turkish text and Arabic spelling.
+    
     RULES:
-    1. Clean all symbols: \\, _, €, †, ÷, ∑, §, >. Remove ۝.
-    2. Style ALL Arabic text with: <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="">ARABIC</span>
-    3. Fix punctuation and concatenated words.
-    4. Join broken lines.
-    5. Return ONLY fixed text.`;
+    1. ARABIC FIX: Change "بِاسْمِه۪" to "بِاسْمِهِ" (fix the 'he' vowel) everywhere.
+    2. CLEANING: Remove markers like \\, _, €, †, ÷, ∑, §, >. Remove symbol ۝.
+    3. STYLE: Use '<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="TRANS">ARABIC</span>' for ALL Arabic.
+    4. TURKISH: Fix punctuation, missing spaces, and join broken lines. Split concatenated words like 'hakikatininbeş'.
+    5. FORMATTING: Use '## HEADER' for titles.
+    6. OUTPUT: Return ONLY the corrected text. No chat.
+    
+    TEXT:
+    ${text}`;
 
     return new Promise((resolve, reject) => {
-        const postData = JSON.stringify({ model: MODEL, prompt: `TEXT TO FIX:\n${text}\n\n${prompt}`, stream: false });
+        const postData = JSON.stringify({ model: MODEL, prompt: prompt, stream: false });
         const options = {
             hostname: 'localhost', port: 11434, path: '/api/generate', method: 'POST',
             headers: { 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(postData) }
@@ -60,24 +68,31 @@ async function askAI(text) {
 }
 
 async function run() {
-    let resultMarkdown = `---\ntitle: 'Asâ-yı Musa (AI REVISION MODE)'\nbook: 'asamusa'\n---\n\n`;
-    const testLimit = 6; // Process 6 pages for a visible test
-    const chunkSize = 2; 
+    let resultMarkdown = `---\ntitle: 'Asâ-yı Musa (AI REVISION)'\nbook: 'asamusa'\n---\n\n`;
+    const chunkSize = 5; 
 
-    fs.writeFileSync(progressFile, `AI Visual Diff Test Started...\n`);
+    fs.writeFileSync(progressFile, `AI FULL REVISION STARTED: Asâ-yı Musa\nTotal Pages: ${totalPages}\n`);
 
-    for (let i = 0; i < testLimit; i += chunkSize) {
-        const chunk = pages.slice(i, i + chunkSize).map(p => p.content).join(' ');
+    for (let i = 0; i < totalPages; i += chunkSize) {
+        const chunkArr = pages.slice(i, i + chunkSize);
+        const chunkText = chunkArr.map(p => p.content).join(' ');
+        
+        console.log(`Processing ${i + 1} to ${i + chunkArr.length}...`);
+        
         try {
-            const perfected = await askAI(chunk);
-            const diffed = generateDiff(chunk, perfected);
+            const perfected = await askAI(chunkText);
+            const diffed = generateVisualDiff(chunkText, perfected);
             resultMarkdown += diffed + "\n\n";
-            fs.appendFileSync(progressFile, `Chunk ${i/chunkSize + 1} Done\n`);
+            
+            const progress = Math.round(((i + chunkArr.length) / totalPages) * 100);
+            fs.appendFileSync(progressFile, `[${new Date().toLocaleTimeString()}] Progress: ${progress}% (${i + chunkArr.length}/${totalPages})\n`);
         } catch (e) {
-            fs.appendFileSync(progressFile, `Error: ${e.message}\n`);
+            fs.appendFileSync(progressFile, `ERROR at page ${i+1}: ${e.message}\n`);
         }
     }
+
     fs.writeFileSync(outputFile, resultMarkdown, 'utf8');
-    fs.appendFileSync(progressFile, `FINISHED. Check Asâ-yı Musa page.\n`);
+    fs.appendFileSync(progressFile, `COMPLETED. File: ${outputFile}\n`);
 }
+
 run();
