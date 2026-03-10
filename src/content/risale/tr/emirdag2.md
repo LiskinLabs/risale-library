@@ -3,7 +3,7 @@ title: 'Emirdağ Lâhikası 2'
 book: 'emirdag2'
 ---
 
-import QuranText from '../../../components/reader/QuranText';
+
 
 
 

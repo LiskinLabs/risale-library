@@ -3,7 +3,7 @@ title: 'Mesnevî-i Nuriye'
 book: 'mesnevi'
 ---
 
-import QuranText from '../../../components/reader/QuranText';
+
 
 
 

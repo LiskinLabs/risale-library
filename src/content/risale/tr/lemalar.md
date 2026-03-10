@@ -3,7 +3,7 @@ title: 'Lem''alar'
 book: 'lemalar'
 ---
 
-import QuranText from '../../../components/reader/QuranText';
+
 
 
 

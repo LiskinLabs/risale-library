@@ -3,7 +3,7 @@ title: 'Sikke-i Tasdik-i Gaybî'
 book: 'sikke'
 ---
 
-import QuranText from '../../../components/reader/QuranText';
+
 
 
 

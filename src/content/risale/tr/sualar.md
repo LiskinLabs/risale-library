@@ -3,7 +3,7 @@ title: 'Şualar'
 book: 'sualar'
 ---
 
-import QuranText from '../../../components/reader/QuranText';
+
 
 
 

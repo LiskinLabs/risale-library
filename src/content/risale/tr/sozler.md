@@ -3,7 +3,7 @@ title: 'Sözler'
 book: 'sozler'
 ---
 
-import QuranText from '../../../components/reader/QuranText';
+
 
 
 

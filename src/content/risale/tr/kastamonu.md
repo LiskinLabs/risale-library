@@ -3,7 +3,7 @@ title: 'Kastamonu Lâhikası'
 book: 'kastamonu'
 ---
 
-import QuranText from '../../../components/reader/QuranText';
+
 
 
 

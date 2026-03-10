@@ -3,7 +3,7 @@ title: 'Asâ-yı Musa (İman-Küfür)'
 book: 'imankufur'
 ---
 
-import QuranText from '../../../components/reader/QuranText';
+
 
 
 

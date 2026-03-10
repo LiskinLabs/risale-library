@@ -3,7 +3,7 @@ title: 'Âsâr-ı Bediiye'
 book: 'abed'
 ---
 
-import QuranText from '../../../components/reader/QuranText';
+
 
 
 

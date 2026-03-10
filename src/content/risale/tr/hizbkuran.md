@@ -3,7 +3,7 @@ title: 'Hizb-ül Kur''an'
 book: 'hizbkuran'
 ---
 
-import QuranText from '../../../components/reader/QuranText';
+
 
 
 

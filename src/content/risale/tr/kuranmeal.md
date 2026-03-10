@@ -3,7 +3,7 @@ title: 'Kur''an-ı Kerim Meali'
 book: 'kuranmeal'
 ---
 
-import QuranText from '../../../components/reader/QuranText';
+
 
 
 

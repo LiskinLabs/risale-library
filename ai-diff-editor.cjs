@@ -2,7 +2,7 @@ const fs = require('fs');
 const http = require('http');
 
 const bookJson = 'Risale_Library_Extracted/rnk_asamusa_2018.json';
-const outputFile = 'src/content/risale/tr/asamusa.mdx';
+const outputFile = 'src/content/risale/tr/asamusa.md';
 const progressFile = 'ai_progress.log';
 
 const data = JSON.parse(fs.readFileSync(bookJson, 'utf8'));

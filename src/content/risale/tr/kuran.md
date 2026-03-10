@@ -3,7 +3,7 @@ title: 'Kur''an-ı Kerim'
 book: 'kuran'
 ---
 
-import QuranText from '../../../components/reader/QuranText';
+
 
 
 

@@ -3,7 +3,7 @@ title: 'Cevşen-ül Kebir'
 book: 'cevsen'
 ---
 
-import QuranText from '../../../components/reader/QuranText';
+
 
 
 

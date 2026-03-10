@@ -3,7 +3,7 @@ title: 'Muhakemat'
 book: 'muhakemat'
 ---
 
-import QuranText from '../../../components/reader/QuranText';
+
 
 
 

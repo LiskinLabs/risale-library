@@ -3,7 +3,7 @@ title: 'İşaratü''l-İ''caz'
 book: 'isarat'
 ---
 
-import QuranText from '../../../components/reader/QuranText';
+
 
 
 

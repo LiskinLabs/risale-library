@@ -3,7 +3,7 @@ title: 'Namaz Tesbihatı'
 book: 'tesbihat'
 ---
 
-import QuranText from '../../../components/reader/QuranText';
+
 
 
 

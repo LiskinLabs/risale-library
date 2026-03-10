@@ -3,7 +3,7 @@ title: 'Barla Lâhikası'
 book: 'barla'
 ---
 
-import QuranText from '../../../components/reader/QuranText';
+
 
 
 

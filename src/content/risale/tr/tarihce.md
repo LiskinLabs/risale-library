@@ -3,7 +3,7 @@ title: 'Tarihçe-i Hayatı'
 book: 'tarihce'
 ---
 
-import QuranText from '../../../components/reader/QuranText';
+
 
 
 

@@ -3,7 +3,7 @@ title: 'Mektubat'
 book: 'mektubat'
 ---
 
-import QuranText from '../../../components/reader/QuranText';
+
 
 
 
