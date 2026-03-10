@@ -10,33 +10,20 @@ const pages = data.pages;
 
 const MODEL = "deepseek-v3.1:671b-cloud";
 
-function wordDiff(oldText, newText) {
-    if (!newText) return "<del>AI returned no text</del>";
-    const oldWords = oldText.split(/\s+/);
-    const newWords = newText.split(/\s+/);
-    let result = '';
-    
-    newWords.forEach(word => {
-        if (!oldText.includes(word)) {
-            result += `<ins>${word}</ins> `;
-        } else {
-            result += word + ' ';
-        }
-    });
-    return result;
-}
-
 async function askAI(text) {
-    const prompt = `You are an expert Risale-i Nur editor. Fix formatting, punctuation and spelling in Turkish.
-    RULES:
-    1. Fix punctuation and add missing spaces.
-    2. Join broken lines within sentences.
-    3. Remove technical chars like \\ or ∑.
-    4. PRESERVE ALL <span> TAGS AND ARABIC TEXT EXACTLY.
-    5. Return ONLY fixed text.
-    
-    TEXT:
-    ${text}`;
+    const prompt = `You are an expert Risale-i Nur editor. 
+Your goal is to make the text perfect for reading.
+RULES:
+1. Fix all punctuation and spelling.
+2. Remove technical markers like \\, ∑, §, _, €, >.
+3. Fix concatenated words (e.g. 'hakikatininbeş' -> 'hakikatinin beş').
+4. Join sentences that are broken across lines.
+5. IMPORTANT: Keep all <span ...>...</span> tags and Arabic text EXACTLY as they are. Do not modify them.
+6. Format headers using Markdown (## HEADER).
+7. Return ONLY the final corrected text. No explanations.
+
+TEXT:
+${text}`;
 
     return new Promise((resolve, reject) => {
         const postData = JSON.stringify({ model: MODEL, prompt: prompt, stream: false });
@@ -51,9 +38,8 @@ async function askAI(text) {
             res.on('end', () => {
                 try {
                     const parsed = JSON.parse(body);
-                    if (parsed.error) reject(new Error(parsed.error));
-                    else resolve(parsed.response);
-                } catch (e) { reject(new Error("Invalid JSON from AI")); }
+                    resolve(parsed.response);
+                } catch (e) { reject(new Error("AI error")); }
             });
         });
         req.on('error', (e) => reject(e));
@@ -63,30 +49,29 @@ async function askAI(text) {
 }
 
 async function run() {
-    let resultMarkdown = `---\ntitle: 'Asâ-yı Musa (AI Corrected)'\nbook: 'asamusa'\n---\nimport QuranText from '../../../components/reader/QuranText';\n\n`;
-    const chunkSize = 2; // Reduced to 2 pages for stability
-    const testLimit = 4; // Just 4 pages for ultra-fast test
+    let resultMarkdown = `---\ntitle: 'Asâ-yı Musa (AI Perfected)'\nbook: 'asamusa'\n---\nimport QuranText from '../../../components/reader/QuranText';\n\n`;
     
-    fs.writeFileSync(progressFile, `AI Test Run (4 pages)\n`);
+    // We will process 10 pages for this test
+    const testLimit = 10;
+    const chunkSize = 2; 
+
+    fs.writeFileSync(progressFile, `Starting DeepSeek V3 Correction (10 pages)...\n`);
 
     for (let i = 0; i < testLimit; i += chunkSize) {
-        const chunk = pages.slice(i, i + chunkSize).map(p => p.content).join('\n\n');
-        console.log(`Processing chunk ${i}...`);
+        const chunk = pages.slice(i, i + chunkSize).map(p => p.content).join(' ');
+        console.log(`Processing ${i+1}...`);
         
         try {
             const perfected = await askAI(chunk);
-            if (perfected) {
-                const highlighted = wordDiff(chunk, perfected);
-                resultMarkdown += highlighted + "\n\n";
-                fs.appendFileSync(progressFile, `Chunk ${i/chunkSize + 1} Done\n`);
-            } else {
-                throw new Error("AI returned empty response");
-            }
+            resultMarkdown += perfected + "\n\n";
+            fs.appendFileSync(progressFile, `Processed pages ${i+1} to ${i+chunkSize}\n`);
         } catch (e) {
             fs.appendFileSync(progressFile, `Error: ${e.message}\n`);
         }
     }
+
     fs.writeFileSync(outputFile, resultMarkdown, 'utf8');
-    fs.appendFileSync(progressFile, `FINISHED\n`);
+    fs.appendFileSync(progressFile, `DONE. Check the website.\n`);
 }
+
 run();
