@@ -240,23 +240,32 @@ const getPrettyTitle = (slug, fallback) => bookTitles[slug] || fallback;
   });
 
   // Active heading highlighting
+  // ⚡ Bolt Optimization: Cache active link and use O(1) attribute selector instead of O(N) querySelectorAll loop on scroll
   const observerOptions = {
     root: null,
     rootMargin: '0px 0px -80% 0px',
     threshold: 0
   };
 
+  let activeLink = null;
+  const activeClasses = ['text-amber-600', 'border-amber-500', 'bg-amber-50', 'dark:bg-amber-900/20'];
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const id = entry.target.getAttribute('id');
-        document.querySelectorAll('#toc-nav a').forEach(a => {
-          if (a.getAttribute('href') === `#${id}`) {
-            a.classList.add('text-amber-600', 'border-amber-500', 'bg-amber-50', 'dark:bg-amber-900/20');
-          } else {
-            a.classList.remove('text-amber-600', 'border-amber-500', 'bg-amber-50', 'dark:bg-amber-900/20');
+        const targetLink = document.querySelector(`#toc-nav a[href="#${id}"]`);
+
+        if (targetLink && targetLink !== activeLink) {
+          // Remove active classes from previous link
+          if (activeLink) {
+            activeLink.classList.remove(...activeClasses);
           }
-        });
+
+          // Add active classes to new target link
+          targetLink.classList.add(...activeClasses);
+          activeLink = targetLink;
+        }
       }
     });
   }, observerOptions);
