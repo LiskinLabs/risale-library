@@ -49,7 +49,7 @@ const bookTitles = {
 const getPrettyTitle = (slug, fallback) => bookTitles[slug] || fallback;
 ---
 
-<ReaderLayout title={`${entry.data.title} | Рисале-и Нур`}>
+<ReaderLayout title={`${getPrettyTitle(entry.data.book, entry.data.title)} | Рисале-и Нур`}>
   <div class="flex flex-col lg:flex-row gap-8 max-w-[1600px] mx-auto px-4">
     
     <!-- Left Sidebar: Library Navigation -->
@@ -95,11 +95,11 @@ const getPrettyTitle = (slug, fallback) => bookTitles[slug] || fallback;
 
     <!-- Main Content -->
     <main class="flex-grow max-w-4xl bg-white dark:bg-slate-900 shadow-xl shadow-slate-200/50 dark:shadow-none rounded-3xl p-8 md:p-12 min-h-screen">
-      <div class="mb-12 border-b border-slate-100 dark:border-slate-800 pb-8">
+      <div class="mb-12 border-b border-slate-100 dark:border-slate-800 pb-8 text-center">
         <h1 class="text-5xl font-black text-slate-800 dark:text-white mb-4 tracking-tighter">
           {getPrettyTitle(entry.data.book, entry.data.title)}
         </h1>
-        <div class="flex items-center gap-4 text-sm text-slate-400">
+        <div class="flex items-center justify-center gap-4 text-sm text-slate-400">
           <span class="px-3 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 rounded-full font-bold uppercase text-[10px]">Latin Türkçe</span>
           <span>Полное издание</span>
         </div>
@@ -161,14 +161,12 @@ const getPrettyTitle = (slug, fallback) => bookTitles[slug] || fallback;
     content.addEventListener('click', (e) => {
       const target = e.target.closest('a');
       if (target && (target.hash.includes('fn') || target.id.includes('fnref'))) {
-        // MDX generates links like #fn-1
         e.preventDefault();
         const noteId = target.hash.substring(1);
         const noteElement = document.getElementById(noteId);
         
         if (noteElement) {
           popupContent.innerHTML = noteElement.innerHTML;
-          // Remove backlink from content
           const backlink = popupContent.querySelector('.footnote-backref');
           if (backlink) backlink.remove();
           
@@ -210,7 +208,7 @@ const getPrettyTitle = (slug, fallback) => bookTitles[slug] || fallback;
     });
   }, observerOptions);
 
-  document.querySelectorAll('h1, h2, h3').forEach(h => observer.observe(h));
+  document.querySelectorAll('h1, h2, h3, h4').forEach(h => observer.observe(h));
 </script>
 
 <style is:global>
