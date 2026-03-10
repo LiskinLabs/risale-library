@@ -4,8 +4,12 @@ book: 'tesbihat'
 ---
 
 # Tesbihat
+
+
 ### SABAH NAMAZI
-Sabah namazının farzını kılıp_ selamı müteakib:
+
+
+Sabah namazının farzını kılıp _selamı müteakib:
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَللّٰهُمَّ اَنْتَ السَّلَامُ وَ مِنْكَ السَّلَامُ تَبَارَكْتَ يَا ذَا الْجَلَالِ وَ اْلاِكْرَامِ</span>
 Dedikten sonra elleri yukarı kaldırıp, el açarak:
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَللّٰهُمَّ صَلِّ عَلٰى سَيِّدِنَا مُحَمَّدٍ وَ عَلَٓى اٰلِ سَيِّدِنَا مُحَمَّدٍ صَلَاةً تُنْج۪ينَا بِهَا مِنْ جَم۪يعِ الْاَهْوَالِ وَ اْلاٰفَاتِ وَ تَقْض۪ى لَنَا بِهَا جَم۪يعَ الْحَاجَاتِ وَ تُطَهِّرُنَا بِهَا مِنْ جَم۪يعِ السَّيِّئَاتِ وَ تَرْفَعُنَا بِهَا عِنْدَكَ اَعْلَى الدَّرَجَاتِ وَ تُبَلِّغُنَا بِهَٓا اَقْصَى الْغَايَاتِ مِنْ جَم۪يعِ الْخَيْرَاتِ فِى الْحَيَاةِ وَ بَعْدَ الْمَمَاتِ اٰم۪ينَ يَا مُج۪يبَ الدَّعَوَاتِ وَالْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ</span>
@@ -33,7 +37,7 @@ ardından 33 defa
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَلْحَمْدُ لِلّٰهِ</span>
 33 defa
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَللّٰهُ اَكْبَرُ</span>
-tesbihleri çekilir. Devamında ,
+tesbihleri çekilir. Devamında,
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَٓا اِلٰهَ اِلَّا اللّٰهُ وَحْدَهُ لَا شَرٖيكَ لَهُ لَهُ الْمُلْكُ وَ لَهُ الْحَمْدُ يُحْيٖى وَ يُمٖيتُ وَ هُوَ حَىٌّ لَا يَمُوتُ بِيَدِهِ الْخَيْرُ وَ هُوَ عَلٰى كُلِّ شَىْءٍ قَدٖيرٌ وَ اِلَيْهِ الْمَصٖيرُ</span>
 denir, arkasından eller kaldırılıp dua edilir.
 Duadan sonra, bir defa
@@ -57,7 +61,7 @@ Der ve ba'dehu
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَلْفُ اَلْفِ صَلَاةٍ وَ اَلْفُ اَلْفِ سَلَامٍ عَلَيْكَ يَا حَب۪يبَ اللّٰهِ</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَلْفُ اَلْفِ صَلَاةٍ وَ اَلْفُ اَلْفِ سَلَامٍ عَلَيْكَ يَٓا اَم۪ينَ وَحْىِ اللّٰهِ</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَللّٰهُمَّ صَلِّ وَ سَلِّمْ وَ بَارِكْ عَلٰى سَيِّدِنَا مُحَمَّدٍ وَعَلَٓى اٰلِه۪ وَ اَصْحَابِه۪ بِعَدَدِ اَوْرَاقِ الْاَشْجَارِ وَ اَمْوَاجِ الْبِحَارِ وَ قَطَرَاتِ الْاَمْطَارِ وَ اغْفِرْلَنَا وَ ارْحَمْنَا وَ الْطُفْ بِنَا وَ بِاُسْـتَاذِنَا سَع۪يدِ النُّورْس۪ى رَضِىَ اللّٰهُ عَنْهُ وَ وَالِدَيْنَا وَ بِطَلَبَةِ رَسَٓائِلِ النُّورِ الصَّادِق۪ينَ يَٓا اِلٰهَنَا بِكُلِّ صَلَاةٍ مِنْهَٓا اَشْهَدُ اَنْ لَٓا اِلٰهَ اِلَّا اللّٰهُ وَ اَشْهَدُ اَنَّ مُحَمَّدًا رَسُولُ اللّٰهِ صَلَّى اللّٰهُ تَعَالٰى عَلَيْهِ وَ سَلَّمْ</span>
-,- - -_
+,- - -_ 
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَك يَٓا ﴿اَللّٰهُ﴾ تَعَالَيْتَ يَا ﴿رَحْمٰنُ﴾ اَجِرْنَا مِنَ النَّارِ بِعَفْوِكَ يَا رَحْمٰنُ</span>
@@ -101,13 +105,15 @@ Der ve ba'dehu
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا ﴿عَدْلُ﴾ تَعَالَيْتَ يَا ﴿حَكَمُ﴾ اَجِرْنَا مِنَ النَّارِ بِعَفْوِكَ يَا رَحْمٰنُ</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا ﴿فَرْدُ﴾ تَعَالَيْتَ يَا ﴿قُدُّوسُ﴾ اَجِرْنَا مِنَ النَّارِ بِعَفْوِكَ يَا رَحْمٰنُ</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ اٰهِيًّا شَرَاهِيًّا تَعَالَيْتَ لَٓا اِلٰهَ اِلَّٓا اَنْتَ اَجِرْنَا وَ اَجِرْ اُسْتَاذَنَا سَع۪يدَ النُّورْس۪ى رَضِىَ اللّٰهُ عَنْهُ وَ وَالِدَيْنَا وَ اِخْوَانَنَا وَ اَخَوَاتِنَـا وَ طَلَبَةَ رَسَٓائِلِ النُّورِ وَ رُفَقَٓائَنَا وَ اَحْبَابَنَا الْمُخْلِص۪ينَ مِنَ النَّارِ وَ مِنْ كُلِّ نَارٍ وَ احْفَظْنَا مِنْ شَرِّ النَّفْسِ وَ الشَّيْطَانِ وَ مِنْ شَرِّ الْجِنِّ وَ اْلاِنْسَانِ وَ مِنْ شَرِّ الْبِدْعَةِ وَ الضَّلَالَاتِ وَ اْلاِلْحَادِ وَ الطُّغْيَانِ بِعَفْوِكَ يَا مُج۪يرُ بِفَضْلِكَ يَا غَفَّارُ بِرَحْمَتِكَ يَٓا اَرْحَمَ الرَّاحِم۪ينَ ❁ اَللّٰهُمَّ اَدْخِلْنَا الْجَنَّةَ مَعَ الْاَبْرَارِ بِشَفَاعَةِ نَبِيِّكَ الْمُخْتَارِ اٰم۪ينَ وَالْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ</span>
-_*   *   *_
+ _* * *_ 
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَا يَسْتَو۪ٓى اَصْحَابُ النَّارِ وَاَصْحَابُ الْجَنَّةِۜ اَصْحَابُ الْجَنَّةِ هُمُ الْفَٓائِزُونَ ﴿٢٠﴾ لَوْ اَنْزَلْنَا هٰذَا الْقُرْاٰنَ عَلٰى جَبَلٍ لَرَاَيْتَهُ خَاشِعًا مُتَصَدِّعًا مِنْ خَشْيَةِ اللّٰهِۜ وَتِلْكَ الْاَمْثَالُ نَضْرِبُهَا لِلنَّاسِ لَعَلَّهُمْ يَتَفَكَّرُونَ ﴿٢١﴾ هُوَ اللّٰهُ الَّذ۪ى لَٓا اِلٰهَ اِلَّا هُوَۚ عَالِمُ الْغَيْبِ وَالشَّهَادَةِۚ هُوَ الرَّحْمٰنُ الرَّح۪يمُ ﴿٢٢﴾ هُوَ اللّٰهُ الَّذ۪ى لَٓا اِلٰهَ اِلَّا هُوَۚ اَلْمَلِكُ الْقُدُّوسُ السَّلَامُ الْمُؤْمِنُ الْمُهَيْمِنُ الْعَز۪يزُ الْجَبَّارُ الْمُتَكَبِّرُۜ سُبْحَانَ اللّٰهِ عَمَّا يُشْرِكُونَ ﴿٢٣﴾ هُوَ اللّٰهُ الْخَالِقُ الْبَارِىُٔ الْمُصَوِّرُ لَهُ الْاَسْمَٓاءُ الْحُسْنٰىۜ يُسَبِّحُ لَهُ مَا فِى السَّمٰوَاتِ وَالْاَرْضِۚ وَهُوَ الْعَز۪يزُ الْحَك۪يمُ ﴿٢٤﴾</span>
-_*   *   *_
+ _* * *_ 
 
 ### ÖĞLE NAMAZI
+
+
 Öğle namazının farzının selamını verdikten sonra:
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَللّٰهُمَّ اَنْتَ السَّلَامُ وَ مِنْكَ السَّلَامُ تَبَارَكْتَ يَا ذَا الْجَلَالِ وَ اْلاِكْرَامِ</span>
 Dedikten sonra elleri yukarı kaldırıp
@@ -123,8 +129,7 @@ ardından 33 defa
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَلْحَمْدُ لِلّٰهِ</span>
 33 defa
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَللّٰهُ اَكْبَرُ</span>
-tesbihleri çekilir. Devamında _
-<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَٓا اِلٰهَ اِلَّا اللّٰهُ وَحْدَهُ لَا شَرٖيكَ لَهُ لَهُ الْمُلْكُ وَ لَهُ الْحَمْدُ يُحْيٖى وَ يُمٖيتُ وَ هُوَ حَىٌّ لَا يَمُوتُ بِيَدِهِ الْخَيْرُ وَ هُوَ عَلٰى كُلِّ شَىْءٍ قَدٖيرٌ وَ اِلَيْهِ الْمَصٖيرُ</span>
+tesbihleri çekilir. Devamında _<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَٓا اِلٰهَ اِلَّا اللّٰهُ وَحْدَهُ لَا شَرٖيكَ لَهُ لَهُ الْمُلْكُ وَ لَهُ الْحَمْدُ يُحْيٖى وَ يُمٖيتُ وَ هُوَ حَىٌّ لَا يَمُوتُ بِيَدِهِ الْخَيْرُ وَ هُوَ عَلٰى كُلِّ شَىْءٍ قَدٖيرٌ وَ اِلَيْهِ الْمَصٖيرُ</span>
 denir, arkasından eller kaldırılıp dua edilir.
 Duadan sonra, bir defa
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">فَاعْلَمْ اَنَّهُ</span>
@@ -143,7 +148,7 @@ deyip 33.den sonra
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَلْفُ اَلْفِ صَلَاةٍ وَ اَلْفُ اَلْفِ سَلَامٍ عَلَيْكَ يَا حَب۪يبَ اللّٰهِ</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَلْفُ اَلْفِ صَلَاةٍ وَ اَلْفُ اَلْفِ سَلَامٍ عَلَيْكَ يَٓا اَم۪ينَ وَحْىِ اللّٰهِ</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَللّٰهُمَّ صَلِّ وَ سَلِّمْ وَ بَارِكْ عَلٰى سَيِّدِنَا مُحَمَّدٍ وَعَلَٓى اٰلِه۪ وَ اَصْحَابِه۪ بِعَدَدِ اَوْرَاقِ الْاَشْجَارِ وَ اَمْوَاجِ الْبِحَارِ وَ قَطَرَاتِ الْاَمْطَارِ وَ اغْفِرْلَنَا وَ ارْحَمْنَا وَ الْطُفْ بِنَا وَ بِاُسْـتَاذِنَا سَع۪يدِ النُّورْس۪ى رَضِىَ اللّٰهُ عَنْهُ وَ وَالِدَيْنَا وَ بِطَلَبَةِ رَسَٓائِلِ النُّورِ الصَّادِق۪ينَ يَٓا اِلٰهَنَا بِكُلِّ صَلَاةٍ مِنْهَٓا اَشْهَدُ اَنْ لَٓا اِلٰهَ اِلَّا اللّٰهُ وَ اَشْهَدُ اَنَّ مُحَمَّدًا رَسُولُ اللّٰهِ صَلَّى اللّٰهُ تَعَالٰى عَلَيْهِ وَ سَلَّمْ</span>
-,- - -_
+,- - -_ 
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَا ﴿جَم۪يلُ﴾ يَٓا اَللّٰهُ ❁</span>
@@ -189,13 +194,15 @@ deyip 33.den sonra
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَا ﴿غَفَّارُ﴾ يَٓا اَللّٰهُ ❁</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَا ﴿فَتَّاحُ﴾ يَٓا اَللّٰهُ ❁</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَا رَبَّ السَّمٰوَاتِ وَ الْاَرْضِ يَا ذَا الْجَلَالِ وَ اْلاِكْرَامِ ❁ اَسْئَلُكَ بِحَقِّ هٰذِهِ الْاَسْمَٓاءِ كُلِّهَٓا اَنْ تُصَلِّىَ عَلٰى سَيِّدِنَا مُحَمَّدٍ وَ عَلٰٓى اٰلِ مُحَمَّدٍ وَ ارْحَمْ مُحَمَّدًا كَمَا صَلَّيْتَ وَ سَلَّمْتَ وَ بَارَكْتَ وَ رَحِمْتَ وَ تَرَحَّمْتَ عَلٰٓى اِبرَاه۪يمَ وَ عَلٰٓى اٰلِ اِبْرَاه۪يمَ فِى الْعَالَم۪ينَ رَبَّنَٓا اِنَّكَ حَم۪يدٌ مَج۪يدٌ بِرَحْمَتِكَ يَٓا اَرْحَمَ الرَّاحِم۪ينَ وَ الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ</span>
-_*   *   *_
+ _* * *_ 
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَقَدْ صَدَقَ اللّٰهُ رَسُولَهُ الرُّءْيَا بِالْحَقِّۚ لَتَدْخُلُنَّ الْمَسْجِدَ الْحَرَامَ اِنْ شَٓاءَ اللّٰهُ اٰمِن۪ينَۙ مُحَلِّق۪ينَ رُؤُ۫سَكُمْ وَمُقَصِّر۪ينَۙ لَا تَخَافُونَۜ فَعَلِمَ مَا لَمْ تَعْلَمُوا فَجَعَلَ مِنْ دُونِ ذٰلِكَ فَتْحًا قَر۪يبًا ﴿٢٧﴾ هُوَ الَّذ۪ٓى اَرْسَلَ رَسُولَهُ بِالْهُدٰى وَد۪ينِ الْحَقِّ لِيُظْهِرَهُ عَلَى الدّ۪ينِ كُلِّه۪ۜ وَكَفٰى بِاللّٰهِ شَه۪يدًاۜ ﴿٢٨﴾ مُحَمَّدٌ رَسُولُ اللّٰهِۜ وَالَّذ۪ينَ مَعَهُٓ اَشِدَّٓاءُ عَلَى الْكُفَّارِ رُحَمَٓاءُ بَيْنَهُمْ تَرٰيهُمْ رُكَّعًا سُجَّدًا يَبْتَغُونَ فَضْلًا مِنَ اللّٰهِ وَرِضْوَانًاۘ س۪يمَاهُمْ ف۪ى وُجُوهِهِمْ مِنْ اَثَرِ السُّجُودِۜ ذٰلِكَ مَثَلُهُمْ فِى التَّوْرٰيةِۚۛ وَمَثَلُهُمْ فِى الْاِنْج۪يلِ۠ۛ كَزَرْعٍ اَخْرَجَ شَطْئَهُ۫ فَاٰزَرَهُ فَاسْتَغْلَظَ فَاسْتَوٰى عَلٰى سُوقِه۪ يُعْجِبُ الزُّرَّاعَ لِيَغ۪يظَ بِهِمُ الْكُفَّارَۜ وَعَدَ اللّٰهُ الَّذ۪ينَ اٰمَنُوا وَعَمِلُوا الصَّالِحَاتِ مِنْهُمْ مَغْفِرَةً وَاَجْرًا عَظ۪يمًا ﴿٢٩﴾</span>
-_*   *   *_
+ _* * *_ 
 
 ### İKİNDİ NAMAZI
+
+
 İkindi namazının farzını kılıp selam verdikten sonra:
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَللّٰهُمَّ اَنْتَ السَّلَامُ وَ مِنْكَ السَّلَامُ تَبَارَكْتَ يَا ذَا الْجَلَالِ وَ اْلاِكْرَامِ</span>
 Dedikten sonra elleri yukarı kaldırıp
@@ -211,8 +218,7 @@ ardından 33 defa
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَلْحَمْدُ لِلّٰهِ</span>
 33 defa
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَللّٰهُ اَكْبَرُ</span>
-tesbihleri çekilir. Devamında _
-<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَٓا اِلٰهَ اِلَّا اللّٰهُ وَحْدَهُ لَا شَرٖيكَ لَهُ لَهُ الْمُلْكُ وَ لَهُ الْحَمْدُ يُحْيٖى وَ يُمٖيتُ وَ هُوَ حَىٌّ لَا يَمُوتُ بِيَدِهِ الْخَيْرُ وَ هُوَ عَلٰى كُلِّ شَىْءٍ قَدٖيرٌ وَ اِلَيْهِ الْمَصٖيرُ</span>
+tesbihleri çekilir. Devamında _<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَٓا اِلٰهَ اِلَّا اللّٰهُ وَحْدَهُ لَا شَرٖيكَ لَهُ لَهُ الْمُلْكُ وَ لَهُ الْحَمْدُ يُحْيٖى وَ يُمٖيتُ وَ هُوَ حَىٌّ لَا يَمُوتُ بِيَدِهِ الْخَيْرُ وَ هُوَ عَلٰى كُلِّ شَىْءٍ قَدٖيرٌ وَ اِلَيْهِ الْمَصٖيرُ</span>
 denir, arkasından eller kaldırılıp dua edilir.
 Duadan sonra, bir defa
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">فَاعْلَمْ اَنَّهُ</span>
@@ -231,7 +237,7 @@ deyip 33.den sonra
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَلْفُ اَلْفِ صَلَاةٍ وَ اَلْفُ اَلْفِ سَلَامٍ عَلَيْكَ يَا حَب۪يبَ اللّٰهِ</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَلْفُ اَلْفِ صَلَاةٍ وَ اَلْفُ اَلْفِ سَلَامٍ عَلَيْكَ يَٓا اَم۪ينَ وَحْىِ اللّٰهِ</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَللّٰهُمَّ صَلِّ وَ سَلِّمْ وَ بَارِكْ عَلٰى سَيِّدِنَا مُحَمَّدٍ وَعَلَٓى اٰلِه۪ وَ اَصْحَابِه۪ بِعَدَدِ اَوْرَاقِ الْاَشْجَارِ وَ اَمْوَاجِ الْبِحَارِ وَ قَطَرَاتِ الْاَمْطَارِ وَ اغْفِرْلَنَا وَ ارْحَمْنَا وَ الْطُفْ بِنَا وَ بِاُسْـتَاذِنَا سَع۪يدِ النُّورْس۪ى رَضِىَ اللّٰهُ عَنْهُ وَ وَالِدَيْنَا وَ بِطَلَبَةِ رَسَٓائِلِ النُّورِ الصَّادِق۪ينَ يَٓا اِلٰهَنَا بِكُلِّ صَلَاةٍ مِنْهَٓا اَشْهَدُ اَنْ لَٓا اِلٰهَ اِلَّا اللّٰهُ وَ اَشْهَدُ اَنَّ مُحَمَّدًا رَسُولُ اللّٰهِ صَلَّى اللّٰهُ تَعَالٰى عَلَيْهِ وَ سَلَّمْ</span>
-,- - -_
+,- - -_ 
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَك يَٓا ﴿اَللّٰهُ﴾ تَعَالَيْتَ يَا ﴿رَحْمٰنُ﴾ اَجِرْنَا مِنَ النَّارِ بِعَفْوِكَ يَا رَحْمٰنُ</span>
@@ -276,7 +282,7 @@ deyip 33.den sonra
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا ﴿عَدْلُ﴾ تَعَالَيْتَ يَا ﴿حَكَمُ﴾ اَجِرْنَا مِنَ النَّارِ بِعَفْوِكَ يَا رَحْمٰنُ</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا ﴿فَرْدُ﴾ تَعَالَيْتَ يَا ﴿قُدُّوسُ﴾ اَجِرْنَا مِنَ النَّارِ بِعَفْوِكَ يَا رَحْمٰنُ</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ اٰهِيًّا شَرَاهِيًّا تَعَالَيْتَ لَٓا اِلٰهَ اِلَّٓا اَنْتَ اَجِرْنَا وَ اَجِرْ اُسْتَاذَنَا سَع۪يدَ النُّورْس۪ى رَضِىَ اللّٰهُ عَنْهُ وَ وَالِدَيْنَا وَ اِخْوَانَنَا وَ اَخَوَاتِنَا وَ طَلَبَةَ رَسَٓائِلِ النُّورِ وَ رُفَقَٓائَنَا وَ اَحْبَابَنَا الْمُخْلِص۪ينَ مِنَ النَّارِ وَ مِنْ كُلِّ نَارٍ وَ احْفَظْنَا مِنْ شَرِّ النَّفْسِ وَ الشَّيْطَانِ وَ مِنْ شَرِّ الْجِنِّ وَ اْلاِنْسَانِ وَ مِنْ شَرِّ الْبِدْعَةِ وَ الضَّلَالَاتِ وَ اْلاِلْحَادِ وَ الطُّغْيَانِ بِعَفْوِكَ يَا مُج۪يرُ بِفَضْلِكَ يَا غَفَّارُ بِرَحْمَتِكَ يَٓا اَرْحَمَ الرَّاحِم۪ينَ ❁ اَللّٰهُمَّ اَدْخِلْنَا الْجَنَّةَ مَعَ الْاَبْرَارِ بِشَفَاعَةِ نَبِيِّكَ الْمُخْتَارِ اٰم۪ينَ وَالْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ</span>
-_*   *   *_
+ _* * *_ 
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُورَةُ النَّبَاءِ</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
@@ -285,9 +291,11 @@ _*   *   *_
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَجَنَّاتٍ اَلْفَافًاۜ ﴿١٦﴾ اِنَّ يَوْمَ الْفَصْلِ كَانَ م۪يقَاتًاۙ ﴿١٧﴾ يَوْمَ يُنْفَخُ فِى الصُّورِ فَتَاْتُونَ اَفْوَاجًاۙ ﴿١٨﴾ وَفُتِحَتِ السَّمَٓاءُ فَكَانَتْ اَبْوَابًاۙ ﴿١٩﴾ وَسُيِّرَتِ الْجِبَالُ فَكَانَتْ سَرَابًاۜ ﴿٢٠﴾ اِنَّ جَهَنَّمَ كَانَتْ مِرْصَادًاۙ ﴿٢١﴾ لِلطَّاغ۪ينَ مَاٰبًاۙ ﴿٢٢﴾ لَابِث۪ينَ ف۪يهَٓا اَحْقَابًاۚ ﴿٢٣﴾ لَايَذُوقُونَ ف۪يهَا بَرْدًا وَلَا شَرَابًاۙ ﴿٢٤﴾ اِلَّا حَم۪يمًا وَغَسَّاقًاۙ ﴿٢٥﴾ جَزَٓاءً وِفَاقًا ﴿٢٦﴾ اِنَّهُمْ كَانُوا لَايَرْجُونَ حِسَابًاۙ ﴿٢٧﴾ وَكَذَّبُوا بِاٰيَاتِنَا كِذَّابًاۜ ﴿٢٨﴾ وَكُلَّ شَىْءٍ اَحْصَيْنَاهُ كِتَابًا ﴿٢٩﴾ فَذُوقُوا فَلَنْ نَز۪يدَكُمْ اِلَّا عَذَابًا۟ ﴿٣٠﴾</span>
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اِنَّ لِلْمُتَّق۪ينَ مَفَازًاۙ ﴿٣١﴾ حَدَٓائِقَ وَاَعْنَابًاۙ ﴿٣٢﴾ وَكَوَاعِبَ اَتْرَابًاۙ ﴿٣٣﴾ وَكَاْسًا دِهَاقًاۜ ﴿٣٤﴾ لَا يَسْمَعُونَ ف۪يهَا لَغْوًا وَلَا كِذَّابًاۚ ﴿٣٥﴾ جَزَٓاءً مِنْ رَبِّكَ عَطَٓاءً حِسَابًاۙ ﴿٣٦﴾ رَبِّ السَّمٰوَاتِ وَالْاَرْضِ وَمَا بَيْنَهُمَاۙ الرَّحْمٰنِ لَا يَمْلِكُونَ مِنْهُ خِطَابًاۙ ﴿٣٧﴾ يَوْمَ يَقُومُ الرُّوحُ وَالْمَلٰٓئِكَةُ صَفًّاۜ لَا يَتَكَلَّمُونَ اِلَّا مَنْ اَذِنَ لَهُ الرَّحْمٰنُ وَقَالَ صَوَابًا ﴿٣٨﴾ ذٰلِكَ الْيَوْمُ الْحَقُّۚ فَمَنْ شَٓاءَ اتَّخَذَ اِلٰى رَبِّه۪ مَاٰبًا ﴿٣٩﴾ اِنَّٓا اَنْذَرْنَا‌كُمْ عَذَابًا قَر۪يبًاۚ يَوْمَ يَنْظُرُ الْمَرْءُ مَا قَدَّمَتْ يَدَاهُ وَيَقُولُ الْكَافِرُ يَا لَيْتَن۪ى كُنْتُ تُرَابًا ﴿٤٠﴾</span>
-_*   *   *_
+ _* * *_ 
 
 ### AKŞAM NAMAZI
+
+
 Akşam namazının farzının selamını verdikten sonra:
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَللّٰهُمَّ اَنْتَ السَّلَامُ وَ مِنْكَ السَّلَامُ تَبَارَكْتَ يَا ذَا الْجَلَالِ وَ اْلاِكْرَامِ</span>
 Dedikten sonra elleri yukarı kaldırıp
@@ -317,8 +325,7 @@ ardından 33 defa
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَلْحَمْدُ لِلّٰهِ</span>
 33 defa
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَللّٰهُ اَكْبَرُ</span>
-tesbihleri çekilir. Devamında _
-<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَٓا اِلٰهَ اِلَّا اللّٰهُ وَحْدَهُ لَا شَرٖيكَ لَهُ لَهُ الْمُلْكُ وَ لَهُ الْحَمْدُ يُحْيٖى وَ يُمٖيتُ وَ هُوَ حَىٌّ لَا يَمُوتُ بِيَدِهِ الْخَيْرُ وَ هُوَ عَلٰى كُلِّ شَىْءٍ قَدٖيرٌ وَ اِلَيْهِ الْمَصٖيرُ</span>
+tesbihleri çekilir. Devamında _<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَٓا اِلٰهَ اِلَّا اللّٰهُ وَحْدَهُ لَا شَرٖيكَ لَهُ لَهُ الْمُلْكُ وَ لَهُ الْحَمْدُ يُحْيٖى وَ يُمٖيتُ وَ هُوَ حَىٌّ لَا يَمُوتُ بِيَدِهِ الْخَيْرُ وَ هُوَ عَلٰى كُلِّ شَىْءٍ قَدٖيرٌ وَ اِلَيْهِ الْمَصٖيرُ</span>
 denir, arkasından eller kaldırılıp dua edilir.
 Duadan sonra, bir defa
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">فَاعْلَمْ اَنَّهُ</span>
@@ -337,7 +344,7 @@ deyip 33.den sonra
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَلْفُ اَلْفِ صَلَاةٍ وَ اَلْفُ اَلْفِ سَلَامٍ عَلَيْكَ يَا حَب۪يبَ اللّٰهِ</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَلْفُ اَلْفِ صَلَاةٍ وَ اَلْفُ اَلْفِ سَلَامٍ عَلَيْكَ يَٓا اَم۪ينَ وَحْىِ اللّٰهِ</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَللّٰهُمَّ صَلِّ وَ سَلِّمْ وَ بَارِكْ عَلٰى سَيِّدِنَا مُحَمَّدٍ وَعَلَٓى اٰلِه۪ وَ اَصْحَابِه۪ بِعَدَدِ اَوْرَاقِ الْاَشْجَارِ وَ اَمْوَاجِ الْبِحَارِ وَ قَطَرَاتِ الْاَمْطَارِ وَ اغْفِرْلَنَا وَ ارْحَمْنَا وَ الْطُفْ بِنَا وَ بِاُسْـتَاذِنَا سَع۪يدِ النُّورْس۪ى رَضِىَ اللّٰهُ عَنْهُ وَ وَالِدَيْنَا وَ بِطَلَبَةِ رَسَٓائِلِ النُّورِ الصَّادِق۪ينَ يَٓا اِلٰهَنَا بِكُلِّ صَلَاةٍ مِنْهَٓا اَشْهَدُ اَنْ لَٓا اِلٰهَ اِلَّا اللّٰهُ وَ اَشْهَدُ اَنَّ مُحَمَّدًا رَسُولُ اللّٰهِ صَلَّى اللّٰهُ تَعَالٰى عَلَيْهِ وَ سَلَّمْ</span>
-,- - -_
+,- - -_ 
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَا ﴿جَم۪يلُ﴾ يَٓا اَللّٰهُ ❁</span>
@@ -383,13 +390,15 @@ deyip 33.den sonra
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَا ﴿غَفَّارُ﴾ يَٓا اَللّٰهُ ❁</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَا ﴿فَتَّاحُ﴾ يَٓا اَللّٰهُ ❁</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَا رَبَّ السَّمٰوَاتِ وَ الْاَرْضِ يَا ذَا الْجَلَالِ وَ اْلاِكْرَامِ ❁ اَسْئَلُكَ بِحَقِّ هٰذِهِ الْاَسْمَٓاءِ كُلِّهَٓا اَنْ تُصَلِّىَ عَلٰى سَيِّدِنَا مُحَمَّدٍ وَ عَلٰٓى اٰلِ مُحَمَّدٍ وَ ارْحَمْ مُحَمَّدًا كَمَا صَلَّيْتَ وَ سَلَّمْتَ وَ بَارَكْتَ وَ رَحِمْتَ وَ تَرَحَّمْتَ عَلٰٓى اِبرَاه۪يمَ وَ عَلٰٓى اٰلِ اِبْرَاه۪يمَ فِى الْعَالَم۪ينَ رَبَّنَٓا اِنَّكَ حَم۪يدٌ مَج۪يدٌ بِرَحْمَتِكَ يَٓا اَرْحَمَ الرَّاحِم۪ينَ وَ الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ</span>
-_*   *   *_
+ _* * *_ 
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَا يَسْتَو۪ٓى اَصْحَابُ النَّارِ وَاَصْحَابُ الْجَنَّةِۜ اَصْحَابُ الْجَنَّةِ هُمُ الْفَٓائِزُونَ ﴿٢٠﴾ لَوْ اَنْزَلْنَا هٰذَا الْقُرْاٰنَ عَلٰى جَبَلٍ لَرَاَيْتَهُ خَاشِعًا مُتَصَدِّعًا مِنْ خَشْيَةِ اللّٰهِۜ وَتِلْكَ الْاَمْثَالُ نَضْرِبُهَا لِلنَّاسِ لَعَلَّهُمْ يَتَفَكَّرُونَ ﴿٢١﴾ هُوَ اللّٰهُ الَّذ۪ى لَٓا اِلٰهَ اِلَّا هُوَۚ عَالِمُ الْغَيْبِ وَالشَّهَادَةِۚ هُوَ الرَّحْمٰنُ الرَّح۪يمُ ﴿٢٢﴾ هُوَ اللّٰهُ الَّذ۪ى لَٓا اِلٰهَ اِلَّا هُوَۚ اَلْمَلِكُ الْقُدُّوسُ السَّلَامُ الْمُؤْمِنُ الْمُهَيْمِنُ الْعَز۪يزُ الْجَبَّارُ الْمُتَكَبِّرُۜ سُبْحَانَ اللّٰهِ عَمَّا يُشْرِكُونَ ﴿٢٣﴾ هُوَ اللّٰهُ الْخَالِقُ الْبَارِىُٔ الْمُصَوِّرُ لَهُ الْاَسْمَٓاءُ الْحُسْنٰىۜ يُسَبِّحُ لَهُ مَا فِى السَّمٰوَاتِ وَالْاَرْضِۚ وَهُوَ الْعَز۪يزُ الْحَك۪يمُ ﴿٢٤﴾</span>
-_*   *   *_
+ _* * *_ 
 
 ### YATSI NAMAZI
+
+
 Yatsı namazının farzının selamını verdikten sonra:
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَللّٰهُمَّ اَنْتَ السَّلَامُ وَ مِنْكَ السَّلَامُ تَبَارَكْتَ يَا ذَا الْجَلَالِ وَ اْلاِكْرَامِ</span>
 Dedikten sonra elleri yukarı kaldırıp
@@ -405,8 +414,7 @@ ardından 33 defa
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَلْحَمْدُ لِلّٰهِ</span>
 33 defa
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَللّٰهُ اَكْبَرُ</span>
-tesbihleri çekilir. Devamında _
-<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَٓا اِلٰهَ اِلَّا اللّٰهُ وَحْدَهُ لَا شَرٖيكَ لَهُ لَهُ الْمُلْكُ وَ لَهُ الْحَمْدُ يُحْيٖى وَ يُمٖيتُ وَ هُوَ حَىٌّ لَا يَمُوتُ بِيَدِهِ الْخَيْرُ وَ هُوَ عَلٰى كُلِّ شَىْءٍ قَدٖيرٌ وَ اِلَيْهِ الْمَصٖيرُ</span>
+tesbihleri çekilir. Devamında _<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَٓا اِلٰهَ اِلَّا اللّٰهُ وَحْدَهُ لَا شَرٖيكَ لَهُ لَهُ الْمُلْكُ وَ لَهُ الْحَمْدُ يُحْيٖى وَ يُمٖيتُ وَ هُوَ حَىٌّ لَا يَمُوتُ بِيَدِهِ الْخَيْرُ وَ هُوَ عَلٰى كُلِّ شَىْءٍ قَدٖيرٌ وَ اِلَيْهِ الْمَصٖيرُ</span>
 denir, arkasından eller kaldırılıp dua edilir.
 Duadan sonra, bir defa
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">فَاعْلَمْ اَنَّهُ</span>
@@ -426,7 +434,7 @@ deyip 33.den sonra
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَلْفُ اَلْفِ صَلَاةٍ وَ اَلْفُ اَلْفِ سَلَامٍ عَلَيْكَ يَا حَب۪يبَ اللّٰهِ</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَلْفُ اَلْفِ صَلَاةٍ وَ اَلْفُ اَلْفِ سَلَامٍ عَلَيْكَ يَٓا اَم۪ينَ وَحْىِ اللّٰهِ</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَللّٰهُمَّ صَلِّ وَ سَلِّمْ وَ بَارِكْ عَلٰى سَيِّدِنَا مُحَمَّدٍ وَعَلَٓى اٰلِه۪ وَ اَصْحَابِه۪ بِعَدَدِ اَوْرَاقِ الْاَشْجَارِ وَ اَمْوَاجِ الْبِحَارِ وَ قَطَرَاتِ الْاَمْطَارِ وَ اغْفِرْلَنَا وَ ارْحَمْنَا وَ الْطُفْ بِنَا وَ بِاُسْـتَاذِنَا سَع۪يدِ النُّورْس۪ى رَضِىَ اللّٰهُ عَنْهُ وَ وَالِدَيْنَا وَ بِطَلَبَةِ رَسَٓائِلِ النُّورِ الصَّادِق۪ينَ يَٓا اِلٰهَنَا بِكُلِّ صَلَاةٍ مِنْهَٓا اَشْهَدُ اَنْ لَٓا اِلٰهَ اِلَّا اللّٰهُ وَ اَشْهَدُ اَنَّ مُحَمَّدًا رَسُولُ اللّٰهِ صَلَّى اللّٰهُ تَعَالٰى عَلَيْهِ وَ سَلَّمْ</span>
-,- - -_
+,- - -_ 
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَا ﴿جَم۪يلُ﴾ يَٓا اَللّٰهُ ❁</span>
@@ -472,48 +480,54 @@ deyip 33.den sonra
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَا ﴿غَفَّارُ﴾ يَٓا اَللّٰهُ ❁</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَا ﴿فَتَّاحُ﴾ يَٓا اَللّٰهُ ❁</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَا رَبَّ السَّمٰوَاتِ وَ الْاَرْضِ يَا ذَا الْجَلَالِ وَ اْلاِكْرَامِ ❁ اَسْئَلُكَ بِحَقِّ هٰذِهِ الْاَسْمَٓاءِ كُلِّهَٓا اَنْ تُصَلِّىَ عَلٰى سَيِّدِنَا مُحَمَّدٍ وَ عَلٰٓى اٰلِ مُحَمَّدٍ وَ ارْحَمْ مُحَمَّدًا كَمَا صَلَّيْتَ وَ سَلَّمْتَ وَ بَارَكْتَ وَ رَحِمْتَ وَ تَرَحَّمْتَ عَلٰٓى اِبرَاه۪يمَ وَ عَلٰٓى اٰلِ اِبْرَاه۪يمَ فِى الْعَالَم۪ينَ رَبَّنَٓا اِنَّكَ حَم۪يدٌ مَج۪يدٌ بِرَحْمَتِكَ يَٓا اَرْحَمَ الرَّاحِم۪ينَ وَ الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ</span>
-_*   *   *_
+ _* * *_ 
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اٰمَنَ الرَّسُولُ بِمَٓا اُنْزِلَ اِلَيْهِ مِنْ رَبِّه۪ وَالْمُؤْمِنُونَۜ كُلٌّ اٰمَنَ بِاللّٰهِ وَمَلٰٓئِكَتِه۪ وَكُتُبِه۪ وَرُسُلِه۪ۜ لَا نُفَرِّقُ بَيْنَ اَحَدٍ مِنْ رُسُلِه۪۠ وَقَالُوا سَمِعْنَا وَاَطَعْنَا غُفْرَانَكَ رَبَّنَا وَاِلَيْكَ الْمَص۪يرُ ﴿٢٨٥﴾ لَا يُكَلِّفُ اللّٰهُ نَفْسًا اِلَّا وُسْعَهَاۜ لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْۜ رَبَّنَا لَا تُؤَاخِذْنَٓا اِنْ نَس۪ينَٓا اَوْ اَخْطَاْنَاۚ رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَٓا اِصْرًا كَمَا حَمَلْتَهُ عَلَى الَّذ۪ينَ مِنْ قَبْلِنَاۚ رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِه۪ۚ وَاعْفُ عَنَّا۠ وَاغْفِرْ لَنَا۠ وَارْحَمْنَا۠ اَنْتَ مَوْلٰينَا فَانْصُرْنَا عَلَى الْقَوْمِ الْكَافِر۪ينَ ﴿٢٨٦﴾</span>
-_*   *   *_
+ _* * *_ 
 
 ## Sabah namazının sünneti ile farzı arasında okunacak dua:
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَا حَىُّ يَا قَيُّومُ يَا بَد۪يعَ السَّمٰوَاتِ وَ الْاَرْضِ يَا ذَاالْجَلَالِ وَ اْلاِكْرَامِ ❁ اَللّٰهُمَّ اِنّ۪ى اَسْئَلُكَ اَنْ تُحْيِىَ قَلْب۪ى بِنُورِ مَعْرِفَتِكَ اَبَدًا يَٓا اَللّٰهُ ❁ يَٓا اَللّٰهُ ❁ يَٓا اَللّٰهُ</span>
 3 defa okunduktan sonra
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَا رَحْمٰنُ يَا رَح۪يمُ بِرَحْمَتِكَ يَٓا اَرْحَمَ الرَّحِم۪ينَ ❁ وَ الْحَمْدُ ِللّٰهِ رَبِّ الْعَالَم۪ينَ</span>
-_*   *   *_
+ _* * *_ 
 ## Namazın son teşehhüdünde selamdan evvel bu dua okunur:
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَللّٰهُمَّ لَا تُخْرِجْنَا مِنَ الدُّنْيَا اِلَّا مَعَ الشَّهَادَةِ وَ اْلا۪يمَانِ</span>
-_*   *   *_
+ _* * *_ 
 
 ## Bundan sonra isteyen mağrib ile işa yani akşam namazı ile yatsı namazı arasında bu gelen dua ve tesbihleri okuyabilir:
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَذَا النُّونِ اِذْ ذَهَبَ مُغَاضِبًا فَظَنَّ اَنْ لَنْ نَقْدِرَ عَلَيْهِ فَنَادٰى فِى الظُّلُمَاتِ اَنْ</span>
 33 defa
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَٓا اِلٰهَ اِلَّٓا اَنْتَ سُبْحَانَكَۗ اِنّ۪ى كُنْتُ مِنَ الظَّالِم۪ينَۚ</span>
-_*   *   *_
+ _* * *_ 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَاَيُّوبَ اِذْ نَادٰى رَبَّهُٓ اَنّ۪ى مَسَّنِىَ الضُّرُّ وَاَنْتَ اَرْحَمُ الرَّاحِم۪ينَ</span>
 33 defa
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">رَبّ۪ٓى اِنّ۪ى مَسَّنِىَ الضُّرُّ وَاَنْتَ اَرْحَمُ الرَّاحِم۪ينَۚ</span>
-_*   *   *_
+ _* * *_ 
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">فَاِنْ تَوَلَّوْا فَقُلْ</span>
 33 defa
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">حَسْبِى اللّٰهُۘ لَٓا اِلٰهَ اِلَّا هُوَۜ عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظ۪يمِ</span>
-_*   *   *_
+ _* * *_ 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَلَّذ۪ينَ قَالَ لَهُمُ النَّاسُ اِنَّ النَّاسَ قَدْ جَمَعُوا لَكُمْ فَاخْشَوْهُمْ فَزَادَهُمْ ا۪يمَانًاۗ وَقَالُوا</span>
 33 defa
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">حَسْبُنَا اللّٰهُ وَنِعْمَ الْوَك۪يلُ</span>
-_*   *   *_
+ _* * *_ 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">فَانْقَلَبُوا بِنِعْمَةٍ مِنَ اللّٰهِ وَفَضْلٍ لَمْ يَمْسَسْهُمْ سُٓوءٌۙ وَاتَّبَعُوا رِضْوَانَ اللّٰهِۜ وَاللّٰهُ ذُو فَضْلٍ عَظ۪يمٍ</span>
 33 defa
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَا حَوْلَ وَ لَا قُوَّةَ اِلَّا بِاللَّهِ الْعَلِىِّ الْعَظ۪يمِ</span>
-_*   *   *_
+ _* * *_ 
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">كُلُّ نَفْسٍ ذَآئِقَةُ الْمَوْتِ ❁ وَاِنَّمَا تُوَفَّوْنَ اُجُورَكُمْ يَوْمَ الْقِيٰمَةِ ❁ فَمَنْ زُحْزِحَ عَنِ النَّارِ وَاُدْخِلَ الْجَنَّةَ فَقَدْ فَازَ ❁ وَمَاالْحَيَوةُ الدُّنْيَٓا اِلَّا مَتَاعُ الْغُرُورِ ❁ كُلُّ شَىْءٍ هَالِكٌ اِلَّا وَجْهَهُۜ لَهُ الْحُكْمُ وَاِلَيْهِ تُرْجَعُونَ ❁ كُلُّ مَنْ عَلَيْهَا فَانٍ ❁ وَيَبْقٰى وَجْهُ رَبِّكَ ذُوالْجَلَالِ وَاْلاِكْرَامِۚ</span>
@@ -521,4 +535,4 @@ _*   *   *_
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَا بَاق۪ٓى اَنْتَ الْبَاق۪ى ❁ يَا بَاق۪ٓى اَنْتَ الْبَاق۪ى</span>
 33.den sonra:
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَنْتَ الْكَاف۪ى ❁ اَنْتَ الْوَاف۪ى ❁ اَنْتَ الشَّاف۪ى ❁ اَنْتَ الْمُعَاف۪ى هُوَ اللَّهُ</span>
-_*   *   *_
+ _* * *_ 

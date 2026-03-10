@@ -4,15 +4,21 @@ book: 'kuranmeal'
 ---
 
 # Kur'an-ı Kerim
+
+
 ## Cüz-1
+
+
 ## 1- Fâtiha
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">١﴾ الفاتحة</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ ﴿١﴾</span>
 1 - Bismillâhirrahmânirrahîm.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَلْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَۙ ﴿٢﴾</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَلرَّحْمٰنِ الرَّح۪يمِۙ ﴿٣﴾</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">مَالِكِ يَوْمِ الدّ۪ينِۜ ﴿٤﴾</span>
-4 - (2-4) Hamd , Âlemlerin Rabbi , Rahmân , Rahîm , hesap ve ceza gününün (ahiret gününün) mâliki Allah'a mahsustur.
+4 - (2-4) Hamd, Âlemlerin Rabbi, Rahmân, Rahîm, hesap ve ceza gününün (ahiret gününün) mâliki Allah'a mahsustur.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اِيَّاكَ نَعْبُدُ وَاِيَّاكَ نَسْتَع۪ينُۜ ﴿٥﴾</span>
 5 - (Allahım!) Yalnız sana ibadet ederiz ve yalnız senden yardım dileriz.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اِهْدِنَا الصِّرَاطَ الْمُسْتَق۪يمَۙ ﴿٦﴾</span>
@@ -20,6 +26,8 @@ book: 'kuranmeal'
 7 - (6-7) Bizi doğru yola, kendilerine nimet verdiklerinin yoluna ilet; gazaba uğrayanlarınkine ve sapıklarınkine değil.
 
 ## 2- Bakara
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٢﴾ البقرة</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -326,6 +334,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 141 - Onlar gelip geçmiş bir ümmettir. Onların kazandıkları kendilerinin, sizin kazandıklarınız sizindir. Siz onların yaptıklarından sorumlu tutulacak değilsiniz.
 
 ## Cüz-2
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سَيَقُولُ السُّفَهَٓاءُ مِنَ النَّاسِ مَا وَلّٰيهُمْ عَنْ قِبْلَتِهِمُ الَّت۪ى كَانُوا عَلَيْهَاۜ قُلْ لِلّٰهِ الْمَشْرِقُ وَالْمَغْرِبُۜ يَهْد۪ى مَنْ يَشَٓاءُ اِلٰى صِرَاطٍ مُسْتَق۪يمٍ ﴿١٤٢﴾</span>
 142 - Birtakım kendini bilmez insanlar, "Onları (müslümanları) yönelmekte oldukları kıbleden çeviren nedir?" diyecekler. De ki: "Doğu da, Batı da Allah'ındır. Allah, dilediği kimseyi doğru yola iletir."
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَكَذٰلِكَ جَعَلْنَاكُمْ اُمَّةً وَسَطًا لِتَكُونُوا شُهَدَٓاءَ عَلَى النَّاسِ وَيَكُونَ الرَّسُولُ عَلَيْكُمْ شَه۪يدًاۜ وَمَا جَعَلْنَا الْقِبْلَةَ الَّت۪ى كُنْتَ عَلَيْهَٓا اِلَّا لِنَعْلَمَ مَنْ يَتَّبِعُ الرَّسُولَ مِمَّنْ يَنْقَلِبُ عَلٰى عَقِبَيْهِۜ وَاِنْ كَانَتْ لَكَب۪يرَةً اِلَّا عَلَى الَّذ۪ينَ هَدَى اللّٰهُۜ وَمَا كَانَ اللّٰهُ لِيُض۪يعَ ا۪يمَانَكُمْۜ اِنَّ اللّٰهَ بِالنَّاسِ لَرَؤُ۫فٌ رَح۪يمٌ ﴿١٤٣﴾</span>
@@ -569,6 +579,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 252 - İşte bunlar Allah'ın âyetleridir. Biz onları sana hak olarak okuyoruz. Şüphesiz sen, Allah tarafından gönderilmiş peygamberlerdensin.
 
 ## Cüz-3
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">تِلْكَ الرُّسُلُ فَضَّلْنَا بَعْضَهُمْ عَلٰى بَعْضٍۢ مِنْهُمْ مَنْ كَلَّمَ اللّٰهُ وَرَفَعَ بَعْضَهُمْ دَرَجَاتٍۜ وَاٰتَيْنَا ع۪يسَى ابْنَ مَرْيَمَ الْبَيِّنَاتِ وَاَيَّدْنَاهُ بِرُوحِ الْقُدُسِۜ وَلَوْ شَٓاءَ اللّٰهُ مَا اقْتَتَلَ الَّذ۪ينَ مِنْ بَعْدِهِمْ مِنْ بَعْدِ مَا جَٓاءَتْهُمُ الْبَيِّنَاتُ وَلٰكِنِ اخْتَلَفُوا فَمِنْهُمْ مَنْ اٰمَنَ وَمِنْهُمْ مَنْ كَفَرَۜ وَلَوْ شَٓاءَ اللّٰهُ مَا اقْتَتَلُوا وَلٰكِنَّ اللّٰهَ يَفْعَلُ مَا يُر۪يدُ۟ ﴿٢٥٣﴾</span>
 253 - İşte peygamberler! Biz, onların bir kısmını bir kısmına üstün kıldık. İçlerinden, Allah'ın konuştukları vardır. Bir kısmının da derecelerini yükseltmiştir. Meryem oğlu İsa'ya ise açık deliller verdik ve onu Ruhu'l-Kudüs (Cebrail) ile destekledik. Eğer Allah dileseydi, bunların arkasından gelen (millet)ler, kendilerine apaçık deliller geldikten sonra, birbirlerini öldürmezlerdi. Fakat ayrılığa düştüler. Onlardan inananlar da vardı, inkâr edenler de. Yine Allah dileseydi, birbirlerini öldürmezlerdi. Lâkin Allah dilediğini yapar.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَٓا اَيُّهَا الَّذ۪ينَ اٰمَنُٓوا اَنْفِقُوا مِمَّا رَزَقْنَاكُمْ مِنْ قَبْلِ اَنْ يَاْتِىَ يَوْمٌ لَا بَيْعٌ ف۪يهِ وَلَا خُلَّةٌ وَلَا شَفَاعَةٌۜ وَالْكَافِرُونَ هُمُ الظَّالِمُونَ ﴿٢٥٤﴾</span>
@@ -646,6 +658,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 286 - Allah, bir kimseyi ancak gücünün yettiği şeyle yükümlü kılar. Onun kazandığı iyilik kendi yararına, kötülük de kendi zararınadır. (Şöyle diyerek dua ediniz): "Ey Rabbimiz! Unutur, ya da yanılırsak bizi sorumlu tutma! Ey Rabbimiz! Bize, bizden öncekilere yüklediğin gibi ağır yük yükleme. Ey Rabbimiz! Bize gücümüzün yetmediği şeyleri yükleme! Bizi affet, bizi bağışla, bize acı! Sen bizim Mevlâmızsın. Kâfirler topluluğuna karşı bize yardım et."
 
 ## 3- Âl-i İmrân
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٣﴾ آل عمران</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -841,6 +855,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 91 - Şüphesiz inkâr edip kâfir olarak ölenler var ya, dünya dolusu altını fidye verseler bile bu, hiçbirisinden asla kabul edilmeyecektir. Onlar için elem dolu bir azap vardır. Onların hiçbir yardımcıları da yoktur.
 
 ## Cüz-4
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَنْ تَنَالُوا الْبِرَّ حَتّٰى تُنْفِقُوا مِمَّا تُحِبُّونَۜ وَمَا تُنْفِقُوا مِنْ شَيْءٍ فَاِنَّ اللّٰهَ بِه۪ عَل۪يمٌ ﴿٩٢﴾</span>
 92 - Sevdiğiniz şeylerden Allah yolunda harcamadıkça iyiliğe asla erişemezsiniz. Her ne harcarsanız Allah onu bilir.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">كُلُّ الطَّعَامِ كَانَ حِلًّا لِبَن۪ٓى اِسْرَٓائ۪لَ اِلَّا مَا حَرَّمَ اِسْرَٓائ۪لُ عَلٰى نَفْسِه۪ مِنْ قَبْلِ اَنْ تُنَزَّلَ التَّوْرٰيةُۜ قُلْ فَاْتُوا بِالتَّوْرٰيةِ فَاتْلُوهَٓا اِنْ كُنْتُمْ صَادِق۪ينَ ﴿٩٣﴾</span>
@@ -1073,6 +1089,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 200 - Ey iman edenler! Sabredin. Sabır yarışında düşmanlarınızı geçin. (Cihat için) hazırlıklı ve uyanık olun ve Allah'a karşı gelmekten sakının ki kurtuluşa eresiniz.
 
 ## 4- Nisâ
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٤﴾ النساء</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -1128,6 +1146,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 23 - Size şunlarla evlenmek haram kılındı: Analarınız, kızlarınız, kız kardeşleriniz, halalarınız, teyzeleriniz, erkek kardeş kızları, kız kardeş kızları, sizi emziren sütanneleriniz, süt kız kardeşleriniz, karılarınızın anneleri, kendileriyle zifafa girdiğiniz karılarınızdan olup evlerinizde bulunan üvey kızlarınız, -eğer anneleri ile zifafa girmemişseniz onlarla evlenmenizde size bir günah yoktur- öz oğullarınızın karıları, iki kız kardeşi (nikâh altında) bir araya getirmeniz. Ancak geçenler (önceden yapılan bu tür evlilikler) başka. Şüphesiz Allah çok bağışlayıcıdır, çok merhamet edicidir.
 
 ## Cüz-5
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَالْمُحْصَنَاتُ مِنَ النِّسَٓاءِ اِلَّا مَا مَلَكَتْ اَيْمَانُكُمْۚ كِتَابَ اللّٰهِ عَلَيْكُمْۘ وَاُحِلَّ لَكُمْ مَا وَرَٓاءَ ذٰلِكُمْ اَنْ تَبْتَغُوا بِاَمْوَالِكُمْ مُحْصِن۪ينَ غَيْرَ مُسَافِح۪ينَۜ فَمَا اسْتَمْتَعْتُمْ بِه۪ مِنْهُنَّ فَاٰتُوهُنَّ اُجُورَهُنَّ فَر۪يضَةًۜ وَلَا جُنَاحَ عَلَيْكُمْ ف۪يمَا تَرَاضَيْتُمْ بِه۪ مِنْ بَعْدِ الْفَر۪يضَةِۜ اِنَّ اللّٰهَ كَانَ عَل۪يمًا حَك۪يمًا ﴿٢٤﴾</span>
 24 - (Savaş esiri olarak) sahip olduklarınız hariç, evli kadınlar (da size) haram kılındı. (Bunlar) üzerinize Allah'ın emri olarak yazılmıştır. Bunların dışında kalanlar ise, iffetli yaşamak ve zina etmemek şartıyla mallarınızla (mehirlerini verip) istemeniz size helâl kılındı. Onlardan (nikâhlanıp) faydalanmanıza karşılık sabit bir hak olarak kendilerine mehirlerini verin. Mehir belirlendikten sonra, onunla ilgili olarak uzlaştığınız şeyler konusunda size günah yoktur. Şüphesiz ki Allah (her şeyi) hakkıyla bilendir, hüküm ve hikmet sahibidir.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَمَنْ لَمْ يَسْتَطِعْ مِنْكُمْ طَوْلًا اَنْ يَنْكِحَ الْمُحْصَنَاتِ الْمُؤْمِنَاتِ فَمِنْ مَا مَلَكَتْ اَيْمَانُكُمْ مِنْ فَتَيَاتِكُمُ الْمُؤْمِنَاتِۜ وَاللّٰهُ اَعْلَمُ بِا۪يمَانِكُمْۜ بَعْضُكُمْ مِنْ بَعْضٍۚ فَانْكِحُوهُنَّ بِاِذْنِ اَهْلِهِنَّ وَاٰتُوهُنَّ اُجُورَهُنَّ بِالْمَعْرُوفِ مُحْصَنَاتٍ غَيْرَ مُسَافِحَاتٍ وَلَا مُتَّخِذَاتِ اَخْدَانٍۚ فَاِذَٓا اُحْصِنَّ فَاِنْ اَتَيْنَ بِفَاحِشَةٍ فَعَلَيْهِنَّ نِصْفُ مَا عَلَى الْمُحْصَنَاتِ مِنَ الْعَذَابِۜ ذٰلِكَ لِمَنْ خَشِىَ الْعَنَتَ مِنْكُمْۜ وَاَنْ تَصْبِرُوا خَيْرٌ لَكُمْۜ وَاللّٰهُ غَفُورٌ رَح۪يمٌ۟ ﴿٢٥﴾</span>
@@ -1288,7 +1308,7 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اِنَّ الَّذ۪ينَ تَوَفّٰيهُمُ الْمَلٰٓئِكَةُ ظَالِم۪ٓى اَنْفُسِهِمْ قَالُوا ف۪يمَ كُنْتُمْۜ قَالُوا كُنَّا مُسْتَضْعَف۪ينَ فِى الْاَرْضِۜ قَالُٓوا اَلَمْ تَكُنْ اَرْضُ اللّٰهِ وَاسِعَةً فَتُهَاجِرُوا ف۪يهَاۜ فَاُو۬لٰٓئِكَ مَاْوٰيهُمْ جَهَنَّمُۜ وَسَٓاءَتْ مَص۪يرًاۙ ﴿٩٧﴾</span>
 97 - Kendilerine zulmetmekteler iken meleklerin canlarını aldığı kimseler var ya; melekler onlara şöyle derler: "Ne durumdaydınız? (Niçin hicret etmediniz?)" Onlar da, "Biz yeryüzünde zayıf ve güçsüz kimselerdik" derler. Melekler, "Allah'ın arzı geniş değil miydi, orada hicret etseydiniz ya!" derler. İşte bunların gidecekleri yer cehennemdir. O ne kötü varış yeridir.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اِلَّا الْمُسْتَضْعَف۪ينَ مِنَ الرِّجَالِ وَالنِّسَٓاءِ وَالْوِلْدَانِ لَا يَسْتَط۪يعُونَ ح۪يلَةً وَلَا يَهْتَدُونَ سَب۪يلًا ﴿٩٨﴾</span>
-98 - Ancak gerçekten zayıf ve güçsüz olan , çaresiz kalan ve hicret etmeye yol bulamayan erkekler, kadınlar ve çocuklar başkadır.
+98 - Ancak gerçekten zayıf ve güçsüz olan, çaresiz kalan ve hicret etmeye yol bulamayan erkekler, kadınlar ve çocuklar başkadır.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">فَاُو۬لٰٓئِكَ عَسَى اللّٰهُ اَنْ يَعْفُوَ عَنْهُمْۜ وَكَانَ اللّٰهُ عَفُوًّا غَفُورًا ﴿٩٩﴾</span>
 99 - Umulur ki, Allah bu kimseleri affeder. Çünkü Allah çok affedicidir, çok bağışlayıcıdır.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَمَنْ يُهَاجِرْ ف۪ى سَب۪يلِ اللّٰهِ يَجِدْ فِى الْاَرْضِ مُرَاغَمًا كَث۪يرًا وَسَعَةًۜ وَمَنْ يَخْرُجْ مِنْ بَيْتِه۪ مُهَاجِرًا اِلَى اللّٰهِ وَرَسُولِه۪ ثُمَّ يُدْرِكْهُ الْمَوْتُ فَقَدْ وَقَعَ اَجْرُهُ عَلَى اللّٰهِۜ وَكَانَ اللّٰهُ غَفُورًا رَح۪يمًا۟ ﴿١٠٠﴾</span>
@@ -1396,6 +1416,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 147 - Eğer şükreder ve iman ederseniz, Allah size niye azab etsin ki? Allah, şükrün karşılığını verendir, hakkıyla bilendir.
 
 ## Cüz-6
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَا يُحِبُّ اللّٰهُ الْجَهْرَ بِالسُّٓوءِ مِنَ الْقَوْلِ اِلَّا مَنْ ظُلِمَۜ وَكَانَ اللّٰهُ سَم۪يعًا عَل۪يمًا ﴿١٤٨﴾</span>
 148 - Allah, zulme uğrayanın dile getirmesi dışında, çirkin sözün açıklanmasını sevmez. Şüphesiz Allah, hakkıyla işitendir, hakkıyla bilendir.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اِنْ تُبْدُوا خَيْرًا اَوْ تُخْفُوهُ اَوْ تَعْفُوا عَنْ سُٓوءٍ فَاِنَّ اللّٰهَ كَانَ عَفُوًّا قَد۪يرًا ﴿١٤٩﴾</span>
@@ -1456,11 +1478,13 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَسْتَفْتُونَكَۜ قُلِ اللّٰهُ يُفْت۪يكُمْ فِى الْكَلَالَةِۜ اِنِ امْرُؤٌا هَلَكَ لَيْسَ لَهُ وَلَدٌ وَلَهُٓ اُخْتٌ فَلَهَا نِصْفُ مَا تَرَكَۚ وَهُوَ يَرِثُهَٓا اِنْ لَمْ يَكُنْ لَهَا وَلَدٌۜ فَاِنْ كَانَتَا اثْنَتَيْنِ فَلَهُمَا الثُّلُثَانِ مِمَّا تَرَكَۜ وَاِنْ كَانُٓوا اِخْوَةً رِجَالًا وَنِسَٓاءً فَلِلذَّكَرِ مِثْلُ حَظِّ الْاُنْثَيَيْنِۜ يُبَيِّنُ اللّٰهُ لَكُمْ اَنْ تَضِلُّواۜ وَاللّٰهُ بِكُلِّ شَيْءٍ عَل۪يمٌ ﴿١٧٦﴾</span>
 176 - Senden fetva istiyorlar. De ki: "Allah, size "kelâle" (babasız ve çocuksuz kimse)nin mirası hakkında hükmünü açıklıyor: Çocuğu olmayan bir kişi ölür de kız kardeşi bulunursa, bıraktığı malın yarısı onundur. Eğer kız kardeşi ölür ve çocuğu da bulunmazsa, erkek kardeş ona varis olur. Eğer kız kardeşler iki iseler, (erkek kardeşin) bıraktığının üçte ikisi onlarındır. Eğer kardeşler erkekli kızlı iseler, o zaman (bir) erkeğe, iki kızın hissesi kadar (pay) vardır. Sapmayasınız diye Allah size (hükmünü) açıklıyor. Allah, her şeyi hakkıyla bilendir.
 ## 5- Mâide
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٥﴾ المائدة</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَٓا اَيُّهَا الَّذ۪ينَ اٰمَنُٓوا اَوْفُوا بِالْعُقُودِۜ اُحِلَّتْ لَكُمْ بَه۪يمَةُ الْاَنْعَامِ اِلَّا مَا يُتْلٰى عَلَيْكُمْ غَيْرَ مُحِلِّى الصَّيْدِ وَاَنْتُمْ حُرُمٌۜ اِنَّ اللّٰهَ يَحْكُمُ مَا يُر۪يدُ ﴿١﴾</span>
-1 - Ey iman edenler! Akitlerinizi yerine getirin. İhramlı iken avlanmayı helâl saymamanız kaydıyla , okunacak (bildirilecek) olanlardan başka hayvanlar , size helâl kılındı. Şüphesiz Allah istediği hükmü verir.
+1 - Ey iman edenler! Akitlerinizi yerine getirin. İhramlı iken avlanmayı helâl saymamanız kaydıyla, okunacak (bildirilecek) olanlardan başka hayvanlar, size helâl kılındı. Şüphesiz Allah istediği hükmü verir.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَٓا اَيُّهَا الَّذ۪ينَ اٰمَنُوا لَا تُحِلُّوا شَعَٓائِرَ اللّٰهِ وَلَا الشَّهْرَ الْحَرَامَ وَلَا الْهَدْىَ وَلَا الْقَلَٓائِدَ وَلَٓا آٰمّ۪ينَ الْبَيْتَ الْحَرَامَ يَبْتَغُونَ فَضْلًا مِنْ رَبِّهِمْ وَرِضْوَانًاۜ وَاِذَا حَلَلْتُمْ فَاصْطَادُواۜ وَلَا يَجْرِمَنَّكُمْ شَنَاٰنُ قَوْمٍ اَنْ صَدُّوكُمْ عَنِ الْمَسْجِدِ الْحَرَامِ اَنْ تَعْتَدُواۢ وَتَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوٰىۖ وَلَا تَعَاوَنُوا عَلَى الْاِثْمِ وَالْعُدْوَانِۖ وَاتَّقُوا اللّٰهَۜ اِنَّ اللّٰهَ شَد۪يدُ الْعِقَابِ ﴿٢﴾</span>
 2 - Ey iman edenler! Allah'ın (koyduğu din) nişanelerine, haram aya, hac kurbanına, (bu kurbanlıklara takılı) gerdanlıklara ve de Rab'lerinden bol nimet ve hoşnutluk isteyerek Kâ'be'ye gelenlere sakın saygısızlık etmeyin. İhramdan çıktığınızda (isterseniz) avlanın. Sizi Mescid-i Haram'dan alıkoydular diye birtakımlarına beslediğiniz kin, sakın ha sizi, haddi aşmaya sürüklemesin. İyilik ve takva (Allah'a karşı gelmekten sakınma) üzere yardımlaşın. Ama günah ve düşmanlık üzere yardımlaşmayın. Allah´a karşı gelmekten sakının. Çünkü Allah'ın cezası çok şiddetlidir.
 
@@ -1548,7 +1572,7 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَلَمْ تَعْلَمْ اَنَّ اللّٰهَ لَهُ مُلْكُ السَّمٰوَاتِ وَالْاَرْضِ يُعَذِّبُ مَنْ يَشَٓاءُ وَيَغْفِرُ لِمَنْ يَشَٓاءُۜ وَاللّٰهُ عَلٰى كُلِّ شَيْءٍ قَد۪يرٌ ﴿٤٠﴾</span>
 40 - Bilmez misin ki, göklerin ve yerin hükümranlığı Allah'a aittir. O, dilediğine azap eder, dilediğini de bağışlar. Allah, her şeye hakkıyla gücü yetendir.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَٓا اَيُّهَا الرَّسُولُ لَا يَحْزُنْكَ الَّذ۪ينَ يُسَارِعُونَ فِى الْكُفْرِ مِنَ الَّذ۪ينَ قَالُٓوا اٰمَنَّا بِاَفْوَاهِهِمْ وَلَمْ تُؤْمِنْ قُلُوبُهُمْۚ وَمِنَ الَّذ۪ينَ هَادُوا سَمَّاعُونَ لِلْكَذِبِ سَمَّاعُونَ لِقَوْمٍ اٰخَر۪ينَۙ لَمْ يَاْتُوكَۜ يُحَرِّفُونَ الْكَلِمَ مِنْ بَعْدِ مَوَاضِعِه۪ۚ يَقُولُونَ اِنْ اُو۫ت۪يتُمْ هٰذَا فَخُذُوهُ وَاِنْ لَمْ تُؤْتَوْهُ فَاحْذَرُواۜ وَمَنْ يُرِدِ اللّٰهُ فِتْنَتَهُ فَلَنْ تَمْلِكَ لَهُ مِنَ اللّٰهِ شَيْـًٔاۜ اُو۬لٰٓئِكَ الَّذ۪ينَ لَمْ يُرِدِ اللّٰهُ اَنْ يُطَهِّرَ قُلُوبَهُمْۜ لَهُمْ فِى الدُّنْيَا خِزْىٌ وَلَهُمْ فِى الْاٰخِرَةِ عَذَابٌ عَظ۪يمٌ ﴿٤١﴾</span>
-41 - Ey Peygamber! Kalpten inanmadıkları hâlde, ağızlarıyla "İnandık" diyenler (münafıklar) ile Yahudilerden küfürde yarışanlar seni üzmesin. Onlar (Yahudiler) yalan uydurmak için (seni) dinlerler , sana gelmeyen bir topluluk hesabına dinlerler. Kelimelerin (ifade içindeki) yerlerini bildikten sonra yerlerini değiştirir ve şöyle derler: "Eğer size şu hüküm verilirse, onu tutun. O verilmezse sakının." Allah, kimin azaba uğramasını istemişse artık sen onun için asla Allah'a karşı hiçbir şey yapamazsın. Onlar, Allah'ın kalplerini temizlemeyi istemediği kimselerdir. Onlara dünyada bir rüsvaylık, ahirette ise yine onlara büyük bir azap vardır.
+41 - Ey Peygamber! Kalpten inanmadıkları hâlde, ağızlarıyla "İnandık" diyenler (münafıklar) ile Yahudilerden küfürde yarışanlar seni üzmesin. Onlar (Yahudiler) yalan uydurmak için (seni) dinlerler, sana gelmeyen bir topluluk hesabına dinlerler. Kelimelerin (ifade içindeki) yerlerini bildikten sonra yerlerini değiştirir ve şöyle derler: "Eğer size şu hüküm verilirse, onu tutun. O verilmezse sakının." Allah, kimin azaba uğramasını istemişse artık sen onun için asla Allah'a karşı hiçbir şey yapamazsın. Onlar, Allah'ın kalplerini temizlemeyi istemediği kimselerdir. Onlara dünyada bir rüsvaylık, ahirette ise yine onlara büyük bir azap vardır.
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سَمَّاعُونَ لِلْكَذِبِ اَكَّالُونَ لِلسُّحْتِۜ فَاِنْ جَٓاؤُ۫كَ فَاحْكُمْ بَيْنَهُمْ اَوْ اَعْرِضْ عَنْهُمْۚ وَاِنْ تُعْرِضْ عَنْهُمْ فَلَنْ يَضُرُّوكَ شَيْـًٔاۜ وَاِنْ حَكَمْتَ فَاحْكُمْ بَيْنَهُمْ بِالْقِسْطِۜ اِنَّ اللّٰهَ يُحِبُّ الْمُقْسِط۪ينَ ﴿٤٢﴾</span>
 42 - Onlar, yalanı çok dinleyen, haramı çok yiyenlerdir. Eğer sana gelirlerse, ister aralarında hüküm ver, ister onlardan yüz çevir. Onlardan yüz çevirecek olursan, sana asla hiçbir zarar veremezler. Eğer hükmedecek olursan, aralarında adaletle hükmet. Çünkü Allah, âdil davrananları sever.
@@ -1640,6 +1664,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 82 - (Ey Muhammed!) İman edenlere düşmanlık etmede insanların en şiddetlisinin kesinlikle Yahudiler ile Allah'a ortak koşanlar olduğunu görürsün. Yine onların iman edenlere sevgi bakımından en yakınının da "Biz hıristiyanlarız" diyenler olduğunu mutlaka görürsün. Çünkü onların içinde keşişler ve rahipler vardır. Onlar büyüklük de taslamazlar.
 
 ## Cüz-7
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَاِذَا سَمِعُوا مَٓا اُنْزِلَ اِلَى الرَّسُولِ تَرٰٓى اَعْيُنَهُمْ تَف۪يضُ مِنَ الدَّمْعِ مِمَّا عَرَفُوا مِنَ الْحَقِّۚ يَقُولُونَ رَبَّنَٓا اٰمَنَّا فَاكْتُبْنَا مَعَ الشَّاهِد۪ينَ ﴿٨٣﴾</span>
 83 - Peygamber'e indirileni (Kur'an'ı) dinledikleri zaman hakkı tanımalarından dolayı gözlerinin yaşla dolup taştığını görürsün. "Ey Rabbimiz! İnandık. Artık bizi (hakikate) şahitlik edenler (Muhammed'in ümmeti) ile beraber yaz" derler.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَمَا لَنَا لَا نُؤْمِنُ بِاللّٰهِ وَمَا جَٓاءَنَا مِنَ الْحَقِّۙ وَنَطْمَعُ اَنْ يُدْخِلَنَا رَبُّنَا مَعَ الْقَوْمِ الصَّالِح۪ينَ ﴿٨٤﴾</span>
@@ -1671,7 +1697,7 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اُحِلَّ لَكُمْ صَيْدُ الْبَحْرِ وَطَعَامُهُ مَتَاعًا لَكُمْ وَلِلسَّيَّارَةِۚ وَحُرِّمَ عَلَيْكُمْ صَيْدُ الْبَرِّ مَا دُمْتُمْ حُرُمًاۜ وَاتَّقُوا اللّٰهَ الَّذ۪ٓى اِلَيْهِ تُحْشَرُونَ ﴿٩٦﴾</span>
 96 - Sizin için de yolcular için de bir geçimlik olmak üzere deniz avı yapmak ve deniz ürünlerini yemek sizlere helâl kılındı. Kara avı ise ihramlı olduğunuz sürece size haram kılındı. Huzurunda toplanacağınız Allah'a karşı gelmekten sakının.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">جَعَلَ اللّٰهُ الْكَعْبَةَ الْبَيْتَ الْحَرَامَ قِيَامًا لِلنَّاسِ وَالشَّهْرَ الْحَرَامَ وَالْهَدْىَ وَالْقَلَٓائِدَۜ ذٰلِكَ لِتَعْلَمُٓوا اَنَّ اللّٰهَ يَعْلَمُ مَا فِى السَّمٰوَاتِ وَمَا فِى الْاَرْضِ وَاَنَّ اللّٰهَ بِكُلِّ شَيْءٍ عَل۪يمٌ ﴿٩٧﴾</span>
-97 - Allah; Ka'be'yi, o saygıdeğer evi, haram ayı , hac kurbanını ve (bu kurbanlara takılı) gerdanlıkları insanlar(ın din ve dünyaları) için ayakta kalma (ve canlanma) sebebi kıldı. Bunlar, göklerde ve yerde ne varsa hepsini Allah'ın bildiğini ve Allah'ın (zaten) her şeyi hakkıyla bilmekte olduğunu bilmeniz içindir.
+97 - Allah; Ka'be'yi, o saygıdeğer evi, haram ayı, hac kurbanını ve (bu kurbanlara takılı) gerdanlıkları insanlar(ın din ve dünyaları) için ayakta kalma (ve canlanma) sebebi kıldı. Bunlar, göklerde ve yerde ne varsa hepsini Allah'ın bildiğini ve Allah'ın (zaten) her şeyi hakkıyla bilmekte olduğunu bilmeniz içindir.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اِعْلَمُٓوا اَنَّ اللّٰهَ شَد۪يدُ الْعِقَابِ وَاَنَّ اللّٰهَ غَفُورٌ رَح۪يمٌۜ ﴿٩٨﴾</span>
 98 - Bilin ki, Allah'ın cezası çetindir ve Allah çok bağışlayandır, çok merhamet edendir.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">مَا عَلَى الرَّسُولِ اِلَّا الْبَلَاغُۜ وَاللّٰهُ يَعْلَمُ مَا تُبْدُونَ وَمَا تَكْتُمُونَ ﴿٩٩﴾</span>
@@ -1723,6 +1749,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 120 - Göklerin, yerin ve bunlardaki her şeyin hükümranlığı yalnızca Allah'ındır. O, her şeye hakkıyla gücü yetendir.
 
 ## 6- En’âm
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٦﴾ الأنعام</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -1961,6 +1989,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 110 - Biz onların kalplerini ve gözlerini ters döndürürüz de ilkin ona iman etmedikleri gibi (mucize geldikten sonra da inanmazlar) ve yine onları azgınlıkları içinde bırakırız da bocalar dururlar.
 
 ## Cüz-8
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَلَوْ اَنَّنَا نَزَّلْنَٓا اِلَيْهِمُ الْمَلٰٓئِكَةَ وَكَلَّمَهُمُ الْمَوْتٰى وَحَشَرْنَا عَلَيْهِمْ كُلَّ شَيْءٍ قُبُلًا مَا كَانُوا لِيُؤْمِنُٓوا اِلَّٓا اَنْ يَشَٓاءَ اللّٰهُ وَلٰكِنَّ اَكْثَرَهُمْ يَجْهَلُونَ ﴿١١١﴾</span>
 111 - Biz onlara melekleri de indirseydik, kendileriyle ölüler de konuşsaydı ve her şeyi karşılarında (hakikatın şahidleri olarak) toplasaydık, Allah dilemedikçe yine de iman edecek değillerdi. Fakat onların çoğu bilmiyorlar.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَكَذٰلِكَ جَعَلْنَا لِكُلِّ نَبِىٍّ عَدُوًّا شَيَاط۪ينَ الْاِنْسِ وَالْجِنِّ يُوح۪ى بَعْضُهُمْ اِلٰى بَعْضٍ زُخْرُفَ الْقَوْلِ غُرُورًاۜ وَلَوْ شَٓاءَ رَبُّكَ مَا فَعَلُوهُ فَذَرْهُمْ وَمَا يَفْتَرُونَ ﴿١١٢﴾</span>
@@ -2080,6 +2110,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 165 - O, sizi yeryüzünde halifeler (oraya hâkim kimseler) yapan, size verdiği nimetler konusunda sizi sınamak için bazınızı bazınıza derece derece üstün kılandır. Şüphesiz Rabbin, cezası çabuk olandır. Şüphe yok ki O, çok bağışlayandır, çok merhamet edendir.
 
 ## 7- A’râf
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٧﴾ الأعراف</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -2179,7 +2211,7 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَلَّذ۪ينَ يَصُدُّونَ عَنْ سَب۪يلِ اللّٰهِ وَيَبْغُونَهَا عِوَجًاۚ وَهُمْ بِالْاٰخِرَةِ كَافِرُونَۜ ﴿٤٥﴾</span>
 45 - Onlar Allah yolundan alıkoyan ve onu, eğri ve çelişkili göstermek isteyenlerdir. Onlar ahireti de inkâr edenlerdir.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَبَيْنَهُمَا حِجَابٌۚ وَعَلَى الْاَعْرَافِ رِجَالٌ يَعْرِفُونَ كُلًّا بِس۪يمٰيهُمْۚ وَنَادَوْا اَصْحَابَ الْجَنَّةِ اَنْ سَلَامٌ عَلَيْكُمْ لَمْ يَدْخُلُوهَا وَهُمْ يَطْمَعُونَ ﴿٤٦﴾</span>
-46 - İkisi (cennet ve cehennem) arasında bir sur , A'râf üzerinde de birtakım adamlar vardır. Cennet ve cehennemliklerin hepsini simalarından tanımaktadırlar. Cennetliklere, "Selâm olsun size!" diye seslenirler. Onlar henüz cennete girmemişlerdir, ama bunu ummaktadırlar.
+46 - İkisi (cennet ve cehennem) arasında bir sur, A'râf üzerinde de birtakım adamlar vardır. Cennet ve cehennemliklerin hepsini simalarından tanımaktadırlar. Cennetliklere, "Selâm olsun size!" diye seslenirler. Onlar henüz cennete girmemişlerdir, ama bunu ummaktadırlar.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">ڟوَاِذَا صُرِفَتْ اَبْصَارُهُمْ تِلْقَٓاءَ اَصْحَابِ النَّارِۙ قَالُوا رَبَّنَا لَا تَجْعَلْنَا مَعَ الْقَوْمِ الظَّالِم۪ينَ۟ ﴿٤٧﴾</span>
 47 - Gözleri cehennemlikler tarafına çevrildiği zaman, "Ey Rabbimiz! Bizi zalim toplumla beraber kılma" derler.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَنَادٰٓى اَصْحَابُ الْاَعْرَافِ رِجَالًا يَعْرِفُونَهُمْ بِس۪يمٰيهُمْ قَالُوا مَٓا اَغْنٰى عَنْكُمْ جَمْعُكُمْ وَمَا كُنْتُمْ تَسْتَكْبِرُونَ ﴿٤٨﴾</span>
@@ -2269,6 +2301,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 87 - "Eğer içinizden bir kısmı benimle gönderilen gerçeğe inanmış, bir kısmı da inanmamışsa, artık Allah aramızda hükmünü verinceye kadar sabredin. O, hüküm verenlerin en hayırlısıdır."
 
 ## Cüz-9
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">قَالَ الْمَلَاُ الَّذ۪ينَ اسْتَكْبَرُوا مِنْ قَوْمِه۪ لَنُخْرِجَنَّكَ يَا شُعَيْبُ وَالَّذ۪ينَ اٰمَنُوا مَعَكَ مِنْ قَرْيَتِنَٓا اَوْ لَتَعُودُنَّ ف۪ى مِلَّتِنَاۜ قَالَ اَوَلَوْ كُنَّا كَارِه۪ينَ ﴿٨٨﴾</span>
 88 - Şu'ayb'ın kavminden büyüklük taslayan ileri gelenler dediler ki: "Ey Şu'ayb! Andolsun, ya kesinlikle bizim dinimize dönersiniz ya da mutlaka seni ve seninle birlikte inananları memleketimizden çıkarırız." Şu'ayb, "İstemesek de mi?" dedi.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">قَدِ افْتَرَيْنَا عَلَى اللّٰهِ كَذِبًا اِنْ عُدْنَا ف۪ى مِلَّتِكُمْ بَعْدَ اِذْ نَجّٰينَا اللّٰهُ مِنْهَاۜ وَمَا يَكُونُ لَنَٓا اَنْ نَعُودَ ف۪يهَٓا اِلَّٓا اَنْ يَشَٓاءَ اللّٰهُ رَبُّنَاۜ وَسِعَ رَبُّنَا كُلَّ شَيْءٍ عِلْمًاۜ عَلَى اللّٰهِ تَوَكَّلْنَاۜ رَبَّنَا افْتَحْ بَيْنَنَا وَبَيْنَ قَوْمِنَا بِالْحَقِّ وَاَنْتَ خَيْرُ الْفَاتِح۪ينَ ﴿٨٩﴾</span>
@@ -2476,7 +2510,7 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَوَلَمْ يَتَفَكَّرُوا مَا بِصَاحِبِهِمْ مِنْ جِنَّةٍۜ اِنْ هُوَ اِلَّا نَذ۪يرٌ مُب۪ينٌ ﴿١٨٤﴾</span>
 184 - Onlar düşünmediler mi ki (çok iyi tanıdıkları, kendileriyle iç içe yaşamış olan) arkadaşlarında (Peygamber'de) delilikten eser yoktur. O, ancak apaçık bir uyarıcıdır.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَوَلَمْ يَنْظُرُوا ف۪ى مَلَكُوتِ السَّمٰوَاتِ وَالْاَرْضِ وَمَا خَلَقَ اللّٰهُ مِنْ شَيْءٍۙ وَاَنْ عَسٰٓى اَنْ يَكُونَ قَدِ اقْتَرَبَ اَجَلُهُمْۚ فَبِاَىِّ حَد۪يثٍ بَعْدَهُ يُؤْمِنُونَ ﴿١٨٥﴾</span>
-185 - Onlar göklerdeki ve yerdeki sınırsız hükümranlık ve nizama , Allah'ın yarattığı her şeye, ecellerinin yaklaşmış olabileceğine hiç bakmadılar mı? Peki, bundan sonra artık hangi söze inanacaklar?
+185 - Onlar göklerdeki ve yerdeki sınırsız hükümranlık ve nizama, Allah'ın yarattığı her şeye, ecellerinin yaklaşmış olabileceğine hiç bakmadılar mı? Peki, bundan sonra artık hangi söze inanacaklar?
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">مَنْ يُضْلِلِ اللّٰهُ فَلَا هَادِىَ لَهُۜ وَيَذَرُهُمْ ف۪ى طُغْيَانِهِمْ يَعْمَهُونَ ﴿١٨٦﴾</span>
 186 - Allah, kimi saptırırsa artık onu doğru yola iletecek kimse yoktur. Allah, onları azgınlıkları içinde bırakır, bocalayıp dururlar.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَسْـَٔلُونَكَ عَنِ السَّاعَةِ اَيَّانَ مُرْسٰيهَاۜ قُلْ اِنَّمَا عِلْمُهَا عِنْدَ رَبّ۪ىۚ لَا يُجَلّ۪يهَا لِوَقْتِهَٓا اِلَّا هُوَۜ ثَقُلَتْ فِى السَّمٰوَاتِ وَالْاَرْضِۜ لَا تَاْت۪يكُمْ اِلَّا بَغْتَةًۜ يَسْـَٔلُونَكَ كَاَنَّكَ حَفِىٌّ عَنْهَاۜ قُلْ اِنَّمَا عِلْمُهَا عِنْدَ اللّٰهِ وَلٰكِنَّ اَكْثَرَ النَّاسِ لَا يَعْلَمُونَ ﴿١٨٧﴾</span>
@@ -2523,6 +2557,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 206 - Şüphesiz Rabbin katındaki (melek)ler O'na ibadet etmekten büyüklenmezler. O'nu tespih ederler ve yalnız O'na secde ederler. (Not: Tilavet secdesi yapılmalı)
 
 ## 8- Enfâl
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٨﴾ الأنفال</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -2612,6 +2648,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 40 - Eğer yüz çevirirlerse bilin ki Allah sizin dostunuzdur. O, ne güzel dosttur; O, ne güzel yardımcıdır!
 
 ## Cüz-10
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَاعْلَمُٓوا اَنَّمَا غَنِمْتُمْ مِنْ شَيْءٍ فَاَنَّ لِلّٰهِ خُمُسَهُ وَلِلرَّسُولِ وَلِذِى الْقُرْبٰى وَالْيَتَامٰى وَالْمَسَاك۪ينِ وَابْنِ السَّب۪يلِۙ اِنْ كُنْتُمْ اٰمَنْتُمْ بِاللّٰهِ وَمَٓا اَنْزَلْنَا عَلٰى عَبْدِنَا يَوْمَ الْفُرْقَانِ يَوْمَ الْتَقَى الْجَمْعَانِۜ وَاللّٰهُ عَلٰى كُلِّ شَيْءٍ قَد۪يرٌ ﴿٤١﴾</span>
 41 - Bilin ki, ganimet olarak aldığınız herhangi bir şeyin beşte biri mutlaka Allah'a, Peygamber'e, onun yakınlarına, yetimlere, yoksullara ve yolculara aittir. Eğer Allah'a; hak ile batılın birbirinden ayrıldığı gün, (yani) iki ordunun (Bedir'de) karşılaştığı gün kulumuza indirdiklerimize inandıysanız (bunu böyle bilin). Allah, her şeye hakkıyla gücü yetendir.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اِذْ اَنْتُمْ بِالْعُدْوَةِ الدُّنْيَا وَهُمْ بِالْعُدْوَةِ الْقُصْوٰى وَالرَّكْبُ اَسْفَلَ مِنْكُمْۜ وَلَوْ تَوَاعَدْتُمْ لَاخْتَلَفْتُمْ فِى الْم۪يعَادِۙ وَلٰكِنْ لِيَقْضِىَ اللّٰهُ اَمْرًا كَانَ مَفْعُولًاۙ لِيَهْلِكَ مَنْ هَلَكَ عَنْ بَيِّنَةٍ وَيَحْيٰى مَنْ حَىَّ عَنْ بَيِّنَةٍۜ وَاِنَّ اللّٰهَ لَسَم۪يعٌ عَل۪يمٌۙ ﴿٤٢﴾</span>
@@ -2687,13 +2725,15 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 75 - Daha sonra iman edip hicret eden ve sizinle birlikte cihad edenlere gelince, işte onlar da sizdendir. Allah'ın kitabınca, kan akrabaları birbirlerine (varis olmaya) daha lâyıktırlar. Şüphesiz Allah hakkıyla işitendir, hakkıyla bilendir.
 
 ## 9- Tevbe
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٩﴾ التوبة</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">ڝبَرَٓاءَةٌ مِنَ اللّٰهِ وَرَسُولِه۪ٓ اِلَى الَّذ۪ينَ عَاهَدْتُمْ مِنَ الْمُشْرِك۪ينَۜ ﴿١﴾</span>
 1 - Allah ve Resûlünden, kendileriyle antlaşma yapmış olduğunuz müşriklere kesin bir uyarıdır:
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">فَس۪يحُوا فِى الْاَرْضِ اَرْبَعَةَ اَشْهُرٍ وَاعْلَمُٓوا اَنَّكُمْ غَيْرُ مُعْجِزِى اللّٰهِۙ وَاَنَّ اللّٰهَ مُخْزِى الْكَافِر۪ينَ ﴿٢﴾</span>
 2 - Yeryüzünde dört ay daha dolaşın. Şunu bilin ki, siz Allah'ı âciz bırakacak değilsiniz; Allah ise, inkârcıları perişan edecektir.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَاَذَانٌ مِنَ اللّٰهِ وَرَسُولِه۪ٓ اِلَى النَّاسِ يَوْمَ الْحَجِّ الْاَكْبَرِ اَنَّ اللّٰهَ بَر۪ٓيءٌ مِنَ الْمُشْرِك۪ينَۙ وَرَسُولُهُۜ فَاِنْ تُبْتُمْ فَهُوَ خَيْرٌ لَكُمْۚ وَاِنْ تَوَلَّيْتُمْ فَاعْلَمُٓوا اَنَّكُمْ غَيْرُ مُعْجِزِى اللّٰهِۜ وَبَشِّرِ الَّذ۪ينَ كَفَرُوا بِعَذَابٍ اَل۪يمٍۙ ﴿٣﴾</span>
-3 - Hacc-ı ekber gününde , Allah ve Resûlünden bütün insanlara bir bildiridir: Allah ve Resûlü, Allah'a ortak koşanlardan uzaktır. Eğer tövbe ederseniz, bu sizin için hayırlıdır. Ama yüz çevirirseniz, şunu iyi bilin ki, siz Allah'ı âciz bırakabilecek değilsiniz. İnkârcılara, elem dolu bir azabı müjdele!
+3 - Hacc-ı ekber gününde, Allah ve Resûlünden bütün insanlara bir bildiridir: Allah ve Resûlü, Allah'a ortak koşanlardan uzaktır. Eğer tövbe ederseniz, bu sizin için hayırlıdır. Ama yüz çevirirseniz, şunu iyi bilin ki, siz Allah'ı âciz bırakabilecek değilsiniz. İnkârcılara, elem dolu bir azabı müjdele!
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اِلَّا الَّذ۪ينَ عَاهَدْتُمْ مِنَ الْمُشْرِك۪ينَ ثُمَّ لَمْ يَنْقُصُوكُمْ شَيْـًٔا وَلَمْ يُظَاهِرُوا عَلَيْكُمْ اَحَدًا فَاَتِمُّٓوا اِلَيْهِمْ عَهْدَهُمْ اِلٰى مُدَّتِهِمْۜ اِنَّ اللّٰهَ يُحِبُّ الْمُتَّق۪ينَ ﴿٤﴾</span>
 4 - Ancak Allah'a ortak koşanlardan, kendileriyle antlaşma yapmış olduğunuz, sonra da antlaşmalarında size karşı hiçbir eksiklik yapmamış ve sizin aleyhinize hiç kimseye yardım etmemiş olanlar, bu hükmün dışındadır. Onların antlaşmalarını, süreleri bitinceye kadar tamamlayın. Şüphesiz Allah, kendine karşı gelmekten sakınanları sever.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">فَاِذَا انْسَلَخَ الْاَشْهُرُ الْحُرُمُ فَاقْتُلُوا الْمُشْرِك۪ينَ حَيْثُ وَجَدْتُمُوهُمْ وَخُذُوهُمْ وَاحْصُرُوهُمْ وَاقْعُدُوا لَهُمْ كُلَّ مَرْصَدٍۚ فَاِنْ تَابُوا وَاَقَامُوا الصَّلٰوةَ وَاٰتَوُا الزَّكٰوةَ فَخَلُّوا سَب۪يلَهُمْۜ اِنَّ اللّٰهَ غَفُورٌ رَح۪يمٌ ﴿٥﴾</span>
@@ -2766,7 +2806,7 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 36 - Şüphesiz Allah'ın gökleri ve yeri yarattığı günkü yazısında, Allah katında ayların sayısı on ikidir. Bunlardan dördü haram aylardır. İşte bu, Allah'ın dosdoğru kanunudur. Öyleyse o aylarda kendinize zulmetmeyin. Fakat Allah'a ortak koşanlar sizinle nasıl topyekûn savaşıyorlarsa, siz de onlarla topyekûn savaşın. Bilin ki Allah, kendine karşı gelmekten sakınanlarla beraberdir.
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اِنَّمَا النَّس۪ٓيءُ زِيَادَةٌ فِى الْكُفْرِ يُضَلُّ بِهِ الَّذ۪ينَ كَفَرُوا يُحِلُّونَهُ عَامًا وَيُحَرِّمُونَهُ عَامًا لِيُوَاطِؤُ۫ا عِدَّةَ مَا حَرَّمَ اللّٰهُ فَيُحِلُّوا مَا حَرَّمَ اللّٰهُۜ زُيِّنَ لَهُمْ سُٓوءُ اَعْمَالِهِمْۜ وَاللّٰهُ لَا يَهْدِى الْقَوْمَ الْكَافِر۪ينَ۟ ﴿٣٧﴾</span>
-37 - Haram ayları ertelemek , ancak inkârda daha da ileri gitmektir ki bununla inkâr edenler saptırılır. Allah'ın haram kıldığı ayların sayısına uygun getirip böylece Allah'ın haram kıldığını helâl kılmak için haram ayı bir yıl helâl, bir yıl haram sayıyorlar. Onların bu çirkin işleri, kendilerine süslenip güzel gösterildi. Allah, inkârcı toplumu doğru yola iletmez.
+37 - Haram ayları ertelemek, ancak inkârda daha da ileri gitmektir ki bununla inkâr edenler saptırılır. Allah'ın haram kıldığı ayların sayısına uygun getirip böylece Allah'ın haram kıldığını helâl kılmak için haram ayı bir yıl helâl, bir yıl haram sayıyorlar. Onların bu çirkin işleri, kendilerine süslenip güzel gösterildi. Allah, inkârcı toplumu doğru yola iletmez.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَٓا اَيُّهَا الَّذ۪ينَ اٰمَنُوا مَا لَكُمْ اِذَا ق۪يلَ لَكُمُ انْفِرُوا ف۪ى سَب۪يلِ اللّٰهِ اثَّاقَلْتُمْ اِلَى الْاَرْضِۜ اَرَض۪يتُمْ بِالْحَيٰوةِ الدُّنْيَا مِنَ الْاٰخِرَةِۚ فَمَا مَتَاعُ الْحَيٰوةِ الدُّنْيَا فِى الْاٰخِرَةِ اِلَّا قَل۪يلٌ ﴿٣٨﴾</span>
 38 - Ey iman edenler! Ne oldunuz ki, size "Allah yolunda sefere çıkın" denilince, yere çakılıp kaldınız. Yoksa ahiretten vazgeçip dünya hayatını mı seçtiniz? Oysa ahirete göre dünya hayatının yararı, pek az bir şeydir.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اِلَّا تَنْفِرُوا يُعَذِّبْكُمْ عَذَابًا اَل۪يمًا وَيَسْتَبْدِلْ قَوْمًا غَيْرَكُمْ وَلَا تَضُرُّوهُ شَيْـًٔاۜ وَاللّٰهُ عَلٰى كُلِّ شَيْءٍ قَد۪يرٌ ﴿٣٩﴾</span>
@@ -2889,6 +2929,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 93 - Sorumluluk ancak, zengin oldukları hâlde senden izin isteyenleredir. Bunlar, geride kalan (kadın ve çocuk)larla birlikte olmaya razı oldular. Allah da kalplerini mühürledi. Artık onlar bilmezler.
 
 ## Cüz-11
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَعْتَذِرُونَ اِلَيْكُمْ اِذَا رَجَعْتُمْ اِلَيْهِمْۜ قُلْ لَا تَعْتَذِرُوا لَنْ نُؤْمِنَ لَكُمْ قَدْ نَبَّاَنَا اللّٰهُ مِنْ اَخْبَارِكُمْۜ وَسَيَرَى اللّٰهُ عَمَلَكُمْ وَرَسُولُهُ ثُمَّ تُرَدُّونَ اِلٰى عَالِمِ الْغَيْبِ وَالشَّهَادَةِ فَيُنَبِّئُكُمْ بِمَا كُنْتُمْ تَعْمَلُونَ ﴿٩٤﴾</span>
 94 - Onlara döndüğünüzde, size mazeret beyan edeceklerdir. De ki: "Mazeret beyan etmeyin. Size kesinlikle inanmayız. Çünkü Allah bize sizin durumunuzu bildirdi. Bundan böyle davranışlarınızı Allah da Resûlü de görecek. Sonra hepiniz, gaybı da görülen âlemi de bilene döndürüleceksiniz de yapmakta olduğunuz şeyleri size haber verecek."
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سَيَحْلِفُونَ بِاللّٰهِ لَكُمْ اِذَا انْقَلَبْتُمْ اِلَيْهِمْ لِتُعْرِضُوا عَنْهُمْۜ فَاَعْرِضُوا عَنْهُمْۜ اِنَّهُمْ رِجْسٌۘ وَمَاْوٰيهُمْ جَهَنَّمُۚ جَزَٓاءً بِمَا كَانُوا يَكْسِبُونَ ﴿٩٥﴾</span>
@@ -2929,7 +2971,7 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 111 - Şüphesiz Allah, mü'minlerden canlarını ve mallarını, kendilerine vereceği cennet karşılığında satın almıştır. Artık, onlar Allah yolunda savaşırlar, öldürürler ve ölürler. Allah, bunu Tevrat'ta, İncil'de ve Kur'an'da kesin olarak va'detmiştir. Kimdir sözünü Allah'tan daha iyi yerine getiren? O hâlde, yapmış olduğunuz bu alışverişten dolayı sevinin. İşte asıl bu büyük başarıdır.
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَلتَّٓائِبُونَ الْعَابِدُونَ الْحَامِدُونَ السَّٓائِحُونَ الرَّاكِعُونَ السَّاجِدُونَ الْاٰمِرُونَ بِالْمَعْرُوفِ وَالنَّاهُونَ عَنِ الْمُنْكَرِ وَالْحَافِظُونَ لِحُدُودِ اللّٰهِۜ وَبَشِّرِ الْمُؤْمِن۪ينَ ﴿١١٢﴾</span>
-112 - Bunlar, tövbe edenler, ibâdet edenler, hamdedenler, oruç tutanlar , rükû' ve secde edenler, iyiliği emredip kötülükten alıkoyanlar ve Allah'ın koyduğu sınırları hakkıyla koruyanlardır. Mü'minleri müjdele.
+112 - Bunlar, tövbe edenler, ibâdet edenler, hamdedenler, oruç tutanlar, rükû' ve secde edenler, iyiliği emredip kötülükten alıkoyanlar ve Allah'ın koyduğu sınırları hakkıyla koruyanlardır. Mü'minleri müjdele.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">مَا كَانَ لِلنَّبِىِّ وَالَّذ۪ينَ اٰمَنُٓوا اَنْ يَسْتَغْفِرُوا لِلْمُشْرِك۪ينَ وَلَوْ كَانُٓوا اُو۬ل۪ى قُرْبٰى مِنْ بَعْدِ مَا تَبَيَّنَ لَهُمْ اَنَّهُمْ اَصْحَابُ الْجَح۪يمِ ﴿١١٣﴾</span>
 113 - Cehennem ehli oldukları açıkça kendilerine belli olduktan sonra, -yakınları da olsalar- Allah'a ortak koşanlar için af dilemek ne Peygambere yaraşır, ne de mü'minlere.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَمَا كَانَ اسْتِغْفَارُ اِبْرٰه۪يمَ لِاَب۪يهِ اِلَّا عَنْ مَوْعِدَةٍ وَعَدَهَٓا اِيَّاهُۚ فَلَمَّا تَبَيَّنَ لَهُٓ اَنَّهُ عَدُوٌّ لِلّٰهِ تَبَرَّاَ مِنْهُۜ اِنَّ اِبْرٰه۪يمَ لَاَوَّاهٌ حَل۪يمٌ ﴿١١٤﴾</span>
@@ -2968,6 +3010,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 129 - Eğer yüz çevirirlerse de ki: "Bana Allah yeter. O'ndan başka hiçbir ilâh yoktur. Ben ancak O'na tevekkül ettim. O, yüce Arş'ın sahibidir."
 
 ## 10- Yunus
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">١٠﴾ ‏يونس</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -3200,6 +3244,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَاتَّبِعْ مَا يُوحٰٓى اِلَيْكَ وَاصْبِرْ حَتّٰى يَحْكُمَ اللّٰهُۚ وَهُوَ خَيْرُ الْحَاكِم۪ينَ ﴿١٠٩﴾</span>
 109 - (Ey Muhammed!) Sana vahyolunana uy ve Allah hükmünü verinceye kadar sabret. O, hüküm verenlerin en hayırlısıdır.
 ## 11- Hûd
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">١١﴾ هود</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -3214,6 +3260,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 5 - İyi bilin ki onlar, O'ndan gizlenmek için kalplerindeki düşmanlığı gizliyorlar. Yine iyi bilin ki, elbiselerine büründükleri zaman bile, Allah onların gizlediklerini de açığa vurduklarını da bilir. Çünkü O, göğüslerin özünü (kalplerde olanı) hakkıyla bilendir.
 
 ## Cüz-12
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَمَا مِنْ دَٓابَّةٍ فِى الْاَرْضِ اِلَّا عَلَى اللّٰهِ رِزْقُهَا وَيَعْلَمُ مُسْتَقَرَّهَا وَمُسْتَوْدَعَهَاۜ كُلٌّ ف۪ى كِتَابٍ مُب۪ينٍ ﴿٦﴾</span>
 6 - Yeryüzünde hiçbir canlı yoktur ki, rızkı Allah'a ait olmasın. Her birinin (dünyada) duracakları yeri de, (öldükten sonra) emaneten konulacakları yeri de O bilir. Bunların hepsi açık bir kitapta (Levh-i Mahfuz'da yazılı)dır.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَهُوَ الَّذ۪ى خَلَقَ السَّمٰوَاتِ وَالْاَرْضَ ف۪ى سِتَّةِ اَيَّامٍ وَكَانَ عَرْشُهُ عَلَى الْمَٓاءِ لِيَبْلُوَكُمْ اَيُّكُمْ اَحْسَنُ عَمَلًاۜ وَلَئِنْ قُلْتَ اِنَّكُمْ مَبْعُوثُونَ مِنْ بَعْدِ الْمَوْتِ لَيَقُولَنَّ الَّذ۪ينَ كَفَرُٓوا اِنْ هٰذَٓا اِلَّا سِحْرٌ مُب۪ينٌ ﴿٧﴾</span>
@@ -3460,6 +3508,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَلِلّٰهِ غَيْبُ السَّمٰوَاتِ وَالْاَرْضِ وَاِلَيْهِ يُرْجَعُ الْاَمْرُ كُلُّهُ فَاعْبُدْهُ وَتَوَكَّلْ عَلَيْهِۜ وَمَا رَبُّكَ بِغَافِلٍ عَمَّا تَعْمَلُونَ ﴿١٢٣﴾</span>
 123 - Göklerin ve yerin gaybını bilmek Allah'a mahsustur. Bütün işler O'na döndürülür. Öyle ise O'na kulluk et ve O'na tevekkül et. Rabbin yaptıklarınızdan habersiz değildir.
 ## 12- Yusuf
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">١٢﴾ يوسف</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -3575,6 +3625,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 52 - (Yûsuf), "Benim böyle yapmam, Aziz'in; yokluğunda, benim kendisine hainlik etmediğimi ve Allah'ın, hainlerin tuzaklarını başarıya ulaştırmayacağını bilmesi içindi" dedi.
 
 ## Cüz-13
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَمَٓا اُبَرِّئُ نَفْس۪ىۚ اِنَّ النَّفْسَ لَاَمَّارَةٌ بِالسُّٓوءِ اِلَّا مَا رَحِمَ رَبّ۪ىۜ اِنَّ رَبّ۪ى غَفُورٌ رَح۪يمٌ ﴿٥٣﴾</span>
 53 - "Ben nefsimi temize çıkarmam, çünkü Rabbimin merhamet ettiği hariç, nefis aşırı derecede kötülüğü emreder. Şüphesiz Rabbim çok bağışlayandır, çok merhamet edendir" dedi.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَقَالَ الْمَلِكُ ائْتُون۪ى بِه۪ٓ اَسْتَخْلِصْهُ لِنَفْس۪ىۚ فَلَمَّا كَلَّمَهُ قَالَ اِنَّكَ الْيَوْمَ لَدَيْنَا مَك۪ينٌ اَم۪ينٌ ﴿٥٤﴾</span>
@@ -3701,6 +3753,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 111 - Andolsun ki, onların kıssalarında akıl sahipleri için ibret vardır. Kur'an, uydurulabilecek bir söz değildir. Fakat kendinden öncekileri tasdik eden, her şeyi ayrı ayrı açıklayan ve inanan bir toplum için de bir yol gösterici ve bir rahmettir.
 
 ## 13- Ra’d
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">١٣﴾ الرعد</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -3797,6 +3851,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَيَقُولُ الَّذ۪ينَ كَفَرُوا لَسْتَ مُرْسَلًاۜ قُلْ كَفٰى بِاللّٰهِ شَه۪يدًا بَيْن۪ى وَبَيْنَكُمْۙ وَمَنْ عِنْدَهُ عِلْمُ الْكِتَابِ ﴿٤٣﴾</span>
 43 - İnkâr edenler, "Sen peygamber değilsin" diyorlar. De ki: "Benimle sizin aranızda şahit olarak Allah ve bir de yanında kitap (Kur'an) bilgisi bulunanlar yeter."
 ## 14- İbrahim
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">١٤﴾ إبراهيم</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -3910,7 +3966,11 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 52 - Bu Kur'an; kendisiyle uyarılsınlar, Allah'ın ancak tek ilâh olduğunu bilsinler ve akıl sahipleri düşünüp öğüt alsınlar diye insanlara bir bildiridir.
 
 ## Cüz-14
+
+
 ## 15- Hicr
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">١٥﴾ الحجر</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -4107,6 +4167,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَاعْبُدْ رَبَّكَ حَتّٰى يَاْتِيَكَ الْيَق۪ينُ ﴿٩٩﴾</span>
 99 - Sana ölüm gelinceye kadar Rabbine ibadet et.
 ## 16- Nahl
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">١٦﴾ النحل</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -4381,7 +4443,11 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 128 - Şüphesiz Allah, kendisine karşı gelmekten sakınanlar ve iyilik yapanlarla beraberdir.
 
 ## Cüz-15
+
+
 ## 17- İsrâ
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">١٧﴾ الإسراء</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -4615,6 +4681,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَقُلِ الْحَمْدُ لِلّٰهِ الَّذ۪ى لَمْ يَتَّخِذْ وَلَدًا وَلَمْ يَكُنْ لَهُ شَر۪يكٌ فِى الْمُلْكِ وَلَمْ يَكُنْ لَهُ وَلِىٌّ مِنَ الذُّلِّ وَكَبِّرْهُ تَكْب۪يرًا ﴿١١١﴾</span>
 111 - "Hamd, çocuk edinmeyen, mülkte ortağı olmayan, zillet ve âcizliğin gerektirdiği bir yardımcıya ihtiyacı bulunmayan Allah'a mahsustur" de ve O'nu tekbir ile yücelt.
 ## 18- Kehf
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">١٨﴾ الكهف</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -4772,6 +4840,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 74 - Yine yola koyuldular. Nihayet bir erkek çocukla karşılaştıklarında, adam (hemen) onu öldürdü. Mûsâ, "Bir cana karşılık olmaksızın suçsuz birini mi öldürdün? Andolsun çok kötü bir iş yaptın!" dedi.
 
 ## Cüz-16
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">قَالَ اَلَمْ اَقُلْ لَكَ اِنَّكَ لَنْ تَسْتَط۪يعَ مَعِىَ صَبْرًا ﴿٧٥﴾</span>
 75 - Adam, "Sana, benimle beraberliğe asla sabredemezsin demedim mi?" dedi.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">قَالَ اِنْ سَاَلْتُكَ عَنْ شَيْءٍ بَعْدَهَا فَلَا تُصَاحِبْن۪ىۚ قَدْ بَلَغْتَ مِنْ لَدُنّ۪ى عُذْرًا ﴿٧٦﴾</span>
@@ -4845,6 +4915,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 110 - De ki: "Ben de ancak sizin gibi bir insanım. (Ne var ki) bana, ‘Sizin ilâh'ınız ancak bir tek ilâhtır" diye vahyolunuyor. Kim Rabbine kavuşmayı umuyorsa yararlı bir iş yapsın ve Rabbine ibadette kimseyi ortak koşmasın."
 
 ## 19- Meryem
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">١٩﴾ مريم</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -5045,6 +5117,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَكَمْ اَهْلَكْنَا قَبْلَهُمْ مِنْ قَرْنٍۜ هَلْ تُحِسُّ مِنْهُمْ مِنْ اَحَدٍ اَوْ تَسْمَعُ لَهُمْ رِكْزًا ﴿٩٨﴾</span>
 98 - Biz onlardan önce nice nesilleri helâk ettik. Onlardan hiçbirini hissediyor yahut onların bir fısıltısını olsun işitiyor musun?
 ## 20- Tâ-Hâ
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٢٠﴾ طه</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -5323,7 +5397,11 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 135 - Ey Muhammed, de ki: "Herkes beklemektedir, siz de bekleyin. Yakında kimin düz yolun sahipleri olduğunu, kimin doğru yolu bulduğunu bileceksiniz!"
 
 ## Cüz-17
+
+
 ## 21- Enbiyâ
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٢١﴾ الأنبياء</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -5561,6 +5639,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 112 - (Peygamber), "Ey Rabbim! Hak ile hüküm ver. Bizim Rabbimiz, sizin nitelemelerinize karşı yardımı istenecek olan Rahmân'dır" dedi.
 
 ## 22- Hac
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٢٢﴾ الحج</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -5573,7 +5653,7 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">كُتِبَ عَلَيْهِ اَنَّهُ مَنْ تَوَلَّاهُ فَاَنَّهُ يُضِلُّهُ وَيَهْد۪يهِ اِلٰى عَذَابِ السَّع۪يرِ ﴿٤﴾</span>
 4 - Şeytan hakkında, "Her kim onu dost edinirse, mutlaka o kimseyi saptırır ve onu cehennem azabına sürükler" diye yazılmıştır.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَٓا اَيُّهَا النَّاسُ اِنْ كُنْتُمْ ف۪ى رَيْبٍ مِنَ الْبَعْثِ فَاِنَّا خَلَقْنَاكُمْ مِنْ تُرَابٍ ثُمَّ مِنْ نُطْفَةٍ ثُمَّ مِنْ عَلَقَةٍ ثُمَّ مِنْ مُضْغَةٍ مُخَلَّقَةٍ وَغَيْرِ مُخَلَّقَةٍ لِنُبَيِّنَ لَكُمْۜ وَنُقِرُّ فِى الْاَرْحَامِ مَا نَشَٓاءُ اِلٰٓى اَجَلٍ مُسَمًّى ثُمَّ نُخْرِجُكُمْ طِفْلًا ثُمَّ لِتَبْلُغُٓوا اَشُدَّكُمْۚ وَمِنْكُمْ مَنْ يُتَوَفّٰى وَمِنْكُمْ مَنْ يُرَدُّ اِلٰٓى اَرْذَلِ الْعُمُرِ لِكَيْلَا يَعْلَمَ مِنْ بَعْدِ عِلْمٍ شَيْـًٔاۜ وَتَرَى الْاَرْضَ هَامِدَةً فَاِذَٓا اَنْزَلْنَا عَلَيْهَا الْمَٓاءَ اهْتَزَّتْ وَرَبَتْ وَاَنْبَتَتْ مِنْ كُلِّ زَوْجٍ بَه۪يجٍ ﴿٥﴾</span>
-5 - Ey insanlar! Ölümden sonra diriliş konusunda herhangi bir şüphe içindeyseniz (düşünün ki) hiç şüphesiz biz sizi topraktan, sonra az bir sudan (meniden), sonra bir "alaka"dan , sonra da yaratılışı belli belirsiz bir "mudga"dan yarattık ki size (kudretimizi) apaçık anlatalım. Dilediğimizi belli bir süreye kadar rahimlerde durduruyoruz. Sonra sizi bir çocuk olarak çıkarıyor, sonra da (akıl, temyiz ve kuvvette) tam gücünüze ulaşmanız için (sizi kemale erdiriyoruz.) İçinizden ölenler olur. Yine içinizden bir kısmı da ömrün en düşkün çağına ulaştırılır ki, bilirken hiçbir şey bilmez hâle gelsin. Yeryüzünü de ölü, kupkuru görürsün. Biz, onun üzerine yağmur indirdiğimiz zaman kıpırdar, kabarır ve her türden iç açıcı çift çift bitkiler bitirir.
+5 - Ey insanlar! Ölümden sonra diriliş konusunda herhangi bir şüphe içindeyseniz (düşünün ki) hiç şüphesiz biz sizi topraktan, sonra az bir sudan (meniden), sonra bir "alaka"dan, sonra da yaratılışı belli belirsiz bir "mudga"dan yarattık ki size (kudretimizi) apaçık anlatalım. Dilediğimizi belli bir süreye kadar rahimlerde durduruyoruz. Sonra sizi bir çocuk olarak çıkarıyor, sonra da (akıl, temyiz ve kuvvette) tam gücünüze ulaşmanız için (sizi kemale erdiriyoruz.) İçinizden ölenler olur. Yine içinizden bir kısmı da ömrün en düşkün çağına ulaştırılır ki, bilirken hiçbir şey bilmez hâle gelsin. Yeryüzünü de ölü, kupkuru görürsün. Biz, onun üzerine yağmur indirdiğimiz zaman kıpırdar, kabarır ve her türden iç açıcı çift çift bitkiler bitirir.
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">ذٰلِكَ بِاَنَّ اللّٰهَ هُوَ الْحَقُّ وَاَنَّهُ يُحْىِ الْمَوْتٰى وَاَنَّهُ عَلٰى كُلِّ شَيْءٍ قَد۪يرٌۙ ﴿٦﴾</span>
 6 - Bu böyle. Çünkü Allah, hakkın ta kendisidir. Şüphesiz O, ölüleri diriltir ve O, her şeye hakkıyla kadirdir.
@@ -5729,7 +5809,11 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 78 - Allah uğrunda hakkıyla cihad edin. O, sizi seçti ve dinde üzerinize hiçbir güçlük yüklemedi. Babanız İbrahim'in dinine uyun. Allah, sizi hem daha önce, hem de bu Kur'an'da müslüman diye isimlendirdi ki, Peygamber size şahit (ve örnek) olsun, siz de insanlara şahit (ve örnek) olasınız. Artık namazı dosdoğru kılın, zekâtı verin ve Allah'a sarılın. O, sizin sahibinizdir. O, ne güzel sahip, ne güzel yardımcıdır!
 
 ## Cüz-18
+
+
 ## 23- Mü’minûn
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٢٣﴾ المؤمنون</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -5972,6 +6056,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 118 - De ki: "Rabbim! Bağışla, merhamet et. Çünkü sen merhamet edenlerin en hayırlısısın!"
 
 ## 24- Nûr
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٢٤﴾ النور</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -6110,6 +6196,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَلَٓا اِنَّ لِلّٰهِ مَا فِى السَّمٰوَاتِ وَالْاَرْضِۜ قَدْ يَعْلَمُ مَٓا اَنْتُمْ عَلَيْهِۜ وَيَوْمَ يُرْجَعُونَ اِلَيْهِ فَيُنَبِّئُهُمْ بِمَا عَمِلُواۜ وَاللّٰهُ بِكُلِّ شَيْءٍ عَل۪يمٌ ﴿٦٤﴾</span>
 64 - Bilmiş olun ki şüphesiz göklerdeki her şey, yerdeki her şey Allah'ındır. O, içinde bulunduğunuz durumu gerçekten bilir. Allah'a döndürülecekleri ve yaptıklarını Allah'ın onlara haber vereceği günü hatırla. Allah, her şeyi hakkıyla bilendir.
 ## 25- Furkan
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٢٥﴾ الفرقان</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -6157,6 +6245,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 20 - Senden önce gönderdiğimiz bütün peygamberler de şüphesiz yemek yerler, çarşıda pazarda gezerlerdi. (Ey insanlar!) Sizi birbiriniz için imtihan aracı kıldık. (Bakalım) sabredecek misiniz? Rabbin, hakkıyla görendir.
 
 ## Cüz-19
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَقَالَ الَّذ۪ينَ لَا يَرْجُونَ لِقَٓاءَنَا لَوْلَٓا اُنْزِلَ عَلَيْنَا الْمَلٰٓئِكَةُ اَوْ نَرٰى رَبَّنَاۜ لَقَدِ اسْتَكْبَرُوا ف۪ٓى اَنْفُسِهِمْ وَعَتَوْ عُتُوًّا كَب۪يرًا ﴿٢١﴾</span>
 21 - Bize kavuşacaklarını ummayanlar, "Bize melekler indirilseydi, yahut Rabbimizi görseydik ya!" dediler. Andolsun, onlar kendi benliklerinde büyüklük tasladılar ve büyük bir taşkınlık gösterdiler.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَوْمَ يَرَوْنَ الْمَلٰٓئِكَةَ لَا بُشْرٰى يَوْمَئِذٍ لِلْمُجْرِم۪ينَ وَيَقُولُونَ حِجْرًا مَحْجُورًا ﴿٢٢﴾</span>
@@ -6275,6 +6365,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 77 - (Ey Muhammed!) De ki: "Duanız olmasa, Rabbim size ne diye değer versin! Siz yalanladınız. Öyle ise azap yakanızı bırakmayacak."
 
 ## 26- Şuarâ
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٢٦﴾ الشعراء</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -6722,6 +6814,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 227 - Ancak iman edip salih amel işleyen, Allah'ı çok anan ve haksızlığa uğratıldıktan sonra öçlerini alanlar başka. Zulmedenler hangi akıbete uğrayacaklarını göreceklerdir.
 
 ## 27- Neml
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٢٧﴾ النمل</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -6803,7 +6897,7 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">قَالَ يَٓا اَيُّهَا الْمَلَؤُ۬ا اَيُّكُمْ يَاْت۪ين۪ى بِعَرْشِهَا قَبْلَ اَنْ يَاْتُون۪ى مُسْلِم۪ينَ ﴿٣٨﴾</span>
 38 - Süleyman, "Ey ileri gelenler! Onlar bana teslim olmadan önce hanginiz bana onun (kraliçenin) tahtını getirebilir?"
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">قَالَ عِفْر۪يتٌ مِنَ الْجِنِّ اَنَا۬ اٰت۪يكَ بِه۪ قَبْلَ اَنْ تَقُومَ مِنْ مَقَامِكَۚ وَاِنّ۪ى عَلَيْهِ لَقَوِىٌّ اَم۪ينٌ ﴿٣٩﴾</span>
-39 - Cinlerden bir ifrit , "Sen yerinden kalkmadan ben onu sana getiririm ve şüphesiz ben, buna güç yetirecek güvenilir biriyim" dedi.
+39 - Cinlerden bir ifrit, "Sen yerinden kalkmadan ben onu sana getiririm ve şüphesiz ben, buna güç yetirecek güvenilir biriyim" dedi.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">قَالَ الَّذ۪ى عِنْدَهُ عِلْمٌ مِنَ الْكِتَابِ اَنَا۬ اٰت۪يكَ بِه۪ قَبْلَ اَنْ يَرْتَدَّ اِلَيْكَ طَرْفُكَۜ فَلَمَّا رَاٰهُ مُسْتَقِرًّا عِنْدَهُ قَالَ هٰذَا مِنْ فَضْلِ رَبّ۪ي۠ لِيَبْلُوَن۪ٓى ءَاَشْكُرُ اَمْ اَكْفُرُۜ وَمَنْ شَكَرَ فَاِنَّمَا يَشْكُرُ لِنَفْسِه۪ۚ وَمَنْ كَفَرَ فَاِنَّ رَبّ۪ى غَنِىٌّ كَر۪يمٌ ﴿٤٠﴾</span>
 40 - Kitaptan bilgisi olan biri, "Ben onu, gözünü kapayıp açmadan önce sana getiririm" dedi. Süleyman, tahtı yanında yerleşmiş hâlde görünce şöyle dedi: "Bu, şükür mü, yoksa nankörlük mü edeceğim diye beni denemek için, Rabbimin bana bir lütfudur. Kim şükrederse ancak kendisi için şükretmiş olur. Kim de nankörlük ederse (bilsin ki) Rabbim her bakımdan sınırsız zengindir, cömerttir."
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">قَالَ نَكِّرُوا لَهَا عَرْشَهَا نَنْظُرْ اَتَهْتَد۪ٓى اَمْ تَكُونُ مِنَ الَّذ۪ينَ لَا يَهْتَدُونَ ﴿٤١﴾</span>
@@ -6839,6 +6933,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 55 - "Siz kadınları bırakıp şehvetle erkeklere mi varıyorsunuz? Doğrusu siz ne yaptığını bilmez bir toplumsunuz."
 
 ## Cüz-20
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">فَمَا كَانَ جَوَابَ قَوْمِه۪ٓ اِلَّٓا اَنْ قَالُٓوا اَخْرِجُٓوا اٰلَ لُوطٍ مِنْ قَرْيَتِكُمْۚ اِنَّهُمْ اُنَاسٌ يَتَطَهَّرُونَ ﴿٥٦﴾</span>
 56 - Bunun üzerine kavminin cevabı ancak şöyle demek oldu: "Lût'un ailesini memleketinizden çıkarın. Çünkü onlar temiz kalmak isteyen insanlarmış(!)"
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">فَاَنْجَيْنَاهُ وَاَهْلَهُٓ اِلَّا امْرَاَتَهُۘ قَدَّرْنَاهَا مِنَ الْغَابِر۪ينَ ﴿٥٧﴾</span>
@@ -6918,6 +7014,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَقُلِ الْحَمْدُ لِلّٰهِ سَيُر۪يكُمْ اٰيَاتِه۪ فَتَعْرِفُونَهَاۜ وَمَا رَبُّكَ بِغَافِلٍ عَمَّا تَعْمَلُونَ ﴿٩٣﴾</span>
 93 - De ki: "Hamd Allah'a mahsustur. O, âyetlerini size gösterecek ve siz de onları tanıyacaksınız. Rabbin, yaptıklarınızdan habersiz değildir."
 ## 28- Kasas
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٢٨﴾ القصص</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -7109,6 +7207,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَلَا تَدْعُ مَعَ اللّٰهِ اِلٰهًا اٰخَرَۢ لَٓا اِلٰهَ اِلَّا هُوَ۠ كُلُّ شَيْءٍ هَالِكٌ اِلَّا وَجْهَهُۜ لَهُ الْحُكْمُ وَاِلَيْهِ تُرْجَعُونَ ﴿٨٨﴾</span>
 88 - Sen Allah ile beraber başka bir ilâha ibadet etme. O'ndan başka hiçbir ilâh yoktur. O'nun zatından başka her şey yok olacaktır. Hüküm yalnızca O'nundur ve kesinlikle O'na döndürüleceksiniz.
 ## 29- Ankebût
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٢٩﴾ العنكبوت</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -7209,6 +7309,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 45 - (Ey Muhammed!) Kitaptan sana vahyolunanı oku, namazı da dosdoğru kıl. Çünkü namaz, insanı hayâsızlıktan ve kötülükten alıkor. Allah'ı anmak (olan namaz) elbette en büyük ibadettir. Allah, yaptıklarınızı biliyor.
 
 ## Cüz-21
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَلَا تُجَادِلُٓوا اَهْلَ الْكِتَابِ اِلَّا بِالَّت۪ى هِىَ اَحْسَنُۗ اِلَّا الَّذ۪ينَ ظَلَمُوا مِنْهُمْ وَقُولُٓوا اٰمَنَّا بِالَّذ۪ٓى اُنْزِلَ اِلَيْنَا وَاُنْزِلَ اِلَيْكُمْ وَاِلٰهُنَا وَاِلٰهُكُمْ وَاحِدٌ وَنَحْنُ لَهُ مُسْلِمُونَ ﴿٤٦﴾</span>
 46 - İçlerinden zulmedenler hariç, Kitap ehli ile ancak en güzel bir yolla mücadele edin ve (onlara) şöyle deyin: "Biz, bize indirilene de, size indirilene de inandık. Bizim ilâhımız ve sizin ilâhınız birdir (aynı ilâhtır). Biz sadece O'na teslim olmuş kimseleriz."
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَكَذٰلِكَ اَنْزَلْنَٓا اِلَيْكَ الْكِتَابَۜ فَالَّذ۪ينَ اٰتَيْنَاهُمُ الْكِتَابَ يُؤْمِنُونَ بِه۪ۚ وَمِنْ هٰٓؤُ۬لَٓاءِ مَنْ يُؤْمِنُ بِه۪ۜ وَمَا يَجْحَدُ بِاٰيَاتِنَٓا اِلَّا الْكَافِرُونَ ﴿٤٧﴾</span>
@@ -7259,6 +7361,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَالَّذ۪ينَ جَاهَدُوا ف۪ينَا لَنَهْدِيَنَّهُمْ سُبُلَنَاۜ وَاِنَّ اللّٰهَ لَمَعَ الْمُحْسِن۪ينَ ﴿٦٩﴾</span>
 69 - Bizim uğrumuzda cihad edenler var ya, biz onları mutlaka yollarımıza ileteceğiz. Şüphesiz Allah, mutlaka iyilik yapanlarla beraberdir.
 ## 30- Rûm
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٣٠﴾ الروم</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -7386,6 +7490,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 60 - Sabret. Şüphesiz, Allah'ın va'di gerçektir. Kesin imana sahip olmayanlar sakın seni gevşekliğe (ve tedirginliğe) sürüklemesinler.
 
 ## 31- Lokman
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٣١﴾ لقمان</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -7460,6 +7566,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 34 - Kıyametin ne zaman kopacağı bilgisi şüphesiz yalnızca Allah katındadır. O, yağmuru indirir, rahimlerdekini bilir. Hiç kimse yarın ne kazanacağını bilemez. Hiç kimse nerede öleceğini de bilemez. Şüphesiz Allah hakkıyla bilendir, (her şeyden) hakkıyla haberdar olandır.
 
 ## 32- Secde
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٣٢﴾ السجدة</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -7527,6 +7635,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 30 - Şimdi sen onlardan yüz çevir ve bekle. Şüphesiz onlar da bekliyorlar.
 
 ## 33- Ahzâb
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٣٣﴾ الأحزاب</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -7594,6 +7704,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 30 - Ey Peygamber'in hanımları! İçinizden kim apaçık bir çirkinlik yaparsa, onun cezası iki kat verilir. Bu, Allah'a göre kolaydır.
 
 ## Cüz-22
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَمَنْ يَقْنُتْ مِنْكُنَّ لِلّٰهِ وَرَسُولِه۪ وَتَعْمَلْ صَالِحًا نُؤْتِهَٓا اَجْرَهَا مَرَّتَيْنِۙ وَاَعْتَدْنَا لَهَا رِزْقًا كَر۪يمًا ﴿٣١﴾</span>
 31 - İçinizden kim Allah'a ve Resûlüne itaat eder ve salih bir amel işlerse, ona mükâfatını iki kat veririz. Biz, ona bereketli bir rızık hazırlamışızdır.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَا نِسَٓاءَ النَّبِىِّ لَسْتُنَّ كَاَحَدٍ مِنَ النِّسَٓاءِ اِنِ اتَّقَيْتُنَّ فَلَا تَخْضَعْنَ بِالْقَوْلِ فَيَطْمَعَ الَّذ۪ى ف۪ى قَلْبِه۪ مَرَضٌ وَقُلْنَ قَوْلًا مَعْرُوفًاۚ ﴿٣٢﴾</span>
@@ -7684,6 +7796,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 73 - Allah, münafık erkeklere ve münafık kadınlara, Allah'a ortak koşan erkeklere ve Allah'a ortak koşan kadınlara azap etmek; mü'min erkeklerin ve mü'min kadınların da tövbelerini kabul etmek için insana emaneti yüklemiştir. Allah çok bağışlayandır, çok merhamet edendir.
 
 ## 34- Sebe’
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٣٤﴾ سبأ</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -7801,6 +7915,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَح۪يلَ بَيْنَهُمْ وَبَيْنَ مَا يَشْتَهُونَ كَمَا فُعِلَ بِاَشْيَاعِهِمْ مِنْ قَبْلُۜ اِنَّهُمْ كَانُوا ف۪ى شَكٍّ مُر۪يبٍ ﴿٥٤﴾</span>
 54 - Tıpkı daha önce benzerlerine yapıldığı gibi, kendileriyle arzuladıkları arasına bir engel konmuştur. Çünkü onlar derin bir şüphe içindeydiler.
 ## 35- Fâtır
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٣٥﴾ فاطر</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -7901,6 +8017,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَلَوْ يُؤَاخِذُ اللّٰهُ النَّاسَ بِمَا كَسَبُوا مَا تَرَكَ عَلٰى ظَهْرِهَا مِنْ دَٓابَّةٍ وَلٰكِنْ يُؤَخِّرُهُمْ اِلٰٓى اَجَلٍ مُسَمًّىۚ فَاِذَا جَٓاءَ اَجَلُهُمْ فَاِنَّ اللّٰهَ كَانَ بِعِبَادِه۪ بَص۪يرًا ﴿٤٥﴾</span>
 45 - Eğer Allah, insanları kazandıkları yüzünden hemen cezalandıracak olsaydı, yerkürenin sırtında hiçbir canlı bırakmazdı. Ne var ki, onları belirli bir süreye kadar erteliyor. Nihayet süreleri gelince, (gerekeni yapar). Çünkü Allah, kullarını hakkıyla görmektedir.
 ## 36- Yâsin
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٣٦﴾ يس</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -7957,6 +8075,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 27 - (26-27) (Kavmi onu öldürdüğünde kendisine): "Cennete gir!" denildi. O da, "Keşke kavmim, Rabbimin beni bağışladığını ve beni ikram edilenlerden kıldığını bilseydi!" dedi.
 
 ## Cüz-23
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَمَٓا اَنْزَلْنَا عَلٰى قَوْمِه۪ مِنْ بَعْدِه۪ مِنْ جُنْدٍ مِنَ السَّمَٓاءِ وَمَا كُنَّا مُنْزِل۪ينَ ﴿٢٨﴾</span>
 28 - Kendisinden sonra kavmi üzerine (onları cezalandırmak için) gökten hiçbir ordu indirmedik. İndirecek de değildik.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اِنْ كَانَتْ اِلَّا صَيْحَةً وَاحِدَةً فَاِذَا هُمْ خَامِدُونَ ﴿٢٩﴾</span>
@@ -8072,6 +8192,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 83 - Her şeyin hükümranlığı elinde olan Allah'ın şanı yücedir! Siz yalnız O'na döndürüleceksiniz.
 
 ## 37- Sâffât
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٣٧﴾ الصافات</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -8427,6 +8549,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 182 - Hamd, âlemlerin Rabbi olan Allah'a mahsustur.
 
 ## 38- Sâd
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٣٨﴾ ص</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -8492,7 +8616,7 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 31 - Hani ona akşamüstü bir ayağını tırnağı üstüne dikip üç ayağının üzerinde duran çalımlı ve soylu atlar sunulmuştu.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">فَقَالَ اِنّ۪ٓى اَحْبَبْتُ حُبَّ الْخَيْرِ عَنْ ذِكْرِ رَبّ۪ىۚ حَتّٰى تَوَارَتْ بِالْحِجَابِ۠ ﴿٣٢﴾</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">رُدُّوهَا عَلَىَّۜ فَطَفِقَ مَسْحًا بِالسُّوقِ وَالْاَعْنَاقِ ﴿٣٣﴾</span>
-33 - (32-33) Süleyman, "Gerçekten ben malı, Rabbimi anmamı sağladığından dolayı çok severim" dedi. Nihayet gözden kaybolup gittikleri zaman , "Onları bana geri getirin" dedi. (Atlar gelince de) bacaklarını ve boyunlarını okşamaya başladı.
+33 - (32-33) Süleyman, "Gerçekten ben malı, Rabbimi anmamı sağladığından dolayı çok severim" dedi. Nihayet gözden kaybolup gittikleri zaman, "Onları bana geri getirin" dedi. (Atlar gelince de) bacaklarını ve boyunlarını okşamaya başladı.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَلَقَدْ فَتَنَّا سُلَيْمٰنَ وَاَلْقَيْنَا عَلٰى كُرْسِيِّه۪ جَسَدًا ثُمَّ اَنَابَ ﴿٣٤﴾</span>
 34 - Andolsun, biz Süleyman'ı imtihan ettik. Tahtının üstüne bir ceset bıraktık. Sonra tövbe edip bize yöneldi.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">قَالَ رَبِّ اغْفِرْ ل۪ى وَهَبْ ل۪ى مُلْكًا لَا يَنْبَغ۪ى لِاَحَدٍ مِنْ بَعْد۪ىۚ اِنَّكَ اَنْتَ الْوَهَّابُ ﴿٣٥﴾</span>
@@ -8602,6 +8726,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَلَتَعْلَمُنَّ نَبَاَهُ بَعْدَ ح۪ينٍ ﴿٨٨﴾</span>
 88 - "Onun haberlerinin doğruluğunu bir süre sonra mutlaka öğreneceksiniz."
 ## 39- Zümer
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٣٩﴾ الزمر</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -8640,7 +8766,7 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَهُمْ مِنْ فَوْقِهِمْ ظُلَلٌ مِنَ النَّارِ وَمِنْ تَحْتِهِمْ ظُلَلٌۜ ذٰلِكَ يُخَوِّفُ اللّٰهُ بِه۪ عِبَادَهُۜ يَا عِبَادِ فَاتَّقُونِ ﴿١٦﴾</span>
 16 - Onlar için üstlerinde ateşten katmanlar, altlarında (ateşten) katmanlar vardır. İşte Allah, kullarını bununla korkutur. Ey kullarım, bana karşı gelmekten sakının.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَالَّذ۪ينَ اجْتَنَبُوا الطَّاغُوتَ اَنْ يَعْبُدُوهَا وَاَنَابُٓوا اِلَى اللّٰهِ لَهُمُ الْبُشْرٰىۚ فَبَشِّرْ عِبَادِۙ ﴿١٧﴾</span>
-17 - Tâğût'tan , ona kulluk etmekten kaçınan ve içtenlikle Allah'a yönelenler için müjde vardır. O hâlde, kullarımı müjdele!
+17 - Tâğût'tan, ona kulluk etmekten kaçınan ve içtenlikle Allah'a yönelenler için müjde vardır. O hâlde, kullarımı müjdele!
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَلَّذ۪ينَ يَسْتَمِعُونَ الْقَوْلَ فَيَتَّبِعُونَ اَحْسَنَهُۜ اُو۬لٰٓئِكَ الَّذ۪ينَ هَدٰيهُمُ اللّٰهُ وَاُو۬لٰٓئِكَ هُمْ اُو۬لُوا الْاَلْبَابِ ﴿١٨﴾</span>
 18 - Sözü dinleyip de onun en güzeline uyanlar var ya, işte onlar Allah'ın hidayete erdirdiği kimselerdir. İşte onlar akıl sahiplerinin ta kendileridir.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَفَمَنْ حَقَّ عَلَيْهِ كَلِمَةُ الْعَذَابِۜ اَفَاَنْتَ تُنْقِذُ مَنْ فِى النَّارِۚ ﴿١٩﴾</span>
@@ -8672,6 +8798,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 31 - Sonra şüphesiz siz kıyamet günü Rabbinizin huzurunda muhakeme edileceksiniz.
 
 ## Cüz-24
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">فَمَنْ اَظْلَمُ مِمَّنْ كَذَبَ عَلَى اللّٰهِ وَكَذَّبَ بِالصِّدْقِ اِذْ جَٓاءَهُۜ اَلَيْسَ ف۪ى جَهَنَّمَ مَثْوًى لِلْكَافِر۪ينَ ﴿٣٢﴾</span>
 32 - Kim, Allah'a karşı yalan uyduran ve kendisine geldiğinde, doğruyu (Kur'an'ı) yalanlayandan daha zalimdir? Cehennemde kâfirler için kalacak bir yer mi yok!?
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَالَّذ۪ى جَٓاءَ بِالصِّدْقِ وَصَدَّقَ بِه۪ٓ اُو۬لٰٓئِكَ هُمُ الْمُتَّقُونَ ﴿٣٣﴾</span>
@@ -8764,6 +8892,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَتَرَى الْمَلٰٓئِكَةَ حَٓافّ۪ينَ مِنْ حَوْلِ الْعَرْشِ يُسَبِّحُونَ بِحَمْدِ رَبِّهِمْۚ وَقُضِىَ بَيْنَهُمْ بِالْحَقِّ وَق۪يلَ الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ ﴿٧٥﴾</span>
 75 - Melekleri de, Rablerini hamd ile tesbih edip yücelterek Arş'ın etrafını kuşatmış hâlde görürsün. Artık kulların arasında adaletle hüküm verilmiş ve "Hamd âlemlerin Rabbi olan Allah'a mahsustur" denilmiştir.
 ## 40- Mü’min
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٤٠﴾ سُورَةُ الْمُؤْمِنِ</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -8940,6 +9070,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 85 - Fakat azâbımızı gördükleri zaman inanmaları, kendilerine fayda vermedi. Bu, Allah'ın kulları hakkında eskiden beri yürürlükte olan kanunudur. İşte orada inkârcılar hüsrana uğradılar.
 
 ## 41- Fussilet
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٤١﴾ فصلت</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -9040,6 +9172,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 46 - Kim iyi bir iş yaparsa kendi lehinedir. Kim de kötülük yaparsa kendi aleyhinedir. Rabbin, kullara (zerre kadar) zulmedici değildir.
 
 ## Cüz-25
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اِلَيْهِ يُرَدُّ عِلْمُ السَّاعَةِۜ وَمَا تَخْرُجُ مِنْ ثَمَرَاتٍ مِنْ اَكْمَامِهَا وَمَا تَحْمِلُ مِنْ اُنْثٰى وَلَا تَضَعُ اِلَّا بِعِلْمِه۪ۜ وَيَوْمَ يُنَاد۪يهِمْ اَيْنَ شُرَكَٓاء۪ىۙ قَالُٓوا اٰذَنَّاكَۙ مَا مِنَّا مِنْ شَه۪يدٍۚ ﴿٤٧﴾</span>
 47 - Kıyametin ne zaman kopacağına ilişkin bilgi O'na havale edilir. Meyveler tomurcuklarından ancak O'nun bilgisi altında çıkar, dişi ancak O'nun bilgisi altında hamile kalır ve doğurur. Allah onlara, "Nerede bana ortak koştuklarınız?" diye seslendiği gün şöyle derler: "Sana arz ederiz ki, içimizden onları gören hiçbir kimse yok."
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَضَلَّ عَنْهُمْ مَا كَانُوا يَدْعُونَ مِنْ قَبْلُ وَظَنُّوا مَا لَهُمْ مِنْ مَح۪يصٍ ﴿٤٨﴾</span>
@@ -9058,6 +9192,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 54 - İyi bilin ki, onlar Rablerine kavuşma konusunda şüphe içindedirler. İyi bilin ki, O, her şeyi kuşatandır.
 
 ## 42- Şûrâ
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٤٢﴾ الشورى</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -9170,6 +9306,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">صِرَاطِ اللّٰهِ الَّذ۪ى لَهُ مَا فِى السَّمٰوَاتِ وَمَا فِى الْاَرْضِۜ اَلَٓا اِلَى اللّٰهِ تَص۪يرُ الْاُمُورُ ﴿٥٣﴾</span>
 53 - (52-53) İşte sana da, emrimizle, bir ruh (kalpleri dirilten bir kitap) vahyettik. Sen kitap nedir, iman nedir bilmezdin. Fakat biz onu, kullarımızdan dilediğimizi, kendisiyle doğru yola eriştireceğimiz bir nur yaptık. Şüphesiz ki sen doğru bir yola iletiyorsun; göklerdeki ve yerdeki her şeyin sahibi olan Allah'ın yoluna. İyi bilin ki, bütün işler sonunda Allah'a döner.
 ## 43- Zuhruf
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٤٣﴾ الزخرف</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -9354,6 +9492,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 89 - Şimdilik sen onları hoş gör ve "size selâm olsun" de. Yakında bilecekler.
 
 ## 44- Duhân
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٤٤﴾ الدخان</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -9471,6 +9611,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 59 - Artık sen (onların başına gelecekleri) bekle; onlar da beklemektedirler.
 
 ## 45- Câsiye
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٤٥﴾ الجاثية</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -9542,6 +9684,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 32 - "Şüphesiz, Allah'ın va'di gerçektir, kıyamet hakkında hiçbir şüphe yoktur" dendiği zaman ise; "Kıyametin ne olduğunu bilmiyoruz, sadece zannediyoruz. Biz bu konuda kesin kanaat sahibi değiliz" demiştiniz.
 
 ## Cüz-26
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَبَدَا لَهُمْ سَيِّـَٔاتُ مَا عَمِلُوا وَحَاقَ بِهِمْ مَا كَانُوا بِه۪ يَسْتَهْزِؤُ۫نَ ﴿٣٣﴾</span>
 33 - Yaptıklarının kötülükleri karşılarına dikilmiş ve alay edip durdukları şey, kendilerini kuşatıvermiştir.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَق۪يلَ الْيَوْمَ نَنْسٰيكُمْ كَمَا نَس۪يتُمْ لِقَٓاءَ يَوْمِكُمْ هٰذَا وَمَاْوٰيكُمُ النَّارُ وَمَا لَكُمْ مِنْ نَاصِر۪ينَ ﴿٣٤﴾</span>
@@ -9553,6 +9697,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَلَهُ الْكِبْرِيَٓاءُ فِى السَّمٰوَاتِ وَالْاَرْضِۖ وَهُوَ الْعَز۪يزُ الْحَك۪يمُ ﴿٣٧﴾</span>
 37 - Göklerde ve yerde ululuk O'na aittir. O, mutlak güç sahibidir, hüküm ve hikmet sahibidir.
 ## 46- Ahkaf
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٤٦﴾ الأحقاف</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -9632,6 +9778,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 35 - (Ey Muhammed!) O hâlde, yüksek azim sahibi peygamberlerin sabretmesi gibi sabret. Onlar için acele etme. Onlar tehdit edildikleri azabı gördükleri gün, sanki dünyada gündüzün bir anından başka kalmadıklarını sanırlar. Bu bir duyurudur. Ancak yoldan çıkmış olan topluluk helâk edilir.
 
 ## 47- Muhammed
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٤٧﴾ محمد</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -9716,6 +9864,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 38 - İşte sizler, Allah yolunda harcamaya çağrılıyorsunuz. Ama içinizden cimrilik yapanlar var. Kim cimrilik yaparsa ancak kendi zararına cimrilik yapmış olur. Allah, her bakımdan sınırsız zengindir, siz ise fakirsiniz. Eğer O'ndan yüz çevirecek olursanız, yerinize başka bir toplum getirir de onlar sizin gibi olmazlar.
 
 ## 48- Fetih
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٤٨﴾ الفتح</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -9780,6 +9930,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">مُحَمَّدٌ رَسُولُ اللّٰهِۜ وَالَّذ۪ينَ مَعَهُٓ اَشِدَّٓاءُ عَلَى الْكُفَّارِ رُحَمَٓاءُ بَيْنَهُمْ تَرٰيهُمْ رُكَّعًا سُجَّدًا يَبْتَغُونَ فَضْلًا مِنَ اللّٰهِ وَرِضْوَانًاۘ س۪يمَاهُمْ ف۪ى وُجُوهِهِمْ مِنْ اَثَرِ السُّجُودِۜ ذٰلِكَ مَثَلُهُمْ فِى التَّوْرٰيةِۚۛ وَمَثَلُهُمْ فِى الْاِنْج۪يلِ۠ۛ كَزَرْعٍ اَخْرَجَ شَطْـَٔهُ۫ فَاٰزَرَهُ فَاسْتَغْلَظَ فَاسْتَوٰى عَلٰى سُوقِه۪ يُعْجِبُ الزُّرَّاعَ لِيَغ۪يظَ بِهِمُ الْكُفَّارَۜ وَعَدَ اللّٰهُ الَّذ۪ينَ اٰمَنُوا وَعَمِلُوا الصَّالِحَاتِ مِنْهُمْ مَغْفِرَةً وَاَجْرًا عَظ۪يمًا ﴿٢٩﴾</span>
 29 - Muhammed, Allah'ın Resûlüdür. Onunla beraber olanlar, inkârcılara karşı çetin, birbirlerine karşı da merhametlidirler. Onların, rükû ve secde hâlinde, Allah'tan lütuf ve hoşnutluk istediklerini görürsün. Onların secde eseri olan alametleri yüzlerindedir. İşte bu, onların Tevrat'ta ve İncil'de anlatılan durumlarıdır: Onlar filizini çıkarmış, onu kuvvetlendirmiş, kalınlaşmış, gövdesi üzerine dikilmiş, ziraatçıların hoşuna giden bir ekin gibidirler. Allah, kendileri sebebiyle inkârcıları öfkelendirmek için onları böyle sağlam ve dirençli kılar. Allah, içlerinden iman edip salih amel işleyenlere bir bağışlama ve büyük bir mükâfat vaad etmiştir.
 ## 49- Hucurât
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٤٩﴾ الحجرات</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -9823,6 +9975,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 18 - Şüphesiz Allah, göklerin ve yerin gaybını bilir. Allah, yaptıklarınızı hakkıyla görendir.
 
 ## 50- Kaf
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٥٠﴾ ق</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -9912,6 +10066,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">نَحْنُ اَعْلَمُ بِمَا يَقُولُونَ وَمَٓا اَنْتَ عَلَيْهِمْ بِجَبَّارٍ فَذَكِّرْ بِالْقُرْاٰنِ مَنْ يَخَافُ وَع۪يدِ ﴿٤٥﴾</span>
 45 - Biz onların ne dediklerini çok iyi biliyoruz. Sen, onlara karşı bir zorba değilsin. O hâlde sen, benim uyarımdan korkan kimselere Kur'an ile öğüt ver.
 ## 51- Zâriyât
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٥١﴾ الذاريات</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -9968,6 +10124,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 30 - Onlar dediler ki: "Rabbin böyle buyurdu. Şüphesiz O, hüküm ve hikmet sahibidir, hakkıyla bilendir."
 
 ## Cüz-27
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">قَالَ فَمَا خَطْبُكُمْ اَيُّهَا الْمُرْسَلُونَ ﴿٣١﴾</span>
 31 - İbrahim, onlara: "O hâlde asıl işiniz nedir ey elçiler?" dedi.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">قَالُٓوا اِنَّٓا اُرْسِلْنَٓا اِلٰى قَوْمٍ مُجْرِم۪ينَۙ ﴿٣٢﴾</span>
@@ -10028,6 +10186,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">فَوَيْلٌ لِلَّذ۪ينَ كَفَرُوا مِنْ يَوْمِهِمُ الَّذ۪ى يُوعَدُونَ ﴿٦٠﴾</span>
 60 - Uyarıldıkları günlerinden dolayı vay o inkâr edenlerin hâline!
 ## 52- Tûr
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٥٢﴾ الطور</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -10038,7 +10198,7 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَالسَّقْفِ الْمَرْفُوعِۙ ﴿٥﴾</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَالْبَحْرِ الْمَسْجُورِۙ ﴿٦﴾</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اِنَّ عَذَابَ رَبِّكَ لَوَاقِعٌۙ ﴿٧﴾</span>
-7 - (1-7) Tûr'a, yayılmış ince deri sayfalara düzenle yazılmış kitaba, "Beyt-i Ma'mur"a , yükseltilmiş tavana (göğe), kabaran denize andolsun ki, şüphesiz Rabbinin azabı mutlaka gerçekleşecektir.
+7 - (1-7) Tûr'a, yayılmış ince deri sayfalara düzenle yazılmış kitaba, "Beyt-i Ma'mur"a, yükseltilmiş tavana (göğe), kabaran denize andolsun ki, şüphesiz Rabbinin azabı mutlaka gerçekleşecektir.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">مَا لَهُ مِنْ دَافِعٍۙ ﴿٨﴾</span>
 8 - Onu geri çevirecek hiçbir şey yoktur.
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَوْمَ تَمُورُ السَّمَٓاءُ مَوْرًاۙ ﴿٩﴾</span>
@@ -10123,6 +10283,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 49 - Gecenin bir kısmında ve yıldızların batışı sırasında O'nu tespih et.
 
 ## 53- Necm
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٥٣﴾ النجم</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -10242,6 +10404,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">فَاسْجُدُوا لِلّٰهِ وَاعْبُدُوا ښ ﴿٦٢﴾</span>
 62 - Haydi Allah'a secde edin ve O'na kulluk edin. (Not: Tilavet secdesi yapılmalı)
 ## 54- Kamer
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٥٤﴾ القمر</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -10356,6 +10520,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">ف۪ى مَقْعَدِ صِدْقٍ عِنْدَ مَل۪يكٍ مُقْتَدِرٍ ﴿٥٥﴾</span>
 55 - Muktedir bir hükümdarın katında, doğruluk meclisindedirler.
 ## 55- Rahmân
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٥٥﴾ الرحمن</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -10518,6 +10684,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">تَبَارَكَ اسْمُ رَبِّكَ ذِى الْجَلَالِ وَالْاِكْرَامِ ﴿٧٨﴾</span>
 78 - Azamet ve ikram sahibi Rabbinin adı yücedir.
 ## 56- Vâkıa
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٥٦﴾ الواقعة</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -10684,6 +10852,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">فَسَبِّحْ بِاسْمِ رَبِّكَ الْعَظ۪يمِ ﴿٩٦﴾</span>
 96 - Öyleyse yüce Rabbinin adını tesbih et.
 ## 57- Hadid
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٥٧﴾ الحديد</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -10751,7 +10921,11 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 29 - Bunları açıkladık ki, kitap ehli, Allah'ın lütfundan hiçbir şeyi kendilerine has kılmaya güçlerinin yetmeyeceğini ve lütfun, Allah'ın elinde olduğunu, onu dilediği kimseye vereceğini bilsinler. Allah, büyük lütuf sahibidir.
 
 ## Cüz-28
+
+
 ## 58- Mücâdele
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٥٨﴾ المجادلة</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -10803,6 +10977,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَا تَجِدُ قَوْمًا يُؤْمِنُونَ بِاللّٰهِ وَالْيَوْمِ الْاٰخِرِ يُوَٓادُّونَ مَنْ حَٓادَّ اللّٰهَ وَرَسُولَهُ وَلَوْ كَانُٓوا اٰبَٓاءَهُمْ اَوْ اَبْنَٓاءَهُمْ اَوْ اِخْوَانَهُمْ اَوْ عَش۪يرَتَهُمْۜ اُو۬لٰٓئِكَ كَتَبَ ف۪ى قُلُوبِهِمُ الْا۪يمَانَ وَاَيَّدَهُمْ بِرُوحٍ مِنْهُۜ وَيُدْخِلُهُمْ جَنَّاتٍ تَجْر۪ى مِنْ تَحْتِهَا الْاَنْهَارُ خَالِد۪ينَ ف۪يهَاۜ رَضِىَ اللّٰهُ عَنْهُمْ وَرَضُوا عَنْهُۜ اُو۬لٰٓئِكَ حِزْبُ اللّٰهِۜ اَلَٓا اِنَّ حِزْبَ اللّٰهِ هُمُ الْمُفْلِحُونَ ﴿٢٢﴾</span>
 22 - Allah'a ve ahiret gününe iman eden hiçbir topluluğun, babaları, oğulları, kardeşleri yahut kendi soy sopları olsalar bile, Allah'a ve peygamberine düşman olan kimselere sevgi beslediğini göremezsin. İşte Allah onların kalplerine imanı yazmış ve onları kendi katından bir ruh ile desteklemiştir. Onları, içlerinden ırmaklar akan ve içlerinde ebedî kalacakları cennetlere sokacaktır. Allah onlardan razı olmuş, onlar da Allah'tan razı olmuşlardır. İşte onlar, Allah'ın tarafında olanlardır. İyi bilin ki, Allah'ın tarafında olanlar kurtuluşa erenlerin ta kendileridir.
 ## 59- Haşr
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٥٩﴾ الحشر</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -10859,6 +11035,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 24 - O, yaratan, yoktan var eden, şekil veren Allah'tır. Güzel isimler O'nundur. Göklerdeki ve yerdeki her şey O'nu tesbih eder. O, mutlak güç sahibidir, hüküm ve hikmet sahibidir.
 
 ## 60- Mümtehine
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٦٠﴾ الممتحنة</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -10891,6 +11069,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَٓا اَيُّهَا الَّذ۪ينَ اٰمَنُوا لَا تَتَوَلَّوْا قَوْمًا غَضِبَ اللّٰهُ عَلَيْهِمْ قَدْ يَئِسُوا مِنَ الْاٰخِرَةِ كَمَا يَئِسَ الْكُفَّارُ مِنْ اَصْحَابِ الْقُبُورِ ﴿١٣﴾</span>
 13 - Ey iman edenler! Kendilerine Allah'ın gazap ettiği, kabirlerdeki kâfirlerin ümit kestikleri gibi tamamen ahiretten ümitlerini kesmiş bir toplumu dost edinmeyin.
 ## 61- Saf
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٦١﴾ الصف</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -10925,6 +11105,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 14 - Ey iman edenler! Allah'ın yardımcıları olun. Nasıl ki Meryem oğlu İsa da havarilere, "Allah'a giden yolda benim yardımcılarım kimdir?" demişti. Havariler de, "Biz Allah'ın yardımcılarıyız" demişlerdi. Bunun üzerine İsrailoğullarından bir kesim inanmış, bir kesim de inkâr etmişti. Nihayet biz inananları, düşmanlarına karşı destekledik. Böylece üstün geldiler.
 
 ## 62- Cum’a
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٦٢﴾ الجمعة</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -10952,6 +11134,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَاِذَا رَاَوْا تِجَارَةً اَوْ لَهْوًاۨ انْفَضُّٓوا اِلَيْهَا وَتَرَكُوكَ قَٓائِمًاۜ قُلْ مَا عِنْدَ اللّٰهِ خَيْرٌ مِنَ اللَّهْوِ وَمِنَ التِّجَارَةِۜ وَاللّٰهُ خَيْرُ الرَّازِق۪ينَ ﴿١١﴾</span>
 11 - (Durum böyle iken) onlar bir ticaret veya bir oyun eğlence gördükleri zaman hemen dağılıp ona koştular ve seni ayakta bıraktılar. De ki: "Allah'ın yanında bulunan, eğlence ve ticaretten daha hayırlıdır. Allah, rızık verenlerin en hayırlısıdır."
 ## 63- Münâfikûn
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٦٣﴾ المنافقون</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -10980,6 +11164,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 11 - Allah, eceli geldiğinde hiçbir kimseyi asla ertelemez. Allah, bütün yaptıklarınızdan haberdardır.
 
 ## 64- Teğabün
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٦٤﴾ التغابن</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -11022,6 +11208,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 18 - O, gaybı da görünen âlemi de bilendir, mutlak güç sahibidir, hüküm ve hikmet sahibidir.
 
 ## 65- Talâk
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٦٥﴾ الطلاق</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -11052,6 +11240,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 12 - Allah, yedi göğü ve yerden bir o kadarını yaratandır. Allah'ın emri bunlar arasından inip durmaktadır ki, Allah'ın her şeye kadir olduğunu ve Allah'ın her şeyi ilmiyle kuşattığını bilesiniz.
 
 ## 66- Tahrim
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٦٦﴾ التحريم</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -11082,7 +11272,11 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 12 - Allah, bir de iffetini sapasağlam koruyan ve bizim de kendisine ruhumuzdan üflediğimiz, Rabbinin kelimelerini ve kitaplarını doğrulayan İmran kızı Meryem'i de (inananlara) örnek gösterdi. O itaat edenlerdendi.
 
 ## Cüz-29
+
+
 ## 67- Mülk
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٦٧﴾ الملك</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -11149,6 +11343,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">قُلْ اَرَاَيْتُمْ اِنْ اَصْبَحَ مَٓاؤُ۬كُمْ غَوْرًا فَمَنْ يَاْت۪يكُمْ بِمَٓاءٍ مَع۪ينٍ ﴿٣٠﴾</span>
 30 - De ki: "Söyleyin bakalım: Suyunuz çekiliverse, size kim temiz bir akar su getirir?"
 ## 68- Kalem
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٦٨﴾ القلم</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -11250,6 +11446,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَمَا هُوَ اِلَّا ذِكْرٌ لِلْعَالَم۪ينَ ﴿٥٢﴾</span>
 52 - Hâlbuki o (Kur'an), âlemler için ancak bir öğüttür.
 ## 69- Hâkka
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٦٩﴾ الحاقة</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -11354,6 +11552,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">فَسَبِّحْ بِاسْمِ رَبِّكَ الْعَظ۪يمِ ﴿٥٢﴾</span>
 52 - O hâlde sen, yüce Rabbinin adıyla tespih et.
 ## 70- Meâric
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٧٠﴾ المعارج</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -11436,6 +11636,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">خَاشِعَةً اَبْصَارُهُمْ تَرْهَقُهُمْ ذِلَّةٌۜ ذٰلِكَ الْيَوْمُ الَّذ۪ى كَانُوا يُوعَدُونَ ﴿٤٤﴾</span>
 44 - (43-44) Dikili putlara akın akın gidercesine, gözleri inmiş, kendilerini zillet kaplamış bir hâlde mezarlarından süratle çıkacakları o günü hatırla! İşte o, uyarıldıkları gündür.
 ## 71- Nuh
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٧١﴾ نوح</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -11496,6 +11698,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 28 - "Rabbim! Beni, ana babamı, iman etmiş olarak evime girenleri, iman eden erkekleri ve iman eden kadınları bağışla. Zalimlerin de ancak helâkini arttır."
 
 ## 72- Cin
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٧٢﴾ الجن</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -11555,6 +11759,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 28 - (27-28) Ancak seçtiği resûller başka. (Onlara bildirir.) Fakat O, Resûlün önünde ve arkasında gözetleyici (melek)ler yürütür ki resûllerin, Rablerinin vahiylerini tebliğ ettiklerini bilsin. Allah, onların her hâlini kuşatmış ve her şeyi inceden inceye sayıp dökmüştür.
 
 ## 73- Müzzemmil
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٧٣﴾ المزّمِّل</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -11598,6 +11804,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اِنَّ رَبَّكَ يَعْلَمُ اَنَّكَ تَقُومُ اَدْنٰى مِنْ ثُلُثَىِ الَّيْلِ وَنِصْفَهُ وَثُلُثَهُ وَطَٓائِفَةٌ مِنَ الَّذ۪ينَ مَعَكَۜ وَاللّٰهُ يُقَدِّرُ الَّيْلَ وَالنَّهَارَۜ عَلِمَ اَنْ لَنْ تُحْصُوهُ فَتَابَ عَلَيْكُمْ فَاقْرَؤُ۫ا مَا تَيَسَّرَ مِنَ الْقُرْاٰنِۜ عَلِمَ اَنْ سَيَكُونُ مِنْكُمْ مَرْضٰىۙ وَاٰخَرُونَ يَضْرِبُونَ فِى الْاَرْضِ يَبْتَغُونَ مِنْ فَضْلِ اللّٰهِۙ وَاٰخَرُونَ يُقَاتِلُونَ ف۪ى سَب۪يلِ اللّٰهِۘ فَاقْرَؤُ۫ا مَا تَيَسَّرَ مِنْهُۙ وَاَق۪يمُوا الصَّلٰوةَ وَاٰتُوا الزَّكٰوةَ وَاَقْرِضُوا اللّٰهَ قَرْضًا حَسَنًاۜ وَمَا تُقَدِّمُوا لِاَنْفُسِكُمْ مِنْ خَيْرٍ تَجِدُوهُ عِنْدَ اللّٰهِ هُوَ خَيْرًا وَاَعْظَمَ اَجْرًاۜ وَاسْتَغْفِرُوا اللّٰهَۜ اِنَّ اللّٰهَ غَفُورٌ رَح۪يمٌ ﴿٢٠﴾</span>
 20 - (Ey Muhammed!) Şüphesiz Rabbin, senin, gecenin üçte ikisine yakın kısmını, yarısını ve üçte birini ibadetle geçirdiğini biliyor. Beraberinde bulunanlardan bir topluluk da böyle yapıyor. Allah, gece ve gündüzü düzenleyip takdir eder. Sizin buna (gecenin tümünde yahut çoğunda ibadete) gücünüzün yetmeyeceğini bildi de sizi bağışladı (yükünüzü hafifletti.) Artık, Kur'an'dan kolayınıza geleni okuyun. Allah, içinizde hastaların bulunacağını, bir kısmınızın Allah'ın lütfundan rızık aramak üzere yeryüzünde dolaşacağını, diğer bir kısmınızın ise Allah yolunda çarpışacağını bilmektedir. O hâlde, Kur'an´dan kolayınıza geleni okuyun. Namazı dosdoğru kılın, zekâtı verin, Allah'a güzel bir borç verin. Kendiniz için önceden ne iyilik gönderirseniz, onu Allah katında daha üstün bir iyilik ve daha büyük mükâfat olarak bulursunuz. Allah'tan bağışlama dileyin. Şüphesiz Allah çok bağışlayandır, çok merhamet edendir.
 ## 74- Müddessir
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٧٤﴾ المدّثر</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -11705,6 +11913,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَمَا يَذْكُرُونَ اِلَّٓا اَنْ يَشَٓاءَ اللّٰهُۜ هُوَ اَهْلُ التَّقْوٰى وَاَهْلُ الْمَغْفِرَةِ ﴿٥٦﴾</span>
 56 - Bununla beraber, Allah dilemedikçe öğüt alamazlar. O takvaya (kendisine karşı gelmekten sakınılmaya) ehil olandır, bağışlamaya ehil olandır.
 ## 75- Kıyamet
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٧٥﴾ القيامة</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">ڟبِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -11780,6 +11990,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَلَيْسَ ذٰلِكَ بِقَادِرٍ عَلٰٓى اَنْ يُحْيِىَ الْمَوْتٰى ﴿٤٠﴾</span>
 40 - Şimdi, bunları yapan Allah'ın ölüleri diriltmeye gücü yetmez mi?
 ## 76- İnsan
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٧٦﴾ الإنسان</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -11848,6 +12060,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يُدْخِلُ مَنْ يَشَٓاءُ ف۪ى رَحْمَتِه۪ۜ وَالظَّالِم۪ينَ اَعَدَّ لَهُمْ عَذَابًا اَل۪يمًا ﴿٣١﴾</span>
 31 - O, dilediği kimseyi rahmetine sokar. Zalimlere ise elem dolu bir azap hazırlamıştır.
 ## 77- Mürselât
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٧٧﴾ المرسلات</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -11945,7 +12159,11 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 50 - Onlar artık ondan (Kur'an'dan) sonra hangi söze inanacaklar?
 
 ## Cüz-30
+
+
 ## 78- Nebe’
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٧٨﴾ النبأ</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -12019,6 +12237,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اِنَّٓا اَنْذَرْنَا‌كُمْ عَذَابًا قَر۪يبًاۚ يَوْمَ يَنْظُرُ الْمَرْءُ مَا قَدَّمَتْ يَدَاهُ وَيَقُولُ الْكَافِرُ يَا لَيْتَن۪ى كُنْتُ تُرَابًا ﴿٤٠﴾</span>
 40 - Şüphesiz biz sizi, kişinin önceden elleriyle yaptıklarına bakacağı ve inkârcının, "Keşke toprak olaydım!" diyeceği günde gerçekleşecek olan yakın bir azaba karşı uyardık.
 ## 79- Nâziât
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٧٩﴾ النازعات</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -12112,6 +12332,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 46 - Kıyameti gördükleri gün onlar, sanki dünyada ancak bir akşam, yahut bir kuşluk vakti kadar kalmış gibidirler.
 
 ## 80- Abese
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٨٠﴾ عبس</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -12186,6 +12408,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اُو۬لٰٓئِكَ هُمُ الْكَفَرَةُ الْفَجَرَةُ ﴿٤٢﴾</span>
 42 - İşte onlar, kâfirlerdir, günaha dalanlardır.
 ## 81- Tekvir
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٨١﴾ التكوير</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -12245,6 +12469,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَمَا تَشَٓاؤُ۫نَ اِلَّٓا اَنْ يَشَٓاءَ اللّٰهُ رَبُّ الْعَالَم۪ينَ ﴿٢٩﴾</span>
 29 - Âlemlerin Rabbi olan Allah dilemedikçe siz dileyemezsiniz.
 ## 82- İnfitâr
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٨٢﴾ الإنفطار</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -12285,6 +12511,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 19 - O gün kimse kimseye hiçbir fayda sağlayamayacaktır. O gün buyruk, yalnız Allah'ındır.
 
 ## 83- Mutaffifin
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٨٣﴾ المطففين</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -12359,6 +12587,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">هَلْ ثُوِّبَ الْكُفَّارُ مَا كَانُوا يَفْعَلُونَ ﴿٣٦﴾</span>
 36 - Nasıl, kâfirler yapmakta olduklarının karşılığını buldular mı?
 ## 84- İnşikak
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٨٤﴾ الانشقاق</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -12411,6 +12641,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اِلَّا الَّذ۪ينَ اٰمَنُوا وَعَمِلُوا الصَّالِحَاتِ لَهُمْ اَجْرٌ غَيْرُ مَمْنُونٍ ﴿٢٥﴾</span>
 25 - Ancak iman edip de sâlih ameller işleyenler başka. Onlar için, bitmez tükenmez bir mükâfat vardır.
 ## 85- Bürûc
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٨٥﴾ البروج</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -12455,6 +12687,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">ف۪ى لَوْحٍ مَحْفُوظٍ ﴿٢٢﴾</span>
 22 - O, korunmuş bir levhada (Levh-i Mahfuz'da)dır.
 ## 86- Târık
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٨٦﴾ الطارق</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -12494,6 +12728,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 17 - Artık sen inkârcılara mühlet ver; onlara biraz zaman tanı!
 
 ## 87- A’lâ
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٨٧﴾ الأعلى</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -12532,6 +12768,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">صُحُفِ اِبْرٰه۪يمَ وَمُوسٰى ﴿١٩﴾</span>
 19 - (18-19) Şüphesiz bu hükümler ilk sayfalarda, İbrahim ve Mûsâ'nın sayfalarında da vardır.
 ## 88- Gâşiye
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٨٨﴾ الغاشية</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -12585,6 +12823,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">ثُمَّ اِنَّ عَلَيْنَا حِسَابَهُمْ ﴿٢٦﴾</span>
 26 - Sonra onların sorguya çekilmesi de sadece bize aittir.
 ## 89- Fecr
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٨٩﴾ الفجر</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -12644,6 +12884,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَادْخُل۪ى جَنَّت۪ى ﴿٣٠﴾</span>
 30 - "Cennetime gir."
 ## 90- Beled
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٩٠﴾ البلد</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -12681,6 +12923,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">عَلَيْهِمْ نَارٌ مُؤْصَدَةٌ ﴿٢٠﴾</span>
 20 - Üzerlerinde etrafı sımsıkı kapatılmış bir ateş vardır.
 ## 91- Şems
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٩١﴾ الشمس</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -12714,6 +12958,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 15 - Allah, bunun sonucundan çekinmez de!
 
 ## 92- Leyl
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٩٢﴾ الليل</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -12753,6 +12999,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَلَسَوْفَ يَرْضٰى ﴿٢١﴾</span>
 21 - Elbette kendisi de hoşnut olacaktır.
 ## 93- Duhâ
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٩٣﴾ الضحى</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -12780,6 +13028,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَاَمَّا بِنِعْمَةِ رَبِّكَ فَحَدِّثْ ﴿١١﴾</span>
 11 - Rabbinin nimetine gelince; işte onu anlat.
 ## 94- İnşirâh
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٩٤﴾ الشرح</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -12799,6 +13049,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَاِلٰى رَبِّكَ فَارْغَبْ ﴿٨﴾</span>
 8 - Ancak Rabbine yönel ve yalvar.
 ## 95- Tin
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٩٥﴾ التين</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -12820,6 +13072,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَلَيْسَ اللّٰهُ بِاَحْكَمِ الْحَاكِم۪ينَ ﴿٨﴾</span>
 8 - Allah, hükmedenlerin en iyi hükmedeni değil midir?
 ## 96- Alak
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٩٦﴾ العلق</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -12857,6 +13111,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 19 - Hayır! Sakın sen ona uyma; secde et ve Rabbine yaklaş. (Not: Tilavet secdesi yapılmalı)
 
 ## 97- Kadir
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٩٧﴾ القدر</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -12871,6 +13127,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سَلَامٌ۠ۛ هِىَ حَتّٰى مَطْلَعِ الْفَجْرِ ﴿٥﴾</span>
 5 - O gece, tan yerinin ağarmasına kadar bir esenliktir.
 ## 98- Beyyine
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٩٨﴾ البينة</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -12892,6 +13150,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 8 - Rableri katında onların mükâfatı, içlerinden ırmaklar akan, içlerinde ebedî kalacakları Adn cennetleridir. Allah onlardan razı olmuştur, onlar da Allah'tan razı olmuşlardır. İşte bu mükâfat Rablerine derin saygı duyanlara mahsustur.
 
 ## 99- Zilzâl
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">٩٩﴾ الزلزلة</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -12910,6 +13170,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَمَنْ يَعْمَلْ مِثْقَالَ ذَرَّةٍ شَرًّا يَرَهُ ﴿٨﴾</span>
 8 - Kim de zerre ağırlığınca bir kötülük işlerse, onun cezasını görecektir.
 ## 100- Âdiyât
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">١٠٠﴾ العاديات</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -12930,6 +13192,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 11 - (9-11) Acaba o bilmiyor mu ki, kabirlerde bulunanlar çıkarıldığı ve kalplerdeki ortaya konulduğu zaman, işte o gün onların Rabbi kendilerinin her hâlinden mutlaka haberdardır.
 
 ## 101- Kâria
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">١٠١﴾ القارعة</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -12956,6 +13220,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">نَارٌ حَامِيَةٌ ﴿١١﴾</span>
 11 - O, kızgın bir ateştir.
 ## 102- Tekâsür
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">١٠٢﴾ التكاثر</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -12976,6 +13242,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 8 - Sonra o gün, nimetlerden mutlaka hesaba çekileceksiniz?
 
 ## 103- Asr
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">١٠٣﴾ العصر</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -12985,6 +13253,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اِلَّا الَّذ۪ينَ اٰمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ ﴿٣﴾</span>
 3 - Ancak, iman edip de sâlih ameller işleyenler, birbirlerine hakkı tavsiye edenler, birbirlerine sabrı tavsiye edenler başka (Onlar ziyanda değillerdir).
 ## 104- Hümeze
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">١٠٤﴾ الهُمَزَة</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -13004,6 +13274,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">ف۪ى عَمَدٍ مُمَدَّدَةٍ ﴿٩﴾</span>
 9 - (8-9) Şüphesiz uzatılmış direkler arasında (bağlı oldukları hâlde) ateş onların üzerine kapatılacaktır.
 ## 105- Fil
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">١٠٥﴾ الفيل</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -13017,6 +13289,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 5 - (3-5) Üzerlerine balçıktan pişirilmiş taşlar atan sürü sürü kuşlar gönderdi. Nihayet onları yenilmiş ekin yaprakları hâline getirdi.
 
 ## 106- Kureyş
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">١٠٦﴾ قريش</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -13026,6 +13300,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَلَّذ۪ٓى اَطْعَمَهُمْ مِنْ جُوعٍ وَاٰمَنَهُمْ مِنْ خَوْفٍ ﴿٤﴾</span>
 4 - (1-4) Kureyş'i ısındırıp alıştırdığı; onları kışın (Yemen'e) ve yazın (Şam'a) yaptıkları yolculuğa ısındırıp alıştırdığı için, Kureyş de, kendilerini besleyip açlıklarını gideren ve onları korkudan emin kılan bu evin (Kâbe'nin) Rabbine kulluk etsin.
 ## 107- Mâûn
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">١٠٧﴾ الماعون</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -13043,6 +13319,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَيَمْنَعُونَ الْمَاعُونَ ﴿٧﴾</span>
 7 - Ufacık bir yardıma bile engel olurlar.
 ## 108- Kevser
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">١٠٨﴾ الكوثر</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -13054,6 +13332,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 3 - Doğrusu sana buğzeden, soyu kesik olanın ta kendisidir.
 
 ## 109- Kâfirûn
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">١٠٩﴾ الكافرون</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -13070,6 +13350,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَكُمْ د۪ينُكُمْ وَلِىَ د۪ينِ ﴿٦﴾</span>
 6 - "Sizin dininiz size, benim dinim de banadır."
 ## 110- Nasr
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">١١٠﴾ النصر</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -13078,6 +13360,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">فَسَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُۜ اِنَّهُ كَانَ تَوَّابًا ﴿٣﴾</span>
 3 - (1-3) Allah'ın yardımı ve fetih (Mekke fethi) geldiğinde ve insanların bölük bölük Allah'ın dinine girdiğini gördüğünde, Rabbine hamd ederek tespihte bulun ve O'ndan bağışlama dile. Çünkü O, tövbeleri çok kabul edendir.
 ## 111- Tebbet
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">١١١﴾ التبّت</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -13092,6 +13376,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 5 - (4-5) Boynunda bükülmüş hurma liflerinden bir ip olduğu hâlde sırtında odun taşıyarak karısı da (o ateşe girecektir).
 
 ## 112- İhlâs
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">١١٢﴾ الإخلاص</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -13104,6 +13390,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَلَمْ يَكُنْ لَهُ كُفُوًا اَحَدٌ ﴿٤﴾</span>
 4 - "Hiçbir şey O'na denk ve benzer değildir."
 ## 113- Felâk
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">١١٣﴾ الفلق</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -13114,6 +13402,8 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَمِنْ شَرِّ حَاسِدٍ اِذَا حَسَدَ ﴿٥﴾</span>
 5 - (1-5) De ki: "Yarattığı şeylerin kötülüğünden, karanlığı çöktüğü zaman gecenin kötülüğünden, düğümlere üfleyenlerin kötülüğünden, haset ettiği zaman hasetçinin kötülüğünden, sabah aydınlığının Rabbine sığınırım."
 ## 114- Nâs
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">١١٤﴾ الناس</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Rahmân ve Rahîm olan Allah´ın adıyla
@@ -13126,9 +13416,11 @@ Rahmân ve Rahîm olan Allah´ın adıyla
 6 - (1-6) De ki: "Cinlerden ve insanlardan; insanların kalplerine vesvese veren sinsi vesvesecinin kötülüğünden, insanların Rabbine, insanların Melik'ine, insanların İlâh'ına sığınırım."
 
 ## Hatim Duası
+
+
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَلْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ ﴿﴾ وَالْعَاقِبَةُ لِلْمُتَّق۪ينَ ﴿﴾ وَلَا عُدْوَانَ اِلَّا عَلَى الظَّالِم۪ينَ ﴿﴾ وَالصَّلٰاةُ وَالسَّلٰامُ عَلٰى رَسُولِنَا مُحَمَّدٍ وَاٰلِه۪ وَصَحْبِه۪ٓ اَجْمَع۪ينَ ﴿﴾ اَللّٰهُمَّ رَبَّنَا يَا رَبَّنَا تَقَبَّلْ مِنَّا اِنَّكَ اَنْتَ السَّم۪يعُ الْعَل۪يمُ ﴿﴾ وَتُبْ عَلَيْنَا يَا مَوْلٰنَآ اِنَّكَ اَنْتَ التَّوَّابُ الرَّح۪يمُ ﴿﴾ وَاهْدِنَا وَوَفِّقْنَآ اِلَى الْحَقِّ وَاِلٰى طَر۪يقٍ مُسْتَق۪يمٍ ﴿﴾ بِبَرَكَةِ الْقُرْاٰنِ الْعَظ۪يمِ ﴿﴾ وَبِحُرْمَةِ مَنْ اَرْسَلْتَهُ رَحْمَةً لِلْعَالَم۪ينَ ﴿﴾ وَاعْفُ عَنَّا يَا كَر۪يمُ ﴿﴾ وَاعْفُ عَنَّا يَا رَح۪يمُ ﴿﴾ وَاغْفِرْ لَنَا ذُنُوبَنَا بِفَضْلِكَ وَجُودِكَ وَكَرَمِكَ يَآاَكْرَمَ الْاَكْرَم۪ينَ ﴿﴾ اَللّٰهُمَّ زَيِّنَّا بِز۪ينَةِ الْقُرْاٰنِ ﴿﴾ وَاَكْرِمْنَا بِكَرَامَةِ الْقُرْاٰنِ ﴿﴾ وَشَرِّفْنَا بِشَرَافَةِ الْقُرْاٰنِ ﴿﴾ وَاَلْبِسْنَا بِخِلْعَةِ الْقُرْاٰنِ ﴿﴾ وَاَدْخِلْنَا الْجَنَّةَ بِشَفَاعَةِ الْقُرْاٰنِ ﴿﴾ وَعَافِنَا مِنْ كُلِّ بَلٰٓاءِ الدُّنْيَا وَعَذَابِ الْاٰخِرَةِ بِحُرْمَةِ الْقُرْاٰنِ ﴿﴾ وَارْحَمْ جَم۪يعَ اُمَّةِ مُحَمَّدٍ يَا رَح۪يمُ يَا رَحْمٰنُ ﴿﴾</span>
 
-<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَللّٰهُمَّ اجْعَلِ الْقُرْاٰنَ لَنَا فِى الدُّنْيَا قَر۪ينًا ﴿﴾ وَفِى الْقَبْرِ مُونِسًا ﴿﴾ وَفِى الْقِيَامَةِ شَف۪يعًا ﴿﴾  وَعَلَى الصِّرَاطِ نُورًا ﴿﴾ وَفِى الْجَنَّةِ رَف۪يقًا ﴿﴾ وَمِنَ النَّارِ سِتْرًا وَحِجَابًا ﴿﴾  وَاِلىَ الْخَيْرَاتِ كُلِّهَا دَل۪يلًا وَاِمَامًا ﴿﴾ بِفَضْلِكَ وَجُودِكَ وَكَرَمِكَ يَآ اَكْرَمَ الْاَكْرَم۪ينَ وَيَآ اَرْحَمَ الرَّاحِم۪ينَ﴿﴾ اَللّٰهُمَّ اهْدِنَا بِهِدَايَةِ الْقُرْاٰنِ ﴿﴾ وَنَجِّنَا مِنَ النّ۪يرَانِ بِكَرَامَةِ الْقُرْاٰنِ ﴿﴾ وَارْفَعْ دَرَجَاتِنَا بِفَض۪يلَةِ الْقُرْاٰنِ ﴿﴾ وَكَفِّرْ عَنَّا سَيِّـَٔاتِنَا بِتِلٰاوَةِ الْقُرْاٰنِ ﴿﴾ يَا ذَا الْفَضْلِ وَالْاِحْسَانِ ﴿﴾ اَللّٰهُمَّ طَهِّرْ قُلوُبَنَا ﴿﴾ وَاسْتُرْ عُيوُبَنَا ﴿﴾ وَاشْفِ مَرْضَانَا ﴿﴾ وَاقْضِ دُيُونَنَا ﴿﴾ وَارْفَعْ دَرَجَاتِنَا ﴿﴾ وَارْحَمْ اٰبَآءَنَا ﴿﴾ وَاغْفِرْ اُمَّهَاتِنَا ﴿﴾ وَاَصْلِحْ د۪ينَنَا وَدُنْيَانَا ﴿﴾ وَشَتِّتْ شَمْلَ اَعْدَآئِنَا ﴿﴾ وَاحْفَظْ اَهْلَنَا وَاَمْوَالَنَا وَبِلَادَنَا مِنْ جِم۪يعِ الْاٰفَاتِ وَالْاَمْرَاضِ وَالْبَلٰايَا ﴿﴾ وَثَبِّتْ اَقْدَامَنَا وَانْصُرْنَا عَلَى الْقَوْمِ الْكَافِر۪ينَ ﴿﴾ بِحُرْمَةِ الْقُرْاٰنِ الْعَظ۪يمِ ﴿﴾</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَللّٰهُمَّ اجْعَلِ الْقُرْاٰنَ لَنَا فِى الدُّنْيَا قَر۪ينًا ﴿﴾ وَفِى الْقَبْرِ مُونِسًا ﴿﴾ وَفِى الْقِيَامَةِ شَف۪يعًا ﴿﴾ وَعَلَى الصِّرَاطِ نُورًا ﴿﴾ وَفِى الْجَنَّةِ رَف۪يقًا ﴿﴾ وَمِنَ النَّارِ سِتْرًا وَحِجَابًا ﴿﴾ وَاِلىَ الْخَيْرَاتِ كُلِّهَا دَل۪يلًا وَاِمَامًا ﴿﴾ بِفَضْلِكَ وَجُودِكَ وَكَرَمِكَ يَآ اَكْرَمَ الْاَكْرَم۪ينَ وَيَآ اَرْحَمَ الرَّاحِم۪ينَ﴿﴾ اَللّٰهُمَّ اهْدِنَا بِهِدَايَةِ الْقُرْاٰنِ ﴿﴾ وَنَجِّنَا مِنَ النّ۪يرَانِ بِكَرَامَةِ الْقُرْاٰنِ ﴿﴾ وَارْفَعْ دَرَجَاتِنَا بِفَض۪يلَةِ الْقُرْاٰنِ ﴿﴾ وَكَفِّرْ عَنَّا سَيِّـَٔاتِنَا بِتِلٰاوَةِ الْقُرْاٰنِ ﴿﴾ يَا ذَا الْفَضْلِ وَالْاِحْسَانِ ﴿﴾ اَللّٰهُمَّ طَهِّرْ قُلوُبَنَا ﴿﴾ وَاسْتُرْ عُيوُبَنَا ﴿﴾ وَاشْفِ مَرْضَانَا ﴿﴾ وَاقْضِ دُيُونَنَا ﴿﴾ وَارْفَعْ دَرَجَاتِنَا ﴿﴾ وَارْحَمْ اٰبَآءَنَا ﴿﴾ وَاغْفِرْ اُمَّهَاتِنَا ﴿﴾ وَاَصْلِحْ د۪ينَنَا وَدُنْيَانَا ﴿﴾ وَشَتِّتْ شَمْلَ اَعْدَآئِنَا ﴿﴾ وَاحْفَظْ اَهْلَنَا وَاَمْوَالَنَا وَبِلَادَنَا مِنْ جِم۪يعِ الْاٰفَاتِ وَالْاَمْرَاضِ وَالْبَلٰايَا ﴿﴾ وَثَبِّتْ اَقْدَامَنَا وَانْصُرْنَا عَلَى الْقَوْمِ الْكَافِر۪ينَ ﴿﴾ بِحُرْمَةِ الْقُرْاٰنِ الْعَظ۪يمِ ﴿﴾</span>
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَللّٰهُمَّ بَلِّغْ -اَوْصِلْ- ثَوَابَ مَا قَرَاْ نَاهُ ، وَنُورَ مَا تَلَوْنَاهُ ، اِلٰى رُوحِ سَيِّدِنَا وَنَبِيِّنَا مُحَمَّدٍ صَلَّى اللّٰهُ تَعَالٰى عَلَيْهِ وَسَلَّمَ ﴿﴾ وَاِلٰٓى اَرْوَاحِ جَم۪يعِ الْاَنْبِيَآءِ وَالْمُرْسَل۪ينَ ، صَلَوَاتُ اللّٰهِ وَسَلٰامُهُ عَلَيْهِمْ اَجْمَع۪ينَ ﴿﴾</span>
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَاِلٰٓى اَرْوَاحِ اٰلِه۪ ، وَاَوْلٰادِه۪ ، وَاَزْوَاجِه۪ ، وَاَصْحَابِه۪ ، اَتْبَاعِه۪ ، وَجَم۪يعِ ذُرِّيَّاتِه۪ ﴿﴾ رِضْوَانُ اللّٰهِ تَعَالٰى عَلَيْهِمْ اَجْمَع۪ينَ ﴿﴾ وَاِلٰٓى اَرْوَاحِ اٰبَآئِنَا ، وَاُمَّهَاتِنَا ، وَاِخْوَانِنَا وَاَخَوَاتِنَا، وَاَوْلَادِنَا ، وَاَقْرِبَآئِنَا ، وَاَحِبَّآئِنَا ، وَاَصْدِقَآئِنَا ، وَاَسَات۪يذِنَا ، وَمَشَايِخِنَا ، وَلِمَنْ كَانَ لَهُ حَقٌّ عَلَيْنَا ﴿﴾ وَاِلٰى اَرْوَاحِ جَم۪يعِ الْمُؤْمِن۪ينَ وَالْمُؤْمِنَاتِ ، وَالْمُسْلِم۪ينَ وَالْمُسْلِمَاتِ ، اَلْاَحْيَآءِ مِنْهُمْ وَالْاَمْوَاتِ ﴿﴾ يَا قَاضِىَ الْحَاجَاتِ وَيَا مُج۪يبَ الدَّعَوَاتِ ﴿﴾ اَللّٰهُمَّ رَبَّنَآ اٰتِنَا فِى الدُّنْيَا حَسَنَةً وَفِى الْاٰخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ ﴿﴾ رَبَّنَا اغْفِرْ ل۪ى وَلِوَالِدَىَّ وَلِلْمُؤْمِن۪ينَ يَوْمَ يَقُومُ الْحِسَابُ ﴿﴾ اِسْتَجِبْ دُعَآ ئَنَا بِرَحْمَتِكَ يَآ اَرْحَمَ الرَّاحِم۪ينَ ﴿﴾ وَسَلَامٌ عَلَى الْمُرْسَل۪ينَ ﴿﴾ وَالْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ ﴿﴾ اَلْفَاتِحَة ﴿﴾</span>
