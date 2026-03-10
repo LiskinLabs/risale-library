@@ -5,8 +5,6 @@ book: 'kuranmeal'
 
 
 
-
-
 # Kur'an-ı Kerim
 
  

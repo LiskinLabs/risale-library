@@ -5,8 +5,6 @@ book: 'kuran'
 
 
 
-
-
 # Kur'an-ı Kerim
 
  <span class="quran-text font-arabic text-2xl text-amber-700 block text-center my-4">ڛ١</span> 

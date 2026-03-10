@@ -3,8 +3,6 @@ title: 'Hizb-ül Hakaik'
 book: 'hizbulhakaik'
 ---
 
-
-
 <span class="quran-text font-arabic text-2xl text-amber-700 block text-center my-4">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span> 
 
 ## Hizb‑ü Envâr-ıl Hakâik-ın Nuriye
@@ -1113,3 +1111,4 @@ book: 'hizbulhakaik'
 
 ---
 
+>
