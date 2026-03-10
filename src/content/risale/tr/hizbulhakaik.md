@@ -135,7 +135,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿٢﴾</span>
 
- 
+,
 
 ---
 
@@ -143,7 +143,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿٣﴾</span>
 
- 
+,
 
 ---
 
@@ -153,7 +153,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿٤﴾</span>
 
- 
+,
 
 ---
 
@@ -161,7 +161,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿٥﴾</span>
 
- 
+,
 
 ---
 
@@ -171,7 +171,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿٦﴾</span>
 
- 
+,
 
 ---
 
@@ -179,7 +179,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿٧﴾</span>
 
- 
+,
 
 ---
 
@@ -189,7 +189,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿٨﴾</span>
 
- 
+,
 
 ---
 
@@ -197,7 +197,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿٩﴾</span>
 
- 
+,
 
 ---
 
@@ -207,7 +207,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿١٠﴾</span>
 
- 
+,
 
 ---
 
@@ -215,7 +215,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿١١﴾</span>
 
- 
+,
 
 ---
 
@@ -225,7 +225,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿١٢﴾</span>
 
- 
+,
 
 ---
 
@@ -233,7 +233,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿١٣﴾</span>
 
- 
+,
 
 ---
 
@@ -241,7 +241,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿١٤﴾</span>
 
- 
+,
 
 ---
 
@@ -249,7 +249,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿١٥﴾</span>
 
- 
+,
 
 ---
 
@@ -263,7 +263,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿١٧﴾</span>
 
- 
+,
 
 ---
 
@@ -271,7 +271,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿١٨﴾</span>
 
- 
+,
 
 ---
 
@@ -279,7 +279,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿١٩﴾</span>
 
- 
+,
 
 ---
 
@@ -287,7 +287,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿٢٠﴾</span>
 
- 
+,
 
 ---
 
@@ -295,7 +295,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿٢١﴾</span>
 
- 
+,
 
 ---
 
@@ -303,7 +303,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿٢٢﴾</span>
 
- 
+,
 
 ---
 
@@ -313,7 +313,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿٢٣﴾</span>
 
- 
+,
 
 ---
 
@@ -321,7 +321,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿٢٤﴾</span>
 
- 
+,
 
 ---
 
@@ -329,7 +329,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿٢٥﴾</span>
 
- 
+,
 
 ---
 
@@ -337,7 +337,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿٢٦﴾</span>
 
- 
+,
 
 ---
 
@@ -347,7 +347,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿٢٧﴾</span>
 
- 
+,
 
 ---
 
@@ -355,7 +355,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿٢٨﴾</span>
 
- 
+,
 
 ---
 
@@ -363,7 +363,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿٢٩﴾</span>
 
- 
+,
 
 ---
 
@@ -371,7 +371,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿٣٠﴾</span>
 
- 
+,
 
 ---
 
@@ -379,7 +379,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ اَجِرْنَا مِنَ النَّارِ ﴿٣١﴾</span>
 
- 
+,
 
 ---
 
@@ -387,7 +387,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ اَجِرْنَا مِنَ النَّارِ ﴿٣٢﴾</span>
 
- 
+,
 
 ---
 
@@ -395,7 +395,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ اَجِرْنَا مِنَ النَّارِ ﴿٣٣﴾</span>
 
- 
+,
 
 ---
 
@@ -405,7 +405,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ اَجِرْنَا مِنَ النَّارِ ﴿٣٤﴾</span>
 
- 
+,
 
 ---
 
@@ -413,7 +413,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ اَجِرْنَا مِنَ النَّارِ ﴿٣٥﴾</span>
 
- 
+,
 
 ---
 
@@ -423,7 +423,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ اَجِرْنَا مِنَ النَّارِ ﴿٣٦﴾</span>
 
- 
+,
 
 ---
 
@@ -431,7 +431,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ اَجِرْنَا مِنَ النَّارِ ﴿٣٧﴾</span>
 
- 
+,
 
 ---
 
@@ -441,7 +441,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ اَجِرْنَا مِنَ النَّارِ ﴿٣٨﴾</span>
 
- 
+,
 
 ---
 
@@ -449,7 +449,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ اَجِرْنَا مِنَ النَّارِ ﴿٣٩﴾</span>
 
- 
+,
 
 ---
 
@@ -459,7 +459,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ اَجِرْنَا مِنَ النَّارِ ﴿٤٠﴾</span>
 
- 
+,
 
 ---
 
@@ -467,7 +467,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ اَجِرْنَا مِنَ النَّارِ ﴿٤١﴾</span>
 
- 
+,
 
 ---
 
@@ -477,7 +477,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ اَجِرْنَا مِنَ النَّارِ ﴿٤٢﴾</span>
 
- 
+,
 
 ---
 
@@ -485,7 +485,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ اَجِرْنَا مِنَ النَّارِ ﴿٤٣﴾</span>
 
- 
+,
 
 ---
 
@@ -495,7 +495,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ اَجِرْنَا مِنَ النَّارِ ﴿٤٤﴾</span>
 
- 
+,
 
 ---
 
@@ -503,7 +503,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ اَجِرْنَا مِنَ النَّارِ ﴿٤٥﴾</span>
 
- 
+,
 
 ---
 
@@ -511,7 +511,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ اَجِرْنَا مِنَ النَّارِ ﴿٤٦﴾</span>
 
- 
+,
 
 ---
 
@@ -519,7 +519,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ اَجِرْنَا مِنَ النَّارِ ﴿٤٧﴾</span>
 
- 
+,
 
 ---
 
@@ -527,7 +527,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ اَجِرْنَا مِنَ النَّارِ ﴿٤٨﴾</span>
 
- 
+,
 
 ---
 
@@ -535,7 +535,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ اَجِرْنَا مِنَ النَّارِ ﴿٤٩﴾</span>
 
- 
+,
 
 ---
 
@@ -543,7 +543,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ اَجِرْنَا مِنَ النَّارِ ﴿٥٠﴾</span>
 
- 
+,
 
 ---
 
@@ -553,7 +553,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ اَجِرْنَا مِنَ النَّارِ ﴿٥١﴾</span>
 
- 
+,
 
 ---
 
@@ -561,7 +561,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ اَجِرْنَا مِنَ النَّارِ ﴿٥٢﴾</span>
 
- 
+,
 
 ---
 
@@ -571,7 +571,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ اَجِرْنَا مِنَ النَّارِ ﴿٥٣﴾</span>
 
- 
+,
 
 ---
 
@@ -579,7 +579,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ اَجِرْنَا مِنَ النَّارِ ﴿٥٤﴾</span>
 
- 
+,
 
 ---
 
@@ -587,7 +587,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ اَجِرْنَا مِنَ النَّارِ ﴿٥٥﴾</span>
 
- 
+,
 
 ---
 
@@ -595,7 +595,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ اَجِرْنَا مِنَ النَّارِ ﴿٥٦﴾</span>
 
- 
+,
 
 ---
 
@@ -605,7 +605,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ اَجِرْنَا مِنَ النَّارِ ﴿٥٧﴾</span>
 
- 
+,
 
 ---
 
@@ -613,7 +613,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ اَجِرْنَا مِنَ النَّارِ ﴿٥٨﴾</span>
 
- 
+,
 
 ---
 
@@ -623,7 +623,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ اَجِرْنَا مِنَ النَّارِ ﴿٥٩﴾</span>
 
- 
+,
 
 ---
 
@@ -631,7 +631,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ اَجِرْنَا مِنَ النَّارِ ﴿٦٠﴾</span>
 
- 
+,
 
 ---
 
@@ -641,7 +641,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ نَجِّنَا مِنَ النَّارِ ﴿٦١﴾</span>
 
- 
+,
 
 ---
 
@@ -649,7 +649,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ نَجِّنَا مِنَ النَّارِ ﴿٦٢﴾</span>
 
- 
+,
 
 ---
 
@@ -659,7 +659,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ نَجِّنَا مِنَ النَّارِ ﴿٦٣﴾</span>
 
- 
+,
 
 ---
 
@@ -667,7 +667,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ نَجِّنَا مِنَ النَّارِ ﴿٦٤﴾</span>
 
- 
+,
 
 ---
 
@@ -675,7 +675,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ نَجِّنَا مِنَ النَّارِ ﴿٦٥﴾</span>
 
- 
+,
 
 ---
 
@@ -683,7 +683,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ نَجِّنَا مِنَ النَّارِ ﴿٦٦﴾</span>
 
- 
+,
 
 ---
 
@@ -693,7 +693,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ نَجِّنَا مِنَ النَّارِ ﴿٦٧﴾</span>
 
- 
+,
 
 ---
 
@@ -701,7 +701,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ نَجِّنَا مِنَ النَّارِ ﴿٦٨﴾</span>
 
- 
+,
 
 ---
 
@@ -709,7 +709,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ نَجِّنَا مِنَ النَّارِ ﴿٦٩﴾</span>
 
- 
+,
 
 ---
 
@@ -717,7 +717,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ نَجِّنَا مِنَ النَّارِ ﴿٧٠﴾</span>
 
- 
+,
 
 ---
 
@@ -727,7 +727,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ نَجِّنَا مِنَ النَّارِ ﴿٧١﴾</span>
 
- 
+,
 
 ---
 
@@ -735,7 +735,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ نَجِّنَا مِنَ النَّارِ ﴿٧٢﴾</span>
 
- 
+,
 
 ---
 
@@ -743,7 +743,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ نَجِّنَا مِنَ النَّارِ ﴿٧٣﴾</span>
 
- 
+,
 
 ---
 
@@ -751,7 +751,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ نَجِّنَا مِنَ النَّارِ ﴿٧٤﴾</span>
 
- 
+,
 
 ---
 
@@ -759,7 +759,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ نَجِّنَا مِنَ النَّارِ ﴿٧٥﴾</span>
 
- 
+,
 
 ---
 
@@ -767,7 +767,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ نَجِّنَا مِنَ النَّارِ ﴿٧٦﴾</span>
 
- 
+,
 
 ---
 
@@ -775,7 +775,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ نَجِّنَا مِنَ النَّارِ ﴿٧٧﴾</span>
 
- 
+,
 
 ---
 
@@ -785,7 +785,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ نَجِّنَا مِنَ النَّارِ ﴿٧٨﴾</span>
 
- 
+,
 
 ---
 
@@ -793,7 +793,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ نَجِّنَا مِنَ النَّارِ ﴿٧٩﴾</span>
 
- 
+,
 
 ---
 
@@ -801,7 +801,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ نَجِّنَا مِنَ النَّارِ ﴿٨٠﴾</span>
 
- 
+,
 
 ---
 
@@ -809,7 +809,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ نَجِّنَا مِنَ النَّارِ ﴿٨١﴾</span>
 
- 
+,
 
 ---
 
@@ -819,7 +819,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ نَجِّنَا مِنَ النَّارِ ﴿٨٢﴾</span>
 
- 
+,
 
 ---
 
@@ -827,7 +827,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ نَجِّنَا مِنَ النَّارِ ﴿٨٣﴾</span>
 
- 
+,
 
 ---
 
@@ -837,7 +837,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ نَجِّنَا مِنَ النَّارِ ﴿٨٤﴾</span>
 
- 
+,
 
 ---
 
@@ -845,7 +845,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ نَجِّنَا مِنَ النَّارِ ﴿٨٥﴾</span>
 
- 
+,
 
 ---
 
@@ -855,7 +855,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلَهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ نَجِّنَا مِنَ النَّارِ ﴿٨٦﴾</span>
 
- 
+,
 
 ---
 
@@ -863,7 +863,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ نَجِّنَا مِنَ النَّارِ ﴿٨٧﴾</span>
 
- 
+,
 
 ---
 
@@ -871,7 +871,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ نَجِّنَا مِنَ النَّارِ ﴿٨٨﴾</span>
 
- 
+,
 
 ---
 
@@ -879,7 +879,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ نَجِّنَا مِنَ النَّارِ ﴿٨٩﴾</span>
 
- 
+,
 
 ---
 
@@ -889,7 +889,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ نَجِّنَا مِنَ النَّارِ ﴿٩٠﴾</span>
 
- 
+,
 
 ---
 
@@ -897,7 +897,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿٩١﴾</span>
 
- 
+,
 
 ---
 
@@ -905,7 +905,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿٩٢﴾</span>
 
- 
+,
 
 ---
 
@@ -913,7 +913,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿٩٣﴾</span>
 
- 
+,
 
 ---
 
@@ -921,7 +921,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿٩٤﴾</span>
 
- 
+,
 
 ---
 
@@ -929,7 +929,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿٩٥﴾</span>
 
- 
+,
 
 ---
 
@@ -937,7 +937,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿٩٦﴾</span>
 
- 
+,
 
 ---
 
@@ -947,7 +947,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿٩٧﴾</span>
 
- 
+,
 
 ---
 
@@ -955,7 +955,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿٩٨﴾</span>
 
- 
+,
 
 ---
 
@@ -963,7 +963,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿٩٩﴾</span>
 
- 
+,
 
 ---
 
@@ -971,7 +971,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">سُبْحَانَكَ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ الْاَمَانُ الْاَمَانُ خَلِّصْنَا مِنَ النَّارِ ﴿١٠٠﴾</span>
 
- 
+,
 
 ---
 
@@ -983,7 +983,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">السُّٓوءِ وَ وَجَعَ الْجَوَارِحِ وَسَٓائِرَ الْاٰفَاتِ وَ تَحْفَظَنَا مِنْ كُلِّ شَرٍّ وَ سُٓوءٍ وَ تَرْزُقَنَا السَّلَامَةَ وَ الْعَافِيَةَ وَ الْخَيْرَ فِى الدُّنْيَا وَ الْاٰخِرَةِ بِرَحْمَتِكَ يَٓا اَرْحَمَ الرَّاحِم۪ينَ وَ صَلَّى اللّٰهُ عَلٰى سَيِّدِنَا مُحَمَّدٍ وَ اٰلِه۪ وَ صَحْبِه۪ٓ اَجْمَع۪ينَ وَ الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ</span>
 
- 
+,
 
 ---
 
@@ -1059,7 +1059,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">جَم۪يعِ السَّيِّئَاتِ وَ تَرْفَعُنَا بِهَا عِنْدَكَ اَعْلَى الدَّرَجَاتِ وَ تُبَلِّغُنَا بِهَٓا اَقْصَى الْغَايَاتِ مِنْ جَم۪يعِ الْخَيْرَاتِ فِى الْحَيَاةِ وَ بَعْدَ الْمَمَاتِ اٰم۪ينَ يَا مُج۪يبَ الدَّعَوَاتِ وَ الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ</span>
 
- 
+,
 
 ---
 
@@ -1067,7 +1067,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَ اغْفِرْلَنَا وَ ارْحَمْنَا وَ الْطُفْ بِنَا يَٓا اِلٰهَنَا بِكُلِّ صَلَاةٍ مِنْهَا</span>
 
- 
+,
 
 ---
 
@@ -1075,7 +1075,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">حَضْرَتِكَ وَ خَيْرِ خَلْقِكَ وَ اَحَبِّ الْخَلْقِ اِلَيْكَ عَبْدِكَ وَ حَب۪يبِكَ وَ رَسُولِكَ النَّبِىِّ الْاُمِّىِّ الَّذ۪ى خَتَمْتَ بِهِ الْاَنْبِيَٓاءَ وَ الْمُرْسَل۪ينَ وَ عَلٰى سَٓائِرِ الْاَنْبِيَٓاءِ وَ الْمُرْسَل۪ينَ وَ عَلٰٓى اٰلِه۪ وَ صَحْبِه۪ٓ اَجْمَع۪ينَ وَ عَلَى الْمَلٰٓئِكَةِ الْمُقَرَّب۪ينَ وَ عَلٰى عِبَادِكَ الصَّالِح۪ينَ مِنْ اَهْلِ السَّمٰوَاتِ وَ اَهْلِ الْاَرَض۪ينَ رِضْوَانُ اللّٰهِ تَعَالٰى عَلَيْهِمْ وَ عَلَيْنَٓا اَجْمَع۪ينَ اٰم۪ينَ وَ الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ</span>
 
- 
+,
 
 ---
 
@@ -1085,7 +1085,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَ عَلَيْنَٓا اَجْمَع۪ينَ وَ سَلِّمْ تَسْل۪يمًا كَث۪يرًا كُلَّمَا ذَكَرَكَ الذَّاكِرُونَ وَ غَفَلَ عَنْ ذِكْرِكَ الْغَافِلُونَ ف۪ى كُلِّ طَرْفَةِ عَيْنٍ اَلْفُ اَلْفِ صَلَاةٍ وَ سَلَامٍ وَ اغْفِرْلَنَا وَ ارْحَمْنَا وَ الْطُفْ بِنَا يَٓا اِلٰهَنَا بِكُلِّ صَلَاةٍ مِنْهَا</span>
 
- 
+,
 
 ---
 
@@ -1093,13 +1093,13 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَ الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(اَللّٰهُمَّ) صَلِّ عَلَى الذَّاتِ الْمُحَمَّدِيَّةِ اللَّط۪يفَةِ الْاَحَدِيَّةِ شَمْسِ سَمَٓاءِ الْاَسْرَارِ وَ مَظْهَرِ الْاَنْوَارِ وَ مَرْكَزِ مَدَارِ الْجَلَالِ وَ قُطْبِ فَلَكِ الْجَمَالِ اَللّٰهُمَّ بِسِرِّه۪ لَدَيْكَ وَ بِسَيْرِه۪ٓ اِلَيْكَ اٰمِنْ خَوْف۪ى وَ اَقِلْ عُثْرَت۪ى وَ اَذْهِبْ حُزْن۪ى وَ حِرْص۪ى وَ كُنْ ل۪ى وَ خُذْن۪ٓى اِلَيْكَ مِنِّى وَ ارْزُقْنِى الْفَنَٓاءَ عَنِّى وَ لَا تَجْعَلْن۪ى مَفْتُونًا بِنَفْس۪ى مَحْجُوبًا بِحِسِّى وَ اكْشِفْ ل۪ى عَنْ كُلِّ سِرٍّ مَكْتُومٍ يَا حَىُّ يَا قَيُّومُ يَا حَىُّ يَا قَيُّومُ يَا حَىُّ يَا قَيُّومُ ﴿٣﴾</span>
 
- 
+,
 
 ---
 
@@ -1109,7 +1109,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَمْرَاضَنَا وَ تَفْتَحُ بِهَٓا اَقْفَالَ قُلُوبِنَا بِنُورِ الْفَتْحِ الْمُب۪ينِ بِرَحْمَتِكَ يَٓا اَرْحَمَ الرَّاحِم۪ينَ وَ يَٓا اَكْرَمَ الْاَكْرَم۪ينَ نَسْئَلُكَ بِحَقِّ اَنْوَارِ صَلَوَاتِكَ عَلٰى حَب۪يبِكَ رِضْوَانَكَ وَ غُفْرَانَكَ وَ جَنَّتَكَ وَ الْاِسْتِقَامَةَ عَلَى الصِّرَاطِ الْمُسْتَق۪يمِ بِرَحْمَتِكَ يَٓا اَرْحَمَ الرَّاحِم۪ينَ وَ الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ</span>
 
- 
+,
 
 ---
 
@@ -1119,7 +1119,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">غَيْرِكَ اَللّٰهُ اَللّٰهُ اَللّٰهُ اِنَّ الَّذ۪ى فَرَضَ عَلَيْكَ الْقُرْاٰنَ لَرَٓادُّكَ اِلٰى مَعَادٍ رَبَّنَٓا اٰتِنَا مِنْ لَدُنْكَ رَحْمَةً وَ هَيِّئْ لَنَا مِنْ اَمْرِنَا رَشَدًا اِجْعَلْ ل۪ى مِنْ اَمْر۪ى فَرَجًا وَ مَخْرَجًا اِنَّ اللّٰهَ وَ مَلٰٓئِكَتَهُ يُصَلُّونَ عَلَى النَّبِىِّ يَٓا اَيُّهَا الَّذ۪ينَ اٰمَنُوا صَلُّوا عَلَيْهِ وَ سَلِّمُوا تَسْل۪يمًا صَلَوَاتُ اللّٰهِ وَ سَلَامُهُ وَ تَحِيَّتُهُ وَ رَحْمَتُهُ وَ بَرَكَاتُهُ عَلٰى سَيِّدِنَا مُحَمَّدٍ عَبْدِكَ وَ نَبِيِّكَ وَ حَب۪يبِكَ وَ رَسُولِكَ النَّبِىِّ الْاُمِّىِّ وَ عَلٰٓى اٰلِه۪ وَ صَحْبِه۪ وَ سَلِّمْ عَدَدَ الشَّفْعِ وَ الْوَتْرِ وَ عَدَدَ كَلِمَاتِ اللّٰهِ التَّٓامَّاتِ الْمُبَارَكَاتِ</span>
 
- 
+,
 
 ---
 
@@ -1127,49 +1127,49 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَوْمِ الْحَشْرِ سَيِّدِ سَادَاتِ الْمَلَكِ وَ الْبَشَرِ حُجَّةِ الْحَقِّ عَلَى الْخَلْقِ سُلْطَانِ الْاَنْبِيَٓاءِ وَ بُرْهَانِ الْاَصْفِيَٓاءِ حَب۪يبِ رَبِّ الْعَالَم۪ينَ سَيِّدِنَا وَ مَوْلٰينَا حَضْرَتِ مُحَمَّدٍ صَلَّى اللّٰهُ تَعَالٰى عَلَيْهِ وَ عَلٰٓى اٰلِه۪ وَصَحْبِه۪ٓ اَجْمَع۪ينَ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(اَللّٰهُمَّ) صَلِّ عَلٰى سَيِّدِنَا مُحَمَّدٍ طِبِّ الْقُلُوبِ وَ دَوَٓائِهَا وَ عَافِيَةِ الْاَبْدَانِ وَ شِفَٓائِهَا وَ نُورِ الْاَبْصَارِ وَ ضِيَٓائِهَا وَ عَلٰٓى اٰلِه۪ وَ صَحْبِه۪ وَ سَلِّمْ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(اَللّٰهُمَّ) صَلِّ صَلَاةً كَامِلَةً وَ سَلِّمْ سَلَامًا تَٓامًّا عَلٰى سَيِّدِنَا مُحَمَّدٍ ۨالَّذ۪ى تَنْحَلُّ بِهِ الْعُقَدُ وَ تَنْفَرِجُ بِهِ الْكُرَبُ وَ تُقْضٰى بِهِ الْحَوَائِجُ وَ تُنَالُ بِهِ الرَّغَٓائِبُ وَ حُسْنُ الْخَوَاتِمِ وَ يُسْتَسْقَى الْغَمَامُ بِوَجْهِهِ الْكَر۪يمِ وَ عَلٰٓى اٰلِه۪ وَ صَحْبِه۪ ف۪ى كُلِّ لَمْحَةٍ وَ نَفَسٍ بِعَدَدِ كُلِّ مَعْلُومٍ لَكَ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(اَللّٰهُمَّ) صَلِّ عَلٰى سَيِّدِنَا مُحَمَّدٍ عَدَدَ مَا ف۪ى عِلْمِ اللّٰهِ صَلَاةً دَٓائِمَةً بِدَوَامِ مُلْكِ اللّٰهِ وَ عَلٰٓى اٰلِه۪ وَ صَحْبِه۪ وَ سَلِّمْ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(اَللّٰهُمَّ) صَلِّ عَلٰى سَيِّدِنَا مُحَمَّدٍ مِنَ الْاَزَلِ اِلَى الْاَبَدِ عَدَدَ مَا ف۪ى عِلْمِ اللّٰهِ وَ عَلٰٓى اٰلِه۪ وَ صَحْبِه۪ وَ سَلِّمْ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(اَللّٰهُمَّ) صَلِّ عَلٰى سَيِّدِنَا مُحَمَّدٍ ۨالنَّبِىِّ الْاُمِّىِّ الْحَب۪يبِ الْعَالِى الْقَدْرِ الْعَظ۪يمِ الْجَاهِ وَ عَلٰٓى اٰلِه۪ وَ صَحْبِه۪ وَ سَلِّمْ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(اَللّٰهُمَّ) صَلِّ عَلٰى سَيِّدِنَا مُحَمَّدٍ صَلَاةً تَكُونُ لَكَ رِضَٓاءً وَ لِحَقِّه۪ اَدَٓاءً وَ عَلٰٓى اٰلِه۪ وَ صَحْبِه۪ وَ سَلِّمْ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(اَللّٰهُمَ) صَلِّ عَلٰى سَيِّدِنَا مُحَمَّدٍ نُورِ الذَّاتِ وَ السِّرِّ السَّار۪ى ف۪ى جَم۪يعِ اٰثَارِ الْاَسْمَٓاءِ وَ الصِّفَاتِ وَ عَلٰٓى اٰلِه۪ وَ صَحْبِه۪ وَ سَلِّمْ عَدَدَ مَا ف۪ى عِلْمِكَ مُضَاعَفًا بِدَوَامِكَ</span>
 
- 
+,
 
 ---
 
@@ -1177,7 +1177,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">صَحْبِه۪ بِعَدَدِ حُرُوفَاتِ الْقُرْاٰنِ الْمُتَمَثِّلَةِ بِاِذْنِ الرَّحْمٰنِ ف۪ى مَرَايَا تَمَوُّجَاتِ الْهَوَٓاءِ عِنْدَ قِرَٓائَةِ كَلِمَاتِ الْقُرْاٰنِ مِنْ كُلِّ قَارِءٍ مِنْ اَوَّلِ النُّزُولِ اِلٰٓى اٰخِرِ الزَّمَانِ وَ اغْفِرْلَنَا وَ ارْحَمْنَا وَ الْطُفْ بِنَا يَٓا اِلٰهَنَا بِكُلِّ صَلَاةٍ مِنْهَا</span>
 
- 
+,
 
 ---
 
@@ -1189,7 +1189,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَا نُورَ الْاَنْوَارِ يَا لَط۪يفُ يَا سَتَّارُ نَسْئَلُكَ اَنْ تُصَلِّىَ عَلٰى سَيِّدِنَا مُحَمَّدٍ نَبْرَاسِ الْاَنْبِيَٓاءِ وَ نَيِّرِ الْاَوْلِيَٓاءِ وَ زِبَرْقَانِ الْاَصْفِيَٓاءِ وَ يُوحِ الثَّقَلَيْنِ وَ ضِيَٓاءِ الْخَافِقَيْنِ وَ اَنْ تَرْفَعَ وُجُودَنَٓا اِلٰى فَلَكِ الْعِرْفَانِ وَ اَنْ تُثَبِّتَ شُهُودَنَا ف۪ى مَقَامِ الْاِحْسَانِ اٰم۪ينَ وَ الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ</span>
 
- 
+,
 
 ---
 
@@ -1207,7 +1207,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَلْفُ اَلْفِ صَلَاةٍ وَ اَلْفُ اَلْفِ سَلَامٍ عَلَيْكَ يَا رَسُولَ اللّٰهِ</span>
 
- 
+,
 
 ---
 
@@ -1215,7 +1215,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَلْفُ اَلْفِ صَلَاةٍ وَ اَلْفُ اَلْفِ سَلَامٍ عَلَيْكَ يَا حَب۪يبَ اللّٰهِ</span>
 
- 
+,
 
 ---
 
@@ -1223,13 +1223,13 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَلْفُ اَلْفِ صَلَاةٍ وَ اَلْفُ اَلْفِ سَلَامٍ عَلَيْكَ يَٓا اَم۪ينَ وَحْىِ اللّٰهِ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(اَللّٰهُمَّ) صَلِّ وَ سَلِّمْ وَ بَارِكْ عَلٰى سَيِّدِنَا مُحَمَّدٍ وَ عَلٰٓى اٰلِه۪ وَ اَصْحَابِه۪ بِعَدَدِ اَوْرَاقِ الْاَشْجَارِ وَ اَمْوَاجِ الْبِحَارِ وَ قَطَرَاتِ الْاَمْطَارِ اَشْهَدُ اَنْ لَٓا اِلٰهَ اِلَّا اللّٰهُ وَ اَشْهَدُ اَنَّ مُحَمَّدًا رَسُولُ اللّٰهِ صَلَّى اللّٰهُ تَعَالٰى عَلَيْهِ وَ سَلَّمْ</span>
 
- 
+,
 
 ---
 
@@ -1397,7 +1397,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَا رَبَّ السَّمٰوَاتِ وَ الْاَرْضِ يَا ذَا الْجَلَالِ وَ الْاِكْرَامِ ❁ اَسْئَلُكَ بِحَقِّ هٰذِهِ الْاَسْمَٓاءِ كُلِّهَٓا اَنْ تُصَلِّىَ عَلٰى سَيِّدِنَا مُحَمَّدٍ وَ عَلٰٓى اٰلِ مُحَمَّدٍ وَ ارْحَمْ مُحَمَّدًا كَمَا صَلَّيْتَ وَ سَلَّمْتَ وَ بَارَكْتَ وَ رَحِمْتَ وَ تَرَحَّمْتَ عَلٰٓى اِبرَاه۪يمَ وَ عَلٰٓى اٰلِ اِبْرَاه۪يمَ فِى الْعَالَم۪ينَ رَبَّنَٓا اِنَّكَ حَم۪يدٌ مَج۪يدٌ بِرَحْمَتِكَ يَٓا اَرْحَمَ الرَّاحِم۪ينَ وَ الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ</span>
 
- 
+,
 
 ---
 
@@ -1419,7 +1419,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(فَاتِحَة:) يَٓا اَللّٰهُ يَا رَبَّ الْعَالَم۪ينَ يَا رَحْمٰنُ يَا رَح۪يمُ يَا مَالِكَ يَوْمِ الدِّينِ</span>
 
- 
+,
 
 ---
 
@@ -1427,7 +1427,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَا مَنْ خَلَقَ لَنَا مَا فِى الْاَرْضِ جَم۪يعًا ثُمَّ اسْتَوٰٓى اِلَى السَّمَٓاءِ فَسَوّٰيهُنَّ سَبْعَ سَمٰوَاتٍ وَ هُوَ بِكُلِّ شَىْءٍ عَل۪يمٌ ❁ يَا مَنْ عَلَّمَ اٰدَمَ الْاَسْمَٓاءَ كُلَّهَا ثُمَّ عَرَضَهُمْ عَلَى الْمَلٰٓئِكَةِ ❁ يَا مَنْ لَهُ مَا فِى السَّمٰوَاتِ وَ الْاَرْضِ اِذَا قَضٰٓى اَمْرًا فَاِنَّمَا يَقُولُ لَهُ كُنْ فَيَكُونُ ❁ يَا مَنْ يُحِبُّ التَّوَّاب۪ينَ وَ يُحِبُّ الْمُتَطَهِّر۪ينَ ❁ يَا حَىُّ يَا قَيُّومُ لَا تَاْخُذُهُ سِنَةٌ وَ لَا نَوْمٌ ❁ يَا مَنْ وَسِعَ كُرْسِيُّهُ السَّمٰوَاتِ وَ الْاَرْضَ وَ لَا يَؤُدُهُ حِفْظُهُمَا وَ هُوَ الْعَلِىُّ الْعَظ۪يمُ</span>
 
- 
+,
 
 ---
 
@@ -1435,7 +1435,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَا مَالِكَ الْمُلْكِ تُؤْتِى الْمُلْكَ مَنْ تَشَٓاءُ وَ تَنْزِعُ الْمُلْكَ مِمَّنْ تَشَٓاءُ وَ تُعِزُّ مَنْ تَشَٓاءُ وَ تُذِلُّ مَنْ تَشَٓاءُ بِيَدِكَ الْخَيْرُ اِنَّكَ عَلٰى كُلِّ شَىْءٍ قَد۪يرٌ ❁ تُولِجُ الَّيْلَ فِى النَّهَارِ وَ تُولِجُ النَّهَارَ فِى الَّيْلِ وَ تُخْرِجُ الْحَىَّ مِنَ الْمَيِّتِ وَ تُخْرِجُ الْمَيِّتَ مِنَ الْحَىِّ وَ تَرْزُقُ مَنْ تَشَٓاءُ بِغَيْرِ حِسَابٍ ❁ يَا مَنِ اصْطَفٰٓى اٰدَمَ وَ نُوحًا وَ اٰلَ اِبْرَاه۪يمَ وَ اٰلَ عِمْرَانَ عَلَى الْعَالَم۪ينَ ❁ يَا مَنْ يَغْفِرُ لِمَنْ يَشَٓاءُ وَ يُعَذِّبُ مَنْ يَشَٓاءُ وَ هُوَ الْغَفُورُ الرَّح۪يمُ ❁ يَا مَنْ يُحِبُّ الْمُحْسِن۪ينَ ❁ يَا مَنْ عِنْدَهُ حُسْنُ الثَّوَابِ</span>
 
- 
+,
 
 ---
 
@@ -1443,7 +1443,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(مَٓائِدَة:) يَا مَنْ يَحْكُمُ مَا يُر۪يدُ ❁ يَا مَنْ اَنْزَلَ التَّوْرٰيةَ ف۪يهَا هُدًى وَ نُورٌ يَحْكُمُ بِهَا النَّبِيُّونَ الَّذ۪ينَ اَسْلَمُوا ❁ يَا مَنْ يَدَاهُ مَبْسُوطَتَانِ يُنْفِقُ كَيْفَ يَشَٓاءُ ❁ يَا مَنْ لَهُ مُلْكُ السَّمٰوَاتِ وَ الْاَرْضِ وَ مَا ف۪يهِنَّ وَ هُوَ عَلٰى كُلِّ شَىْءٍ قَد۪يرٌ</span>
 
- 
+,
 
 ---
 
@@ -1451,7 +1451,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَا مَنْ هُوَ اَسْرَعُ الْحَاسِب۪ينَ ❁ يَا مَنْ قَوْلُهُ الْحَقُّ وَ لَهُ الْمُلْكُ يَوْمَ يُنْفَخُ فِى الصُّورِ عَالِمُ الْغَيْبِ وَ الشَّهَادَةِ وَ هُوَ الْحَك۪يمُ الْخَب۪يرُ ❁ يَا فَالِقَ الْاِصْبَاحِ وَ جَعَلَ الَّيْلَ سَكَنًا وَ الشَّمْسَ وَ الْقَمَرَ حُسْبَانًا ذٰلِكَ تَقْد۪يرُ الْعَز۪يزِ الْعَل۪يمِ ❁ يَا مَنْ لَا تُدْرِكُهُ الْاَبْصَارُ وَ هُوَ يُدْرِكُ الْاَبْصَارَ وَ هُوَ اللَّط۪يفُ الْخَب۪يرُ ❁ يَا ذَا الرَّحْمَةِ الْوَاسِعَةِ وَ لَا يُرَدُّ بَاْسُهُ عَنِ الْقَوْمِ الْمُجْرِم۪ينَ</span>
 
- 
+,
 
 ---
 
@@ -1459,19 +1459,19 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَا مَنْ تَجَلّٰى لِلْجَبَلِ وَ جَعَلَهُ دَكًّا</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(اَنْفَال:) يَا مَنْ يُحِقُّ الْحَقَّ بِكَلِمَاتِه۪ وَ يَقْطَعُ دَابِرَ الْكَافِر۪ينَ ❁ يَا مُوهِنَ كَيْدِ الْكَافِر۪ينَ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(تَوْبَه:) يَا مَنْ سُبْحَانَهُ عَمَّا يُشْرِكُونَ ❁ يَا مَنْ نَصَرَ نَبِيَّهُٓ اِذْ اَخْرَجَهُ الَّذ۪ينَ كَفَرُوا ❁ يَا مَنْ يَقْبَلُ التَّوْبَةَ عَنْ عِبَادِه۪ وَ يَاْخُذُ الصَّدَقَاتِ وَ هُوَ التَّوَّابُ الرَّح۪يمُ ❁ يَا مَنِ اشْتَرٰى مِنَ المُؤْمِن۪ينَ اَنْفُسَهُمْ وَ اَمْوَالَهُمْ بِاَنَّ لَهُمُ الْجَنَّةَ ❁ يَا مَنْ تَابَ عَلَى النَّبِىِّ وَ الْمُهَاجِر۪ينَ وَ الْاَنْصَارِ ❁ يَا لَٓا اِلٰهَ اِلَّٓا اَنْتَ رَبُّ الْعَرْشِ الْعَظ۪يمِ</span>
 
- 
+,
 
 ---
 
@@ -1479,13 +1479,13 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَا مَنْ جَعَلَ الشَّمْسَ ضِيَٓاءً وَ الْقَمَرَ نُورًا وَ قَدَّرَهُ مَنَازِلَ لِيَعْلَمُوا عَدَدَ السِّن۪ينَ وَ الْحِسَابَ ❁ يَا مَنْ لَهُ الْعِزَّةُ جَم۪يعًا وَ هُوَ السَّم۪يعُ الْعَل۪يمُ ❁ يَا مَنْ يَحْكُمُ وَ هُوَ خَيْرُ الْحَاكِم۪ينَ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(هُود:) يَا مَنْ يَعْلَمُ مَا يُسِرُّونَ وَ مَا يُعْلِنُونَ اِنَّهُ عَل۪يمٌ بِذَاتِ الصُّدُورِ ❁ يَا مَنْ خَلَقَ السَّمٰوَاتِ وَ الْاَرْضَ ف۪ى سِتَّةِ اَيَّامٍ وَ كَانَ عَرْشُهُ عَلَى الْمَٓاءِ ❁ يَا مَنْ هُوَ عَلٰى كُلِّ شَىْءٍ حَف۪يظٌ ❁ يَا قَر۪يبُ يَا مُج۪يبُ يَا مَنْ هُوَ اَخَذَ اْلقُرٰى وَ هِىَ ظَالِمَةٌ اِنَّ اَخْذَهُٓ اَل۪يمٌ شَد۪يدٌ ❁ يَا مَنْ لَهُ غَيْبُ السَّمٰوَاتِ وَ الْاَرْضِ وَ اِلَيْهِ يُرْجَعُ الْاَمْرُ كُلُّهُ</span>
 
- 
+,
 
 ---
 
@@ -1493,7 +1493,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَا مَنْ لَط۪يفٌ لِمَا يَشَٓاءُ وَ هُوَ الْعَل۪يمُ الْحَك۪يمُ ❁ يَا مَنْ لَا يُرَدُّ بَاْسُهُ عَنِ الْقَوْمِ الْمُجْرِم۪ينَ</span>
 
- 
+,
 
 ---
 
@@ -1501,13 +1501,13 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَا مَنْ بِذِكْرِه۪ تَطْمَئِنُّ الْقُلُوبُ ❁ يَمْحُوا اللّٰهُ مَا يَشَٓاءُ وَ يُثْبِتُ وَ عِنْدَهُٓ اُمُّ الْكِتَابِ ❁ يَا مَنْ يَحْكُمُ لَا مُعَقِّبَ لِحُكْمِه۪ وَ هُوَ سَر۪يعُ الْحِسَابِ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(اِبْرَاه۪يم:) يَا مَنْ خَلَقَ السَّمٰوَاتِ وَ الْاَرْضَ بِالْحَقِّ وَقَالَ اِنْ يَشَاْ يُذْهِبْكُمْ وَ يَاْتِ بِخَلْقٍ جَد۪يدٍ ❁ وَ مَا ذٰلِكَ عَلَى اللّٰهِ بِعَز۪يزٍ ❁ وَ اِنْ تَعُدُّوا نِعْمَةَ اللّٰهِ لَا تُحْصُوهَٓا اِنَّ الْاِنْسَانَ لَظَلُومٌ كَفَّارٌ ❁ رَبِّ اجْعَلْن۪ى مُق۪يمَ الصَّلَاةِ وَ مِنْ ذُرِّيَّت۪ى رَبَّنَا وَ تَقَبَّلْ دُعَٓاءِ ❁ رَبَّنَا اغْفِرْل۪ى وَ لِوَالِدَىَّ وَ لِلْمُؤْمِن۪ينَ يَوْمَ يَقُومُ الْحِسَابُ</span>
 
- 
+,
 
 ---
 
@@ -1515,13 +1515,13 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَ يَا مَنْ اٰتَا مُحَمَّدًا سَبْعًا مِنَ الْمَثَان۪ى وَ الْقُرْاٰنَ الْعَظ۪يمَ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(نَحْل:) يَا مَنْ يُنَزِّلُ الْمَلٰٓئِكَةَ بِالرُّوحِ مِنْ اَمْرِه۪ عَلٰى مَنْ يَشَٓاءُ مِنْ عِبَادِه۪ ❁ يَا مَنْ يَسْجُدُ لَهُ مَا فِى السَّمٰوَاتِ وَ مَا فِى الْاَرْضِ مِنْ دَٓابَّةٍ وَ الْمَلٰٓئِكَةُ وَ هُمْ لَا يَسْتَكْبِرُونَ ❁ يَا مَنْ يَاْمُرُ بِالْعَدْلِ وَ الْاِحْسَانِ وَ ا۪يتَٓاءِ ذِى الْقُرْبٰى وَ يَنْهٰى عَنِ الْفَحْشَٓاءِ وَ الْمُنْكَرِ وَ الْبَغْىِ يَعِظُكُمْ لَعَلَّكُمْ تَذَكَّرُونَ ❁ اِنَّ اللّٰهَ مَعَ الَّذ۪ينَ اتَّقَوْا وَ الَّذ۪ينَ هُمْ مُحْسِنُونَ</span>
 
- 
+,
 
 ---
 
@@ -1529,7 +1529,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَا مَنْ تُسَبِّحُ لَهُ السَّمٰوَاتُ السَّبْعُ وَ الْاَرْضُ وَ مَنْ ف۪يهِنَّ ❁ يَا مَنْ فَضَّلَ بَعْضَ النَّبِيِّنَ عَلٰى بَعْضٍ وَ اٰتَا دَاوُدَ زَبُورًا ❁ يَا مَنْ كَرَّمَ بَن۪ٓى اٰدَمَ وَ حَمَلَهُمْ فِى الْبَرِّ وَ الْبَحْرِ وَ رَزَقَهُمْ مِنَ الطَّيِّبَاتِ وَ فَضَّلَهُمْ عَلٰى كَث۪يرٍ مِمَّنْ خَلَقَهُ تَفْض۪يلًا ❁ يَا مَنْ يَبْعَثُ مُحَمَّدًا عَلَيْهِ الصَّلَاةُ وَ السَّلَامُ يَوْمَ الْقِيَامَةِ مَقَامًا مَحْمُودًا ❁ يَا مَنْ اَنْزَلَ مِنَ الْقُرْاٰنِ مَا هُوَ شِفَٓاءٌ وَ رَحْمَةٌ لِلْمُؤْمِن۪ينَ وَ لَا يَز۪يدُ الظَّالِم۪ينَ اِلَّا خَسَارًا ❁ يَا مَنْ لَمْ يَتَّخِذْ وَلَدًا وَ لَمْ يَكُنْ لَهُ شَر۪يكٌ فِى الْمُلْكِ وَ لَمْ يَكُنْ لَهُ وَلِىٌّ مِنَ الذُّلِّ وَ كَبِّرْهُ تَكْب۪يرًا</span>
 
- 
+,
 
 ---
 
@@ -1537,13 +1537,13 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَا مَنْ لَا يُشْرِكُ ف۪ى حُكْمِه۪ٓ اَحَدًا ❁ يَا مَنْ مَنَّ عَلٰى ذِى الْقَرْنَيْنِ وَ اٰتٰيهُ مِنْ كُلِّ شَىْءٍ سَبَبًا</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(مَرْيَم:) يَا مَنْ اَرْسَلَ رُوحَهُ اِلٰى مَرْيَمَ فَتَمَثَّلَ لَهَا بَشَرًا سَوِيًّا ❁ يَا مَنْ نَادٰى مُوسٰى مِنْ جَانِبِ الطُّورِ الْاَيْمَنِ وَ قَرَّبَهُ نَجِيًّا ❁ يَا مَنْ رَفَعَ اِدْر۪يسَ مَكَانًا عَلِيًّا</span>
 
- 
+,
 
 ---
 
@@ -1551,7 +1551,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(اَنْبِيَٓاء:) يَا مَنْ يَعْلَمُ الْقَوْلَ فِى السَّمَٓاءِ وَ الْاَرْضِ وَ هُوَ السَّم۪يعُ الْعَل۪يمُ ❁ يَا مَنْ لَهُ مَا فِى السَّمٰوَاتِ وَ الْاَرْضِ وَ مَنْ عِنْدَهُ لَا يَسْتَكْبِرُونَ عَنْ عِبَادَتِه۪ وَ لَا يَسْتَحْسِرُونَ يُسَبِّحُونَ الَّيْلَ وَ النَّهَارَ لَا يَفْتُرُونَ ❁ يَا مَنْ خَلَقَ الَّيْلَ وَ النَّهَارَ وَ الشَّمْسَ وَ الْقَمَرَ كُلٌّ ف۪ى فَلَكٍ يَسْبَحُونَ ❁ يَا مَنْ يَضَعُ الْم۪يزَانَ بِالْقِسْطِ فَلَا تُظْلَمُ نَفْسٌ شَيْئًا</span>
 
- 
+,
 
 ---
 
@@ -1559,13 +1559,13 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(مُؤْمِنُون:) يَا مَنْ يُحْي۪ى وَ يُم۪يتُ وَ لَهُ اخْتِلَافُ الَّيْلِ وَ النَّهَارِ اَفَلَا تَعْقِلُونَ ❁ فَتَعَالَى اللّٰهُ الْمَلِكُ الْحَقُّ لَٓا اِلٰهَ اِلَّا هُوَ رَبُّ الْعَرْشِ الْكَر۪يمِ ❁ يَا رَبِّ اغْفِرْ وَ ارْحَمْ وَ اَنْتَ خَيْرُ الرَّاحِم۪ينَ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(نُورْ:) يَا مَنْ خَلَقَ كُلَّ دَٓابَّةٍ مِنْ مَٓاءٍ فَمِنْهُمْ مَنْ يَمْش۪ى عَلٰى بَطْنِه۪ وَ مِنْهُمْ مَنْ يَمْش۪ى عَلٰى رِجْلَيْنِ وَ مِنْهُمْ مَنْ يَمْش۪ى عَلٰٓى اَرْبَعٍ ❁ يَا مَنْ هُوَ بِكُلِّ شَىْءٍ عَل۪يمٌ</span>
 
- 
+,
 
 ---
 
@@ -1573,13 +1573,13 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَا مَنْ خَلَقَ مِنَ الْمَٓاءِ بَشَرًا فَجَعَلَهُ نَسَبًا وَ صِهْرًا ❁ يَا مَنْ جَعَلَ الَّيْلَ وَ النَّهَارَ خِلْفَةً لِمَنْ اَرَادَ اَنْ يَذَّكَّرَ اَوْ اَرَادَ شُكُورًا</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(شُعَرَٓاء:) يَا مَنْ اَنْبَتَ فِى الْاَرْضِ مِنْ كُلِّ زَوْجٍ كَر۪يمٍ ❁ يَا مَنْ اَلْقَى السَّحَرَةَ سَاجِد۪ينَ ❁ قَالُٓوا اٰمَنَّا بِرَبِّ الْعَالَم۪ينَ ❁ رَبِّ مُوسٰى وَ هٰرُونَ ❁ يَا مَنْ اَزْلَفَ الْجَنَّةَ لِلْمُتَّق۪ينَ ❁ وَ بُرِّزَتِ الْجَح۪يمُ لِلْغَاو۪ينَ ❁ يَا عَز۪يزُ يَا رَح۪يمُ يَا رَبَّ الرُّوحِ الْاَم۪ينِ</span>
 
- 
+,
 
 ---
 
@@ -1587,13 +1587,13 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَا مَنْ يُج۪يبُ الْمُضْطَرَّ اِذَا دَعَاهُ وَ يَكْشِفُ السُّٓوءَ وَ يَهْد۪ى ف۪ى ظُلُمَاتِ الْبَرِّ وَ الْبَحْرِ ❁ يَا مَنْ اَتْقَنَ كُلَّ شَىْءٍ بِصُنْعِه۪ وَ هُوَ خَب۪يرٌ بِمَا تَفْعَلُونَ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(قَصَص:) يَا مَنْ يَمُنُّ عَلَى الَّذ۪ينَ اسْتُضْعِفُوا فِى الْاَرْضِ وَ يَجْعَلُهُمْ اَئِمَّةً وَ يَجْعَلُهُمُ الْوَارِث۪ينَ ❁ يَا مَنْ رَبَطَ عَلٰى قَلْبِ اُمِّ مُوسٰى لِتَكُونَ مِنَ الْمُؤْمِن۪ينَ ❁ يَا مَنْ لَهُ الْحَمْدُ فِى الْاُولٰى وَ الْاٰخِرَةِ وَ لَهُ الْحُكْمُ وَ اِلَيْهِ تُرْجَعُونَ</span>
 
- 
+,
 
 ---
 
@@ -1601,13 +1601,13 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(رُوم:) يَا مَنْ لَهُ الْاَمْرُ مِنْ قَبْلُ وَ مِنْ بَعْدُ وَ يَوْمَئِذٍ يَفْرَحُ الْمُؤْمِنُونَ بِنَصْرِ اللّٰهِ يَنْصُرُ مَنْ يَشَٓاءُ وَ هُوَ الْعَز۪يزُ الرَّح۪يمُ ❁ يَا مَنْ يَبْدَؤُ الْخَلْقَ ثُمَّ يُع۪يدُهُ وَ هُوَ اَهْوَنُ عَلَيْهِ وَ لَهُ الْمَثَلُ الْاَعْلٰى فِى السَّمٰوَاتِ وَ الْاَرْضِ وَ هُوَ الْعَز۪يزُ الْحَك۪يمُ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(لُقْمَان:) يَا مَنْ اَسْبَغَ عَلَيْنَا نِعَمَهُ ظَاهِرَةً وَ بَاطِنَةً ❁ يَا مَنْ يُمَتِّعُ قَل۪يلًا ثُمَّ يَضْطَرُّهُٓ اِلٰى عَذَابٍ غَل۪يظٍ ❁ يَا مَنْ عِنْدَهُ عِلْمُ السَّاعَةِ وَ يُنَزِّلُ الْغَيْثَ وَ يَعْلَمُ مَا فِى الْاَرْحَامِ</span>
 
- 
+,
 
 ---
 
@@ -1615,13 +1615,13 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(اَحْزَاب:) يَا مَنْ يَقُولُ الْحَقَّ وَ هُوَ يَهْدِى السَّب۪يلَ ❁ يَا مَنْ رَدَّ الَّذ۪ينَ كَفَرُوا بِغَيْظِهِمْ لَمْ يَنَالُوا خَيْرًا ❁ يَا مَنْ اَرْسَلَ مُحَمَّدًا صَلَّى اللّٰهُ عَلَيْهِ وَ سَلَّمَ شَاهِدًا وَ مُبَشِّرًا وَ نَذ۪يرًا ❁ يَا مَنْ لَعَنَ الْكَافِر۪ينَ وَ اَعَدَّ لَهُمْ سَع۪يرًا</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(سَبَاْ:) يَا مَنْ لَهُ الْحَمْدُ فِى الْاٰخِرَةِ ❁ يَا مَنْ يَبْسُطُ الرِّزْقَ لِمَنْ يَشَٓاءُ وَ يَقْدِرُ وَ هُوَ خَيْرُ الرَّازِق۪ينَ</span>
 
- 
+,
 
 ---
 
@@ -1629,13 +1629,13 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(يٰسٓ:) يَا مَنْ خَلَقَ الْاَزْوَاجَ كُلَّهَا مِمَّا تُنْبِتُ الْاَرْضُ وَ مِنْ اَنْفُسِهِمْ وَ مِمَّا لَا يَعْلَمُونَ ❁ يَا مَنْ قَدَّرَ لِلْقَمَرِ مَنَازِلَ حَتّٰى عَادَ كَالْعُرْجُونِ الْقَد۪يمِ ❁ يَا مَنْ يُحْيِى الْعِظَامَ وَ هِىَ رَم۪يمٌ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(صَٓافَّات:) يَا مَنْ زَيَّنَ السَّمَٓاءَ الدُّنْيَا بِز۪ينَةٍ ۨالْكَوَاكِبِ ❁ وَ حِفْظًا مِنْ كُلِّ شَيْطَانٍ مَارِدٍ ❁ يَا مَنْ مَنَّ عَلٰى مُوسٰى وَ هٰرُونَ ❁ وَ نَجّٰيهُمَا وَ قَوْمَهُمَا مِنَ الْكَرْبِ الْعَظ۪يمِ ❁ يَا مَنْ سَبَقَتْ كَلِمَتُهُ لِعِبَادِهِ الْمُرْسَل۪ينَ</span>
 
- 
+,
 
 ---
 
@@ -1643,13 +1643,13 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(زُمَر:) يَا مَنْ يَغْفِرُ الذُّنُوبَ جَم۪يعًا اِنَّهُ هُوَ الْغَفُورُ الرَّح۪يمُ ❁ يَا مَنِ الْاَرْضُ جَم۪يعًا قَبْضَتُهُ يَوْمَ الْقِيَامَةِ وَ السَّمٰوَاتُ مَطْوِيَّاتٌ بِيَم۪ينِه۪ سُبْحَانَهُ وَ تَعَالٰى عَمَّا يُشْرِكُونَ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(مُؤْمِن:) يَا مَنْ هُوَ غَافِرُ الذَّنْبِ وَ قَابِلُ التَّوْبِ شَد۪يدُ الْعِقَابِ ذُو الطَّوْلِ لَٓا اِلٰهَ اِلَّا هُوَ اِلَيْهِ الْمَص۪يرُ ❁ يَا مَنْ يَعْلَمُ خَٓائِنَةَ الْاَعْيُنِ وَ مَا تُخْفِى الصُّدُورُ</span>
 
- 
+,
 
 ---
 
@@ -1657,13 +1657,13 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(شُورٰى:) يَا مَنْ يُنَزِّلُ الْغَيْثَ مِنْ بَعْدِ مَا قَنَطُوا وَ يَنْشُرُ رَحْمَتَهُ وَ هُوَ الْوَلِىُّ الْحَم۪يدُ ❁ يَا مَنْ يَخْلُقُ مَا يَشَٓاءُ يَهَبُ لِمَنْ يَشَٓاءُ اِنَاثًا وَ يَهَبُ لِمَنْ يَشَٓاءُ الذُّكُورَ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(زُخْرُف:) يَا مَنْ رَفَعَ عِبَادَهُ بَعْضَهُمْ فَوْقَ بَعْضٍ دَرَجَاتٍ لِيَتَّخِذَ بَعْضُهُمْ بَعْضًا سُخْرِيًّا وَ رَحْمَتُهُ خَيْرٌ مِمَّا يَجْمَعُونَ ❁ يَا مَنْ يَسْمَعُ سِرَّ عِبَادِه۪ وَ نَجْوٰيهُمْ بَلٰى وَ رُسُلُنَا لَدَيْهِمْ يَكْتُبُونَ ❁ يَا مَنْ هُوَ فِى السَّمَٓاءِ اِلٰهٌ وَ فِى الْاَرْضِ اِلٰهٌ وَ هُوَ الْحَك۪يمُ الْعَل۪يمُ</span>
 
- 
+,
 
 ---
 
@@ -1671,13 +1671,13 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(جَاثِيَه:) يَا مَنْ سَخَّرَ لِعِبَادِه۪ مَا فِى السَّمٰوَاتِ وَ مَا فِى الْاَرْضِ جَم۪يعًا ❁ يَا مَنْ اٰتٰى بَن۪ٓى اِسْرَٓائ۪يلَ الْكِتَابَ وَ الْحُكْمَ وَ النُّبُوَّةَ وَ رَزَقَهُمْ مِنَ الطَّيِّبَاتِ وَ فَضَّلَهُمْ عَلَى الْعَالَم۪ينَ ❁ يَا مَنْ لَهُ الْكِبْرِيَٓاءُ فِى السَّمٰوَاتِ وَ الْاَرْضِ وَ هُوَ الْعَز۪يزُ الْحَك۪يمُ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(اَحْقَاف:) يَا مَنْ وَصَّى الْاِنْسَانَ بِوَالِدَيْهِ اِحْسَانًا حَمَلَتْهُ اُمُّهُ كُرْهًا وَ وَضَعَتْهُ كُرْهًا ❁ يَا مَنْ اَهْلَكَ مَا حَوْلَهُمْ مِنَ الْقُرٰى وَ صَرَّفَ الْاٰيَاتِ لَعَلَّهُمْ يَرْجِعُونَ ❁ يَا مَنْ خَلَقَ السَّمٰوَاتِ وَ الْاَرْضَ وَ لَمْ يَعْىَ بِخَلْقِهِنَّ</span>
 
- 
+,
 
 ---
 
@@ -1685,7 +1685,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(فَتْح:) يَا مَنْ فَتَحَ لِمُحَمَّدٍ صَلَّى اللّٰهُ عَلَيْهِ وَ سَلَّمَ فَتْحًا مُب۪ينًا ❁ وَ اَتَمَّ نِعْمَتَهُ عَلَيْهِ وَ نَصَرَهُ نَصْرًا عَز۪يزًا ❁ يَا مَنْ لَهُ جُنُودُ السَّمٰوَاتِ وَ الْاَرْضِ وَ كَانَ اللّٰهُ عَل۪يمًا حَك۪يمًا ❁ يَا مَنْ قَالَ رَضِىَ اللّٰهُ عَنِ المُؤْمِن۪ينَ اِذْ يُبَايِعُونَكَ تَحْتَ الشَّجَرَةِ فَعَلِمَ مَا ف۪ى قُلُوبِهِمْ فَاَنْزَلَ السَّك۪ينَةَ عَلَيْهِمْ وَ اَثَابَهُمْ فَتْحًا قَر۪يبًا ❁ يَا مَنْ اَرْسَلَ رَسُولَهُ بِالْهُدٰى وَ د۪ينِ الْحَقِّ لِيُظْهِرَهُ عَلَى الدّ۪ينِ كُلِّه۪ وَ كَفٰى بِاللّٰهِ شَه۪يدًا</span>
 
- 
+,
 
 ---
 
@@ -1693,13 +1693,13 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَا مَنْ يَعْلَمُ غَيْبَ السَّمٰوَاتِ وَ الْاَرْضِ وَ هُوَ بَص۪يرٌ بِمَا يَعْمَلُونَ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(قٓ:) يَا مَنْ نَزَّلَ مِنَ السَّمَٓاءِ مَٓاءً مُبَارَكًا فَاَنْبَتَ بِه۪ جَنَّاتٍ وَ حَبَّ الْحَص۪يدِ ❁ يَا مَنْ خَلَقَ الْاِنْسَانَ وَ يَعْلَمُ مَا تُوَسْوِسُ بِه۪ نَفْسُهُ وَ هُوَ اَقْرَبُ اِلَيْهِ مِنْ حَبْلِ الْوَر۪يدِ ❁ مَا يُبَدَّلُ الْقَوْلُ لَدَيْهِ وَ مَا هُوَ بِظَلَّا مٍ لِلْعَب۪يدِ</span>
 
- 
+,
 
 ---
 
@@ -1707,13 +1707,13 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(طُور:) يَا رَبَّ الطُّورِ وَ كِتَابٍ مَسْطُورٍ ف۪ى رَقٍّ مَنْشُورٍ وَ الْبَيْتِ الْمَعْمُورِ ❁ وَ السَّقْفِ الْمَرْفُوعِ وَ الْبَحْرِ الْمَسْجُورِ ❁ يَا مَنْ قَالَ اِنَّ عَذَابَ رَبِّكَ لَوَاقِعٌ يَا بَرُّ يَا رَح۪يمُ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(نَجْم:) يَا مَنْ هُوَ شَد۪يدُ الْقُوٰى ❁ ذُو مِرَّةٍ فَاسْتَوٰى ❁ يَا مَنْ يَجْزِى الَّذ۪ينَ اَسَٓاءُوا بِمَا عَمِلُوا وَ يَجْزِى الَّذ۪ينَ اَحْسَنُوا بِالْحُسْنٰى ❁ يَا مَنْ خَلَقَ الزَّوْجَيْنِ الذَّكَرَ وَ الْاُنْثٰى ❁ مِنْ نُطْفَةٍ اِذَا تُمْنٰى ❁ يَا مَنْ اَهْلَكَ عَادًاۨ الْاُولٰى وَ ثَمُودَ فَمَٓا اَبْقٰى</span>
 
- 
+,
 
 ---
 
@@ -1721,19 +1721,19 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يَا مَنْ يَسَّرَ الْقُرْاٰنَ للِذِّكْرِ فَهَلْ مِنْ مُدَّكِرٍ ❁ يَا مَنْ نَجّٰٓى اٰلَ لُوطٍ بِسَحَرٍ ❁ يَا مَنْ اَخَذَ اٰلَ فِرْعَوْنَ اَخْذَ عَز۪يزٍ مُقْتَدِرٍ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(رَحْمٰن:) يَا مَنْ عَلَّمَ الْقُرْاٰنَ خَلَقَ الْاِنْسَانَ عَلَّمَهُ الْبَيَانَ ❁ يَا مَنْ رَفَعَ السَّمَٓاءَ وَ وَضَعَ الْم۪يزَانَ ❁ وَ الْاَرْضَ وَضَعَهَا لِْلَانَامِ ❁ يَا ذَا الْجَلَالِ وَ الْاِكْرَامِ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(وَاقِعَة:) يَا مَنْ يَخْلُقُ لِعِبَادِه۪ مَا يُمْنُونَ ❁ وَ يَزْرَعُ مَا يَحْرُثُونَ ❁ يَا مَنْ جَعَلَ شَجَرَةَ النَّارِ تَذْكِرَةً وَ مَتَاعًا لِلْمُقْو۪ينَ ❁ تَنْز۪يلٌ مِنْ رَبِّ الْعَالَم۪ينَ</span>
 
- 
+,
 
 ---
 
@@ -1741,7 +1741,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(مُجَادَلَة:) يَا مَنْ يَعْلَمُ مَا فِى السَّمٰوَاتِ وَ مَا فِى الْاَرْضِ مَا يَكُونُ مِنْ نَجْوٰى ثَلٰثَةٍ اِلَّا هُوَ رَابِعُهُمْ وَ لَا خَمْسَةٍ اِلَّا هُوَ سَادِسُهُمْ وَ لَٓا اَدْنٰى مِنْ ذٰلِكَ وَ لَٓا اَكْثَرَ اِلَّا هُوَ مَعَهُمْ ❁ وَ يَا مَنْ كَتَبَ لَاَغْلِبَنَّ اَنَا وَ رُسُل۪ى ❁ اِنَّ اللّٰهَ قَوِىٌّ عَز۪يزٌ</span>
 
- 
+,
 
 ---
 
@@ -1749,13 +1749,13 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(مُمْتَحِنَة:) يَا مَنْ يَفْصِلُ بَيْنَ عِبَادِه۪ يَوْمَ الْقِيَامَةِ وَ اللّٰهُ بِمَا يَعْمَلُونَ بَص۪يرٌ ❁ يَا قَد۪يرُ يَا غَفُورُ يَا رَح۪يمُ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(صَفّ:) يَا مَنْ يُحِبُّ الَّذ۪ينَ يُقَاتِلُونَ ف۪ى سَب۪يلِه۪ صَفًّا كَاَنَّهُمْ بُنْيَانٌ مَرْصُوصٌ ❁ يَا مَنْ اَيَّدَ الَّذ۪ينَ اٰمَنُوا عَلٰى عَدُوِّهِمْ فَاَصْبَحُوا ظَاهِر۪ينَ</span>
 
- 
+,
 
 ---
 
@@ -1763,19 +1763,19 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(مُنَافِق۪ين:) يَا مَنْ لَهُ خَزَٓائِنُ السَّمٰوَاتِ وَ الْاَرْضِ ❁ يَا مَنْ هُوَ خَب۪يرٌ بِمَا يَعْمَلُونَ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(تَغَابُن:) يَا مَنْ لَهُ الْمُلْكُ وَ لَهُ الْحَمْدُ وَ هُوَ عَلٰى كُلِّ شَىْءٍ قَد۪يرٌ ❁ يَا مَنْ يَعْلَمُ مَا فِى السَّمٰوَاتِ وَ الْاَرْضِ وَ يَعْلَمُ مَا تُسِرُّونَ وَ مَا تُعْلِنُونَ وَ اللّٰهُ عَل۪يمٌ بِذَاتِ الصُّدُورِ ❁ يَا حَل۪يمُ يَا شَكُورُ ❁ يَا عَالِمَ الْغَيْبِ وَ الشَّهَادَةِ الْعَز۪يزَ الْحَك۪يمَ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(طَلَاق:) يَا مَنْ جَعَلَ لِكُلِّ شَىْءٍ قَدْرًا ❁ يَا مَنْ خَلَقَ سَبْعَ سَمٰوَاتٍ وَ مِنَ الْاَرْضِ مِثْلَهُنَّ ❁ يَا مَنْ هُوَ عَلٰى كُلِّ شَىْءٍ قَد۪يرٌ ❁ وَ قَدْ اَحَاطَ بِكُلِّ شَىْءٍ عِلْمًا</span>
 
- 
+,
 
 ---
 
@@ -1783,19 +1783,19 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(مُلْك:) يَا مَنْ بِيَدِهِ الْمُلْكُ وَ هُوَ عَلٰى كُلِّ شَىْءٍ قَد۪يرٌ ❁ يَا مَنْ خَلَقَ الْمَوْتَ وَ الْحَيٰوةَ وَ هُوَ الْعَز۪يزُ الْغَفُورُ ❁ يَا مَنْ زَيَّنَ السَّمَٓاءَ الدُّنْيَا بِمَصَاب۪يحَ وَ جَعَلَهَا رُجُومًا لِلشَّيَاط۪ينِ وَ اَعْتَدَ لَهُمْ عَذَابَ السَّع۪يرِ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(نٓ:) يَا مَنْ هُوَ اَعْلَمُ بِمَنْ ضَلَّ عَنْ سَب۪يلِه۪ ❁ يَا مَنْ هُوَ اَعْلَمُ بِالْمُهْتَد۪ينَ ❁ يَا مَنْ يَسْتَدْرِجُ الْمُكَذِّب۪ينَ مِنْ حَيْثُ لَا يَعْلَمُونَ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(حَٓاقَّة:) يَا مَنْ اَهْلَكَ ثَمُودَ بِالطَّاغِيَةِ ❁ وَ اَهْلَكَ عَادًا بِر۪يحٍ صَرْصَرٍ عَاتِيَةٍ ❁ يَا مَنْ اَخَذَهُمْ اَخْذَةً ❁ يَا مَنْ يَحْمِلُ عَرْشَهُ فَوْقَهُمْ يَوْمَئِذٍ ثَمَانِيَةٌ</span>
 
- 
+,
 
 ---
 
@@ -1803,25 +1803,25 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(نُوح:) يَا مَنْ خَلَقَ سَبْعَ سَمٰوَاتٍ طِبَاقًا ❁ وَ جَعَلَ الْقَمَرَ ف۪يهِنَّ نُورًا وَ جَعَلَ الشَّمْسَ سِرَاجًا</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(جِنّ:) يَا مَنْ تَعَالٰى جَدُّهُ مَا اتَّخَذَ صَاحِبَةً وَ لَا وَلَدًا</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(مُزَّمِّل:) يَا رَبَّ الْمَشْرِقِ وَ الْمَغْرِبِ لَٓا اِلٰهَ اِلَّا هُوَ فَاتَّخِذْهُ وَك۪يلًا ❁ يَا مَنْ لَدَيْهِ لِاَهْلِ النَّارِ اَنْكَالًا وَ جَح۪يمًا ❁ وَ طَعَامًا ذَا غُصَّةٍ وَ عَذَابًا اَل۪يمًا</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(مُدَّثِّر:) يَا رَبَّ الْقَمَرِ وَ الَّيْلِ اِذْ اَدْبَرَ وَ الصُّبْحِ اِذَٓا اَسْفَرَ ❁ يَا مَنْ هُوَ اَهْلُ التَّقْوٰى وَ اَهْلُ الْمَغْفِرَةِ</span>
 
- 
+,
 
 ---
 
@@ -1829,13 +1829,13 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(دَهْر:) يَا مَنْ خَلَقَ الْاِنْسَانَ مِن نُطْفَةٍ اَمْشَاجٍ يَبْتَل۪يهِ فَجَعَلَهُ سَم۪يعًا بَص۪يرًا ❁ يَا مَنْ اَعَدَّ لِلْكَافِر۪ينَ سَلَاسِلَ وَ اَغْلَالًا وَ سَع۪يرًا ❁ يَا مَنْ يُدْخِلُ مَنْ يَشَٓاءُ ف۪ى رَحْمَتِه۪ وَ الظَّالِم۪ينَ اَعَدَّ لَهُمْ عَذَابًا اَل۪يمًا</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(مُرْسَلَات:) يَا رَبَّ الْمُرْسَلَاتِ عُرْفًا فَالْعَاصِفَاتِ عَصْفًا ❁ وَ النَّاشِرَاتِ نَشْرًا ❁ فَالْفَارِقَاتِ فَرْقًا ❁ فَالْمُلْقِيَاتِ ذِكْرًا ❁ عُذْرًا اَوْ نُذْرًا</span>
 
- 
+,
 
 ---
 
@@ -1843,13 +1843,13 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(نَازِعَات:) يَا رَبَّ النَّازِعَاتِ غَرْقًا ❁ وَ النَّاشِطَاتِ نَشْطًا ❁ وَ السَّابِحَاتِ سَبْحًا ❁ فَالسَّابِقَاتِ سَبْقًا ❁ فَالْمُدَبِّرَاتِ اَمْرًا ❁ يَا مَنْ رَفَعَ سَمْكَهَا فَسَوّٰيهَا ❁ وَ اَغْطَشَ لَيْلَهَا وَ اَخْرَجَ ضُحٰيهَا</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(عَبَسَ:) يَا مَنْ خَلَقَ الْاِنْسَانَ مِنْ نُطْفَةٍ خَلَقَهُ فَقَدَّرَهُ ثُمَّ السَّب۪يلَ يَسَّرَهُ ثُمَّ اَمَاتَهُ فَاَقْبَرَهُ ❁ ثُمَّ اِذَا شَٓاءَ اَنْشَرَهُ ❁ كَلَّا لَمَّا يَقْضِ مَٓا اَمَرَهُ ❁ يَا مَنْ صَبَّ الْمَٓاءَ صَبًّا ❁ ثُمَّ شَقَّ الْاَرْضَ شَقًّا ❁ فَاَنْبَتَ ف۪يهَا حَبًّا وَ عِنَبًا وَ قَضْبًا وَ زَيْتُونًا وَ نَخْلًا</span>
 
- 
+,
 
 ---
 
@@ -1857,19 +1857,19 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(اِنْفِطَار:) يَا مَنْ فَطَرَ السَّمَٓاءَ وَ نَثَرَ الْكَوَاكِبَ ❁ وَ فَجَّرَ الْبِحَارَ وَ بَعْثَرَ مَا فِى الْقُبُورِ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(مُطَفِّف۪ين:) يَا مَنْ جَعَلَ كِتَابَ الْفُجَّارِ لَف۪ى سِجِّينٍ ❁ وَ كِتَابَ الْاَبْرَارِ لَف۪ى عِلِّيِّينَ ❁ يَا مَنْ يَسْقِى الْاَبْرَارَ مِنْ رَح۪يقٍ مَخْتُومٍ خِتَامُهُ مِسْكٌ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(اِنْشِقَاق:) يَا مَنْ شَقَّ السَّمَٓاءَ وَ مَدَّ الْاَرْضَ ❁ يَا رَبَّ الشَّفَقِ وَ الَّيْلِ وَ مَا وَسَقَ وَ الْقَمَرِ اِذَا اتَّسَقَ</span>
 
- 
+,
 
 ---
 
@@ -1877,19 +1877,19 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(طَارِق:) يَا مَنْ خَلَقَ الْاِنْسَانَ مِنْ مَٓاءٍ دَافِقٍ يَخْرُجُ مِنْ بَيْنِ الصُّلْبِ وَ التَّرَٓائِبِ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(اَعْلٰى:) يَا مَنْ خَلَقَ فَسَوّٰى ❁وَ قَدَّرَ فَهَدٰى ❁ وَ اَخْرَجَ الْمَرْعٰى ❁ يَا مَنْ يَعْلَمُ السِّرَّ وَ اَخْفٰى</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(غَاشِيَة:) يَا مَنْ رَفَعَ السَّمَٓاءَ وَ نَصَبَ الْجِبَالَ وَ سَطَحَ الْاَرْضَ ❁ يَا مَنْ اِلَيْهِ الْاِيَابُ ❁ وَ عَلَيْنَا الْحِسَابُ</span>
 
- 
+,
 
 ---
 
@@ -1897,25 +1897,25 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(بَلَد:) يَا مَنْ خَلَقَ الْاِنْسَانَ ف۪ى كَبَدٍ ❁ اَيَحْسَبُ اَنْ لَنْ يَقْدِرَ عَلَيْهِ اَحَدٌ ❁ يَا مَنْ جَعَلَ لِْلاِنْسَانِ عَيْنَيْنِ ❁ وَ لِسَانًا وَ شَفَتَيْنِ ❁ وَ هَدَاهُ النَّجْدَيْنِ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(شَمْس:) يَا رَبَّ الشَّمْسِ وَ ضُحٰيهَا ❁ وَ الْقَمَرِ اِذَا تَلٰيهَا ❁ وَ النَّهَارِ اِذَا جَلّٰيهَا ❁وَ الَّيْلِ اِذَا يَغْشٰيهَا ❁ يَا مَنْ قَالَ دَمْدَمَ عَلَيْهِمْ رَبُّهُمْ بِذَنْبِهِمْ فَسَوّٰيهَا ❁وَ لَا يَخَافُ عُقْبٰيهَا</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(لَيْل:) يَا رَبَّ الَّيْلِ اِذَا يَغْشٰى ❁وَ النَّهَارِ اِذَا تَجَلّٰى ❁ يَا مَنْ عَلَيْهِ الْهُدٰى ❁ وَ لَهُ الْاٰخِرَةُ وَ الْاُولٰى</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(ضُحٰى:) يَا رَبَّ الضُّحٰى ❁ وَ الَّيْلِ اِذَا سَجٰى ❁ يَا مَنْ يُعْط۪ى نَبِيَّهُ حَتّٰى يَرْضٰى</span>
 
- 
+,
 
 ---
 
@@ -1923,31 +1923,31 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(ت۪ين:) يَا مَنْ اَقْسَمَ بِطُورِ س۪ين۪ينَ ❁ وَ الْبَلَدِ الْاَم۪ينِ ❁ وَ خَلَقَ الْاِنْسَانَ ف۪ٓى اَحْسَنِ تَقْو۪يمٍ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(عَلَق:) يَا مَنْ عَلَّمَ بِالْقَلَمِ ❁ عَلَّمَ الْاِنْسَانَ مَا لَمْ يَعْلَمْ ❁ يَا مَنْ اِلَيْهِ الرُّجْعٰى</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(قَدْر:) يَا مَنْ جَعَلَ لَيْلَةَ الْقَدْرِ ❁ خَيْرًا مِنْ اَلْفِ شَهْرٍ ❁ تَنَزَّلُ الْمَلٰٓئِكَةُ وَ الرُّوحُ ف۪يهَا بِاِذْنِ رَبِّهِمْ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(بَيِّنَة:) يَا مَنْ اَنْزَلَ صُحُفًا مُطَهَّرَةً ❁ ف۪يهَا كُتُبٌ قَيِّمَةٌ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(زِلْزَال:) يَا مَنْ يُزَلْزِلُ الْاَرْضَ يَوْمَ الْقِيَامَةِ ❁ وَ يُخْرِجُ اَثْقَالَهَا</span>
 
- 
+,
 
 ---
 
@@ -1955,25 +1955,25 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(قَارِعَة:) يَا مَنْ يَكُونُ بِاِرَادَتِهِ النَّاسُ كَالْفَرَاشِ الْمَبْثُوثِ ❁ وَ تَكُونُ الْجِبَالُ كَالْعِهْنِ الْمَنْفُوشِ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(تَكَاثُر:) يَا مَنْ يَسْئَلُ عِبَادَهُ يَوْمَئِذٍ عَنِ النَّع۪يمِ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(عَصْر:) يَا مَنْ جَعَلَ الْكَافِر۪ينَ ف۪ى خُسْرٍ ❁ وَ اَمَرَنَا بِالْحَقِّ وَ الصَّبْرِ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(هُمَزَة:) يَا مَنْ خَلَقَ الْمُوقَدَةَ ❁ اَلَّت۪ى تَطَّلِعُ عَلَى الْاَفْئِدَةِ ❁ يَا مَنْ جَعَلَهَا عَلٰٓى اَعْدَٓائِه۪ مُؤْصَدَةً ف۪ى عَمَدٍ مُمَدَّدَةٍ</span>
 
- 
+,
 
 ---
 
@@ -1981,31 +1981,31 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(قُرَيْش:) يَا مَنْ اَطْعَمَ عِبَادَهُ مِنْ جُوعٍ وَ اٰمَنَهُمْ مِنْ خَوْفٍ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(مَاعُون:) يَا مَنْ جَعَلَ الْوَيْلَ لِلْمُصَلِّينَ ❁ اَلَّذ۪ينَ هُمْ عَنْ صَلَاتِهِمْ سَاهُونَ ❁ اَلَّذ۪ينَ هُمْ يُرَٓاؤُنَ ❁ وَ يَمْنَعُونَ الْمَاعُونَ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(كَوْثَر:) يَا مَنْ اَعْطٰى مُحَمَّدًاۨ الْكَوْثَرَ ❁ وَ اَمَرَهُ بِاَنْ يُصَلِّىَ وَ يَنْحَرَ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(كَافِرُون:) يَا مَنْ اَهْلَكَ الْكَافِر۪ينَ ❁ وَ مَا كَانُوا يَعْبُدُونَ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(نَصْر:) يَا مَنْ نَصَرَ مُحَمَّدًا وَ فَتَحَ لَهُ عَلٰى عَدُوِّه۪ ❁ يَا مَنْ كَانَ لَهُ تَوَّابًا</span>
 
- 
+,
 
 ---
 
@@ -2013,19 +2013,19 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(اِخْلَاص:) يَٓا اَحَدُ ❁ يَا صَمَدُ ❁ لَمْ يَلِدْ وَ لَمْ يُولَدْ ❁ وَ لَمْ يَكُنْ لَهُ كُفُوًا اَحَدٌ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(فَلَق:) يَا رَبَّ الْفَلَقِ ❁ اَعِذْن۪ى مِنْ شَرِّ مَا خَلَقْتَ ❁ وَ مِنْ شَرِّ غَاسِقٍ اِذَا وَقَبَ ❁ وَ مِنْ شَرِّ النَّفَّاثَاتِ فِى الْعُقَدِ ❁ وَ مِنْ شَرِّ حَاسِدٍ اِذَا حَسَدَ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">(نَاس:) يَا رَبَّ النَّاسِ ❁ مَلِكَ النَّاسِ ❁ اِلٰهَ النَّاسِ ❁ اَعِذْن۪ى مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ ❁ اَلَّذ۪ى يُوَسْوِسُ ف۪ى صُدُورِ النَّاسِ ❁ مِنَ الْجِنَّةِ وَ النَّاسِ</span>
 
- 
+,
 
 ---
 
@@ -2049,7 +2049,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَ الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ عَلَى الْا۪يمَانِ بِاللّٰهِ وَ عَلٰى وَحْدَانِيَّتِه۪ وَ عَلٰى كُلِّ اسْمٍ مِنْ اَسْمَٓائِه۪ تَعَالٰى وَ عَلٰى كُلِّ صِفَةٍ مِنْ صِفَاتِه۪ سُبْحَانَهُ حَمْدًا بِعَدَدِ جَم۪يعِ تَجَلِّيَاتِ اَسْمَٓائِه۪ وَ صِفَاتِه۪ جَلَّ جَلَالُهُ مِنَ الْاَزَلِ اِلَى الْاَبَدِ لَٓا اِلٰهَ اِلَّا هُوَ</span>
 
- 
+,
 
 ---
 
@@ -2059,7 +2059,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَ الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ عَلَى الرِّسَالَةِ الْمُحَمَّدِيَّةِ وَ الْا۪يمَانِ بِهَا حَمْدًا بِعَدَدِ حَسَنَاتِ مُحَمَّدٍ صَلَّى اللّٰهُ عَلَيْهِ وَ سَلَّمَ وَ كَمَالَاتِه۪ وَ ثَمَرَاتِه۪ وَ فَوَٓائِدِه۪ وَ بِعَدَدِ حَسَنَاتِ اٰلِه۪ وَ اَصْحَابِه۪ وَ اُمَّتِه۪ عَلَيْهِ الصَّلَاةُ وَ السَّلَامُ</span>
 
- 
+,
 
 ---
 
@@ -2069,7 +2069,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَ الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ عَلَى الْقُرْاٰنِ وَ الْا۪يمَانِ بِه۪ حَمْدًا بِعَدَدِ مَعَانِ الْقُرْاٰنِ الْمُتَصَوَّرَةِ فِى الْاَفْهَامِ وَ بِعَدَدِ كَلِمَاتِه۪ وَ حُرُوفَاتِهِ الْمُتَمَثِّلَةِ فِى الْهَوَٓاءِ اِلٰٓى اٰخِرِ الزَّمَانِ</span>
 
- 
+,
 
 ---
 
@@ -2079,7 +2079,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَ الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ عَلٰى نِعْمَةِ الْا۪يمَانِ وَ الْقُرْاٰنِ وَ الْاِسْلَامِ حَمْدًا بِعَدَدِ الْمَلٰٓئِكَةِ وَ الرُّوحَانِيَّاتِ وَ الْاَنَامِ وَ تَسْب۪يحَاتِهِمْ وَ تَحْم۪يدَاتِهِمْ وَ تَكْب۪يرَاتِهِمْ وَ تَهْل۪يلَاتِهِمْ ف۪ى جَم۪يعِ الْاَزْمَانِ</span>
 
- 
+,
 
 ---
 
@@ -2089,7 +2089,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَ الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ عَلٰى نِعْمَةِ الْا۪يمَانِ وَ الْقُرْاٰنِ بِعَدَدِ النُّجُومِ وَ حَرَكَاتِهَا وَ سَكَنَاتِهَا وَ ذَرَّاتِهَا</span>
 
- 
+,
 
 ---
 
@@ -2099,7 +2099,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَ الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ عَلَى الْا۪يمَانِ وَ الْقُرْاٰنِ بِعَدَدِ النَّبَاتَاتِ وَ الْاَشْجَارِ وَ اَوْرَاقِهَا وَ اَزْهَارِهَا وَ اَثْمَارِهَا وَ بُذُورِهَا وَ تَسْب۪يحَاتِهَا وَ تَحْم۪يدَاتِهَا</span>
 
- 
+,
 
 ---
 
@@ -2109,7 +2109,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَ الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ عَلَى نِعْمَةِ الْا۪يمَانِ وَ الْقُرْاٰنِ حَمْدًا بِعَدَدِ الطُّيُورِ وَ الطُّوَيْرَاتِ وَ الْحَيْوَانَاتِ وَ الْحُوَيْنَاتِ وَ اَصْوَاتِهَا وَ اَنْفَاسِهَا وَ تَسْب۪يحَاتِهَا وَ تَحْم۪يدَاتِهَا</span>
 
- 
+,
 
 ---
 
@@ -2119,7 +2119,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَ الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ عَلٰٓى اِنْعَامَاتِ اللّٰهِ عَلَيْنَا بِالْاَطْعِمَةِ وَ النِّعَمِ حَمْدًا بِعَدَدِ جَم۪يعِ الْاَطْعِمَةِ وَ النِّعَمِ وَ اَنْوَاعِهَا وَ رَوَٓائِحِهَا وَ طُعُومِهَا وَ اَجْزَٓائِهَا</span>
 
- 
+,
 
 ---
 
@@ -2131,7 +2131,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">رِسَالَةِ النُّورِ الْمَكْتُوبَةِ وَ الْمَقْرُٓوئَةِ اِلٰٓى اٰخِرِ الزَّمَانِ</span>
 
- 
+,
 
 ---
 
@@ -2141,7 +2141,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَ الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ عَلَى نِعْمَةِ الْقُرْاٰنِ بِعَدَدِ ثَوَابَاتِ قِرَٓائَةِ كَلِمَاتِ الْقُرْاٰنِ وَ حُرُوفِه۪ مِنْ اَوَّلِ النُّزُولِ اِلٰٓى اٰخِرِ الزَّمَانِ</span>
 
- 
+,
 
 ---
 
@@ -2151,7 +2151,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَ الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ عَلَى نِعْمَةِ الْا۪يمَانِ وَ الْاِسْلَامِيَّةِ الَّت۪ى هِىَ مَرْضِيَّاتُ رَبِّ الْعَالَم۪ينَ حَمْدًا بِعَدَدِ حَسَنَاتِ الْمُؤْمِن۪ينَ وَ الْمُسْلِم۪ينَ</span>
 
- 
+,
 
 ---
 
@@ -2163,7 +2163,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَ الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ عَلَى نِعْمَةِ الْقُرْاٰنِ وَ الْا۪يمَانِ وَ رَسَٓائِلِ النُّورِ حَمْدًا بِعَدَدِ ذَرَّاتِ الْكَٓائِنَاتِ وَ مُرَكَّبَاتِهَا وَ تَسْب۪يحَاتِهَا</span>
 
- 
+,
 
 ---
 
@@ -2173,7 +2173,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَ الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ عَلَى الْقُرْاٰنِ وَ الْا۪يمَانِ وَ الْاِسْلَامِ حَمْدًا بِعَدَدِ اَوْرَاقِ الْاَشْجَارِ وَ اَمْوَاجِ الْبِحَارِ وَ قَطَرَاتِ الْاَمْطَارِ وَ نَغَمَاتِ الْاَطْيَارِ وَ لَمَعَاتِ الْاَنْوَارِ وَ بُذُورِ الْاَزْهَارِ وَ نُوَاتَاتِ الْاَثْمَارِ ف۪ى جَم۪يعِ الْاَعْصَارِ وَ الْاَقْطَارِ</span>
 
- 
+,
 
 ---
 
@@ -2183,7 +2183,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَ الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ عَلَى الْا۪يمَانِ وَ الْقُرْآنِ بِعَدَدِ الْمَعَادِنِ وَ الْمَوَال۪يدِ وَ خَاصِّيَاتِهَا وَ ثَمَرَاتِهَا وَ مَنَافِعِهَا</span>
 
- 
+,
 
 ---
 
@@ -2193,7 +2193,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَ الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ عَلَى الْا۪يمَانِ وَ الْقُرْاٰنِ وَ الْاِسْلَامِ حَمْدًا بِعَدَدِ الْاَمْلَاكِ وَ الْاَرْوَاحِ وَ الْاِنْسِ وَ الْجَٓانِّ وَ النَّبَاتِ وَ الْحَيْوَانِ وَ تَحْم۪يدَاتِهَا وَ تَسْب۪يحَاتِهَا ف۪ى جَم۪يعِ الْاَزْمَانِ</span>
 
- 
+,
 
 ---
 
@@ -2203,7 +2203,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَ الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ عَلَى نِعْمَةِ الْقُرْاٰنِ وَ الْا۪يمَانِ وَ رَسَٓائِلِ النُّورِ حَمْدًا مَلَاَ الْبَرَّ وَ الْبَحْرَ وَ الْعَرْشَ وَ الْكُرْسِىَّ وَ الْاَرْضَ وَ السَّمَٓاءَ</span>
 
- 
+,
 
 ---
 
@@ -2213,7 +2213,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَ الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ عَلَى الْاٰخِرَةِ وَ الْا۪يمَانِ بِهَا حَمْدًا مَلَاَ الدُّنْيَا وَ الْاٰخِرَةَ</span>
 
- 
+,
 
 ---
 
@@ -2225,7 +2225,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَ الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ عَلَى الْجَنَّةِ وَ الْا۪يمَانِ بِهَا حَمْدًا مَـلَاَ الْجَنَّاتِ بِعَدَدِ اِنْعَامَاتِ اللّٰهِ تَعَالٰى عَلٰٓى اَهْلِهَٓا اَبَدَ الْاٰبِد۪ينَ</span>
 
- 
+,
 
 ---
 
@@ -2235,7 +2235,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَ الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ عَلَى كُلٍّ مِنْ نِعَمِه۪ حَمْدًا بِعَدَدِ كُلِّ نِعَمِه۪ كَمَا يَل۪يقُ بِجَنَابِه۪ جَلَّ جَلَالُهُ</span>
 
- 
+,
 
 ---
 
@@ -2263,7 +2263,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَٓا اِلٰهَ اِلَّا اللّٰهُ بِلِسَانِ الْجَوِّ بِكَلِمَاتِ السَّحَابِ وَ الرِّيَاحِ وَ الْبَرْقِ وَ الرَّعْدِ وَ الْاَمْطَارِ الْمُسَخَّرَاتِ الْمُوَظَّفَاتِ بِشَهَادَةِ مَنَافِعِهَا وَ تَطَابُقِهَا لِحَاجَاتِ ذَوِى الْحَيَاةِ</span>
 
- 
+,
 
 ---
 
@@ -2271,13 +2271,13 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَٓا اِلٰهَ اِلَّا اللّٰهُ بِلِسَانِ الْاَرْضِ بِكَلِمَاتِ مَنَافِعِ مَعَادِنِهَا بِالْحِكْمَةِ لِلْحَاجَاتِ وَ سَنَابِلِ نَبَاتَاتِهَا بِالرَّحْمَةِ لِْلَاقْوَاتِ وَ ثَمَرَاتِ شَجَرَاتِهَا بِالْعِنَايَةِ لِلْاَرْزَاقِ وَ صُوَرِ حَيْوَانَاتِهَا الْمُدَبَّرَاتِ بِدَقَٓائِقِ الْحِكْمَةِ وَ الْاِرَادَةِ ف۪ى لَطَٓائِفِ الرَّحْمَةِ وَ الْعِنَايَةِ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَٓا اِلٰهَ اِلَّا اللّٰهُ بِاَلْسِنَةِ الْبِحَارِ وَ الْعُيُونِ وَ الْاَنْهَارِ بِكَلِمَاتِ جَوَاهِرِهَا الْمُزَيَّنَاتِ وَ حَيْوَانَاتِهَا الْمُنْتَظَمَاتِ وَ وَارِدَاتِهَا وَ صَرْفِيَّاتِهَا بِالْم۪يزَانِ وَ اِدِّخَارِهَا وَ مُحَافَظَتِهَا بِالْاِنْتِظَامِ وَ تَدْب۪يرِهَا وَ تَدْو۪يرِهَا مَعَ الْاَرْضِ حَوْلَ الشَّمْسِ بِالْاِحْتِشَامِ</span>
 
- 
+,
 
 ---
 
@@ -2285,13 +2285,13 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">حَاجَاتِ اَنْوَاعِ ذَوِى الْحَيَاةِ وَ بِكَلِمَاتِ نَبَاتَاتِهَا الْمُتَسَنْبِلَاتِ الْمُرْسَلَاتِ ِلاِنْفَاقِ الْمَخْلُوقَاتِ وَ بِكَلِمَاتِ شَجَرَاتِهَا الْمُتَثَمِّرَاتِ وَ النَّاشِرَاتِ اَيَاد۪يهَا بِالثِّمَارِ ِلاِطْعَامِ ذَوِى الْحَيَاةِ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَٓا اِلٰهَ اِلَّا اللّٰهُ بِاَلْسِنَةِ اَنْوَاعِ النَّبَاتَاتِ وَ اَصْنَافِ الْاَشْجَارِ بِكَلِمَاتِ الْاَوْرَاقِ وَ الْاَزْهَارِ وَ الْبُذُورِ وَ الْاَثْمَارِ الْمَنْظُومَاتِ الْمَوْزُونَاتِ بِشَهَادَةِ فَتْحِ صُوَرِهَا الْمُتَبَايِنَةِ بِالْاِنْتِظَامِ وَ الْم۪يزَانِ وَ الْاِمْتِيَازِ</span>
 
- 
+,
 
 ---
 
@@ -2299,19 +2299,19 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَٓا اِلٰهَ اِلَّا اللّٰهُ بِاَلْسِنَةِ جَم۪يعِ الْاَنْبِيَٓاءِ وَ الْمُرْسَل۪ينَ بِكَلِمَاتِ كَمَالَاتِهِمْ وَ مُعْجِزَاتِهِمْ وَ كُتُبِهِمْ وَ صُحُفِهِمْ وَ مُعَامَلَاتِهِمْ وَ مُنَاجَاتِهِمُ الْقُدْسِيَّاتِ وَ بِشَهَادَاتِ الْاِمْدَادَاتِ وَ الْاِكْرَامَاتِ وَ الْاِعَانَاتِ الْغَيْبِيَّاتِ وَ الْمُقَابَلَاتِ الرَّبَّانِيَّاتِ ِلاِسْتِمْدَادِهِمْ وَ مُنَاجَاتِهِمْ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَٓا اِلٰهَ اِلَّا اللّٰهُ بِاَلْسِنَةِ الْاَخْيَارِ وَ الْاَصْفِيَٓاءِ وَ الصِّدّ۪يق۪ينَ بِكَلِمَاتِ حُجَجِهِمْ وَ بَرَاه۪ينِهِمْ وَ دَلَٓائِلِهِمُ النُّورَانِيَّاتِ الْمُتَوَافِقَاتِ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَٓا اِلٰهَ اِلَّا اللّٰهُ بِاَلْسِنَةِ جَم۪يعِ الْاَوْلِيَٓاءِ وَ الْاَقْطَابِ بِكَلِمَاتِ الْمُشَاهَدَاتِ وَ الْكَشْفِيَّاتِ الْمُتَطَابِقَاتِ</span>
 
- 
+,
 
 ---
 
@@ -2319,19 +2319,19 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">تَوَافُقِ اِخْبَارَاتِهِمُ الْمُتَوَاتِرَاتِ عِنْدَ تَمَثُّلَاتِهِمْ لِاَنْظَارِ الْاِنْسَانِ اَلْفَ اَلْفِ مَرَّاتٍ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَٓا اِلٰهَ اِلَّا اللّٰهُ بِاَلْسِنَةِ الْعُقُولِ الْمُسْتَق۪يمَةِ وَ الْقُلُوبِ السَّل۪يمَةِ بِكَلِمَاتِ يَق۪ينِيَّاتِهِمَا وَ قَنَاعَاتِهِمَا وَ دَلَٓائِلِهِمَا وَ كَشْفِيَّاتِهِمَا الْمُتَطَابِقَاتِ مَعَ تَخَالُفِ الْمَذَاهِبِ وَ الْمَشَارِبِ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَٓا اِلٰهَ اِلَّا اللّٰهُ بِاَلْسِنَةِ كُلِّ الْكُتُبِ وَ الصُّحُفِ السَّمَاوِيَّةِ بِكَلِمَاتِ جَم۪يعِ الْوَحْيَاتِ وَ الْاِلْهَامَاتِ فِى الْاَعْصَارِ وَ الْاَقْطَارِ نَعَمْ كَمَا يُظْهِرُ رُبُوبِيَّتَهُ وَ شَفْقَتَهُ فِعْلًا وَ حَالًا بِالْمُشَاهَدَةِ كَذٰلِكَ يُعْلِنُ رَحْمَانِيَّتَهُ وَ اُلُوهِيَّتَهُ وَحْيًا وَ اِلْهَامًا بِالْبَدَاهَةِ</span>
 
- 
+,
 
 ---
 
@@ -2339,13 +2339,13 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِكَلِمَاتِ كَمَالَاتِه۪ وَ مُعْجِزَاتِه۪ وَ حَقَٓائِقِ د۪ينِه۪ وَ اِجْمَاعِ اٰلِه۪ وَ اَصْحَابِه۪ وَ اَصْفِيَٓاءِ اُمَّتِه۪ عَلٰى تَصْد۪يقِه۪ فِى التَّوْح۪يدِ بِحَقِّ الْيَق۪ينِ وَ عَيْنِ الْيَق۪ينِ وَ عِلْمِ الْيَق۪ينِ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَٓا اِلٰهَ اِلَّا اللّٰهُ بِكُلِّيَّةِ لِسَانِ الْقُرْاٰنِ الْمُعْجِزِ الْبَيَانِ الْمُنَوَّرِ جِهَاتُهُ السِّتُّ وَ الْمُصَدَّقِ مِنْ جَانِبِ الْمَقَامَاتِ السِّتِّ وَ الْمُقَرَّرِ بِالْحَقَٓائِقِ السِّتِّ بِكَلِمَاتِ سُوَرِه۪ وَ اٰيَاتِه۪ وَ ثَمَرَاتِه۪ وَ اٰثَارِه۪ وَ حَقَٓائِقِه۪ وَ اَسْرَارِه۪</span>
 
- 
+,
 
 ---
 
@@ -2353,13 +2353,13 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَ عُبُودِيَّتِهَا الْمُتَنَوِّعَةِ وَ اِحْتِيَاجَاتِهَا الْكَث۪يرَةِ وَ فَقْرِهَا وَ عَجْزِهَا وَ نَقْصِهَا الْغَيْرِ الْمَحْدُودَةِ وَ اِسْتِعْدَادَاتِهَا الْغَيْرِ الْمَحْصُورَةِ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَٓا اِلٰهَ اِلَّا اللّٰهُ بِمُح۪يطِ لِسَانِ الْكَٓائِنَاتِ الْكِتَابِ الْكَب۪يرِ الْمُجَسَّمِ وَ الْقُرْاٰنِ الْجِسْمَانِىِّ الْمُعَظَّمِ بِكَلِمَاتِ وَارِدَاتِهَا وَ صَرْفِيَّاتِهَا وَ سَكَنَتِهَا وَ مُشْتَمِلَاتِهَا وَ تَجْد۪يدَاتِهَا وَ تَبْد۪يلَاتِهَا بِالْاِنْتِظَامِ وَ الْم۪يزَانِ وَ بِكَلِمَاتِ الْحُدُوثِ وَ الْاِمْكَانِ وَ التَّغَيُّرِ ف۪ى كُلِّ سَكَنَتِهَا وَ التَّغْي۪يرِ وَ التَّصْو۪يرِ وَ التَّدْب۪يرِ بِالْاِنْتِظَامِ ف۪ى جَم۪يعِ مُشْتَمِلَاتِهَا وَ التَّعَاوُنِ وَ التَّسَانُدِ وَ التَّنَاسُبِ بِالْم۪يزَانِ ف۪ى عُمُومِ اَجْزَٓائِهَا</span>
 
- 
+,
 
 ---
 
@@ -2367,25 +2367,25 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بِكَمَالِ النِّظَامِ وَ الْم۪يزَانِ وَ بِدَلَالَةِ تَبَارُزِ الْاُلُوهِيَّةِ الْمُطْلَقَةِ ف۪ٓى اَقْطَارِ الْكَٓائِنَاتِ ف۪ى مُقَابَلَةِ تَظَاهُرِ اَنْوَاعِ الْعِبَادَاتِ مِنْ اَنْوَاعِ الْمَوْجُودَاتِ ف۪ى تَظَاهُرِ الرُّبُوبِيَّةِ الْعَٓامَّةِ لِجَم۪يعِ الْمَخْلُوقَاتِ ف۪ى مُشَاهَدَةِ الْفَعَّالِيَّةِ الشَّامِلَةِ لِجَم۪يعِ الْمَصْنُوعَاتِ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَٓا اِلٰهَ اِلَّا اللّٰهُ الْوَاجِبُ الْوُجُودِ اَلْوَاحِدُ الْاَحَدُ ذُو الْكَمَالَاتِ وَ الْكِبْرِيَٓاءِ وَ الْعَظَمَةِ الْمُنَافِيَةِ للِشِّرْكَةِ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَٓا اِلٰهَ اِلَّا اللّٰهُ ذُو الْحَاكِمِيَّةِ وَ الْاٰمِرِيَّةِ الْمُطْلَقَةِ الْمَانِعَةِ مِنَ الشِّرْكَةِ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَٓا اِلٰهَ اِلَّا اللّٰهُ ذُو الرُّبُوبِيَّةِ الْعَٓامَّةِ وَ الْاُلُوهِيَّةِ الْمُطْلَقَةِ الْمُسْتَلْزِمَتَيْنِ لِلْوَحْدَةِ</span>
 
- 
+,
 
 ---
 
@@ -2393,25 +2393,25 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَٓا اِلٰهَ اِلَّا اللّٰهُ ذُو الرَّحْمَانِيَّةِ الْوَاسِعَةِ الْمُتَشَابِهَةِ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَٓا اِلٰهَ اِلَّا اللّٰهُ ذُو الْاِدَارَةِ الْمُح۪يطَةِ مِنَ الذَّرَّاتِ اِلَى السَّيَّارَاتِ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَٓا اِلٰهَ اِلَّا اللّٰهُ ذُو الْاِعَاشَةِ الشَّامِلَةِ الْمُقَنَّنَةِ لِجَم۪يعِ ذَوِى الْحَيَاةِ الْمُخْتَلِطَاتِ الْمُتَدَاخِلَاتِ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَٓا اِلٰهَ اِلَّا اللّٰهُ ذُو الْاَفْعَالِ وَ الْاَسْمَٓاءِ الْمُح۪يطَةِ وَ خَالِقُ الْعَنَاصِرِ وَ الْاَنْوَاعِ الْمُسْتَوْلِيَةِ</span>
 
- 
+,
 
 ---
 
@@ -2419,19 +2419,19 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَٓا اِلٰهَ اِلَّا اللّٰهُ الَّذ۪ى تَزَاحَمَتْ خَوَات۪يمُ وَحْدَتِه۪ عَلٰى كُلِّ مَكْتُوبٍ مِنْ مَصْنُوعَاتِه۪</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَٓا اِلٰهَ اِلَّا اللّٰهُ الْوَاحِدُ الْاَحَدُ بِشَهَادَةِ وَحَدَاتِ مَدَارَاتِ تَدَاب۪يرِ الْكَٓائِنَاتِ الْمُسْتَلْزِمَةِ لِلْوَحْدَةِ مَعَ الْاِنْتِظَامِ الْاَكْمَلِ الْعَٓامِّ الْمُنَاف۪ى للِشِّرْكَةِ</span>
 
- 
+,
 
 ---
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لَٓا اِلٰهَ اِلَّا اللّٰهُ بِشَهَادَةِ التَّعَاوُنِ وَ التَّجَاوُبِ وَ التَّوَازُنِ ف۪ٓى اَجْزَٓاءِ الْعَالَمِ الدَّٓالَّةِ عَلَى الْوَاحِدِيَّةِ مَعَ اِتِّقَانِ الصَّنْعَةِ الشُّعُورِيَّةِ ف۪ى كُلِّ شَىْءٍ عَلٰى مِقْدَارِ قَامَةِ قَابِلِيَّتِهِ الْمُقَنَّنَةِ بِقَلَمِ الْقَدَرِ الدَّٓالَّةِ عَلَى الْاَحَدِيَّةِ</span>
 
- 
+,
 
 ---
 
@@ -2443,7 +2443,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">هَبَٓاءً مَنْثُورًا مُتَطَايِرَةَ الْمَعَان۪ى مُتَسَاقِطَةَ الْكَمَالَاتِ وَ هُوَ مُحَالٌ مِنْ وُجُوهٍ وَ جِهَاتٍ</span>
 
- 
+,
 
 ---
 
@@ -2451,7 +2451,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">فِهْرِسْتَةَ كَمَالَاتِ عِبَادِه۪ وَ بِجَعْلِ حَق۪يقَتِه۪ مِرْاٰةً جَامِعَةً لِتَجَلِّيَاتِ اُلُوهِيَّتِه۪ بِالْحُجَّةِ وَ الْبُرْهَانِ وَ كَتَوْظ۪يفِه۪ بِوَظَٓائِفَ قُدْسِيَّاتٍ لَازِمَاتٍ لِوُجُودِ الْمَخْلُوقَاتِ ف۪ى هٰذِهِ الْكَٓائِنَاتِ كَلُزُومِ الرَّحْمَةِ وَ الْحِكْمَةِ وَ الْعَدَالَةِ وَ كَلُزُومِ الشَّمْسِ وَ الضِّيَٓاءِ وَ النَّس۪يمِ وَ الْمَٓاءِ وَ الرِّزْقِ وَ النِّعْمَةِ ❁ فَيَا مَنْ تُسَبِّحُ لَهُ السَّمٰوَاتُ السَّبْعُ وَ الْاَرْضُ وَ مَنْ ف۪يهِنَّ نُشْهِدُكَ وَ نُشْهِدُ جَم۪يعَ الدَّلَٓائِلِ السَّابِقَةِ بِاَنَّا نَشْهَدُ بِاَنَّكَ اَنْتَ اللّٰهُ الْوَاجِبُ الْوُجُودِ الْوَاحِدُ الْاَحَدُ الْفَرْدُ الصَّمَدُ الْحَىُّ الْقَيُّومُ الْعَل۪يمُ الْحَك۪يمُ الْقَد۪يرُ الْمُر۪يدُ السَّم۪يعُ الْبَص۪يرُ الْمُتَكَلِّمُ الرَّحْمٰنُ الرَّح۪يمُ لَكَ الْاَسْمَٓاءُ الْحُسْنٰى</span>
 
- 
+,
 
 ---
 
@@ -2503,8 +2503,7 @@ book: 'hizbulhakaik'
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَللّٰهُمَّ بِحَقِّ اِسْمِكَ الْاَعْظَمِ وَ فُرْقَانِكَ الْاَحْكَمِ وَ رَسُولِكَ الْاَكْرَمِ عَلَيْهِ الصَّلَاةُ وَ السَّلَامُ تَقَبَّلْ مِنِّى مَا قَرَئْتُهُ بِاَحْسَنِ قَبُولٍ كَمَا تَقَبَّلْتَ مِنْ اَحَبِّ اَوْلِيَٓائِكَ اِلَيْكَ اٰم۪ينَ اَلْفَ اَلْفِ اٰم۪ينَ وَ الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَ</span>
 
- 
+,
 
 ---
 
- 

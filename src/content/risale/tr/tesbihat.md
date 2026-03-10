@@ -963,7 +963,7 @@ Bundan sonra şu dua okunur
 
 <span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَنْتَ الْكَاف۪ى ❁ اَنْتَ الْوَاف۪ى ❁ اَنْتَ الشَّاف۪ى ❁ اَنْتَ الْمُعَاف۪ى هُوَ اللَّهُ</span>
 
-,* * * 
+,* * *
 
 ---
 
