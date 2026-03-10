@@ -3,8 +3,6 @@ title: 'Muhakemat'
 book: 'muhakemat'
 ---
 
-import QuranText from '../../../components/reader/QuranText';
-
 # Muhakemat
 ## Müellifi
 ## Bediüzzaman
@@ -18,7 +16,7 @@ import QuranText from '../../../components/reader/QuranText';
 ## veyahut
 ## BEDİÜZZAMAN'IN MUHAKEMATI
 
-<QuranText client:load arabic="بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ" translation="Rahmân ve Rahîm olan Allah&apos;ın adıyla." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="Rahmân ve Rahîm olan Allah&#39;ın adıyla.">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 Cümle tahiyyat_ ol Hâkim-i Ezel ve Hakîm-i Ezelî ve Rahman‑ı Lemyezelî'ye elyaktır ki bizi İslâmiyet'le serfiraz ve şeriat‑ı garra ile sırat‑ı müstakime hidayet etmiştir.
 Öyle bir şeriat ki akıl ve nakil, dest be-dest ittifak vererek ol şeriatın hakaikinin hakkaniyetini tasdik etmişlerdir.
 Öyle hakaik ki kökleri hakikat zemininde rüsuh ile beraber dal ve budakları kemalâtın göklerine yükselip intişar edip…
@@ -29,8 +27,8 @@ Güya âsuman, kendi mi'rac ve melek ve kamerin elsine-i semaviyesiyle risaletin
 
 kütüb ve kâhinlerin rumuz ve telvihatıyla o şems-i hakikatin fecr-i sadıkını göstererek müjdeci ve zaman‑ı hal yani asr‑ı saadet lisan‑ı haliyle tabiat‑ı Arap'taki inkılab‑ı azîmin ve bedeviyet-i sırftan medeniyet-i mahzanın def'aten tevellüdünü şahit göstererek nübüvvetini ispat ve zaman‑ı müstakbel, kendi vukuat ve fünununun etvar‑ı müdakkikanesiyle onun mevkib-i ikbalini istikbal ve lisan‑ı hakîmane ile irşadatına teşekkür; nev-i beşer kendi muhakkikleriyle bâhusus hatib-i beliği ki şems gibi kendi kendine bürhan olan Muhammed'in (asm) lisan‑ı fasihanesiyle haktan geldiğini ilan ve Zat‑ı Zülcelal kendi Kur'an'ının lisan‑ı beliğanesiyle ol Nebiyy-i Ümmi'nin ferman‑ı risaletini kıraat ediyorlar ve oluyorlar.
 Beyt:
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">جُمْلَه ش۪يرَانِ جِهَانْ بَسْتَۀِ ا۪ينْ سِلْسِلَه اَنْدْ</span>
-<QuranText client:load arabic="رُوبَه اَزْ ح۪يلَه چِه سَانْ بِگُسَلَدْ ا۪ينْ سِلْسِلَه رَا" translation="Cihanın bütün arslanlarının bağlandıkları bir zinciri hilekâr bir tilkinin koparmasına imkân var mıdır?" />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">جُمْلَه ش۪يرَانِ جِهَانْ بَسْتَۀِ ا۪ينْ سِلْسِلَه اَنْدْ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="Cihanın bütün arslanlarının bağlandıkları bir zinciri hilekâr bir tilkinin koparmasına imkân var mıdır?">رُوبَه اَزْ ح۪يلَه چِه سَانْ بِگُسَلَدْ ا۪ينْ سِلْسِلَه رَا</span>
 **Emma ba'd:**Şu fakir, garib Nursî ki "Bid'atüzzaman" lakabıyla müsemma olmaya lâyık iken haberi olmadan "Bediüzzaman" ile meşhur olan bîçare; tedenni-i milletten ciğeri yanmış gibi feryad u figan ederek âh, âh, âh, vâ esefâ der ki: İslâmiyet'in mağz ve lübbünü terk ederek kışrına ve zâhirine vakf‑ı nazar ettik ve aldandık. Ve sû-i fehim ve sû-i edep ile İslâmiyet'in hakkını ve müstahak olduğu hürmeti îfa edemedik. Tâ o da bizden nefret ederek evham ve hayalatın bulutlarıyla sarılıp tesettür eyledi.
 Hem de hakkı var. Zira biz, İsrailiyatı usûlüne ve hikâyatı akaidine ve mecazatı hakaikine karıştırarak kıymetini takdir edemedik. O da ceza olarak bizi dünyada te'dib için zillet ve sefalet içinde bıraktı. Bizi kurtaracak yine onun merhametidir.
 Öyle ise ey ihvan‑ı müslimîn! Geliniz, ona tarziye vereceğiz. El birliğiyle dest-i sadakati uzatacağız, biat edeceğiz. Onun hablü'l-metinine sarılacağız.
@@ -92,7 +90,7 @@ Bununla beraber Kur'an‑ı Mu'cizü'l-Beyan âyât‑ı beyyinatın telâfifind
 Hem de usûl‑ü mukarreredendir: Sıdk ve kizb yahut tasdik ve tekzip; kinayat ve emsallerinde, fenn-i beyanda "maânî-i ûlâ" tabir olunan suret-i manaya râci değildirler. Ancak "maânî-i sânevî" ile tabir olunan maksat ve garaza teveccüh ederler. Mesela "Filanın kılıncının bendi uzundur." denilse, kılıncı olmazsa da fakat kameti uzun olursa yine hüküm doğrudur, yalan değildir.
 Hem de nasıl kelâmda bir kelime, istiareye karine-i mecazdır. Öyle de kelime-i vâhid hükmünde olan kelâmullahın bir kısım âyâtı, sair ihvanının hakikat ve cevherlerine karine ve reh-nüma ve komşularının kalplerindeki sırlara delil ve tercüman oluyorlar.
 **Elhasıl:**Bu hakikati pîş-i nazara getiremeyen ve âyetleri muvazene ve doğru muhakeme edemeyen, meşhur Bektaşî gibi ki namazın terkinde taallül yolunda demiş: "Kur'an diyor:
-<QuranText client:load arabic="لَا تَقْرَبُوا الصَّلٰوةَ" translation="&quot;Namaza yaklaşmayın…&quot; Nisâ Sûresi, 4:43." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="&quot;Namaza yaklaşmayın…&quot; Nisâ Sûresi, 4:43.">لَا تَقْرَبُوا الصَّلٰوةَ</span>
 İlerisine de hâfız değilim." Nazar‑ı hakikate karşı maskara olacaktır.
 €İKİNCİ MUKADDİME_
 Mazide nazarî olan bir şey_ müstakbelde bedihî olabilir.
@@ -137,7 +135,7 @@ Zira mukarrerdir: Asıl mana odur ki elfaz onu sımahta boşalttığı gibi zihn
 Kürtlerin emsal-i edebiyesindendir: Bir adamın ismi Alo imiş. Bal hırsızlıyordu. Ona denildi: "Hırsızlığın tebeyyün edecektir." O da aldatmak için bir boş petekte yabancı arıları doldurup balı başka yerden hırsızlar, küvarda saklıyor idi. Biri sual etse idi, derdi: "Bu, bal mühendisi olan arılarımın sanatıdır." Sonra da arıları ile konuştuğu vakit müşterek
 
 bir lisan ile
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">ڤِظْ ڤِظْ ژِوَه هِنْگِڤ۪ينْ ژِمِنْ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">ڤِظْ ڤِظْ ژِوَه هِنْگِڤ۪ينْ ژِمِنْ</span>
 derdi. Yani "Tanin sizden, bal benden…"
 Ey teşehhi ve heves ile tevil edici efendi! Bu teşbih ile teselli etme. Zira bu teşbih temsildir. Senin manan bal değil, zehirdir. O elfaz, arılar değil belki kalp ve vicdana ervah‑ı hakaiki vahyeden o kitab‑ı kâmilin kelimatı melâike gibidirler. Hadîs, maden-i hayat ve mülhim-i hakikattir.
 **Elhasıl:**İfrat gibi tefrit de muzırdır belki daha ziyade. Fakat ifrat, tefrite sebep olduğundan daha kabahatlidir. Evet, ifrat ile müsamahanın kapısı açıldı. Çürük şeyler o hakaik-i âliyeye karıştığından; ehl-i tefrit ile insafsız olan ehl-i tenkit, gayet haksızlık olarak şu çürük şeylerin yüzer misline olan hakaik-i âliye içinde gördüklerinden ürktüler, nefret ettiler. Hâşâ lekedar ve kıymetsiz zannettiler. Acaba defineye hariçten girmiş bir silik para bulunsa veyahut bir bostanda başka yerden düşmüş olan çürük ve acı bir elma görünse hak ve insaf mıdır ki umum defineyi kalp ve umum elmaları acı zannedip vazgeçmekle lekedar edilsin?
@@ -198,7 +196,7 @@ Ben de dava ederim: Tefsirin ve şeriatın ne kadar hakaik-i esasiyesi varsa bir
 €YEDİNCİ MUKADDİME_
 Mübalağa ihtilalcidir. Şöyle ki:
 Beşerin seciyelerindendir_ telezzüz ettiği şeyde meylü't-tezeyyüd ve vasfettiği şeyde meylü'l-mücazefe ve hikâye ettiği şeyde meylü'l-mübalağa ile hayali hakikate karıştırmaktır. Bu seciye-i seyyie ile iyilik etmek, fenalık etmek demektir. Bilmediği halde tezyidinden noksan, ıslahından fesat, medhinden zem, tahsininden kubuh tevellüd eder. Zira muvazenet ve tenasüpten nâşi olan hüsnü
-<QuranText client:load arabic="مِنْ حَيْثُ لَا يَشْعُرُ" translation="Şuur taalluk etmediği taraftan, hissedilmediği yerden." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="Şuur taalluk etmediği taraftan, hissedilmediği yerden.">مِنْ حَيْثُ لَا يَشْعُرُ</span>
 ihlâl eder.
 
 Nasıl ki bir ilacı istihsan edip izdiyad etmek, devayı dâ'e inkılab etmektir. Öyle de hiçbir vakit hak ona muhtaç olmayan mübalağalı tergib ve terhib ile gıybeti, katle müsavi veya ayakta bevletmek, zina derecesinde göstermek veya bir dirhemi tasadduk etmek, hacca mukabil tutmak gibi muvazenesiz sözler, katl ve zinayı tahfif ve haccın kıymetini tenzil ediyorlar.
@@ -238,19 +236,19 @@ taassuba bedel metanet ve garaza bedel hamiyet ve müyulat‑ı nefsaniyeye bede
 **Saltanat‑ı efkârın icra-yı hasenesindendir ki:**Hakaik-i İslâmiyet'in güneşi, evham ve hayalat bulutlarından kurtulmuş, her yeri tenvire başlamıştır. Hattâ dinsizlik bataklığında taaffün eden adamlar dahi o ziya ile istifadeye başlamıştırlar.
 **Hem de meşveret-i efkârın mehasinindendir ki:**Makasıd ve mesalik, bürhan‑ı kātı' üzerine teessüs ve her kemale mümid olan hakk‑ı sabit ile hakaiki rabteylemesidir. Bunun neticesi; bâtıl, hak suretini giymekle efkârı aldatmaz.
 **Ey ihvan‑ı müslimîn!**Hal, lisan‑ı hal ile bize beşaret veriyor ki: Sırr-ı
-<QuranText client:load arabic="قَدْ جَٓاءَ الْحَقُّ وَ زَهَقَ الْبَاطِلُ" translation="“Muhakkak Hak geldi, bâtıl yok oldu.” İsrâ Sûresi, 17:81." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="“Muhakkak Hak geldi, bâtıl yok oldu.” İsrâ Sûresi, 17:81.">قَدْ جَٓاءَ الْحَقُّ وَ زَهَقَ الْبَاطِلُ</span>
 boynunu kaldırmış, el ile istikbale işaret edip yüksek ses ile ilan ediyor ki: Dehre ve tabâyi-i beşere, dâmen-i kıyamete kadar hâkim olacak, yalnız âlem-i kevnde adalet-i ezeliyenin tecelli ve timsali olan hakikat-i İslâmiyettir ki asıl insaniyet-i kübra denilen şey odur.
 İnsaniyet-i suğra denilen mehasin-i medeniyet, onun mukaddimesidir. Görülmüyor mu ki: Telahuktan neş'et eden tenevvür‑ü efkâr ile toprağa benzeyen evham ve hayalatı hakaik-i İslâmiyenin omuzu üzerinden hafifleştirmiştir. Bu hal gösteriyor ki: Nücum‑u sema-yı hidayet olan o hakaik tamamen inkişaf ve tele'lü ve lem'a-nisar olacaktır.
-<QuranText client:load arabic="عَلٰى رَغْمِ اُنُوفِ الْاَعْدَاءِ" translation="Düşmanların engellemelerine rağmen." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="Düşmanların engellemelerine rağmen.">عَلٰى رَغْمِ اُنُوفِ الْاَعْدَاءِ</span>
 Eğer istersen istikbal içine gir, bak! Hakikatlerin meydanında hikmetin taht‑ı nezaret ve murakabesinde teslis içinde tevhidi arayanlar, safsata ederek asıl tevhid-i mahz ve itikad‑ı kâmil ve akl‑ı selim kabul ettiği akide-i hak ile mücehhez ve seyf-i bürhan ile mütekallid olanlarla mübareze ve muharebe ederse; nasıl birden mağlup ve münhezim oluyor.
 Kur'an'ın üslub‑u hakîmanesine yemin ederim ki: Nasâra'yı ve emsalini havalandırarak dalalet derelerine atan, yalnız aklı azl ve bürhanı tard ve ruhbanı taklit etmektir. Hem de İslâmiyet'i daima tecelli ve
 
 inbisat‑ı efkâr nisbetinde hakaiki inkişaf ettiren, yalnız İslâmiyet'in hakikat üzerinde olan teessüs ve bürhan ile takallüdü ve akıl ile meşvereti ve taht‑ı hakikat üstünde bulunması ve ezelden ebede müteselsil olan hikmetin desatirine mutabakat ve muhakâtıdır. Acaba görülmüyor: Âyâtın ekser fevatih ve havatiminde nev-i beşeri vicdana havale ve aklın istişaresine hamlettiriyor. Diyor: ﹛اَفَلَا يَنْظُرُونَ|﹜  ve ﹛فَانْظُرُوا|﹜  ve ﹛اَفَلَا يَتَدَبَّرُونَ|﹜  ve ﹛اَفَلَا تَتَذَكَّرُونَ|﹜  ve ﹛تَفَكَّرُوا|﹜  ve ﹛مَا يَشْعُرُونَ|﹜  ve ﹛يَعْقِلُونَ|﹜  ve ﹛مَا يَعْقِلُونَ|﹜  ve ﹛يَعْلَمُونَ|﹜  ve
-<QuranText client:load arabic="فَاعْتَبِرُوا يَا اُولِى الْاَلْبَابِ" translation="&quot;Bundan ibret alın, ey akıl sahipleri!&quot; bk. Haşir Sûresi, 59:2." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="&quot;Bundan ibret alın, ey akıl sahipleri!&quot; bk. Haşir Sûresi, 59:2.">فَاعْتَبِرُوا يَا اُولِى الْاَلْبَابِ</span>
 Ben dahi derim:
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">فَاعْتَبِرُوا يَٓا اُولِى الْاَبْصَارِ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">فَاعْتَبِرُوا يَٓا اُولِى الْاَبْصَارِ</span>
 ## Hâtime
-<QuranText client:load arabic="فَاعْتَبِرُوا يَا اُولِى الْاَلْبَابِ" translation="&quot;Bundan ibret alın, ey akıl sahipleri!&quot; bk. Haşir Sûresi, 59:2." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="&quot;Bundan ibret alın, ey akıl sahipleri!&quot; bk. Haşir Sûresi, 59:2.">فَاعْتَبِرُوا يَا اُولِى الْاَلْبَابِ</span>
 Zâhirden ubûr ediniz! Hakikat sizi bekliyor. Fakat gördüğünüz vakit incitmeyiniz. Esahh ve lâzım!
 €DOKUZUNCU MUKADDİME_
 Ukûl‑ü selime yanında muhakkaktır ki: Hilkatte hayır asıl_ şer ise tebeîdir. Hayır küllî, şer cüz'îdir. Şöyle görünüyor ki:
@@ -305,19 +303,19 @@ Vaktâ ki Kitab‑ı Hakîm'den maksud‑u ehemm, ekseriyeti teşkil eden cumhur
 fehmedemezler. Halbuki cumhur ise ekseri avam ve avam ise me'lufat ve mütehayyelatından tecerrüd edip hakikat-i mahza ve mücerredat‑ı sırfeyi çıplak olarak göremezler. Fakat görmekleri temin edecek yalnız zihinlerinin te'nisi için me'luf olan ziyy ve libas ile mücerredat arz‑ı endam etmektir. Tâ mücerredatı, suver-i hayaliye arkasında temaşa etmekle görüp tanısın. Öyle ise hakikat-i mahza, me'luflarını giyecektir. Fakat surete hasr‑ı nazar etmemek gerektir.
 Bu sırra binaendir: Esalib-i Arap'ta ukûl‑ü beşere olan tenezzülat‑ı İlahiye tabir olunan müraat‑ı efhâm ve mümaşat‑ı ezhan, Kur'an‑ı Mu'cizü'l-Beyan'da cereyan etti.
 Ezcümle:
-<QuranText client:load arabic="فَاسْتَوٰى عَلَى الْعَرْشِ" translation="“Sonra (Allah) Arş’a istiva etti (oturdu, yükseldi, onu kapladı, onda karar kıldı).” “Bir temsil ile rububiyet-i İlahiyeyi saltanat misalinde ve âlemin tedbirinde mertebe-i rububiyetini, br Sultanın taht‑ı saltanatında durup icra-yı hükûmet ettiği gibi bir misalde gösteriyor.  (A’râf Sûresi, 7:54; Yûnus Sûresi, 10:3; Ra’d Sûresi, 13:2; Furkan Sûresi, 25:59; Secde Sûresi, 32:4; Hadîd Sûresi, 57:4." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="“Sonra (Allah) Arş’a istiva etti (oturdu, yükseldi, onu kapladı, onda karar kıldı).” “Bir temsil ile rububiyet-i İlahiyeyi saltanat misalinde ve âlemin tedbirinde mertebe-i rububiyetini, br Sultanın taht‑ı saltanatında durup icra-yı hükûmet ettiği gibi bir misalde gösteriyor.  (A’râf Sûresi, 7:54; Yûnus Sûresi, 10:3; Ra’d Sûresi, 13:2; Furkan Sûresi, 25:59; Secde Sûresi, 32:4; Hadîd Sûresi, 57:4.">فَاسْتَوٰى عَلَى الْعَرْشِ</span>
 ,ve_
-<QuranText client:load arabic="يَدُ اللّٰهِ فَوْقَ اَيْد۪يهِمْ" translation="&quot;Allah&apos;ın eli (kudreti) onların ellerinin (güçlerinin) üstündedir.&quot; Fecr Sûresi_ 89:22." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="&quot;Allah&#39;ın eli (kudreti) onların ellerinin (güçlerinin) üstündedir.&quot; Fecr Sûresi_ 89:22.">يَدُ اللّٰهِ فَوْقَ اَيْد۪يهِمْ</span>
 ,ve_
-<QuranText client:load arabic="جَٓاءَ رَبُّكَ" translation="“Allah (ın emri) geldi.“ Fetih Sûresi_ 48:10" />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="“Allah (ın emri) geldi.“ Fetih Sûresi_ 48:10">جَٓاءَ رَبُّكَ</span>
 ve emsali…
 Hem de
-<QuranText client:load arabic="تَغْرُبُ ( الشَّمْسُ ) ف۪ى عَيْنٍ حَمِئَةٍ" translation="&quot;Güneşin hararetli ve çamurlu bir çeşme suyunda gurub ettiğini gördü.&quot; Kehf Sûresi, 18:86." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="&quot;Güneşin hararetli ve çamurlu bir çeşme suyunda gurub ettiğini gördü.&quot; Kehf Sûresi, 18:86.">تَغْرُبُ ( الشَّمْسُ ) ف۪ى عَيْنٍ حَمِئَةٍ</span>
 ve eşbahı…
 Hem de
-<QuranText client:load arabic="وَ الشَّمْسُ تَجْر۪ى لِمُسْتَقَرٍّ" translation="“Güneş de onlar için bir delildir ki, kendisine tâyin edilmiş bir yörüngede akıp gider.” Yâsin Sûresi, 36:38." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="“Güneş de onlar için bir delildir ki, kendisine tâyin edilmiş bir yörüngede akıp gider.” Yâsin Sûresi, 36:38.">وَ الشَّمْسُ تَجْر۪ى لِمُسْتَقَرٍّ</span>
 ve nazairi bu üsluba birer mecradır.
-<QuranText client:load arabic="ذٰلِكَ الْكِتَابُ لَا رَيْبَ ف۪يهِ" translation="Şu kitap ki, onda asla şüphe yoktur.&quot; Bakara Sûresi, 2:1." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="Şu kitap ki, onda asla şüphe yoktur.&quot; Bakara Sûresi, 2:1.">ذٰلِكَ الْكِتَابُ لَا رَيْبَ ف۪يهِ</span>
 ## Hâtime
 Sa'b olan bir kelâmın iğlak ve işkâli, ya lafız ve üslubun perişanlığından neş'et eder –bu kısım Kur'an‑ı Vâzıhu'l-Beyan'a yanaşmamıştır– veyahut mananın dakik, derin veyahut kıymettar veyahut gayr‑ı me'luf, gayr‑ı mebzul olduğundan güya fehme karşı nazlanmak ve şevki artırmak için kendini göstermemek ve kıymet ve ehemmiyet vermek ister; müşkülat‑ı Kur'aniye bu kısımdandır.
 **Tenbih:**
@@ -328,7 +326,7 @@ veya müraat‑ı esbab namıyla bir İtizal'i intac eder. Öyle de devair ve me
 Kelâm‑ı vâhidde ahkâm‑ı müteaddide olabilir. Bir sadef_ çok cevahiri tazammun edebilir.
 Zevi'l-elbabca mukarrerdir: Kaziye-i vâhide, müteaddid kazayâyı tazammun eder. O kaziyelerin her biri ayrı birer madenden çıktığı gibi ayrı ayrı birer semere de verir. Biri birinden fark etmeyen, haktan bîgane kalır.
 Mesela, hadîste denilmiş:
-<QuranText client:load arabic="اَنَا وَ السَّاعَةُ كَهٰذَيْنِ" translation="Buharî, Rikak, 39, Tefsir: 79, Sûre: 1; Müslim, Fiten: 132-135; Tirmizî, Fiten: 39; Müsned, 3:124, 130, 131, 193, 218, 222, 237, 275, 278, 283, 311, 319, 4:309, 5:92, 103, 108, 330, 335, 338." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="Buharî, Rikak, 39, Tefsir: 79, Sûre: 1; Müslim, Fiten: 132-135; Tirmizî, Fiten: 39; Müsned, 3:124, 130, 131, 193, 218, 222, 237, 275, 278, 283, 311, 319, 4:309, 5:92, 103, 108, 330, 335, 338.">اَنَا وَ السَّاعَةُ كَهٰذَيْنِ</span>
 Yani ben ve kıyamet bu iki parmak gibiyiz. Mabeynimizde tavassut edecek peygamber yoktur. Veya hadîsin muradı ne ise haktır. Şimdi bu hadîs üç kaziyeyi mutazammındır:
 **Birincisi:**Bu kelâm Peygamberin kelâmıdır. Bu kaziye ise tevatürün –eğer olsa– neticesidir.
 **İkincisi:**Kelâmın mana-yı muradı hak ve sadıktır. Bu kaziye ise mu'cizelerden tevellüd eden bürhanın neticesidir.
@@ -341,7 +339,7 @@ Bu üç kaziye hadîste cereyanı gibi âyette de cereyan eder. Zira umumîdir. 
 bir kelâmda çok ahkâm‑ı zımniye bulunur. Fakat hususidir. Her biri ayrı bir asıl, ayrı bir semeresi olabilir.
 **Tenbih:**
 İltizam‑ı hilaf ve taassub‑u bârid ve meylü't-tefevvuk ve hiss-i taraftarlık ve vehmini bir asla ircâ ile kendine özür göstermek, arzusuna muvafık olan zayıf şeyleri kavî görmek ve gayrın tenkisiyle kendi kemalini göstermek ve gayrı tekzip veya tadlil etmekle kendi sıdk ve istikametini ilan etmek gibi sefil ve süflî emirlerin menşei olan hubb‑u nefis ile böyle makamlarda mugalata ederek çok bahaneler bulabilir.
-<QuranText client:load arabic="وَ اِلَى اللّٰهِ الْمُشْتَكٰى" translation="Şikâyetler yalnızca Allah&apos;adır." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="Şikâyetler yalnızca Allah&#39;adır.">وَ اِلَى اللّٰهِ الْمُشْتَكٰى</span>
 €ON İKİNCİ MUKADDİME_
 Lübbü bulmayan_ kışır ile meşgul olur. Hakikati tanımayan, hayalata sapar. Sırat‑ı müstakimi göremeyen, ifrat ve tefrite düşer. Muvazenesiz ve mizansız olan çok aldanır, aldatır.
 Zâhir-perestleri aldatan bir sebep: Kıssanın hisse ile münasebeti ve mukaddimenin maksud ile zihinde mukareneti, vücud‑u haricîde olan mukarenetle iltibas olunmasıdır. Bu noktaya dikkat et, sonra muhtaç olacaksın.
@@ -389,9 +387,9 @@ Sonra dönüp gelmek üzere olan ebna-yı cinsimizi ziyaret ve istikbal için sa
 Senin elini tutup hazine-i hakaike götürmekten evvel, vaad ettiğim birkaç mesele ile acele edip basar‑ı basîretinize gışavet ve perde olan hayalatı def'edeceğim. Öyle hayalat, gulyabanî gibi elleriyle senin gözünü kapar, göğsüne vurur, seni tahvif eder. Faraza gösterse de nuru nâr, dürrü mederr gibi gösterir. O hayalattan sakın! Senin vesveselerinin en büyük menşei, küreviyete taalluk eden birkaç meseledir.
 Ezcümle: Sevr ve Hut ve Kaf Dağı ve Sedd-i Zülkarneyn ve cibalin evtadiyetleri ve yer altında cehennemin yerini tayin etmek ve
 ﹛دَحٰيهَا|﹜  ve ﹛سُطِحَتْ|﹜  ve
-<QuranText client:load arabic="اَلشَّمْسُ تَجْر۪ى لِمُسْتَقَرٍّ" translation="“Güneş de onlar için bir delildir ki, kendisine tâyin edilmiş bir yörüngede akıp gider.” Yâsin Sûresi, 36:38." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="“Güneş de onlar için bir delildir ki, kendisine tâyin edilmiş bir yörüngede akıp gider.” Yâsin Sûresi, 36:38.">اَلشَّمْسُ تَجْر۪ى لِمُسْتَقَرٍّ</span>
 ,ve_
-<QuranText client:load arabic="يُنَزِّلُ مِنَ السَّمَٓاءِ مِنْ جِبَالٍ ف۪يهَا مِنْ بَرَدٍ" translation="&quot;O_ gökten, oradaki dağ gibi bulutlardan dolu indirir.&quot; Nur Sûresi, 24:43." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="&quot;O_ gökten, oradaki dağ gibi bulutlardan dolu indirir.&quot; Nur Sûresi, 24:43.">يُنَزِّلُ مِنَ السَّمَٓاءِ مِنْ جِبَالٍ ف۪يهَا مِنْ بَرَدٍ</span>
 gibi mesaildir.
 Hakikatlerini beyan edeceğim tâ dinin düşmanlarının gözleri kapatılsın ve dostlarının gözleri dahi açılsın. İşte başlıyorum:
 €BİRİNCİ MESELE_
@@ -423,22 +421,22 @@ Göreceksin nasıl hayalat, zâhir-perestleri havalandırmış. Bu hadîsi maham
 Nasıl Sevr ve Nesir ve İnsan ve diğeriyle müsemma olan hamele-i arş, melâikedir. Bu Sevr ve Hut dahi öyle iki melâikedir. Yoksa arş‑ı a'zamı melâikeye; küreyi, küre gibi himmete muhtaç olan bir öküze tahmil etmek, nizam‑ı âleme münafîdir.
 Hem de lisan‑ı şeriatta işitiliyor: Her bir nev'e mahsus ve o nev'e münasip bir melek-i müekkel vardır. Bu münasebete binaen o melek o nev'in ismiyle müsemma, belki âlem-i melâikede onun suretiyle mütemessil oluyor. Hadîs olarak işitiliyor: "Her akşamda güneş arşa gider, secde eder. İzin alıyor, sonra geliyor." Evet, şemse müekkel olan melek; ismi Şems, misali de şemstir. Odur gider, gelir.
 Hem de hükema-i İlahiyyun nezdinde her bir nevi için hay ve nâtık ve efrada imdat verici ve müstemiddi bir mahiyet-i mücerrede vardır. Lisan‑ı şeriatta melekü'l-cibal ve melekü'l-bihar ve melekü'l-emtar gibi isimler ile tabir edilir. Fakat tesir-i hakikileri yoktur. Müessir-i hakiki yalnız Zat‑ı Akdes'tir.
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">اِذْ لَا مُؤَثِّرَ فِى الْكَوْنِ اِلَّا اللّٰهُ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اِذْ لَا مُؤَثِّرَ فِى الْكَوْنِ اِلَّا اللّٰهُ</span>
 Esbab‑ı zâhiriyenin vaz'ındaki hikmet ise: İzhar‑ı izzet ve saltanat tabir olunan, dest-i kudret perdesiz daire-i esbaba mün'atıf olan nazara karşı, zâhiren umûr‑u hasise ile mübaşeret ve mülabeseti görülmemektedir. Fakat daire-i akide denilen hak ve melekûtiyette her şey ulvidir. Dest-i kudretin perdesiz mübaşereti izzete münasiptir.
-<QuranText client:load arabic="ذٰلِكَ تَقْد۪يرُ الْعَز۪يزِ الْعَل۪يمِ" translation="&quot;Güneş de kendisine tayin edilmiş bir yere doğru akıp gider. Bu, kudreti herşeye galip olan ve ilmi herşeyi kuşatan Allah&apos;ın takdiridir.&quot; Yâsin Sûresi, 36:38." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="&quot;Güneş de kendisine tayin edilmiş bir yere doğru akıp gider. Bu, kudreti herşeye galip olan ve ilmi herşeyi kuşatan Allah&#39;ın takdiridir.&quot; Yâsin Sûresi, 36:38.">ذٰلِكَ تَقْد۪يرُ الْعَز۪يزِ الْعَل۪يمِ</span>
 **İkinci mahmil:**Sevr, imaret ve ziraat‑ı arzın en büyük vasıtası olan öküzdür. Hut ise ehl-i sevahilin belki pek çok nev-i beşerin medar‑ı maişeti olan balıktır.
 Nasıl biri sual ederse: "Devlet ne şey üstündedir?" Cevap verilir: "Kılınçla kalem üstündedir." Veyahut "Medeniyet ne ile kaimdir?"
 
 "Marifet ve sanat ve ticaret ile…" cevap verilir. Veyahut "Nev-i beşer, ne şey üzerinde beka bulur?" Cevap ise: "İlim ve amel üstünde beka bulur." Kezalik vallahu a'lem Fahr-i kâinat buna binaen cevap vermiş.
 Şöyle sual eden zat –İkinci Mukaddime'nin sırrıyla– böyle hakaike zihni istidat kesbetmediğinden vazifesi olmayan bir şeyden sual ettiği gibi Peygamberimiz de asıl lâzım olan şöyle cevap buyurdu ki: "Yer, sevr üstündedir."
 Zira yerin imareti nev-i beşer iledir. Nev-i beşerden olan ehl-i kura'nın menba-i hayatları ziraat iledir. Ziraat ise öküzün omuzu üstündedir ve zimmetindedir. Kısm‑ı diğeri olan ehl-i sevahilin a'zam‑ı maişetleri, belki ehl-i medeniyetin büyük bir maden-i ticaretleri balığın cevfinde ve hutun üstündedir.
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">كُلُّ الصَّيْدِ ف۪ى جَوْفِ الْفَرَا</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">كُلُّ الصَّيْدِ ف۪ى جَوْفِ الْفَرَا</span>
 meselesine mâsadaktır. Bu latîf bir cevaptır. Mizah da olsa haktır. Zira mizah etse de yalnız hak söyler.
 Faraza sâil keyfiyet-i hilkatten sual etmişse fenn-i beyanda olan
-<QuranText client:load arabic="تَلَقَّى السَّامِعُ بِغَيْرِ الْمُتَرَقَّبِ" translation="İşitenin, beklemediği bir cevapla karşılaşması (Beklenilmeyen şeyi işitmek)." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="İşitenin, beklemediği bir cevapla karşılaşması (Beklenilmeyen şeyi işitmek).">تَلَقَّى السَّامِعُ بِغَيْرِ الْمُتَرَقَّبِ</span>
 kaidesinin üslub‑u hakîmanesiyle, lâzım ve istediği cevabı vermiştir. Yoksa hasta olan sâil iştiha-i kâzibiyle istediği cevabı vermemiştir.
 Ve
-<QuranText client:load arabic="يَسْئَلُونَكَ عَنِ الْاَهِلَّةِ قُلْ هِىَ مَوَاق۪يتُ لِلنَّاسِ" translation="&quot;Sana yeni doğan aylardan soruyorlar. De ki: Onlar insanlar için birer zaman ölçüsüdür.&quot; Bakara Sûresi, 2:189." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="&quot;Sana yeni doğan aylardan soruyorlar. De ki: Onlar insanlar için birer zaman ölçüsüdür.&quot; Bakara Sûresi, 2:189.">يَسْئَلُونَكَ عَنِ الْاَهِلَّةِ قُلْ هِىَ مَوَاق۪يتُ لِلنَّاسِ</span>
 bu hakikate bir beraatü'l-istihlaldir.
 **Üçüncü Mahmil:**Sevr ve Hut, arzın mahrek-i senevîsinde mukadder olan iki burçtur. O burçlar eğer çendan farazî ve mevhumedirler. Asıl ecramı nazım ve rabt ile yüklenmiş olan âlemde cari ve lafzen ve ıstılahen cazibe-i umumiye ile müsemma olan âdâtullahın kanunu o burçlarda temerküz ve tahassül ettiğinden "Arz burçlar üstündedir." olan tabir-i hakîmane caizdir. Bu mahmil, hikmet-i cedide nokta-i nazarındadır. Zira hikmet-i atîka burçları semada, hikmet-i cedide ise medar‑ı arzda farz etmişlerdir. Bu tevil yeni hikmetin nazarında büyük bir kıymeti tazammun eder.
 Hem de mervîdir: Sual taaddüd etmiş. Bir kere "Hut üstündedir." Demek bir aydan sonra "Sevr üstündedir." denilmiştir. Yani feza-yı gayr‑ı mahdudenin her tarafında münteşir olan mezbur kanunun huyût
@@ -451,9 +449,9 @@ _**Kaf Dağı'dır**_
 Malûmdur_ bir şeyin mahiyetinin keyfiyetini bilmek başkadır, o şeyin vücudunu tasdik etmek yine başkadır. Bu iki noktayı temyiz etmek lâzımdır. Zira çok şeylerin asıl vücudu yakîn iken, vehim onda tasarruf ederek tâ imkândan imtina derecesine çıkarıyor. İstersen Yedinci Mukaddime'den sual et, sana "neam" cevabı verecektir. Hem de çok şeylerin metinleri kat'î iken delâletlerinde zunûn tezahüm eylemişlerdir. Belki "Murad nedir?" olan sualinin cevabında efhâm, mütehayyir olmuşlardır. İstersen On Birinci Mukaddime'nin sadefini aç. Bu cevheri bulacaksın.
 **Tenbih:**
 Vaktâ ki bu böyledir. "Kaf"a işaret eden kat'iyyü'l-metinlerden yalnız
-<QuranText client:load arabic="قٓ وَ الْقُرْاٰنِ الْمَج۪يدِ" translation="&quot;Kaf. Şerefi pek yüce olan Kur&apos;ân&apos;a yemin olsun.&quot; Kaf Sûresi, 50:1." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="&quot;Kaf. Şerefi pek yüce olan Kur&#39;ân&#39;a yemin olsun.&quot; Kaf Sûresi, 50:1.">قٓ وَ الْقُرْاٰنِ الْمَج۪يدِ</span>
 dir. Halbuki caizdir "Kaf" "Sad" gibi olsun. Dünyanın şarkında değil belki ağzın garbındadır. Şu ihtimal ile delil yakîniyetten düşer. Hem de kat'iyyü'd-delâlet bundan başka olmadığının bir delili, Şer'in müçtehidlerinden olan Karafî'nin
-<QuranText client:load arabic="لَا اَصْلَ لَهُ" translation="Hadis tahrîci yapan âlimlerin, kaynağını tesbit edemedikleri hadisler için &quot;Bu hadisin kaynağı yoktur veya bu hadis, temel kaynaklarda yer almamaktadır&quot; anlamında Hadis ilminde kullanılan bir ifade." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="Hadis tahrîci yapan âlimlerin, kaynağını tesbit edemedikleri hadisler için &quot;Bu hadisin kaynağı yoktur veya bu hadis, temel kaynaklarda yer almamaktadır&quot; anlamında Hadis ilminde kullanılan bir ifade.">لَا اَصْلَ لَهُ</span>
 demesidir. Lâkin İbn-i Abbas'a isnad olunan keyfiyet-i meşhuresi, Dördüncü Mukaddime'ye bak, vech-i nisbeti sana temessül edecektir. Halbuki İbn-i Abbas'ın her söylediği sözü, hadîs olması
 
 lâzım gelmediği gibi her naklettiği şeyi de onun makbulü olmak lâzım gelmez. Zira İbn-i Abbas gençliğinde İsrailiyata, bazı hakaikin tezahürü için hikâyet tarîkiyle bir derece atf‑ı nazar eylemiştir.
@@ -491,7 +489,7 @@ Sonra seddin harabiyeti kıyamete alâmet olur. Bâhusus dekk, ondan başkadır.
 
 Bundan sonra On İkinci Mukaddime'nin fatihasında bir tevil-i âher sana feth-i bab eder. Şöyle: Kur'an hısası için kısası zikrettiği gibi ukad‑ı hayatiye hükmünde ve makasıd‑ı Kur'aniyeden bir maksadına münasip noktaları intihab ve rabt‑ı maksada ittisal ettiriyor. Eğerçi hariçte ve husulde birbirinin nârı veya nuru birbiriyle görünmediği halde, zihninde ve üslupta teanuk ve musahabet edebilirler.
 Hînâ ki kıssa hisse içindir, sana ne lâzım teşrihatı; nasıl olursa olsun sana taalluk edemez. Kendi hisseni al, git. Hem de Onuncu Mukaddime'den istizhar et. Göreceksin: Mecaz mecaza kapı açar ve
-<QuranText client:load arabic="تَغْرُبُ ( الشَّمْسُ ) ف۪ى عَيْنٍ حَمِئَةٍ" translation="&quot;Güneşin hararetli ve çamurlu bir çeşme suyunda gurub ettiğini gördü.&quot; Kehf Sûresi, 18:86." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="&quot;Güneşin hararetli ve çamurlu bir çeşme suyunda gurub ettiğini gördü.&quot; Kehf Sûresi, 18:86.">تَغْرُبُ ( الشَّمْسُ ) ف۪ى عَيْنٍ حَمِئَةٍ</span>
 zâhir-perestleri dışarıya sürüyor.
 Malûm olsun ki: Esalib-i Arap'ta tecelli eden hüccetullahın miftahı, yalnız istiare ve mecaz üzerine müesses ve asl‑ı i'caz olan belâgattır. Yoksa şöhret sebebiyle yalancı hadsle lakîta olunan ve rızaları olmadığı halde esdaf‑ı âyâtta saklanan boncuklar değildir. İstersen Onuncu Mukaddime'nin Hâtimesi'ni istişmamla zevk et. Zira hitamı misktir ve içinde baldır.
 Hem de caizdir ki: Meçhulü'l-keyfiyet olan set, başka yerde sair alâmat‑ı kıyamet gibi mestûr ve kıyamete kadar bâki ve bazı inkılabatıyla meçhul kalarak kıyamette harap olacaktır.
@@ -515,7 +513,7 @@ Umum fünunun gösterdiği intizamın şehadetiyle ve hikmetin istikra-i tammın
 Muhakkaktır ki: Tenzil'in hâssa-i cazibedarı_ i'cazdır. İ'caz ise belâgatın yüksek tabakasından tevellüd eder. Belâgat ise hasais ve mezaya, bâhusus istiare ve mecaz üzere müessesedir. Kim istiare ve mecaz dürbünüyle temaşa etmezse mezayasını göremez. Zira ezhan‑ı nâsın te'nisi için esalib-i Arap'ta yenabi-i ulûmu isale eden Tenzil'in içinde tenezzülat‑ı İlahiye tabir olunan müraat‑ı efhâm ve ihtiram‑ı hissiyat ve mümaşat‑ı ezhan vardır.
 Vaktâ ki bu böyledir, ehl-i tefsire lâzımdır: Kur'an'ın hakkını bahş ve kıymetini noksan etmesin. Ve belâgatın tasdik ve sikkesi olmayan bir şeyle, Kur'an'ı tevil etmesinler. Zira her hakikatten daha zâhir ve daha vâzıh tahakkuk etmiş ki Kur'an'ın manaları hak oldukları gibi tarz‑ı ifade ve suret-i manası dahi beliğane ve ulvidir. Cüz'iyatı o madene ircâ ve teferruatı o menbaa ilhak etmeyen, Kur'an'ın îfa-i hakkında mutaffifînden oluyor. Bir iki misal göstereceğiz. Zira nazarı celbeder.
 **Birinci Misal:**
-<QuranText client:load arabic="وَ ( جَعَلْنَا ) الْجِبَالَ اَوْتَادًا" translation="&quot;Dağları birer kazık yaptık.&quot; Nebe&apos; Sûresi, 78:7." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="&quot;Dağları birer kazık yaptık.&quot; Nebe&#39; Sûresi, 78:7.">وَ ( جَعَلْنَا ) الْجِبَالَ اَوْتَادًا</span>
 (Allahu a'lemu bimuradihi) Caizdir, işaret olunan mecaz, böyle bir tasavvuru îma eder ki: Sefine gibi olan küre, bahr-i muhit-i havaînin içinde tahte'l-bahir bir gemisi ve umman gibi fezada direk veya demir gibi dağlarıyla irsa ve ta'mid ederek hava ile iştibak ettiğinden muvazeneti muhafaza olunmuştur. Demek dağlar o geminin demir ve direkleri hükmündedirler.
 **Sâniyen:**İnkılabat‑ı dâhiliyeden ihtizazat, o dağlar ile iskât olunurlar. Zira dağlar yerin mesamatı hükmündedir. Dâhilî bir heyecan
 
@@ -527,10 +525,10 @@ Hem de eğer vehim ile bu kasr‑ı müşeyyed-i âlemden tecerrüd edip uzaktan
 
 €YEDİNCİ MESELE_
 Kur'an'da zikrolunan: ﹛دَحٰيهَا|﹜  ve ﹛سُطِحَتْ|﹜  ve ﹛فُرِّشَتْ|﹜  ve
-<QuranText client:load arabic="تَغْرُبُ ( الشَّمْسُ ) ف۪ى عَيْنٍ حَمِئَةٍ" translation="&quot;Güneşin hararetli ve çamurlu bir çeşme suyunda gurub ettiğini gördü.&quot; Kehf Sûresi_ 18:86." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="&quot;Güneşin hararetli ve çamurlu bir çeşme suyunda gurub ettiğini gördü.&quot; Kehf Sûresi_ 18:86.">تَغْرُبُ ( الشَّمْسُ ) ف۪ى عَيْنٍ حَمِئَةٍ</span>
 ve emsalleri gibi bazı ehl-i zâhir tağlit‑ı ezhan için onlar ile temessük ederler. Lâkin müdafaaya biz muhtaç değiliz. Zira müfessirîn-i izam, âyâtın zamairindeki serairleri izhar eylemişlerdir. Bize hâcet bırakmamışlar fakat bir ders-i ibret vermişler ve sermeşk yazmışlar.
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">وَلٰكِنْ بَكَوْا قَبْل۪ى فَهَيَّجُوا لِىَ الْبُكَاءَ</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">وَ هَيْهَاتَ ذُو رَحْمٍ يَرُقُّ لِبُكَائ۪ى</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَلٰكِنْ بَكَوْا قَبْل۪ى فَهَيَّجُوا لِىَ الْبُكَاءَ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَ هَيْهَاتَ ذُو رَحْمٍ يَرُقُّ لِبُكَائ۪ى</span>
 Malûmdur: Malûmu i'lam bâhusus müşahed olursa abestir. Demek içinde bir nokta-i garabet lâzımdır, tâ onu abesiyetten çıkarsın.
 Eğer denilse: "Bakınız nasıl arz küreviyetiyle beraber musattaha ve size mehd olmuştur, denizin tasallutundan kurtulmuş." Veyahut "Nasıl şems, istikrarla beraber tanzim-i maişetiniz için cereyan ediyor." Veyahut "Nasıl binler sene ile uzak olan şems, ayn‑ı hamiede gurûb ediyor." Maânî-i âyât kinayetten sarahate çıkmış oluyor. Evet, şu garabet noktaları, belâgat nükteleridir.
 €SEKİZİNCİ MESELE_
@@ -551,23 +549,23 @@ Ben zâhir-perest ve nazar‑ı sathî sahibi tabiriyle yâd ettiğim ve tevbih 
 **Beşinci Bela:**Ehl-i tefrit ve ifrat olan bîçarelerin ellerini tutarak zulümata atan birisi de her mecazın her yerinde taharri-i hakikat etmektir. Evet, mecazda bir dane-i hakikat bulunmak lâzımdır ki mecaz ondan neşv ü nema bularak sümbüllensin. Veyahut hakikat, ışık veren fitildir; mecaz ise ziyasını tezyid eden şişesidir. Evet, muhabbet kalpte ve akıl dimağdadır; elde ve ayakta aramak abestir.
 **Altıncı Bela:**Nazarı tams eden ve belâgatı setreden, zâhire olan kasr‑ı nazardır. Demek ne kadar akılda hakikat mümkün ise mecaza tecavüz etmezler. Mecaza gidilse de meali tutulur. Bu sırra binaendir: Âyet ve hadîsin tefsir veya tercümesi, onlardaki hüsün ve belâgatı gösteremez. Güya onlarca karine-i mecaz, aklen hakikatin imtinaıdır. Halbuki karine-i mania, aklî olduğu gibi hissî ve âdi ve makamî... Daha başka çok şeyler ile de olabilir. Eğer istersen cennetü'l-firdevs gibi olan Delailü'l-İ'caz'ın iki yüz yirmi birinci kapısından gir. Göreceksin: O koca Abdülkahir gayet hiddetli olarak böyle müteassifleri yanına çekmiş, tevbih ve tekdir ediyor.
 **Yedinci Bela:**Muarrefi münekker eden biri de: Hareke gibi bir arazı, zatiye ve ayniyeye hasrettiklerinden "gayr‑ı men hüve leh" olan vasf‑ı cariyi inkâr etmek lâzım geldiğinden şems-i hakikat tarz‑ı cereyanından çıkarılmıştır. Acaba böyleler Arapların üsluplarına hiç nazar etmemişlerdir ki nasıl diyorlar: Dağlar bize rast geldi. Sonra bizden ayrıldı. Başka bir dağ başını çıkardı. Sonra gitti, bizden müfarakat eyledi. Deniz dahi güneşi yuttu ilh… "Miftah‑ı Sekkakî"de beyan olunduğu gibi pek çok yerlerde sanat‑ı beyaniyeden olan kalb-i hayali, esrar‑ı beyaniye için istimal etmektedirler. Bu ise deveran sırrıyla mağlata-i vehmiye üzerine müesses bir letafet-i beyaniyedir. Şimdi sermeşk olarak iki misal-i mühimmeyi beyan edeceğim. Tâ ki o minval üzerine işleyesin. Şöyle:
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">وَ يُنَزِّلُ مِنَ السَّمَٓاءِ مِنْ جِبَالٍ ف۪يهَا مِنْ بَرَدٍ ۝</span>
-<QuranText client:load arabic="وَ الشَّمْسُ تَجْر۪ى لِمُسْتَقَرٍّ" translation="“Güneş de onlar için bir delildir ki, kendisine tâyin edilmiş bir yörüngede akıp gider.” Yâsin Sûresi, 36:38." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَ يُنَزِّلُ مِنَ السَّمَٓاءِ مِنْ جِبَالٍ ف۪يهَا مِنْ بَرَدٍ ۝</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="“Güneş de onlar için bir delildir ki, kendisine tâyin edilmiş bir yörüngede akıp gider.” Yâsin Sûresi, 36:38.">وَ الشَّمْسُ تَجْر۪ى لِمُسْتَقَرٍّ</span>
 Şu iki âyet gayet şâyan‑ı dikkattirler. Zira zâhire cümud, belâgatın hakkını cühud demektir. Zira birinci âyette olan istiare-i bedîa, o derece
 
 hararetlidir ki buz gibi olan cümudu eritir. Ve bulut gibi zâhir perdesini berk gibi yırtar. İkinci âyette belâgat o kadar müstekar ve muhkem ve parlaktır ki seyri için güneşi durdurur.
 **Evvelki âyet**
-<QuranText client:load arabic="قَوَار۪يرَ مِنْ فِضَّةٍ" translation="&quot;Gümüş beyazlığında, billûr berraklığında kaplar...&quot; İnsan Sûresi, 76:16." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="&quot;Gümüş beyazlığında, billûr berraklığında kaplar...&quot; İnsan Sûresi, 76:16.">قَوَار۪يرَ مِنْ فِضَّةٍ</span>
 naziresidir. O da onun gibi bir istiare-i bedîayı tazammun eylemiştir. Şöyle ki:
 Cennetin evanileri şişe olmadığı gibi gümüş dahi değildir. Belki şişenin gümüşe olan mübayeneti bir istiare-i bedîanın karinesidir. Demek şişe şeffafiyetiyle, fidda dahi beyaz ve parlaklık hasebiyle, güya cennetin kadehlerini tasvir etmek için iki numunedirler ki Sâni'-i Rahman bu âleme göndermiş. Tâ nefis ve mallarıyla cennete müşteri olanların rağabatını tehyic ve iştihalarını açsın.
 Aynen bunun gibi
-<QuranText client:load arabic="مِنْ جِبَالٍ ف۪يهَا مِنْ بَرَدٍ" translation="&quot;Oradaki dağ gibi bulutlardan dolu indirir.&quot; Nur Sûresi, 24:43." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="&quot;Oradaki dağ gibi bulutlardan dolu indirir.&quot; Nur Sûresi, 24:43.">مِنْ جِبَالٍ ف۪يهَا مِنْ بَرَدٍ</span>
 bir istiare-i bedîa ondan takattur ediyor. O istiarenin zemini ise zemin ve âsuman mabeyninde hükm‑ü hayal ile tasavvur olunan müsabakat ve rekabetin tahayyülü üzerine müessestir. Mezraası şöyledir ki zemin kar ve bered ile tezemmül veya taammüm eden dağlarıyla ve rengârenk besatiniyle süslendiği gibi güya ona rekabeten ve inaden âsuman dahi cibal ve besatini andıran rengârenk ile teşekkül eden ve dağlara nazireler yapmak için parça parça dağılan bulutlarıyla sarılıp cilveger oluyor. O dağ gibi parça parça bulutlar, sefineler veyahut dağlar veyahut develer veyahut bostan ve derelerdir denilse teşbihte hata edilmemiş olur. O cevvdeki seyyarelerin çobanı ra'ddır. Kamçı gibi berkini başları üzerine silkeleyip dolaştırıyor. O musahhar sâbihalar ise o bahr-i muhit-i havaîde seyr ü cereyan etmekle, mahşere tesadüf etmiş dağları andırırlar. Güya sema, su buharının zerratını ra'd ile silah başına davet ettiği gibi "Rahat olun!" emriyle herkes yerine gider, gizlenir.
 Evet, çok defa bulut dağın libasını giydiği gibi heykeli ile teşekkül etmekle beraber bered ve karın beyazıyla televvün ve rutubet ve bürudetiyle tekeyyüf eder. Öyle ise bulut ve dağ komşu, arkadaştırlar. Birbirine levazımatını âriye vermeye mecburdurlar. Bu uhuvvet ve mübadeleti Kur'an'ın çok yerleri gösterir. Zira bazen onu, onun libasında ve ötekini berikinin suretinde bize gösterir. Hem de Tenzil'in pek çok menazilinde dağ ve bulut birbirinin elini tutup musafaha ettikleri vardır. Nasıl kitab‑ı âlemin bir sahifesi olan zeminde muanaka ve musafahaları şahittir. Zira
 
 umman‑ı havada iskele hükmünde olan dağ tepesinde lenger-endaz olduklarını görüyoruz.
 **İkinci âyet:**
-<QuranText client:load arabic="وَ الشَّمْسُ تَجْر۪ى لِمُسْتَقَرٍّ" translation="“Güneş de onlar için bir delildir ki, kendisine tâyin edilmiş bir yörüngede akıp gider.” Yâsin Sûresi, 36:38." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="“Güneş de onlar için bir delildir ki, kendisine tâyin edilmiş bir yörüngede akıp gider.” Yâsin Sûresi, 36:38.">وَ الشَّمْسُ تَجْر۪ى لِمُسْتَقَرٍّ</span>
 Evet ﹛تَجْر۪ى|﹜  bir üsluba işaret ettiği gibi ﹛لِمُسْتَقَرٍّ|﹜  dahi bir hakikati telvih eder.
 Demek caizdir ki ﹛تَجْر۪ى|﹜  lafzıyla şöyle bir üsluba işaret olsun.
 Şöyle: Şems, demiri altından yapılmış mühezzeb, müzehheb, zırhlı bir sefine gibi, esîrden olan ve mevc-i mekfuf tabir olunan umman‑ı semada seyahat ve yüzüyor. Eğer çendan müstekarrında lenger-endazdır. Lâkin o bahr-i semada o "zeheb-i zâib" cereyan ediyor. Fakat o cereyan arazî ve tebeî ve tefhim için müraat ve ihtiram olunan nazar‑ı hissiyledir. Fakat hakiki iki cereyanı vardır. Olmaz ise de olur. Zira maksat, beyan‑ı intizamdır. Esalib-i Arap'ta olduğu gibi tebeî ise veya zatî ise nizamın nokta-i nazarında birdir.
@@ -575,7 +573,7 @@ Demek caizdir ki ﹛تَجْر۪ى|﹜  lafzıyla şöyle bir üsluba işaret ol
 **Sâlisen:**Şemsin müstekarrı denilen taht‑ı revanıyla ve seyyarat denilen asakir-i seyyaresiyle göçüp sahra-yı âlemde seyr ü seferi, mukteza-yı hikmet görünüyor. Zira kudret-i İlahiye her şeyi hay ve müteharrik kılmıştır ve sükûn‑u mutlak ile hiçbir şeyi mahkûm etmemiştir. Mevtin biraderi ve ademin ammizadesi olan atalet-i mutlak ile rahmeti bırakmamış ki kaydedilsin. Öyle ise şems de hürdür. Kanun‑u İlahîye itaat etmek şartıyla serbesttir, gezebilir. Fakat başkasının hürriyetini bozmamak gerektir ve şarttır. Evet şems, emr-i İlahîye temessül eden ve her bir hareketini meşiet-i İlahiyeye tatbik eden bir çöl paşasıdır. Evet cereyan, hakiki ve zatî olduğu gibi arazî ve hissî de olabilir. Nasıl hakikidir, öyle de mecazîdir. Bu mecazın menarı ﹛تَجْر۪ى|﹜  dir. Üslubun ukde-i hayatiyesine telvih eden lafız ﹛لِمُسْتَقَرٍّ|﹜  dir.
 
 **Elhasıl:**Maksad‑ı İlahîsi, nizam ve intizamı göstermektir. Nizam ise şems gibi parlıyor.
-<QuranText client:load arabic="كُلِ الْعَسَلَ وَلَا تَسَلْ" translation="Balı ye, kaynağını sorma." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="Balı ye, kaynağını sorma.">كُلِ الْعَسَلَ وَلَا تَسَلْ</span>
 kaidesine binaen, nizamı intac eden hareket-i şems veyahut deveran‑ı arz, hangisi olursa olsun, asıl maksadı ihlâl etmediği için sebeb-i aslînin taharrisine mecbur değiliz. Mesela ﹛قَالَ|﹜ nin elifiyle hiffet hasıldır. Aslı ne olursa olsun, vav'a bedel kaf dahi olsa fark etmez. Yine elif, elif ve hafiftir.
 **İşaret:**
 Bu tasviratla beraber hiss-i zâhire istinaden; zâhir, mutaassıbane bir cümud‑u bâridi göstermek, nasıl ki belâgatın hararet ve letafetine münafîdir. Öyle de delil-i Sâni' olan nizam‑ı âlemin esası olan hikmetullahın şahidi olan istihsan‑ı aklîye carih ve muhaliftir. Şöyle:
@@ -585,7 +583,7 @@ Mesela, Sübhan Dağı'na çok fersahla uzak bir mesafeden müteveccih olsan ve 
 Eğer istersen Mukaddimata gir. Birinci Mukaddime'yi suğra ve Üçüncü Mukaddime'yi kübra yap. Sana netice verecektir ki: Ehl-i zâhirin zihinlerini teşviş eden, felsefe-i Yunaniyeye incizablarıdır. Hattâ o felsefeye fehm-i âyette bir esas‑ı müselleme nazarıyla bakıyorlar.
 Hattâ oğlu ölmüş bir kocakarıyı güldürecek derecede bir misal budur ki: Bazılar öyle bir zatın kelâmındaki fülûs‑u felsefeyi, cevher-i hakikatten temyiz etmeyecek dereceden pek çok derecede âlî olan o zat‑ı nakkad, Kürtçe demiş ki:
 
-<QuranText client:load arabic="عَنَاصِرْ چِهَارِنْ ژِوَانِنْ مَلَكْ" translation="Unsurlar dört tane olup melekler de onlardan (nur unsurundan) yaratılmışlardır." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="Unsurlar dört tane olup melekler de onlardan (nur unsurundan) yaratılmışlardır.">عَنَاصِرْ چِهَارِنْ ژِوَانِنْ مَلَكْ</span>
 Halbuki: Bu söz ile hükemanın mezhebi olan ki: "Melâike-i Kiram maddeden mücerreddirler." red yolunda tasrih ediyor ki: "Melâike-i Kiram anâsırdan mahluk ecsam‑ı nuraniyedirler."
 Onlar fehmetmişler ki: Anâsır dört oldukları, İslâmiyet'tendir. Acaba! Dörtlüğü ve unsuriyeti ve besateti, hükema ıstılahatından ve muzahref olan ulûm‑u tabiiyenin esaslarındandır. Hiç usûl‑ü İslâmiyeye taallukları yoktur, belki zâhir müşahedetle hükmolunan bir kaziyedir.
 Evet, dine teması olan her şey, dinden olması lâzım gelmiyor. Ve İslâmiyet'le imtizaç eden her bir madde, İslâmiyet'in anâsırından olduğunu kabul etmek, unsur‑u İslâmiyet'in hâsiyetini bilmemek demektir. Zira Kitap ve Sünnet ve icma ve kıyas olan anâsır‑ı erbaa-i İslâmiye, böyle maddeleri terkip ve tevlid etmez.
@@ -597,14 +595,14 @@ Eğer hürfikirsen bu felsefenin şerrine bak: Nasıl ezhanı esaretle sefalete 
 **Ey birader!**
 *Vaktâ ki keşf-i esrar merakı bizi şu makama kadar getirdi. Biz de seni beraber çektik. Seni taciz ettik. Hem senin çok yorgunluğunu dahi biliriz. Şimdi Unsuru'l-Belâgat ve i'cazın miftahı olan İkinci Makale'nin içerisine seni gezdirmek istiyorum. Sakın o makalenin iğlak‑ı üslubu ve içinde cilveger olan mesailin elbiselerinin perişaniyeti_ seni temaşasından müteneffir etmesin. Zira iğlak eden, manasındaki dikkat ve kıymettir. Ve perişan eden ve ziynet-i zâhiriyeden müstağni eden, manasındaki cemal-i zatiyesidir.*
 **Evet, nazlanan ve istiğna gösteren nâzeninlerin mehirleri dikkattir.***Ve menzilleri dahi kalbin süveydasıdır. Bunlara giydirdiğim elbise zamanın modasına muhaliftir. Zira Kürt mektebi denilen yüksek dağlarda büyümüş olduğumdan alaturka terziliğe alışamadım. Hem de şahsın üslub‑u beyanı, şahsın timsal-i şahsiyetidir. Ben ise gördüğünüz veya işittiğiniz gibi halli müşkül bir muammayım…*
-<QuranText client:load arabic="تَمَّ تَمَّ" translation="Tamamlandı, tamamlandı." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="Tamamlandı, tamamlandı.">تَمَّ تَمَّ</span>
 
 # Unsur‑u Belâgat
 
 
 
-<QuranText client:load arabic="بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ" translation="Rahmân ve Rahîm olan Allah&apos;ın adıyla." />
-<QuranText client:load arabic="اَلطَّيِّبَاتُ لِلّٰهِ وَ الصَّلَوَاتُ عَلٰى نَبِيِّه۪" translation="Bütün kelimat‑ı tayyibeler Allah&apos;a mahsustur ve bütün salâvat ve dualar Onun Nebisinin üzerine olsun." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="Rahmân ve Rahîm olan Allah&#39;ın adıyla.">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="Bütün kelimat‑ı tayyibeler Allah&#39;a mahsustur ve bütün salâvat ve dualar Onun Nebisinin üzerine olsun.">اَلطَّيِّبَاتُ لِلّٰهِ وَ الصَّلَوَاتُ عَلٰى نَبِيِّه۪</span>
 ### İKİNCİ MAKALE
 ,**Belâgatın ruhuna taalluk eden birkaç meselenin beyanındadır.**_
 €BİRİNCİ MESELE>
@@ -625,13 +623,13 @@ rızasını tahsil etmek şartıyla ve hayale cevelan ve şaşaa vermeli fakat h
 Kelâmın hayatlanması ve neşv ü neması; manaların tecessümüyle ve cemadata nefh-i ruh etmekle bir mükâleme ve mübahaseyi içlerine atmaktır. Şöyle:
 Deveran ile tabir olunan_ vücudda ve ademde iki şeyin mukarenetiyle biri ötekisine illet ve me'haz ve menşe zannolunması olan itikad‑ı örfî üzerine müesses olan mağlata-i vehmiye üstüne mebni olan kuvve-i hayalden neş'et eden sihr-i beyanıyla sehhar gibi cemadatı hayatlandırır, birbiriyle söyletir. İçlerine ya adâveti veya muhabbeti atar. Hem de manaları tecessüm ettirir, hayat verir, içinde hararet-i gariziyeyi derceder.
 Eğer istersen gürültülü menzil ıtlakına şayeste olan bu beyte gir:
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">يُنَاج۪ينِىَ الْاِخْلَافُ مِنْ تَحْتِ مَطْلِه۪</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">وَ تَخْتَصِمُ الْاٰمَالُ وَ الْيَاْسُ ف۪ى صَدْر۪ى</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يُنَاج۪ينِىَ الْاِخْلَافُ مِنْ تَحْتِ مَطْلِه۪</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَ تَخْتَصِمُ الْاٰمَالُ وَ الْيَاْسُ ف۪ى صَدْر۪ى</span>
 Yani "Mumatala-i hak perdesi altında hulfü'l-vaad benimle konuşuyor. Der: Aldanma! Onun için sinemde ümitlerim yeis ile kavgaya başladılar, o mütezelzil hane olan sadrımı harap ediyorlar."
 Göreceksin nasıl şair-i sahir emel ve yeisi tecsim etmekle hayatlandırarak nemmam olan ihlafın fitnesiyle bir muharebe ve muhasamayı temsil eyledi. Güya sinematograf gibi bu beyt senin aklına rüya görünüyor. Evet, bu sihr-i beyanî bir nevi tenvim eder.
 Veyahut yerin yağmur ile muaşaka ve şekvasını dinle! İşte:
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">تَشَكَّى الْاَرْضُ غَيْبَتَهُ اِلَيْهِ</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">وَ تَرْشَفُ مَائَهُ رَشْفَ الرُّضَابِ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">تَشَكَّى الْاَرْضُ غَيْبَتَهُ اِلَيْهِ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَ تَرْشَفُ مَائَهُ رَشْفَ الرُّضَابِ</span>
 
 Yani yağmurun geç gelmesini ona teşekki eder. Mahbubun ağız suyu gibi suyunu emer.
 Acaba yeri Mecnun, sehabı Leyla haletlerinde bu şiir sana tahyil etmiyor mu?
@@ -646,8 +644,8 @@ Güya aklın borazanı denilmeye şâyan olan irade ses etmekle, kalbin karanlı
 Eğer bir kelâmın –fakat tabiattan çıkmış bir kelâmın– üslubunda im'an‑ı nazar edersen kendi sanatı içinde işleyen mütekellimi o âyine-misal üslubun içinde göreceksin. Hattâ nefsini nefesinden ve sesinden, mahiyetini nefsinden (üfürmesinden) tevehhüm ve mizaç ve sanatını kelâmıyla mümtezic tahayyül etsen Hayaliyyun mezhebinde muateb olmuyorsun.
 
 Eğer tereddüt ile senin hayalin hastalığı var ise Kaside-i Bür'iyye'den olan
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">وَاسْتَفْرِغِ الدَّمْعَ مِنْ عَيْنٍ قَدِ امْتَلَأَتْ</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">مِنَ الْمَحَارِمِ وَالْزَمْ حِمْيَةَ النَّدَمِ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَاسْتَفْرِغِ الدَّمْعَ مِنْ عَيْنٍ قَدِ امْتَلَأَتْ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">مِنَ الْمَحَارِمِ وَالْزَمْ حِمْيَةَ النَّدَمِ</span>
 olan bîmarhaneye git, gör! Nasıl hekim-i Busayrî, istifrağla ve nedametin perhiziyle sana reçete yazar.
 Eğer iştihanın açılmasıyla üslup denilen hakikatin şişesindeki zülâl-i mana nasıl kendine muvafık ve nasıl imtizaç etmesini seyretmek ve o zülâli içmeye iştihan var ise meyhaneye git ve de: "Ey meyhaneci, kelâm‑ı beliğ nedir?"
 Elbette onun sanatı onu şöyle söylettirecek: Kelâm‑ı beliğ, ilim denilen çömleklerde pişirilen ve hikmet denilen büyük küplerde duran ve fehim denilen süzgeç ile süzülen âb‑ı hayat gibi bir manayı, zürefa denilen sâkiler döndürüp efkâr içer; esrarda temeşşi etmekle hissiyatı ihtizaza getiren kelâmdır.
@@ -659,19 +657,19 @@ Bak nerede olursa olsun "mübareze" lafzı pencere gibi meydan‑ı harbi, için
 **Tenbih:**
 Üslup meratibi pek mütefavittir. Bazen o kadar latîf ve rakiktir ki nesîm-i seherden daha âheste eser. Bazen o kadar gizli oluyor ki bu zamanın harbinin diplomatlarının desais-i harbiyelerinden daha mestûrdur. Bir diplomatın kuvve-i şâmmesi lâzımdır tâ istişmam edebilsin.
 Ezcümle: ﹛يٰسٓ|﹜  suresinde
-<QuranText client:load arabic="مَنْ يُحْيِى الْعِظَامَ وَ هِىَ رَم۪يمٌ" translation="&quot;Çürümüş kemikleri kim diriltecek?&quot; Yâsin Sûresi, 36:78." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="&quot;Çürümüş kemikleri kim diriltecek?&quot; Yâsin Sûresi, 36:78.">مَنْ يُحْيِى الْعِظَامَ وَ هِىَ رَم۪يمٌ</span>
 şive-i ifadeden, Zemahşerî
-<QuranText client:load arabic="مَنْ يَبْرُزُ اِلَى الْمَيْدَانِ" translation="Var mı meydana çıkan!" />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="Var mı meydana çıkan!">مَنْ يَبْرُزُ اِلَى الْمَيْدَانِ</span>
 üslubunu istişmam etmiştir. Evet insan, isyanla Hâlık'ın emrine karşı manen müdafaa ve mübareze eder.
 €DÖRDÜNCÜ MESELE_
 Kelâmın kuvvet ve kudreti ise kelâmın kuyudatı birbirine cevap vermek ve keyfiyatı birbirine muavenet etmekle umumen (karınca kaderince) asıl garaza işaret ve her biri parmağını maksat üzerine bırakmak ile
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">عِبَارَاتُنَا شَتّٰى وَ حُسْنُكَ وَاحِدٌ</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">وَ كُلٌّ اِلٰى ذَاكَ الْجَمَالِ يُش۪يرُ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">عِبَارَاتُنَا شَتّٰى وَ حُسْنُكَ وَاحِدٌ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَ كُلٌّ اِلٰى ذَاكَ الْجَمَالِ يُش۪يرُ</span>
 düsturuna timsal olmaktır. Demek kuyudat zenav gibi veyahut dereler gibi_ maksat ise ortalarından istimdad edici bir havuz gibi olmak gerektir.
 **Elhasıl:**Zihnin şebekesi üstünde tersim olunan ve nazar‑ı akıl ile alınan suret-i garaz, müşevveş olmamak için tecavüb ve teavün ve istimdad lâzımdır.
 **İşaret:**
 Bu noktadan intizam neş'et etmekle tenasüp tevellüd edip hüsün ve cemal parlar. Eğer istersen Rabb-i İzzet'in kelâmına teemmül et. Ezcümle: Zerresi büyük bir taş kadar büyük olan azaptan tahvif ve insanı, kalak ve tahammülsüz olduklarını göstermek için sevk edilen
-<QuranText client:load arabic="وَلَئِنْ مَسَّتْهُمْ نَفْحَةٌ مِنْ عَذَابِ رَبِّكَ" translation="&quot;Rabbinin azâbından küçük bir esinti onlara hafifçe dokunacak olsa...&quot; Enbiyâ Sûresi, 21:46." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="&quot;Rabbinin azâbından küçük bir esinti onlara hafifçe dokunacak olsa...&quot; Enbiyâ Sûresi, 21:46.">وَلَئِنْ مَسَّتْهُمْ نَفْحَةٌ مِنْ عَذَابِ رَبِّكَ</span>
 
 olan âyete bak. Nasıl ki "şeyi zıddından in'ikas ettirmek" olan kaide-i beyaniyeye binaen, tehvil ve tahvif için azabın bir parçasının derece-i tesirini göstermek istediğinden, kıllet olan esas‑ı maksada, nasıl kelâmın her tarafı elini oraya uzatıp kuvvet veriyor.
 Şöyle: ﹛اِنْ|﹜  lafzındaki teşkik ile tahfif ve ﹛مَسَّتْ|﹜ deki yalnız temas ve ﹛نَفْحَةٌ|﹜  maddesinde ve sîgasında ve tenkirindeki taklil ve tahkir ve ﹛مِنْ|﹜ deki teb'iz ve nekale bedel ﹛عَذَابِ|﹜  zikrindeki tehvin ve ﹛رَبِّكَ|﹜ deki îma-i rahmet, umumen taklili göstermekle azabı nihayet derecede tazim ve tehvil eder.
@@ -683,34 +681,34 @@ Kelâmın servet ve vüs'ati ise –nasıl suret-i terkip_ nefs-i maksadı göst
 Zira telmih ve işaret ise sakin olan hayalatı ihtizaza ve sâkit olan cevanibini söylettirmekle kalplerin en uzak köşelerindeki istihsanı ve alkışlamayı tehyic etmeye büyük bir esastır. Evet, telmih ve işaret ise yolun etrafını temaşa ile tenezzüh etmek içindir. Kasd ve talep ve tasarruf için değildir. Demek, mütekellim onda mes'ul olmaz. Eğer istersen bu beyitlerin içlerine gir, bir derece seyre şâyan noktalar vardır:
 İşte çal olan atına binmiş, nâzenin karşısında gençlenmek isteyen ihtiyar babanın sakalının içine bak, belâgatın çok anahtarlarını bulacaksın. Al kapıları aç, işte:
 
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">قَالَتْ كَبِرْتَ وَ شِبْتَ قُلْتُ لَهَا</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">هٰذَا غُبَارُ وَقَايِعِ الدَّهْرِ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">قَالَتْ كَبِرْتَ وَ شِبْتَ قُلْتُ لَهَا</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">هٰذَا غُبَارُ وَقَايِعِ الدَّهْرِ</span>
 Yani dedi: "İhtiyar oldun." Dedim: "Değildir, belki mesaib-i dehrin gürültüsünden ayakları altında çıkıp sakalıma konmuş bir beyaz gubardır."
 Hem de:
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">وَلَا يُرَوِّعْكِ ا۪يمَاضُ الْقَت۪يرِ بِه۪</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">فَاِنَّ ذَاكَ ابْتِسَامُ الرَّاْىِ وَالْاَدَبِ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَلَا يُرَوِّعْكِ ا۪يمَاضُ الْقَت۪يرِ بِه۪</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">فَاِنَّ ذَاكَ ابْتِسَامُ الرَّاْىِ وَالْاَدَبِ</span>
 Yani sakalımın beyazlanmakla parlaması seni korkutmasın. Zira nur‑u mütecessim gibi dimağdan erimiş, sakaldan mecra bulup kendini gösteren fikir ve edebin tebessümüdür.
 Hem de:
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">وَعَيْنُكَ قَدْ نَامَتْ بِلَيْلِ شَب۪يبَةٍ</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">فَلَمْ تَنْتَبِهْ اِلَّا بِصُبْحِ مَش۪يبٍ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَعَيْنُكَ قَدْ نَامَتْ بِلَيْلِ شَب۪يبَةٍ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">فَلَمْ تَنْتَبِهْ اِلَّا بِصُبْحِ مَش۪يبٍ</span>
 Yani gece gibi gençlikte gözün nevm-i gaflette dalmış ancak subh- misal olan sakalın beyazıyla uyanabildi.
 Hem de:
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">وَكَاَنَّمَا لَطَمَ الصَّبَاحُ جَب۪ينَهُ</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">فَاقْتَصَّ مِنْهُ وَخَاضَ ف۪ى اَحْشَائِه۪</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَكَاَنَّمَا لَطَمَ الصَّبَاحُ جَب۪ينَهُ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">فَاقْتَصَّ مِنْهُ وَخَاضَ ف۪ى اَحْشَائِه۪</span>
 Yani ciriti istemek yolunda sabah, atımın yüzüne yed-i beyzasıyla bir tokat vurdu. Atım dahi kısasını almak için tayyar olan subha erişti, yere vurdu, içinde dört ayağıyla gezindi. Demek atım çal'dır.
 Hem de:
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">كَاَنَّ قَلْب۪ى وُشَاحَاهَا اِذَا خَطَرَتْ</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">وَقَلْبَهَا قُلْبُهَا فِى الصَّمْتِ وَالْخَرَسِ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">كَاَنَّ قَلْب۪ى وُشَاحَاهَا اِذَا خَطَرَتْ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَقَلْبَهَا قُلْبُهَا فِى الصَّمْتِ وَالْخَرَسِ</span>
 Yani kalbim maşukumun kemeri gibi hareket ve hışhış etmekte; onun kalbi ise onun bileziği gibi sükûn ve sükûttadır. Demek beli ince, bileği kalın olduğu gibi; kalbim müştak, onun kalbi müstağnidir.
 Demek hüsün ve aşkı ve istiğnayı ve iştiyakı bir taş ile vurmuştur.
 
 Hem de:
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">وَاَلْقٰى بِصَحْرَاءِ الْغَب۪يطِ بَعَاعَهُ</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">نُزُولَ الْيَمَانِىِّ ذِى الْعِيَابِ الْمُحَمَّلِ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَاَلْقٰى بِصَحْرَاءِ الْغَب۪يطِ بَعَاعَهُ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">نُزُولَ الْيَمَانِىِّ ذِى الْعِيَابِ الْمُحَمَّلِ</span>
 Yani tacir-i Yemenî gibi yağmurdan gelen sel; yüklerini, eskallerini gabît sahrasına attı. Nasıl ki bir tüccar akşamda bir köye gelse gecede köylüler rengârenk eşyalarını satın alsalar, sabahleyin herkes bir renk ile süslenmiş olduğu halde evinden çıkıyor. Hattâ köyün çobanı dahi kırmızı bir mendili bağlıyor. Öyle de sel, sahraya yükünü attığı gibi ticaret-i hafiyeye benzer imtizacat‑ı kimyeviye ile çiçeklerin nâzeninlerine güya rengârenk elbise alınır, dikilir. Hattâ çiçeklerin çobanı ıtlakına şâyan olan kefne  [^3] başını kırmızılaştırıyor.
 Hem de:
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">غَارَ الْوَفَاءُ وَفَاضَ الْغَدْرُ وَانْفَرَجَتْ</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">مَسَافَةُ الْخُلْفِ بَيْنَ الْقَوْلِ وَالْعَمَلِ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">غَارَ الْوَفَاءُ وَفَاضَ الْغَدْرُ وَانْفَرَجَتْ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">مَسَافَةُ الْخُلْفِ بَيْنَ الْقَوْلِ وَالْعَمَلِ</span>
 Yani vefa, gavr‑ı in'idama çekildi; tufan‑ı gadir feverana başladı. Kavl ve amel ortasında uzun bir mesafe açıldı.
 Uzağa gitmek istemiyorsan bu makalenin bir parça mâkabline nazar et, bu meseleye numune olmak için çok parçaları bulacaksın. Ezcümle: "Âyâtın delail-i i'cazının miftahı ve esrar‑ı belâgatının keşşafı yalnız belâgat‑ı Arabiyedir. Felsefe-i Yunaniye değildir."
 Veyahut makale-i ûlâda olan mesele-i ûlânın hâtimesindeki işarete bak. İşte "Hilkat denilen şeriat‑ı fıtriye, meczup ve misafir olan küre-i arza farz etmiştir ki şemse iktida eden yıldızların safında durmak, şüzuz etmemek… Zira zemin zevciyle beraber ﹛اَتَيْنَا طَٓائِع۪ينَ|﹜  demişlerdir. Taat ise cemaatle daha ahsendir."
@@ -725,20 +723,20 @@ Demek müteşahhıs olanı, kelâmın suret-i mahsusası içine alıyor. Ve tasa
 Eğer seyretmek istersen kendi vicdanına bak, şu meratibi göreceksin. Şöyle: Senin mahbubun vaktâ gözünüzün penceresinden şuâ ve berk-i hüsnünü vicdanınıza ilka ederse o aşk denilen nâr‑ı mûkade birden yandırmaya başladığından, hissiyat iltihaba başlamakla, âmâl ve müyulat dahi heyecana gelip birden o âmâller üst kattaki hayalin tabanını deler. İmdat istediklerinden o hazinetü'l-hayalde safbeste-i hareket ve
 
 mahbubun mehasinini ellerinde tutmuş veyahut onun mehasinini hatıra getirmekle tasvir eden, başkasının mehasini ile işbâ olunmuş olan hayalat ise o âmâlin imdadına koşarlar; beraber hücum edip hayalden lisana kadar inmekle beraber zülâl-i visale olan meyli arkalarında ve firaktan olan teellümü sağda ve tazim ve te'dib ve iştiyakı sola ve terahhum ve lütfu iktiza eden mahbubun mehasinini önlerine ve hediye olarak medihanın gerdanını ve senanın dürrlerini ellerine almakla beraber o
-<QuranText client:load arabic="اَلنَّارُ الْمُوقَدَةُ عَلَى الْاَفْئِدَةِ" translation="Allah&apos;ın tutuşturduğu, tâ kalplerin üstüne çıkacak bir ateş." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="Allah&#39;ın tutuşturduğu, tâ kalplerin üstüne çıkacak bir ateş.">اَلنَّارُ الْمُوقَدَةُ عَلَى الْاَفْئِدَةِ</span>
 ıtlakına şâyan olan o ateşi söndürmek için zülâl-i visali celbeden tavsif-i bi'l-fezail ile arz‑ı hâcet ederler.
 İşte bak kaç tabakatta bildiğin manadan başka ne kadar maânî başlarını çıkarıp görünüyor. Eğer korkmuyorsan İbn-i Farıd'ın veya Ebu Tayyib'in gözlerinden müthiş olan vicdanlarına bak. Ve vicdanın tercümanı olan
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">غَرَسْتُ بِاللَّحْظِ وَرْدًا فَوْقَ وَجْنَتِهَا</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">حَقٌّ لِطَرْف۪ى اَنْ يَجْنِىَ الَّذ۪ى غَرَسَا</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">غَرَسْتُ بِاللَّحْظِ وَرْدًا فَوْقَ وَجْنَتِهَا</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">حَقٌّ لِطَرْف۪ى اَنْ يَجْنِىَ الَّذ۪ى غَرَسَا</span>
 Hem de
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">فَلِلْعَيْنِ وَالْاَحْشَاءِ اَوَّلَ هَلْ اَتٰى</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">تَلَاعَائِدِىَ الْاٰس۪ى وَ ثَالِثَ تَبَّتِ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">فَلِلْعَيْنِ وَالْاَحْشَاءِ اَوَّلَ هَلْ اَتٰى</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">تَلَاعَائِدِىَ الْاٰس۪ى وَ ثَالِثَ تَبَّتِ</span>
 Hem de
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">صَدٌّ حَمَا ظَمَا۪ى لُمَاكَ لِمَاذَا</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">وَ هَوَاكَ قَلْب۪ى صَارَ مِنْهُ جُذَاذًا</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">صَدٌّ حَمَا ظَمَا۪ى لُمَاكَ لِمَاذَا</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَ هَوَاكَ قَلْب۪ى صَارَ مِنْهُ جُذَاذًا</span>
 Hem de
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">حُشَاىَ عَلٰى جَمْرٍ ذَكِىٍّ مِنَ الْغَضَا</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">وَ عَيْنَاىَ ف۪ى رَوْضٍ مِنَ الْحُسْنِ تَرْتَعُ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">حُشَاىَ عَلٰى جَمْرٍ ذَكِىٍّ مِنَ الْغَضَا</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَ عَيْنَاىَ ف۪ى رَوْضٍ مِنَ الْحُسْنِ تَرْتَعُ</span>
 
 gör ve dinle ki çendan gözleri cennette tenezzüh eder fakat vicdanlarındaki cehennem tazip eder. Öyle de mehasinine işaret ve istiğnasına remiz ve teellüm‑ü firaka îma ve şevke tasrih ve taleb-i visale telvih ve terahhumunu celbeden hüsnüne tansis etmekle beraber, hissiyatını tahrik eden heyet-i etvarıyla çok hayalat‑ı rakikayı göstermişlerdir.
 **İşaret:**
@@ -764,11 +762,11 @@ Bu münasebat‑ı nahviye ve sarfiye olan hikmet-i vâzı' ise felsefe-i beyan 
 Maânî-i beyaniyenin aşılaması ve telkîhi ve manaların becayiş ve inkılabları; kelimenin mana-yı hakikisi_ ya garaz veyahut mana-yı muallakadan birisini teşerrüb ve içine cezb etmektir. Zira içine girdiği vakit sahibü'l-beyt olan hakikate ve esasa dönüyor. Ve asıl lafzın sahibi olan mana ise bir suret-i hayatiyeye dönüyor. Ona meded verir. Ve müstetbeattan istimdad eder. Bu sırdandır ki kelime-i vâhidenin maânî-i müteaddidesi oluyor. Ve becayiş ve telkîhat bundan çıkar. Bu noktadan gaflet eden, büyük bir belâgatı kaybeder.
 **İşaret:**
 Bir şey merkep ve binilmiş ise ﹛عَلٰى|﹜  lafzına müstahak olduğu gibi zarf gibi içine aldığından ﹛ف۪ى|﹜  lafzını ister.
-<QuranText client:load arabic="تَجْر۪ى فِى الْبَحْرِ" translation="&quot;Denizde akıp gider.&quot; Bakara Sûresi, 2:164." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="&quot;Denizde akıp gider.&quot; Bakara Sûresi, 2:164.">تَجْر۪ى فِى الْبَحْرِ</span>
 gibi. Hem de bir şey âlet olduğundan ﹛بَاء|﹜  lafzını ister.
-<QuranText client:load arabic="صَعَدْتُ السَّطْحَ بِالسُّلَّمِ" translation="Dama merdivenle çıktım." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="Dama merdivenle çıktım.">صَعَدْتُ السَّطْحَ بِالسُّلَّمِ</span>
 gibi. Ve mekân ve merkep olduğundan ﹛ف۪ى|﹜  ve ﹛عَلٰى|﹜  lafızlarını dahi ister. Hem de gaye olduğundan ﹛اِلٰى|﹜  ve ﹛حَتّٰى|﹜  lafızlarını ister. İllet ve zarf olduğundan ﹛لَامْ|﹜  ve ﹛ف۪ى|﹜  lafızlarını dahi ister.
-<QuranText client:load arabic="وَ الشَّمْسُ تَجْر۪ى لِمُسْتَقَرٍّ" translation="“Güneş de onlar için bir delildir ki, kendisine tâyin edilmiş bir yörüngede akıp gider.” Yâsin Sûresi, 36:38." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="“Güneş de onlar için bir delildir ki, kendisine tâyin edilmiş bir yörüngede akıp gider.” Yâsin Sûresi, 36:38.">وَ الشَّمْسُ تَجْر۪ى لِمُسْتَقَرٍّ</span>
 gibi. İşte sermeşk, sen de kıyas edebilirsen et!
 **Tenbih:**
 Bu mütedâhil manaların hangisi daha ziyade senin garazına temas eder ve maksada sıla-i rahim vardır, ileriye sür ve izhar et. Bâkileri ona teşyi edici yaptır. Yoksa senin tarz‑ı ifaden haşmet ve ziynet-i beyaniyeden çıplak olacaktır.
@@ -780,10 +778,10 @@ Maksadü'l-makasıd olan en uzak ve yüksek hedef-i garazdan ayrılıp gelmekte 
 **Üçüncü Nokta:**Netice-i vâhideyi tenatüc eden usûl‑ü müteaddideyi cem' ve zikretmektir. Zira her bir aslın yüksek netice ile kasden ve bizzat irtibatı olmaz ise lâekall bir derece ihtizaza ve inkişafa getirir. Güya usûl denilen mezâhir ve âyinelerin ihtilafıyla ve netice ve mütecellinin vahdetiyle maksadın tecerrüdüne ve ulviyetine ve hayat‑ı âlem denilen deveran‑ı umumî tesmiye olunan hayat‑ı külliye ile yâd edilen hakikatiyle kelâmın kuvve-i hayatiyesinin ittisaline işarettir. Üçüncü Makale'nin âhirindeki Üçüncü Maksat'ta olan Birinci Maksat buna bir
 
 derece misaldir. Hem de Üçüncü Makale'de Dördüncü Mesele ve Meslek'ten olan işaret ve irşad ve tenbih ve muhakeme buna misaldir.
-<QuranText client:load arabic="فَانْظُرْ اِلٰى كَلَامِ الرَّحْمٰنِ الَّذ۪ى عَلَّمَ الْقُرْاٰنَ فَبِاَىِّ اٰيَاتِ رَبِّكَ لَا تَتَجَلّٰى هٰذِهِ الْحَق۪يقَةُ فَوَيْلٌ ح۪ينَئِذٍ لِلظَّاهِرِيّ۪ينَ الَّذ۪ينَ يَحْمِلُونَ مَا لَا يَفْهَمُونَ عَلَى التَّكْرَارِ" translation="Kur&apos;ân&apos;ı öğreten Rahmân&apos;ın kelâmına bir bak: Rabbinin âyetlerinden hangi biri var ki, bu hakikat onda tecellî etmesin? Yazıklar olsun o zahirperestlere ki, anlamadıkları şeyi tekrara hamlederler." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="Kur&#39;ân&#39;ı öğreten Rahmân&#39;ın kelâmına bir bak: Rabbinin âyetlerinden hangi biri var ki, bu hakikat onda tecellî etmesin? Yazıklar olsun o zahirperestlere ki, anlamadıkları şeyi tekrara hamlederler.">فَانْظُرْ اِلٰى كَلَامِ الرَّحْمٰنِ الَّذ۪ى عَلَّمَ الْقُرْاٰنَ فَبِاَىِّ اٰيَاتِ رَبِّكَ لَا تَتَجَلّٰى هٰذِهِ الْحَق۪يقَةُ فَوَيْلٌ ح۪ينَئِذٍ لِلظَّاهِرِيّ۪ينَ الَّذ۪ينَ يَحْمِلُونَ مَا لَا يَفْهَمُونَ عَلَى التَّكْرَارِ</span>
 Evet, Rabb-i İzzet'in kelâmına dikkat edilse bu hakikat her yerde nur gibi parlar. Evet, nur gibi köşelerinde ve mekatı'larında içtima edip zülâl-i belâgat fışkırıyor. Nefrin o zâhir-perestlere ki bu hakikatten gaflet edip tekrara hamlediyorlar.
 **Dördüncü Nokta:**Kelâmı öyle ifrağ etmek ve istidat vermektir ki: Pek çok füru'ların tohumlarını mutazammın ve pek çok ahkâma me'haz ve pek çok maânîye ve vücuh‑u muhtelifeye delâlet etmektir. Güya bu istidadı tazammun ile kelâmın kuvve-i namiyesinin kuvvetine telvih eder ve hasılatının kesretini gösterir. Sanki o füru' ve vücuhların mahşeri olan meselede cem'eder, tâ ki mezaya ve mehasinini muvazenet edip her bir fer'i bir garaza sevk ve her bir vechi bir vazifeye tayin eder.
-<QuranText client:load arabic="فَانْظُرْ اِلٰى قِصَّةِ مُوسٰى فَاِنَّهَا اَجْدٰى مِنْ تَفَار۪يقِ الْعَصَا اَخَذَهَا الْقُرْاٰنُ بِيَدِهَا الْبَيْضَاءِ فَخَرَّتْ سَحَرَةُ الْبَيَانِ سَاجِد۪ينَ لِبَلَاغَتِه۪" translation="Kıssa-i Mûsâ&apos;ya bir bak. Bu kıssanın tamamında, büyük bir kuvvet vardır ki, Kur&apos;ân onu yed-i beyzâsına aldığı vakit, ilm-i beyanın sâhirleri, onun belâgati karşısında secdeye varmışlardır." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="Kıssa-i Mûsâ&#39;ya bir bak. Bu kıssanın tamamında, büyük bir kuvvet vardır ki, Kur&#39;ân onu yed-i beyzâsına aldığı vakit, ilm-i beyanın sâhirleri, onun belâgati karşısında secdeye varmışlardır.">فَانْظُرْ اِلٰى قِصَّةِ مُوسٰى فَاِنَّهَا اَجْدٰى مِنْ تَفَار۪يقِ الْعَصَا اَخَذَهَا الْقُرْاٰنُ بِيَدِهَا الْبَيْضَاءِ فَخَرَّتْ سَحَرَةُ الْبَيَانِ سَاجِد۪ينَ لِبَلَاغَتِه۪</span>
 Evet, kıssa-i Musa meşhur darb‑ı meseldeki tefariku'l-asâdan daha nâfi'dir. Nasıl o asâ ne kadar parçalansa yine bir işe yarar. Kıssa-i Musa dahi öyledir. Bu hâsiyetine binaendir ki Kur'an, yed-i beyza-i mu'cizü'l-beyaniyle o kıssayı aldı. Ve suver-i müteaddidede gösterdi. Her bir ciheti hüsn‑ü istimal etti. Fenn-i beyanın seharesi, belâgatına secde ber zemin-i hayret ve muhabbet ettiler.
 Ey birader! Bu meselede olan hayal meyal belâgat, bu esalib ile sana öyle bir şecereyi tersim eder ki cesîm urûku müteşâbike, uzun boğumları mütenasika ve müteşaib dalları müteanika, meyve ve semeratı mütenevvia olan bir şecere-i hakikat sana tasvir eder. Eğer istersen
 
@@ -820,8 +818,8 @@ Kelâmın kanaat ve istiğnası ve asabiyeti ise makamın haricinde üslubu aram
 Mananın kametine göre bir üslubu kestirmek istediğin vakit, dâhil-i makamda olan menbadan ve mevzuun fabrikasından lâekall kelâmın tazammun ettiği mevzuun veya kıssatın veya sanatın levazımının parça parçasından ve tevabiinin kıta kıtasından bir üslubu dikmek, zaruret olmadan harice medd-i nazar etmemek, tabir hata olmasa harice boykotaj etmek ile elbette kelâmın kuvveti tezayüd ettiği gibi servetin dağılmamasına en büyük esastır.
 Demek mana ve makam ve sanat ise kelâmın delâlet-i vaz'iyesine yardım edebilir. Nasıl kelâm, delâlet-i vaz'iye ile manayı gösterir, öyle de böyle üslup ise tabiatıyla manaya işaret eder. Eğer bir numune istersen Dokuzuncu Mesele'deki Arabî parçalarına bak. İşte:
 
-<QuranText client:load arabic="فَانْظُرْ اِلٰى كَلَامِ الرَّحْمٰنِ الَّذ۪ى عَلَّمَ الْقُرْاٰنَ فَبِاَىِّ اٰيَاتِ رَبِّكَ لَا تَتَجَلّٰى هٰذِهِ الْحَق۪يقَةُ فَوَيْلٌ ح۪ينَئِذٍ لِلظَّاهِرِيّ۪ينَ الَّذ۪ينَ يَحْمِلُونَ مَا لَا يَفْهَمُونَ عَلَى التَّكْرَارِ" translation="Kur&apos;ân&apos;ı öğreten Rahmân&apos;ın kelâmına bir bak: Rabbinin âyetlerinden hangi biri var ki, bu hakikat onda tecellî etmesin? Yazıklar olsun o zahirperestlere ki, anlamadıkları şeyi tekrara hamlederler." />
-<QuranText client:load arabic="فَاِنْ شِئْتَ فَانْظُرْ اِلٰى قِصَّةِ مُوسٰى فَاِنَّهَا اَجْدٰى مِنْ تَفَار۪يقِ الْعَصَا اَخَذَهَا الْقُرْاٰنُ بِالْيَدِ الْبَيْضَاءِ فَخَرَّتْ سَحَرَةُ الْبَيَانِ مَحَبَّةً وَحَيْرَةً سَاجِد۪ينَ لِبَلَاغَتِه۪" translation="Kıssa-i Mûsâ’ya bir bak. Bu kıssanın tamamında, büyük bir kuvvet vardır ki, Kur’ân onu yed-i beyzâsına aldığı vakit, ilm-i beyanın sâhirleri, onun belâgati karşısında secdeye varmışlardır." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="Kur&#39;ân&#39;ı öğreten Rahmân&#39;ın kelâmına bir bak: Rabbinin âyetlerinden hangi biri var ki, bu hakikat onda tecellî etmesin? Yazıklar olsun o zahirperestlere ki, anlamadıkları şeyi tekrara hamlederler.">فَانْظُرْ اِلٰى كَلَامِ الرَّحْمٰنِ الَّذ۪ى عَلَّمَ الْقُرْاٰنَ فَبِاَىِّ اٰيَاتِ رَبِّكَ لَا تَتَجَلّٰى هٰذِهِ الْحَق۪يقَةُ فَوَيْلٌ ح۪ينَئِذٍ لِلظَّاهِرِيّ۪ينَ الَّذ۪ينَ يَحْمِلُونَ مَا لَا يَفْهَمُونَ عَلَى التَّكْرَارِ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="Kıssa-i Mûsâ’ya bir bak. Bu kıssanın tamamında, büyük bir kuvvet vardır ki, Kur’ân onu yed-i beyzâsına aldığı vakit, ilm-i beyanın sâhirleri, onun belâgati karşısında secdeye varmışlardır.">فَاِنْ شِئْتَ فَانْظُرْ اِلٰى قِصَّةِ مُوسٰى فَاِنَّهَا اَجْدٰى مِنْ تَفَار۪يقِ الْعَصَا اَخَذَهَا الْقُرْاٰنُ بِالْيَدِ الْبَيْضَاءِ فَخَرَّتْ سَحَرَةُ الْبَيَانِ مَحَبَّةً وَحَيْرَةً سَاجِد۪ينَ لِبَلَاغَتِه۪</span>
 Eğer istersen ulûm‑u âliyenin ﹛(اٰلِيَه)|﹜  kitaplarının dibacelerine bak. Eğer çendan o dibacelerde şu sanat‑ı belâgat çok dakik ve latîf olmazsa da fakat ondaki beraatü'l-istihlal, bu hakikate bir beraatü'l-istihlaldir. Hem de şu kitabın dibacesinde mu'cizata işaret yolunda Peygamberimizin zatı, nübüvvetine mu'cize gösterilmiştir. Hem de Üçüncü Makale'nin dibacesinde kelime-i şehadetin iki cümlesi birbirine şahit gösterilmiştir. Hem de Yedinci Mukaddime'de, inşikak‑ı kamere yere inmeyi ilâve edenlere denilmiş: Mu'cizenin kamerini münhasif ve şems gibi bürhan‑ı nübüvveti Süha gibi mahfî olmasına sebep oldunuz.
 Buna kıyasen şu hakikate, şu kitapta birçok numune bulabilirsin. Zira bu kitabın mesleği, benim gibi harice boykotajdır. Hattâ zaruret olmazsa efkâr ve mesailde ve misallerde ve esalibde harice boykotaj etmektir. Fakat tevafuk‑u hatır olabilir. Zira hakikat birdir. Hangi kapı ile girsen aynını göreceksin.
 ## Hâtime
@@ -839,7 +837,7 @@ Yahu! Bu vehme ehemmiyet verme. Zira bir fende her bir ilim sahibi onda sanatkâ
 
 ## İ'tizar
 *Ey şu dar ve ince ve karanlık olan yolda benim ile arkadaşlık eden sabırlı ve metanetli zat! Zannediyorum bu İkinci Makale'de yalnız hayretle seyirci oldun, müstemi olmadın. Çünkü anlamadın. Hakkınız var. Zira mesail gayet derin ve ırkları uzun ve ibare ise gayet muhtasar ve muğlak ve Türkçem de epeyce noksan ve müşevveş ve vaktim dahi dar, ben de acele, sıhhatim muhtel, başım nezlelidir. Şu karışık zeminde ancak şöyle bir varak-pare çıkabilir.*
-<QuranText client:load arabic="وَالْعُذْرُ عِنْدَ كِرَامِ النَّاسِ مَقْبُولٌ" translation="Özür, büyük insanların yanında makbuldür." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="Özür, büyük insanların yanında makbuldür.">وَالْعُذْرُ عِنْدَ كِرَامِ النَّاسِ مَقْبُولٌ</span>
 **Ey birader!**
 *"Unsur‑u Hakikat"ı kübra gibi ve "Unsur‑u Belâgat"ı suğra gibi mezcet. Elektrik şuâı gibi olan hads-i sadıkı geçir. Tâ gayet hararetli ve parlak ziyalı olan "Unsur‑u Akide"yi netice vermek için senin zihnine istidadat verebilsin.*
 *İşte "Unsur‑u Akide"yi Üçüncü Makale'de arayacağız.*
@@ -851,8 +849,8 @@ Yahu! Bu vehme ehemmiyet verme. Zira bir fende her bir ilim sahibi onda sanatkâ
 
 
 ### ÜÇÜNCÜ MAKALE
-<QuranText client:load arabic="بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ" translation="Rahmân ve Rahîm olan Allah&apos;ın adıyla." />
-<QuranText client:load arabic="اَشْهَدُ اَنْ لَٓا اِلٰهَ اِلَّا اللّٰهُ وَ اَشْهَدُ اَنَّ مُحَمَّدًا رَسُولُ اللّٰهِ" translation="Şehadet ederim ki, Allah&apos;tan başka hiçbir ilâh yoktur. Yine şehâdet ederim ki, Hz. Muhammed (a.s.m.) Allah&apos;ın Resûlüdür." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="Rahmân ve Rahîm olan Allah&#39;ın adıyla.">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="Şehadet ederim ki, Allah&#39;tan başka hiçbir ilâh yoktur. Yine şehâdet ederim ki, Hz. Muhammed (a.s.m.) Allah&#39;ın Resûlüdür.">اَشْهَدُ اَنْ لَٓا اِلٰهَ اِلَّا اللّٰهُ وَ اَشْهَدُ اَنَّ مُحَمَّدًا رَسُولُ اللّٰهِ</span>
 Bu kelime-i âliye, üssü'l-esas‑ı İslâmiyet olduğu gibi kâinat üstünde temevvüc eden İslâmiyet'in en nurani ve en ulvi bayrağıdır. Evet, misak‑ı ezeliye ile peyman ve yeminimiz olan iman, bu menşur‑u mukaddeste yazılmıştır. Evet, âb‑ı hayat olan İslâmiyet ise bu kelimenin aynü'l-hayatından nebean eder. Evet, ebede namzet olan nev-i beşer içinde saadet-saray‑ı ebediyeye tayin ve tebşir olunanın ellerine verilmiş bir ferman‑ı ezelîdir. Evet, kalp denilen avâlim-i gayba karşı olan penceresinde kurulmuş olan latîfe-i Rabbaniyenin fotoğrafıyla alınan timsal-i nuraniyle Sultan‑ı ezel'i ilan eden harita-i nuraniyesidir ve tercüman‑ı beliğidir. Evet, vicdanın esrarengiz olan nutk‑u beliğanesini cemiyet-i kâinata karşı vekâleten inşad eden hatib-i fasihi ve kâinata Hâkim-i Ezel'i ilan eden imanın mübelliğ-i beliği olan lisanın elinde bir menşur‑u lâyezalîdir.
 **İşaret:**
 Bu kelime-i şehadetin iki kelâmı birbirine şahid-i sadıktır ve birbirini tezkiye eder. Evet, uluhiyet nübüvvete bürhan‑ı limmîdir. Muhammed aleyhisselâm, Sâni'-i Zülcelal'e zatıyla ve lisanıyla bürhan‑ı innîdir.
@@ -863,7 +861,7 @@ Hakaik-i akaid-i İslâmiye, bütün teferruatıyla kütüb‑ü İslâmiyede mu
 Ehl-i dikkatin malûmudur ki makasıd‑ı Kur'aniyenin fezlekesi dörttür: Sâni'-i Vâhid'in ispatı ve nübüvvet ve haşr-i cismanî ve adildir.
 Birinci Maksat: Delail-i Sâni' beyanındadır. Bir bürhanı da Muhammed'dir (aleyhisselâm).
 Sâni'in vücud ve vahdeti, ispata ihtiyaçtan müstağnidir. Lâsiyyema Müslümanlara karşı çok derece eclâ ve azhardır. Binaenaleyh hitabımı ecanibe, bâhusus Japonya'ya tevcih eyledim. Zira onlar eskide bazı sualler etmiştiler, ben de cevap vermiştim. Şimdi ihtisar ile yalnız bir iki suallerine müteallik o cevabın bir parçasını söyleyeceğim. Onlardan bir sual:
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">مَا الدَّل۪يلُ الْوَاضِحُ عَلٰى وُجُودِ الْاِلٰهِ الَّذ۪ى تَدْعُونَنَا اِلَيْهِ وَالْخَلْقُ مِنْ اَىِّ شَىْءٍ اَمِنَ الْعَدَمِ اَوِ الْمَادَّةِ اَوْ ذَاتِه۪ اِلٰى اٰخِرِ سُؤَالَاتِهِمُ الْمُرَدَّدَةِ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">مَا الدَّل۪يلُ الْوَاضِحُ عَلٰى وُجُودِ الْاِلٰهِ الَّذ۪ى تَدْعُونَنَا اِلَيْهِ وَالْخَلْقُ مِنْ اَىِّ شَىْءٍ اَمِنَ الْعَدَمِ اَوِ الْمَادَّةِ اَوْ ذَاتِه۪ اِلٰى اٰخِرِ سُؤَالَاتِهِمُ الْمُرَدَّدَةِ</span>
 Yani vücud‑u Sâni'e delil-i vâzıh nedir?
 **İşaret:**
 Gayr‑ı mütenahî olan marifetullah, böyle mahdud olan kelâma sığışmaz. Binaenaleyh kelâmımdaki iğlakın mazur tutulması mercûdur.
@@ -877,8 +875,8 @@ Cemi' zerrat‑ı kâinat_ birer birer zat ve sıfât ve sair vücuh ile gayr‑
 Evet, her bir zerre kendi başıyla Sâni'i ilan ettiği gibi, tesavir-i mütedâhileye benzeyen mürekkebat‑ı müteşâbike-i mütesaide-i kâinatın her bir makam ve her bir nisbetinde her bir zerre muvazene-i cereyan‑ı umumîyi muhafaza ve her nisbette ayrı ayrı mesalihi intac ettiklerinden Sâni'in kasd ve hikmetini izhar ve kıraat ettikleri için Sâni'in delaili, zerrattan kat kat ziyadedir.
 **Eğer desen:**Neden herkes aklıyla görmüyor?
 **Elcevap:**Kemal-i zuhurundan… Evet, şiddet-i zuhurdan görünmemek derecesine gelenler vardır. Cirm-i şems gibi.
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">تَاَمَّلْ سُطُورَ الْكَائِنَاتِ فَاِنَّهَا</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">مِنَ الْمَلَاِ الْاَعْلٰى اِلَيْكَ رَسَائِلُ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">تَاَمَّلْ سُطُورَ الْكَائِنَاتِ فَاِنَّهَا</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">مِنَ الْمَلَاِ الْاَعْلٰى اِلَيْكَ رَسَائِلُ</span>
 Yani eb'ad‑ı vâsia-i âlemin sahifesinde Nakkaş‑ı Ezelî'nin yazdığı silsile-i hâdisatın satırlarına hikmet nazarıyla bak ve fikr-i hakikatle sarıl. Tâ ki mele-i a'lâdan gelen selâsil-i resail seni a'lâ-yı illiyyîn-i yakîne çıkarsın.
 **İşaret:**
 Kalbinde nokta-i istimdad, nokta-i istinad ile vicdan‑ı beşer Sâni'i unutmamaktadır. Eğer çendan dimağ tatil-i eşgal etse de vicdan edemez. İki vazife-i mühimme ile meşguldür. Şöyle ki:
@@ -904,7 +902,7 @@ Cehl-i mürekkebi intac eden, nazar‑ı sathîyi tevlid eden ülfetten tecrid-i
 Meğer her bir zerrede Eflatun kadar bir şuur ve Calinos kadar bir hikmeti ispat ettikten sonra, zerrat‑ı saire ile vasıtasız muhabereyi itikad ve esbab‑ı tabiiyenin üssü'l-esası hükmünde olan cüz-i lâyetecezzadaki kuvve-i cazibe ve kuvve-i dâfianın içtimalarının hortumu üzerindeki muhaliyetin damgasını kaldırabilsen…
 Eğer nefsin bu muhalata ihtimal verse seni insaniyet defterinden sildirecektir. Fakat caizdir ki: Her bir şeyin esası zannettikleri olan cezb ve def' ve hareket, âdâtullahın kanunlarına birer isim olsun. Fakat kanun, kaidelikten tabiîliğe ve zihnîlikten haricîliğe ve itibardan hakikate ve âletiyetten müessiriyete gelmemek şartıyla kabul ederiz.
 **Tenbih:**
-<QuranText client:load arabic="فَارْجِعِ الْبَصَرَ هَلْ تَرٰى مِنْ فُطُورٍ" translation="&quot;Haydi, çevir gözünü: En küçük bir kusur görüyor musun?&quot; Mülk Sûresi, 67:3." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="&quot;Haydi, çevir gözünü: En küçük bir kusur görüyor musun?&quot; Mülk Sûresi, 67:3.">فَارْجِعِ الْبَصَرَ هَلْ تَرٰى مِنْ فُطُورٍ</span>
 Nazarını âleme gezdir. Hangi yerinde noksaniyeti görebilirsin? Kellâ! Gören görmez. Meğer kör ola veya kasr‑ı nazar illetiyle müptela ola.
 İstersen Kur'an'a müracaat et. Delil-i inayeti vücuh‑u mümkinenin en ekmel vechiyle bulacaksın. Zira Kur'an, kâinatta tefekküre emir verdiği gibi fevaidi tezkâr ve nimetleri ta'dad eder. İşte o âyât, şu bürhan‑ı inayete mezâhirdir. İcmali budur, tut!
 
@@ -974,7 +972,7 @@ Evet, zemin ve âsumanı hamleden ve muallakta tutan ve ecram‑ı kâinatı ist
 **Eğer desen:**Bazı mutasavvıfın kelâmından ittisal ve ittihat ve hulûl zâhir oluyor. Ve ondan tevehhüm edilir ki bazı maddiyyunun mesleği olan vahdetü'l-vücuda bir münasebet gösterir.
 **Elcevap:**Müteşabih hükmünde olan muhakkikîn-i sofiyenin şatahatını ki vücud‑u Akdes'e hasr‑ı nazar ve istiğrak ve mümkinattan tecerrüd cihetiyle matmah‑ı nazar ettikleri delil içinde neticeyi görmek, yani âlemden Sâni'i müşahede etmek tarîkıyla takip ettikleri meslek olan cedavil-i ekvanda cereyan‑ı tecelliyatı ve melekûtiyet-i eşyada sereyan‑ı füyuzatı ve meraya-yı mevcudata tecelli-i esma ve sıfâtı ise dıyku'l-elfaz sebebiyle uluhiyet-i sâriye ve hayat‑ı sâriye tabir ettikleri hakaiki, başkalar anlamadılar… Sû-i tefehhüm ile kendi istidad‑ı şûrelerinden zuhur eden evham‑ı vâhiyeye, muhakkikînin kelimat ve şatahatını tatbik ettiler.
 Yuha onların akıllarına! Süreyya derecesinde olan muhakkikînin efkâr‑ı mücerredeleri, serâ derekesinde olan mukallidîn-i maddiyyunun efkâr‑ı sefilesinden binler derece uzaktır. Evet, şu iki fikrin tatbikine çalışmak, şu zaman‑ı terakkide akl‑ı beşerin düçar‑ı sekte olduğunu ve varta-i mevte düştüğünü izhar etmektir ki insaniyet müteessifane nazar ederek ve istidad‑ı tahkik ve terakki lisanıyla
-<QuranText client:load arabic="كَلَّا وَاللّٰهِ اَيْنَ الثَّرٰى مِنَ الثُّرَيَّا وَ اَيْنَ الضِّيَاءُ السَّاطِعُ مِنَ الظُّلْمَةِ الطَّامِسَةِ" translation="Allah&apos;a yemin olsun ki hayır. Serâ nerede, Süreyyâ nerede? Herşeyi gösteren ışık nerede, herşeyi örtüp saklayan zulmet nerede?" />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="Allah&#39;a yemin olsun ki hayır. Serâ nerede, Süreyyâ nerede? Herşeyi gösteren ışık nerede, herşeyi örtüp saklayan zulmet nerede?">كَلَّا وَاللّٰهِ اَيْنَ الثَّرٰى مِنَ الثُّرَيَّا وَ اَيْنَ الضِّيَاءُ السَّاطِعُ مِنَ الظُّلْمَةِ الطَّامِسَةِ</span>
 demeye mecbur oluyor.
 
 **İşaret:**
@@ -985,24 +983,24 @@ demeye mecbur oluyor.
 El-insaf! Serâ Süreyya kadar birbirinden uzaktır. Maddeyi cemi' enva ve eşkâliyle halk eden Hâlık‑ı Zülcelal'e kasem ederim ki dünyada şu iki mesleğin temasını intac eden rey-i ahmakaneden daha kabih ve daha hasis ve daha sahibinin mizac‑ı aklının inhirafına delil olacak bir rey yoktur.
 **Tenvir:**
 Küre-i arz küçük, parça parça ve rengârenk ve mütehalif cam parçalarından farz olunursa her biri başka çeşitle levnine ve cirmine ve şekline nisbetle şemsten bir feyiz alacaktır. Şu hayalî feyiz ise ne güneşin zatı ve ne ayn‑ı ziyasıdır. Hem de ziyanın temasili ve elvan‑ı seb'asının tesaviri ve güneşin tecellisi olan şu gûnagûn ve rengârenk çiçeklerin elvanı faraza lisana gelirse her biri "Güneş benim gibidir." veyahut "Güneş benim." diyeceklerdir.
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">اٰنْ خَيَالَات۪ى كِه دَامِ اَوْلِيَاسْتْ</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">عَكْسِ مَهْرُويَانِ بُوسْتَانِ خُدَاسْتْ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اٰنْ خَيَالَات۪ى كِه دَامِ اَوْلِيَاسْتْ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">عَكْسِ مَهْرُويَانِ بُوسْتَانِ خُدَاسْتْ</span>
 
 Fakat ehl-i vahdetü'ş-şuhudun meşrebi, ehl-i mahv ve sekrin meşrebidir. Safi meşrep ise meşreb-i ehl-i fark ve sahvdır.
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">حَق۪يقَةُ الْمَرْءِ لَيْسَ الْمَرْءُ يُدْرِكُهَا</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">فَكَيْفَ كَيْفِيَّةُ الْجَبَّارِ ذِى الْقِدَمِ</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">هُوَ الَّذ۪ى اَبْدَعَ الْاَشْيَاءَ وَ اَنْشَاَهَا</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">فَكَيْفَ يُدْرِكُهُ مُسْتَحْدَثُ النَّسَمِ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">حَق۪يقَةُ الْمَرْءِ لَيْسَ الْمَرْءُ يُدْرِكُهَا</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">فَكَيْفَ كَيْفِيَّةُ الْجَبَّارِ ذِى الْقِدَمِ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">هُوَ الَّذ۪ى اَبْدَعَ الْاَشْيَاءَ وَ اَنْشَاَهَا</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">فَكَيْفَ يُدْرِكُهُ مُسْتَحْدَثُ النَّسَمِ</span>
 **Tenbih:**
 İşte vücud‑u Sâni'in delail-i icmalîsi… Tafsili ise kütüb‑ü selâsede gelecektir.
 **Eğer desen:**"Delail-i tevhidin burada velev icmalen olsun beyanını isterim."
 **Derim ki:**Delail-i tevhid, o kadar müştehire ve çoktur ki bu kitapta zikirden müstağnidirler. İşte
-<QuranText client:load arabic="لَوْ كَانَ ف۪يهِمَٓا اٰلِهَةٌ اِلَّا اللّٰهُ لَفَسَدَتَا" translation="&quot;Eğer göklerde ve yerde Allah&apos;tan başka ilâhlar olsaydı, ikisi de harap olup giderdi.&quot; Enbiyâ Sûresi, 21:22." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="&quot;Eğer göklerde ve yerde Allah&#39;tan başka ilâhlar olsaydı, ikisi de harap olup giderdi.&quot; Enbiyâ Sûresi, 21:22.">لَوْ كَانَ ف۪يهِمَٓا اٰلِهَةٌ اِلَّا اللّٰهُ لَفَسَدَتَا</span>
 âyetinin sadefinde meknun olan bürhanü't-temanü', bu minhaca bir menar‑ı neyyirdir. Evet istiklal, uluhiyetin hâssa-i zatiyesidir ve lâzıme-i zaruriyesidir.
 **Tenvir:**
 Kâinattaki teşabüh‑ü âsâr ve etrafı birbiriyle muanaka ve el ele tutmuş, birbirine arz‑ı intizam ve birbirinin sualine karşı cevab‑ı savab ve birbirinin nida-yı ihtiyacına lebbeyk cevabı vermek ve bir nokta-i vâhideye temaşa etmek ve bir mihver-i nizam üzerinde deveran etmek cihetiyle Sâni'in tevhidine telvih, belki Hâkim-i Ezel'in vahdaniyetine tasrih ediyor. Evet, bir makinenin sâni'i ve muhterii bir olur.
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">وَ ف۪ى كُلِّ شَىْءٍ لَهُ اٰيَةٌ</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">تَدُلُّ عَلٰى اَنَّهُ وَاحِدٌ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَ ف۪ى كُلِّ شَىْءٍ لَهُ اٰيَةٌ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">تَدُلُّ عَلٰى اَنَّهُ وَاحِدٌ</span>
 *Kitab‑ı âlemin evrakıdır eb'ad‑ı nâmahdud*
 *Sutûr‑u kâinat‑ı dehirdir a'sar‑ı nâma'dud*
 *Basılmış destgâh‑ı levh-i mahfuz‑u hakikatte*
@@ -1012,7 +1010,7 @@ Hoca Tahsin'in nâma'dud ve nâmahduddan muradı nisbîdir. Hakiki lâyetenahîl
 **İşaret:**
 Sâni'-i Zülcelal ne kadar evsaf‑ı kemaliye varsa onlarla muttasıftır. Zira mukarrerdir ki: Masnûda olan feyz-i kemal, Sâni'in kemalinden iktibas edilmiş bir zıll-i zalilidir. Demek kâinatta ne kadar hüsün ve cemal ve kemal varsa umumundan lâyuhad derecede yüksek tabakada evsaf‑ı cemaliye ve kemaliye ile Sâni' muttasıftır. Evet, ihsan servetin, icad vücudun, icab vücubun, tahsin hüsnün fer'idir ve delilidir.
 Hem de Sâni'-i Zülcelal, cemi' nekaisten münezzehtir. Maddiyatın mahiyatının istidatsızlığından neş'et eden nekaisten müberradır. Kâinatın mahiyat‑ı mümkinesinden neş'et eden evsaf ve levazımatından mukaddestir.
-<QuranText client:load arabic="لَيْسَ كَمِثْلِه۪ شَىْءٌ جَلَّ جَلَالُهُ" translation="Onun benzeri hiçbir şey yoktur, celle celâluhu." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="Onun benzeri hiçbir şey yoktur, celle celâluhu.">لَيْسَ كَمِثْلِه۪ شَىْءٌ جَلَّ جَلَالُهُ</span>
 
 €İKİNCİ MAKSAT_
 ## Mukaddime
@@ -1024,8 +1022,8 @@ Devir lâzım gelmez. Zira sıdkının delaili, Sâni'in delailine tevakkuf etme
 **Temhid:**
 Peygamberimiz (asm) Sâni'in bir bürhanıdır. Öyleyse şu bürhanın ispat‑ı sıdkını ve intacını ve sureten ve maddeten sıhhatini ispat etmek gerektir. Nahu:
 
-<QuranText client:load arabic="بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ" translation="Rahmân ve Rahîm olan Allah&apos;ın adıyla." />
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">اَللّٰهُمَّ صَلِّ عَلٰى مُحَمَّدٍ نِ الَّذ۪ى دَلَّ عَلٰى وُجُوبِ وُجُودِكَ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="Rahmân ve Rahîm olan Allah&#39;ın adıyla.">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">اَللّٰهُمَّ صَلِّ عَلٰى مُحَمَّدٍ نِ الَّذ۪ى دَلَّ عَلٰى وُجُوبِ وُجُودِكَ</span>
 **Emma ba'dü:**Ey hakikatin âşığı!
 Eğer vicdanımı mütalaa etmekle hakikatleri rasad etmek istersen, kalp dedikleri latîfe-i Rabbaniyenin pası ve zengârı hükmünde olan arzu-yu hilaf ve iltizam‑ı taraf‑ı muhalif ve mazur tutulmak için kendi evhamına bir hak vermek ve bir asla ircâ etmek ve mecmuun neticesini her bir fertten istemek –ki zafiyeti sebebiyle neticenin reddine bir istidad‑ı seyyie verilir–  [^6] hem de bahaneli çocukluk tabiatı hem de mahaneli düşman seciyesi hem de yalnız ayıbı görmek şanında olan müşteri nazarı gibi emirlerden o mir'atı taskil ve tasfiye et, muvazene ve mukabele eyle. Ekser emaratın imtizacından tezahür eden hakikatin şule-i cevvalesini karine-i münevvire et, tâ ekaldeki evham‑ı muzlimeyi tenvir ve def'edebilesin. Hem de munsifane ve müdakkikane ile dinle, kelâm tamam olmadan itiraz etme. Nihayete kadar bir cümledir, bir hükümdür. Tamam olduktan sonra bir vehmin kalırsa söyle.
 **Tenbih:**
@@ -1088,13 +1086,13 @@ Zaman‑ı mazi ve zaman‑ı hal, yani asr‑ı saadet ve zaman‑ı istikbal t
 ## BİRİNCİ MESLEK
 Yani mesele-i âliye-i zatiyeyi temaşa etmekte dört nükteyi bilmek lâzımdır:
 **Birincisi:**
-<QuranText client:load arabic="لَيْسَ الْكَحَلُ كَالتَّكَحُّلِ" translation="Fıtrî karagözlülük, sun&apos;î (yapma) karagözlülük gibi değildir." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="Fıtrî karagözlülük, sun&#39;î (yapma) karagözlülük gibi değildir.">لَيْسَ الْكَحَلُ كَالتَّكَحُّلِ</span>
 kaidesine binaen sun'î ve tasannuî olan şey, ne kadar mükemmel olsa da tabiî yerini tutmadığından heyetinin feletatı, muzahrefiyeti îma edecektir.
 
 **İkincisi:**Ahlâk‑ı âliyenin hakikatin zeminiyle olan rabıta-i ittisali ciddiyettir. Ve deveran‑ı dem gibi hayatlarını idame eden ve imtizaçlarından tevellüd eden haysiyete kuvvet veren, heyet-i mecmuasına intizam veren yalnız sıdktır. Evet, şu rabıta olan sıdk ve ciddiyet kesildiği anda, o ahlâk‑ı âliye kurur ve hebaen gidiyor.
 **Üçüncüsü:**Umûr‑u mütenasibede temayül ve tecazüb ve mütezâdde olan eşyalarda tenafür ve tedafü kaide-i meşhuresi, maddiyatta nasıl cereyan ediyor; maneviyat ve ahlâkta dahi cereyan eder.
 **Dördüncüsü:**
-<QuranText client:load arabic="لِلْكُلِّ حُكْمٌ لَيْسَ لِكُلٍّ" translation="Mecmûda bulunan bir kuvvet ve hasiyet var ki, eczâda bulunmaz. Yani, cemaatte bulunan kuvvet fertte yoktur." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="Mecmûda bulunan bir kuvvet ve hasiyet var ki, eczâda bulunmaz. Yani, cemaatte bulunan kuvvet fertte yoktur.">لِلْكُلِّ حُكْمٌ لَيْسَ لِكُلٍّ</span>
 Şimdi gelelim maksada: İşte âsâr ve siyer ve tarih-i hayatı…
 Hattâ a'danın şehadetleriyle, Zat‑ı Peygamber'de vücudu muhakkak olan ahlâk‑ı âliyenin kesret ve ihata ve tecemmu ve imtizacından tevellüd eden izzet ve haysiyetten neş'et eden şeref ve vakar ve izzet-i nefis ile –ferişteler, devlerin ihtilat ve istiraklarından tenezzühleri gibi– sırr‑ı tezada binaen, o ahlâk‑ı âliye dahi hile ve kizbden tereffu' ve tenezzüh ve teberri ederler. Hem de hayat ve mâyeleri makamında olan sıdk ve hakkıyeti tazammun ettiklerinden, şule-i cevvale gibi nübüvveti aleniyete çıkarıyor.
 **Tenbih:**
@@ -1123,7 +1121,7 @@ Cemi' enbiyanın delail-i nübüvvetleri, sıdk‑ı Muhammed'e (asm) delildir v
 **İşaret:**
 Ey birader! Bazen kasem, bürhanın yerini tutar. Zira bürhanı tazammun eder. Öyle ise:
 
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">وَالَّذ۪ى قَصَّ عَلَيْهِ الْقِصَصَ لِلْحِصَصِ وَ سَيَّرَ رُوحَهُ ف۪ى اَعْمَاقِ الْمَاض۪ى وَ ف۪ى شَوَاهِقِ الْمُسْتَقْبَلِ فَكَشَفَ لَهُ الْاَسْرَارَ مِنْ زَوَايَا الْوَاقِعَاتِ اِنَّ نَظَرَهُ النَّقَّادَ اَدَقُّ مِنْ اَنْ يُدَلِّسَ عَلَيْهِ وَ مَسْلَكَهُ الْحَقَّ اَغْنٰى مِنْ اَنْ يُدَلِّسَ عَلَى النَّاسِ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وَالَّذ۪ى قَصَّ عَلَيْهِ الْقِصَصَ لِلْحِصَصِ وَ سَيَّرَ رُوحَهُ ف۪ى اَعْمَاقِ الْمَاض۪ى وَ ف۪ى شَوَاهِقِ الْمُسْتَقْبَلِ فَكَشَفَ لَهُ الْاَسْرَارَ مِنْ زَوَايَا الْوَاقِعَاتِ اِنَّ نَظَرَهُ النَّقَّادَ اَدَقُّ مِنْ اَنْ يُدَلِّسَ عَلَيْهِ وَ مَسْلَكَهُ الْحَقَّ اَغْنٰى مِنْ اَنْ يُدَلِّسَ عَلَى النَّاسِ</span>
 Evet, neam. Onun nur‑u nazarına hayal, kendini hakikat gösteremiyor ve hak olan mesleği telbisten müstağnidir.
 ## ÜÇÜNCÜ MESLEK
 Yani zaman‑ı halin, yani asr‑ı saadetin sahifesinde dört nükte, bir noktayı nazar‑ı dikkate almak gerektir:
@@ -1193,7 +1191,7 @@ Ey birader! Tevfik Allah'tandır. Ben de derim ki: Sebeb-i noksan gösterdiğin 
 
 **Birinci noktaya cevap:**Zaten iki defa şu cevabı zımnen görmüşsün. Şöyle ki:
 Nâsın ekseri cumhur‑u avamdır. Nazar‑ı Şâri'de ekall, eksere tabidir. Zira avama müvecceh olan hitabı, havass fehim ve istifade ediyorlar. Bilakis olursa olamaz. İşte cumhur‑u avam ise me'luf ve mütehayyelatından tecerrüd edip hakaik-i mücerrede ve makulat‑ı sırfeyi temaşa edemezler. Meğer mütehayyelatlarını dürbün gibi tevsit etseler… Fakat mütehayyelatın suretlerine hasr ve vakf‑ı nazar etmek, cismiyet ve cihet gibi muhal şeyleri istilzam eder. Lâkin nazar, o suretlerden geçerek hakaiki görüyor. Mesela, kâinattaki tasarruf‑u İlahîyi sultanın serir-i saltanatında olan tasarrufunun suretinde temaşa edebilirler.
-<QuranText client:load arabic="اِنَّ اللّٰهَ عَلَى الْعَرْشِ اسْتَوٰى" translation="Muhakkak ki Allah&apos;ın (cc) hükümranlığı Arşı kaplamıştır." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="Muhakkak ki Allah&#39;ın (cc) hükümranlığı Arşı kaplamıştır.">اِنَّ اللّٰهَ عَلَى الْعَرْشِ اسْتَوٰى</span>
 gibi…
 İşte hissiyat‑ı cumhur şu merkezde olduklarından elbette irşad ve belâgat iktiza eder ki: Onların hissiyatı riayet ve ihtiram edilsin ve efkârları dahi bir derece mümaşat ve ihtiram edilsin. İşte riayet ve ihtiram, ukûl‑ü beşere karşı olan tenezzülat‑ı İlahiye ile tesmiye olunur. Evet o tenezzülat, te'nis-i ezhan içindir. Onuncu Mukaddime'ye müracaat et.
 İşte bunun içindir ki: Hakaik-i mücerredeye temaşa etmek için hissiyat ve hayal-âlûd cumhurun nazarlarını okşayan suver-i müteşabiheden birer dürbün vaz'edilmiştir. İşte şu cevabı teyid eden, maânî-i amîka veya müteferrikayı bir suret-i sehil ve basitada tasavvur veya tasvir etmek için nâsın kelâmında istiarat‑ı kesîreyi îrad ederler. Demek, müteşabihat dahi istiaratın en ağmaz olan kısmıdır. Zira en hafî hakaikin suver-i misaliyesidir. Demek, işkâl ise mananın dikkatindendir, lafzın iğlakından değildir.
@@ -1208,7 +1206,7 @@ Cumhur‑u avam ise hiss-i zâhir veya galat‑ı hissin sebebiyle hilaflarını
 Şu gibi meseleler, müstakbeldeki nazariyata kıyas olunmaz. Zira müstakbele ait olan şeylere hiss-i zâhir taalluk etmediği için iki ciheti de muhtemeldir. İtikad olunabilir. İmkân derecesindedir. İtminan kabildir. Onun hakk‑ı sarîhi tasrih etmektir. Lâkin hînâ ki hissin galatı bizim "ma nahnü fîh"imizi imkân derecesinden bedahete, yani cehl-i mürekkebe çıkardı. Onun nazar‑ı belâgatta hiç inkâr olunmaz olan hakkı ise ibham ve ıtlaktır. Tâ ezhan müşevveş olmasınlar. Fakat hakikate telvih ve remiz ve îma etmek gerektir. Efkâr için kapıları açmak, duhûle davet etmek lâzımdır. Nasıl ki şeriat‑ı garra öyle yapmıştır.
 Yahu ey birader! İnsaf mıdır, taharri-i hakikat böyle midir ki sen irşad‑ı mahz ve ayn‑ı belâgat ve hidayetin mağzı olan şeyi, irşada münafî ve mübayin tevehhüm edesin? Ve belâgatça ayn‑ı kemal olan şeyi noksan tahayyül edesin?
 Yâ eyyühe'l-hoto! Acaba senin zihn-i sakîminde belâgat o mudur ki ezhanı tağlit ve efkârı teşviş ve muhitin müsaadesizliği ve zamanın adem-i i'dadından ezhan müstaid olmadıkları için ukûle tahmil edilmeyen şeyleri teklif etmektir? Kellâ!
-<QuranText client:load arabic="كَلِّمِ النَّاسَ عَلٰى قَدَرِ عُقُولِهِمْ" translation="İnsanlarla anlayış seviyelerine göre konuş." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="İnsanlarla anlayış seviyelerine göre konuş.">كَلِّمِ النَّاسَ عَلٰى قَدَرِ عُقُولِهِمْ</span>
 
 bir düstur‑u hikmettir. İstersen mukaddimata müracaat et bâhusus Birinci Mukaddime'de iyi tefekkür et!
 İşte bazı zevahiri, delil-i aklînin hilafına göstermek olan**üçüncü noktaya cevap:**
@@ -1220,7 +1218,7 @@ Evet "Kelimetullah" olan Kitab‑ı Mübin'in bazı âyâtı, bazısına müfess
 Eğer istidlalin makamında denilse idi ki: Elektriğin acayibi ve cazibe-i umumiyenin garaibi ve küre-i arzın yevmiye ve seneviye olan hareketi ve yetmişten ziyade olan anâsırın imtizac‑ı kimyeviyelerini ve şemsin istikrarıyla beraber suriye olan hareketini nazara alınız, tâ Sâni'i bilesiniz! İşte o vakit delil olan sanat, marifet-i Sâni' olan neticeden daha hafî ve daha gamız ve kaide-i istidlale münafî olduğundan bazı zevahiri, efkâra göre imale olunmuştur. Bu ise ya müstetbeü't-terakib kabilesinden veya kinaî nevinden olduğu için medar‑ı sıdk ve kizb olmaz. Mesela ﹛قَالَ|﹜  lafzındaki elif, eliftir. Aslı vav olsa kâf olsa ne olursa olsun tesir etmez.
 
 Ey birader, insaf et! Acaba şu üç nokta-i itiraz, cemi' a'sarda cemi' insanların irşadları için inzal olunan Kur'an'ın i'cazına en zâhir delil değil midir? Evet
-<QuranText client:load arabic="وَالَّذ۪ى عَلَّمَ الْقُرْاٰنَ الْمُعْجِزَ اِنَّ نَظَرَ الْبَش۪يرِ النَّذ۪يرِ وَ بَص۪يرَتَهُ النَّقَّادَةَ اَدَقُّ وَ اَجَلُّ وَ اَجْلٰى وَ اَنْفَذُ مِنْ اَنْ يَلْتَبِسَ اَوْ يَشْتَبِهَ عَلَيْهِ الْحَق۪يقَةُ بِالْخَيَالِ وَاِنَّ مَسْلَكَهُ الْحَقَّ اَغْنٰى وَ اَعْلٰى وَ اَنْزَهُ وَ اَرْفَعُ مِنْ اَنْ يُدَلِّسَ اَوْ يُغَالِطَ عَلَى النَّاسِ" translation="Kur&apos;ân‑ı Mu&apos;cizü&apos;l-Beyânı öğretene and olsun ki, beşîr ve nezîr olan zâtın nazarı ve herşeyi inceden inceye tetkik eden basireti, hakikati hayale karıştırmak veya benzetmekten yüce, dakik ve parlak; hak olan mesleği ise, insanları aldatmak veya yanıltmaktan müstağni, münezzeh ve yücedir." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="Kur&#39;ân‑ı Mu&#39;cizü&#39;l-Beyânı öğretene and olsun ki, beşîr ve nezîr olan zâtın nazarı ve herşeyi inceden inceye tetkik eden basireti, hakikati hayale karıştırmak veya benzetmekten yüce, dakik ve parlak; hak olan mesleği ise, insanları aldatmak veya yanıltmaktan müstağni, münezzeh ve yücedir.">وَالَّذ۪ى عَلَّمَ الْقُرْاٰنَ الْمُعْجِزَ اِنَّ نَظَرَ الْبَش۪يرِ النَّذ۪يرِ وَ بَص۪يرَتَهُ النَّقَّادَةَ اَدَقُّ وَ اَجَلُّ وَ اَجْلٰى وَ اَنْفَذُ مِنْ اَنْ يَلْتَبِسَ اَوْ يَشْتَبِهَ عَلَيْهِ الْحَق۪يقَةُ بِالْخَيَالِ وَاِنَّ مَسْلَكَهُ الْحَقَّ اَغْنٰى وَ اَعْلٰى وَ اَنْزَهُ وَ اَرْفَعُ مِنْ اَنْ يُدَلِّسَ اَوْ يُغَالِطَ عَلَى النَّاسِ</span>
  [^10]
 Neam, hayalin ne haddi vardır ki nur-efşan olan nazarına karşı kendini hakikat gösterebilsin. Evet, mesleği nefs-i hak ve mezhebi ayn‑ı sıdktır. Hak ise tedlis ve tağlit etmekten müstağnidir.
 ## BEŞİNCİ MESLEK
@@ -1236,7 +1234,7 @@ Marufe ve meşhure olan havârık‑ı zâhire ve mu'cizat‑ı mahsûsedir. Siy
 **Biri de:**İnşikak‑ı kamerdir. Güya kalb-i sema hükmünde olan kamer, mübarek olan kalbiyle inşikakta bir münasebet peyda etmek için sine-i saf u berrakını mübarek parmağın işaretiyle iştiyakan şakk u çâk etmiştir.
 **Tenbih:**
 İnşikak‑ı kamer mütevatir-i bi'l-manadır.
-<QuranText client:load arabic="وَ انْشَقَّ الْقَمَرُ" translation="&quot;Ay yarıldı.&quot; Kamer Sûresi, 54:1." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="&quot;Ay yarıldı.&quot; Kamer Sûresi, 54:1.">وَ انْشَقَّ الْقَمَرُ</span>
 olan âyet-i kerîme ile sabittir. Zira hattâ Kur'an'ı inkâr eden dahi bu âyetin manasına ilişmemiştir. Hem de ihtimal vermeye şâyan olmayan bir tevil-i zaîften başka tevil ve tahvil edilmemiştir.
 **Vehim ve Tenbih:**
 İnşikak hem âni hem gece hem vakt-i gaflet hem şu zaman gibi âsumana adem-i tarassud hem vücud‑u sehab hem ihtilaf‑ı metali' cihetiyle bütün âlemin görmeleri lâzım gelmez ve lâzım değildir. Hem de hem-matla' olanlarda sabittir ki görülmüştür.
@@ -1246,7 +1244,7 @@ Ey benim kelâmımı mütalaa eden zevat! Geniş bir fikir ile ve müteyakkız b
 
 müteavinenin nazarıyla bakınız! Tâ ki bir taraftan hücum eden evhamı, mütecavibe ve müteavine olan cevanib-i saire def'edebilsin.
 İşte şu halde Japonların suali olan
-<QuranText client:load arabic="مَا الدَّل۪يلُ الْوَاضِحُ عَلٰى وُجُودِ الْاِلٰهِ الَّذ۪ى تَدْعُونَنَا اِلَيْه" translation="Bizi, kendisine iman etmeye çağırdığınız Allah&apos;ın varlığına delâlet eden açık delil nedir?" />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="Bizi, kendisine iman etmeye çağırdığınız Allah&#39;ın varlığına delâlet eden açık delil nedir?">مَا الدَّل۪يلُ الْوَاضِحُ عَلٰى وُجُودِ الْاِلٰهِ الَّذ۪ى تَدْعُونَنَا اِلَيْه</span>
  [^11]
 ye karşı derim: İşte Muhammed aleyhissalâtü vesselâm…
  [^12]
@@ -1282,56 +1280,56 @@ muhabbete karşı çıkamaz. İşte saadet-i ebediye, o firak‑ı ebediyeye öy
 11- Neam, yedi cihetle on üç asırda i'cazı musaddak olan Kur'an‑ı Mu'cizü'l-Beyan, haşr-i cismanînin keşşafıdır ve fettahıdır ve besmele-keşidir.
 ## İKİNCİ MAKSAT
 Kur'an'da işaret olunan haşre dair iki delilin beyanındadır. İşte
-<QuranText client:load arabic="نَخُو بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ" translation="İşte. Rahmân ve Rahîm olan Allah&apos;ın adıyla." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="İşte. Rahmân ve Rahîm olan Allah&#39;ın adıyla.">نَخُو بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 ,* * *_
 *Bu risalenin müellifi_ Üstad Bediüzzaman Hazretleri bu risalenin telifinden otuz sene sonra telif ettiği Risale-i Nur Külliyatı'ndan "Dokuzuncu Şuâ"ın başında diyor ki:*
 *Latîf bir inayet-i Rabbaniyedir ki bundan otuz sene evvel Eski Said yazdığı tefsir mukaddimesi Muhakemat namındaki eserin âhirinde "İkinci Maksat: Kur'an'da haşre işaret eden iki âyet tefsir ve beyan edilecek.*
-<QuranText client:load arabic="نَخُو بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ ”" translation="İşte. Rahmân ve Rahîm olan Allah&apos;ın adıyla." />
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="İşte. Rahmân ve Rahîm olan Allah&#39;ın adıyla.">نَخُو بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ ”</span>
 *deyip durmuş. Daha yazamamış. Hâlık‑ı Rahîm'ime delail ve emarat‑ı haşriye adedince şükür ve hamdolsun ki otuz sene sonra tevfik ihsan eyledi.*
 
 ## Küçük Biraderim Abdülmecid'in Takrizidir
-<QuranText client:load arabic="بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ" translation="Rahmân ve Rahîm olan Allah&apos;ın adıyla." />
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">أحمده تعالى حمدًا بلا حدّ، وأصلّي على رسوله سيدنا محمد وعلى اٰله وصحبه سالكي الطريق الأسدّ.</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">وبعد :</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">فاعلم أنه من يَرُمْ أن يعرج إلى سماء الحقائق، ويسم أن يسرح فكره فى رياض الدقائق، ويطلب ميزانًا لتمييز الكاذب عن الصادق، ومكنسة لتكنيس غبار الأوهام عن وجوه الشقائق، وجنة يروض فيها جياد الأفكار، وجُنة يدافع بها نضال السقيمة من الأخيار، ومضمارًا يبارز فيه الأبطال من الأجبار: فعليه بتدرّس وتدريس هذا الكتاب.</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">لأنه قد بني على أساسي تهديم الخطأ وتعمير الصواب، وأصْلَىْ تصقيل الإسلامية عن الوهميات التى بها تعاب، وتصفية العقائد عن الخرافات التى بها تشاب.</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">كيف لا، وقد أخرج تلك الحقائق الموؤدة في أخاديد الخبالات، وفض أفواه الأوهام عن مكنونات هاتيك النكات.</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">فحل الأذهان، وأذهن الفحول، وسمح به ثاقب الأفكار، وأفكر العقول وخاطر كل ما يوصف به فهو فوقه ولو بذل الواصف في أطرائه طوقه.</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">وإن شككت فيما أقول فيه، انظر إلى الفرائد الساقطة من فيه...</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 leading-loose hover:bg-amber-100 dark:hover:bg-amber-900/30 px-1 rounded transition-colors cursor-help relative group" data-translation="Rahmân ve Rahîm olan Allah&#39;ın adıyla.">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">أحمده تعالى حمدًا بلا حدّ، وأصلّي على رسوله سيدنا محمد وعلى اٰله وصحبه سالكي الطريق الأسدّ.</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وبعد :</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">فاعلم أنه من يَرُمْ أن يعرج إلى سماء الحقائق، ويسم أن يسرح فكره فى رياض الدقائق، ويطلب ميزانًا لتمييز الكاذب عن الصادق، ومكنسة لتكنيس غبار الأوهام عن وجوه الشقائق، وجنة يروض فيها جياد الأفكار، وجُنة يدافع بها نضال السقيمة من الأخيار، ومضمارًا يبارز فيه الأبطال من الأجبار: فعليه بتدرّس وتدريس هذا الكتاب.</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لأنه قد بني على أساسي تهديم الخطأ وتعمير الصواب، وأصْلَىْ تصقيل الإسلامية عن الوهميات التى بها تعاب، وتصفية العقائد عن الخرافات التى بها تشاب.</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">كيف لا، وقد أخرج تلك الحقائق الموؤدة في أخاديد الخبالات، وفض أفواه الأوهام عن مكنونات هاتيك النكات.</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">فحل الأذهان، وأذهن الفحول، وسمح به ثاقب الأفكار، وأفكر العقول وخاطر كل ما يوصف به فهو فوقه ولو بذل الواصف في أطرائه طوقه.</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وإن شككت فيما أقول فيه، انظر إلى الفرائد الساقطة من فيه...</span>
 
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">ويحق أن يقال في تأليفه:</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">بديع النسج والاسداء إنشا</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">من التعييب والتّعْيير حاشا</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">كتابًا باللاٰلي قد توشا</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">أناسي النصوص قد تحشّا</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">مرىء الصدق والحق المبين</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">ويومي للكنوز تحت غين</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">ولذي الدين والأحباب زين</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">كما للقالي والحساد شين</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">يمزق عن وجوه الحق مينا</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">يعمّى لذوي الالحاد عينًا</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">محك للنحول من نقول</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">وقيد للعقول من فحول</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">جدير بالتقلّد في نحور</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">محافظة الحدود والثغور</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">خليق بالتقلد في العناق</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">لضرب الفرق في رأس النفاق</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">على الطرف متى يُسطر سُطُر</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">ە لا يغشاه طول الدهر عور</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">على القلب بان تكتب أحرى</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">وأن تجعل مكان الحبر تبرًا</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">صغير الجرم تبرى المثال</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">كمرقاةٍ الى أوج الكمال</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">كثير الرموز والمعنى دقيق</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">وعن دركه ذو الطعن سحيق</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">هلال الشكّ معناه فحدد</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">بكحل ضدّه العين فراود</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">وإني لا يكون ذا كذا كا</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">ويختصم بكتفيه السماكا</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">وقد أنشاه رازيّ الأوان</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">مجيد للبديع في الزمان</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">وذا العصر به يعلو وسام</span>
-<span class="font-arabic text-2xl text-amber-700 block text-center my-4">لذا التأليف تاريخ تمام</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">ويحق أن يقال في تأليفه:</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بديع النسج والاسداء إنشا</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">من التعييب والتّعْيير حاشا</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">كتابًا باللاٰلي قد توشا</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">أناسي النصوص قد تحشّا</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">مرىء الصدق والحق المبين</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">ويومي للكنوز تحت غين</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">ولذي الدين والأحباب زين</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">كما للقالي والحساد شين</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يمزق عن وجوه الحق مينا</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">يعمّى لذوي الالحاد عينًا</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">محك للنحول من نقول</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وقيد للعقول من فحول</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">جدير بالتقلّد في نحور</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">محافظة الحدود والثغور</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">خليق بالتقلد في العناق</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لضرب الفرق في رأس النفاق</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">على الطرف متى يُسطر سُطُر</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">ە لا يغشاه طول الدهر عور</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">على القلب بان تكتب أحرى</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وأن تجعل مكان الحبر تبرًا</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">صغير الجرم تبرى المثال</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">كمرقاةٍ الى أوج الكمال</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">كثير الرموز والمعنى دقيق</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وعن دركه ذو الطعن سحيق</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">هلال الشكّ معناه فحدد</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">بكحل ضدّه العين فراود</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وإني لا يكون ذا كذا كا</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">ويختصم بكتفيه السماكا</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وقد أنشاه رازيّ الأوان</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">مجيد للبديع في الزمان</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">وذا العصر به يعلو وسام</span>
+<span class="quran-text font-arabic text-2xl text-amber-700 dark:text-amber-500 block text-center my-4">لذا التأليف تاريخ تمام</span>
 
 Yakînin kâşifi olmakla miftah‑ı belâgattır
 Hakikat olduğu şeye menar‑ı ihtida odur

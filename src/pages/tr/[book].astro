@@ -148,9 +148,62 @@ const getPrettyTitle = (slug, fallback) => bookTitles[slug] || fallback;
     <div id="footnote-content" class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-reader"></div>
   </div>
 
+  <!-- Tooltip System for Quran Translations -->
+  <div id="quran-tooltip" class="fixed max-w-sm w-[90%] bg-slate-800 dark:bg-slate-700 text-white text-xs rounded-xl shadow-2xl p-4 z-[100] hidden transform transition-all duration-200 pointer-events-none">
+    <span class="block font-bold text-amber-400 mb-1">Перевод:</span>
+    <div id="quran-tooltip-content" class="leading-relaxed"></div>
+  </div>
+
 </ReaderLayout>
 
 <script>
+  // Quran Tooltip Logic
+  const quranTooltip = document.getElementById('quran-tooltip');
+  const quranTooltipContent = document.getElementById('quran-tooltip-content');
+  let tooltipTimeout;
+
+  document.querySelectorAll('.quran-text[data-translation]').forEach(el => {
+    el.addEventListener('mouseenter', (e) => {
+      clearTimeout(tooltipTimeout);
+      const translation = el.getAttribute('data-translation');
+      if (translation && quranTooltipContent && quranTooltip) {
+        quranTooltipContent.innerHTML = translation;
+        quranTooltip.classList.remove('hidden');
+        
+        // Positioning
+        const rect = el.getBoundingClientRect();
+        const tooltipRect = quranTooltip.getBoundingClientRect();
+        
+        let top = rect.top - tooltipRect.height - 10;
+        let left = rect.left + (rect.width / 2) - (tooltipRect.width / 2);
+        
+        // Prevent going off screen
+        if (top < 10) top = rect.bottom + 10;
+        if (left < 10) left = 10;
+        if (left + tooltipRect.width > window.innerWidth - 10) left = window.innerWidth - tooltipRect.width - 10;
+        
+        quranTooltip.style.top = `${top}px`;
+        quranTooltip.style.left = `${left}px`;
+        
+        // Animate in
+        requestAnimationFrame(() => {
+          quranTooltip.classList.remove('opacity-0', 'scale-95');
+          quranTooltip.classList.add('opacity-100', 'scale-100');
+        });
+      }
+    });
+
+    el.addEventListener('mouseleave', () => {
+      if (quranTooltip) {
+        quranTooltip.classList.remove('opacity-100', 'scale-100');
+        quranTooltip.classList.add('opacity-0', 'scale-95');
+        tooltipTimeout = setTimeout(() => {
+          quranTooltip.classList.add('hidden');
+        }, 200);
+      }
+    });
+  });
+
   // Intercept Footnote Clicks
   const content = document.getElementById('book-content');
   const popup = document.getElementById('footnote-popup');
