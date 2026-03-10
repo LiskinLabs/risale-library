@@ -216,9 +216,12 @@ const getPrettyTitle = (slug, fallback) => bookTitles[slug] || fallback;
 <style is:global>
   .scrollbar-thin::-webkit-scrollbar { width: 4px; }
   .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
-  .scrollbar-thin::-webkit-scrollbar-thumb { @apply bg-slate-200 dark:bg-slate-800 rounded-full; }
+  .scrollbar-thin::-webkit-scrollbar-thumb { background-color: #e2e8f0; border-radius: 9999px; }
+  .dark .scrollbar-thin::-webkit-scrollbar-thumb { background-color: #1e293b; }
   html { scroll-behavior: smooth; }
-  .footnotes { @apply mt-20 pt-8 border-t border-slate-100 dark:border-slate-800 text-slate-400 text-xs; }
+  .footnotes { margin-top: 5rem; padding-top: 2rem; border-top: 1px solid #f1f5f9; color: #94a3b8; font-size: 0.75rem; }
+  .dark .footnotes { border-top-color: #1e293b; }
   .footnotes hr { display: none; }
-  a[data-footnote-ref] { @apply text-amber-600 font-bold no-underline hover:underline px-0.5; }
+  a[data-footnote-ref] { color: #d97706; font-weight: bold; text-decoration: none; padding: 0 0.125rem; }
+  a[data-footnote-ref]:hover { text-decoration: underline; }
 </style>
