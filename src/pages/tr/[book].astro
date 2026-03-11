@@ -149,14 +149,83 @@ const getPrettyTitle = (slug, fallback) => bookTitles[slug] || fallback;
   </div>
 
   <!-- Tooltip System for Quran Translations -->
-  <div id="quran-tooltip" class="fixed max-w-sm w-[90%] bg-slate-800 dark:bg-slate-700 text-white text-xs rounded-xl shadow-2xl p-4 z-[100] hidden transform transition-all duration-200 pointer-events-none">
+  <div id="quran-tooltip" class="fixed max-w-sm w-[90%] bg-slate-800 dark:bg-slate-700 text-white text-xs rounded-xl shadow-2xl p-4 z-[100] hidden transform transition-all duration-200 pointer-events-none border border-slate-600">
     <span class="block font-bold text-amber-400 mb-1">Перевод:</span>
     <div id="quran-tooltip-content" class="leading-relaxed"></div>
+  </div>
+
+  <!-- Lugat Tooltip System -->
+  <div id="lugat-tooltip" class="fixed max-w-sm w-[80%] bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 text-xs rounded-xl shadow-2xl p-4 z-[100] hidden transform transition-all duration-200 border border-amber-100 dark:border-amber-900/30">
+    <div class="mb-2 pb-2 border-b border-amber-50 dark:border-amber-900/10">
+      <span id="lugat-tooltip-word" class="font-bold text-amber-700 dark:text-amber-400 text-sm italic"></span>
+      <span class="text-[10px] text-slate-400 ml-2 uppercase tracking-tighter">Lügat</span>
+    </div>
+    <div id="lugat-tooltip-content" class="leading-relaxed font-reader"></div>
+    <div class="absolute top-full left-1/2 -translate-x-1/2 border-8 border-transparent border-t-white dark:border-t-slate-800"></div>
   </div>
 
 </ReaderLayout>
 
 <script>
+  // Lugat Tooltip Logic
+  const lugatTooltip = document.getElementById('lugat-tooltip');
+  const lugatTooltipContent = document.getElementById('lugat-tooltip-content');
+  const lugatTooltipWord = document.getElementById('lugat-tooltip-word');
+  let lugatTimeout;
+
+  function setupLugatTooltips() {
+    document.querySelectorAll('.lugat-word').forEach(el => {
+      el.addEventListener('mouseenter', (e) => {
+        clearTimeout(lugatTimeout);
+        const meaning = el.getAttribute('data-meaning');
+        const word = el.getAttribute('data-word');
+        
+        if (meaning && lugatTooltipContent && lugatTooltip && lugatTooltipWord) {
+          lugatTooltipContent.innerHTML = meaning;
+          lugatTooltipWord.textContent = word;
+          lugatTooltip.classList.remove('hidden');
+          
+          // Positioning
+          const rect = el.getBoundingClientRect();
+          const tooltipRect = lugatTooltip.getBoundingClientRect();
+          
+          let top = rect.top - tooltipRect.height - 15;
+          let left = rect.left + (rect.width / 2) - (tooltipRect.width / 2);
+          
+          // Prevent going off screen
+          if (top < 10) top = rect.bottom + 15;
+          if (left < 10) left = 10;
+          if (left + tooltipRect.width > window.innerWidth - 10) left = window.innerWidth - tooltipRect.width - 10;
+          
+          lugatTooltip.style.top = `${top}px`;
+          lugatTooltip.style.left = `${left}px`;
+          
+          // Animate in
+          requestAnimationFrame(() => {
+            lugatTooltip.style.opacity = '1';
+            lugatTooltip.style.transform = 'translateY(0) scale(1)';
+          });
+        }
+      });
+
+      el.addEventListener('mouseleave', () => {
+        if (lugatTooltip) {
+          lugatTooltip.style.opacity = '0';
+          lugatTooltip.style.transform = 'translateY(5px) scale(0.95)';
+          lugatTimeout = setTimeout(() => {
+            lugatTooltip.classList.add('hidden');
+          }, 200);
+        }
+      });
+    });
+  }
+
+  // Initial setup
+  setupLugatTooltips();
+
+  // Re-setup if content changes (e.g., if we had dynamic loading)
+  // document.addEventListener('astro:page-load', setupLugatTooltips);
+
   // Quran Tooltip Logic
   const quranTooltip = document.getElementById('quran-tooltip');
   const quranTooltipContent = document.getElementById('quran-tooltip-content');
@@ -203,6 +272,7 @@ const getPrettyTitle = (slug, fallback) => bookTitles[slug] || fallback;
       }
     });
   });
+
 
   // Intercept Footnote Clicks
   const content = document.getElementById('book-content');
@@ -274,6 +344,25 @@ const getPrettyTitle = (slug, fallback) => bookTitles[slug] || fallback;
 </script>
 
 <style is:global>
+  .lugat-word {
+    cursor: help;
+    border-bottom: 1px dotted #d97706; /* amber-600 */
+    transition: all 0.2s ease;
+    display: inline-block;
+  }
+  .lugat-word:hover {
+    background-color: rgba(217, 119, 6, 0.05);
+    border-bottom-style: solid;
+    color: #b45309; /* amber-700 */
+  }
+  .dark .lugat-word {
+    border-bottom-color: #f59e0b; /* amber-500 */
+  }
+  .dark .lugat-word:hover {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: #fbbf24; /* amber-400 */
+  }
+
   .scrollbar-thin::-webkit-scrollbar { width: 4px; }
   .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
   .scrollbar-thin::-webkit-scrollbar-thumb { background-color: #e2e8f0; border-radius: 9999px; }
