@@ -1,0 +1,124 @@
+---
+import { getCollection, render } from 'astro:content';
+import ReaderLayout from '../../layouts/ReaderLayout.astro';
+import { ReaderProgress } from '../../components/reader/ReaderProgress';
+import { LugatPanel } from '../../components/reader/LugatPanel';
+import { ReaderHeader } from '../../components/reader/ReaderHeader';
+import { SettingsPanel } from '../../components/reader/SettingsPanel';
+import { ProgressFooter } from '../../components/reader/ProgressFooter';
+import { TOCModal } from '../../components/reader/TOCModal';
+import { PageNavigator } from '../../components/reader/PageNavigator';
+
+export async function getStaticPaths() {
+  const allEntries = await getCollection('risale');
+  // Exclude archive fragments — they are excerpts from main books
+  return allEntries
+    .filter(entry => !entry.id.includes('/archive/'))
+    .map(entry => ({
+      params: { slug: entry.id },
+      props: { entry },
+    }));
+}
+
+const { entry } = Astro.props;
+const { Content, headings } = await render(entry);
+
+const getPrettyTitle = (slug: string, fallback: string | undefined) => {
+  if (fallback && fallback.trim() !== '') return fallback;
+  const key = slug.split('/').pop() || '';
+  return key.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()).trim();
+};
+
+const prettyTitle = getPrettyTitle(entry.id, entry.data.title);
+---
+
+<ReaderLayout title={`${prettyTitle} | Рисале-и Нур`} bookTitle={prettyTitle}>
+  <!-- Reader Header -->
+  <ReaderHeader 
+    client:only="react" 
+    slot="reader-header"
+    title={prettyTitle}
+    backUrl="/"
+  />
+
+  <!-- Settings Panel -->
+  <SettingsPanel client:only="react" slot="settings-panel" />
+
+  <!-- Page Navigation (Left/Right Arrows + Scroll) -->
+  <PageNavigator client:only="react" />
+
+  <!-- Main Reader Content -->
+  <article id="book-content" data-pagefind-body class="reader-page">
+    <Content />
+  </article>
+
+  <!-- Progress Footer -->
+  <ProgressFooter 
+    client:only="react" 
+    slot="reader-footer"
+    chapterName={prettyTitle}
+  />
+</ReaderLayout>
+
+<ReaderProgress client:only="react" slug={entry.id} />
+<TOCModal client:only="react" headings={headings} bookTitle={prettyTitle} />
+<LugatPanel client:only="react" />
+
+<!-- Lugat Tooltip -->
+<div id="lugat-tooltip" class="fixed max-w-sm w-[80%] text-xs rounded-xl shadow-2xl p-4 z-[100] hidden transform transition-all duration-200" style="background: var(--bg-page); color: var(--text-primary); border: 1px solid var(--border-color);">
+  <div class="mb-2 pb-2" style="border-bottom: 1px solid var(--border-color);">
+    <span id="lugat-tooltip-word" class="font-bold text-sm italic" style="color: var(--accent);"></span>
+    <span class="text-[10px] ml-2 uppercase tracking-tighter" style="color: var(--text-muted);">Lügat</span>
+  </div>
+  <div id="lugat-tooltip-content" class="leading-relaxed" style="font-family: var(--font-kazimir);"></div>
+</div>
+
+<script>
+  import { applyReaderSettings } from '../../stores/readerStore';
+  
+  // Apply all settings on page load
+  applyReaderSettings();
+
+  // Lugat tooltips setup
+  function setupLugatTooltips() {
+    document.querySelectorAll('.lugat-word').forEach(el => {
+      el.addEventListener('click', () => {
+        const word = el.getAttribute('data-word');
+        const meaning = el.getAttribute('data-meaning');
+        if (word && meaning) {
+          import('../../stores/readerStore').then(m => {
+            m.selectedWord.set({ word, meaning });
+          });
+        }
+      });
+    });
+  }
+  setupLugatTooltips();
+</script>
+
+<style is:global>
+  /* Arabic text overrides for reader */
+  .arabic {
+    font-family: var(--font-amiri);
+    font-size: 1.5em;
+    line-height: 2.4;
+    color: var(--text-arabic);
+    direction: rtl;
+    unicode-bidi: isolate;
+  }
+
+  /* Lugat styling */
+  .lugat-word {
+    cursor: help;
+    border-bottom: 1px dotted var(--accent);
+  }
+  .lugat-word:hover {
+    background-color: rgba(194, 65, 12, 0.05);
+    color: var(--accent-hover);
+  }
+
+  /* Scrollbar */
+  .scrollbar-thin::-webkit-scrollbar { width: 4px; }
+  .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+  .scrollbar-thin::-webkit-scrollbar-thumb { background-color: var(--border-color); border-radius: 9999px; }
+</style>
