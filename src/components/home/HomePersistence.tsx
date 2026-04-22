@@ -1,4 +1,3 @@
-import React from 'react';
 import { useStore } from '@nanostores/react';
 import { lastReadBook, bookmarks, readingProgress } from '../../stores/readerStore';
 
@@ -22,10 +21,10 @@ export const HomePersistence = () => {
             <div className="w-full bg-white/20 rounded-full h-1.5 mb-2">
               <div 
                 className="bg-white h-full rounded-full transition-all duration-1000" 
-                style={{ width: `${Math.round((progress[lastBookSlug] || 0) * 100)}%` }}
+                style={{ width: `${Math.round(Number(progress[lastBookSlug] || 0) * 100)}%` }}
               ></div>
             </div>
-            <span className="text-[10px] font-mono opacity-80">Прогресс: {Math.round((progress[lastBookSlug] || 0) * 100)}%</span>
+            <span className="text-[10px] font-mono opacity-80">Прогресс: {Math.round(Number(progress[lastBookSlug] || 0) * 100)}%</span>
           </div>
           
           <a 

@@ -20,20 +20,26 @@ const isBookPage = !!bookTitle;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body style="min-height: 100vh;">
+	<body class={isBookPage ? "is-reader-layout" : ""} style={!isBookPage ? "min-height: 100vh;" : ""}>
 
 		{/* ── BOOK READER MODE ── */}
 		{isBookPage && (
-			<>
-				<slot name="reader-header" />
-				<slot name="settings-panel" />
-				<main style="padding-top: 52px; padding-bottom: 64px;">
-					<div id="reader-container">
-						<slot />
-					</div>
-				</main>
-				<slot name="reader-footer" />
-			</>
+			<div class="reader-layout-wrapper">
+				<slot name="left-sidebar" />
+
+				<div class="reader-content-center">
+					<slot name="reader-header" />
+					<slot name="settings-panel" />
+					<main style="flex: 1; padding-bottom: 64px;">
+						<div id="reader-container">
+							<slot />
+						</div>
+					</main>
+					<slot name="reader-footer" />
+				</div>
+
+				<slot name="right-sidebar" />
+			</div>
 		)}
 
 		{/* ── LIBRARY MODE ── */}

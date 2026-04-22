@@ -4,12 +4,12 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && pagefind --site dist",
+    "build": "NODE_OPTIONS=\"--max-old-space-size=8192\" astro build && pagefind --site dist",
     "preview": "astro preview",
-    "astro": "astro",
+    "astro": "NODE_OPTIONS=\"--max-old-space-size=8192\" astro",
     "tauri": "tauri",
     "dev:desktop": "tauri dev",
-    "build:desktop": "npm run build && tauri build"
+    "build:desktop": "NODE_OPTIONS=\"--max-old-space-size=8192\" tauri build"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.8",

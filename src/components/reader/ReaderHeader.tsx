@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useStore } from '@nanostores/react';
-import { isSettingsPanelOpen, isTocModalOpen } from '../../stores/readerStore';
+import { isSettingsPanelOpen, isLeftSidebarOpen } from '../../stores/readerStore';
 
 interface ReaderHeaderProps {
   title: string;
@@ -12,8 +12,12 @@ export const ReaderHeader: React.FC<ReaderHeaderProps> = ({ title, backUrl = '/'
   const lastScrollY = useRef(0);
 
   useEffect(() => {
+    // We now listen to the scroll of the central container instead of window
+    const container = document.querySelector('.reader-content-center');
+    if (!container) return;
+
     const handleScroll = () => {
-      const currentY = window.scrollY;
+      const currentY = container.scrollTop;
       // Show header when scrolling up or near top
       if (currentY < 80 || currentY < lastScrollY.current - 5) {
         setIsVisible(true);
@@ -25,18 +29,29 @@ export const ReaderHeader: React.FC<ReaderHeaderProps> = ({ title, backUrl = '/'
       lastScrollY.current = currentY;
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    container.addEventListener('scroll', handleScroll, { passive: true });
+    return () => container.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <header className={`reader-header ${!isVisible ? 'hidden' : ''}`}>
-      {/* Left — Back */}
+    <header className={`reader-header sticky top-0 z-30 transition-transform duration-300 ${!isVisible ? '-translate-y-full' : 'translate-y-0'}`}>
+      {/* Left — Back & TOC Toggle (Mobile only) */}
       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', minWidth: '80px' }}>
+        <button
+          id="toc-trigger"
+          className="lg:hidden flex items-center justify-center p-2 text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
+          onClick={() => isLeftSidebarOpen.set(!isLeftSidebarOpen.get())}
+          title="Оглавление"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="15" y2="12"/><line x1="3" y1="18" x2="10" y2="18"/>
+          </svg>
+        </button>
         <a
           href={backUrl}
+          className="hidden sm:flex"
           style={{ 
-            display: 'flex', alignItems: 'center', gap: '0.3rem',
+            alignItems: 'center', gap: '0.3rem',
             color: 'var(--text-muted)', textDecoration: 'none',
             fontSize: '0.85rem', fontWeight: 500 
           }}
@@ -44,32 +59,15 @@ export const ReaderHeader: React.FC<ReaderHeaderProps> = ({ title, backUrl = '/'
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M15 18l-6-6 6-6"/>
           </svg>
-          <span className="hidden sm:inline">Библиотека</span>
+          <span>Библиотека</span>
         </a>
       </div>
 
       {/* Center — Title */}
-      <div className="reader-header-title">{title}</div>
+      <div className="reader-header-title truncate px-4">{title}</div>
 
       {/* Right — Controls */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', minWidth: '120px', justifyContent: 'flex-end' }}>
-        {/* TOC Button */}
-        <button
-          onClick={() => isTocModalOpen.set(true)}
-          title="Оглавление"
-          style={{
-            width: '36px', height: '36px', borderRadius: '8px',
-            background: 'transparent', border: 'none', cursor: 'pointer',
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            color: 'var(--text-secondary)',
-            transition: 'color 0.15s ease'
-          }}
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="15" y2="12"/><line x1="3" y1="18" x2="10" y2="18"/>
-          </svg>
-        </button>
-
+      <div className="relative flex items-center gap-1 min-w-[80px] justify-end">
         {/* Settings (Аа) Button */}
         <button
           id="settings-trigger"
