@@ -801,7 +801,7 @@ span.arabic {
 }
 .lugat-fab:hover { transform: scale(1.1); box-shadow: 0 6px 24px rgba(0,0,0,0.18); }
 
-.lugat-panel {
+.reader-sidebar-right {
   position: fixed;
   inset: 0 auto 0 0;
   z-index: 50;
@@ -812,7 +812,7 @@ span.arabic {
   transform: translateX(-100%);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.lugat-panel.open { transform: translateX(0); }
+.reader-sidebar-right.open { transform: translateX(0); }
 
 .lugat-panel-inner {
   display: flex;
@@ -1046,7 +1046,7 @@ del { background-color: #fee2e2; text-decoration: line-through; color: #991b1b; 
    RESPONSIVE
    ═══════════════════════════════════════════════════════════ */
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .reader-page {
     --reader-font-size: 16px;
     --reader-padding: 1rem;
@@ -1068,7 +1068,7 @@ del { background-color: #fee2e2; text-decoration: line-through; color: #991b1b; 
     overflow: auto;
   }
 
-  .lugat-panel {
+  .reader-sidebar-right {
     width: 100%;
   }
 
@@ -1076,4 +1076,138 @@ del { background-color: #fee2e2; text-decoration: line-through; color: #991b1b; 
     width: 95%;
     max-height: 85vh;
   }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   ALIGNMENT
+   ═══════════════════════════════════════════════════════════ */
+[data-alignment="left"] .reader-page p,
+[data-alignment="left"] .prose-risale p {
+  text-align: left;
+}
+
+[data-alignment="justify"] .reader-page p,
+[data-alignment="justify"] .prose-risale p {
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* Fix Arabic alignment */
+[data-alignment] .arabic,
+[data-alignment] .font-osmanli,
+[data-alignment] [dir="rtl"] {
+  text-align: right !important;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   3-COLUMN LAYOUT
+   ═══════════════════════════════════════════════════════════ */
+
+/* Update Settings Panel to Popover */
+.settings-panel {
+  position: absolute;
+  top: 100%;
+  right: 1.5rem;
+  width: 320px;
+  background: var(--bg-page);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  padding: 1.2rem;
+  z-index: 100;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  .settings-panel {
+    position: fixed;
+    right: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+    top: auto;
+    bottom: 0;
+    margin-top: 0;
+    border-bottom: none;
+    box-shadow: 0 -10px 40px rgba(0,0,0,0.15);
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   3-COLUMN LAYOUT STRUCTURE
+   ═══════════════════════════════════════════════════════════ */
+
+/* The main layout wrapper */
+.reader-layout-wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: var(--bg-page);
+}
+
+/* Left Sidebar (TOC) */
+.reader-sidebar-left {
+  width: 320px;
+  flex-shrink: 0;
+  border-right: 1px solid var(--border-color);
+  background: var(--bg-surface);
+  height: 100%;
+  overflow-y: auto;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 40;
+}
+
+/* Center Content */
+.reader-content-center {
+  flex: 1;
+  height: 100%;
+  overflow-y: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Right Sidebar (Lugat) */
+.reader-sidebar-right {
+  width: 350px;
+  flex-shrink: 0;
+  border-left: 1px solid var(--border-color);
+  background: var(--bg-surface);
+  height: 100%;
+  overflow-y: auto;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 40;
+}
+
+/* Mobile Overrides */
+@media (max-width: 1024px) {
+  .reader-sidebar-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    box-shadow: 4px 0 24px rgba(0,0,0,0.15);
+  }
+  .reader-sidebar-left.open {
+    transform: translateX(0);
+  }
+
+  .reader-sidebar-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    box-shadow: -4px 0 24px rgba(0,0,0,0.15);
+  }
+  .reader-sidebar-right.open {
+    transform: translateX(0);
+  }
+}
+
+/* Ensure body doesn't scroll when using layout */
+body.is-reader-layout {
+  overflow: hidden;
+  height: 100vh;
 }

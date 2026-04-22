@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import { useStore } from '@nanostores/react';
+import { useEffect } from 'react';
 import { readingProgress, lastReadBook } from '../../stores/readerStore';
 
 interface Props {
@@ -11,25 +10,29 @@ export const ReaderProgress = ({ slug }: Props) => {
     // 1. Set as last read book
     lastReadBook.set(slug);
 
-    // 2. Restore scroll position
-    const savedProgress = readingProgress.get()[slug];
-    if (savedProgress) {
-      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-      window.scrollTo(0, scrollHeight * savedProgress);
+    // 2. We now track scroll on the center content area
+    const container = document.querySelector('.reader-content-center');
+    if (!container) return;
+
+    // Restore scroll position
+    const savedProgress = Number(readingProgress.get()[slug] || 0);
+    if (savedProgress > 0) {
+      const scrollHeight = container.scrollHeight - container.clientHeight;
+      container.scrollTo(0, scrollHeight * savedProgress);
     }
 
     // 3. Track scroll changes
     const handleScroll = () => {
-      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const currentScroll = window.scrollY;
+      const scrollHeight = container.scrollHeight - container.clientHeight;
+      const currentScroll = container.scrollTop;
       const progress = scrollHeight > 0 ? currentScroll / scrollHeight : 0;
       
-      // Update store (throttled/debounced if needed, but nanostores persistent handles it well)
-      readingProgress.setKey(slug, progress);
+      // Store progress as string for persistentMap compatibility
+      readingProgress.setKey(slug, progress.toString());
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    container.addEventListener('scroll', handleScroll, { passive: true });
+    return () => container.removeEventListener('scroll', handleScroll);
   }, [slug]);
 
   return null; // Invisible component

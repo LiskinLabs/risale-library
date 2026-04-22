@@ -7,10 +7,14 @@ export const readerTheme = persistentAtom<string>('reader_theme', 'white');
 export const readerFont = persistentAtom<string>('reader_font', 'kazimir');
 export const fontScale = persistentAtom<number>('font_scale', 1, {
   encode: (v) => v.toString(),
-  decode: (v) => parseFloat(v) || 1
+  decode: (v) => {
+    const parsed = parseFloat(v);
+    return isNaN(parsed) ? 1 : Number(parsed);
+  }
 });
 export const readerMargins = persistentAtom<string>('reader_margins', 'normal');
 export const readerLineHeight = persistentAtom<string>('reader_line_height', 'normal');
+export const readerAlignment = persistentAtom<string>('reader_alignment', 'left');
 export const readerHyphens = persistentAtom<boolean>('reader_hyphens', true, {
   encode: JSON.stringify,
   decode: JSON.parse
@@ -55,7 +59,9 @@ export const selectedWord = atom<LugatEntry | null>(null);
 // ═══ UI State ═══
 
 export const isSettingsPanelOpen = atom<boolean>(false);
-export const isTocModalOpen = atom<boolean>(false);
+export const isLeftSidebarOpen = atom<boolean>(false);
+export const isRightSidebarOpen = atom<boolean>(false);
+export const isTocModalOpen = atom<boolean>(false); // Keeping for legacy/compatibility if needed temporarily
 export const scrollProgress = atom<number>(0);
 
 // ═══ Apply settings to DOM ═══
@@ -66,12 +72,13 @@ export function applyReaderSettings() {
   root.setAttribute('data-font', readerFont.get());
   root.setAttribute('data-margins', readerMargins.get());
   root.setAttribute('data-line-height', readerLineHeight.get());
+  root.setAttribute('data-alignment', readerAlignment.get());
   root.setAttribute('data-hyphens', readerHyphens.get() ? 'on' : 'off');
   root.setAttribute('data-view', readerView.get());
   root.setAttribute('data-animations', readerAnimations.get() ? 'on' : 'off');
   
   // Apply font scale as CSS var
-  const scale = fontScale.get();
+  const scale = Number(fontScale.get());
   const basePx = 18 * scale;
   root.style.setProperty('--reader-font-size', `${basePx}px`);
 }

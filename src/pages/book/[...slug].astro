@@ -6,7 +6,7 @@ import { LugatPanel } from '../../components/reader/LugatPanel';
 import { ReaderHeader } from '../../components/reader/ReaderHeader';
 import { SettingsPanel } from '../../components/reader/SettingsPanel';
 import { ProgressFooter } from '../../components/reader/ProgressFooter';
-import { TOCModal } from '../../components/reader/TOCModal';
+import { ReaderSidebar } from '../../components/reader/ReaderSidebar';
 import { PageNavigator } from '../../components/reader/PageNavigator';
 
 export async function getStaticPaths() {
@@ -33,6 +33,10 @@ const prettyTitle = getPrettyTitle(entry.id, entry.data.title);
 ---
 
 <ReaderLayout title={`${prettyTitle} | Рисале-и Нур`} bookTitle={prettyTitle}>
+
+  <!-- Left Sidebar (TOC) -->
+  <ReaderSidebar client:only="react" headings={headings} bookTitle={prettyTitle} slot="left-sidebar" />
+
   <!-- Reader Header -->
   <ReaderHeader 
     client:only="react" 
@@ -58,11 +62,13 @@ const prettyTitle = getPrettyTitle(entry.id, entry.data.title);
     slot="reader-footer"
     chapterName={prettyTitle}
   />
+
+  <!-- Right Sidebar (Lugat) -->
+  <LugatPanel client:only="react" slot="right-sidebar" />
+
 </ReaderLayout>
 
 <ReaderProgress client:only="react" slug={entry.id} />
-<TOCModal client:only="react" headings={headings} bookTitle={prettyTitle} />
-<LugatPanel client:only="react" />
 
 <!-- Lugat Tooltip -->
 <div id="lugat-tooltip" class="fixed max-w-sm w-[80%] text-xs rounded-xl shadow-2xl p-4 z-[100] hidden transform transition-all duration-200" style="background: var(--bg-page); color: var(--text-primary); border: 1px solid var(--border-color);">
@@ -88,6 +94,7 @@ const prettyTitle = getPrettyTitle(entry.id, entry.data.title);
         if (word && meaning) {
           import('../../stores/readerStore').then(m => {
             m.selectedWord.set({ word, meaning });
+            m.isRightSidebarOpen.set(true); // Ensure sidebar opens on mobile
           });
         }
       });
@@ -121,4 +128,18 @@ const prettyTitle = getPrettyTitle(entry.id, entry.data.title);
   .scrollbar-thin::-webkit-scrollbar { width: 4px; }
   .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
   .scrollbar-thin::-webkit-scrollbar-thumb { background-color: var(--border-color); border-radius: 9999px; }
+
+  /* Scrollbars for sidebars */
+  .reader-sidebar-left::-webkit-scrollbar,
+  .reader-sidebar-right::-webkit-scrollbar,
+  .reader-content-center::-webkit-scrollbar { width: 6px; }
+  .reader-sidebar-left::-webkit-scrollbar-track,
+  .reader-sidebar-right::-webkit-scrollbar-track,
+  .reader-content-center::-webkit-scrollbar-track { background: transparent; }
+  .reader-sidebar-left::-webkit-scrollbar-thumb,
+  .reader-sidebar-right::-webkit-scrollbar-thumb,
+  .reader-content-center::-webkit-scrollbar-thumb { background-color: rgba(0,0,0,0.1); border-radius: 9999px; }
+  [data-theme="dark"] .reader-sidebar-left::-webkit-scrollbar-thumb,
+  [data-theme="dark"] .reader-sidebar-right::-webkit-scrollbar-thumb,
+  [data-theme="dark"] .reader-content-center::-webkit-scrollbar-thumb { background-color: rgba(255,255,255,0.1); }
 </style>
