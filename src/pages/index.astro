@@ -6,6 +6,7 @@ import { LibraryTabs } from '../components/home/LibraryTabs';
 
 // Fetch all books
 const allBooks = await getCollection('risale');
+console.log('--- DEBUG ALL BOOKS ---', allBooks.length);
 
 const getPrettyTitle = (id: string, fallback: string | undefined) => {
   // If a valid title is in frontmatter, always trust it

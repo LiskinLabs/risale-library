@@ -3,8 +3,8 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "node -e \"fs.rmSync('.astro', {recursive:true,force:true})\" && astro dev",
-    "build": "node -e \"fs.rmSync('.astro', {recursive:true,force:true})\" && astro build && pagefind --site dist",
+    "dev": "astro dev",
+    "build": "astro build && pagefind --site dist",
     "preview": "astro preview",
     "astro": "astro",
     "tauri": "tauri",
@@ -33,5 +33,8 @@
     "@tailwindcss/typography": "^0.5.19",
     "@tauri-apps/api": "^2.10.1",
     "@tauri-apps/cli": "^2.10.1"
+  },
+  "overrides": {
+    "vite": "^7"
   }
 }
