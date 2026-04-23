@@ -15,7 +15,7 @@ export const LugatPanel = () => {
     if (!isOpen) return;
 
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && window.innerWidth <= 1024) isRightSidebarOpen.set(false);
+      if (e.key === 'Escape') isRightSidebarOpen.set(false);
     };
 
     document.addEventListener('keydown', handleKeyDown);
@@ -38,9 +38,7 @@ export const LugatPanel = () => {
   }, [searchQuery]);
 
   const handleClose = () => {
-    if (window.innerWidth <= 1024) {
-      isRightSidebarOpen.set(false);
-    }
+    isRightSidebarOpen.set(false);
     selectedWord.set(null);
   };
 
@@ -51,24 +49,12 @@ export const LugatPanel = () => {
 
   return (
     <>
-      {/* Mobile overlay */}
+      {/* Universal backdrop overlay */}
       <div
-        className={`fixed inset-0 bg-black/50 z-30 lg:hidden transition-opacity duration-300 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+        className={`fixed inset-0 bg-black/40 z-40 transition-opacity duration-300 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+        style={{ backdropFilter: 'blur(2px)', WebkitBackdropFilter: 'blur(2px)' }}
         onClick={() => isRightSidebarOpen.set(false)}
       />
-
-      {/* Floating Dictionary Button (Mobile only when closed, or Desktop when unpinned if needed later) */}
-      {!isOpen && (
-        <button
-          onClick={() => isRightSidebarOpen.set(true)}
-          className="lugat-fab lg:hidden"
-          title="Открыть словарь (Lügat)"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-          </svg>
-        </button>
-      )}
 
       {/* Side Panel (Right Sidebar) */}
       <aside className={`reader-sidebar-right ${isOpen ? 'open' : ''}`}>
@@ -84,9 +70,9 @@ export const LugatPanel = () => {
               <h2>Lügat</h2>
             </div>
             {/* Show close button on mobile, or clear button on desktop */}
-            <button onClick={handleClose} className="lugat-close-btn" title={window.innerWidth <= 1024 ? "Закрыть" : "Очистить"}>
+            <button onClick={handleClose} className="lugat-close-btn" title="Закрыть">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={window.innerWidth <= 1024 ? "M15 19l-7-7 7-7" : "M6 18L18 6M6 6l12 12"} />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
@@ -129,7 +115,7 @@ export const LugatPanel = () => {
                 )}
               </div>
             ) : selected ? (
-              <div className="lugat-definition">
+              <div className="lugat-definition" style={{ animation: 'fadeInUp 0.25s ease' }} key={selected.word}>
                 <div className="lugat-definition-header">
                   <span className="lugat-definition-label">Значение слова</span>
                   <h1 className="lugat-definition-word">{selected.word}</h1>

@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'Kazimir';
+    src: url('Kazimir-BlackItalic.eot');
+    src: local('Kazimir Black Italic'), local('Kazimir-BlackItalic'),
+        url('Kazimir-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('Kazimir-BlackItalic.woff2') format('woff2'),
+        url('Kazimir-BlackItalic.woff') format('woff'),
+        url('Kazimir-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Kazimir';
+    src: url('Kazimir-BoldItalic.eot');
+    src: local('Kazimir Bold Italic'), local('Kazimir-BoldItalic'),
+        url('Kazimir-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Kazimir-BoldItalic.woff2') format('woff2'),
+        url('Kazimir-BoldItalic.woff') format('woff'),
+        url('Kazimir-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Kazimir';
+    src: url('Kazimir-Black.eot');
+    src: local('Kazimir Black'), local('Kazimir-Black'),
+        url('Kazimir-Black.eot?#iefix') format('embedded-opentype'),
+        url('Kazimir-Black.woff2') format('woff2'),
+        url('Kazimir-Black.woff') format('woff'),
+        url('Kazimir-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kazimir';
+    src: url('Kazimir-MediumItalic.eot');
+    src: local('Kazimir Medium Italic'), local('Kazimir-MediumItalic'),
+        url('Kazimir-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('Kazimir-MediumItalic.woff2') format('woff2'),
+        url('Kazimir-MediumItalic.woff') format('woff'),
+        url('Kazimir-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Kazimir';
+    src: url('Kazimir-Light.eot');
+    src: local('Kazimir Light'), local('Kazimir-Light'),
+        url('Kazimir-Light.eot?#iefix') format('embedded-opentype'),
+        url('Kazimir-Light.woff2') format('woff2'),
+        url('Kazimir-Light.woff') format('woff'),
+        url('Kazimir-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kazimir';
+    src: url('Kazimir-Italic.eot');
+    src: local('Kazimir Italic'), local('Kazimir-Italic'),
+        url('Kazimir-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Kazimir-Italic.woff2') format('woff2'),
+        url('Kazimir-Italic.woff') format('woff'),
+        url('Kazimir-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Kazimir';
+    src: url('Kazimir-Regular.eot');
+    src: local('Kazimir Regular'), local('Kazimir-Regular'),
+        url('Kazimir-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Kazimir-Regular.woff2') format('woff2'),
+        url('Kazimir-Regular.woff') format('woff'),
+        url('Kazimir-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kazimir';
+    src: url('Kazimir-Medium.eot');
+    src: local('Kazimir Medium'), local('Kazimir-Medium'),
+        url('Kazimir-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Kazimir-Medium.woff2') format('woff2'),
+        url('Kazimir-Medium.woff') format('woff'),
+        url('Kazimir-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kazimir';
+    src: url('Kazimir-LightItalic.eot');
+    src: local('Kazimir Light Italic'), local('Kazimir-LightItalic'),
+        url('Kazimir-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Kazimir-LightItalic.woff2') format('woff2'),
+        url('Kazimir-LightItalic.woff') format('woff'),
+        url('Kazimir-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Kazimir';
+    src: url('Kazimir-Bold.eot');
+    src: local('Kazimir Bold'), local('Kazimir-Bold'),
+        url('Kazimir-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Kazimir-Bold.woff2') format('woff2'),
+        url('Kazimir-Bold.woff') format('woff'),
+        url('Kazimir-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+

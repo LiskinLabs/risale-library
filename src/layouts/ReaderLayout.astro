@@ -45,12 +45,12 @@ const isBookPage = !!bookTitle;
 		{/* ── LIBRARY MODE ── */}
 		{!isBookPage && (
 			<>
-				<header data-tauri-drag-region class="sticky top-0 z-40 w-full backdrop-blur-md shadow-sm cursor-default" style={`background: color-mix(in srgb, var(--bg-page, #fff) 85%, transparent); border-bottom: 1px solid var(--border-color, #e7e5e4);`}>
-					<div data-tauri-drag-region class="container mx-auto px-4 h-16 flex items-center justify-between">
+				<header data-tauri-drag-region class="sticky top-0 z-40 w-full glass-panel cursor-default border-b-0 border-x-0" style={`background: var(--glass-bg);`}>
+					<div data-tauri-drag-region class="container mx-auto px-4 h-[72px] flex items-center justify-between">
 						<div data-tauri-drag-region class="flex items-center gap-2">
-							<a href={import.meta.env.BASE_URL} class="flex items-center gap-2 group">
-								<div class="w-8 h-8 rounded-lg flex items-center justify-center text-white font-bold shadow-md" style="background: var(--accent, #c2410c);">RN</div>
-								<h1 class="text-lg font-bold hidden sm:block" style="color: var(--text-primary);">Рисале-и Нур <span style="color: var(--accent, #c2410c);">Библиотека</span></h1>
+							<a href={import.meta.env.BASE_URL} class="flex items-center gap-3 group">
+								<div class="w-10 h-10 rounded-xl flex items-center justify-center text-white font-black shadow-[0_2px_10px_rgba(194,65,12,0.4)] transition-transform group-hover:scale-105" style="background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);">RN</div>
+								<h1 class="text-xl font-black hidden sm:block tracking-tight" style="color: var(--text-primary); font-family: var(--font-inter);">Рисале-и Нур <span style="color: var(--accent); opacity: 0.9;">Библиотека</span></h1>
 							</a>
 						</div>
 						<div class="flex items-center gap-4">
@@ -64,10 +64,10 @@ const isBookPage = !!bookTitle;
 					<slot />
 				</main>
 
-				<footer class="py-12" style={`border-top: 1px solid var(--border-color, #e7e5e4); background: var(--bg-surface, #f5f5f4);`}>
+				<footer class="py-16 mt-12 glass-panel border-b-0 border-x-0">
 					<div class="container mx-auto px-4 text-center">
-						<p class="text-sm italic" style="color: var(--text-muted);">«Слово — это плод размышления, а истина — это дух веры»</p>
-						<p class="mt-4 text-xs" style="color: var(--text-muted);">© 2026 Многоязычная библиотека трудов Рисале-и Нур</p>
+						<p class="text-base italic mb-2" style="color: var(--text-secondary); font-family: var(--font-literata);">«Слово — это плод размышления, а истина — это дух веры»</p>
+						<p class="mt-4 text-sm font-medium tracking-wide uppercase" style="color: var(--text-muted); font-family: var(--font-inter);">© 2026 Многоязычная библиотека трудов Рисале-и Нур</p>
 					</div>
 				</footer>
 			</>

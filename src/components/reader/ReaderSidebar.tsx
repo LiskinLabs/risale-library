@@ -21,7 +21,7 @@ export const ReaderSidebar: React.FC<ReaderSidebarProps> = ({ headings, bookTitl
   useEffect(() => {
     if (!isOpen) return;
     const handler = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && window.innerWidth <= 1024) isLeftSidebarOpen.set(false);
+      if (e.key === 'Escape') isLeftSidebarOpen.set(false);
     };
     document.addEventListener('keydown', handler);
     return () => document.removeEventListener('keydown', handler);
@@ -60,9 +60,10 @@ export const ReaderSidebar: React.FC<ReaderSidebarProps> = ({ headings, bookTitl
 
   return (
     <>
-      {/* Mobile overlay */}
+      {/* Universal backdrop overlay */}
       <div
-        className={`fixed inset-0 bg-black/50 z-30 lg:hidden transition-opacity duration-300 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+        className={`fixed inset-0 bg-black/40 z-40 transition-opacity duration-300 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+        style={{ backdropFilter: 'blur(2px)', WebkitBackdropFilter: 'blur(2px)' }}
         onClick={() => isLeftSidebarOpen.set(false)}
       />
 
@@ -78,7 +79,7 @@ export const ReaderSidebar: React.FC<ReaderSidebarProps> = ({ headings, bookTitl
           </div>
           <button
             onClick={() => isLeftSidebarOpen.set(false)}
-            className="toc-close-btn lg:hidden"
+            className="toc-close-btn"
             title="Закрыть"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

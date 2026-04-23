@@ -8,6 +8,7 @@ import { SettingsPanel } from '../../components/reader/SettingsPanel';
 import { ProgressFooter } from '../../components/reader/ProgressFooter';
 import { ReaderSidebar } from '../../components/reader/ReaderSidebar';
 import { PageNavigator } from '../../components/reader/PageNavigator';
+import { TextSelectionTooltip } from '../../components/reader/TextSelectionTooltip';
 
 export async function getStaticPaths() {
   const allEntries = await getCollection('risale');
@@ -30,6 +31,7 @@ const getPrettyTitle = (slug: string, fallback: string | undefined) => {
 };
 
 const prettyTitle = getPrettyTitle(entry.id, entry.data.title);
+const bookLang = entry.id.split('/')[0] || 'ru';
 ---
 
 <ReaderLayout title={`${prettyTitle} | Рисале-и Нур`} bookTitle={prettyTitle}>
@@ -52,9 +54,12 @@ const prettyTitle = getPrettyTitle(entry.id, entry.data.title);
   <PageNavigator client:only="react" />
 
   <!-- Main Reader Content -->
-  <article id="book-content" data-pagefind-body class="reader-page">
+  <article id="book-content" data-pagefind-body data-lang={bookLang} class="reader-page">
     <Content />
   </article>
+
+  <!-- Text Selection Tooltip & TTS -->
+  <TextSelectionTooltip client:only="react" />
 
   <!-- Progress Footer -->
   <ProgressFooter 
@@ -70,19 +75,15 @@ const prettyTitle = getPrettyTitle(entry.id, entry.data.title);
 
 <ReaderProgress client:only="react" slug={entry.id} />
 
-<!-- Lugat Tooltip -->
-<div id="lugat-tooltip" class="fixed max-w-sm w-[80%] text-xs rounded-xl shadow-2xl p-4 z-[100] hidden transform transition-all duration-200" style="background: var(--bg-page); color: var(--text-primary); border: 1px solid var(--border-color);">
-  <div class="mb-2 pb-2" style="border-bottom: 1px solid var(--border-color);">
-    <span id="lugat-tooltip-word" class="font-bold text-sm italic" style="color: var(--accent);"></span>
-    <span class="text-[10px] ml-2 uppercase tracking-tighter" style="color: var(--text-muted);">Lügat</span>
-  </div>
-  <div id="lugat-tooltip-content" class="leading-relaxed" style="font-family: var(--font-kazimir);"></div>
-</div>
+
 
 <script>
-  import { applyReaderSettings } from '../../stores/readerStore';
+  import { applyReaderSettings, bookLanguage } from '../../stores/readerStore';
   
-  // Apply all settings on page load
+  // Set book language from article's data-lang attribute
+  const articleEl = document.getElementById('book-content');
+  const lang = articleEl?.getAttribute('data-lang') || 'ru';
+  bookLanguage.set(lang);
   applyReaderSettings();
 
   // Lugat tooltips setup
@@ -114,32 +115,54 @@ const prettyTitle = getPrettyTitle(entry.id, entry.data.title);
     unicode-bidi: isolate;
   }
 
-  /* Lugat styling */
+  /* Lugat styling — delicate underline */
   .lugat-word {
     cursor: help;
-    border-bottom: 1px dotted var(--accent);
+    text-decoration: underline dotted 1px;
+    text-decoration-color: color-mix(in srgb, var(--accent) 35%, transparent);
+    text-underline-offset: 3px;
+    transition: text-decoration-color 0.2s ease, color 0.2s ease;
   }
   .lugat-word:hover {
-    background-color: rgba(194, 65, 12, 0.05);
+    text-decoration-color: var(--accent);
     color: var(--accent-hover);
   }
 
-  /* Scrollbar */
+  /* Ultra-thin auto-hiding scrollbars */
   .scrollbar-thin::-webkit-scrollbar { width: 4px; }
   .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
   .scrollbar-thin::-webkit-scrollbar-thumb { background-color: var(--border-color); border-radius: 9999px; }
 
-  /* Scrollbars for sidebars */
+  .reader-sidebar-left,
+  .reader-sidebar-right,
+  .reader-content-center {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    transition: scrollbar-color 0.3s ease;
+  }
+  .reader-sidebar-left:hover,
+  .reader-sidebar-right:hover,
+  .reader-content-center:hover {
+    scrollbar-color: color-mix(in srgb, var(--text-muted) 30%, transparent) transparent;
+  }
+
   .reader-sidebar-left::-webkit-scrollbar,
   .reader-sidebar-right::-webkit-scrollbar,
-  .reader-content-center::-webkit-scrollbar { width: 6px; }
+  .reader-content-center::-webkit-scrollbar { width: 4px; }
   .reader-sidebar-left::-webkit-scrollbar-track,
   .reader-sidebar-right::-webkit-scrollbar-track,
   .reader-content-center::-webkit-scrollbar-track { background: transparent; }
   .reader-sidebar-left::-webkit-scrollbar-thumb,
   .reader-sidebar-right::-webkit-scrollbar-thumb,
-  .reader-content-center::-webkit-scrollbar-thumb { background-color: rgba(0,0,0,0.1); border-radius: 9999px; }
-  [data-theme="dark"] .reader-sidebar-left::-webkit-scrollbar-thumb,
-  [data-theme="dark"] .reader-sidebar-right::-webkit-scrollbar-thumb,
-  [data-theme="dark"] .reader-content-center::-webkit-scrollbar-thumb { background-color: rgba(255,255,255,0.1); }
+  .reader-content-center::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 9999px;
+    transition: background-color 0.3s ease;
+  }
+  .reader-sidebar-left:hover::-webkit-scrollbar-thumb,
+  .reader-sidebar-right:hover::-webkit-scrollbar-thumb,
+  .reader-content-center:hover::-webkit-scrollbar-thumb { background-color: rgba(0,0,0,0.12); }
+  [data-theme="dark"] .reader-sidebar-left:hover::-webkit-scrollbar-thumb,
+  [data-theme="dark"] .reader-sidebar-right:hover::-webkit-scrollbar-thumb,
+  [data-theme="dark"] .reader-content-center:hover::-webkit-scrollbar-thumb { background-color: rgba(255,255,255,0.1); }
 </style>

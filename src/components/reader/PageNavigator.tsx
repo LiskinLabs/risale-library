@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useStore } from '@nanostores/react';
 import { readerView, readerAnimations } from '../../stores/readerStore';
 
@@ -11,8 +11,9 @@ export const PageNavigator: React.FC = () => {
 
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
-      // Prevent default scrolling and use left/right flip
+      // Only interfere if we are scrolling vertically over the book container
       if (Math.abs(e.deltaY) > 20) {
+        e.preventDefault();
         if (e.deltaY > 0) goNext();
         else goPrev();
       }
@@ -36,22 +37,29 @@ export const PageNavigator: React.FC = () => {
     };
   }, []);
 
+  const isScrollingRef = useRef(false);
+
   const goNext = () => {
+    if (isScrollingRef.current) return;
     const el = document.getElementById('book-content');
     if (el) {
-      // Flip logic: scroll amount is width + gap
+      isScrollingRef.current = true;
       const gap = parseFloat(window.getComputedStyle(el).columnGap || '0');
       const offset = el.clientWidth + gap;
       el.scrollBy({ left: offset, behavior: animations ? 'smooth' : 'instant' });
+      setTimeout(() => { isScrollingRef.current = false; }, animations ? 400 : 50);
     }
   };
 
   const goPrev = () => {
+    if (isScrollingRef.current) return;
     const el = document.getElementById('book-content');
     if (el) {
+      isScrollingRef.current = true;
       const gap = parseFloat(window.getComputedStyle(el).columnGap || '0');
       const offset = el.clientWidth + gap;
       el.scrollBy({ left: -offset, behavior: animations ? 'smooth' : 'instant' });
+      setTimeout(() => { isScrollingRef.current = false; }, animations ? 400 : 50);
     }
   };
 

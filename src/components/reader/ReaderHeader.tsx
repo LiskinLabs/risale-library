@@ -9,6 +9,7 @@ interface ReaderHeaderProps {
 
 export const ReaderHeader: React.FC<ReaderHeaderProps> = ({ title, backUrl = '/' }) => {
   const [isVisible, setIsVisible] = useState(true);
+  const [isDownloadOpen, setIsDownloadOpen] = useState(false);
   const lastScrollY = useRef(0);
 
   useEffect(() => {
@@ -34,70 +35,87 @@ export const ReaderHeader: React.FC<ReaderHeaderProps> = ({ title, backUrl = '/'
   }, []);
 
   return (
-    <header className={`reader-header sticky top-0 z-30 transition-transform duration-300 ${!isVisible ? '-translate-y-full' : 'translate-y-0'}`}>
-      {/* Left — Back & TOC Toggle (Mobile only) */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', minWidth: '80px' }}>
+    <header className={`reader-header ${!isVisible ? '-translate-y-full opacity-0 pointer-events-none' : ''}`}>
+      {/* Left — Back & TOC Toggle */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', minWidth: '80px' }}>
         <button
           id="toc-trigger"
-          className="lg:hidden flex items-center justify-center p-2 text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
+          className="reader-header-btn lg:hidden"
           onClick={() => isLeftSidebarOpen.set(!isLeftSidebarOpen.get())}
           title="Оглавление"
         >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
             <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="15" y2="12"/><line x1="3" y1="18" x2="10" y2="18"/>
           </svg>
         </button>
         <a
           href={backUrl}
-          className="hidden sm:flex"
-          style={{ 
-            alignItems: 'center', gap: '0.3rem',
-            color: 'var(--text-muted)', textDecoration: 'none',
-            fontSize: '0.85rem', fontWeight: 500 
-          }}
+          className="reader-header-btn hidden sm:flex"
+          style={{ textDecoration: 'none', gap: '0.25rem', opacity: 0.6 }}
+          title="Библиотека"
         >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
             <path d="M15 18l-6-6 6-6"/>
           </svg>
-          <span>Библиотека</span>
         </a>
       </div>
 
       {/* Center — Title */}
-      <div className="reader-header-title truncate px-4">{title}</div>
+      <div className="reader-header-title">{title}</div>
 
       {/* Right — Controls */}
-      <div className="relative flex items-center gap-1 min-w-[80px] justify-end">
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.125rem', minWidth: '80px', justifyContent: 'flex-end', position: 'relative' }}>
         {/* Settings (Аа) Button */}
         <button
           id="settings-trigger"
-          onClick={() => isSettingsPanelOpen.set(!isSettingsPanelOpen.get())}
+          className="reader-header-btn"
+          onClick={(e) => { e.stopPropagation(); isSettingsPanelOpen.set(!isSettingsPanelOpen.get()); }}
           title="Настройки чтения"
-          style={{
-            width: '36px', height: '36px', borderRadius: '8px',
-            background: 'transparent', border: 'none', cursor: 'pointer',
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            color: 'var(--text-secondary)',
-            fontFamily: "'Kazimir', 'Literata', serif",
-            fontSize: '18px', fontWeight: 500,
-            transition: 'color 0.15s ease'
-          }}
+          style={{ fontFamily: "'Literata', serif", fontSize: '16px', fontWeight: 500 }}
         >
           Аа
         </button>
 
+        {/* Download Button */}
+        <div style={{ position: 'relative' }}>
+          <button 
+            className="reader-header-btn" 
+            title="Скачать"
+            onClick={(e) => { e.stopPropagation(); setIsDownloadOpen(!isDownloadOpen); }}
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+          </button>
+          
+          {/* Download Dropdown */}
+          {isDownloadOpen && (
+            <>
+              <div className="fixed inset-0 z-40" onClick={() => setIsDownloadOpen(false)} style={{ background: 'transparent' }} />
+              <div 
+                className="glass-panel absolute right-0 mt-2 w-40 rounded-xl shadow-2xl z-50 overflow-hidden"
+                style={{ top: '100%', display: 'flex', flexDirection: 'column' }}
+              >
+                {['EPUB', 'FB2', 'PDF', 'MOBI'].map((format) => (
+                  <button 
+                    key={format}
+                    className="px-4 py-2 text-left text-sm hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
+                    onClick={() => {
+                      alert(`Скачивание формата ${format} будет доступно в следующих обновлениях.`);
+                      setIsDownloadOpen(false);
+                    }}
+                  >
+                    Скачать в {format}
+                  </button>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+
         {/* Bookmark Button */}
-        <button
-          title="Закладка"
-          style={{
-            width: '36px', height: '36px', borderRadius: '8px',
-            background: 'transparent', border: 'none', cursor: 'pointer',
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            color: 'var(--text-secondary)',
-            transition: 'color 0.15s ease'
-          }}
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <button className="reader-header-btn hidden sm:flex" title="Закладка">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
             <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/>
           </svg>
         </button>
