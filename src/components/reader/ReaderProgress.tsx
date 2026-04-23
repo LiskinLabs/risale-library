@@ -15,24 +15,37 @@ export const ReaderProgress = ({ slug }: Props) => {
     if (!container) return;
 
     // Restore scroll position
+    let initialScrollTimeout: ReturnType<typeof setTimeout> | null = null;
     const savedProgress = Number(readingProgress.get()[slug] || 0);
     if (savedProgress > 0) {
-      const scrollHeight = container.scrollHeight - container.clientHeight;
-      container.scrollTo(0, scrollHeight * savedProgress);
+      // Delay to ensure layout and fonts are loaded before scrolling
+      initialScrollTimeout = setTimeout(() => {
+        const scrollHeight = container.scrollHeight - container.clientHeight;
+        container.scrollTo(0, scrollHeight * savedProgress);
+      }, 100);
     }
 
     // 3. Track scroll changes
+    let scrollTimeout: ReturnType<typeof setTimeout> | null = null;
     const handleScroll = () => {
-      const scrollHeight = container.scrollHeight - container.clientHeight;
-      const currentScroll = container.scrollTop;
-      const progress = scrollHeight > 0 ? currentScroll / scrollHeight : 0;
-      
-      // Store progress as string for persistentMap compatibility
-      readingProgress.setKey(slug, progress.toString());
+      if (scrollTimeout) return;
+      scrollTimeout = setTimeout(() => {
+        const scrollHeight = container.scrollHeight - container.clientHeight;
+        const currentScroll = container.scrollTop;
+        const progress = scrollHeight > 0 ? currentScroll / scrollHeight : 0;
+
+        // Store progress as string for persistentMap compatibility
+        readingProgress.setKey(slug, progress.toString());
+        scrollTimeout = null;
+      }, 500); // 500ms debounce/throttle
     };
 
     container.addEventListener('scroll', handleScroll, { passive: true });
-    return () => container.removeEventListener('scroll', handleScroll);
+    return () => {
+      container.removeEventListener('scroll', handleScroll);
+      if (scrollTimeout) clearTimeout(scrollTimeout);
+      if (initialScrollTimeout) clearTimeout(initialScrollTimeout);
+    };
   }, [slug]);
 
   return null; // Invisible component

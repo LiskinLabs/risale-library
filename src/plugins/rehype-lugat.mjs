@@ -25,7 +25,7 @@ function loadLugat() {
 
 // Tokenizes text into words and non-words.
 // Captures words containing letters, letters with diacritics, hyphens, and apostrophes.
-const tokenizer = /([\w\u00C0-\u017F\-'’]+)|([^\w\u00C0-\u017F\-'’]+)/g;
+const tokenizer = /([\p{L}\p{M}\-'’]+)|([^\p{L}\p{M}\-'’]+)/gu;
 
 export function rehypeLugat() {
   loadLugat();
