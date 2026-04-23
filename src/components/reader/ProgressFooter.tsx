@@ -29,13 +29,24 @@ export const ProgressFooter: React.FC<ProgressFooterProps> = ({ chapterName = ''
     return () => container.removeEventListener('scroll', updateProgress);
   }, []);
 
+  // Cache total words to avoid heavy textContent split on every scroll
+  const totalWordsRef = useRef<number | null>(null);
+
   // Update time estimate
   useEffect(() => {
     if (typeof document === 'undefined') return;
     const remaining = 100 - progress;
     if (remaining <= 0) { setTimeEstimate('Конец главы'); return; }
-    const pageEl = document.querySelector('.reader-page');
-    const totalWords = pageEl?.textContent?.split(/\s+/).length || 0;
+
+    if (totalWordsRef.current === null || totalWordsRef.current === 0) {
+      const pageEl = document.querySelector('.reader-page');
+      const text = pageEl?.textContent;
+      if (text) {
+        totalWordsRef.current = text.split(/\s+/).length;
+      }
+    }
+
+    const totalWords = totalWordsRef.current || 0;
     const remainingWords = Math.round(totalWords * (remaining / 100));
     const minutes = Math.round(remainingWords / 200);
     if (minutes < 1) { setTimeEstimate('менее 1 мин'); return; }
