@@ -1,10 +1,10 @@
 {
-  "name": "Risale Digital Library",
-  "short_name": "Risale",
+  "name": "Readest",
+  "short_name": "Readest",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "description": "Risale Digital Library is an open-source eBook reader supporting EPUB, PDF, and sync across devices.",
+  "description": "Readest is an open-source eBook reader supporting EPUB, PDF, and sync across devices.",
   "icons": [
     {
       "src": "/icon.png",

@@ -15,7 +15,7 @@ import {
   LOCAL_IMAGES_SUBDIR,
 } from './constants';
 
-const APP_NAME = 'Readest';
+const APP_NAME = 'Risale Digital Library';
 
 // System directory getters matching Tauri's appDataDir, appConfigDir, etc.
 function getAppDataDir(): string {

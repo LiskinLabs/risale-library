@@ -631,12 +631,12 @@ const actionItems = [
   },
   {
     id: 'action.about',
-    labelKey: _('About Readest'),
+    labelKey: _('About Risale Digital Library'),
     keywords: ['about', 'readest', 'version', 'info'],
   },
   {
     id: 'action.telemetry',
-    labelKey: _('Help improve Readest'),
+    labelKey: _('Help improve Risale Digital Library'),
     keywords: ['telemetry', 'analytics', 'improve', 'statistics'],
   },
 ];

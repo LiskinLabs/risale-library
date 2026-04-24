@@ -43,48 +43,68 @@ export const LibraryTabs = ({ library }: Props) => {
 
   const currentBooks = library[activeTab] || [];
 
-  const renderBookRow = (book: Book) => (
-    <a 
-      key={book.id}
-      href={`${import.meta.env.BASE_URL}book/${book.id}`} 
-      className="group relative flex flex-col justify-between p-0 overflow-hidden rounded-[4px] border border-slate-200/20 dark:border-slate-700/20 aspect-[1/1.5] book-cover-3d cursor-pointer"
-      style={{ fontFamily: 'var(--font-inter)' }}
-    >
-      {/* Background Gradient & Texture */}
-      <div className={`absolute inset-0 z-0 bg-gradient-to-br opacity-95 transition-opacity duration-500 group-hover:opacity-100 ${
-         book.category === 'main' ? 'from-amber-700 via-amber-800 to-amber-950' :
-         book.category === 'small' ? 'from-emerald-700 via-emerald-800 to-emerald-950' :
-         book.category === 'prayers' ? 'from-sky-700 via-sky-800 to-slate-900' :
-         'from-slate-600 via-slate-700 to-slate-900'
-      }`} />
-      
-      {/* Cover content */}
-      <div className="relative z-20 flex flex-col h-full ml-5 p-5">
-        <div className="flex justify-between items-start mb-auto">
-          <div className="px-2.5 py-1 bg-black/20 backdrop-blur-md rounded-full border border-white/10 text-[9px] font-bold text-white shadow-sm flex items-center gap-1.5 uppercase tracking-widest">
-            <span className="opacity-80">{LANGUAGE_META[activeTab]?.icon || ''}</span>
-            <span>{activeTab}</span>
-          </div>
-        </div>
+  const getCoverUrl = (book: Book, lang: string) => {
+    const filename = book.title.replace(/'/g, "").replace(/-/g, "_").replace(/ /g, "_").replace(/İ/g, "I").replace(/ı/g, "i") + ".svg";
+    return `${import.meta.env.BASE_URL}covers/${lang}/${filename}`;
+  };
+
+  const renderBookRow = (book: Book) => {
+    const coverUrl = getCoverUrl(book, activeTab);
+
+    return (
+      <a
+        key={book.id}
+        href={`${import.meta.env.BASE_URL}book/${book.id}`}
+        className="group relative flex flex-col justify-between p-0 overflow-hidden rounded-[4px] border border-slate-200/20 dark:border-slate-700/20 aspect-[1/1.5] book-cover-3d cursor-pointer"
+        style={{ fontFamily: 'var(--font-inter)' }}
+      >
+        {/* SVG Cover Image */}
+        <img
+          src={coverUrl}
+          alt={book.title}
+          className="absolute inset-0 w-full h-full object-cover z-10 transition-transform duration-500 group-hover:scale-105"
+          onError={(e) => {
+            // Fallback if the specific SVG doesn't exist
+            e.currentTarget.style.display = 'none';
+          }}
+        />
+
+        {/* Fallback Background Gradient & Texture */}
+        <div className={`absolute inset-0 z-0 bg-gradient-to-br opacity-95 transition-opacity duration-500 group-hover:opacity-100 ${
+           book.category === 'main' ? 'from-amber-700 via-amber-800 to-amber-950' :
+           book.category === 'small' ? 'from-emerald-700 via-emerald-800 to-emerald-950' :
+           book.category === 'prayers' ? 'from-sky-700 via-sky-800 to-slate-900' :
+           'from-slate-600 via-slate-700 to-slate-900'
+        }`} />
         
-        <div className="mt-auto pb-2 flex flex-col justify-end h-full">
-          {/* Decorative graphic element (abstract) */}
-          <div className="w-12 h-12 rounded-full border border-white/20 mb-6 flex items-center justify-center bg-gradient-to-tr from-white/5 to-transparent shadow-inner">
-             <span className="text-xl font-black text-white/50" style={{ fontFamily: 'var(--reader-font, var(--font-literata))' }}>
-                {book.title.substring(0, 1)}
-             </span>
+        {/* Cover content (Fallback) */}
+        <div className="relative z-20 flex flex-col h-full ml-5 p-5">
+          <div className="flex justify-between items-start mb-auto">
+            <div className="px-2.5 py-1 bg-black/20 backdrop-blur-md rounded-full border border-white/10 text-[9px] font-bold text-white shadow-sm flex items-center gap-1.5 uppercase tracking-widest">
+              <span className="opacity-80">{LANGUAGE_META[activeTab]?.icon || ''}</span>
+              <span>{activeTab}</span>
+            </div>
           </div>
           
-          <h4 className="text-[1.35rem] font-bold text-white leading-tight mb-2 drop-shadow-md group-hover:text-amber-100 transition-colors" style={{ fontFamily: 'var(--reader-font, var(--font-literata))', fontStyle: 'italic' }}>
-            {book.title}
-          </h4>
-          <p className="text-[10px] text-white/60 font-semibold tracking-widest uppercase">
-            {CATEGORIES.find(c => c.id === book.category)?.label || 'Рисале-и Нур'}
-          </p>
+          <div className="mt-auto pb-2 flex flex-col justify-end h-full">
+            {/* Decorative graphic element (abstract) */}
+            <div className="w-12 h-12 rounded-full border border-white/20 mb-6 flex items-center justify-center bg-gradient-to-tr from-white/5 to-transparent shadow-inner fallback-cover-element">
+               <span className="text-xl font-black text-white/50" style={{ fontFamily: 'var(--reader-font, var(--font-literata))' }}>
+                  {book.title.substring(0, 1)}
+               </span>
+            </div>
+
+            <h4 className="text-[1.35rem] font-bold text-white leading-tight mb-2 drop-shadow-md group-hover:text-amber-100 transition-colors fallback-cover-element" style={{ fontFamily: 'var(--reader-font, var(--font-literata))', fontStyle: 'italic' }}>
+              {book.title}
+            </h4>
+            <p className="text-[10px] text-white/60 font-semibold tracking-widest uppercase fallback-cover-element">
+              {CATEGORIES.find(c => c.id === book.category)?.label || 'Рисале-и Нур'}
+            </p>
+          </div>
         </div>
-      </div>
-    </a>
-  );
+      </a>
+    );
+  };
 
   return (
     <div className="space-y-20">

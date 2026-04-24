@@ -598,11 +598,11 @@ export class NativeAppService extends BaseAppService {
     console.log('Running migration 20251029 to update paths in Images dir...');
     const rootPath = await this.resolveFilePath('..', 'Data');
     const newDir = await this.fs.getPrefix('Images');
-    const oldDir = await join(rootPath, 'Images', 'Readest', 'Images');
+    const oldDir = await join(rootPath, 'Images', 'Risale Digital Library', 'Images');
 
     await copyFiles(this, oldDir, newDir);
 
-    const dirToDelete = await join(rootPath, 'Images', 'Readest');
+    const dirToDelete = await join(rootPath, 'Images', 'Risale Digital Library');
     await this.deleteDir(dirToDelete, 'None', true);
   }
 }

@@ -1,5 +1,5 @@
 [package]
-name = "risale-library"
+name = "Readest"
 version = "0.2.2"
 description = "Your online library"
 authors = ["Bilingify LLC"]
