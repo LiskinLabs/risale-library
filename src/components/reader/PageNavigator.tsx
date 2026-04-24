@@ -44,10 +44,18 @@ export const PageNavigator: React.FC = () => {
     const el = document.getElementById('book-content');
     if (el) {
       isScrollingRef.current = true;
-      const gap = parseFloat(window.getComputedStyle(el).columnGap || '0');
-      const offset = el.clientWidth + gap;
-      el.scrollBy({ left: offset, behavior: animations ? 'smooth' : 'instant' });
-      setTimeout(() => { isScrollingRef.current = false; }, animations ? 400 : 50);
+      // In 2-column mode, we scroll by the full width of the container
+      // The scroll-snap will handle the alignment
+      const offset = el.clientWidth;
+      
+      el.scrollBy({ 
+        left: offset, 
+        behavior: animations ? 'smooth' : 'instant' 
+      });
+      
+      setTimeout(() => { 
+        isScrollingRef.current = false; 
+      }, animations ? 500 : 50);
     }
   };
 
@@ -56,10 +64,16 @@ export const PageNavigator: React.FC = () => {
     const el = document.getElementById('book-content');
     if (el) {
       isScrollingRef.current = true;
-      const gap = parseFloat(window.getComputedStyle(el).columnGap || '0');
-      const offset = el.clientWidth + gap;
-      el.scrollBy({ left: -offset, behavior: animations ? 'smooth' : 'instant' });
-      setTimeout(() => { isScrollingRef.current = false; }, animations ? 400 : 50);
+      const offset = el.clientWidth;
+      
+      el.scrollBy({ 
+        left: -offset, 
+        behavior: animations ? 'smooth' : 'instant' 
+      });
+      
+      setTimeout(() => { 
+        isScrollingRef.current = false; 
+      }, animations ? 500 : 50);
     }
   };
 

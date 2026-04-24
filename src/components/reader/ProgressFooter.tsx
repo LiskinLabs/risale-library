@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { useStore } from '@nanostores/react';
-import { scrollProgress } from '../../stores/readerStore';
+import { scrollProgress, readerView } from '../../stores/readerStore';
 
 interface ProgressFooterProps {
   chapterName?: string;
@@ -8,31 +8,63 @@ interface ProgressFooterProps {
 
 export const ProgressFooter: React.FC<ProgressFooterProps> = ({ chapterName = '' }) => {
   const progress = useStore(scrollProgress);
+  const view = useStore(readerView);
   const [timeEstimate, setTimeEstimate] = useState('');
+  const [pageInfo, setPageInfo] = useState('');
   const [isDragging, setIsDragging] = useState(false);
   const trackRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const container = document.querySelector('.reader-content-center');
-    if (!container) return;
-
     const updateProgress = () => {
-      const scrollHeight = container.scrollHeight - container.clientHeight;
-      if (scrollHeight > 0) {
-        const pct = Math.round((container.scrollTop / scrollHeight) * 100);
-        scrollProgress.set(Math.min(100, Math.max(0, pct)));
+      if (view === 'book') {
+        const container = document.getElementById('book-content');
+        if (!container) return;
+        const scrollWidth = container.scrollWidth - container.clientWidth;
+        
+        const totalPages = Math.ceil(container.scrollWidth / container.clientWidth);
+        const currentPage = Math.round(container.scrollLeft / container.clientWidth) + 1;
+        setPageInfo(`${currentPage} / ${totalPages}`);
+
+        if (scrollWidth > 0) {
+          const pct = Math.round((container.scrollLeft / scrollWidth) * 100);
+          scrollProgress.set(Math.min(100, Math.max(0, pct)));
+        } else {
+          scrollProgress.set(100);
+        }
+      } else {
+        const container = document.querySelector('.reader-content-center');
+        if (!container) return;
+        const scrollHeight = container.scrollHeight - container.clientHeight;
+        setPageInfo('');
+        if (scrollHeight > 0) {
+          const pct = Math.round((container.scrollTop / scrollHeight) * 100);
+          scrollProgress.set(Math.min(100, Math.max(0, pct)));
+        } else {
+          scrollProgress.set(100);
+        }
       }
     };
 
-    container.addEventListener('scroll', updateProgress, { passive: true });
-    updateProgress();
-    return () => container.removeEventListener('scroll', updateProgress);
-  }, []);
+    const containerBook = document.getElementById('book-content');
+    const containerScroll = document.querySelector('.reader-content-center');
 
-  // Cache total words to avoid heavy textContent split on every scroll
+    if (containerBook) containerBook.addEventListener('scroll', updateProgress, { passive: true });
+    if (containerScroll) containerScroll.addEventListener('scroll', updateProgress, { passive: true });
+    window.addEventListener('resize', updateProgress);
+    
+    // Initial calculations need a delay to allow layout and fonts to settle
+    const to = setTimeout(updateProgress, 300);
+
+    return () => {
+      if (containerBook) containerBook.removeEventListener('scroll', updateProgress);
+      if (containerScroll) containerScroll.removeEventListener('scroll', updateProgress);
+      window.removeEventListener('resize', updateProgress);
+      clearTimeout(to);
+    };
+  }, [view]);
+
   const totalWordsRef = useRef<number | null>(null);
 
-  // Update time estimate
   useEffect(() => {
     if (typeof document === 'undefined') return;
     const remaining = 100 - progress;
@@ -57,11 +89,20 @@ export const ProgressFooter: React.FC<ProgressFooterProps> = ({ chapterName = ''
   }, [progress]);
 
   const scrollToPercent = useCallback((pct: number) => {
-    const container = document.querySelector('.reader-content-center');
-    if (!container) return;
-    const scrollHeight = container.scrollHeight - container.clientHeight;
-    container.scrollTo({ top: scrollHeight * pct, behavior: isDragging ? 'instant' : 'smooth' });
-  }, [isDragging]);
+    if (view === 'book') {
+      const container = document.getElementById('book-content');
+      if (!container) return;
+      const scrollWidth = container.scrollWidth - container.clientWidth;
+      const targetScroll = scrollWidth * pct;
+      const targetPage = Math.round(targetScroll / container.clientWidth);
+      container.scrollTo({ left: targetPage * container.clientWidth, behavior: isDragging ? 'instant' : 'smooth' });
+    } else {
+      const container = document.querySelector('.reader-content-center');
+      if (!container) return;
+      const scrollHeight = container.scrollHeight - container.clientHeight;
+      container.scrollTo({ top: scrollHeight * pct, behavior: isDragging ? 'instant' : 'smooth' });
+    }
+  }, [isDragging, view]);
 
   const handleProgressClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (isDragging) return;
@@ -106,8 +147,9 @@ export const ProgressFooter: React.FC<ProgressFooterProps> = ({ chapterName = ''
         <span style={{ maxWidth: '40%', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
           {chapterName}
         </span>
-        <span>Прочитано {progress}% · {timeEstimate}</span>
+        <span>{pageInfo ? `Стр. ${pageInfo} · ` : ''}Прочитано {progress}% · {timeEstimate}</span>
       </div>
     </footer>
   );
 };
+

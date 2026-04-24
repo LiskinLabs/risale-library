@@ -22,13 +22,6 @@ export const LugatPanel = () => {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isOpen]);
 
-  useEffect(() => {
-    if (selected) {
-      isRightSidebarOpen.set(true);
-      setSearchQuery('');
-    }
-  }, [selected]);
-
   const filteredWords = useMemo(() => {
     if (searchQuery.length < 2) return [];
     const query = searchQuery.toLowerCase();
@@ -49,15 +42,15 @@ export const LugatPanel = () => {
 
   return (
     <>
-      {/* Universal backdrop overlay */}
+      {/* Universal backdrop overlay — only on mobile */}
       <div
-        className={`fixed inset-0 bg-black/40 z-40 transition-opacity duration-300 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+        className={`fixed inset-0 bg-black/40 z-40 transition-opacity duration-300 lg:hidden ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
         style={{ backdropFilter: 'blur(2px)', WebkitBackdropFilter: 'blur(2px)' }}
         onClick={() => isRightSidebarOpen.set(false)}
       />
 
       {/* Side Panel (Right Sidebar) */}
-      <aside className={`reader-sidebar-right ${isOpen ? 'open' : ''}`}>
+      <aside className={`reader-sidebar-right ${isOpen ? 'open' : ''} glass-panel`}>
         <div className="lugat-panel-inner">
           {/* Header */}
           <div className="lugat-header sticky top-0 z-10">

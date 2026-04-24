@@ -149,6 +149,7 @@ export interface LugatEntry {
   meaning: string;
 }
 export const selectedWord = atom<LugatEntry | null>(null);
+export const lugatPopupPosition = atom<{ x: number, y: number } | null>(null);
 
 // ═══ UI State ═══
 

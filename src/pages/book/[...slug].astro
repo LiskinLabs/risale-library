@@ -2,13 +2,13 @@
 import { getCollection, render } from 'astro:content';
 import ReaderLayout from '../../layouts/ReaderLayout.astro';
 import { ReaderProgress } from '../../components/reader/ReaderProgress';
-import { LugatPanel } from '../../components/reader/LugatPanel';
 import { ReaderHeader } from '../../components/reader/ReaderHeader';
 import { SettingsPanel } from '../../components/reader/SettingsPanel';
 import { ProgressFooter } from '../../components/reader/ProgressFooter';
 import { ReaderSidebar } from '../../components/reader/ReaderSidebar';
 import { PageNavigator } from '../../components/reader/PageNavigator';
 import { TextSelectionTooltip } from '../../components/reader/TextSelectionTooltip';
+import { LugatTooltip } from '../../components/reader/LugatTooltip';
 
 export async function getStaticPaths() {
   const allEntries = await getCollection('risale');
@@ -61,6 +61,9 @@ const bookLang = entry.id.split('/')[0] || 'ru';
   <!-- Text Selection Tooltip & TTS -->
   <TextSelectionTooltip client:only="react" />
 
+  <!-- Lugat Tooltip (Floating) -->
+  <LugatTooltip client:only="react" />
+
   <!-- Progress Footer -->
   <ProgressFooter 
     client:only="react" 
@@ -68,17 +71,12 @@ const bookLang = entry.id.split('/')[0] || 'ru';
     chapterName={prettyTitle}
   />
 
-  <!-- Right Sidebar (Lugat) -->
-  <LugatPanel client:only="react" slot="right-sidebar" />
-
 </ReaderLayout>
 
 <ReaderProgress client:only="react" slug={entry.id} />
 
-
-
 <script>
-  import { applyReaderSettings, bookLanguage } from '../../stores/readerStore';
+  import { applyReaderSettings, bookLanguage, selectedWord, lugatPopupPosition } from '../../stores/readerStore';
   
   // Set book language from article's data-lang attribute
   const articleEl = document.getElementById('book-content');
@@ -86,22 +84,27 @@ const bookLang = entry.id.split('/')[0] || 'ru';
   bookLanguage.set(lang);
   applyReaderSettings();
 
-  // Lugat tooltips setup
-  function setupLugatTooltips() {
-    document.querySelectorAll('.lugat-word').forEach(el => {
-      el.addEventListener('click', () => {
-        const word = el.getAttribute('data-word');
-        const meaning = el.getAttribute('data-meaning');
-        if (word && meaning) {
-          import('../../stores/readerStore').then(m => {
-            m.selectedWord.set({ word, meaning });
-            m.isRightSidebarOpen.set(true); // Ensure sidebar opens on mobile
-          });
-        }
+  // Lugat Interaction Logic
+  document.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement;
+    const lugatWord = target.closest('.lugat-word');
+    
+    if (lugatWord) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      const word = lugatWord.getAttribute('data-word') || '';
+      const meaning = lugatWord.getAttribute('data-meaning') || '';
+      
+      const rect = lugatWord.getBoundingClientRect();
+      
+      selectedWord.set({ word, meaning });
+      lugatPopupPosition.set({ 
+        x: rect.left + rect.width / 2, 
+        y: rect.top 
       });
-    });
-  }
-  setupLugatTooltips();
+    }
+  });
 </script>
 
 <style is:global>
@@ -113,19 +116,6 @@ const bookLang = entry.id.split('/')[0] || 'ru';
     color: var(--text-arabic);
     direction: rtl;
     unicode-bidi: isolate;
-  }
-
-  /* Lugat styling — delicate underline */
-  .lugat-word {
-    cursor: help;
-    text-decoration: underline dotted 1px;
-    text-decoration-color: color-mix(in srgb, var(--accent) 35%, transparent);
-    text-underline-offset: 3px;
-    transition: text-decoration-color 0.2s ease, color 0.2s ease;
-  }
-  .lugat-word:hover {
-    text-decoration-color: var(--accent);
-    color: var(--accent-hover);
   }
 
   /* Ultra-thin auto-hiding scrollbars */

@@ -106,28 +106,31 @@ export const TextSelectionTooltip: React.FC = () => {
     let langCode = 'ru-RU';
     if (lang === 'tr' || lang === 'os') langCode = 'tr-TR';
     if (lang === 'ar') langCode = 'ar-SA';
-    
+
     utterance.lang = langCode;
     utterance.rate = 0.9; // Slightly slower for better reading
-    
-    // Try to find a male voice
+
+    // Try to find the exact voices used in gemini_telegram_official (Dmitry for RU, Ahmet for TR)
     const voices = window.speechSynthesis.getVoices();
     const targetVoices = voices.filter(v => v.lang.startsWith(langCode.split('-')[0]));
-    
-    // Heuristic for finding a male voice (often has "Male", "David", "Pavel", "Tariq", etc. in name)
-    const maleVoice = targetVoices.find(v => 
-      v.name.toLowerCase().includes('male') || 
-      v.name.toLowerCase().includes('pavel') || 
-      v.name.toLowerCase().includes('tariq') ||
-      v.name.toLowerCase().includes('tolga')
-    );
 
-    if (maleVoice) {
-      utterance.voice = maleVoice;
+    let preferredVoice = null;
+
+    if (langCode === 'ru-RU') {
+      preferredVoice = targetVoices.find(v => v.name.toLowerCase().includes('dmitry')) ||
+                       targetVoices.find(v => v.name.toLowerCase().includes('pavel') || v.name.toLowerCase().includes('male'));
+    } else if (langCode === 'tr-TR') {
+      preferredVoice = targetVoices.find(v => v.name.toLowerCase().includes('ahmet')) ||
+                       targetVoices.find(v => v.name.toLowerCase().includes('tolga') || v.name.toLowerCase().includes('male'));
+    } else {
+      preferredVoice = targetVoices.find(v => v.name.toLowerCase().includes('male') || v.name.toLowerCase().includes('tariq'));
+    }
+
+    if (preferredVoice) {
+      utterance.voice = preferredVoice;
     } else if (targetVoices.length > 0) {
       utterance.voice = targetVoices[0]; // fallback to first available
     }
-
     utterance.onstart = () => setIsPlaying(true);
     utterance.onend = () => {
       setIsPlaying(false);
