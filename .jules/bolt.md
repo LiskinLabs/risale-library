@@ -1,3 +1,0 @@
-## 2024-03-10 - [Frontend] IntersectionObserver TOC Highlighting Bottleneck
-**Learning:** In Astro, running `document.querySelectorAll('#toc-nav a').forEach(...)` inside an `IntersectionObserver` callback for every scroll event causes O(N) DOM operations, leading to main thread blocking and scroll jank, especially on pages with hundreds of headings like full books.
-**Action:** Always cache the currently active DOM element in the module scope. Use an O(1) approach: find the specific new target link using an attribute selector, remove active classes from the cached previous element, and apply them to the new target.
