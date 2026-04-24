@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "NODE_OPTIONS=\"--max-old-space-size=8192\" astro dev",
     "build": "NODE_OPTIONS=\"--max-old-space-size=8192\" astro build && pagefind --site dist",
     "preview": "astro preview",
     "astro": "NODE_OPTIONS=\"--max-old-space-size=8192\" astro",
@@ -32,7 +32,8 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.19",
     "@tauri-apps/api": "^2.10.1",
-    "@tauri-apps/cli": "^2.10.1"
+    "@tauri-apps/cli": "^2.10.1",
+    "@types/node": "^25.6.0"
   },
   "overrides": {
     "vite": "^7"
