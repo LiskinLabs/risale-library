@@ -4,6 +4,7 @@ import { selectedWord, isRightSidebarOpen, type LugatEntry } from '../../stores/
 import lugatDataJson from '../../data/lugat_full.json';
 
 const lugatData = lugatDataJson as Record<string, string>;
+const lugatKeys = Object.keys(lugatData);
 
 export const LugatPanel = () => {
   const selected = useStore(selectedWord);
@@ -23,9 +24,10 @@ export const LugatPanel = () => {
   }, [isOpen]);
 
   const filteredWords = useMemo(() => {
-    if (searchQuery.length < 2) return [];
-    const query = searchQuery.toLowerCase();
-    return Object.keys(lugatData)
+    const query = searchQuery.trim().toLowerCase();
+    if (query.length < 2) return [];
+    
+    return lugatKeys
       .filter(w => w.toLowerCase().includes(query))
       .slice(0, 50);
   }, [searchQuery]);
