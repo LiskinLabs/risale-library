@@ -77,12 +77,12 @@ const SettingsMenu: React.FC<SettingsMenuProps> = ({ onPullLibrary, setIsDropdow
     setIsDropdownOpen?.(false);
   };
 
-  const showAboutReadest = () => {
+  const showAboutRisale Digital Library = () => {
     setAboutDialogVisible(true);
     setIsDropdownOpen?.(false);
   };
 
-  const downloadReadest = () => {
+  const downloadRisale Digital Library = () => {
     window.open(DOWNLOAD_READEST_URL, '_blank');
     setIsDropdownOpen?.(false);
   };
@@ -443,12 +443,12 @@ const SettingsMenu: React.FC<SettingsMenuProps> = ({ onPullLibrary, setIsDropdow
       </MenuItem>
       <hr aria-hidden='true' className='border-base-200 my-1' />
       {user && userProfilePlan === 'free' && (
-        <MenuItem label={_('Upgrade to Readest Premium')} onClick={handleUpgrade} />
+        <MenuItem label={_('Upgrade to Risale Digital Library Premium')} onClick={handleUpgrade} />
       )}
-      {isWebAppPlatform() && <MenuItem label={_('Download Readest')} onClick={downloadReadest} />}
-      <MenuItem label={_('About Readest')} onClick={showAboutReadest} />
+      {isWebAppPlatform() && <MenuItem label={_('Download Risale Digital Library')} onClick={downloadRisale Digital Library} />}
+      <MenuItem label={_('About Risale Digital Library')} onClick={showAboutRisale Digital Library} />
       <MenuItem
-        label={_('Help improve Readest')}
+        label={_('Help improve Risale Digital Library')}
         description={isTelemetryEnabled ? _('Sharing anonymized statistics') : ''}
         toggled={isTelemetryEnabled}
         onClick={toggleTelemetry}

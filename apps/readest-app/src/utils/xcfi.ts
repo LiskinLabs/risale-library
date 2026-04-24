@@ -1,6 +1,6 @@
 /**
  * Converter between EPUB CFI and CREngine XPointer
- * Converts between Readest (foliate-js) CFI format and KOReader CREngine XPointer format
+ * Converts between Risale Digital Library (foliate-js) CFI format and KOReader CREngine XPointer format
  */
 
 import { BookDoc } from '@/libs/document';
@@ -407,7 +407,7 @@ export class XCFI {
   }
 
   /**
-   * Check if an element is injected by Readest at runtime and should be
+   * Check if an element is injected by Risale Digital Library at runtime and should be
    * invisible to XPointer path building / resolution (e.g. skip-link div).
    */
   private static isCfiInert(element: Element): boolean {
