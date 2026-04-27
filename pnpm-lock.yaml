@@ -31,6 +31,9 @@ overrides:
   uuid: '>=14.0.0'
 
 patchedDependencies:
+  '@ai-sdk/provider-utils@4.0.23':
+    hash: 90e367a1019a46d3ca3a4e231b48615de88fd56eb3212f4e0a5528154c523295
+    path: patches/@ai-sdk__provider-utils@4.0.23.patch
   mdast-util-gfm-autolink-literal@2.0.1:
     hash: a119b196bac546b8f07e1a9600ced6f526b0676e2b959914868e393ecffbaff8
     path: patches/mdast-util-gfm-autolink-literal@2.0.1.patch
@@ -8833,18 +8836,18 @@ snapshots:
   '@ai-sdk/gateway@2.0.29(zod@4.3.6)':
     dependencies:
       '@ai-sdk/provider': 2.0.1
-      '@ai-sdk/provider-utils': 4.0.23(zod@4.3.6)
+      '@ai-sdk/provider-utils': 4.0.23(patch_hash=90e367a1019a46d3ca3a4e231b48615de88fd56eb3212f4e0a5528154c523295)(zod@4.3.6)
       '@vercel/oidc': 3.1.0
       zod: 4.3.6
 
   '@ai-sdk/gateway@3.0.22(zod@4.3.6)':
     dependencies:
       '@ai-sdk/provider': 3.0.5
-      '@ai-sdk/provider-utils': 4.0.23(zod@4.3.6)
+      '@ai-sdk/provider-utils': 4.0.23(patch_hash=90e367a1019a46d3ca3a4e231b48615de88fd56eb3212f4e0a5528154c523295)(zod@4.3.6)
       '@vercel/oidc': 3.1.0
       zod: 4.3.6
 
-  '@ai-sdk/provider-utils@4.0.23(zod@4.3.6)':
+  '@ai-sdk/provider-utils@4.0.23(patch_hash=90e367a1019a46d3ca3a4e231b48615de88fd56eb3212f4e0a5528154c523295)(zod@4.3.6)':
     dependencies:
       '@ai-sdk/provider': 3.0.8
       '@standard-schema/spec': 1.1.0
@@ -8865,7 +8868,7 @@ snapshots:
 
   '@ai-sdk/react@2.0.125(react@19.2.5)(zod@4.3.6)':
     dependencies:
-      '@ai-sdk/provider-utils': 4.0.23(zod@4.3.6)
+      '@ai-sdk/provider-utils': 4.0.23(patch_hash=90e367a1019a46d3ca3a4e231b48615de88fd56eb3212f4e0a5528154c523295)(zod@4.3.6)
       ai: 5.0.123(zod@4.3.6)
       react: 19.2.5
       swr: 2.3.8(react@19.2.5)
@@ -8875,7 +8878,7 @@ snapshots:
 
   '@ai-sdk/react@3.0.51(react@19.2.5)(zod@4.3.6)':
     dependencies:
-      '@ai-sdk/provider-utils': 4.0.23(zod@4.3.6)
+      '@ai-sdk/provider-utils': 4.0.23(patch_hash=90e367a1019a46d3ca3a4e231b48615de88fd56eb3212f4e0a5528154c523295)(zod@4.3.6)
       ai: 6.0.49(zod@4.3.6)
       react: 19.2.5
       swr: 2.3.8(react@19.2.5)
@@ -13105,7 +13108,7 @@ snapshots:
   ai-sdk-ollama@3.3.0(ai@6.0.49(zod@4.3.6))(zod@4.3.6):
     dependencies:
       '@ai-sdk/provider': 3.0.5
-      '@ai-sdk/provider-utils': 4.0.23(zod@4.3.6)
+      '@ai-sdk/provider-utils': 4.0.23(patch_hash=90e367a1019a46d3ca3a4e231b48615de88fd56eb3212f4e0a5528154c523295)(zod@4.3.6)
       ai: 6.0.49(zod@4.3.6)
       ollama: 0.6.3
     transitivePeerDependencies:
@@ -13115,7 +13118,7 @@ snapshots:
     dependencies:
       '@ai-sdk/gateway': 2.0.29(zod@4.3.6)
       '@ai-sdk/provider': 2.0.1
-      '@ai-sdk/provider-utils': 4.0.23(zod@4.3.6)
+      '@ai-sdk/provider-utils': 4.0.23(patch_hash=90e367a1019a46d3ca3a4e231b48615de88fd56eb3212f4e0a5528154c523295)(zod@4.3.6)
       '@opentelemetry/api': 1.9.0
       zod: 4.3.6
 
@@ -13123,7 +13126,7 @@ snapshots:
     dependencies:
       '@ai-sdk/gateway': 3.0.22(zod@4.3.6)
       '@ai-sdk/provider': 3.0.5
-      '@ai-sdk/provider-utils': 4.0.23(zod@4.3.6)
+      '@ai-sdk/provider-utils': 4.0.23(patch_hash=90e367a1019a46d3ca3a4e231b48615de88fd56eb3212f4e0a5528154c523295)(zod@4.3.6)
       '@opentelemetry/api': 1.9.0
       zod: 4.3.6
 

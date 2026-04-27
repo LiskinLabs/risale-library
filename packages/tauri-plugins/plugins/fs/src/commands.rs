@@ -554,7 +554,7 @@ pub async fn read<R: Runtime>(
 }
 
 async fn read_file_inner<R: Runtime>(
-    permission: &str,
+    _permission: &str,
     webview: Webview<R>,
     global_scope: GlobalScope<Entry>,
     command_scope: CommandScope<Entry>,
@@ -868,7 +868,7 @@ pub async fn seek<R: Runtime>(
 
 #[cfg(target_os = "android")]
 fn get_metadata<R: Runtime, F: FnOnce(&PathBuf) -> std::io::Result<std::fs::Metadata>>(
-    permission: &str,
+    _permission: &str,
     metadata_fn: F,
     webview: &Webview<R>,
     global_scope: &GlobalScope<Entry>,
@@ -914,7 +914,7 @@ fn get_metadata<R: Runtime, F: FnOnce(&PathBuf) -> std::io::Result<std::fs::Meta
 
 #[cfg(not(target_os = "android"))]
 fn get_metadata<R: Runtime, F: FnOnce(&PathBuf) -> std::io::Result<std::fs::Metadata>>(
-    permission: &str,
+    _permission: &str,
     metadata_fn: F,
     webview: &Webview<R>,
     global_scope: &GlobalScope<Entry>,
@@ -934,7 +934,7 @@ fn get_metadata<R: Runtime, F: FnOnce(&PathBuf) -> std::io::Result<std::fs::Meta
 }
 
 fn get_fs_metadata<R: Runtime, F: FnOnce(&PathBuf) -> std::io::Result<std::fs::Metadata>>(
-    permission: &str,
+    _permission: &str,
     metadata_fn: F,
     webview: &Webview<R>,
     global_scope: &GlobalScope<Entry>,
@@ -1088,7 +1088,7 @@ fn default_create_value() -> bool {
 }
 
 async fn write_file_inner<R: Runtime>(
-    permission: &str,
+    _permission: &str,
     webview: Webview<R>,
     global_scope: GlobalScope<Entry>,
     command_scope: CommandScope<Entry>,
@@ -1392,7 +1392,7 @@ fn get_dir_size(path: &PathBuf) -> CommandResult<u64> {
 
 #[cfg(desktop)]
 pub fn resolve_file<R: Runtime>(
-    permission: &str,
+    _permission: &str,
     webview: &Webview<R>,
     global_scope: &GlobalScope<Entry>,
     command_scope: &CommandScope<Entry>,
@@ -1410,7 +1410,7 @@ pub fn resolve_file<R: Runtime>(
 }
 
 fn resolve_file_in_fs<R: Runtime>(
-    permission: &str,
+    _permission: &str,
     webview: &Webview<R>,
     global_scope: &GlobalScope<Entry>,
     command_scope: &CommandScope<Entry>,
@@ -1447,7 +1447,7 @@ fn resolve_file_in_fs<R: Runtime>(
 
 #[cfg(mobile)]
 pub fn resolve_file<R: Runtime>(
-    permission: &str,
+    _permission: &str,
     webview: &Webview<R>,
     global_scope: &GlobalScope<Entry>,
     command_scope: &CommandScope<Entry>,
@@ -1483,7 +1483,7 @@ pub fn resolve_file<R: Runtime>(
 }
 
 pub fn resolve_path<R: Runtime>(
-    permission: &str,
+    _permission: &str,
     webview: &Webview<R>,
     global_scope: &GlobalScope<Entry>,
     command_scope: &CommandScope<Entry>,
