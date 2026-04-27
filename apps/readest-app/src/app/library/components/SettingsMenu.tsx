@@ -77,12 +77,12 @@ const SettingsMenu: React.FC<SettingsMenuProps> = ({ onPullLibrary, setIsDropdow
     setIsDropdownOpen?.(false);
   };
 
-  const showAboutRisale Digital Library = () => {
+  const showAboutRisale = () => {
     setAboutDialogVisible(true);
     setIsDropdownOpen?.(false);
   };
 
-  const downloadRisale Digital Library = () => {
+  const downloadRisale = () => {
     window.open(DOWNLOAD_READEST_URL, '_blank');
     setIsDropdownOpen?.(false);
   };
@@ -445,8 +445,8 @@ const SettingsMenu: React.FC<SettingsMenuProps> = ({ onPullLibrary, setIsDropdow
       {user && userProfilePlan === 'free' && (
         <MenuItem label={_('Upgrade to Risale Digital Library Premium')} onClick={handleUpgrade} />
       )}
-      {isWebAppPlatform() && <MenuItem label={_('Download Risale Digital Library')} onClick={downloadRisale Digital Library} />}
-      <MenuItem label={_('About Risale Digital Library')} onClick={showAboutRisale Digital Library} />
+      {isWebAppPlatform() && <MenuItem label={_('Download Risale Digital Library')} onClick={downloadRisale} />}
+      <MenuItem label={_('About Risale Digital Library')} onClick={showAboutRisale} />
       <MenuItem
         label={_('Help improve Risale Digital Library')}
         description={isTelemetryEnabled ? _('Sharing anonymized statistics') : ''}
