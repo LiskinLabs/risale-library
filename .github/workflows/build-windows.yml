@@ -36,7 +36,7 @@ jobs:
         run: pnpm --filter @risale/library-app setup-vendors
 
       - name: Build Tauri app
-        run: pnpm --filter @risale/library-app tauri build --no-signing
+        run: pnpm --filter @risale/library-app tauri build --no-sign
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
