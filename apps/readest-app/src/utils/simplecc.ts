@@ -1,4 +1,4 @@
-// @ts-ignore
+// @ts-expect-error
 import init, { simplecc } from '@simplecc/simplecc_wasm';
 import { ConvertChineseVariant } from '@/types/book';
 

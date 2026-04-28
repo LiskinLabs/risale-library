@@ -51,6 +51,7 @@ export async function POST(request: NextRequest) {
     const successUrl = `${request.headers.get('origin')}/user/subscription/success?payment=stripe&session_id={CHECKOUT_SESSION_ID}`;
     const returnUrl = `${request.headers.get('origin')}/user`;
     const session = await stripe.checkout.sessions.create({
+      // biome-ignore lint/suspicious/noExplicitAny: Stripe UI mode types mismatch
       ui_mode: (embedded ? 'embedded' : 'hosted') as any,
       customer: customerId,
       mode: planType === 'subscription' ? 'subscription' : 'payment',
