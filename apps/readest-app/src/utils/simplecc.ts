@@ -1,3 +1,4 @@
+// @ts-ignore
 import init, { simplecc } from '@simplecc/simplecc_wasm';
 import { ConvertChineseVariant } from '@/types/book';
 

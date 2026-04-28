@@ -77,7 +77,7 @@ export const redirectToStripeCheckout = async (sessionId?: string, url?: string)
     if (!stripe) {
       throw new Error('Stripe not loaded');
     }
-    const result = await stripe.redirectToCheckout({ sessionId });
+    const result = await (stripe as any).redirectToCheckout({ sessionId });
     if (result.error) {
       throw result.error;
     }

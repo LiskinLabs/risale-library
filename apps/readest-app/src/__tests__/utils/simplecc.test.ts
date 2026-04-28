@@ -1,4 +1,5 @@
 import { describe, test, expect, beforeAll } from 'vitest';
+// @ts-ignore
 import init, { simplecc } from '@simplecc/simplecc_wasm';
 import { readFile } from 'fs/promises';
 import { join } from 'path';
