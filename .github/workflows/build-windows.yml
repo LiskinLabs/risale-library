@@ -36,9 +36,6 @@ jobs:
         run: pnpm --filter @risale/library-app setup-vendors
 
       - name: Build Tauri app
-        env:
-          TAURI_SIGNING_PRIVATE_KEY: ''
-          TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ''
         run: pnpm --filter @risale/library-app tauri build
 
       - name: Upload Artifacts
