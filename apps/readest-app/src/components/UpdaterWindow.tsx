@@ -437,10 +437,13 @@ export const UpdaterContent = ({
                 {_('A new version of Risale Digital Library is available!')}
               </h2>
               <p className='mb-2'>
-                {_('Risale Digital Library {{newVersion}} is available (installed version {{currentVersion}}).', {
-                  newVersion,
-                  currentVersion,
-                })}
+                {_(
+                  'Risale Digital Library {{newVersion}} is available (installed version {{currentVersion}}).',
+                  {
+                    newVersion,
+                    currentVersion,
+                  },
+                )}
               </p>
               <p className='mb-2'>{_('Download and install now?')}</p>
 

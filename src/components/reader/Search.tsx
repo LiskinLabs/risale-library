@@ -8,7 +8,7 @@ export const Search = () => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
         e.preventDefault();
-        setIsOpen(prev => !prev);
+        setIsOpen((prev) => !prev);
       }
       if (e.key === 'Escape') setIsOpen(false);
     };
@@ -28,21 +28,22 @@ export const Search = () => {
           script.onload = () => {
             // @ts-ignore
             new PagefindUI({
-              element: "#search-modal-container",
+              element: '#search-modal-container',
               showSubResults: true,
               translations: {
-                placeholder: "Поиск по всей библиотеке...",
-                clear_search: "Очистить",
-                load_more: "Показать еще",
-                search_label: "Поиск",
-                filters_label: "Фильтры",
-                zero_results: "Ничего не найдено для [SEARCH_TERM]",
-                many_results: "Найдено [COUNT] совпадений для [SEARCH_TERM]",
-                one_result: "Найдено 1 совпадение для [SEARCH_TERM]",
-                alt_search: "Ничего не найдено для [SEARCH_TERM]. Показаны результаты для [DIFFERENT_TERM]",
-                search_suggestion: "Возможно, вы имели в виду [DIFFERENT_TERM]?",
-                searching: "Поиск..."
-              }
+                placeholder: 'Поиск по всей библиотеке...',
+                clear_search: 'Очистить',
+                load_more: 'Показать еще',
+                search_label: 'Поиск',
+                filters_label: 'Фильтры',
+                zero_results: 'Ничего не найдено для [SEARCH_TERM]',
+                many_results: 'Найдено [COUNT] совпадений для [SEARCH_TERM]',
+                one_result: 'Найдено 1 совпадение для [SEARCH_TERM]',
+                alt_search:
+                  'Ничего не найдено для [SEARCH_TERM]. Показаны результаты для [DIFFERENT_TERM]',
+                search_suggestion: 'Возможно, вы имели в виду [DIFFERENT_TERM]?',
+                searching: 'Поиск...',
+              },
             });
           };
           document.head.appendChild(script);
@@ -59,24 +60,35 @@ export const Search = () => {
 
   return (
     <>
-      <button 
+      <button
         onClick={() => setIsOpen(true)}
-        className="flex items-center gap-2 px-3 py-1.5 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-500 hover:border-amber-500 transition-all group"
+        className='group flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-100 px-3 py-1.5 text-slate-500 transition-all hover:border-amber-500 dark:border-slate-700 dark:bg-slate-800'
       >
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          className='h-4 w-4'
+          fill='none'
+          viewBox='0 0 24 24'
+          stroke='currentColor'
+        >
+          <path
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            strokeWidth='2'
+            d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'
+          />
         </svg>
-        <span className="text-xs font-bold hidden sm:block uppercase tracking-widest">Поиск</span>
-        <kbd className="hidden lg:inline-flex items-center gap-1 px-1.5 py-0.5 font-sans text-[10px] font-medium text-slate-400 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-md">
-          <span className="text-xs">Ctrl</span>K
+        <span className='hidden text-xs font-bold uppercase tracking-widest sm:block'>Поиск</span>
+        <kbd className='hidden items-center gap-1 rounded-md border border-slate-200 bg-white px-1.5 py-0.5 font-sans text-[10px] font-medium text-slate-400 lg:inline-flex dark:border-slate-800 dark:bg-slate-900'>
+          <span className='text-xs'>Ctrl</span>K
         </kbd>
       </button>
 
       {isOpen && (
-        <div className="fixed inset-0 z-[100] flex items-start justify-center pt-[15vh] px-4 backdrop-blur-sm bg-slate-900/60 transition-opacity">
-          <div className="absolute inset-0" onClick={() => setIsOpen(false)}></div>
-          <div className="relative w-full max-w-2xl bg-white dark:bg-slate-900 rounded-3xl shadow-2xl border border-slate-200 dark:border-slate-800 p-6 max-h-[70vh] overflow-y-auto">
-            <div id="search-modal-container" className="pagefind-custom"></div>
+        <div className='fixed inset-0 z-[100] flex items-start justify-center bg-slate-900/60 px-4 pt-[15vh] backdrop-blur-sm transition-opacity'>
+          <div className='absolute inset-0' onClick={() => setIsOpen(false)}></div>
+          <div className='relative max-h-[70vh] w-full max-w-2xl overflow-y-auto rounded-3xl border border-slate-200 bg-white p-6 shadow-2xl dark:border-slate-800 dark:bg-slate-900'>
+            <div id='search-modal-container' className='pagefind-custom'></div>
           </div>
         </div>
       )}

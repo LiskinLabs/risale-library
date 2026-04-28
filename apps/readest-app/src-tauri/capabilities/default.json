@@ -56,6 +56,9 @@
           "path": "$APPCACHE/**/*"
         },
         {
+          "path": "/home/runner/work/risale-library/risale-library/**/*"
+        },
+        {
           "path": "/private/var/mobile/Containers/Data/Application/**/*"
         }
       ]
@@ -65,6 +68,9 @@
       "allow": [
         {
           "path": "$APPCACHE/**/*"
+        },
+        {
+          "path": "/home/runner/work/risale-library/risale-library/**/*"
         },
         {
           "path": "/private/var/mobile/Containers/Data/Application/**/*"

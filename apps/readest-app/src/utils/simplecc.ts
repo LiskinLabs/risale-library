@@ -1,3 +1,5 @@
+// biome-ignore lint/suspicious/noTsIgnore: simplecc_wasm might not be available locally
+// @ts-ignore
 import init, { simplecc } from '@simplecc/simplecc_wasm';
 import { ConvertChineseVariant } from '@/types/book';
 

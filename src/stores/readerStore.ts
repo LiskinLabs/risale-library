@@ -10,23 +10,23 @@ export const fontScale = persistentAtom<number>('font_scale', 1, {
   decode: (v) => {
     const parsed = parseFloat(v);
     return isNaN(parsed) ? 1 : Number(parsed);
-  }
+  },
 });
 export const readerMargins = persistentAtom<string>('reader_margins', 'normal');
 export const readerLineHeight = persistentAtom<string>('reader_line_height', 'normal');
 export const readerAlignment = persistentAtom<string>('reader_alignment', 'left');
 export const readerHyphens = persistentAtom<boolean>('reader_hyphens', true, {
   encode: JSON.stringify,
-  decode: JSON.parse
+  decode: JSON.parse,
 });
 export const readerView = persistentAtom<string>('reader_view', 'scroll'); // 'scroll' | 'book'
 export const readerAnimations = persistentAtom<boolean>('reader_animations', true, {
   encode: JSON.stringify,
-  decode: JSON.parse
+  decode: JSON.parse,
 });
 export const isCommentaryVisible = persistentAtom<boolean>('commentary_visible', true, {
   encode: JSON.stringify,
-  decode: JSON.parse
+  decode: JSON.parse,
 });
 
 // ═══ Book Language (Session) ═══
@@ -35,7 +35,13 @@ export const bookLanguage = atom<string>('ru');
 
 // ═══ Per-Language Font System ═══
 
-export type ScriptGroup = 'cyrillic' | 'latin-turkish' | 'latin-european' | 'arabic' | 'persian' | 'urdu';
+export type ScriptGroup =
+  | 'cyrillic'
+  | 'latin-turkish'
+  | 'latin-european'
+  | 'arabic'
+  | 'persian'
+  | 'urdu';
 
 export interface FontOption {
   value: string;
@@ -118,7 +124,7 @@ export function getEffectiveFont(lang: string): string {
   const current = readerFont.get();
   const available = getAvailableFonts(lang);
   // If current font is compatible with this language, use it
-  if (available.some(f => f.value === current)) return current;
+  if (available.some((f) => f.value === current)) return current;
   // Otherwise fall back to default for this language
   return getDefaultFont(lang);
 }
@@ -139,7 +145,7 @@ export interface Bookmark {
 
 export const bookmarks = persistentAtom<Bookmark[]>('bookmarks', [], {
   encode: JSON.stringify,
-  decode: JSON.parse
+  decode: JSON.parse,
 });
 
 // ═══ Dictionary / Lugat ═══
@@ -149,7 +155,7 @@ export interface LugatEntry {
   meaning: string;
 }
 export const selectedWord = atom<LugatEntry | null>(null);
-export const lugatPopupPosition = atom<{ x: number, y: number } | null>(null);
+export const lugatPopupPosition = atom<{ x: number; y: number } | null>(null);
 
 // ═══ UI State ═══
 
@@ -175,7 +181,7 @@ export function applyReaderSettings() {
   root.setAttribute('data-view', readerView.get());
   root.setAttribute('data-animations', readerAnimations.get() ? 'on' : 'off');
   root.setAttribute('data-book-lang', lang);
-  
+
   // Apply font scale as CSS var
   const scale = Number(fontScale.get());
   const basePx = 18 * scale;

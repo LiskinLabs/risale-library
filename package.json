@@ -3,13 +3,13 @@
   "private": true,
   "repository": "readest/readest",
   "scripts": {
-    "test": "pnpm --filter @readest/readest-app test",
-    "lint": "pnpm --filter @readest/readest-app lint",
-    "tauri": "pnpm --filter @readest/readest-app tauri",
-    "dev-web": "pnpm --filter @readest/readest-app dev-web",
+    "test": "pnpm --filter @risale/library-app test",
+    "lint": "pnpm --filter @risale/library-app lint",
+    "tauri": "pnpm --filter @risale/library-app tauri",
+    "dev-web": "pnpm --filter @risale/library-app dev-web",
     "prepare": "husky",
-    "fmt:check": "pnpm --filter @readest/readest-app fmt:check",
-    "clippy:check": "pnpm --filter @readest/readest-app clippy:check",
+    "fmt:check": "pnpm --filter @risale/library-app fmt:check",
+    "clippy:check": "pnpm --filter @risale/library-app clippy:check",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,json,md,html,yml}\"",
     "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,css,json,md,html,yml}\""
   },
@@ -17,6 +17,7 @@
   "devDependencies": {
     "@biomejs/biome": "^2.4.9",
     "@sindresorhus/tsconfig": "^6.0.0",
+    "cross-env": "^10.1.0",
     "husky": "^9.1.6",
     "lint-staged": "^16.2.7",
     "prettier": "^3.3.3",
@@ -52,12 +53,12 @@
       "@babel/runtime": ">=7.26.10",
       "@babel/helpers": ">=7.26.10",
       "mdast-util-gfm-autolink-literal": "2.0.1",
-      "@ai-sdk/provider-utils": "4.0.8",
+      "@ai-sdk/provider-utils": "4.0.23",
       "uuid": ">=14.0.0"
     },
     "patchedDependencies": {
       "mdast-util-gfm-autolink-literal@2.0.1": "patches/mdast-util-gfm-autolink-literal@2.0.1.patch",
-      "@ai-sdk/provider-utils@4.0.8": "patches/@ai-sdk__provider-utils@4.0.8.patch"
+      "@ai-sdk/provider-utils@4.0.23": "patches/@ai-sdk__provider-utils@4.0.23.patch"
     }
   }
 }

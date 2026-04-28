@@ -1,10 +1,11 @@
 ---
 source_name: Hizmet Vakfı & DİB asıl nüsha metni 2016
 source_url: https://www.risaleinur.hizmetvakfi.org/
-title: "06 DİVAN-I HARB-İ ÖRFÎ"
-book: "06 DİVAN-I HARB-İ ÖRFÎ"
-category: "other"
+title: '06 DİVAN-I HARB-İ ÖRFÎ'
+book: '06 DİVAN-I HARB-İ ÖRFÎ'
+category: 'other'
 ---
+
 **Risale-i Nur Külliyatı’ndan**
 
 **İki Mekteb-i Musibetin Şehadetnamesi**
@@ -12,6 +13,7 @@ category: "other"
 **veya**
 
 # DİVAN-I HARB-İ ÖRFÎ
+
 **Müellifi**
 
 **Bedîüzzaman Said Nursî**
@@ -29,6 +31,7 @@ Madem eski zamanda iki defa tabedilmiş, kimse itiraz etmemiş, ayn-ı hakikat b
 Said Nursî
 
 ##### 1328’de eserin ikinci tabındaki ifade-i nâşir
+
 Ahmed Ramiz der:
 
 323 senesi zarfında idi ki Şark’ın yalçın, sarp, âhenîn mavera-i şevahik-ı cibalinde tulû etmiş Said Nursî isminde nevadir-i hilkatten ma’dud bir ateşpare-i zekânın İstanbul âfakında rü’yet edildiği haberi etrafa aksetmiş ve fıtraten mütecessis olan bazı kimseler o hârika-i fıtratı peyapey gördükçe, mader-i hilkatin hazain-i lâ-tefnasındaki sehaveti bir türlü hazmedemeyenler, Şarkî Anadolu kıyafetinde, o şal ve şalvar altında, öyle bir kanun-u dehanın ihtifa edebileceğini bir türlü anlayamayarak bir kısım adamlar, ona mecnun demişlerdi.
@@ -81,11 +84,12 @@ Ahmed Ramiz
 
 (rahmetullahi aleyh)
 
-***
+---
 
 1327’de tabedilen
 
 ##### İki Mekteb-i Musibetin Şehadetnamesi
+
 <p class="arabic" dir="rtl">بِاسْمِهٖ سُبْحَانَهُ<br/> وَ اِنْ مِنْ شَىْءٍ اِلَّا يُسَبِّحُ بِحَمْدِهٖ</p>
 
 **MUKADDİME:** Vaktâ ki hürriyet divanelikle yâd olunurdu, zayıf istibdat tımarhaneyi bana mektep eyledi.
@@ -388,9 +392,10 @@ Meşrutiyetin Bedîüzzamanı
 
 Said Nursî
 
-***
+---
 
 ##### HÂTİME
+
 Vatandaşlarıma ve kardeşlerime burada birkaç söz söylemezsem bence bahis nâtamam kalır.
 
 Ey eski çağların cihangir Asya ordularının kahraman askerlerinin ahfadı olan vatandaşlarım ve kardeşlerim! Beş yüz senedir yattığınız yeter. Artık uyanınız, sabahtır. Yoksa sahra-yı vahşette yatmakla, gaflet sizi yağma edecektir.
@@ -415,9 +420,10 @@ Hem de her bir kemalin müessis ve hâmisi olan cesaret ve namus-u millet-i İsl
 
 Bedîüzzaman Said Nursî
 
-***
+---
 
 ##### Yaşasın Şeriat-ı Ahmedî (asm)
+
 Dinî Ceride: 77
 
 5 Mart 1325 (18 Mart 1909)
@@ -428,9 +434,10 @@ Ey evliya-i umûr! Tevfik isterseniz kavanin-i âdetullaha tevfik-i hareket edin
 
 Bizim cemaatimizin meşrebi: Muhabbete muhabbet ve husumete husumettir. Yani beyne’l-İslâm muhabbete imdat ve husumet askerini bozmaktır. Mesleğimiz ise ahlâk-ı Ahmediye aleyhissalâtü vesselâm ile tahalluk ve Sünnet-i Peygamberîyi ihya etmektir. Ve rehberimiz şeriat-ı garra ve kılıncımız da berahin-i kātıa ve maksadımız i’lâ-i kelimetullahtır.
 
-***
+---
 
 ##### Hakikat
+
 26 Şubat 1324
 
 Dinî Ceride: 70
@@ -451,9 +458,10 @@ Bu cümlelerin mabeynini rabtedecek olan mukaddimatı, Türkçe bilmediğim içi
 
 Said Nursî
 
-***
+---
 
 ##### Sadâ-yı Hakikat
+
 27 Mart 1909
 
 Tarîk-i Muhammedî şüphe ve hileden münezzeh olduğundan, şüphe ve hileyi îma eden gizlemekten de müstağnidir. Hem de o derece azîm ve geniş ve muhit bir hakikat, bâhusus bu zaman ehline karşı hiçbir cihetle saklanmaz. Bahr-i umman nasıl bir testide saklanacak?
@@ -470,11 +478,12 @@ Bu ittihadın meşrebi, muhabbettir. Husumet ise cehalet ve zaruret ve nifakadı
 
 Said Nursî
 
-***
+---
 
 (Kırk beş sene evvel dinî ceridelerde neşredilen, Eski Said’in o dindar mebuslara hitaben bir makalesidir.)
 
 ##### Yaşasın Kur’an-ı Kerîm’in Kanun-u Esasîleri
+
 29 Şubat 1324
 
 Mart 1909
@@ -553,9 +562,10 @@ Yaşasın Kur’an’ın kanun-u esasîleri!
 
 Said Nursî
 
-***
+---
 
 ##### Hürriyete Hitap
+
 Ey hürriyet-i şer’î! Öyle müthiş ve fakat güzel ve müjdeli bir sadâ ile çağırıyorsun, benim gibi bir şarklıyı tabakat-ı gaflet altında yatmışken uyandırıyorsun. Sen olmasaydın ben ve umum millet, zindan-ı esarette kalacaktık. Seni ömr-ü ebedî ile tebşir ediyorum. Eğer aynü’l-hayat-ı şeriatı menba-ı hayat yapsan ve o cennette neşv ü nema bulsan bu millet-i mazlumenin de eski zamana nisbeten bin derece terakki edeceğini müjde veriyorum. Eğer hakkıyla seni rehber etse, ağraz-ı şahsî ve fikr-i intikam ile sizi lekedar etmezse…
 
 El-azametü lillah ve’l-minnetü lehü ki bizi kabr-i vahşet ve istibdattan ihraç ve cennet-i ittihat ve muhabbet-i milliyeye davet etti.
@@ -672,7 +682,7 @@ Yaşasın şeriat-ı garra!.. Yaşasın adalet-i İlahî!.. Yaşasın ittihad-ı
 
 Said Nursî
 
-***
+---
 
 (Hâşiye): Medar-ı ibret ve hayrettir ki kırk üç sene evvel hürriyetin üçüncü gününde İstanbul’da hem sonra Selanik’te Meydan-ı Hürriyet’te binler siyasîlere karşı dava ettiği ve bütün kuvvetiyle şeriatı istediği ve hürriyeti ve meşrutiyeti şeriata hizmetkâr yaptığı ve sonra 31 Mart’ta Hareket Ordusu gayet dehşet ve şiddetle şeriat isteyenleri mes’ul ettikleri zamanda Divan-ı Harb-i Örfîde Said’in bu münteşir nutuklarından tam beraet verildiği halde; şimdi ise siyaseti otuz seneden beri bıraktığı ve o nutuklarına nisbeten siyasete pek az teması için yirmi yedi sene dinsizlik hesabına işkenceler ve gaddarane azap ve cezalar verenler, elbette din namına zulmettiklerini ve engizisyonlardan daha zalim olduklarını ispat eder.
 
@@ -699,4 +709,3 @@ Nazif, Hüsrev
 [^hâşiye8]: O zaman meşrutiyet, şimdi o kelime yerine cumhuriyet konulmuş.
 
 [^hâşiye9]: Evet, daha dehşetli bir istibdat ile pek acı ve zehirli bir esareti bize içirdiler.
-

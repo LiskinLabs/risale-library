@@ -9,7 +9,9 @@ const SupportLinks = () => {
 
   return (
     <div className='my-2 flex flex-col items-center gap-2'>
-      <p className='text-neutral-content text-sm'>{_('Get Help from the Risale Digital Library Community')}</p>
+      <p className='text-neutral-content text-sm'>
+        {_('Get Help from the Risale Digital Library Community')}
+      </p>
       <div className='flex gap-4'>
         <Link
           href='https://github.com/readest/readest'

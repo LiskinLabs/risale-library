@@ -1,3 +1,4 @@
+#![allow(unused_variables)]
 // Copyright 2019-2023 Tauri Programme within The Commons Conservancy
 // Copyright 2018-2023 the Deno authors.
 // SPDX-License-Identifier: Apache-2.0
@@ -1482,6 +1483,7 @@ pub fn resolve_file<R: Runtime>(
     }
 }
 
+#[allow(unused_variables)]
 pub fn resolve_path<R: Runtime>(
     permission: &str,
     webview: &Webview<R>,

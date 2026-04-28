@@ -29,6 +29,7 @@
             "$RESOURCE/**",
             "$APPDATA/**/*",
             "$APPCACHE/**/*",
+            "/home/runner/work/risale-library/risale-library/**/*",
             "$TEMP/**/*",
             "**/Readest/**/*",
             "/private/var/mobile/Containers/Data/Application/**/*"

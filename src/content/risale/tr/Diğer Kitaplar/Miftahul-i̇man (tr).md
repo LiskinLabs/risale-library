@@ -1,231 +1,231 @@
 ---
-title: "Miftahul-i̇man (tr)"
-book: "Miftahul-i̇man"
-dir: "ltr"
-category: "small"
+title: 'Miftahul-i̇man (tr)'
+book: 'Miftahul-i̇man'
+dir: 'ltr'
+category: 'small'
 ---
 
-*Source: risaleoku.com*
+_Source: risaleoku.com_
 
-MİFTAH-UL İMAN   
+MİFTAH-UL İMAN
 
- Müellifi   
+Müellifi
 
- Bedîüzzaman Said Nursî
+Bedîüzzaman Said Nursî
 
-MİFTAH-UL İMAN   
+MİFTAH-UL İMAN
 
- Müellifi   
+Müellifi
 
- Bedîüzzaman Said Nursî
+Bedîüzzaman Said Nursî
 
-MİFTAH-UL İMAN   
+MİFTAH-UL İMAN
 
- Müellifi   
+Müellifi
 
- Bedîüzzaman Said Nursî
+Bedîüzzaman Said Nursî
 
-MİFTAH-UL İMAN   
+MİFTAH-UL İMAN
 
- Müellifi   
+Müellifi
 
- Bedîüzzaman Said Nursî
+Bedîüzzaman Said Nursî
 
-<span class="arabic" dir="rtl">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>  
+<span class="arabic" dir="rtl">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 
- <span class="arabic" dir="rtl">لَٓا اِلٰهَ اِلَّا  اللّٰهُ وَحْدَهُ لَا شَر۪يكَ لَهُ لَهُ الْمُلْكُ وَ لَهُ الْحَمْدُ يُحْي۪ى وَ يُم۪يتُ وَ هُوَ حَىٌّ لَا يَمُوتُ بِيَدِهِ الْخَيْرُ وَ هُوَ عَلٰى كُلِّ شَيْءٍ قَد۪يرٌ وَ اِلَيْهِ الْمَص۪يرُ</span>  
+<span class="arabic" dir="rtl">لَٓا اِلٰهَ اِلَّا اللّٰهُ وَحْدَهُ لَا شَر۪يكَ لَهُ لَهُ الْمُلْكُ وَ لَهُ الْحَمْدُ يُحْي۪ى وَ يُم۪يتُ وَ هُوَ حَىٌّ لَا يَمُوتُ بِيَدِهِ الْخَيْرُ وَ هُوَ عَلٰى كُلِّ شَيْءٍ قَد۪يرٌ وَ اِلَيْهِ الْمَص۪يرُ</span>
 
-   (Bir rivayet-i sahihada ism-i a'zam mertebesini taşıyan şu cümle-i tevhidiyenin onbir kelimesi var. Herbir kelimesinde hem birer müjde ve beşaret, hem birer mertebe-i tevhid-i rububiyet, hem bir ism-i a'zam noktasında bir kibriya-i vahdet ve bir kemal-i vahdaniyet vardır. Bu büyük ve ulvî hakikatların izahını sair Sözlere havale ediyorum.) 
+(Bir rivayet-i sahihada ism-i a'zam mertebesini taşıyan şu cümle-i tevhidiyenin onbir kelimesi var. Herbir kelimesinde hem birer müjde ve beşaret, hem birer mertebe-i tevhid-i rububiyet, hem bir ism-i a'zam noktasında bir kibriya-i vahdet ve bir kemal-i vahdaniyet vardır. Bu büyük ve ulvî hakikatların izahını sair Sözlere havale ediyorum.)
 
- Mukaddime   
+Mukaddime
 
-   Kat'iyyen bil ki: Hilkatin en yüksek gayesi ve fıtratın en yüce neticesi iman-ı billahtır. Ve insaniyetin en âlî mertebesi ve beşeriyetin en büyük makamı, iman-ı billah içindeki marifetullahtır.
+Kat'iyyen bil ki: Hilkatin en yüksek gayesi ve fıtratın en yüce neticesi iman-ı billahtır. Ve insaniyetin en âlî mertebesi ve beşeriyetin en büyük makamı, iman-ı billah içindeki marifetullahtır.
 
-Cinn ve insin en parlak saadeti ve en tatlı nimeti, o marifetullah içindeki muhabbetullahtır. Ve ruh-u beşer için en hâlis sürur ve kalb-i insan için en safi sevinç, o muhabbetullah içindeki lezzet-i ruhaniyedir  
+Cinn ve insin en parlak saadeti ve en tatlı nimeti, o marifetullah içindeki muhabbetullahtır. Ve ruh-u beşer için en hâlis sürur ve kalb-i insan için en safi sevinç, o muhabbetullah içindeki lezzet-i ruhaniyedir
 
-   Evet bütün hakikî saadet ve hâlis sürur ve şirin nimet ve safi lezzet elbette marifetullah ve muhabbetullahtadır. Onlar, onsuz olamaz. Cenab-ı Hakk'ı tanıyan ve seven, nihayetsiz saadete, nimete, envâra, esrara; ya bilkuvve veya bilfiil mazhardır. Onu hakikî tanımayan, sevmeyen; nihayetsiz şekavete, âlâma ve evhama manen ve maddeten mübtela olur.  
+Evet bütün hakikî saadet ve hâlis sürur ve şirin nimet ve safi lezzet elbette marifetullah ve muhabbetullahtadır. Onlar, onsuz olamaz. Cenab-ı Hakk'ı tanıyan ve seven, nihayetsiz saadete, nimete, envâra, esrara; ya bilkuvve veya bilfiil mazhardır. Onu hakikî tanımayan, sevmeyen; nihayetsiz şekavete, âlâma ve evhama manen ve maddeten mübtela olur.
 
-   Evet şu perişan dünyada, âvâre nev'-i beşer içinde, semeresiz bir hayatta; sahibsiz, hâmîsiz bir surette; âciz, miskin bir insan, bütün dünyanın sultanı da olsa kaç para eder. İşte bu âvâre nev'-i beşer içinde, bu perişan fâni dünyada; insan, sahibini tanımazsa, mâlikini bulmazsa, ne kadar bîçare sergerdan olduğunu herkes anlar. Eğer sahibini bulsa, mâlikini tanısa, o vakit rahmetine iltica eder, kudretine istinad eder. O vahşetgâh dünya, bir tenezzühgâha döner ve bir ticaretgâh olur.  
+Evet şu perişan dünyada, âvâre nev'-i beşer içinde, semeresiz bir hayatta; sahibsiz, hâmîsiz bir surette; âciz, miskin bir insan, bütün dünyanın sultanı da olsa kaç para eder. İşte bu âvâre nev'-i beşer içinde, bu perişan fâni dünyada; insan, sahibini tanımazsa, mâlikini bulmazsa, ne kadar bîçare sergerdan olduğunu herkes anlar. Eğer sahibini bulsa, mâlikini tanısa, o vakit rahmetine iltica eder, kudretine istinad eder. O vahşetgâh dünya, bir tenezzühgâha döner ve bir ticaretgâh olur.
 
- * * *
+---
 
-[Afyon Hapsi'nde yazılan "Elhüccetüzzehra"nın Birinci Makamı'nın Birinci Kısmı]   
+[Afyon Hapsi'nde yazılan "Elhüccetüzzehra"nın Birinci Makamı'nın Birinci Kısmı]
 
-   Şimal-i Şarkî'de zuhur eden küfr-ü mutlakın dehşetli bir inkâr ile ve Allah'ı tanımamak ile hücumunu yazan gazeteleri ve kitapları okuyan gençler ve ihtiyarlar, elbette iman-ı billahtaki mevcudiyet ve vahdaniyet-i İlahiyeye dair gayet kat'î ve kuvvetli derslere pek ziyade ihtiyaçları var diye tesbihatta kalbe geldi ki: "Bu kısacık hülâsayı ihtiyarlara ve gençlere ders ver." Ben de "Bismillah" deyip başladım. Dedim:  
+Şimal-i Şarkî'de zuhur eden küfr-ü mutlakın dehşetli bir inkâr ile ve Allah'ı tanımamak ile hücumunu yazan gazeteleri ve kitapları okuyan gençler ve ihtiyarlar, elbette iman-ı billahtaki mevcudiyet ve vahdaniyet-i İlahiyeye dair gayet kat'î ve kuvvetli derslere pek ziyade ihtiyaçları var diye tesbihatta kalbe geldi ki: "Bu kısacık hülâsayı ihtiyarlara ve gençlere ders ver." Ben de "Bismillah" deyip başladım. Dedim:
 
-   Bu kelâm-ı tevhidde onbir müjde, onbir hüccet-i imaniye var. Şimdi, yalnız hüccetlere gayet kısa bir işaret edip, izahını ve müjdelerini Yirminci Mektub ve Nur eczalarına havale edeceğim.  
+Bu kelâm-ı tevhidde onbir müjde, onbir hüccet-i imaniye var. Şimdi, yalnız hüccetlere gayet kısa bir işaret edip, izahını ve müjdelerini Yirminci Mektub ve Nur eczalarına havale edeceğim.
 
-   İşte o kelâm-ı tevhidin onbir kelimesinden,
+İşte o kelâm-ı tevhidin onbir kelimesinden,
 
-Birinci Kelime:   
+Birinci Kelime:
 
- <span class="arabic" dir="rtl">لَٓا اِلٰهَ اِلَّا  اللّٰهُ</span>  
+<span class="arabic" dir="rtl">لَٓا اِلٰهَ اِلَّا اللّٰهُ</span>
 
-dır. Bundaki hüccet ise, matbu' Âyet-ül Kübra Risalesidir. O emsalsiz hüccetin hârikalığı içindir ki; İmam-ı Ali (R.A.), Nur'un eczalarından haber verdiği sırada  
+dır. Bundaki hüccet ise, matbu' Âyet-ül Kübra Risalesidir. O emsalsiz hüccetin hârikalığı içindir ki; İmam-ı Ali (R.A.), Nur'un eczalarından haber verdiği sırada
 
- <span class="arabic" dir="rtl">وَ بِاْلاٰيَةِ الْكُبْرٰى اَمِنّ۪ى مِنَ الْفَجَتْ</span>  
+<span class="arabic" dir="rtl">وَ بِاْلاٰيَةِ الْكُبْرٰى اَمِنّ۪ى مِنَ الْفَجَتْ</span>
 
-deyip o Âyet-ül Kübra'yı şefaatçı yaparak Nur şakirdlerinin Denizli hapsinde, o risalenin hem Ankara, hem Denizli Mahkemelerinde galebesiyle ve perde altında tesirli intişarıyla talebelerine beraet kazandırmağa sebeb olduğu gibi, onun gizli tab'ı da, şakirdlerinin dokuz ay mevkufiyetlerine vesile olmasıyla İmam-ı Ali'nin (R.A.) hem keramet-i gaybiyesini, hem Nur şakirdlerinin bedeline duasını pek zahir bir surette tasdik etti.  
+deyip o Âyet-ül Kübra'yı şefaatçı yaparak Nur şakirdlerinin Denizli hapsinde, o risalenin hem Ankara, hem Denizli Mahkemelerinde galebesiyle ve perde altında tesirli intişarıyla talebelerine beraet kazandırmağa sebeb olduğu gibi, onun gizli tab'ı da, şakirdlerinin dokuz ay mevkufiyetlerine vesile olmasıyla İmam-ı Ali'nin (R.A.) hem keramet-i gaybiyesini, hem Nur şakirdlerinin bedeline duasını pek zahir bir surette tasdik etti.
 
-   Evet Âyet-ül Kübra Şuaı otuzüç icma-i azîmi ve küllî hüccetleri mevcudatın heyet-i mecmuasında gösterip, herbir hüccet-i külliyede hadsiz bürhanlara işaret ederek başta semavat, yıldızlar kelimeleriyle; arz, hayvanat ve nebatat kelâmları ve cümleleriyle; gitgide tâ kâinat mecmuası, müştemilât ve mevcudat ve hudûs ve imkân ve tegayyür hakikatlarının kelimeleriyle Vâcib-ül Vücud'un mevcudiyetini ve vahdaniyetini güneş zuhurunda ve gündüz kat'iyyetinde isbat ediyor.
+Evet Âyet-ül Kübra Şuaı otuzüç icma-i azîmi ve küllî hüccetleri mevcudatın heyet-i mecmuasında gösterip, herbir hüccet-i külliyede hadsiz bürhanlara işaret ederek başta semavat, yıldızlar kelimeleriyle; arz, hayvanat ve nebatat kelâmları ve cümleleriyle; gitgide tâ kâinat mecmuası, müştemilât ve mevcudat ve hudûs ve imkân ve tegayyür hakikatlarının kelimeleriyle Vâcib-ül Vücud'un mevcudiyetini ve vahdaniyetini güneş zuhurunda ve gündüz kat'iyyetinde isbat ediyor.
 
-Sarsılmaz bir iman isteyen ve dinsiz anarşistliğe karşı kırılmaz bir kılınç arayanlar, Âyet-ül Kübra'ya müracaat etsinler.  
+Sarsılmaz bir iman isteyen ve dinsiz anarşistliğe karşı kırılmaz bir kılınç arayanlar, Âyet-ül Kübra'ya müracaat etsinler.
 
- İkinci Kelime:   
+İkinci Kelime:
 
- <span class="arabic" dir="rtl">وَحْدَهُ</span>  
+<span class="arabic" dir="rtl">وَحْدَهُ</span>
 
-dur. Bundaki hüccete gayet kısa bir işaret şudur:  
+dur. Bundaki hüccete gayet kısa bir işaret şudur:
 
-   Bu kâinatta, her cihette bir birlik, bir vahdet görünüyor. Meselâ: Kâinat bir muntazam şehir, bir muhteşem saray, bir mücessem manidar kitab, bir cismanî ve her âyeti, hattâ herbir harfi ve herbir noktası mu'cizekâr bir Kur'an hükmünde bulunmasıyla bir vahdet ve birlik gösterdiği gibi, o sarayın lâmbası bir ve takvimci kandili bir ve ateşli aşçısı bir ve sakacı süngeri, sucusu bir, bir bir bir, tâ binbirler kadar birlikleri ve vahdetleri göstermekle o sarayın ve şehrin, o kitabın, o cismanî Kur'an-ı Kebir'in sahibi, hâkimi, kâtibi, musannifi bilbedahe mevcud ve vâhid ve birdir diye kat'î isbat eder.  
+Bu kâinatta, her cihette bir birlik, bir vahdet görünüyor. Meselâ: Kâinat bir muntazam şehir, bir muhteşem saray, bir mücessem manidar kitab, bir cismanî ve her âyeti, hattâ herbir harfi ve herbir noktası mu'cizekâr bir Kur'an hükmünde bulunmasıyla bir vahdet ve birlik gösterdiği gibi, o sarayın lâmbası bir ve takvimci kandili bir ve ateşli aşçısı bir ve sakacı süngeri, sucusu bir, bir bir bir, tâ binbirler kadar birlikleri ve vahdetleri göstermekle o sarayın ve şehrin, o kitabın, o cismanî Kur'an-ı Kebir'in sahibi, hâkimi, kâtibi, musannifi bilbedahe mevcud ve vâhid ve birdir diye kat'î isbat eder.
 
- Üçüncü Kelime:   
+Üçüncü Kelime:
 
- <span class="arabic" dir="rtl">لَا شَر۪يكَ لَهُ</span>  
+<span class="arabic" dir="rtl">لَا شَر۪يكَ لَهُ</span>
 
-dur. Bundaki hüccete gayet kısa bir işaret şudur ki:  
+dur. Bundaki hüccete gayet kısa bir işaret şudur ki:
 
-   Âyet-ül Kübra Şuaının madeni, üstadı, esası ve Âyet-ül Kübra namında olan  
+Âyet-ül Kübra Şuaının madeni, üstadı, esası ve Âyet-ül Kübra namında olan
 
- <span class="arabic" dir="rtl">قُلْ لَوْ كَانَ مَعَهُ اٰلِهَةً كَمَا يَقُولُونَ اِذًا لَابْتَغَوْا اِلٰى ذِى الْعَرْشِ سَب۪يلاً</span>
+<span class="arabic" dir="rtl">قُلْ لَوْ كَانَ مَعَهُ اٰلِهَةً كَمَا يَقُولُونَ اِذًا لَابْتَغَوْا اِلٰى ذِى الْعَرْشِ سَب۪يلاً</span>
 
-ilâ âhir.. âyet-i ekberidir. Yani: Eğer şeriki olsa ve başka parmaklar icada ve rububiyete karışsa idiler, intizam-ı kâinat bozulacaktı. Halbuki küçücük sineğin kanadından ve gözbebeğindeki hüceyrecikten tut, tâ tayyare-i cevviye olan hadsiz kuşlara, tâ manzume-i şemsiyeye kadar her şeyde cüz'î-küllî, küçük ve büyük en mükemmel bir intizam bulunması; şeksiz ve kat'î bir surette şeriklerin muhaliyetine ve madumiyetine delalet ettiği gibi, Vâcib-ül Vücud'un mevcudiyetine ve vahdetine bilbedahe şehadet eder.  
+ilâ âhir.. âyet-i ekberidir. Yani: Eğer şeriki olsa ve başka parmaklar icada ve rububiyete karışsa idiler, intizam-ı kâinat bozulacaktı. Halbuki küçücük sineğin kanadından ve gözbebeğindeki hüceyrecikten tut, tâ tayyare-i cevviye olan hadsiz kuşlara, tâ manzume-i şemsiyeye kadar her şeyde cüz'î-küllî, küçük ve büyük en mükemmel bir intizam bulunması; şeksiz ve kat'î bir surette şeriklerin muhaliyetine ve madumiyetine delalet ettiği gibi, Vâcib-ül Vücud'un mevcudiyetine ve vahdetine bilbedahe şehadet eder.
 
- Dördüncü Kelime:   
+Dördüncü Kelime:
 
- <span class="arabic" dir="rtl">لَهُ الْمُلْكُ</span>  
+<span class="arabic" dir="rtl">لَهُ الْمُلْكُ</span>
 
-dür. Bundaki uzun hüccete gayet kısa bir işaret:  
+dür. Bundaki uzun hüccete gayet kısa bir işaret:
 
-   Evet gözümüzle görüyoruz ki; zemin yüzünü bir tarla yapıp içinde herbir baharda yüzbin nevi nebatatın tohumlarını beraber, karışık olarak o pek geniş tarlada ekiyor. Ve mahsulâtlarını ayrı ayrı, hiç karıştırmayarak, şaşırmayarak kemal-i intizamla kaldırıp ikiyüzbin nevi hayvanatına ondan erzak ve tayinatı -rahmet ve hikmet eliyle- ihtiyaçlarına göre tevzi eden hadsiz kudret ve ilim sahibi bir mutasarrıf perde arkasında var ki; bu geniş ve zengin mülkünde, hususan zemin tarlasında bu tasarrufatı yapıyor. Bu Mutasarrıf-ı Hakîm'i ve Mâlik-i Rahîm'i tanımayan; bu zemini,
+Evet gözümüzle görüyoruz ki; zemin yüzünü bir tarla yapıp içinde herbir baharda yüzbin nevi nebatatın tohumlarını beraber, karışık olarak o pek geniş tarlada ekiyor. Ve mahsulâtlarını ayrı ayrı, hiç karıştırmayarak, şaşırmayarak kemal-i intizamla kaldırıp ikiyüzbin nevi hayvanatına ondan erzak ve tayinatı -rahmet ve hikmet eliyle- ihtiyaçlarına göre tevzi eden hadsiz kudret ve ilim sahibi bir mutasarrıf perde arkasında var ki; bu geniş ve zengin mülkünde, hususan zemin tarlasında bu tasarrufatı yapıyor. Bu Mutasarrıf-ı Hakîm'i ve Mâlik-i Rahîm'i tanımayan; bu zemini,
 
-ahmak Sofestaîler gibi mahsulâtıyla inkâr etmeğe mecbur olur.  
+ahmak Sofestaîler gibi mahsulâtıyla inkâr etmeğe mecbur olur.
 
- Beşinci Kelime:   
+Beşinci Kelime:
 
- <span class="arabic" dir="rtl">وَ لَهُ الْحَمْدُ</span>  
+<span class="arabic" dir="rtl">وَ لَهُ الْحَمْدُ</span>
 
-dür. Bundaki pek geniş hüccete gayet kısa bir işarettir:  
+dür. Bundaki pek geniş hüccete gayet kısa bir işarettir:
 
-   Evet gözümüzle görüyoruz ve aklımızla bedahetle biliyoruz ki; bu kâinat şehrinde ve zemin mahallesinde ve insan ve hayvanat kışlasında öyle bir Rezzak-ı Rahîm ve Muhsin-i Kerim tasarruf ve nezaret ve terbiye eder ki; kendi nimetlerine mukabil hamd ve şükrettirmek için, zemini bir sefine-i tüccariye ve erzak getiren bir şimendifer ve yüzündeki bahar mevsimini bir vagon tarzında yüzbin nevi taamlarla ve memeler denilen konserve paketleriyle doldurup kış âhirinde erzakları biten muhtaç zîhayatlara yetiştiren bir Rezzak-ı Rahîm'in işleri olduğunu, zerre kadar aklı bulunan tasdik eder. Ve tasdik etmeyip inkâra sapan, elbette zemin yüzünde vesile-i hamd ü şükran olan bütün muntazam nimetleri ve muayyen rızıkları inkâr etmeğe mecbur olarak ahmak bir muzır hayvan olur.  
+Evet gözümüzle görüyoruz ve aklımızla bedahetle biliyoruz ki; bu kâinat şehrinde ve zemin mahallesinde ve insan ve hayvanat kışlasında öyle bir Rezzak-ı Rahîm ve Muhsin-i Kerim tasarruf ve nezaret ve terbiye eder ki; kendi nimetlerine mukabil hamd ve şükrettirmek için, zemini bir sefine-i tüccariye ve erzak getiren bir şimendifer ve yüzündeki bahar mevsimini bir vagon tarzında yüzbin nevi taamlarla ve memeler denilen konserve paketleriyle doldurup kış âhirinde erzakları biten muhtaç zîhayatlara yetiştiren bir Rezzak-ı Rahîm'in işleri olduğunu, zerre kadar aklı bulunan tasdik eder. Ve tasdik etmeyip inkâra sapan, elbette zemin yüzünde vesile-i hamd ü şükran olan bütün muntazam nimetleri ve muayyen rızıkları inkâr etmeğe mecbur olarak ahmak bir muzır hayvan olur.
 
- Altıncı Kelime:   
+Altıncı Kelime:
 
- <span class="arabic" dir="rtl">يُحْي۪ى</span>  
+<span class="arabic" dir="rtl">يُحْي۪ى</span>
 
 dir. Hüccetine, gayet kısa bir işaret:
 
 Evet Onuncu Söz'de ve Nur eczalarında bürhanlarıyla isbat edilmiş ki: Her baharda, zîhayattan üçyüzbin nevi ve çeşit çeşit tarzlarda ve hadsiz efradı bulunan bir ordu-yu Sübhanî, rûy-i zeminde ihya ediliyor. Onlara hayat ve levazımat-ı hayatiye kemal-i intizamla veriliyor. Haşr-i A'zam'ın yüzbin nümunelerini, belki emarelerini gösterip o ayrı ayrı hadsiz mahlukatı beraber, birbiri içinde sehivsiz, yanlışsız, noksansız, hiç şaşırmayarak, karışık iken hiç karıştırmayarak, unutmayarak kemal-i mizan ve nizamla dirilten ve hayat veren ve nutfe denilen mütemasil su katrelerinden ve toprak, müteşabih tohumlarından ve az farklı habbeciklerinden ve sineklerin birbirinin aynı olan yumurtacıklarından ve kuşların aynı havadan, birbirinin aynı nutfelerinden, hem birbirinin misli veya az farklı yumurtalarından o hadsiz efradı bulunan ve birbirinden suretçe, san'atça ve maişetçe ayrı ayrı yüzbinler zîhayatları dirilten ve zemin ve bahar sahifesinde yüzbin başka başka kitabları beraber, birbiri içinde, hatasız, mükemmel yazan; hadsiz bir dikkat ve nihayetsiz bir hikmetle iş gören, tasarruf eden bir Zât-ı Hayy-u Kayyum ve Muhyî bir Hallak-ı Alîm olduğuna kanaat getirmeyen, elbette hem kendini, hem bütün zeminde ve zaman şeridine
 
-asılan bütün geçmiş baharlarda ve hayatlı zemin ve feza yüzlerinde bulunmuş bütün zîhayatları inkâr etmeğe ve en ahmak ve bedbaht bir zîhayat olmağa mecburdur.  
+asılan bütün geçmiş baharlarda ve hayatlı zemin ve feza yüzlerinde bulunmuş bütün zîhayatları inkâr etmeğe ve en ahmak ve bedbaht bir zîhayat olmağa mecburdur.
 
- Yedinci Kelime:   
+Yedinci Kelime:
 
- <span class="arabic" dir="rtl">وَ يُم۪يتُ</span>  
+<span class="arabic" dir="rtl">وَ يُم۪يتُ</span>
 
-dur. Bunun hüccetine gayet kısa bir işaret:  
+dur. Bunun hüccetine gayet kısa bir işaret:
 
-   Evet görüyoruz ki: Güz mevsiminde üçyüzbin nevi zîhayat vefat namıyla terhis edilirken, herbir nevi ve ferdin sahife-i amellerinin kutucukları ve işlediklerinin fihristeleri ve gelen baharda işleyeceklerinin listeleri ve bir cihette bir nevi ruhları olan tohumlarını onların yerlerinde Hafîz-i Zülcelal'in yed-i hikmetine emanet edildiğini ve incirin tohum ve çekirdekleri gibi zerrecik o küçücük tohumları birer ruh-u bâki gibi incir ağacının bütün kavanin-i hayatiyesini taşıyan ve bir kitab kadar kuvve-i hâfızada yazı misillü ağacın tarihçe-i hayatını onda kader kalemiyle yazan, büyük bir kitab hükmüne getiren bir Hallak-ı Hakîm, bir Hayy-ı Lâyemut'u tanımayan; elbette değil ahmak bir insan ve divane bir hayvan, belki Cehennem ateşini karıştıran bir serseri şeytandan daha bedbaht ve ebedî ölüme mahkûm olur.  
+Evet görüyoruz ki: Güz mevsiminde üçyüzbin nevi zîhayat vefat namıyla terhis edilirken, herbir nevi ve ferdin sahife-i amellerinin kutucukları ve işlediklerinin fihristeleri ve gelen baharda işleyeceklerinin listeleri ve bir cihette bir nevi ruhları olan tohumlarını onların yerlerinde Hafîz-i Zülcelal'in yed-i hikmetine emanet edildiğini ve incirin tohum ve çekirdekleri gibi zerrecik o küçücük tohumları birer ruh-u bâki gibi incir ağacının bütün kavanin-i hayatiyesini taşıyan ve bir kitab kadar kuvve-i hâfızada yazı misillü ağacın tarihçe-i hayatını onda kader kalemiyle yazan, büyük bir kitab hükmüne getiren bir Hallak-ı Hakîm, bir Hayy-ı Lâyemut'u tanımayan; elbette değil ahmak bir insan ve divane bir hayvan, belki Cehennem ateşini karıştıran bir serseri şeytandan daha bedbaht ve ebedî ölüme mahkûm olur.
 
-   Evet bu kelimelerin hüccetlerine işaret eden
+Evet bu kelimelerin hüccetlerine işaret eden
 
-küllî, ihatalı ve hadsiz hârika ve nihayetsiz hârikaları, mu'cizeleri ihtiva eden bu mezkûr hakîmane ef'al, fâilsiz olmaları yüz derece muhal ve bâtıl olduğu gibi; kör, âciz, şuursuz, sağır, camid, karmakarışık, intizamsız, karışık, istilacı olan esbaba isnad etmek bin derece mümteni', esassızdır. Yoksa toprağın herbir zerresinde hadsiz bir kudret, bir hikmet ve bütün otlar ve çiçeklerin teşkilâtına dair pek hârika ve küllî bir san'atkârlık bulunmak; havanın herbir zerresinde -Rehber'deki Hüve Nüktesi'nin dediği gibi- bütün konuşmaları ve telefon ve radyoların kelimelerini bilecek ve sair zerrelere ders verecek bir kabiliyet bulunmak lâzım gelir. Bu acib fikri ise; hiçbir şeytan, hiçbir kimseye kabul ettiremez. Ve bu derece akıldan, hakikattan uzak ve bütün mevcudata karşı bir tahkir ve tecavüz olan küfür ve inkârın cezası, ancak dehşetli Cehennem olabilir ve ayn-ı adalettir. Elbette öyle münkirler için "Yaşasın Cehennem!" dememiz lâzım.  
+küllî, ihatalı ve hadsiz hârika ve nihayetsiz hârikaları, mu'cizeleri ihtiva eden bu mezkûr hakîmane ef'al, fâilsiz olmaları yüz derece muhal ve bâtıl olduğu gibi; kör, âciz, şuursuz, sağır, camid, karmakarışık, intizamsız, karışık, istilacı olan esbaba isnad etmek bin derece mümteni', esassızdır. Yoksa toprağın herbir zerresinde hadsiz bir kudret, bir hikmet ve bütün otlar ve çiçeklerin teşkilâtına dair pek hârika ve küllî bir san'atkârlık bulunmak; havanın herbir zerresinde -Rehber'deki Hüve Nüktesi'nin dediği gibi- bütün konuşmaları ve telefon ve radyoların kelimelerini bilecek ve sair zerrelere ders verecek bir kabiliyet bulunmak lâzım gelir. Bu acib fikri ise; hiçbir şeytan, hiçbir kimseye kabul ettiremez. Ve bu derece akıldan, hakikattan uzak ve bütün mevcudata karşı bir tahkir ve tecavüz olan küfür ve inkârın cezası, ancak dehşetli Cehennem olabilir ve ayn-ı adalettir. Elbette öyle münkirler için "Yaşasın Cehennem!" dememiz lâzım.
 
- Sekizinci Kelime:   
+Sekizinci Kelime:
 
- <span class="arabic" dir="rtl">وَ هُوَ حَىٌّ لَا يَمُوتُ</span>  
+<span class="arabic" dir="rtl">وَ هُوَ حَىٌّ لَا يَمُوتُ</span>
 
-dur. Bundaki hüccete gayet kısa bir işaret şudur:  
+dur. Bundaki hüccete gayet kısa bir işaret şudur:
 
-   Meselâ: Nasıl gündüzde çalkanan bir deniz yüzünde ve akan bir nehir üstündeki kabarcıklarda görünen güneşçikler gitmeleriyle arkalarından
+Meselâ: Nasıl gündüzde çalkanan bir deniz yüzünde ve akan bir nehir üstündeki kabarcıklarda görünen güneşçikler gitmeleriyle arkalarından
 
-gelen yeni kabarcıklar, aynen gidenler gibi güneşçikleri gösterip gökteki güneşe işaret ve şehadet ederler ve zeval ve vefatlarıyla bir daimî güneşin mevcudiyetine ve bekasına delalet ederler; aynen öyle de: Her vakit değişen kâinat denizinin yüzünde ve tazelenen hadsiz fezasında ve zerrat tarlasında ve bütün hâdisatı ve fâni mevcudatı kucağına alarak beraber çalkanan zaman nehrinin içinde mahlukat, mütemadiyen sür'atle akıp gidiyorlar, zahirî sebebleriyle beraber vefat ediyorlar. Her sene, her gün bir kâinat ölür, bir tazesi yerine gelir. Ve zerrat tarlasında, mütemadiyen seyyar dünyalar ve seyyal âlemler mahsulâtı alındığından, elbette kabarcıklar ve güneşçikler zevalleriyle daimî bir güneşi gösterdikleri gibi, o hadsiz mahlukat ve mahsulâtın vefatları ve zahirî sebebleriyle beraber kemal-i intizamla terhisleri, gündüz gibi şübhesiz, güneş gibi zahir bir kat'iyyette bir Hayy-ı Lâyemut'un, bir Şems-i Sermedî'nin, bir Hallak-ı Bâki'nin ve bir Kumandan-ı Akdes'in vücub-u vücudu ve vahdeti ve mevcudiyeti, kâinatın mevcudiyetinden bin derece zahir ve kat'îdir diye bütün mevcudat, ayrı ayrı ve beraber şehadet ederler.  
+gelen yeni kabarcıklar, aynen gidenler gibi güneşçikleri gösterip gökteki güneşe işaret ve şehadet ederler ve zeval ve vefatlarıyla bir daimî güneşin mevcudiyetine ve bekasına delalet ederler; aynen öyle de: Her vakit değişen kâinat denizinin yüzünde ve tazelenen hadsiz fezasında ve zerrat tarlasında ve bütün hâdisatı ve fâni mevcudatı kucağına alarak beraber çalkanan zaman nehrinin içinde mahlukat, mütemadiyen sür'atle akıp gidiyorlar, zahirî sebebleriyle beraber vefat ediyorlar. Her sene, her gün bir kâinat ölür, bir tazesi yerine gelir. Ve zerrat tarlasında, mütemadiyen seyyar dünyalar ve seyyal âlemler mahsulâtı alındığından, elbette kabarcıklar ve güneşçikler zevalleriyle daimî bir güneşi gösterdikleri gibi, o hadsiz mahlukat ve mahsulâtın vefatları ve zahirî sebebleriyle beraber kemal-i intizamla terhisleri, gündüz gibi şübhesiz, güneş gibi zahir bir kat'iyyette bir Hayy-ı Lâyemut'un, bir Şems-i Sermedî'nin, bir Hallak-ı Bâki'nin ve bir Kumandan-ı Akdes'in vücub-u vücudu ve vahdeti ve mevcudiyeti, kâinatın mevcudiyetinden bin derece zahir ve kat'îdir diye bütün mevcudat, ayrı ayrı ve beraber şehadet ederler.
 
-   İşte kâinatı dolduran bu yüksek sesleri ve kuvvetli şehadetleri işitmeyen ve kulak vermeyen, ne derece sağır ve ahmak ve câni olduğunu elbette anladınız.
+İşte kâinatı dolduran bu yüksek sesleri ve kuvvetli şehadetleri işitmeyen ve kulak vermeyen, ne derece sağır ve ahmak ve câni olduğunu elbette anladınız.
 
-Dokuzuncu Kelime:   
+Dokuzuncu Kelime:
 
- <span class="arabic" dir="rtl">بِيَدِهِ الْخَيْرُ</span>  
+<span class="arabic" dir="rtl">بِيَدِهِ الْخَيْرُ</span>
 
-dır. Bundaki hüccete gayet kısa bir işaret şudur:  
+dır. Bundaki hüccete gayet kısa bir işaret şudur:
 
-   Görüyoruz ki: Bu kâinatta her daire, her nevi, her tabaka, hattâ her ferd, her a'zâ, hattâ her bedendeki herbir hüceyrenin ihtiyat rızkını taşıyan bir mahzeni, bir deposu ve levazımatını yetiştiren, muhafaza eden bir tarlası ve hazinesi var ki; gayet intizam ve mizan ile ve nihayetsiz hikmet ve inayet ile vakti vaktine -muhtacın iktidar ve ihtiyarı haricinde- bir dest-i gaybî tarafından o muhtacın eline veriliyor. Meselâ: Dağlar, zîhayata ve insana lâzım olan bütün madenleri, ilâçları ve hayata lâzım şeyleri taşıyor ve birinin emriyle ve tedbiriyle gayet mükemmel bir hazine, bir anbar olduğu gibi.. zemin dahi bütün o zîhayatın erzaklarını bir Rezzak-ı Hakîm'in kuvvetiyle yetiştiren kemal-i mizan ve intizamla bir tarla, bir harman, bir matbahtır. Hattâ her insanın ve cismindeki herbir uzvun bir deposu ve mahzeni, hattâ bir hüceyrenin dahi bir ihtiyat mahzenciği bulunması gibi.. gitgide tâ dâr-ı âhiretin bir mahzeni dünyadır ve Cennet'in bir tarlası ve deposu, bu âlemdeki hüsünleri ve hasenatları ve
+Görüyoruz ki: Bu kâinatta her daire, her nevi, her tabaka, hattâ her ferd, her a'zâ, hattâ her bedendeki herbir hüceyrenin ihtiyat rızkını taşıyan bir mahzeni, bir deposu ve levazımatını yetiştiren, muhafaza eden bir tarlası ve hazinesi var ki; gayet intizam ve mizan ile ve nihayetsiz hikmet ve inayet ile vakti vaktine -muhtacın iktidar ve ihtiyarı haricinde- bir dest-i gaybî tarafından o muhtacın eline veriliyor. Meselâ: Dağlar, zîhayata ve insana lâzım olan bütün madenleri, ilâçları ve hayata lâzım şeyleri taşıyor ve birinin emriyle ve tedbiriyle gayet mükemmel bir hazine, bir anbar olduğu gibi.. zemin dahi bütün o zîhayatın erzaklarını bir Rezzak-ı Hakîm'in kuvvetiyle yetiştiren kemal-i mizan ve intizamla bir tarla, bir harman, bir matbahtır. Hattâ her insanın ve cismindeki herbir uzvun bir deposu ve mahzeni, hattâ bir hüceyrenin dahi bir ihtiyat mahzenciği bulunması gibi.. gitgide tâ dâr-ı âhiretin bir mahzeni dünyadır ve Cennet'in bir tarlası ve deposu, bu âlemdeki hüsünleri ve hasenatları ve
 
-nurları mahsul veren âlem-i İslâmiyet ve hakikatlı insaniyet; ve Cehennem'in bir anbarı ise, şerleri ve çirkinleri ve küfürleri mahsul veren ve şer olan ademden gelen ve hayır olan vücud âlemlerini telvis eden pis maddeler, taifeler; ve yıldızların hararet mahzeni Cehennem ve nurlar hazinesi bir Cennet'tir ki; "Biyedihilhayr" kelimesi, bütün o hadsiz hazinelere işaretle pek parlak bir hücceti gösteriyor.  
+nurları mahsul veren âlem-i İslâmiyet ve hakikatlı insaniyet; ve Cehennem'in bir anbarı ise, şerleri ve çirkinleri ve küfürleri mahsul veren ve şer olan ademden gelen ve hayır olan vücud âlemlerini telvis eden pis maddeler, taifeler; ve yıldızların hararet mahzeni Cehennem ve nurlar hazinesi bir Cennet'tir ki; "Biyedihilhayr" kelimesi, bütün o hadsiz hazinelere işaretle pek parlak bir hücceti gösteriyor.
 
-   Evet bu kelime ile ve  
+Evet bu kelime ile ve
 
- <span class="arabic" dir="rtl">بِيَدِه۪ مَقَال۪يدُ كُلِّ شَيْءٍ</span>  
+<span class="arabic" dir="rtl">بِيَدِه۪ مَقَال۪يدُ كُلِّ شَيْءٍ</span>
 
 cümlesiyle, -yani "Her şeyin anahtarı onun elindedir"- nihayetsiz geniş ve hadsiz hârikalı bir hüccet-i rububiyet ve vahdet, bütün bütün kör olmayana gösterir. Meselâ hadsiz o hazine ve anbarlardan yalnız buna bak ki: Herbiri bir koca ağacın veya bir parlak çiçeğin cihazatını ve mukadderatının proğramını taşıyan küçücük mahzencikler olan çekirdekler ve tohumların anahtarları elinde bulunan bir Mutasarrıf-ı Hakîm bir çekirdeğin kapıcığını "Uyan!" emriyle ve irade anahtarıyla tam mizan-ı nizamla açtığı gibi, zemin hazinesini dahi yağmur anahtarıyla açarak, mahzencikleri ve nebatatın nutfeleri olan bütün habbeleri ve hayvanatın menşe'leri ve kuşların ve sineklerin su ve havadan nutfeleri olan bütün
 
-inkişaf emrini alan katreler mahzenciklerini beraber, hatasız açtığı vakitte, kâinatta küllî ve cüz'î, maddî ve manevî bütün hazine ve depoları hikmet ve irade ve rahmet ve meşiet eliyle herbirine mahsus bir anahtarla açtığını bilmek ve görmek istersen, senin bir nevi mahzenciklerin olan kendi kalbine ve dimağına ve cesedine ve midene ve bahçene ve zeminin çiçeği olan bahara ve ondaki çiçeklere ve meyvelere bak ki; kemal-i nizam ve mizan ve rahmet ve hikmetle bir dest-i gaybî tarafından "emr-i kün feyekûn" tezgâhından gelen ayrı ayrı anahtarlarla açıyor. Bir dirhem kadar bir kutucuktan bir batman, belki bazan yüz batman taamları kemal-i intizam ile çıkarıyor, zîhayatlara ziyafet veriyor. Acaba böyle muntazam, alîmane, basîrane nihayetsiz bir fiile ve tesadüfsüz tam hikmetli bir san'ata ve yanlışsız tam mizanlı bir tasarrufa ve zulümsüz tam adaletli bir rububiyete hiç mümkün müdür ki; kör kuvvet, sağır tabiat, serseri tesadüf, camid cahil âciz esbab müdahale edebilsin? Ve bütün eşyayı birden görüp ve beraber idare edemeyen ve zerratla seyyarat yıldızları emrinde bulunmayan bir mevcud, bu her cihetle hikmetli, mu'cizeli, mizanlı tasarrufa ve idareye karışabilsin?  
+inkişaf emrini alan katreler mahzenciklerini beraber, hatasız açtığı vakitte, kâinatta küllî ve cüz'î, maddî ve manevî bütün hazine ve depoları hikmet ve irade ve rahmet ve meşiet eliyle herbirine mahsus bir anahtarla açtığını bilmek ve görmek istersen, senin bir nevi mahzenciklerin olan kendi kalbine ve dimağına ve cesedine ve midene ve bahçene ve zeminin çiçeği olan bahara ve ondaki çiçeklere ve meyvelere bak ki; kemal-i nizam ve mizan ve rahmet ve hikmetle bir dest-i gaybî tarafından "emr-i kün feyekûn" tezgâhından gelen ayrı ayrı anahtarlarla açıyor. Bir dirhem kadar bir kutucuktan bir batman, belki bazan yüz batman taamları kemal-i intizam ile çıkarıyor, zîhayatlara ziyafet veriyor. Acaba böyle muntazam, alîmane, basîrane nihayetsiz bir fiile ve tesadüfsüz tam hikmetli bir san'ata ve yanlışsız tam mizanlı bir tasarrufa ve zulümsüz tam adaletli bir rububiyete hiç mümkün müdür ki; kör kuvvet, sağır tabiat, serseri tesadüf, camid cahil âciz esbab müdahale edebilsin? Ve bütün eşyayı birden görüp ve beraber idare edemeyen ve zerratla seyyarat yıldızları emrinde bulunmayan bir mevcud, bu her cihetle hikmetli, mu'cizeli, mizanlı tasarrufa ve idareye karışabilsin?
 
-   İşte her hayr elinde, herşeyin anahtarı yanında
+İşte her hayr elinde, herşeyin anahtarı yanında
 
-bulunan böyle bir Mutasarrıf-ı Rahîm'i, bir Rabb-ı Hakîm'i tanımayan ve inkâra sapana, elbette  
+bulunan böyle bir Mutasarrıf-ı Rahîm'i, bir Rabb-ı Hakîm'i tanımayan ve inkâra sapana, elbette
 
- <span class="arabic" dir="rtl">تَكَادُ تَمَيَّزُ مِنَ الْغَيْظِ</span>  
+<span class="arabic" dir="rtl">تَكَادُ تَمَيَّزُ مِنَ الْغَيْظِ</span>
 
-âyetinin dediği gibi, Cehennem ona kızıyor ve kızışıyor ve hadsiz azabıma müstehaktır, merhamete hiç lâyık değildir, diye lisan-ı hal ile der.  
+âyetinin dediği gibi, Cehennem ona kızıyor ve kızışıyor ve hadsiz azabıma müstehaktır, merhamete hiç lâyık değildir, diye lisan-ı hal ile der.
 
- Onuncu Kelime:   
+Onuncu Kelime:
 
- <span class="arabic" dir="rtl">وَ هُوَ عَلٰى كُلِّ شَيْءٍ قَد۪يرٌ</span>  
+<span class="arabic" dir="rtl">وَ هُوَ عَلٰى كُلِّ شَيْءٍ قَد۪يرٌ</span>
 
-dir. Bundaki hüccete gayet kısa bir işaret şudur:  
+dir. Bundaki hüccete gayet kısa bir işaret şudur:
 
-   Bu misafirhane-i dünyaya gelen her zîşuur, gözünü açtıkça görür ki: Bir kudret, bütün kâinatı kabzasında tutmuş ve nihayetsiz, hiç şaşırmayan ezelî, ihatalı bir ilim ve gayet dikkatli, hiç mizansız, faidesiz hareket etmeyen bir sermedî hikmet ve inayet o kudretin içinde bulunup zerrat ordusundan bir tek zerreyi meczub mevlevî gibi döndürerek çok vazifelerde istihdam ettiği gibi, küre-i arzı aynı anda, aynı kanunla bir senede yirmidört bin senelik bir dairede yine bir meczub mevlevî misillü gezdirir. Mevsimlerin mahsulâtlarını hayvan ve insanlara getirdiği aynı kanunla, aynı zamanda güneşi bir mekik, bir çıkrık yaparak merkezinde cezbedarane ve cazibekârane döndürüp manzume-i şemsiye ordusu olan seyyarat yıldızlarını kemal-i mizan ve intizamla vazifelerde
+Bu misafirhane-i dünyaya gelen her zîşuur, gözünü açtıkça görür ki: Bir kudret, bütün kâinatı kabzasında tutmuş ve nihayetsiz, hiç şaşırmayan ezelî, ihatalı bir ilim ve gayet dikkatli, hiç mizansız, faidesiz hareket etmeyen bir sermedî hikmet ve inayet o kudretin içinde bulunup zerrat ordusundan bir tek zerreyi meczub mevlevî gibi döndürerek çok vazifelerde istihdam ettiği gibi, küre-i arzı aynı anda, aynı kanunla bir senede yirmidört bin senelik bir dairede yine bir meczub mevlevî misillü gezdirir. Mevsimlerin mahsulâtlarını hayvan ve insanlara getirdiği aynı kanunla, aynı zamanda güneşi bir mekik, bir çıkrık yaparak merkezinde cezbedarane ve cazibekârane döndürüp manzume-i şemsiye ordusu olan seyyarat yıldızlarını kemal-i mizan ve intizamla vazifelerde
 
-çalıştırır. Ve aynı kudret; aynı zamanda, aynı kanun-u hikmetle zemin sahifesinde yüzbinler kitab hükmünde yüzbinler nevileri beraber, birbiri içinde, iltibassız, sehivsiz yazar, haşr-i a'zamın binler nümunelerini izhar eder. Ve aynı kudret, aynı zamanda hava sahifesini bir yazar-bozar tahtasına çevirir. Bütün zerrelerini birer kalem uçları ve o kitabın noktaları hükmünde emir ve iradenin onlara tayin ettiği vazifelerinde istimal ederek ve bütün o zerrelere herbirine öyle bir kabiliyet vermiş ki; güya bütün sözleri ve konuşmaları bilir gibi alır, neşreder, şaşırmaz. Küçücük birer kulak, incecik birer lisan olarak istihdam edip unsur-u hava, emir ve irade-i İlahînin bir arşı olduğunu isbat eder.  
+çalıştırır. Ve aynı kudret; aynı zamanda, aynı kanun-u hikmetle zemin sahifesinde yüzbinler kitab hükmünde yüzbinler nevileri beraber, birbiri içinde, iltibassız, sehivsiz yazar, haşr-i a'zamın binler nümunelerini izhar eder. Ve aynı kudret, aynı zamanda hava sahifesini bir yazar-bozar tahtasına çevirir. Bütün zerrelerini birer kalem uçları ve o kitabın noktaları hükmünde emir ve iradenin onlara tayin ettiği vazifelerinde istimal ederek ve bütün o zerrelere herbirine öyle bir kabiliyet vermiş ki; güya bütün sözleri ve konuşmaları bilir gibi alır, neşreder, şaşırmaz. Küçücük birer kulak, incecik birer lisan olarak istihdam edip unsur-u hava, emir ve irade-i İlahînin bir arşı olduğunu isbat eder.
 
-   İşte bu kısa işarete kıyasen, bu kâinatı bir muntazam şehir, bir mükemmel apartman ve misafirhane, bir mu'cizatlı kitab ve Kur'an hükmüne getirip heyet-i mecmuasından tâ bir zerreye kadar bütün mahlukat tabakalarını ve dairelerini ve taifelerini mizan-ı ilim ve nizam-ı hikmetle kabzasına alan, tasarruf eden; kudreti içinde hikmetini, rahmetini gösteren ve rububiyet-i mutlakası içinde mevcudiyetini ve vahdaniyetini güneş ve gündüz gibi bildirip tanıttırmasına mukabil, imanla tanımak ve sevdirmesine mukabil,
+İşte bu kısa işarete kıyasen, bu kâinatı bir muntazam şehir, bir mükemmel apartman ve misafirhane, bir mu'cizatlı kitab ve Kur'an hükmüne getirip heyet-i mecmuasından tâ bir zerreye kadar bütün mahlukat tabakalarını ve dairelerini ve taifelerini mizan-ı ilim ve nizam-ı hikmetle kabzasına alan, tasarruf eden; kudreti içinde hikmetini, rahmetini gösteren ve rububiyet-i mutlakası içinde mevcudiyetini ve vahdaniyetini güneş ve gündüz gibi bildirip tanıttırmasına mukabil, imanla tanımak ve sevdirmesine mukabil,
 
-ubudiyetle sevmek ve ihsanatlarına mukabil, şükür ve hamd isteyen böyle bir Rahman-ı Rahîm'i tanımayan ve ubudiyetle onu sevmeye çalışmayan, belki inkâr ile ona bir nevi adavet taşıyan insan suretindeki şeytanlar, birer küçük Nemrud ve Firavun hükmünde nihayetsiz bir azaba elbette müstehak olur.  
+ubudiyetle sevmek ve ihsanatlarına mukabil, şükür ve hamd isteyen böyle bir Rahman-ı Rahîm'i tanımayan ve ubudiyetle onu sevmeye çalışmayan, belki inkâr ile ona bir nevi adavet taşıyan insan suretindeki şeytanlar, birer küçük Nemrud ve Firavun hükmünde nihayetsiz bir azaba elbette müstehak olur.
 
- Onbirinci Kelime:   
+Onbirinci Kelime:
 
- <span class="arabic" dir="rtl">وَ اِلَيْهِ الْمَص۪يرُ</span>  
+<span class="arabic" dir="rtl">وَ اِلَيْهِ الْمَص۪يرُ</span>
 
-dir. Yani: Daire-i huzuruna ve âlem-i bâkisine ve âhiretine ve sermedî dâr-ı saadetine gidileceği gibi, bütün kâinattaki mahlukatın mercii odur; bütün esbab silsileleri ona dayanıyor ve kudretine istinad eder ve o kudretinin tasarrufatına birer perdedirler; o kudret-i kudsiyenin izzetini ve haşmetini muhafaza için, bütün zahirî sebebler yalnız birer perdedirler; icadda da hiç tesirleri yoktur; emir ve iradesi olmazsa hiçbir şey hattâ hiçbir zerre hareket edemez demektir. Bu kelimedeki hüccete gayet kısa bir işaret ederiz:  
+dir. Yani: Daire-i huzuruna ve âlem-i bâkisine ve âhiretine ve sermedî dâr-ı saadetine gidileceği gibi, bütün kâinattaki mahlukatın mercii odur; bütün esbab silsileleri ona dayanıyor ve kudretine istinad eder ve o kudretinin tasarrufatına birer perdedirler; o kudret-i kudsiyenin izzetini ve haşmetini muhafaza için, bütün zahirî sebebler yalnız birer perdedirler; icadda da hiç tesirleri yoktur; emir ve iradesi olmazsa hiçbir şey hattâ hiçbir zerre hareket edemez demektir. Bu kelimedeki hüccete gayet kısa bir işaret ederiz:
 
- Evvelâ:   
+Evvelâ:
 
-   Bu kudsî kelimenin ifade ettiği haşir ve âhiret ve hayat-ı bâkiye hakikatının bu gelen bahar gibi kat'î ve şübhesiz tahakkukunu ve geleceğini tam iman ettirmek ve isbat etmek cihetini Onuncu Söz ve zeyillerine ve Yirmidokuzuncu Söz'e ve "Meyve"nin Yedinci Mes'elesi'ne ve
+Bu kudsî kelimenin ifade ettiği haşir ve âhiret ve hayat-ı bâkiye hakikatının bu gelen bahar gibi kat'î ve şübhesiz tahakkukunu ve geleceğini tam iman ettirmek ve isbat etmek cihetini Onuncu Söz ve zeyillerine ve Yirmidokuzuncu Söz'e ve "Meyve"nin Yedinci Mes'elesi'ne ve
 
 "Münacat" Şuaına ve Nur'un imanî risalelerine havale ederiz. Elhak, onlar bu rükn-ü imanîyi öyle bir tarzda hadsiz hüccetlerle isbat etmişler ki; dünyanın mevcudiyeti derecesinde âhiretin tahakkukunu, en muannid münkirleri de tasdike mecbur eden bir surette isbat etmişler.
 
- Sâniyen:   
+Sâniyen:
 
-   Mu'ciz-ül Beyan-ı Kur'an'ın üçten birisi haşre ve âhirete bakar, her davayı ona bina eder. Öyle ise, Kur'anın hakkaniyetini isbat eden bütün mu'cizeleri ve hüccetleri, âhiretin vücuduna dahi delalet ettikleri gibi; Muhammed Aleyhissalâtü Vesselâm'ın nübüvvetine şehadet eden bütün mu'cizeleri ve umum delail-i nübüvveti ve sıdkının bütün hüccetleri, haşir ve âhirete dahi şehadet ederler. Çünki o zâtın (A.M.) bütün hayatında daimî bir büyük davası âhiret olduğu gibi, bütün yüzyirmidört bin peygamberler (Aleyhimüsselâm) dahi hayat-ı bâkiye ve saadet-i ebediyeyi dava edip beşere müjde ederek hadsiz mu'cizelerle ve kat'î deliller ile isbat ettiklerinden, elbette onların peygamberliklerine ve sadıkıyetlerine delalet eden bütün mu'cizeleri ve hüccetleri, onların en büyük ve daimî davaları olan âhirete ve hayat-ı bâkiyeye şehadet ederler. Buna kıyasen sair erkân-ı imaniyeyi isbat eden bütün deliller dahi haşrin vukuuna ve dâr-ı saadetin açılmasına şehadet ederler.
+Mu'ciz-ül Beyan-ı Kur'an'ın üçten birisi haşre ve âhirete bakar, her davayı ona bina eder. Öyle ise, Kur'anın hakkaniyetini isbat eden bütün mu'cizeleri ve hüccetleri, âhiretin vücuduna dahi delalet ettikleri gibi; Muhammed Aleyhissalâtü Vesselâm'ın nübüvvetine şehadet eden bütün mu'cizeleri ve umum delail-i nübüvveti ve sıdkının bütün hüccetleri, haşir ve âhirete dahi şehadet ederler. Çünki o zâtın (A.M.) bütün hayatında daimî bir büyük davası âhiret olduğu gibi, bütün yüzyirmidört bin peygamberler (Aleyhimüsselâm) dahi hayat-ı bâkiye ve saadet-i ebediyeyi dava edip beşere müjde ederek hadsiz mu'cizelerle ve kat'î deliller ile isbat ettiklerinden, elbette onların peygamberliklerine ve sadıkıyetlerine delalet eden bütün mu'cizeleri ve hüccetleri, onların en büyük ve daimî davaları olan âhirete ve hayat-ı bâkiyeye şehadet ederler. Buna kıyasen sair erkân-ı imaniyeyi isbat eden bütün deliller dahi haşrin vukuuna ve dâr-ı saadetin açılmasına şehadet ederler.
 
-Sâlisen:   
+Sâlisen:
 
-   Hiç mümkün müdür ki; kendi kemalâtını ve kudret ve rububiyetini izhar etmek için bu kâinatı bütün zerrat ve seyyarat ve ecza ve tabakatıyla halk edip kemal-i hikmetle her birisini bir vazife ile belki çok vazifelerle mütemadiyen çalıştıran ve sermedî, hadsiz cilve-i esmasını göstermek için kafile kafile arkasında, belki seyyar müteceddid dünya dünya arkasında ve mahlukat taifelerini bu misafirhane-i âleme ve hayat-ı dünyeviye meydan-ı imtihanına gönderip âlem-i misalde kurulan uhrevî sinemalar ve berzahî fotoğraflarla suretlerini ve amellerini ve vaziyetlerini alarak onları terhisten sonra, başka taife ve kafile ve seyyal ve seyyar bir nevi dünyaları o meydana vazifeler ve cilve-i esmasına âyineler olmak için gönderen bir Sâni'-i Zülcelal, bir Hâlık-ı Zülcemal, bir Allah-ı Zülkemal; bu fâni dünyada şuur ve akıl ile o Hâlık'ın bütün maksadlarına karşı mukabele eden ve bütün istidadıyla o Hâlık'ı sevip sevdirip tanıyıp tanıttırıp hadsiz dualarla beka-i âhiret saadetini yalvaran ve akıl sebebiyle nihayetsiz elemler aldığından, bütün fıtratı ve ruhu ve istidadı ile ayn-ı lezzet olan hayat-ı bâkiyeyi isteyen bu nev'-i insan için bir dâr-ı mükâfat ve mücazat, bir haşir neşir olmasın? Hâşâ! Yüzbin defa hâşâ ve kellâ!
+Hiç mümkün müdür ki; kendi kemalâtını ve kudret ve rububiyetini izhar etmek için bu kâinatı bütün zerrat ve seyyarat ve ecza ve tabakatıyla halk edip kemal-i hikmetle her birisini bir vazife ile belki çok vazifelerle mütemadiyen çalıştıran ve sermedî, hadsiz cilve-i esmasını göstermek için kafile kafile arkasında, belki seyyar müteceddid dünya dünya arkasında ve mahlukat taifelerini bu misafirhane-i âleme ve hayat-ı dünyeviye meydan-ı imtihanına gönderip âlem-i misalde kurulan uhrevî sinemalar ve berzahî fotoğraflarla suretlerini ve amellerini ve vaziyetlerini alarak onları terhisten sonra, başka taife ve kafile ve seyyal ve seyyar bir nevi dünyaları o meydana vazifeler ve cilve-i esmasına âyineler olmak için gönderen bir Sâni'-i Zülcelal, bir Hâlık-ı Zülcemal, bir Allah-ı Zülkemal; bu fâni dünyada şuur ve akıl ile o Hâlık'ın bütün maksadlarına karşı mukabele eden ve bütün istidadıyla o Hâlık'ı sevip sevdirip tanıyıp tanıttırıp hadsiz dualarla beka-i âhiret saadetini yalvaran ve akıl sebebiyle nihayetsiz elemler aldığından, bütün fıtratı ve ruhu ve istidadı ile ayn-ı lezzet olan hayat-ı bâkiyeyi isteyen bu nev'-i insan için bir dâr-ı mükâfat ve mücazat, bir haşir neşir olmasın? Hâşâ! Yüzbin defa hâşâ ve kellâ!
 
-İşte bu kısacık işaretin izahatı ve tafsilâtı ve hüccetleri, parlak ve kuvvetli bir surette Risale-i Nur'da bulunmasından, ona havale ederek bu pek uzun kıssayı kısa kesiyoruz.  
+İşte bu kısacık işaretin izahatı ve tafsilâtı ve hüccetleri, parlak ve kuvvetli bir surette Risale-i Nur'da bulunmasından, ona havale ederek bu pek uzun kıssayı kısa kesiyoruz.
 
- <span class="arabic" dir="rtl">سُبْحَانَكَ لَا عِلْمَ لَنَٓا اِلَّا  مَا عَلَّمْتَنَٓا اِنَّكَ اَنْتَ الْعَل۪يمُ الْحَك۪يمُ</span>  
+<span class="arabic" dir="rtl">سُبْحَانَكَ لَا عِلْمَ لَنَٓا اِلَّا مَا عَلَّمْتَنَٓا اِنَّكَ اَنْتَ الْعَل۪يمُ الْحَك۪يمُ</span>
 
- * * *
+---
 
-Yirminci Mektub'un İkinci Makamı   
+Yirminci Mektub'un İkinci Makamı
 
- (İsm-i A'zam noktasında, tevhidin isbatına muhtasar bir işarettir)   
+(İsm-i A'zam noktasında, tevhidin isbatına muhtasar bir işarettir)
 
- BİRİNCİ KELİME:   
+BİRİNCİ KELİME:
 
- <span class="arabic" dir="rtl">لَٓا اِلٰهَ اِلَّا  اللّٰهُ</span>  
+<span class="arabic" dir="rtl">لَٓا اِلٰهَ اِلَّا اللّٰهُ</span>
 
 da, bir tevhid-i uluhiyet ve mabudiyet vardır. Şu mertebenin gayet kuvvetli bir bürhanına şöyle işaret ederiz ki: Şu kâinat yüzünde, hususan zeminin sahifesinde, gayet muntazam bir faaliyet görünüyor. Ve gayet hikmetli bir hallakıyet müşahede ediyoruz. Ve gayet intizamlı bir fettahiyet, yani herşey'e lâyık bir şekil açmak ve suret vermek aynelyakîn görüyoruz. Hem gayet şefkatli, keremli, rahmetli bir vehhabiyet ve ihsanat görüyoruz. Öyle ise, bizzarure şu hâl ve şu keyfiyet; Faal, Hallak, Fettah, Vehhab bir Zât-ı Zülcelal'in vücub-u vücudunu ve vahdetini isbat eder, belki ihsas eder. Evet mevcudatın mütemadiyen zevalleri, tazelenmeleri gösteriyor ki, o mevcudat; bir Sâni'-i Kadîr'in kudsî esmasının cilveleri ve
 
-envâr-ı esmaiyesinin gölgeleri ve ef'alinin eserleri ve kalem-i kader ve kudretin nakışları ve sahifeleri ve cemal-i kemalinin âyineleridir. Şu hakikat-ı uzmaya ve şu tevhidin mertebe-i ulyasına, şu kâinatın sahibi, bütün gönderdiği mukaddes kitablar ve suhuflarıyla o tevhidi gösterdiği gibi; bütün ehl-i hakikat ve kâmilîn-i nev'-i beşer tahkikatlarıyla ve keşfiyatlarıyla, aynı mertebe-i tevhidi gösteriyorlar. Ve kâinat dahi, acz ve fakrıyla beraber, mazhar olduğu daimî mu'cizat-ı san'atın ve havarik-ı iktidar, hazain-i servetin şehadetiyle, aynı mertebe-i tevhide işaret eder. Demek Şahid-i Ezelî bütün kütüb ve suhufuyla ve ehl-i şuhud bütün tahkikat ve küşûfuyla ve âlem-i şehadet bütün muntazam ahval ve hakîmane şuunatıyla o mertebe-i tevhidde bil'icma' ittifak ediyorlar.  
+envâr-ı esmaiyesinin gölgeleri ve ef'alinin eserleri ve kalem-i kader ve kudretin nakışları ve sahifeleri ve cemal-i kemalinin âyineleridir. Şu hakikat-ı uzmaya ve şu tevhidin mertebe-i ulyasına, şu kâinatın sahibi, bütün gönderdiği mukaddes kitablar ve suhuflarıyla o tevhidi gösterdiği gibi; bütün ehl-i hakikat ve kâmilîn-i nev'-i beşer tahkikatlarıyla ve keşfiyatlarıyla, aynı mertebe-i tevhidi gösteriyorlar. Ve kâinat dahi, acz ve fakrıyla beraber, mazhar olduğu daimî mu'cizat-ı san'atın ve havarik-ı iktidar, hazain-i servetin şehadetiyle, aynı mertebe-i tevhide işaret eder. Demek Şahid-i Ezelî bütün kütüb ve suhufuyla ve ehl-i şuhud bütün tahkikat ve küşûfuyla ve âlem-i şehadet bütün muntazam ahval ve hakîmane şuunatıyla o mertebe-i tevhidde bil'icma' ittifak ediyorlar.
 
-   İşte o Vâhid-i Ehad'i kabul etmeyen, ya nihayetsiz ilahları kabul edecek veyahut ahmak Sofestaî gibi hem kendini, hem kâinatın vücudunu inkâr edecek.  
+İşte o Vâhid-i Ehad'i kabul etmeyen, ya nihayetsiz ilahları kabul edecek veyahut ahmak Sofestaî gibi hem kendini, hem kâinatın vücudunu inkâr edecek.
 
- İKİNCİ KELİME:   
+İKİNCİ KELİME:
 
- <span class="arabic" dir="rtl">وَحْدَهُ</span>  
+<span class="arabic" dir="rtl">وَحْدَهُ</span>
 
 İşte şu kelime sarih bir mertebe-i tevhidi gösterir. Şu mertebeyi dahi, a'zamî bir surette isbat eden gayet kuvvetli bir bürhanına şöyle işaret ederiz ki:
 
@@ -233,554 +233,554 @@ Biz gözümüzü açtıkça, kâinat yüzüne nazarımızı saldırdıkça, en e
 
 meyveleri ve neticeleri öyle bir tarzdadır ki; güya tohumları, asılları; birer tarife, birer proğram şeklinde bütün o mevcudun cihazatını tazammun ediyor. Ve neticesinde ve meyvesinde; yine bütün o zîhayatın manası süzülüp onda tecemmu' eder, tarihçe-i hayatını ona bırakır. Güya onun aslı olan çekirdeği, desatir-i icadiyesinin bir mecmuasıdır. Ve meyvesi ve semeresi ise, evamir-i icadiyesinin bir fihristesi hükmünde görüyoruz. Sonra o zîhayatın zahirine ve bâtınına bakıyoruz. Gayet derecede hikmetli bir kudretin tasarrufatı ve nafiz bir iradenin tasviratı ve tanzimatı görünüyor. Yani, bir kuvvet ve kudret icad eder; bir emir ve irade suret giydirir.
 
-   İşte bütün mevcudat, böyle evveline dikkat ettikçe bir ilmin tarifenamesi ve âhirine dikkat ettikçe bir Sâni'in plânı ve beyannamesi ve zahirine baktıkça bir Fâil-i Muhtar'ın ve bir Mürid'in gayet san'atlı ve tenasüblü bir hulle-i san'atı ve bâtınına baktıkça bir Kadîr'in gayet muntazam bir makinesini müşahede ediyoruz.
+İşte bütün mevcudat, böyle evveline dikkat ettikçe bir ilmin tarifenamesi ve âhirine dikkat ettikçe bir Sâni'in plânı ve beyannamesi ve zahirine baktıkça bir Fâil-i Muhtar'ın ve bir Mürid'in gayet san'atlı ve tenasüblü bir hulle-i san'atı ve bâtınına baktıkça bir Kadîr'in gayet muntazam bir makinesini müşahede ediyoruz.
 
-   İşte şu hal ve şu keyfiyet, bizzarure ve bilbedahe ilân eder ki; hiçbir şey, hiçbir zaman, hiçbir mekân bir tek Sâni'-i Zülcelal'in kabza-i tasarrufundan hariç olamaz. Herbir şey ve bütün eşya, bütün şuunatıyla, bir Kadîr-i Mürid'in kabza-i tasarrufunda
+İşte şu hal ve şu keyfiyet, bizzarure ve bilbedahe ilân eder ki; hiçbir şey, hiçbir zaman, hiçbir mekân bir tek Sâni'-i Zülcelal'in kabza-i tasarrufundan hariç olamaz. Herbir şey ve bütün eşya, bütün şuunatıyla, bir Kadîr-i Mürid'in kabza-i tasarrufunda
 
-tedbir edilir. Ve bir Rahman-ı Rahîm'in tanzimiyle ve lütfuyla güzelleştiriliyor. Ve bir Hannan-ı Mennan'ın tezyiniyle süslendiriliyor. Evet başında şuur ve yüzünde gözü bulunana şu kâinat ve şu mevcudattaki nizam ve mizan ve tanzim ve tevzin; bir tek, yekta, Vâhid, Ehad, Kadîr, Mürîd, Alîm, Hakîm bir zâtı vahdaniyet mertebesinde gösterir. Evet her şeyde bir birlik var. Birlik ise, biri gösterir. Meselâ, dünyanın lâmbası olan Güneş birdir; öyle ise, dünyanın mâliki dahi birdir. Meselâ, zemin yüzündeki zîhayatların hizmetçileri olan hava, ateş, su birdir; öyle ise, onları istihdam eden ve bizlere müsahhar eden dahi birdir.  
+tedbir edilir. Ve bir Rahman-ı Rahîm'in tanzimiyle ve lütfuyla güzelleştiriliyor. Ve bir Hannan-ı Mennan'ın tezyiniyle süslendiriliyor. Evet başında şuur ve yüzünde gözü bulunana şu kâinat ve şu mevcudattaki nizam ve mizan ve tanzim ve tevzin; bir tek, yekta, Vâhid, Ehad, Kadîr, Mürîd, Alîm, Hakîm bir zâtı vahdaniyet mertebesinde gösterir. Evet her şeyde bir birlik var. Birlik ise, biri gösterir. Meselâ, dünyanın lâmbası olan Güneş birdir; öyle ise, dünyanın mâliki dahi birdir. Meselâ, zemin yüzündeki zîhayatların hizmetçileri olan hava, ateş, su birdir; öyle ise, onları istihdam eden ve bizlere müsahhar eden dahi birdir.
 
- ÜÇÜNCÜ KELİME:   
+ÜÇÜNCÜ KELİME:
 
- <span class="arabic" dir="rtl">لَا شَر۪يكَ لَهُ</span>  
+<span class="arabic" dir="rtl">لَا شَر۪يكَ لَهُ</span>
 
-Şu kelimeyi, Otuzikinci Söz'ün Birinci Mevkıfı gayet kuvvetli ve şaşaalı bir surette isbat ettiğinden, ona havale ederiz. Onun fevkinde beyan olamaz, ondan daha ileri beyana lüzum yok ve izah edilmez.  
+Şu kelimeyi, Otuzikinci Söz'ün Birinci Mevkıfı gayet kuvvetli ve şaşaalı bir surette isbat ettiğinden, ona havale ederiz. Onun fevkinde beyan olamaz, ondan daha ileri beyana lüzum yok ve izah edilmez.
 
- DÖRDÜNCÜ KELİME:   
+DÖRDÜNCÜ KELİME:
 
- <span class="arabic" dir="rtl">لَهُ الْمُلْكُ</span>  
+<span class="arabic" dir="rtl">لَهُ الْمُلْكُ</span>
 
 Yani: Ferş'ten Arş'a, seradan süreyyaya, zerrattan seyyarata, ezelden ebede kadar herbir mevcud, semavat ve arz, dünya ve âhiret, her şey onun mülküdür. Mâlikiyet mertebe-i uzması, tevhid-i
 
-a'zam suretinde onundur. Şu mertebe-i uzma-i mâlikiyet ve makam-ı a'zam-ı tevhidin bir hüccet-i kübrası, latif bir zamanda ve latif bir hatırada, Arabî ibaresinde, şu âcizin hatırına ilka edildi. O latif hatıranın hatırı için, aynı ibare-i Arabiyeyi kaydedip, sonra mealini yazacağız.  
+a'zam suretinde onundur. Şu mertebe-i uzma-i mâlikiyet ve makam-ı a'zam-ı tevhidin bir hüccet-i kübrası, latif bir zamanda ve latif bir hatırada, Arabî ibaresinde, şu âcizin hatırına ilka edildi. O latif hatıranın hatırı için, aynı ibare-i Arabiyeyi kaydedip, sonra mealini yazacağız.
 
- <span class="arabic" dir="rtl">لَهُ الْمُلْكُ لِاَنَّ ذَاكَ الْعَالَمَ الْكَب۪يرَ كَهٰذَا الْعَالَمِ الصَّغ۪يرِ ٭ مَصْنُوعَا قُدْرَتِه۪ مَكْتُوبَا قَدَرِه۪ ٭ اِبْدَاعُهُ لِذَاكَ صَيَّرَهُ مَسْجِدًا ٭ ا۪يجَادُهُ لِهٰذَا صَيَّرَهُ سَاجِدًا اِنْشَٓاؤُهُ لِذَاكَ صَيَّرَ ذَاكَ مِلْكًا ٭ ا۪يجَادُهُ لِهٰذَا صَيَّرَهُ مَمْلُوكًا ٭ صَنْعَتُهُ ف۪ى ذَاكَ تَظَاهَرَتْ كِتَابًا ٭ صِبْغَتُهُ ف۪ى هٰذَا تَزَاهَرَتْ خِطَابًا ٭ قُدْرَتُهُ ف۪ى ذَاكَ تُظْهِرُ حِشْمَتَهُ ٭ رَحْمَتُهُ ف۪ى هٰذَا تُنَظِّمُ نِعْمَتَهُ ٭ حِشْمَتُهُ ف۪ى ذَاكَ تَشْهَدُ هُوَ الْوَاحِدُ ٭ نِعْمَتُهُ ف۪ى هٰذَا تُعْلِنُ هُوَ الْاَحَدُ ٭ سِكَّتُهُ ف۪ى ذَاكَ فِى الْكُلِّ وَالْاَجْزَٓاءِ ٭ خَاتَمُهُ ف۪ى هٰذَا فِى الْجِسْمِ وَ الْاَعْضَٓاءِ</span>  
+<span class="arabic" dir="rtl">لَهُ الْمُلْكُ لِاَنَّ ذَاكَ الْعَالَمَ الْكَب۪يرَ كَهٰذَا الْعَالَمِ الصَّغ۪يرِ ٭ مَصْنُوعَا قُدْرَتِه۪ مَكْتُوبَا قَدَرِه۪ ٭ اِبْدَاعُهُ لِذَاكَ صَيَّرَهُ مَسْجِدًا ٭ ا۪يجَادُهُ لِهٰذَا صَيَّرَهُ سَاجِدًا اِنْشَٓاؤُهُ لِذَاكَ صَيَّرَ ذَاكَ مِلْكًا ٭ ا۪يجَادُهُ لِهٰذَا صَيَّرَهُ مَمْلُوكًا ٭ صَنْعَتُهُ ف۪ى ذَاكَ تَظَاهَرَتْ كِتَابًا ٭ صِبْغَتُهُ ف۪ى هٰذَا تَزَاهَرَتْ خِطَابًا ٭ قُدْرَتُهُ ف۪ى ذَاكَ تُظْهِرُ حِشْمَتَهُ ٭ رَحْمَتُهُ ف۪ى هٰذَا تُنَظِّمُ نِعْمَتَهُ ٭ حِشْمَتُهُ ف۪ى ذَاكَ تَشْهَدُ هُوَ الْوَاحِدُ ٭ نِعْمَتُهُ ف۪ى هٰذَا تُعْلِنُ هُوَ الْاَحَدُ ٭ سِكَّتُهُ ف۪ى ذَاكَ فِى الْكُلِّ وَالْاَجْزَٓاءِ ٭ خَاتَمُهُ ف۪ى هٰذَا فِى الْجِسْمِ وَ الْاَعْضَٓاءِ</span>
 
- Birinci Fıkra:   
+Birinci Fıkra:
 
- <span class="arabic" dir="rtl">ذَاكَ الْعَالَمَ الْكَب۪يرَ...الخ</span>  
+<span class="arabic" dir="rtl">ذَاكَ الْعَالَمَ الْكَب۪يرَ...الخ</span>
 
 Yani: Şu kâinat denilen âlem-i ekber ve insan denilen onun misal-i musaggarı olan âlem-i asgar, kudret ve kader kalemiyle yazılan âfâkî ve enfüsî vahdaniyet delailini gösteriyorlar. Evet kâinattaki
 
-san'at-ı muntazamanın küçük bir mikyasta, nümunesi insanda vardır. O daire-i kübradaki san'at, Sâni'-i Vâhid'e şehadet ettiği gibi, şu insanda olan küçük mikyastaki hurdebînî san'at dahi, yine o Sâni'a işaret eder, vahdetini gösterir. Hem nasılki şu insan gayet manidar bir mektub-u Rabbanîdir, muntazam bir kaside-i kaderdir.. öyle de şu kâinat dahi, aynı o kalem-i kaderle, fakat büyük bir mikyasta yazılmış muntazam bir kaside-i kaderdir. Hiç mümkün müdür ki; hadsiz alâmet-i farika ile bütün insanlara bakan şu insan yüzündeki sikke-i vahdete ve bütün mevcudatı omuz omuza, el ele, baş başa veren kâinat üstündeki hâtem-i vahdaniyete, Vâhid-i Ehad'den başka bir şey'in müdahalesi bulunsun?  
+san'at-ı muntazamanın küçük bir mikyasta, nümunesi insanda vardır. O daire-i kübradaki san'at, Sâni'-i Vâhid'e şehadet ettiği gibi, şu insanda olan küçük mikyastaki hurdebînî san'at dahi, yine o Sâni'a işaret eder, vahdetini gösterir. Hem nasılki şu insan gayet manidar bir mektub-u Rabbanîdir, muntazam bir kaside-i kaderdir.. öyle de şu kâinat dahi, aynı o kalem-i kaderle, fakat büyük bir mikyasta yazılmış muntazam bir kaside-i kaderdir. Hiç mümkün müdür ki; hadsiz alâmet-i farika ile bütün insanlara bakan şu insan yüzündeki sikke-i vahdete ve bütün mevcudatı omuz omuza, el ele, baş başa veren kâinat üstündeki hâtem-i vahdaniyete, Vâhid-i Ehad'den başka bir şey'in müdahalesi bulunsun?
 
- İkinci Fıkra:   
+İkinci Fıkra:
 
- <span class="arabic" dir="rtl">اِبْدَاعُهُ لِذَاكَ...الخ</span>  
+<span class="arabic" dir="rtl">اِبْدَاعُهُ لِذَاكَ...الخ</span>
 
 Meali şudur: Sâni'-i Hakîm, âlem-i ekberi öyle bedî' bir surette halk edip âyât-ı kibriyasını üstünde nakşetmiş ki; kâinatı bir mescid-i kebir şekline döndürmüş ve insanı dahi öyle bir tarzda icad edip, ona akıl vererek, onunla o mu'cizat-ı san'atına ve o bedî' kudretine karşı secde-i hayret ettirerek, ona âyât-ı kibriyayı okutturup, kemerbeste-i ubudiyet ettirerek, o mescid-i kebirde bir abd-i sâcid fıtratında
 
-yaratmıştır. Hiç mümkün müdür ki: Şu mescid-i kebirin içindeki sâcidlerin, âbidlerin mabud-u hakikîleri; o Sâni'-i Vâhid-i Ehad'den başkası olabilsin?.  
+yaratmıştır. Hiç mümkün müdür ki: Şu mescid-i kebirin içindeki sâcidlerin, âbidlerin mabud-u hakikîleri; o Sâni'-i Vâhid-i Ehad'den başkası olabilsin?.
 
- Üçüncü Fıkra:   
+Üçüncü Fıkra:
 
- <span class="arabic" dir="rtl">اِنْشَٓائُهُ لِذَاكَ...الخ</span>  
+<span class="arabic" dir="rtl">اِنْشَٓائُهُ لِذَاكَ...الخ</span>
 
 Meali şudur ki: O Mâlik-ül Mülk-i Zülcelal, âlem-i ekberi, bahusus Küre-i Arz yüzünü öyle bir surette inşa ederek yapmıştır ki; birbiri içinde hadsiz daireler olup, herbir daire bir tarla hükmünde olup, vakit be-vakit, mevsim be-mevsim, asır be-asır; eker, biçer, mahsulât alır. Mütemadiyen mülkünü çalıştırır, tasarruf eder. En büyük daire olan zerrat âlemini bir tarla yapıp, her zaman kâinat kadar mahsulâtı; kudretiyle, hikmetiyle onda eker, biçer, kaldırır. Âlem-i şehadetten âlem-i gayba, daire-i kudretten daire-i ilme gönderir. Sonra mutavassıt bir daire olan zemin yüzünü, aynen öyle bir mezraa yapmış ki; mevsim be-mevsim âlemleri, enva'ları içinde eker, biçer, kaldırır. Manevî mahsulâtını dahi gaybî, uhrevî, misalî ve manevî âlemlerine gönderir. Daha küçük bir daire olan bir bahçeyi yine yüz defa, bin defa kudretle doldurup, hikmetle boşalttırıyor. Daha küçük bir daire olan bir zîhayatı, meselâ bir ağacı, bir insanı, yüz defa onun kadar, ondan mahsulât
 
-alır. Demek o Mâlik-ül Mülk-i Zülcelal; küçük-büyük, cüz'î-küllî herşey'i birer model hükmünde inşa ederek, yüzler tarzda, taze taze nakışlarla münakkaş mensucat-ı san'atını onlara giydirir; cilve-i esmasını, mu'cizat-ı kudretini izhar eder. Kendi mülkünde herbir şey'i, birer sahife hükmünde inşa etmiş; her sahifede, yüzer tarzda manidar mektubatını yazar; hikmetinin âyâtını izhar eder, zîşuurlara okutturur. Şu âlem-i ekberi, mülk şeklinde inşa etmekle beraber; şu insanı dahi öyle bir surette halketmiştir ve ona öyle cihazat ve âletler ve havâs ve hissiyatlar ve bilhâssa nefs, heva ve ihtiyaç ve iştiha ve hırs ve dava vermiştir ki; o geniş mülkünde, bütün mülke muhtaç bir memluk hükmüne getirmiştir.  
+alır. Demek o Mâlik-ül Mülk-i Zülcelal; küçük-büyük, cüz'î-küllî herşey'i birer model hükmünde inşa ederek, yüzler tarzda, taze taze nakışlarla münakkaş mensucat-ı san'atını onlara giydirir; cilve-i esmasını, mu'cizat-ı kudretini izhar eder. Kendi mülkünde herbir şey'i, birer sahife hükmünde inşa etmiş; her sahifede, yüzer tarzda manidar mektubatını yazar; hikmetinin âyâtını izhar eder, zîşuurlara okutturur. Şu âlem-i ekberi, mülk şeklinde inşa etmekle beraber; şu insanı dahi öyle bir surette halketmiştir ve ona öyle cihazat ve âletler ve havâs ve hissiyatlar ve bilhâssa nefs, heva ve ihtiyaç ve iştiha ve hırs ve dava vermiştir ki; o geniş mülkünde, bütün mülke muhtaç bir memluk hükmüne getirmiştir.
 
-   İşte hiç mümkün müdür ki: Pek büyük olan âlem-i zerrattan tâ bir sineğe kadar bütününü mülk ve tarla yapan ve küçük insanı, o büyük mülke nâzır ve müfettiş ve çiftçi ve tüccar ve dellâl ve âbid ve memluk yaptıran ve kendine, muhterem bir misafir ve sevgili bir muhatab ittihaz eden o Mâlik-ül Mülk-i Zülcelal'den başka, o mülke tasarruf edip, o memluke seyyid olabilsin?  
+İşte hiç mümkün müdür ki: Pek büyük olan âlem-i zerrattan tâ bir sineğe kadar bütününü mülk ve tarla yapan ve küçük insanı, o büyük mülke nâzır ve müfettiş ve çiftçi ve tüccar ve dellâl ve âbid ve memluk yaptıran ve kendine, muhterem bir misafir ve sevgili bir muhatab ittihaz eden o Mâlik-ül Mülk-i Zülcelal'den başka, o mülke tasarruf edip, o memluke seyyid olabilsin?
 
- Dördüncü Fıkra:   
+Dördüncü Fıkra:
 
- <span class="arabic" dir="rtl">صَنْعَتُهُ ف۪ى ذَاكَ...الخ</span>  
+<span class="arabic" dir="rtl">صَنْعَتُهُ ف۪ى ذَاكَ...الخ</span>
 
 ibaresidir. Meali şudur ki: Sâni'-i Zülcelal'in âlem-i ekberdeki
 
 san'atı o derece manidardır ki; o san'at, bir kitab suretinde tezahür edip, kâinatı bir kitab-ı kebir hükmüne getirdiğinden, akl-ı beşer, hakikî fenn-i hikmet kütübhanesini ondan aldı ve ona göre yazdı. Ve o kitab-ı hikmet, o derece hakikatla bağlı ve hakikattan meded alıyor ki, büyük Kitab-ı Mübin'in bir nüshası olan Kur'an-ı Hakîm şeklinde ilân edildi. Hem nasılki kâinattaki san'atı, kemal-i intizamından kitab şekline girdi; insandaki sıbgatı ve nakş-ı hikmeti dahi, hitab çiçeğini açtı. Yani o san'at, o derece manidar ve hassas ve güzeldir ki; o makine-i zîhayattaki cihazatı, fonoğraf gibi nutka geldi, söylettirdi. Ve öyle bir ahsen-i takvim içinde bir sıbga-i Rabbaniye vermiş ki; o maddî, cismanî, camid kafada; manevî, gaybî, hayatdar olan beyan ve hitab çiçeği açıldı. Ve o insan kafasındaki kabiliyet-i nutk u beyana, o derece ulvî cihazat ve istidad verdi ki; Sultan-ı Ezelî'ye muhatab olacak bir makamda inkişaf ettirdi, terakki verdi. Yani fıtrat-ı insaniyedeki sıbgat-ı Rabbaniye, hitab-ı İlahî çiçeğini açtı. Hiç mümkün müdür ki: Kitab derecesine gelen bütün mevcudattaki san'ata ve hitab makamına gelen insandaki o sıbgata, Vâhid-i Ehad'den başkası karışabilsin? Hâşâ!..
 
-Beşinci Fıkra:   
+Beşinci Fıkra:
 
- <span class="arabic" dir="rtl">قُدْرَتُهُ ف۪ى ذَاكَ...الخ</span>  
+<span class="arabic" dir="rtl">قُدْرَتُهُ ف۪ى ذَاكَ...الخ</span>
 
 ibaresidir. Meali şudur ki: Kudret-i İlahiye âlem-i ekberde, haşmet-i rububiyetini gösteriyor. Rahmet-i Rabbaniye ise âlem-i asgar olan insanda, nimetleri tanzim ediyor. Yani Sâni'in kudreti, kibriya ve celal noktasında, kâinatı öyle muhteşem bir saray şeklinde icad ediyor ki; Güneş'i büyük bir elektrik lâmbası, Kamer'i kandil ve yıldızları mumlar meyveleriyle yaldızlar, elektrikler. Ve zemin yüzünü bir sofra, bir tarla, bir bahçe, bir haliçe ve dağları birer mahzen, birer direk, birer kal'a ve hâkeza bütün eşyayı büyük bir mikyasta o büyük sarayın levazımatı şekline getirerek, şaşaalı bir surette haşmet-i rububiyetini gösterdiği gibi; cemal noktasında rahmeti dahi en küçük zîhayata kadar her zîruha enva'-ı nimetini verir, onun ile tanzim eder.. baştan aşağıya kadar nimetlerle süsleyip, lütf u keremle tezyin eder ve o haşmet-i celaliyeye karşı cemal-i rahmetini o küçücük lisanlarla o büyük lisana karşı çıkarır. Yani: Güneş ve Arş gibi büyük cirmler, haşmet lisanıyla "yâ Celil, yâ Kebir, yâ Azîm" dedikleri vakit; sinek ve semek gibi o küçücük zîhayatlar dahi rahmet lisanıyla "yâ Cemil, yâ Rahîm, yâ Kerim" diyerek o musika-i kübraya latif nağamatlarını
 
-katıyorlar, tatlılaştırıyorlar. Hiç mümkün müdür ki: O Celil-i Zülcemal'den ve o Cemil-i Zülcelal'den başka birşey, kendi başıyla şu âlem-i ekber ve asgara icad cihetinde müdahale edebilsin? Hâşâ!..  
+katıyorlar, tatlılaştırıyorlar. Hiç mümkün müdür ki: O Celil-i Zülcemal'den ve o Cemil-i Zülcelal'den başka birşey, kendi başıyla şu âlem-i ekber ve asgara icad cihetinde müdahale edebilsin? Hâşâ!..
 
- Altıncı Fıkra:   
+Altıncı Fıkra:
 
- <span class="arabic" dir="rtl">حِشْمَتُهُ ف۪ى ذَاكَ...الخ</span>  
+<span class="arabic" dir="rtl">حِشْمَتُهُ ف۪ى ذَاكَ...الخ</span>
 
-ibaresidir. Meali şudur ki: Yani, kâinatın heyet-i mecmuasında tezahür eden haşmet-i rububiyet, vahdaniyet-i İlahiyeyi isbat edip gösterdiği gibi; zîhayatların cüz'iyatlarına mukannen erzaklarını veren nimet-i Rabbaniye dahi, ehadiyet-i İlahiyeyi isbat edip gösterir. Vâhidiyet ise, bütün o mevcudat birinindir ve birine bakar ve birinin icadıdır demektir. Ehadiyet ise; herbir şeyde, Hâlık-ı Külli Şey'in ekser esması tecelli ediyor demektir. Meselâ Güneşin ziyası, bütün zeminin yüzünü ihata ettiği haysiyetiyle, vâhidiyet misalini gösterir. Ve herbir şeffaf cüz'de ve su katrelerinde, Güneşin ziyası ve harareti ve ziyasındaki yedi rengi ve bir nevi gölgesi bulunması, ehadiyet misalini gösterir. Ve herbir şeyde hususan zîhayatta ve bilhâssa herbir insanda; o Sâni'in ekser esması onda tecelli ettiği cihetle, ehadiyeti gösterir.  
+ibaresidir. Meali şudur ki: Yani, kâinatın heyet-i mecmuasında tezahür eden haşmet-i rububiyet, vahdaniyet-i İlahiyeyi isbat edip gösterdiği gibi; zîhayatların cüz'iyatlarına mukannen erzaklarını veren nimet-i Rabbaniye dahi, ehadiyet-i İlahiyeyi isbat edip gösterir. Vâhidiyet ise, bütün o mevcudat birinindir ve birine bakar ve birinin icadıdır demektir. Ehadiyet ise; herbir şeyde, Hâlık-ı Külli Şey'in ekser esması tecelli ediyor demektir. Meselâ Güneşin ziyası, bütün zeminin yüzünü ihata ettiği haysiyetiyle, vâhidiyet misalini gösterir. Ve herbir şeffaf cüz'de ve su katrelerinde, Güneşin ziyası ve harareti ve ziyasındaki yedi rengi ve bir nevi gölgesi bulunması, ehadiyet misalini gösterir. Ve herbir şeyde hususan zîhayatta ve bilhâssa herbir insanda; o Sâni'in ekser esması onda tecelli ettiği cihetle, ehadiyeti gösterir.
 
-   İşte şu fıkra işaret eder ki: Kâinatta tasarruf eden haşmet-i rububiyet, o koca Güneş'i şu
+İşte şu fıkra işaret eder ki: Kâinatta tasarruf eden haşmet-i rububiyet, o koca Güneş'i şu
 
-zemin yüzündeki zîhayatlara bir hizmetkâr, bir lâmba, bir ocak; ve koca Küre-i Zemini onlara bir beşik, bir menzil, bir ticaretgâh; ve ateşi, heryerde hazır bir aşçı ve dost; ve bulutu, süzgeç ve murdia; ve dağları, mahzen ve anbar; ve havayı, zîhayata enfas ve nüfusa yelpaze; ve suyu, yeniden hayata girenlere süt emziren daye ve hayvanata âb-ı hayat veren bir şerbetçi hükmüne getiren rububiyet-i İlahiye, gayet vazıh bir surette vahdaniyet-i İlahiyeyi gösterir. Evet Hâlık-ı Vâhid'den başka kim Güneş'i Arzlılara müsahhar bir hizmetkâr eder? Ve o Vâhid-i Ehad'den başka kim havayı elinde tutar, pek çok vazifelerle tavzif edip, rûy-i zeminde çevik-çalak bir hizmetkâr eder? Ve o Vâhid-i Ehad'den başka kimin haddine düşmüştür ki, ateşi aşçı yapsın ve kibrit başı kadar bir zerrecik ateşe, binler batman eşyayı yuttursun ve hâkeza... Herbirşey, herbir unsur, herbir ecram-ı ulviye, o haşmet-i rububiyet noktasında Vâhid-i Zülcelal'i gösterir.  
+zemin yüzündeki zîhayatlara bir hizmetkâr, bir lâmba, bir ocak; ve koca Küre-i Zemini onlara bir beşik, bir menzil, bir ticaretgâh; ve ateşi, heryerde hazır bir aşçı ve dost; ve bulutu, süzgeç ve murdia; ve dağları, mahzen ve anbar; ve havayı, zîhayata enfas ve nüfusa yelpaze; ve suyu, yeniden hayata girenlere süt emziren daye ve hayvanata âb-ı hayat veren bir şerbetçi hükmüne getiren rububiyet-i İlahiye, gayet vazıh bir surette vahdaniyet-i İlahiyeyi gösterir. Evet Hâlık-ı Vâhid'den başka kim Güneş'i Arzlılara müsahhar bir hizmetkâr eder? Ve o Vâhid-i Ehad'den başka kim havayı elinde tutar, pek çok vazifelerle tavzif edip, rûy-i zeminde çevik-çalak bir hizmetkâr eder? Ve o Vâhid-i Ehad'den başka kimin haddine düşmüştür ki, ateşi aşçı yapsın ve kibrit başı kadar bir zerrecik ateşe, binler batman eşyayı yuttursun ve hâkeza... Herbirşey, herbir unsur, herbir ecram-ı ulviye, o haşmet-i rububiyet noktasında Vâhid-i Zülcelal'i gösterir.
 
-   İşte celal ve haşmet noktasında vâhidiyet göründüğü gibi, cemal ve rahmet noktasında dahi nimet ve ihsan, ehadiyet-i İlahiyeyi ilân eder. Çünki zîhayatta ve bilhâssa insanda, o derece san'at-ı câmia içinde; hadsiz enva'-ı nimeti anlayacak, kabul edecek, isteyecek cihazat ve âletler
+İşte celal ve haşmet noktasında vâhidiyet göründüğü gibi, cemal ve rahmet noktasında dahi nimet ve ihsan, ehadiyet-i İlahiyeyi ilân eder. Çünki zîhayatta ve bilhâssa insanda, o derece san'at-ı câmia içinde; hadsiz enva'-ı nimeti anlayacak, kabul edecek, isteyecek cihazat ve âletler
 
-vardır ki; bütün kâinatta tecelli eden bütün esmasının cilvesine mazhardır. Âdeta bir nokta-i mihrakıye hükmünde, bütün esma-i hüsnayı birden mahiyetinin âyinesiyle gösterir ve onunla ehadiyet-i İlahiyeyi ilân eder.  
+vardır ki; bütün kâinatta tecelli eden bütün esmasının cilvesine mazhardır. Âdeta bir nokta-i mihrakıye hükmünde, bütün esma-i hüsnayı birden mahiyetinin âyinesiyle gösterir ve onunla ehadiyet-i İlahiyeyi ilân eder.
 
- Yedinci Fıkra:   
+Yedinci Fıkra:
 
- <span class="arabic" dir="rtl">سِكَّتُهُ ف۪ى ذَاكَ فِى الْكُلِّ وَالْاَجْزَٓاءِ خَاتَمُهُ ف۪ى هٰذَا فِى الْجِسْمِ وَالْاَعْضَٓاءِ</span>  
+<span class="arabic" dir="rtl">سِكَّتُهُ ف۪ى ذَاكَ فِى الْكُلِّ وَالْاَجْزَٓاءِ خَاتَمُهُ ف۪ى هٰذَا فِى الْجِسْمِ وَالْاَعْضَٓاءِ</span>
 
 Meali şudur ki: Sâni'-i Zülcelal âlem-i ekberin heyet-i mecmuasında bir sikke-i kübrası olduğu gibi, bütün eczasında ve enva'ında dahi birer sikke-i vahdet koymuştur. Âlem-i asgar olan insanın cisminde ve yüzünde birer hâtem-i vahdaniyet bastığı gibi, herbir a'zâsında dahi, birer mühr-ü vahdeti vardır. Evet o Kadîr-i Zülcelal her şeyde, külliyatta ve cüz'iyatta, yıldızlarda ve zerrelerde birer sikke-i vahdet koymuştur ki; ona şehadet eder. Ve birer mühr-ü vahdaniyet basmıştır ki, ona delalet eder. Şu hakikat-ı uzma, Yirmiikinci Söz'de ve Otuzikinci Söz'de ve Otuzüçüncü Mektub'un otuzüç aded Penceresinde gayet parlak ve kat'î bir surette izah ve isbat edildiğinden onlara havale edip, sözü keser, burada hâtime veririz.
 
-BEŞİNCİ KELİME:   
+BEŞİNCİ KELİME:
 
- <span class="arabic" dir="rtl">لَهُ الْحَمْدُ</span>  
+<span class="arabic" dir="rtl">لَهُ الْحَمْدُ</span>
 
-Yani: Bütün mevcudatta sebeb-i medh ü sena olan kemalât onundur. Öyle ise, hamd dahi ona aittir. Ezelden ebede kadar her kimden her kime karşı gelen ve gelecek medh ü sena ona aittir. Çünki sebeb-i medih olan nimet ve ihsan ve kemal ve cemal ve medar-ı hamd olan herşey onundur ve ona aittir. Evet âyât-ı Kur'aniyenin işaratıyla, bütün mevcudattan daimî bir surette dergâh-ı İlahiyeye giden bir ubudiyettir, bir tesbihtir, bir secdedir, bir duadır ve bir hamd ü senadır ki; daimî o dergâha gidiyor. Şu hakikat-ı Tevhidi isbat eden bir bürhan-ı a'zama şöyle işaret ederiz ki:  
+Yani: Bütün mevcudatta sebeb-i medh ü sena olan kemalât onundur. Öyle ise, hamd dahi ona aittir. Ezelden ebede kadar her kimden her kime karşı gelen ve gelecek medh ü sena ona aittir. Çünki sebeb-i medih olan nimet ve ihsan ve kemal ve cemal ve medar-ı hamd olan herşey onundur ve ona aittir. Evet âyât-ı Kur'aniyenin işaratıyla, bütün mevcudattan daimî bir surette dergâh-ı İlahiyeye giden bir ubudiyettir, bir tesbihtir, bir secdedir, bir duadır ve bir hamd ü senadır ki; daimî o dergâha gidiyor. Şu hakikat-ı Tevhidi isbat eden bir bürhan-ı a'zama şöyle işaret ederiz ki:
 
-   Şu kâinata baktığımız vakit, bağistan şeklinde; sakfı ulvî yıldızlarla yaldızlanmış, zemini zînetli mevcudatla şenlenmiş surette görünüyor. İşte şu bağistandaki muntazam nuranî ecram-ı ulviye ve hikmetli ve zînetli mevcudat-ı süfliye, umumen herbiri lisan-ı mahsusuyla derler ki: Biz bir Kadîr-i Zülcelal'in mu'cizat-ı kudretiyiz. Bir Hâlık-ı Hakîm ve bir Sâni'-i Kadîr'in vahdetine şehadet ederiz.  
+Şu kâinata baktığımız vakit, bağistan şeklinde; sakfı ulvî yıldızlarla yaldızlanmış, zemini zînetli mevcudatla şenlenmiş surette görünüyor. İşte şu bağistandaki muntazam nuranî ecram-ı ulviye ve hikmetli ve zînetli mevcudat-ı süfliye, umumen herbiri lisan-ı mahsusuyla derler ki: Biz bir Kadîr-i Zülcelal'in mu'cizat-ı kudretiyiz. Bir Hâlık-ı Hakîm ve bir Sâni'-i Kadîr'in vahdetine şehadet ederiz.
 
-   Ve şu bağistan-ı âlem içindeki Küre-i Arz'a bakıyoruz, görüyoruz ki: Bir bahçe şeklinde rengârenk
+Ve şu bağistan-ı âlem içindeki Küre-i Arz'a bakıyoruz, görüyoruz ki: Bir bahçe şeklinde rengârenk
 
 yüzbinler süslü çiçekli nebatat taifeleri onda serilmiş ve çeşit çeşit yüzbinler enva'-ı hayvanat onda serpilmiştir.
 
-   İşte şu zemin bahçesinde bütün o süslü nebatat ve zînetli hayvanat, muntazam suretleriyle ve mevzun şekilleriyle ilân ediyorlar ki: Biz bir tek Sâni'-i Hakîm'in san'atından birer mu'cizesi, birer hârikasıyız ve vahdaniyetin birer dellâlı, birer şahidiyiz.
+İşte şu zemin bahçesinde bütün o süslü nebatat ve zînetli hayvanat, muntazam suretleriyle ve mevzun şekilleriyle ilân ediyorlar ki: Biz bir tek Sâni'-i Hakîm'in san'atından birer mu'cizesi, birer hârikasıyız ve vahdaniyetin birer dellâlı, birer şahidiyiz.
 
-   Hem o bahçedeki ağaçların başlarına bakar görürüz ki: Gayet derecede alîmane, hakîmane, kerimane, latifane, cemilane yapılmış muhtelif suretlerde meyveleri, çiçekleri görüyoruz. İşte şunlar bil'umum bir lisan ile ilân ederler ki: Biz, bir Rahman-ı Zülcemal'in ve bir Rahîm-i Zülkemal'in mu'ciznüma hediyeleriyiz, hayretnüma ihsanlarıyız.
+Hem o bahçedeki ağaçların başlarına bakar görürüz ki: Gayet derecede alîmane, hakîmane, kerimane, latifane, cemilane yapılmış muhtelif suretlerde meyveleri, çiçekleri görüyoruz. İşte şunlar bil'umum bir lisan ile ilân ederler ki: Biz, bir Rahman-ı Zülcemal'in ve bir Rahîm-i Zülkemal'in mu'ciznüma hediyeleriyiz, hayretnüma ihsanlarıyız.
 
-   İşte bağistan-ı kâinattaki ecram ve mevcudat ve Küre-i Arz bahçesindeki nebatat ve hayvanat ve eşcar ve nebatatın başlarındaki ezhar ve semerat; nihayet derecede yüksek bir sadâ ile şehadet eder, ilân eder, derler ki: Bizim Hâlıkımız ve Musavvirimiz ve bizi hediye veren Kadîr-i Zülcemal, Hakîm-i Bîmisal, Kerim-i Pür-neval herşey'e kadirdir. Hiçbir şey ona ağır gelmez. Hiçbir
+İşte bağistan-ı kâinattaki ecram ve mevcudat ve Küre-i Arz bahçesindeki nebatat ve hayvanat ve eşcar ve nebatatın başlarındaki ezhar ve semerat; nihayet derecede yüksek bir sadâ ile şehadet eder, ilân eder, derler ki: Bizim Hâlıkımız ve Musavvirimiz ve bizi hediye veren Kadîr-i Zülcemal, Hakîm-i Bîmisal, Kerim-i Pür-neval herşey'e kadirdir. Hiçbir şey ona ağır gelmez. Hiçbir
 
 şey daire-i kudretinden hariç olamaz. Kudretine nisbeten, zerreler yıldızlar birdir. Küllî, cüz'î kadar kolaydır. Cüz', küll kadar kıymetlidir. En büyük, en küçük kadar kudretine nisbeten rahattır. Küçük, büyük kadar san'atlıdır.. belki san'atça bazan küçük, büyükten daha büyüktür. Bütün mazideki acaib-i kudreti olan vukuat şehadet eder ki; o Kadîr-i Mutlak, bütün istikbaldeki acaib-i imkânata muktedirdir. Dünü getiren, yarını getirdiği gibi; maziyi icad eden o Zât-ı Kadîr, istikbali dahi icad eder. Dünyayı yapan o Sâni'-i Hakîm, âhireti de yapar. Evet Mabud-u Bilhak yalnız o Kadîr-i Zülcelal olduğu gibi, Mahmud-u Bil'ıtlak yine yalnız odur. İbadet ona mahsus olduğu gibi, hamd ü sena dahi ona hastır. Hiç mümkün müdür ki: Semavat ve Arz'ı halkeden bir Sâni'-i Hakîm, Semavat ve Arz'ın en mühim neticesi ve kâinatın en mükemmel meyvesi olan insanları başıboş bıraksın, esbab ve tesadüfe havale etsin, hikmet-i bahiresini abesiyete kalbetsin? Hâşâ!.. Hiç mümkün müdür ki: Hakîm, Alîm bir zât, bir ağacı gayet ehemmiyetle tedbir ve tasvir edip ve gayet derecede hikmetle idare ve terbiye ettiği halde; o ağacın gayesi, faidesi olan meyvelerine bakmayıp ehemmiyet vermesin; hırsız ellere, boş yerlere dağılsın, zayi' olsun?
 
 Elbette bakmamak, ehemmiyet vermemek olamaz. Ağaca ehemmiyet vermek, meyveleri içindir.
 
-   İşte, şu kâinatın meyve-i zîşuuru ve en mükemmel meyvesi ve neticesi ve gayesi, insandır. Şu kâinatın Sâni'-i Hakîm'i mümkün müdür ki, şu zîşuur meyvelerin meyveleri olan hamd ve ibadeti, şükür ve muhabbeti başkalara verip hikmet-i bahiresini hiçe indirsin veyahut kudret-i mutlakasını acze kalbettirsin veyahut ilm-i muhitini cehle çevirsin? Yüzbin defa hâşâ!  
+İşte, şu kâinatın meyve-i zîşuuru ve en mükemmel meyvesi ve neticesi ve gayesi, insandır. Şu kâinatın Sâni'-i Hakîm'i mümkün müdür ki, şu zîşuur meyvelerin meyveleri olan hamd ve ibadeti, şükür ve muhabbeti başkalara verip hikmet-i bahiresini hiçe indirsin veyahut kudret-i mutlakasını acze kalbettirsin veyahut ilm-i muhitini cehle çevirsin? Yüzbin defa hâşâ!
 
-   Hiç mümkün müdür ki: Şu kâinat sarayının binasındaki makasıd-ı Rabbaniyenin medarı olan zîşuur ve zîşuurun serfirazı olan nev'-i insanın mazhar olduğu nimetlere mukabil izhar ettikleri şükür ve ibadeti, o saray-ı kâinatın Sâni'inden başkasına gitsin. Ve o Sâni'-i Zülcelal, o gayet-ül gaye olan şükür ve ibadeti başkalara gitmesine müsaade etsin.
+Hiç mümkün müdür ki: Şu kâinat sarayının binasındaki makasıd-ı Rabbaniyenin medarı olan zîşuur ve zîşuurun serfirazı olan nev'-i insanın mazhar olduğu nimetlere mukabil izhar ettikleri şükür ve ibadeti, o saray-ı kâinatın Sâni'inden başkasına gitsin. Ve o Sâni'-i Zülcelal, o gayet-ül gaye olan şükür ve ibadeti başkalara gitmesine müsaade etsin.
 
-   Hem hiç mümkün müdür ki: Hadsiz enva'-ı nimetiyle kendini zîşuurlara sevdirsin; ve hadsiz mu'cizat-ı san'atıyla kendini onlara tanıttırsın; sonra onların şükür ve ibadetlerini, hamd ve muhabbetlerini, marifet ve minnetdarlıklarını esbaba ve tabiata terkedip ehemmiyet vermesin;
+Hem hiç mümkün müdür ki: Hadsiz enva'-ı nimetiyle kendini zîşuurlara sevdirsin; ve hadsiz mu'cizat-ı san'atıyla kendini onlara tanıttırsın; sonra onların şükür ve ibadetlerini, hamd ve muhabbetlerini, marifet ve minnetdarlıklarını esbaba ve tabiata terkedip ehemmiyet vermesin;
 
-hikmet-i mutlakasını inkâr ettirsin; saltanat-ı rububiyetini hiçe indirsin! Yüzbin defa hâşâ ve kellâ!..  
+hikmet-i mutlakasını inkâr ettirsin; saltanat-ı rububiyetini hiçe indirsin! Yüzbin defa hâşâ ve kellâ!..
 
-   Hiç mümkün müdür ki: Bir baharı halkedemeyen ve bütün meyveleri icad edemeyen ve yer yüzünde sikkeleri bir olan bütün elmaları inşa edemeyen; onların bir misal-i musaggarı olan bir elmayı halkedip ve o elmayı nimet olarak birisine yedirsin, şükrünü kazansın, Mahmud-u Bil'ıtlak'a hamd noktasında iştirak etsin? Hâşâ!.. Çünki bir elmayı halkeden kim ise, bütün dünyaya gelen elmaları icad eden yine o olabilir. Çünki sikke birdir. Hem elmaları icad eden kim ise, bütün dünyada medar-ı rızk olan hububat ve semeratı halkeden yine odur. Demek en küçük cüz'î bir zîhayata, en cüz'î bir nimeti veren, doğrudan doğruya kâinatın Hâlıkıdır ve Rezzak-ı Zülcelal'dir. Öyle ise şükür ve hamd, doğrudan doğruya ona aittir. Öyle ise hakikat-ı kâinat, daima hak lisanıyla der:  
+Hiç mümkün müdür ki: Bir baharı halkedemeyen ve bütün meyveleri icad edemeyen ve yer yüzünde sikkeleri bir olan bütün elmaları inşa edemeyen; onların bir misal-i musaggarı olan bir elmayı halkedip ve o elmayı nimet olarak birisine yedirsin, şükrünü kazansın, Mahmud-u Bil'ıtlak'a hamd noktasında iştirak etsin? Hâşâ!.. Çünki bir elmayı halkeden kim ise, bütün dünyaya gelen elmaları icad eden yine o olabilir. Çünki sikke birdir. Hem elmaları icad eden kim ise, bütün dünyada medar-ı rızk olan hububat ve semeratı halkeden yine odur. Demek en küçük cüz'î bir zîhayata, en cüz'î bir nimeti veren, doğrudan doğruya kâinatın Hâlıkıdır ve Rezzak-ı Zülcelal'dir. Öyle ise şükür ve hamd, doğrudan doğruya ona aittir. Öyle ise hakikat-ı kâinat, daima hak lisanıyla der:
 
- <span class="arabic" dir="rtl">لَهُ الْحَمْدُ مِنْ كُلِّ اَحَدٍ مِنَ الْاَزَلِ اِلَى الْاَبَدِ</span>  
+<span class="arabic" dir="rtl">لَهُ الْحَمْدُ مِنْ كُلِّ اَحَدٍ مِنَ الْاَزَلِ اِلَى الْاَبَدِ</span>
 
- ALTINCI KELİME:   
+ALTINCI KELİME:
 
- <span class="arabic" dir="rtl">يُحْي۪ى</span>  
+<span class="arabic" dir="rtl">يُحْي۪ى</span>
 
 Yani: Hayat veren yalnız odur. Öyle ise, her şey'in Hâlıkı dahi yalnız
 
 odur. Çünki kâinatın ruhu, nuru, mayesi, esası, neticesi, hülâsası hayattır. Hayatı veren kim ise, bütün kâinatın Hâlıkı da odur. Hayatı veren elbette odur, Hayy u Kayyum'dur.
 
-   İşte şu mertebe-i tevhidin bürhan-ı a'zamına şöyle işaret ederiz ki: -Başka bir Söz'de izah ve isbat edildiği gibi- zemin yüzünün sahrasında çadırları kurulmuş gayet muhteşem zîhayatlar ordusunu görüyoruz. Evet Hayy u Kayyum'un hadsiz ordularından, her bahar mevsiminde yeni silâh altına alınmış, gaibden gelen taze bir ordu meydana çıkmış görüyoruz. Şu orduya bakıyoruz ki: Nebatat taifelerinden ikiyüzbinden ziyade ve hayvanat milletlerinden yine yüzbinden fazla çeşit çeşit muhtelif kavimler görüyoruz. Herbir milletin, herbir taifenin elbisesi ayrı, erzakı ayrı, talimatı ayrı, terhisatı ayrı, silâhları ayrı, müddet-i askeriyeleri ayrı olduğu halde; bir kumandan-ı a'zam hadsiz kudret ve hikmetiyle ve nihayetsiz ilim ve iradesiyle, bitmez rahmetiyle, tükenmez hazinesiyle, hiçbirini unutmayarak, şaşırmayarak, karıştırmayarak, geciktirmeyerek.. ayrı ayrı bütün o üçyüz binden ziyade milletleri ve taifeleri kemal-i intizam ile, tamam-ı mizan ile, vakti vaktine ayrı ayrı erzaklarını, ayrı ayrı elbiselerini, ayrı ayrı silâhlarını vererek, ayrı ayrı talimat yaptırarak,
+İşte şu mertebe-i tevhidin bürhan-ı a'zamına şöyle işaret ederiz ki: -Başka bir Söz'de izah ve isbat edildiği gibi- zemin yüzünün sahrasında çadırları kurulmuş gayet muhteşem zîhayatlar ordusunu görüyoruz. Evet Hayy u Kayyum'un hadsiz ordularından, her bahar mevsiminde yeni silâh altına alınmış, gaibden gelen taze bir ordu meydana çıkmış görüyoruz. Şu orduya bakıyoruz ki: Nebatat taifelerinden ikiyüzbinden ziyade ve hayvanat milletlerinden yine yüzbinden fazla çeşit çeşit muhtelif kavimler görüyoruz. Herbir milletin, herbir taifenin elbisesi ayrı, erzakı ayrı, talimatı ayrı, terhisatı ayrı, silâhları ayrı, müddet-i askeriyeleri ayrı olduğu halde; bir kumandan-ı a'zam hadsiz kudret ve hikmetiyle ve nihayetsiz ilim ve iradesiyle, bitmez rahmetiyle, tükenmez hazinesiyle, hiçbirini unutmayarak, şaşırmayarak, karıştırmayarak, geciktirmeyerek.. ayrı ayrı bütün o üçyüz binden ziyade milletleri ve taifeleri kemal-i intizam ile, tamam-ı mizan ile, vakti vaktine ayrı ayrı erzaklarını, ayrı ayrı elbiselerini, ayrı ayrı silâhlarını vererek, ayrı ayrı talimat yaptırarak,
 
 ayrı ayrı terhisat ettiğini, gözü bulunan bilmüşahede görür ve kalbi bulunan biaynelyakîn tasdik eder.
 
-   İşte hiç mümkün müdür ki: Şu ihya ve idareye ve şu terbiye ve iaşeye; o orduyu bütün şuunatıyla ihata eden bir ilm-i muhitin ve o orduyu bütün levazımatıyla idare eden bir kudret-i mutlakanın sahibinden başkası karışabilsin, müdahale edebilsin, onda hissesi olsun? Yüzbinler defa hâşâ!..
+İşte hiç mümkün müdür ki: Şu ihya ve idareye ve şu terbiye ve iaşeye; o orduyu bütün şuunatıyla ihata eden bir ilm-i muhitin ve o orduyu bütün levazımatıyla idare eden bir kudret-i mutlakanın sahibinden başkası karışabilsin, müdahale edebilsin, onda hissesi olsun? Yüzbinler defa hâşâ!..
 
-   Malûmdur ki: Bir taburda on millet bulunsa, ayrı ayrı techiz etmesi on tabur kadar güç olduğundan; âciz insanlar, ister istemez bir tarzda techize mecbur olmuşlar. Halbuki Hayy u Kayyum şu muhteşem ordusu içinde, üçyüz binden ziyade milletlere, ayrı ayrı techizat-ı hayatiyeyi veriyor. Hem külfetsiz, müşkilâtsız, kolay bir tarzda, hafif bir şekilde, gayet hakîmane ve intizam-perverane veriyor. Ve koca orduya, bir tek lisan ile,  
+Malûmdur ki: Bir taburda on millet bulunsa, ayrı ayrı techiz etmesi on tabur kadar güç olduğundan; âciz insanlar, ister istemez bir tarzda techize mecbur olmuşlar. Halbuki Hayy u Kayyum şu muhteşem ordusu içinde, üçyüz binden ziyade milletlere, ayrı ayrı techizat-ı hayatiyeyi veriyor. Hem külfetsiz, müşkilâtsız, kolay bir tarzda, hafif bir şekilde, gayet hakîmane ve intizam-perverane veriyor. Ve koca orduya, bir tek lisan ile,
 
- <span class="arabic" dir="rtl">هُوَ الّذ۪ى يُحْي۪ى</span>  
+<span class="arabic" dir="rtl">هُوَ الّذ۪ى يُحْي۪ى</span>
 
-dedirtip; kâinat mescidinde o cemaat-ı uzmaya  
+dedirtip; kâinat mescidinde o cemaat-ı uzmaya
 
- <span class="arabic" dir="rtl">اَللّٰهُ لَٓا اِلٰهَ اِلَّا  هُوَ اْلحَىُّ الْقَيُّومُ لَا تَاْخُذُهُ سِنَةٌ وَلَانَوْمٌ</span>  
+<span class="arabic" dir="rtl">اَللّٰهُ لَٓا اِلٰهَ اِلَّا هُوَ اْلحَىُّ الْقَيُّومُ لَا تَاْخُذُهُ سِنَةٌ وَلَانَوْمٌ</span>
 
 ilh... okutturuyor...
 
-YEDİNCİ KELİME:   
+YEDİNCİ KELİME:
 
- <span class="arabic" dir="rtl">وَ يُم۪يتُ</span>  
+<span class="arabic" dir="rtl">وَ يُم۪يتُ</span>
 
 Yani: Mevti veren Odur. Yani: Hayatı veren o olduğu gibi; hayatı alan, mevti veren dahi yine odur. Evet mevt, yalnız tahrib ve sönmek değildir ki esbaba verilsin, tabiata havale edilsin. Belki nasıl bir tohum zahiren ölüp çürüyor, fakat bâtınen bir sünbülün hayatına ve yoğurmasına.. yani cüz'î tohumluk hayatından, küllî sünbül hayatına geçiyor. Öyle de mevt dahi zahiren bir inhilal ve bir intıfa göründüğü halde, hakikatta insan için, hayat-ı bâkiyeye ünvan ve mukaddeme ve mebde' oluyor. Öyle ise hayatı veren ve idare eden Kadîr-i Mutlak, yine elbette mevti dahi o icad eder. Şu kelimedeki mertebe-i uzma-yı tevhidin bir bürhan-ı a'zamına şöyle işaret ederiz ki: Otuzüçüncü Mektub'un Yirmidördüncü Penceresi'nde beyan edildiği gibi: Şu mevcudat, irade-i İlahiye ile seyyaledir. Şu kâinat, emr-i Rabbanî ile seyyaredir. Şu mahlukat, izn-i İlahî ile, zaman nehrinde mütemadiyen akıyor.. âlem-i gaybdan gönderiliyor, âlem-i şehadette vücud-u zahirî giydiriliyor, sonra âlem-i gayba muntazaman yağıyor, iniyor. Ve emr-i Rabbanî ile, mütemadiyen istikbalden gelip, hâle uğrayarak teneffüs eder, maziye dökülür.
 
 İşte şu mahlukatın şu seyelanı, gayet hakîmane rahmet ve ihsan dairesinde; ve şu seyeranı, gayet alîmane hikmet ve intizam dairesinde; ve şu cereyanı, gayet Rahîmane şefkat ve mizan dairesinde baştan aşağıya kadar hikmetlerle, maslahatlarla, neticelerle ve gayelerle yapılıyor. Demek bir Kadîr-i Zülcelal, bir Hakîm-i Zülkemal mütemadiyen tavaif-i mevcudatı ve her taife içindeki cüz'iyatı ve o taifelerden teşekkül eden âlemleri, kudretiyle hayat verip tavzif eder. Sonra hikmetiyle terhis edip, mevte mazhar eder; âlem-i gayba gönderir. Daire-i kudretten, daire-i ilme çevirir. İşte hiç mümkün müdür ki: Şu kâinatı, heyet-i mecmuasıyla çevirmeğe muktedir olmayan ve bütün zamanlara hükmü geçmeyen ve âlemleri hayata ve mevte bir ferd gibi mazhar etmeğe kudreti yetmeyen ve baharları, bir çiçek gibi hayat verip, yer yüzüne takıp, sonra mevt ile ondan koparıp alamayan bir zât; mevt ve imateye sahib çıkabilsin? Evet en cüz'î bir zîhayatın mevti dahi, hayatı gibi bütün hakaik-i hayat ve enva'-ı mevt elinde bulunan bir Zât-ı Zülcelal'in kanunuyla, izniyle, emriyle, kuvvetiyle, ilmiyle olmak zarurîdir.
 
-SEKİZİNCİ KELİME:   
+SEKİZİNCİ KELİME:
 
- <span class="arabic" dir="rtl">وَ هُوَ حَىٌّ لَا يَمُوتُ</span>  
+<span class="arabic" dir="rtl">وَ هُوَ حَىٌّ لَا يَمُوتُ</span>
 
 Yani: Hayatı daimîdir, ezelî ve ebedîdir. Mevt ve fena, adem ve zeval ona ârız olamaz. Çünki hayat, ona zâtîdir. Zâtî olan, zâil olamaz. Evet ezelî olan elbette ebedîdir. Kadîm olan, elbette bâkidir. Vâcib-ül Vücud olan, elbette sermedîdir. Evet bir hayat ki, bütün vücud, bütün envârıyla onun gölgesidir. Nasıl adem ona ârız olabilir? Evet bir hayat ki, vâcib bir vücud onun lâzımı ve ünvanıdır; elbette adem ve fena hiçbir cihetle ona ârız olamaz. Evet bir hayat ki; bütün hayatlar mütemadiyen onun cilvesiyle zuhura gelir ve bütün hakaik-i sabite-i kâinat ona istinad eder, onunla kaimdir; elbette hiçbir cihetle fena ve zeval ona ârız olamaz. Evet bir hayat ki; onun bir lem'a-i cilvesi, maruz-u fena ve zeval olan eşya-yı kesîreye bir vahdet verip bekaya mazhar eder ve dağılmaktan kurtarır ve vücudunu muhafaza eder ve bir nevi bekaya mazhar eder. Yani hayat; kesrete bir vahdet verir, ibka eder. Hayat gitse; dağılır, fenaya gider. Elbette öyle hadsiz lemaat-ı hayatiye bir cilvesi olan hayat-ı vâcibeye, zeval ve fena yanaşamaz. Şu hakikata şahid-i katı', şu kâinatın zeval ve fenasıdır. Yani mevcudat vücudlarıyla, hayatlarıyla nasılki o Hayy-ı Lâyemut'un
 
-hayatına ve o hayatın vücub-u vücuduna delalet ve şehadet ederler;  
+hayatına ve o hayatın vücub-u vücuduna delalet ve şehadet ederler;
 
 &gt; **Hâşiye:** {(Haşiye): Hazret-i İbrahim Aleyhisselâm'ın Nemrud'a karşı imate ve ihyada Güneş'in tulû' ve gurubuna intikali, cüz'î imate ve ihyadan küllî imate ve ihyaya intikaldir ve bir terakkidir. O delilin en parlak ve en geniş dairesini göstermektir. Yoksa bir kısım ehl-i tefsirin dedikleri gibi, hafî delili bırakıp, zâhir delile çıkmak değildir.}
 
-öyle de: Mevtleriyle, zevalleriyle o hayatın bekasına, sermediyetine delalet eder ve şehadet ederler. Çünki mevcudat zevale gittikten sonra, arkalarında yine kendileri gibi hayata mazhar olup yerlerine geldiklerinden gösteriyor ki; daimî bir zîhayat var ki, mütemadiyen cilve-i hayatı tazelendiriyor. Nasılki Güneş'e karşı cereyan eden bir nehrin yüzünde kabarcıklar parlar gider. Gelenler aynı parlamayı gösterip, taife taife arkasında parlayıp sönüp gider. Bu sönmek, parlamak vaziyetiyle; yüksek daimî bir Güneş'in devamına delalet ederler. Öyle de, şu mevcudat-ı seyyaredeki hayat ve mevtin değişmeleri ve münavebeleri, bir Hayy-ı Bâki'nin beka ve devamına şehadet ederler.  
+öyle de: Mevtleriyle, zevalleriyle o hayatın bekasına, sermediyetine delalet eder ve şehadet ederler. Çünki mevcudat zevale gittikten sonra, arkalarında yine kendileri gibi hayata mazhar olup yerlerine geldiklerinden gösteriyor ki; daimî bir zîhayat var ki, mütemadiyen cilve-i hayatı tazelendiriyor. Nasılki Güneş'e karşı cereyan eden bir nehrin yüzünde kabarcıklar parlar gider. Gelenler aynı parlamayı gösterip, taife taife arkasında parlayıp sönüp gider. Bu sönmek, parlamak vaziyetiyle; yüksek daimî bir Güneş'in devamına delalet ederler. Öyle de, şu mevcudat-ı seyyaredeki hayat ve mevtin değişmeleri ve münavebeleri, bir Hayy-ı Bâki'nin beka ve devamına şehadet ederler.
 
-   Evet şu mevcudat âyinelerdir. Fakat zulmet nura âyine olduğu gibi, hem karanlık ne derece şiddetli ise o derece nurun parlamasını gösterdiği
+Evet şu mevcudat âyinelerdir. Fakat zulmet nura âyine olduğu gibi, hem karanlık ne derece şiddetli ise o derece nurun parlamasını gösterdiği
 
-gibi, çok cihetlerle zıddiyet noktasında âyinedarlık ederler. Meselâ: Nasılki mevcudat acziyle kudret-i Sâni'a âyinedarlık eder, fakrıyla gınasına âyinedar olur. Öyle de, fenasıyla bekasına âyinedarlık eder. Evet zeminin yüzü ve yüzündeki eşcarın kıştaki vaziyet-i fakiraneleri ve baharda şaşaa-paş olan servet ve gınaları gayet kat'î bir surette, bir Kadîr-i Mutlak ve Ganiyy-i Alelıtlak'ın kudret ve rahmetine âyinedarlık eder. Evet bütün mevcudat, güya lisan-ı hal ile, Üveysel Karanî gibi şöyle münacat ederler; derler ki:  
+gibi, çok cihetlerle zıddiyet noktasında âyinedarlık ederler. Meselâ: Nasılki mevcudat acziyle kudret-i Sâni'a âyinedarlık eder, fakrıyla gınasına âyinedar olur. Öyle de, fenasıyla bekasına âyinedarlık eder. Evet zeminin yüzü ve yüzündeki eşcarın kıştaki vaziyet-i fakiraneleri ve baharda şaşaa-paş olan servet ve gınaları gayet kat'î bir surette, bir Kadîr-i Mutlak ve Ganiyy-i Alelıtlak'ın kudret ve rahmetine âyinedarlık eder. Evet bütün mevcudat, güya lisan-ı hal ile, Üveysel Karanî gibi şöyle münacat ederler; derler ki:
 
-   "Yâ İlahenâ! Rabbimiz sensin! Çünki biz abdiz. Nefsimizin terbiyesinden âciziz. Demek bizi terbiye eden sensin!.. Hem sensin Hâlık! Çünki biz mahlukuz, yapılıyoruz. Hem Rezzak sensin! Çünki biz rızka muhtacız, elimiz yetişmiyor. Demek bizi yapan ve rızkımızı veren sensin. Hem sensin Mâlik! Çünki biz memluküz. Bizden başkası bizde tasarruf ediyor. Demek mâlikimiz sensin. Hem sen Aziz'sin, izzet ve azamet sahibisin! Biz zilletimize bakıyoruz, üstümüzde bir izzet cilveleri var. Demek senin izzetinin âyinesiyiz. Hem sensin Ganiyy-i Mutlak! Çünki biz fakiriz. Fakrımızın eline yetişmediği bir gına veriliyor. Demek gani sensin, veren sensin. Hem sen Hayy-ı Bâki'sin! Çünki biz ölüyoruz. Ölmemizde ve dirilmemizde,
+"Yâ İlahenâ! Rabbimiz sensin! Çünki biz abdiz. Nefsimizin terbiyesinden âciziz. Demek bizi terbiye eden sensin!.. Hem sensin Hâlık! Çünki biz mahlukuz, yapılıyoruz. Hem Rezzak sensin! Çünki biz rızka muhtacız, elimiz yetişmiyor. Demek bizi yapan ve rızkımızı veren sensin. Hem sensin Mâlik! Çünki biz memluküz. Bizden başkası bizde tasarruf ediyor. Demek mâlikimiz sensin. Hem sen Aziz'sin, izzet ve azamet sahibisin! Biz zilletimize bakıyoruz, üstümüzde bir izzet cilveleri var. Demek senin izzetinin âyinesiyiz. Hem sensin Ganiyy-i Mutlak! Çünki biz fakiriz. Fakrımızın eline yetişmediği bir gına veriliyor. Demek gani sensin, veren sensin. Hem sen Hayy-ı Bâki'sin! Çünki biz ölüyoruz. Ölmemizde ve dirilmemizde,
 
-bir daimî hayat verici cilvesini görüyoruz. Hem sen Bâki'sin! Çünki biz, fena ve zevalimizde senin devam ve bekanı görüyoruz. Hem cevab veren, atiyye veren sensin! Çünki biz umum mevcudat, kalî ve hâlî dillerimizle daimî bağırıp istiyoruz, niyaz edip yalvarıyoruz. Arzularımız yerlerine geliyor, maksudlarımız veriliyor. Demek bize cevab veren sensin. Ve hâkeza..."  
+bir daimî hayat verici cilvesini görüyoruz. Hem sen Bâki'sin! Çünki biz, fena ve zevalimizde senin devam ve bekanı görüyoruz. Hem cevab veren, atiyye veren sensin! Çünki biz umum mevcudat, kalî ve hâlî dillerimizle daimî bağırıp istiyoruz, niyaz edip yalvarıyoruz. Arzularımız yerlerine geliyor, maksudlarımız veriliyor. Demek bize cevab veren sensin. Ve hâkeza..."
 
-   Bütün mevcudatın, küllî ve cüz'î herbirisi birer Üveysel Karanî gibi, bir münacat-ı maneviye suretinde bir âyinedarlıkları var. Acz ve fakr ve kusurlarıyla, kudret ve kemal-i İlahîyi ilân ediyorlar.  
+Bütün mevcudatın, küllî ve cüz'î herbirisi birer Üveysel Karanî gibi, bir münacat-ı maneviye suretinde bir âyinedarlıkları var. Acz ve fakr ve kusurlarıyla, kudret ve kemal-i İlahîyi ilân ediyorlar.
 
- DOKUZUNCU KELİME:   
+DOKUZUNCU KELİME:
 
- <span class="arabic" dir="rtl">بِيَدِهِ الْخَيْرُ</span>  
+<span class="arabic" dir="rtl">بِيَدِهِ الْخَيْرُ</span>
 
-Yani: Bütün hayrat onun elinde, bütün hasenat onun defterinde, bütün ihsanat onun hazinesindedir. Öyle ise hayr isteyen ondan istemeli, iyilik arzu eden ona yalvarmalı... Şu kelimenin hakikatını kat'î bir surette göstermek için, ilm-i İlahînin hadsiz delillerinden bir geniş delilin emarelerine ve lem'alarına şöyle işaret eder ve deriz ki:  
+Yani: Bütün hayrat onun elinde, bütün hasenat onun defterinde, bütün ihsanat onun hazinesindedir. Öyle ise hayr isteyen ondan istemeli, iyilik arzu eden ona yalvarmalı... Şu kelimenin hakikatını kat'î bir surette göstermek için, ilm-i İlahînin hadsiz delillerinden bir geniş delilin emarelerine ve lem'alarına şöyle işaret eder ve deriz ki:
 
-   Şu kâinatta görünen ef'al ile tasarruf edip icad eden Sâni'in, bir muhit ilmi var. Ve o ilim, onun zâtının hâssa-i lâzıme-i zaruriyesidir, infikâki muhaldir. Nasılki Güneş'in zâtı bulunup ziyası
+Şu kâinatta görünen ef'al ile tasarruf edip icad eden Sâni'in, bir muhit ilmi var. Ve o ilim, onun zâtının hâssa-i lâzıme-i zaruriyesidir, infikâki muhaldir. Nasılki Güneş'in zâtı bulunup ziyası
 
-bulunmamak kabil değil; öyle de binler derece ondan ziyade kabil değildir ki, şu muntazam mevcudatı icad eden zâtın ilmi ondan infikâk etsin. Şu ilm-i muhit, o zâta lâzım olduğu gibi, taalluk cihetiyle herşey'e dahi lâzımdır. Yani, hiçbir şey ondan gizlenmesi kabil değildir. Perdesiz, Güneş'e karşı zemin yüzündeki eşya, Güneş'i görmemesi kabil olmadığı gibi; o Alîm-i Zülcelal'in nur-u ilmine karşı eşyanın gizlenmesi, bin derece daha gayr-ı kabildir, muhaldir. Çünki huzur var. Yani herşey daire-i nazarındadır ve mukabildir ve daire-i şuhudundadır ve herşey'e nüfuzu var. Şu camid Güneş, şu âciz insan, şu şuursuz röntgen şuaı gibi zînurlar; hâdis, nâkıs ve ârızî oldukları halde, onların nurları, mukabilindeki her şey'i görüp nüfuz ederlerse; elbette vâcib ve muhit ve zâtî olan nur-u ilm-i ezelîden hiçbir şey gizlenemez ve haricinde kalamaz. Şu hakikata işaret eden kâinatın hadd ü hesaba gelmez alâmetleri, âyetleri vardır. Ezcümle:  
+bulunmamak kabil değil; öyle de binler derece ondan ziyade kabil değildir ki, şu muntazam mevcudatı icad eden zâtın ilmi ondan infikâk etsin. Şu ilm-i muhit, o zâta lâzım olduğu gibi, taalluk cihetiyle herşey'e dahi lâzımdır. Yani, hiçbir şey ondan gizlenmesi kabil değildir. Perdesiz, Güneş'e karşı zemin yüzündeki eşya, Güneş'i görmemesi kabil olmadığı gibi; o Alîm-i Zülcelal'in nur-u ilmine karşı eşyanın gizlenmesi, bin derece daha gayr-ı kabildir, muhaldir. Çünki huzur var. Yani herşey daire-i nazarındadır ve mukabildir ve daire-i şuhudundadır ve herşey'e nüfuzu var. Şu camid Güneş, şu âciz insan, şu şuursuz röntgen şuaı gibi zînurlar; hâdis, nâkıs ve ârızî oldukları halde, onların nurları, mukabilindeki her şey'i görüp nüfuz ederlerse; elbette vâcib ve muhit ve zâtî olan nur-u ilm-i ezelîden hiçbir şey gizlenemez ve haricinde kalamaz. Şu hakikata işaret eden kâinatın hadd ü hesaba gelmez alâmetleri, âyetleri vardır. Ezcümle:
 
-   Bütün mevcudatta görünen bütün hikmetler, o ilme işaret eder. Çünki hikmet ile iş görmek ilim ile olur. Hem bütün inayetler, tezyinatlar o ilme işaret eder. İnayetkârane, lütufkârane iş gören; elbette bilir ve bilerek yapar. Hem herbiri birer mizan içindeki bütün intizamlı mevcudat ve herbiri
+Bütün mevcudatta görünen bütün hikmetler, o ilme işaret eder. Çünki hikmet ile iş görmek ilim ile olur. Hem bütün inayetler, tezyinatlar o ilme işaret eder. İnayetkârane, lütufkârane iş gören; elbette bilir ve bilerek yapar. Hem herbiri birer mizan içindeki bütün intizamlı mevcudat ve herbiri
 
 birer intizam içindeki bütün mizanlı ve ölçülü hey'at, yine o ilm-i muhite işaret eder. Çünki intizam ile iş görmek, ilim ile olur. Ölçü ile, tartı ile san'atkârane yapan; elbette kuvvetli bir ilme istinaden yapar. Hem bütün mevcudatta görünen muntazam miktarlar, hikmet ve maslahata göre biçilmiş şekiller, bir kazanın düsturuyla ve kaderin pergârıyla tanzim edilmiş gibi meyvedar vaziyetler ve heyetler, bir ilm-i muhiti gösteriyor.
 
-   Evet eşyaya ayrı ayrı muntazam suretler vermek, herşey'in mesalih-i hayatiyesine ve vücuduna lâyık mahsus bir şekil vermek, bir ilm-i muhit ile olur, başka surette olamaz.
+Evet eşyaya ayrı ayrı muntazam suretler vermek, herşey'in mesalih-i hayatiyesine ve vücuduna lâyık mahsus bir şekil vermek, bir ilm-i muhit ile olur, başka surette olamaz.
 
-   Hem bütün zîhayata, herbirisine lâyık bir tarzda, münasib vakitte, ummadığı yerde rızıklarını vermek; bir ilm-i muhit ile olur. Çünki rızkı gönderen; rızka muhtaç olanları bilecek, tanıyacak, vaktini bilecek, ihtiyacını idrak edecek, sonra rızkını lâyık bir tarzda verebilir.
+Hem bütün zîhayata, herbirisine lâyık bir tarzda, münasib vakitte, ummadığı yerde rızıklarını vermek; bir ilm-i muhit ile olur. Çünki rızkı gönderen; rızka muhtaç olanları bilecek, tanıyacak, vaktini bilecek, ihtiyacını idrak edecek, sonra rızkını lâyık bir tarzda verebilir.
 
-   Hem umum zîhayatın, ibham ünvanı altında bir kanun-u taayyüne bağlı olan ecelleri, ölümleri bir ilm-i muhiti gösteriyor. Çünki her taifenin, gerçi ferdlerin zahiren muayyen bir vakt-i eceli görünmüyor, fakat o taifenin iki had ortasında mahdud bir zamanda ecelleri muayyendir. O
+Hem umum zîhayatın, ibham ünvanı altında bir kanun-u taayyüne bağlı olan ecelleri, ölümleri bir ilm-i muhiti gösteriyor. Çünki her taifenin, gerçi ferdlerin zahiren muayyen bir vakt-i eceli görünmüyor, fakat o taifenin iki had ortasında mahdud bir zamanda ecelleri muayyendir. O
 
 ecel hengamında, o şey'in arkasında vazifesini idame edecek olan neticesinin, meyvesinin, çekirdeğinin muhafazası ve bir taze hayata inkılab ettirmesi; yine o ilm-i muhiti gösteriyor.
 
-   Hem bütün mevcudata şamil, herbir mevcuda lâyık bir surette rahmetin taltifatı; bir rahmet-i vasia içinde bir ilm-i muhiti gösteriyor. Çünki meselâ zîhayatın etfallerini süt ile iaşe eden ve zeminin suya muhtaç nebatatına yağmur ile yardım eden; elbette etfali tanır, ihtiyaçlarını bilir ve o nebatatı görür ve yağmurun onlara lüzumunu derkeder sonra gönderir ve hâkeza... Bütün hikmetli, inayetli rahmetinin hadsiz cilveleri; bir ilm-i muhiti gösteriyor.
+Hem bütün mevcudata şamil, herbir mevcuda lâyık bir surette rahmetin taltifatı; bir rahmet-i vasia içinde bir ilm-i muhiti gösteriyor. Çünki meselâ zîhayatın etfallerini süt ile iaşe eden ve zeminin suya muhtaç nebatatına yağmur ile yardım eden; elbette etfali tanır, ihtiyaçlarını bilir ve o nebatatı görür ve yağmurun onlara lüzumunu derkeder sonra gönderir ve hâkeza... Bütün hikmetli, inayetli rahmetinin hadsiz cilveleri; bir ilm-i muhiti gösteriyor.
 
-   Hem bütün eşyanın san'atındaki ihtimamat ve san'atkârane tasvirat ve mahirane tezyinat, bir ilm-i muhiti gösteriyor. Çünki binler vaziyet-i muhtemele içinde, muntazam ve müzeyyen, san'atlı ve hikmetli bir vaziyeti intihab etmek, derin bir ilim ile olur. Bütün eşyadaki şu tarz-ı intihabat, bir ilm-i muhiti gösteriyor.
+Hem bütün eşyanın san'atındaki ihtimamat ve san'atkârane tasvirat ve mahirane tezyinat, bir ilm-i muhiti gösteriyor. Çünki binler vaziyet-i muhtemele içinde, muntazam ve müzeyyen, san'atlı ve hikmetli bir vaziyeti intihab etmek, derin bir ilim ile olur. Bütün eşyadaki şu tarz-ı intihabat, bir ilm-i muhiti gösteriyor.
 
-   Hem icad ve ibda'-ı eşyada kemal-i sühulet, bir ilm-i ekmele delalet eder. Çünki bir işde kolaylık ve bir vaziyette sühulet, derece-i ilim ve
+Hem icad ve ibda'-ı eşyada kemal-i sühulet, bir ilm-i ekmele delalet eder. Çünki bir işde kolaylık ve bir vaziyette sühulet, derece-i ilim ve
 
-meharetle mütenasibdir. Ne kadar ziyade bilse, o derece kolay yapar.  
+meharetle mütenasibdir. Ne kadar ziyade bilse, o derece kolay yapar.
 
-   İşte şu sırra binaen herbiri birer mu'cize-i san'at olan mevcudata bakıyoruz ki; hayretnüma bir derecede sühuletle, kolaylıkla, külfetsiz, dağdağasız, kısa bir zamanda fakat mu'ciznüma bir surette icad edilir. Demek hadsiz bir ilim vardır ki, hadsiz sühuletle yapılır ve hâkeza... Mezkûr emareler gibi binler alâmet-i sadıka var ki, şu kâinatta tasarruf eden zâtın muhit bir ilmi vardır. Ve herşey'i bütün şuunatıyla bilir, sonra yapar. Madem şu kâinat sahibinin böyle bir ilmi vardır; elbette insanları ve insanların amellerini görür ve insanlar neye lâyık ve müstehak olduklarını bilir, hikmet ve rahmetin muktezasına göre onlarla muamele eder ve edecek.  
+İşte şu sırra binaen herbiri birer mu'cize-i san'at olan mevcudata bakıyoruz ki; hayretnüma bir derecede sühuletle, kolaylıkla, külfetsiz, dağdağasız, kısa bir zamanda fakat mu'ciznüma bir surette icad edilir. Demek hadsiz bir ilim vardır ki, hadsiz sühuletle yapılır ve hâkeza... Mezkûr emareler gibi binler alâmet-i sadıka var ki, şu kâinatta tasarruf eden zâtın muhit bir ilmi vardır. Ve herşey'i bütün şuunatıyla bilir, sonra yapar. Madem şu kâinat sahibinin böyle bir ilmi vardır; elbette insanları ve insanların amellerini görür ve insanlar neye lâyık ve müstehak olduklarını bilir, hikmet ve rahmetin muktezasına göre onlarla muamele eder ve edecek.
 
-   Ey insan! Aklını başına al, dikkat et! Nasıl bir zât seni bilir ve bakar, bil ve ayıl!..  
+Ey insan! Aklını başına al, dikkat et! Nasıl bir zât seni bilir ve bakar, bil ve ayıl!..
 
- Eğer denilse:   
+Eğer denilse:
 
-   Yalnız ilim kâfi değildir, irade dahi lâzımdır. İrade olmazsa, ilim kâfi gelmez?  
+Yalnız ilim kâfi değildir, irade dahi lâzımdır. İrade olmazsa, ilim kâfi gelmez?
 
- Elcevab:   
+Elcevab:
 
-   Bütün mevcudat nasılki bir ilm-i muhite delalet ve şehadet eder. Öyle de: O ilm-i muhit sahibinin irade-i külliyesine dahi delalet eder. Şöyle ki: Herbir şey'e, hususan herbir zîhayata pek çok müşevveş ihtimalât içinde, muayyen
+Bütün mevcudat nasılki bir ilm-i muhite delalet ve şehadet eder. Öyle de: O ilm-i muhit sahibinin irade-i külliyesine dahi delalet eder. Şöyle ki: Herbir şey'e, hususan herbir zîhayata pek çok müşevveş ihtimalât içinde, muayyen
 
 bir ihtimal ile ve pek çok akîm yollar içinde neticeli bir yol ile ve pek çok imkânat içinde mütereddid iken gayet muntazam bir teşahhus verilmesi; hadsiz cihetlerle bir irade-i külliyeyi gösteriyor. Çünki herşey'in vücudunu ihata eden hadsiz imkânat ve ihtimalât içinde ve semeresiz akîm yollarda ve karışık ve yeknesak sel gibi mizansız akan camid unsurlardan gayet hassas bir ölçü ile, nazik bir tartı ile ve gayet ince bir intizam ile, nazenin bir nizam ile verilen mevzun şekil ve muntazam teşahhus; bizzarure ve bilbedahe belki bilmüşahede, bir irade-i külliyenin eseri olduğunu gösterir. Çünki hadsiz vaziyetler içinde bir vaziyeti intihab etmek; bir tahsis, bir tercih, bir kasd ve bir irade ile olur ve amd ve arzu ile tahsis edilir. Elbette tahsis, bir muhassısı iktiza eder. Tercih, bir müreccihi ister. Muhassıs ve müreccih ise iradedir. Meselâ: İnsan gibi yüzler muhtelif cihazat ve âlâtın makinesi hükmünde olan bir vücudun, bir katre sudan.. ve yüzer muhtelif a'zâsı bulunan bir kuşun, basit bir yumurtadan.. ve yüzer muhtelif kısımlara ayrılan bir ağacın, basit bir çekirdekten icadları; kudret ve ilme şehadet ettikleri gibi, gayet kat'î ve zarurî bir tarzda onların Sâni'inde bir irade-i külliyeye delalet ederler ki; o irade ile, o şey'in herşey'ini
 
 tahsis eder ve o irade ile her cüz'üne, her uzvuna, her kısmına ayrı, has bir şekil verir, bir vaziyet giydirir.
 
- Elhasıl:   
+Elhasıl:
 
-   Nasılki eşyada, meselâ hayvanattaki ehemmiyetli a'zânın, esasat ve netaic itibariyle birbirlerine benzeyişleri ve tevafukları ve bir tek sikke-i vahdet izhar etmeleri, nasıl kat'î olarak delalet ediyor ki; umum hayvanatın Sâni'i birdir, Vâhid'dir, Ehad'dir. Öyle de: O hayvanatın ayrı ayrı teşahhusları ve sîmalarındaki başka başka hikmetli taayyün ve temeyyüzleri delalet eder ki; onların Sâni'-i Vâhid'i, fâil-i muhtardır ve iradelidir; istediğini yapar, istemediğini yapmaz; kasd ve irade ile işler. Madem ilm-i İlahîye ve irade-i Rabbaniyeye mevcudat adedince, belki mevcudatın şuunatı adedince delalet ve şehadet vardır. Elbette bir kısım feylesofların irade-i İlahiyeyi nefy ve bir kısım ehl-i bid'atın kaderi inkâr ve bir kısım ehl-i dalaletin, cüz'iyata adem-i ıttılaını iddia etmeleri ve tabiiyyunun, bir kısım mevcudatı tabiat ve esbaba isnad etmeleri; mevcudat adedince muzaaf bir yalancılıktır ve mevcudatın şuunatı adedince muzaaf bir dalalet divaneliğidir. Çünki hadsiz şehadet-i sadıkayı tekzib eden, hadsiz bir yalancılık işlemiş olur.
+Nasılki eşyada, meselâ hayvanattaki ehemmiyetli a'zânın, esasat ve netaic itibariyle birbirlerine benzeyişleri ve tevafukları ve bir tek sikke-i vahdet izhar etmeleri, nasıl kat'î olarak delalet ediyor ki; umum hayvanatın Sâni'i birdir, Vâhid'dir, Ehad'dir. Öyle de: O hayvanatın ayrı ayrı teşahhusları ve sîmalarındaki başka başka hikmetli taayyün ve temeyyüzleri delalet eder ki; onların Sâni'-i Vâhid'i, fâil-i muhtardır ve iradelidir; istediğini yapar, istemediğini yapmaz; kasd ve irade ile işler. Madem ilm-i İlahîye ve irade-i Rabbaniyeye mevcudat adedince, belki mevcudatın şuunatı adedince delalet ve şehadet vardır. Elbette bir kısım feylesofların irade-i İlahiyeyi nefy ve bir kısım ehl-i bid'atın kaderi inkâr ve bir kısım ehl-i dalaletin, cüz'iyata adem-i ıttılaını iddia etmeleri ve tabiiyyunun, bir kısım mevcudatı tabiat ve esbaba isnad etmeleri; mevcudat adedince muzaaf bir yalancılıktır ve mevcudatın şuunatı adedince muzaaf bir dalalet divaneliğidir. Çünki hadsiz şehadet-i sadıkayı tekzib eden, hadsiz bir yalancılık işlemiş olur.
 
-İşte, meşiet-i İlahiye ile vücuda gelen işlerde; "İnşâallah İnşâallah" yerinde, bilerek "tabiî tabiî" demek, ne kadar hata ve muhalif-i hakikat olduğunu kıyas et...  
+İşte, meşiet-i İlahiye ile vücuda gelen işlerde; "İnşâallah İnşâallah" yerinde, bilerek "tabiî tabiî" demek, ne kadar hata ve muhalif-i hakikat olduğunu kıyas et...
 
- * * *   
+---
 
- [Elhüccetüzzehra'nın Birinci Makamı'nın Üçüncü Kısmıdır]   
+[Elhüccetüzzehra'nın Birinci Makamı'nın Üçüncü Kısmıdır]
 
- Mukaddime   
+Mukaddime
 
- <span class="arabic" dir="rtl">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>  
+<span class="arabic" dir="rtl">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ</span>
 
- <span class="arabic" dir="rtl">وَ بِهِ نَسْتَع۪ينُ</span>  
+<span class="arabic" dir="rtl">وَ بِهِ نَسْتَع۪ينُ</span>
 
-   Namazdaki Fatiha'nın manevî emriyle "Eşhedü en lâ ilahe illallah" feyziyle İkinci Kısım yazıldığı gibi; namazdaki teşehhüdde dahi "Ve eşhedü enne Muhammederresulullah" cümlesinin diliyle, manevî ihtarıyla ve Sure-i Feth'in âhirinde  
+Namazdaki Fatiha'nın manevî emriyle "Eşhedü en lâ ilahe illallah" feyziyle İkinci Kısım yazıldığı gibi; namazdaki teşehhüdde dahi "Ve eşhedü enne Muhammederresulullah" cümlesinin diliyle, manevî ihtarıyla ve Sure-i Feth'in âhirinde
 
- <span class="arabic" dir="rtl">هُوَ الَّذ۪ٓى اَرْسَلَ رَسُولَهُ بِالْهُدٰى وَد۪ينِ اْلحَقِّ لِيُظْهِرَهُ عَلَى الدّ۪ينِ كُلِّه۪ وَ كَفٰى بِاللّٰهِ شَه۪يدًا ٭ مُحَمّدٌ رَسُولُ اللّٰهِ وَالَّذ۪ينَ مَعَهُ اَشِدَّٓاءُ عَلَى الْكُفَّارِ رُحَمَٓاءُ بَيْنَهُمْ ...الخ</span>
+<span class="arabic" dir="rtl">هُوَ الَّذ۪ٓى اَرْسَلَ رَسُولَهُ بِالْهُدٰى وَد۪ينِ اْلحَقِّ لِيُظْهِرَهُ عَلَى الدّ۪ينِ كُلِّه۪ وَ كَفٰى بِاللّٰهِ شَه۪يدًا ٭ مُحَمّدٌ رَسُولُ اللّٰهِ وَالَّذ۪ينَ مَعَهُ اَشِدَّٓاءُ عَلَى الْكُفَّارِ رُحَمَٓاءُ بَيْنَهُمْ ...الخ</span>
 
 beş mu'cize-i gaybiyeyi gösteren büyük âyetin nuruyla üçüncü kısmını yazmaya -şimdi beyanına iznim olmayan üç sebeb için- mecbur oldum. Tafsilâtını, izahatını, senedli hüccetlerini risalet-i Muhammediyeye dair Zülfikar Mu'cizat-ı Ahmediye ve Arabî Hizb-i Nurî'ye havale edip yalnız gayet muhtasar, kısacık üç işaret ile Arabî Hizb-i Nurî'nin hülâsasının bir hülâsası ve tesbihatta tekrar ettiğim kelime-i tevhid ile daimî virdim bir tefekkür-ü Arabî olarak burada yazılan risaleciğinin "Muhammedürresulullah" şehadetine dair parçanın bir nevi tercümesi, İkinci ve Üçüncü İşaret'te yazılacak.
 
- Birinci İşaret:   
+Birinci İşaret:
 
-   Bu kâinat sahibinin tezahür-ü rububiyetine ve sermedî uluhiyetine ve nihayetsiz ihsanatına küllî bir ubudiyet ve tanıttırmakla mukabele eden Muhammed Aleyhissalâtü Vesselâm, bu kâinatta güneş lüzumu gibi elzemdir ki; nev'-i beşerin üstad-ı ekberi ve büyük peygamberi ve Fahr-i Âlem ve  
+Bu kâinat sahibinin tezahür-ü rububiyetine ve sermedî uluhiyetine ve nihayetsiz ihsanatına küllî bir ubudiyet ve tanıttırmakla mukabele eden Muhammed Aleyhissalâtü Vesselâm, bu kâinatta güneş lüzumu gibi elzemdir ki; nev'-i beşerin üstad-ı ekberi ve büyük peygamberi ve Fahr-i Âlem ve
 
- <span class="arabic" dir="rtl">لَوْلَاكَ لَوْلَاكَ لَمَا خَلَقْتُ الْاَفْلَاكَ</span>  
+<span class="arabic" dir="rtl">لَوْلَاكَ لَوْلَاكَ لَمَا خَلَقْتُ الْاَفْلَاكَ</span>
 
 hitabına mazhar ve hakikat-ı Muhammediye (A.M.) hem sebeb-i hilkat-i âlem, hem neticesi ve en mükemmel meyvesi olduğu gibi, bu kâinatın hakikî kemalâtı ve sermedî Cemil-i Zülcelal'in bâki âyineleri ve
 
-sıfatlarının cilveleri ve hikmetli ef'alinin vazifedar eserleri ve çok manidar mektubları olması ve bâki bir âlemi taşıması ve bütün zîşuurların müştak oldukları bir dâr-ı saadet ve âhireti netice vermesi gibi hakikatları, hakikat-ı Muhammediye (A.S.M.) ve Risalet-i Ahmediye (A.S.M.) ile tahakkuk ettiğinden, nasıl bu kâinat onun risaletine gayet kuvvetli ve kat'î şehadet eder; öyle de: Başta âlem-i İslâm, bütün beşer ve bütün zîşuur; Cehennem'den daha acı ve korkunç olan ademden, hiçlikten, i'dam-ı ebedîden, fena-i mutlaktan kurtulmak için daimî aşk ve şevkle her zamanda ve câmi' mahiyetinin bütün kuvvetleriyle, bütün istidadat lisanları ile, bütün dualar ve ibadetler ve ricalarının dilleriyle istedikleri hayat-ı bâkiyeyi kuvvetli ve kat'î beşaret veren risalet-i Ahmediye (A.S.M.) ve hakikat-ı Muhammediyeye (A.S.M.) şehadet edip nev'-i beşerin medar-ı iftiharı ve eşref-i mahlukat olduğuna imza bastığı gibi.. her zamanda üçyüzelli milyon ehl-i imanın  
+sıfatlarının cilveleri ve hikmetli ef'alinin vazifedar eserleri ve çok manidar mektubları olması ve bâki bir âlemi taşıması ve bütün zîşuurların müştak oldukları bir dâr-ı saadet ve âhireti netice vermesi gibi hakikatları, hakikat-ı Muhammediye (A.S.M.) ve Risalet-i Ahmediye (A.S.M.) ile tahakkuk ettiğinden, nasıl bu kâinat onun risaletine gayet kuvvetli ve kat'î şehadet eder; öyle de: Başta âlem-i İslâm, bütün beşer ve bütün zîşuur; Cehennem'den daha acı ve korkunç olan ademden, hiçlikten, i'dam-ı ebedîden, fena-i mutlaktan kurtulmak için daimî aşk ve şevkle her zamanda ve câmi' mahiyetinin bütün kuvvetleriyle, bütün istidadat lisanları ile, bütün dualar ve ibadetler ve ricalarının dilleriyle istedikleri hayat-ı bâkiyeyi kuvvetli ve kat'î beşaret veren risalet-i Ahmediye (A.S.M.) ve hakikat-ı Muhammediyeye (A.S.M.) şehadet edip nev'-i beşerin medar-ı iftiharı ve eşref-i mahlukat olduğuna imza bastığı gibi.. her zamanda üçyüzelli milyon ehl-i imanın
 
- <span class="arabic" dir="rtl">اَلسَّبَبُ كَالْفَاعِلِ</span>  
+<span class="arabic" dir="rtl">اَلسَّبَبُ كَالْفَاعِلِ</span>
 
 sırrınca, her gün işledikleri bütün hasenatlar ve hayırların bir misli Muhammed Aleyhissalâtü Vesselâm'ın defter-i hasenatına girmesi ve o tek şahsiyet-i Muhammediye (A.S.M.), yüzer milyon, belki milyarlar âbid-i muhsin kadar küllî bir ubudiyete ve füyuzata
 
 mazhar bir makam kazanması, o zâtın (A.M.) risaletine pek kuvvetli şehadet edip imza basar.
 
- İkinci İşaret:   
+İkinci İşaret:
 
-   Benim virdimde her vakit tefekkürle baktığım yirmiden ziyade şehadetlere işaret eden  
+Benim virdimde her vakit tefekkürle baktığım yirmiden ziyade şehadetlere işaret eden
 
- <span class="arabic" dir="rtl">مُحَمَّدٌ رَسُولُ اللّٰهِ صَادِقُ الْوَعْدِ الْاَم۪ينِ بِشَهَادَةِ ظُهُورِه۪ دَفْعَةً مَعَ اُمِّيَّتِهِ بِاَكْمَلِ د۪ينٍ وَ اِسْلَامِيَّةٍ وَ شَر۪يعَةٍ وَ بِاَقْوٰى ا۪يمَانٍ وَ اِعْتِقَادٍ وَ عِبَادَةٍ وَ بِاَعْلٰى دَعْوَةٍ وَ مُنَاجَاةٍ وَ دَعَوَاتٍ وَ بِاعَمِّ تَبْل۪يغٍ وَ اَتَمِّ مَتَانَةٍ خَارِقَاتٍ مُثْمِرَاتٍ لَا مِثْلَ لَهَا</span>  
+<span class="arabic" dir="rtl">مُحَمَّدٌ رَسُولُ اللّٰهِ صَادِقُ الْوَعْدِ الْاَم۪ينِ بِشَهَادَةِ ظُهُورِه۪ دَفْعَةً مَعَ اُمِّيَّتِهِ بِاَكْمَلِ د۪ينٍ وَ اِسْلَامِيَّةٍ وَ شَر۪يعَةٍ وَ بِاَقْوٰى ا۪يمَانٍ وَ اِعْتِقَادٍ وَ عِبَادَةٍ وَ بِاَعْلٰى دَعْوَةٍ وَ مُنَاجَاةٍ وَ دَعَوَاتٍ وَ بِاعَمِّ تَبْل۪يغٍ وَ اَتَمِّ مَتَانَةٍ خَارِقَاتٍ مُثْمِرَاتٍ لَا مِثْلَ لَهَا</span>
 
-   Kısa bir nevi tercümesi ve meali: Yani Muhammed'in (A.M.) risaletine şehadet eden:  
+Kısa bir nevi tercümesi ve meali: Yani Muhammed'in (A.M.) risaletine şehadet eden:
 
- Birincisi:   
+Birincisi:
 
-   Onbir hâlâtından çıkan bir hüccet-i risalettir. Evet, okumak ve yazmak öğrenmediği ve ümmi olduğu halde; ondört asrın ukalâsını, feylesoflarını hayrette bırakan ve edyan-ı semaviyede birinciliği kazanan bir din ile birden, tecrübesiz ve def'aten meydana çıkması emsal kabul etmez bir halet olduğu gibi; sözlerinden, fiillerinden, hallerinden çıkan İslâmiyet her zamanda üçyüzelli milyon insanın ruhlarına, nefislerine, akıllarına terbiyekârane ders vermesi ve manevî terakkiyata sevketmesi, emsalsiz bir halettir.
+Onbir hâlâtından çıkan bir hüccet-i risalettir. Evet, okumak ve yazmak öğrenmediği ve ümmi olduğu halde; ondört asrın ukalâsını, feylesoflarını hayrette bırakan ve edyan-ı semaviyede birinciliği kazanan bir din ile birden, tecrübesiz ve def'aten meydana çıkması emsal kabul etmez bir halet olduğu gibi; sözlerinden, fiillerinden, hallerinden çıkan İslâmiyet her zamanda üçyüzelli milyon insanın ruhlarına, nefislerine, akıllarına terbiyekârane ders vermesi ve manevî terakkiyata sevketmesi, emsalsiz bir halettir.
 
 Hem öyle bir şeriatla meydana gelmiş ki; âdilane kanunlarıyla nev'-i beşerin beşten birisini ondört asırda maddî ve manevî terakki içinde idare etmesi misilsiz bir halet olduğu gibi, o zât (A.S.M.) öyle bir iman ve itikadla meydana çıktı ki; bütün ehl-i hakikat her zaman onun mertebe-i imanından feyz almalarıyla beraber en yüksek ve en kuvvetli bir derecededir diye müttefikan tasdikleri ve o zamanda hadsiz muarızlarının ona muhalefeti zerre kadar bir telaş, bir vesvese, bir şübhe vermemesi gösteriyor ki, kuvvet-i imaniyede dahi onun emsali yok ve o küllî yüksek imanı misilsizdir. Hem öyle bir ubudiyet ve ibadet gösterdi ki; ibtida ve intihayı birleştirip hiç kimseyi taklid etmeyerek, ibadetin en ince esrarını görüp müraat ederek en dağdağalı zamanlarda dahi tam tamına ubudiyeti yapması emsalsiz bir halet olması gibi, Hâlıkına karşı öyle daavat ve münacat ve ricalar yapmış ki, bu zamana kadar telahuk-u efkârla beraber o mertebeye yetişilmemiş. Meselâ: Cevşen-ül Kebir münacatında binbir esma-i İlahiyeyi şefaatçi ederek Hâlıkını öyle bir tarzda tavsif ve tarif eder ki, emsali yok. Ve marifetullahta kimse ona yetişememesi, misilsiz bir halettir. Hem öyle bir metanetle insanları dine davet ve öyle bir cür'etle risaletini
 
-tebliğ etmiş ki; kavmi ve amcası ve dünyanın büyük devletleri ve eski dinlerin etba'ları ona muarız ve düşman oldukları halde, zerre kadar korkmayarak, çekinmeyerek umumuna meydan okuması ve başa da çıkarması, emsalsiz bir halettir.  
+tebliğ etmiş ki; kavmi ve amcası ve dünyanın büyük devletleri ve eski dinlerin etba'ları ona muarız ve düşman oldukları halde, zerre kadar korkmayarak, çekinmeyerek umumuna meydan okuması ve başa da çıkarması, emsalsiz bir halettir.
 
-   İşte onun sıdkına ve nübüvvetine bu hârika, emsalsiz sekiz haletin mecmuu gayet kuvvetli bir şehadettir. Ve bu haletler, o zâtın (A.S.M.) nihayet derecede ciddiyetine ve itminanına ve kemal-i sıdkına ve hakkaniyetine kat'î kanaatı var olduğunu gösteriyor. Âlem-i İslâm her günde, her teşehhüdde milyonlar lisanla  
+İşte onun sıdkına ve nübüvvetine bu hârika, emsalsiz sekiz haletin mecmuu gayet kuvvetli bir şehadettir. Ve bu haletler, o zâtın (A.S.M.) nihayet derecede ciddiyetine ve itminanına ve kemal-i sıdkına ve hakkaniyetine kat'î kanaatı var olduğunu gösteriyor. Âlem-i İslâm her günde, her teşehhüdde milyonlar lisanla
 
- <span class="arabic" dir="rtl">اَلسَّلَامُ عَلَيْكَ اَيُّهَا النَّبِىُّ وَ رَحْمَةُ اللّٰهِ وَ بَرَكَاتُهُ</span>  
+<span class="arabic" dir="rtl">اَلسَّلَامُ عَلَيْكَ اَيُّهَا النَّبِىُّ وَ رَحْمَةُ اللّٰهِ وَ بَرَكَاتُهُ</span>
 
-der. Ve onun memuriyetine teslimiyetini ve getirdiği saadet-i ebediye beşaretini tasdik ettiğini ve beşeriyetin derin bir aşkla ve fıtrî ve istidadî pek kuvvetli bir iştiyakla aradığı hayat-ı bâkiyeye sağlam bir yol açtığına karşı âlem-i İslâm minnetdarane, müteşekkirane  
+der. Ve onun memuriyetine teslimiyetini ve getirdiği saadet-i ebediye beşaretini tasdik ettiğini ve beşeriyetin derin bir aşkla ve fıtrî ve istidadî pek kuvvetli bir iştiyakla aradığı hayat-ı bâkiyeye sağlam bir yol açtığına karşı âlem-i İslâm minnetdarane, müteşekkirane
 
- <span class="arabic" dir="rtl">اَلسَّلَامُ عَلَيْكَ اَيُّهَا النَّبِىُّ</span>  
+<span class="arabic" dir="rtl">اَلسَّلَامُ عَلَيْكَ اَيُّهَا النَّبِىُّ</span>
 
 ile bir manevî ziyaret ve görüşmek ve üçyüzelli milyon, belki milyarlar namına onu tebrik eder.
 
-Yirmi küllî şehadetlerden ve çok şehadetleri ihtiva eden İkinci Şehadet:   
+Yirmi küllî şehadetlerden ve çok şehadetleri ihtiva eden İkinci Şehadet:
 
- <span class="arabic" dir="rtl">وَ بِشَهَادَةِ جَم۪يعِ حَقَٓائِقِ اْلا۪يمَانِ عَلٰى تَصْدِيقِه۪</span>  
+<span class="arabic" dir="rtl">وَ بِشَهَادَةِ جَم۪يعِ حَقَٓائِقِ اْلا۪يمَانِ عَلٰى تَصْدِيقِه۪</span>
 
 Yani: İmanın altı rükünlerinin hakikatları ve tahakkukları ve hakkaniyetleri, Muhammed'in (A.M.) risaletine ve hakkaniyetine kat'î şehadet eder. Çünki onun risalet hayatının şahsiyet-i maneviyesi ve bütün davalarının esası ve mahiyet-i nübüvveti, o altı rükündür. Öyle ise; o rükünlerin tahakkuklarına delalet eden bütün deliller, Muhammed'in (A.M.) risaletinin hak olduğuna ve onun sadıkıyetine dahi delalet ederler. Hem âhiretin tahakkukuna sair rükünlerinin delaletini Meyve Risalesi ve Onuncu Söz'ün zeyilleri beyan ettikleri gibi; öyle de herbir rükün hüccetleriyle beraber onun risaletine bir hüccettir.
 
- Binler şehadetleri ihtiva eden Üçüncü Küllî Şehadet:   
+Binler şehadetleri ihtiva eden Üçüncü Küllî Şehadet:
 
- <span class="arabic" dir="rtl">وَ بِشَهَادَةِ ذَاتِهِ عَلَيْهِ الصَّلَاةُ وَ السَّلَامُ بِاٰلَافِ مُعْجِزَاتِهِ وَ كَمَالَاتِهِ وَ عُلُوِّ اَخْلَاقِهِ</span>  
+<span class="arabic" dir="rtl">وَ بِشَهَادَةِ ذَاتِهِ عَلَيْهِ الصَّلَاةُ وَ السَّلَامُ بِاٰلَافِ مُعْجِزَاتِهِ وَ كَمَالَاتِهِ وَ عُلُوِّ اَخْلَاقِهِ</span>
 
 Yani: O Zât (A.M.) Güneş gibi kendi kendine delildir. Binler mu'cizat ve kemalât ve yüksek, güzel ahlâkıyla risaletine ve sadıkıyetine pek
 
-kuvvetli şehadet eder. Evet Mu'cizat-ı Ahmediye (A.S.M.) risale-i hârikada üçyüzden ziyade nakl-i sahih ile isbat ettiği gibi; o zâtın (A.S.M.)  
+kuvvetli şehadet eder. Evet Mu'cizat-ı Ahmediye (A.S.M.) risale-i hârikada üçyüzden ziyade nakl-i sahih ile isbat ettiği gibi; o zâtın (A.S.M.)
 
- <span class="arabic" dir="rtl">وَ انْشَقَّ الْقَمَرُ</span>  
+<span class="arabic" dir="rtl">وَ انْشَقَّ الْقَمَرُ</span>
 
-ve  
+ve
 
- <span class="arabic" dir="rtl">وَمَا رَمَيْتَ اِذْ رَمَيْتَ وَلٰكِنَّ اللّٰهَ رَمٰى</span>  
+<span class="arabic" dir="rtl">وَمَا رَمَيْتَ اِذْ رَمَيْتَ وَلٰكِنَّ اللّٰهَ رَمٰى</span>
 
-âyetlerinin sarahatıyla, avucunun bir parmağıyla Kamer iki parça olması ve nakl-i sahih ve tevatürle, aynı elin beş parmağından beş çeşme su akması ve susuz kalan bütün ordusu o sudan içmesi ve şahid olması ve bu acib hârika iki defa başka yerde de vuku bulması ve aynı avuç ile bir parça toprağı, hücum eden düşman ordusuna atarak, her birisinin gözüne bir avuç toprak girmesiyle hücumda iken kaçmaları ve aynı avuçta küçük taşlar insanlar gibi tesbih edip Sübhanallah demeleri gibi nakl-i sahih ile ve bir kısmı tevatürle tarihlerde kat'iyyen vukua gelen yüzer ve ehl-i tahkikin yanında bine kadar mu'cizat, elinde zuhuru ve dost ve düşmanların ittifakıyla onda güzel hasletlerin ve ahlâk-ı hasenenin en yüksek derecesinde  
+âyetlerinin sarahatıyla, avucunun bir parmağıyla Kamer iki parça olması ve nakl-i sahih ve tevatürle, aynı elin beş parmağından beş çeşme su akması ve susuz kalan bütün ordusu o sudan içmesi ve şahid olması ve bu acib hârika iki defa başka yerde de vuku bulması ve aynı avuç ile bir parça toprağı, hücum eden düşman ordusuna atarak, her birisinin gözüne bir avuç toprak girmesiyle hücumda iken kaçmaları ve aynı avuçta küçük taşlar insanlar gibi tesbih edip Sübhanallah demeleri gibi nakl-i sahih ile ve bir kısmı tevatürle tarihlerde kat'iyyen vukua gelen yüzer ve ehl-i tahkikin yanında bine kadar mu'cizat, elinde zuhuru ve dost ve düşmanların ittifakıyla onda güzel hasletlerin ve ahlâk-ı hasenenin en yüksek derecesinde
 
 &gt; **Hâşiye:** {(Haşiye): Hattâ şecaat kahramanı Hazret-i Ali (R.A.) diyor: "Harbde biz korktuğumuz zaman, Peygamber'in (A.S.M.) arkasına saklanır, tahassun ederdik." Şecaat gibi her haslette faik olduğunu, o zaman düşmanları dahi tasdik ettiklerini tarihler naklediyorlar.}
 
 bulunması ve
 
-arkasında tebaiyetle sülûk edip kemalâta erişen ve hakikata aynelyakîn yetişen bütün ehl-i tahkik, ittifakla kemalât-ı Muhammediye (A.S.M.) en yüksek derecede bulunduğuna hakkalyakîn tasdikleri ve onun dininden gelen âlem-i İslâm'ın füyuzatı ve koca İslâmiyet'in hakikatları onun hârika kemalâtına delalet eder. Elbette o zât (A.S.M.), bizzât kendi risaletine gayet parlak ve küllî, geniş şehadet eder demektir.  
+arkasında tebaiyetle sülûk edip kemalâta erişen ve hakikata aynelyakîn yetişen bütün ehl-i tahkik, ittifakla kemalât-ı Muhammediye (A.S.M.) en yüksek derecede bulunduğuna hakkalyakîn tasdikleri ve onun dininden gelen âlem-i İslâm'ın füyuzatı ve koca İslâmiyet'in hakikatları onun hârika kemalâtına delalet eder. Elbette o zât (A.S.M.), bizzât kendi risaletine gayet parlak ve küllî, geniş şehadet eder demektir.
 
- Pekçok kuvvetli şehadetleri ihtiva eden Dördüncü Şehadet:   
+Pekçok kuvvetli şehadetleri ihtiva eden Dördüncü Şehadet:
 
- <span class="arabic" dir="rtl">وَ بِشَهَادَةِ الْقُرْاٰنِ بِمَا لَا يُحَدُّ مِنْ حَقَٓائِقِهِ وَ بَرَاه۪ينِهِ</span>  
+<span class="arabic" dir="rtl">وَ بِشَهَادَةِ الْقُرْاٰنِ بِمَا لَا يُحَدُّ مِنْ حَقَٓائِقِهِ وَ بَرَاه۪ينِهِ</span>
 
 Yani: Kur'an-ı Mu'ciz-ül Beyan, hadsiz hakikatlar ve hüccetleriyle risaletine, sadıkıyetine şehadet eder. Evet kırk vecihle mu'cize olduğu Zülfikar Mecmuası'nda isbat edilen ve ondört asrı nurlandıran ve nev'-i beşerin beşten birisini tebeddül etmeyen kanunlarıyla idare eden ve o zamandan şimdiye kadar bütün muarızlara meydan okuyup hiç kimse hattâ bir suresinin mislini getirmeğe cesaret etmeyen ve Âyet-ül Kübra'da isbat edildiği gibi altı ciheti nuranî, şübheler giremeyen ve altı makam-ı kübra hakkaniyetine imza basan ve sarsılmaz altı hakikatlara dayanan
 
 ve her zamanda yüzer milyon lisanlarla şevk ve hürmetle okunan ve her dakikada milyonlar hâfızların kalblerinde kudsiyetle yazılan ve âlem-i İslâm'ın bütün şehadetleri ve imanları onun şehadetinden tereşşuh eden ve bütün ulûm-u imaniye ve İslâmiye onun menbaından akan ve o eski semavî kitabları tasdik ettiği gibi, bütün kütüb ve suhuf-u semaviyenin manevî tasdiklerine mazhar bulunan Kur'an-ı Azîmüşşan, bütün hakikatleriyle ve hakkaniyetini isbat eden bütün hüccetleriyle, Muhammed Aleyhissalâtü Vesselâm'ın sıdkına ve risaletine şehadet eder demektir.
 
- Beşinci, Altıncı, Yedinci, Sekizinci Küllî Şehadetler:   
+Beşinci, Altıncı, Yedinci, Sekizinci Küllî Şehadetler:
 
- <span class="arabic" dir="rtl">وَ بِشَهَادَةِ الْجَوْشَنِ بِقُدْسِيَّةِ اِشَارَاتِهِ وَ رَسَٓائِلِ النُّورِ بِقُوَّةِ دَلَٓائِلِهِ وَ الْمَاض۪ى بِتَوَاتُرِ اِرْهَاصَاتِهِ وَ اْلاِسْتِقْبَالِ بِتَصْد۪يقِ اٰلَافِ حَادِثَاتِهِ</span>  
+<span class="arabic" dir="rtl">وَ بِشَهَادَةِ الْجَوْشَنِ بِقُدْسِيَّةِ اِشَارَاتِهِ وَ رَسَٓائِلِ النُّورِ بِقُوَّةِ دَلَٓائِلِهِ وَ الْمَاض۪ى بِتَوَاتُرِ اِرْهَاصَاتِهِ وَ اْلاِسْتِقْبَالِ بِتَصْد۪يقِ اٰلَافِ حَادِثَاتِهِ</span>
 
-   Yani: Binbir esma-i İlahiyeye sarihan ve işareten bakan ve bir cihette Kur'andan çıkan bir hârika münacat olan ve marifetullahta terakki eden bütün âriflerin münacatlarının fevkinde bulunan ve bir gazvede "Zırhı çıkar, onun yerine bu Cevşen'i oku" diye Cebrail vahiy getiren "Cevşen-ül Kebir" münacatı içindeki hakikatlar ve tam
+Yani: Binbir esma-i İlahiyeye sarihan ve işareten bakan ve bir cihette Kur'andan çıkan bir hârika münacat olan ve marifetullahta terakki eden bütün âriflerin münacatlarının fevkinde bulunan ve bir gazvede "Zırhı çıkar, onun yerine bu Cevşen'i oku" diye Cebrail vahiy getiren "Cevşen-ül Kebir" münacatı içindeki hakikatlar ve tam
 
 tamına Rabbine karşı tavsifler, Muhammed'in (A.M.) risaletine ve hakkaniyetine şehadet ettiği gibi; Kur'andan tereşşuh eden ve bir cihette Cevşen'den feyiz alan ve tevellüd eden Resail-in Nuriye, yüzotuz parçasıyla risalet-i Muhammediyeye (A.M.) bir tek hüccet olarak risaletinin bütün hakikatlarını aklen ve mantıken isbatıyla, hattâ felsefenin nazarında akıldan pek uzak mes'elelerini göz önünde gibi gayet kolay ve makul bir tarzda ders vermesiyle Muhammed'in (A.M.) sadıkıyetine ve risaletine küllî bir surette şehadet eder.
 
-   Hem zaman-ı mazi dahi risaletine bir küllî şahiddir ki; irhasat denilen nübüvvetten evvel zuhur eden ve gelecek peygamberin mu'cizatı sayılan hârikalar, tarihlerde ve siyer kitablarında kat'î tevatür tarzında nakledilen pekçok vakıalar, gayet sağlam bir surette risaletine şehadet eder ve çok nevileri var. Bir kısmı, gelecek şehadetlerde beyan edilecek; bir kısmı da Zülfikar'da ve tarih kitablarında sahih bir surette nakledilmiş. Meselâ: Viladet-i Peygamberiyeye (A.M.) yakın bir vakitte Kâ'be'yi tahrib etmeğe gelen Ebrehe askerinin başlarına Ebabil kuşlarının elleriyle taşların yağması ve viladet gecesinde Kâ'be'deki sanemlerin baş aşağı düşmesi ve Kisra-yı
+Hem zaman-ı mazi dahi risaletine bir küllî şahiddir ki; irhasat denilen nübüvvetten evvel zuhur eden ve gelecek peygamberin mu'cizatı sayılan hârikalar, tarihlerde ve siyer kitablarında kat'î tevatür tarzında nakledilen pekçok vakıalar, gayet sağlam bir surette risaletine şehadet eder ve çok nevileri var. Bir kısmı, gelecek şehadetlerde beyan edilecek; bir kısmı da Zülfikar'da ve tarih kitablarında sahih bir surette nakledilmiş. Meselâ: Viladet-i Peygamberiyeye (A.M.) yakın bir vakitte Kâ'be'yi tahrib etmeğe gelen Ebrehe askerinin başlarına Ebabil kuşlarının elleriyle taşların yağması ve viladet gecesinde Kâ'be'deki sanemlerin baş aşağı düşmesi ve Kisra-yı
 
-Fars sarayının harab olması ve ateşperest Mecusilerin 1000 seneden beri yanması devam eden ateşi o gece sönmesi ve Buheyra-yı Rahib ve Halîme-i Sa'diye'nin kat'î ihbarlarıyla, bulutlar başına gölge etmesi gibi çok hâdiseler, nübüvvetinden evvel nübüvvetini haber vermişler.  
+Fars sarayının harab olması ve ateşperest Mecusilerin 1000 seneden beri yanması devam eden ateşi o gece sönmesi ve Buheyra-yı Rahib ve Halîme-i Sa'diye'nin kat'î ihbarlarıyla, bulutlar başına gölge etmesi gibi çok hâdiseler, nübüvvetinden evvel nübüvvetini haber vermişler.
 
-   Hem istikbal, yani vefatından sonra onun haber verdiği hâdiseler pekçoktur ve çok nevileri var. Birisi, Âl-i Beytine ve ashabına ve fütuhat-ı İslâmiyeye ait ihbarat-ı gaybiyesidir ki, Zülfikar'da Mu'cizat-ı Ahmediye kısmında nakl-i sahih ile seksen vakıanın aynen haber verdiği gibi çıkması, meselâ Hz. Osman (R.A.) mushaf okurken, Hz. Hüseyin (R.A.) Kerbelâ'da şehid edilmeleri ve Şam ve İran ve İstanbul'un fetihleri ve Abbasî Devleti'nin zuhuru ve Cengiz ve Hülâgu onu mağlub ve mahvetmesi gibi seksen ihbar-ı gaybî mu'cizatı nakl-i sahih ile ve tarih ve siyer kitablarına istinaden tafsilen yazması gibi, ihbar-ı gaybînin sair nevileriyle ve Muhammed'in (A.S.M.) hakkaniyetine delalet eden pekçok vakıat-ı istikbaliye ile zaman-ı istikbal dahi kuvvetli ve küllî bir surette risalet-i Muhammediyeye (A.S.M.) ve sadıkıyetine şehadet eder demektir.
+Hem istikbal, yani vefatından sonra onun haber verdiği hâdiseler pekçoktur ve çok nevileri var. Birisi, Âl-i Beytine ve ashabına ve fütuhat-ı İslâmiyeye ait ihbarat-ı gaybiyesidir ki, Zülfikar'da Mu'cizat-ı Ahmediye kısmında nakl-i sahih ile seksen vakıanın aynen haber verdiği gibi çıkması, meselâ Hz. Osman (R.A.) mushaf okurken, Hz. Hüseyin (R.A.) Kerbelâ'da şehid edilmeleri ve Şam ve İran ve İstanbul'un fetihleri ve Abbasî Devleti'nin zuhuru ve Cengiz ve Hülâgu onu mağlub ve mahvetmesi gibi seksen ihbar-ı gaybî mu'cizatı nakl-i sahih ile ve tarih ve siyer kitablarına istinaden tafsilen yazması gibi, ihbar-ı gaybînin sair nevileriyle ve Muhammed'in (A.S.M.) hakkaniyetine delalet eden pekçok vakıat-ı istikbaliye ile zaman-ı istikbal dahi kuvvetli ve küllî bir surette risalet-i Muhammediyeye (A.S.M.) ve sadıkıyetine şehadet eder demektir.
 
-Dokuzuncu, Onuncu, Onbirinci, Onikinci Şehadetlere işaret eden:   
+Dokuzuncu, Onuncu, Onbirinci, Onikinci Şehadetlere işaret eden:
 
- <span class="arabic" dir="rtl">وَ بِشَهَادَةِ اْلاٰلِ بِقُوَّةِ يَقِنِيَّاتِهِمْ ف۪ى تَصْد۪يقِهِ بِدَرَجَةِ حَقِّ الْيَق۪ينِ وَ الْاَصْحَابِ بِكَمَالِ ا۪يمَانِهِمْ ف۪ى تَصْد۪يقِهِ بِدَرَجَةِ عَيْنِ الْيَق۪ينِ وَ الْاَصْفِيَٓاءِ بِقُوَّةِ تَحْق۪يقَاتِهِمْ ف۪ى تَصْد۪يقِهِ بِدَرَجَةِ عِلْمِ الْيَق۪ينِ وَ الْاَقْطَابِ بِتَطَابُقِهِمْ عَلٰى رِسَالَتِهِ بِالْكَشْفِ وَ الْمُشَاهَدَاتِ بِالْيَق۪ينِ</span>  
+<span class="arabic" dir="rtl">وَ بِشَهَادَةِ اْلاٰلِ بِقُوَّةِ يَقِنِيَّاتِهِمْ ف۪ى تَصْد۪يقِهِ بِدَرَجَةِ حَقِّ الْيَق۪ينِ وَ الْاَصْحَابِ بِكَمَالِ ا۪يمَانِهِمْ ف۪ى تَصْد۪يقِهِ بِدَرَجَةِ عَيْنِ الْيَق۪ينِ وَ الْاَصْفِيَٓاءِ بِقُوَّةِ تَحْق۪يقَاتِهِمْ ف۪ى تَصْد۪يقِهِ بِدَرَجَةِ عِلْمِ الْيَق۪ينِ وَ الْاَقْطَابِ بِتَطَابُقِهِمْ عَلٰى رِسَالَتِهِ بِالْكَشْفِ وَ الْمُشَاهَدَاتِ بِالْيَق۪ينِ</span>
 
-Yani: Muhammed'in (A.S.M.) sadıkıyetine ve hakkaniyetine küllî şehadetlerden,  
+Yani: Muhammed'in (A.S.M.) sadıkıyetine ve hakkaniyetine küllî şehadetlerden,
 
- Dokuzuncusu:   
+Dokuzuncusu:
 
- <span class="arabic" dir="rtl">عُلَمَٓاءُ اُمَّت۪ى كَاَنْبِيَٓاءِ بَن۪ى اِسْرَٓائ۪يلَ</span>  
+<span class="arabic" dir="rtl">عُلَمَٓاءُ اُمَّت۪ى كَاَنْبِيَٓاءِ بَن۪ى اِسْرَٓائ۪يلَ</span>
 
 sırrına mazhar ve salavatlarda âl-i İbrahim Aleyhisselâm'a mukabil olan âl-i Muhammed Aleyhissalâtü Vesselâm'ın içindeki büyük evliya (R.A.) ve Ali (R.A.) ve Hasan (R.A.) ve Hüseyin (R.A.) ve ehl-i beytin oniki imamı ve Gavs-ı A'zam (K.S.) ve Ahmed-i Rufaî (K.S.), Ahmed-i Bedevi (K.S.), İbrahim-i Desukî (K.S.), Ebu-l Hasan-ı Şazelî (K.S.) gibi aktablar ve imamlar ittifakla, hakkalyakîn bir itikadla ve keşfiyat ve müşahedatla ve ümmette gösterdikleri hârika irşadat ve kerametlerle, risalet ve hakkaniyet ve sadıkıyet-i Muhammediyeye (A.S.M.) imanları ve şehadetleri ile imza basıyorlar.
 
-Onuncusu:   
+Onuncusu:
 
-   Enbiyadan sonra en muhterem ve yüksek taife, bedevi oldukları halde az bir zamanda nur-u Muhammedî (A.S.M.) ile şarktan garba kadar âdilane idare edip, cihangir devletleri mağlub ederek müterakki, fenli, medenî, siyasî milletlere üstad, muallim, diplomat, hâkim-i âdil olarak o asrı bir asr-ı saadet hükmüne getiren sahabeler; Muhammed'in (A.S.M.) her halini tedkik ve taharriden sonra gözleriyle gördükleri çok mu'cizatın kuvvetiyle eski düşmanlıklarını ve ecdadlarının mesleklerini ve çokları -Hâlid İbn-i Velid ve İkrime İbn-i Ebu Cehil gibi- pederlerinin tarafdarlıklarını, kavim ve kabîlelerini tamamıyla bırakıp bütün ruh u canlarıyla, gayet fedakârane bir surette İslâmiyete girerek aynelyakîn derecesinde Muhammed'in (A.S.M.) sadıkıyetine ve risaletine imanları; sarsılmaz, küllî bir şehadettir.  
+Enbiyadan sonra en muhterem ve yüksek taife, bedevi oldukları halde az bir zamanda nur-u Muhammedî (A.S.M.) ile şarktan garba kadar âdilane idare edip, cihangir devletleri mağlub ederek müterakki, fenli, medenî, siyasî milletlere üstad, muallim, diplomat, hâkim-i âdil olarak o asrı bir asr-ı saadet hükmüne getiren sahabeler; Muhammed'in (A.S.M.) her halini tedkik ve taharriden sonra gözleriyle gördükleri çok mu'cizatın kuvvetiyle eski düşmanlıklarını ve ecdadlarının mesleklerini ve çokları -Hâlid İbn-i Velid ve İkrime İbn-i Ebu Cehil gibi- pederlerinin tarafdarlıklarını, kavim ve kabîlelerini tamamıyla bırakıp bütün ruh u canlarıyla, gayet fedakârane bir surette İslâmiyete girerek aynelyakîn derecesinde Muhammed'in (A.S.M.) sadıkıyetine ve risaletine imanları; sarsılmaz, küllî bir şehadettir.
 
- Onbirincisi:   
+Onbirincisi:
 
-   Asfiya ve sıddıkîn denilen müçtehidler, imamlar, allâmeler; İbn-i Sina, İbn-i Rüşd gibi dâhî feylesoflar misillü binler ehl-i tahkik, aklî ve mantıkî bir tarzda, her biri ayrı bir meslekte, şübhesiz binler hüccetlere ve kat'î bürhanlara istinaden, ilmelyakîn derecesinde Muhammed'in (A.S.M.)
+Asfiya ve sıddıkîn denilen müçtehidler, imamlar, allâmeler; İbn-i Sina, İbn-i Rüşd gibi dâhî feylesoflar misillü binler ehl-i tahkik, aklî ve mantıkî bir tarzda, her biri ayrı bir meslekte, şübhesiz binler hüccetlere ve kat'î bürhanlara istinaden, ilmelyakîn derecesinde Muhammed'in (A.S.M.)
 
 risaletine ve hakkaniyetine imanları, öyle küllî bir şehadettir ki; onların umumu kadar bir zekâsı bulunmayan karşılarına çıkamaz.
 
-   İşte o hadsiz şahidlerden birisi, bu zamanda Risale-i Nur'dur ki; münkirler ona karşı hiçbir çare bulamadıklarından, zabıta ve adliyeyi aldatıp mahkeme eliyle susturmasına çalışıyorlar.
+İşte o hadsiz şahidlerden birisi, bu zamanda Risale-i Nur'dur ki; münkirler ona karşı hiçbir çare bulamadıklarından, zabıta ve adliyeyi aldatıp mahkeme eliyle susturmasına çalışıyorlar.
 
- Onikincisi:   
+Onikincisi:
 
-   Âlem-i İslâmda herbiri ümmetin ehemmiyetli bir kısmını daire-i dersine alıp hârika irşad ve kerametlerle manevî terakki ettiren ve hüccetler yerinde müşahedata, keşfiyata dayanan ve aktab denilen en derin ehl-i tahkik ve hakikat, ruhanî terakkilerinde Muhammed'in (A.M.) risaletini ve sadıkıyetini ve en yüksek mertebe-i hakkaniyette bulunduğunu keşfen ve şuhuden görüp müttefikan ve mütetabıkan nübüvvetine şehadetleri öyle bir imzadır ki; onların umumu kadar bir yüksek mertebe-i kemalâtı kazanmayan o imzayı bozamaz.
+Âlem-i İslâmda herbiri ümmetin ehemmiyetli bir kısmını daire-i dersine alıp hârika irşad ve kerametlerle manevî terakki ettiren ve hüccetler yerinde müşahedata, keşfiyata dayanan ve aktab denilen en derin ehl-i tahkik ve hakikat, ruhanî terakkilerinde Muhammed'in (A.M.) risaletini ve sadıkıyetini ve en yüksek mertebe-i hakkaniyette bulunduğunu keşfen ve şuhuden görüp müttefikan ve mütetabıkan nübüvvetine şehadetleri öyle bir imzadır ki; onların umumu kadar bir yüksek mertebe-i kemalâtı kazanmayan o imzayı bozamaz.
 
- Onüçüncü Şehadet:   
+Onüçüncü Şehadet:
 
-   Dört küllî ve çok geniş ve kat'î hüccetlerden ibarettir:  
+Dört küllî ve çok geniş ve kat'î hüccetlerden ibarettir:
 
- <span class="arabic" dir="rtl">وَ بِشَهَادَةِ الْاَزْمِنَةِ الْمَاضِيَّةِ بِتَوَاتُرِ بَشَارَاتِ الْكَوَاهِنِ وَ الْهَوَاتِفِ وَ الْعُرَفَٓاءِ فِى الْاَدْوَارِ السَّالِف۪ينَ وَ بِمُشَاهَدَةِ بَشَارَاتِ الرُّسُلِ وَ الْاَنْبِيَٓاءِ وَ بِشَهَادَتِهِمْ وَ بَشَارَتِهِمْ عَلَيْهِمُ السَّلَامُ بِرِسَالَةِ مُحَمَّدٍ عَلَيْهِ الصَّلَاةُ وَ السَّلَامُ فِى الْكُتُبِ الْمُقَدَّسَةِ</span>
+<span class="arabic" dir="rtl">وَ بِشَهَادَةِ الْاَزْمِنَةِ الْمَاضِيَّةِ بِتَوَاتُرِ بَشَارَاتِ الْكَوَاهِنِ وَ الْهَوَاتِفِ وَ الْعُرَفَٓاءِ فِى الْاَدْوَارِ السَّالِف۪ينَ وَ بِمُشَاهَدَةِ بَشَارَاتِ الرُّسُلِ وَ الْاَنْبِيَٓاءِ وَ بِشَهَادَتِهِمْ وَ بَشَارَتِهِمْ عَلَيْهِمُ السَّلَامُ بِرِسَالَةِ مُحَمَّدٍ عَلَيْهِ الصَّلَاةُ وَ السَّلَامُ فِى الْكُتُبِ الْمُقَدَّسَةِ</span>
 
 Bu fıkranın kısaca bir meali burada beyan edilecek ve izahatı ve senedleri Zülfikar'ın Mu'cizat-ı Ahmediye kısmının âhirinde mükemmel var.
 
-   Yani: Geçmiş zamanlarda nev'-i beşerin meşahir ve namdarlarından başta enbiya olarak ârifler, kâhinler, hâtifler müttefikan Muhammed'in (A.M.) risaletine ve geleceğine irhasat nev'inden gayet sarih ve mükerrer haber verdiklerini nakl-i sahih ve bir kısmını tevatürle Tarih ve Siyer ve Hadîs kitablarında kayıd ve kabul edilmesine ve Mu'cizat-ı Ahmediye Risalesinde o binler ihbaratın en kuvvetli ve kat'î kısmını tafsilen beyanına binaen ona havale edip gayet kısa bir işaretle deriz ki: Enbiyalar, mukaddes semavî kitablarda Muhammed'in (A.M.) nübüvvetine dair Tevrat, İncil, Zebur'un yüzer âyetlerinde sarahata yakın kısmından yirmi âyetleri Ondokuzuncu Mektub'da yazılmış. Hristiyan ve Yahudiler tarafından çok tahrifatıyla beraber, yine nübüvvet-i Ahmediyeyi haber veren yüz âyeti Hüseyn-i Cisrî kitabında yazmış. Kâhinler ise, başta
+Yani: Geçmiş zamanlarda nev'-i beşerin meşahir ve namdarlarından başta enbiya olarak ârifler, kâhinler, hâtifler müttefikan Muhammed'in (A.M.) risaletine ve geleceğine irhasat nev'inden gayet sarih ve mükerrer haber verdiklerini nakl-i sahih ve bir kısmını tevatürle Tarih ve Siyer ve Hadîs kitablarında kayıd ve kabul edilmesine ve Mu'cizat-ı Ahmediye Risalesinde o binler ihbaratın en kuvvetli ve kat'î kısmını tafsilen beyanına binaen ona havale edip gayet kısa bir işaretle deriz ki: Enbiyalar, mukaddes semavî kitablarda Muhammed'in (A.M.) nübüvvetine dair Tevrat, İncil, Zebur'un yüzer âyetlerinde sarahata yakın kısmından yirmi âyetleri Ondokuzuncu Mektub'da yazılmış. Hristiyan ve Yahudiler tarafından çok tahrifatıyla beraber, yine nübüvvet-i Ahmediyeyi haber veren yüz âyeti Hüseyn-i Cisrî kitabında yazmış. Kâhinler ise, başta
 
-meşhur Şıkk ve Satih olarak, ruhanî ve cinn vasıtasıyla gaibden haber veren ve şimdi medyum denilen tevatür bir nakl-i sahih ile Peygamber'in geleceğine ve Fars Devleti'ni kaldıracağına sarih bir surette haber verdikleri ve şübhe kaldırmaz bir tarzda yakında bir Peygamber Hicaz'da zuhurunu mükerrer söyledikleri gibi; ârif-i billah kısmından Peygamber'in cedlerinden Kâ'b İbn-i Lüeyy ve Yemen ve Habeş padişahlarından Seyf İbn-i Zîyezen ve Tübba' gibi çok ârifler, o zaman evliyaları pek sarih bir surette Muhammed'in (A.S.M.) risaletinden haber verip şiirlerle ilân etmişler. Ondokuzuncu Mektub'da, ehemmiyetli ve kat'î bir kısmı yazılmış. Hattâ o padişahlardan birisi demiş: "Ben, Muhammed'e (A.S.M.) hizmetkâr olmasını bu saltanata tercih ederim." Birisi de demiş: "Ah ben ona yetişse idim, onun ammizadesi olurdum." Yani: Hazret-i Ali gibi fedai bir hizmetkârı ve veziri olurdum. Her ne ise, -tarih ve siyer kitabları bu haberleri tamamen neşr ile- bu ârifler, risalet-i Muhammediyeye (A.S.M.) kuvvetli ve küllî bir şehadetle sadıkıyetine imza basıyorlar.  
+meşhur Şıkk ve Satih olarak, ruhanî ve cinn vasıtasıyla gaibden haber veren ve şimdi medyum denilen tevatür bir nakl-i sahih ile Peygamber'in geleceğine ve Fars Devleti'ni kaldıracağına sarih bir surette haber verdikleri ve şübhe kaldırmaz bir tarzda yakında bir Peygamber Hicaz'da zuhurunu mükerrer söyledikleri gibi; ârif-i billah kısmından Peygamber'in cedlerinden Kâ'b İbn-i Lüeyy ve Yemen ve Habeş padişahlarından Seyf İbn-i Zîyezen ve Tübba' gibi çok ârifler, o zaman evliyaları pek sarih bir surette Muhammed'in (A.S.M.) risaletinden haber verip şiirlerle ilân etmişler. Ondokuzuncu Mektub'da, ehemmiyetli ve kat'î bir kısmı yazılmış. Hattâ o padişahlardan birisi demiş: "Ben, Muhammed'e (A.S.M.) hizmetkâr olmasını bu saltanata tercih ederim." Birisi de demiş: "Ah ben ona yetişse idim, onun ammizadesi olurdum." Yani: Hazret-i Ali gibi fedai bir hizmetkârı ve veziri olurdum. Her ne ise, -tarih ve siyer kitabları bu haberleri tamamen neşr ile- bu ârifler, risalet-i Muhammediyeye (A.S.M.) kuvvetli ve küllî bir şehadetle sadıkıyetine imza basıyorlar.
 
-   Hem o ârifler ve kâhinler gibi risalet-i Muhammediyeyi (A.S.M.) gaybî haber veren ve sözleri işitilen ve şahısları görünmeyen hâtif denilen
+Hem o ârifler ve kâhinler gibi risalet-i Muhammediyeyi (A.S.M.) gaybî haber veren ve sözleri işitilen ve şahısları görünmeyen hâtif denilen
 
 ruhanîler, pek sarih bir surette Muhammed'in (A.M.) nübüvvetinden haber verdikleri gibi; çok muhbirler, hattâ saneme kesilen kurbanlar ve sanemler ve mezar taşları nübüvvetinden haber vermeleriyle onun risaletine ve hakkaniyetine imza basıp tarih lisanıyla şehadet etmişler.
 
- Ondördüncü Şehadet:   
+Ondördüncü Şehadet:
 
-   Kâinatın kuvvetli şehadetine işaret eden bu Arabî fıkra:  
+Kâinatın kuvvetli şehadetine işaret eden bu Arabî fıkra:
 
- <span class="arabic" dir="rtl">وَ بِشَهَادَةِ الْكَٓائِنَاتِ بِغَايَاتِهَا وَ بِالْمَقَاصِدِ اْلاِلٰهِيَّةِ ف۪يهَا عَلَى الرِّسَالَةِ الْمُحَمَّدِيَّةِ الْجَامِعَةِ بِسَبَبِ تَوَقُّفِ حُصُولِ غَايَاتِ الْكَٓائِنَاتِ وَ الْمَقَاصِدِ اْلاِلٰهِيَّةِ مِنْهَا وَ تَقَرُّرِ قِيْمَتِهَا وَ وَظَٓائِفِهَا وَ تَبَارُزِ حُسْنِهَا وَ كَمَالِهَا وَ تَحَقُّقِ حِكَمِ حَقَٓائِقِهَا عَلَى الرِّسَالَةِ اْلاِنْسَانِيَّةِ لَاسِيَّمَا عَلَى الرِّسَالَةِ الْمُحَمَّدِيَّةِ اِذْ هِىَ المُظْهِرَةُ وَ الْمَدَارُ الْاَتَمُّ لَهَا وَ لَوْلَا هَا لَصَارَتْ هٰذِهِ الْكَٓائِنَاتُ الْمُكَمَّلَةُ وَ الْكِتَابُ الْكَب۪يرُ ذُو الْمَعَانِى السَّرْمَدِيَّةِ هَبَٓاءً مَنْثُورًا مُتَطَايِرَةَ الْمَعَان۪ى مُتَسَاقِطَةَ الْكَمَالَاتِ وَ هُوَ مُحَالُ مِنْ وُجُوهٍ وَ جِهَاتٍ</span>  
+<span class="arabic" dir="rtl">وَ بِشَهَادَةِ الْكَٓائِنَاتِ بِغَايَاتِهَا وَ بِالْمَقَاصِدِ اْلاِلٰهِيَّةِ ف۪يهَا عَلَى الرِّسَالَةِ الْمُحَمَّدِيَّةِ الْجَامِعَةِ بِسَبَبِ تَوَقُّفِ حُصُولِ غَايَاتِ الْكَٓائِنَاتِ وَ الْمَقَاصِدِ اْلاِلٰهِيَّةِ مِنْهَا وَ تَقَرُّرِ قِيْمَتِهَا وَ وَظَٓائِفِهَا وَ تَبَارُزِ حُسْنِهَا وَ كَمَالِهَا وَ تَحَقُّقِ حِكَمِ حَقَٓائِقِهَا عَلَى الرِّسَالَةِ اْلاِنْسَانِيَّةِ لَاسِيَّمَا عَلَى الرِّسَالَةِ الْمُحَمَّدِيَّةِ اِذْ هِىَ المُظْهِرَةُ وَ الْمَدَارُ الْاَتَمُّ لَهَا وَ لَوْلَا هَا لَصَارَتْ هٰذِهِ الْكَٓائِنَاتُ الْمُكَمَّلَةُ وَ الْكِتَابُ الْكَب۪يرُ ذُو الْمَعَانِى السَّرْمَدِيَّةِ هَبَٓاءً مَنْثُورًا مُتَطَايِرَةَ الْمَعَان۪ى مُتَسَاقِطَةَ الْكَمَالَاتِ وَ هُوَ مُحَالُ مِنْ وُجُوهٍ وَ جِهَاتٍ</span>
 
-   Âyet-ül Kübra, bu Arabî fıkranın mealine dair demiş: Bu kâinat, nasılki kendini icad ve idare ve tertib eden ve tasvir ve takdir ve tedbir ile bir
+Âyet-ül Kübra, bu Arabî fıkranın mealine dair demiş: Bu kâinat, nasılki kendini icad ve idare ve tertib eden ve tasvir ve takdir ve tedbir ile bir
 
-saray, bir kitab gibi, bir sergi, bir temaşagâh gibi tasarruf eden sâni'ine ve kâtibine ve nakkaşına delalet eder; öyle de: Kâinatın hilkatindeki makasıd-ı İlahiyeyi bilecek, bildirecek ve tahavvülâtındaki Rabbanî hikmetlerini talim edecek ve vazifedarane harekâtındaki neticeleri ders verecek ve mahiyetindeki kıymetini ve içindeki mevcudatın kemalâtını ilân edecek ve "Nereden geliyorlar? Ve nereye gidecekler? Ve ne için buraya geliyorlar? Ve çok durmuyorlar, gidiyorlar?" diye dehşetli suallere cevab verecek ve o kitab-ı kebirin manalarını ve âyât-ı tekviniyesinin hikmetlerini tefsir edecek bir yüksek dellâl, bir doğru keşşaf, bir muhakkik üstad, bir sadık muallim istediği ve iktiza ettiği ve herhalde bulunmasına delalet ettiği cihetle; elbette bu vazifeleri herkesten ziyade yapan Muhammed Aleyhissalâtü Vesselâm'ın hakkaniyetine ve bu kâinat hâlıkının en yüksek ve sadık bir memuru olduğuna kuvvetli ve küllî şehadet edip "Eşhedü enne Muhammederresulullah" der.  
+saray, bir kitab gibi, bir sergi, bir temaşagâh gibi tasarruf eden sâni'ine ve kâtibine ve nakkaşına delalet eder; öyle de: Kâinatın hilkatindeki makasıd-ı İlahiyeyi bilecek, bildirecek ve tahavvülâtındaki Rabbanî hikmetlerini talim edecek ve vazifedarane harekâtındaki neticeleri ders verecek ve mahiyetindeki kıymetini ve içindeki mevcudatın kemalâtını ilân edecek ve "Nereden geliyorlar? Ve nereye gidecekler? Ve ne için buraya geliyorlar? Ve çok durmuyorlar, gidiyorlar?" diye dehşetli suallere cevab verecek ve o kitab-ı kebirin manalarını ve âyât-ı tekviniyesinin hikmetlerini tefsir edecek bir yüksek dellâl, bir doğru keşşaf, bir muhakkik üstad, bir sadık muallim istediği ve iktiza ettiği ve herhalde bulunmasına delalet ettiği cihetle; elbette bu vazifeleri herkesten ziyade yapan Muhammed Aleyhissalâtü Vesselâm'ın hakkaniyetine ve bu kâinat hâlıkının en yüksek ve sadık bir memuru olduğuna kuvvetli ve küllî şehadet edip "Eşhedü enne Muhammederresulullah" der.
 
-   Evet Muhammed'in (A.S.M.) getirdiği nur ile kâinatın mahiyeti, kıymeti, kemalâtı ve içindeki mevcudatın vazifeleri ve neticeleri ve memuriyetleri ve kıymetleri bilinir, tahakkuk eder. Ve
+Evet Muhammed'in (A.S.M.) getirdiği nur ile kâinatın mahiyeti, kıymeti, kemalâtı ve içindeki mevcudatın vazifeleri ve neticeleri ve memuriyetleri ve kıymetleri bilinir, tahakkuk eder. Ve
 
 kâinat baştan başa gayet manidar mektubat-ı İlahiye ve mücessem bir Kur'an-ı Rabbanî ve muhteşem bir meşher-i âsâr-ı Sübhaniye olur. Yoksa adem ve hiçlik ve zeval ve fena karanlıklarında yuvarlanan karmakarışık vahşetli bir virane ve dehşetli bir matemhane mahiyetine düşer. Bu hakikata binaen, kâinatın kemalâtı ve hikmetli tahavvülâtı ve sermedî manaları, kuvvetli bir tarzda "Neşhedü Enne Muhammederresulullah" der.
 
- Onbeşinci Şehadet:   
+Onbeşinci Şehadet:
 
-   Pekçok kudsî şehadetleri ihtiva eden, bu kâinatta tasarruf ederek zerrattan seyyarata kadar bütün tahavvülât ve harekât ve sekenat ve hayat ve memat gibi bütün tasarrufat emriyle, iradesiyle, kuvvetiyle bulunan Zât-ı Vâcib-ül Vücud'un icraat-ı rububiyeti ve ef'al-i Rahmaniyeti cihetinde risalet-i Muhammediyeye (A.M.) mukaddes şehadetine işaret eden, bu gelen Arabî fıkradır:  
+Pekçok kudsî şehadetleri ihtiva eden, bu kâinatta tasarruf ederek zerrattan seyyarata kadar bütün tahavvülât ve harekât ve sekenat ve hayat ve memat gibi bütün tasarrufat emriyle, iradesiyle, kuvvetiyle bulunan Zât-ı Vâcib-ül Vücud'un icraat-ı rububiyeti ve ef'al-i Rahmaniyeti cihetinde risalet-i Muhammediyeye (A.M.) mukaddes şehadetine işaret eden, bu gelen Arabî fıkradır:
 
- <span class="arabic" dir="rtl">وَ بِشَهَادَةِ صَاحِبِ الْكَٓائِنَاتِ وَ خَلَّا قِهَا وَ مُتَصَرِّفِهَا عَلَى الرِّسَالَةِ الْمُحَمَّدِيَّةِ بِاَفْعَالِ رَحْمَانِيَّتِهِ وَ بِاِجْرَااٰتِ رُبُوبِيَّتِهِ كَفِعْلِ الرَّحْمَانِيَّةِ بِاِنْزَالِ الْقُرْاٰنِ الْمُعْجِزُ الْبَيَانِ عَلَيْهِ وَ بِاِظْهَارِ اَنْوَاعِ الْمُعْجِزَاتِ عَلٰى يَدَيْهِ وَ بِتَوْف۪يقِهِ وَ حِمَايَتِهِ ف۪ى كُلِّ حَالَاتِهِ وَ بِاِدَامَةِ د۪ينِهِ بِكُلِّ حَقَٓائِقِهِ وَ بِاِعْلَٓاءِ مَقَامِ حُرْمَتِهِ وَ شَرَفِهِ وَ اِكْرَامِهِ عَلَى جَم۪يعِ الْمَخْلُوقَاتِ بِالْمُشَاهَدَةِ وَ الْعَياَنِ وَ كَفِعْلِ رُبُوبِيَّتِهِ بِجَعْلِ رِسَالَتِهِ شَمْسًا مَعْنَوِيَّةً لِكَٓائِنَاتِهِ وَ بِجَعْلِ د۪ينِهِ فِهْرِسْتَةَ كَمَالَاتِ عِبَادِهِ وَ جَعْلِ حَق۪يقَتِهِ مِرْاٰةً جَامِعَةً لِتَجَلِّيَاتِ اُلُوهِيَّتِهِ وَ بِتَوْظ۪يفِهِ بِوَظَٓائِفَ ضَرُورِيَّةٍ لَازِمَةٍ لِوُجُودِ الْمَخْلُوقَاتِ ف۪ى هٰذِهِ الْكَٓائِنَاتِ كَلُزُومِ الرَّحْمَةِ وَ الْحِكْمَةِ وَ الْعَدَالَةِ وَ كَضَرُورَةِ لُزُومِ الْغِذَٓاءِ وَ الْمَٓاءِ وَ الْهَوَٓاءِ وَ الضِّيَٓاءِ</span>
+<span class="arabic" dir="rtl">وَ بِشَهَادَةِ صَاحِبِ الْكَٓائِنَاتِ وَ خَلَّا قِهَا وَ مُتَصَرِّفِهَا عَلَى الرِّسَالَةِ الْمُحَمَّدِيَّةِ بِاَفْعَالِ رَحْمَانِيَّتِهِ وَ بِاِجْرَااٰتِ رُبُوبِيَّتِهِ كَفِعْلِ الرَّحْمَانِيَّةِ بِاِنْزَالِ الْقُرْاٰنِ الْمُعْجِزُ الْبَيَانِ عَلَيْهِ وَ بِاِظْهَارِ اَنْوَاعِ الْمُعْجِزَاتِ عَلٰى يَدَيْهِ وَ بِتَوْف۪يقِهِ وَ حِمَايَتِهِ ف۪ى كُلِّ حَالَاتِهِ وَ بِاِدَامَةِ د۪ينِهِ بِكُلِّ حَقَٓائِقِهِ وَ بِاِعْلَٓاءِ مَقَامِ حُرْمَتِهِ وَ شَرَفِهِ وَ اِكْرَامِهِ عَلَى جَم۪يعِ الْمَخْلُوقَاتِ بِالْمُشَاهَدَةِ وَ الْعَياَنِ وَ كَفِعْلِ رُبُوبِيَّتِهِ بِجَعْلِ رِسَالَتِهِ شَمْسًا مَعْنَوِيَّةً لِكَٓائِنَاتِهِ وَ بِجَعْلِ د۪ينِهِ فِهْرِسْتَةَ كَمَالَاتِ عِبَادِهِ وَ جَعْلِ حَق۪يقَتِهِ مِرْاٰةً جَامِعَةً لِتَجَلِّيَاتِ اُلُوهِيَّتِهِ وَ بِتَوْظ۪يفِهِ بِوَظَٓائِفَ ضَرُورِيَّةٍ لَازِمَةٍ لِوُجُودِ الْمَخْلُوقَاتِ ف۪ى هٰذِهِ الْكَٓائِنَاتِ كَلُزُومِ الرَّحْمَةِ وَ الْحِكْمَةِ وَ الْعَدَالَةِ وَ كَضَرُورَةِ لُزُومِ الْغِذَٓاءِ وَ الْمَٓاءِ وَ الْهَوَٓاءِ وَ الضِّيَٓاءِ</span>
 
-Bu pek kat'î ve çok geniş ve kudsî şehadetin tafsilâtını Risale-i Nur'a havale edip gayet kısacık bir işaretle meal-i icmalîsine bakacağız:  
+Bu pek kat'î ve çok geniş ve kudsî şehadetin tafsilâtını Risale-i Nur'a havale edip gayet kısacık bir işaretle meal-i icmalîsine bakacağız:
 
-   Evet bu kâinatta, gözümüz önünde bu muntazam tasarrufatı içinde adalet ve hikmet ile ve rahmet ve inayet ve himayet ile her zaman iyileri himaye ve fenaları ve yalancıları tokatlamak, rububiyetin bir âdeti olmasından, ef'al-i Rahmaniyet muktezasıyla bir Kur'an-ı Mu'ciz-ül Beyan'ı Muhammed'in (A.M.) eline vermesi ve bine yakın mu'cizelerin pekçok enva'ını ona vermesi ve bütün hâlâtında ve en tehlikeli vaziyetlerinde şefkatkârane himaye ve hattâ güvercin ve örümcekle muhafaza etmesi ve büyük vazifelerinde onu tam muvaffak etmesi ve dinini bütün hakikatlarıyla idamesi ve İslâmiyetini zeminin ve
+Evet bu kâinatta, gözümüz önünde bu muntazam tasarrufatı içinde adalet ve hikmet ile ve rahmet ve inayet ve himayet ile her zaman iyileri himaye ve fenaları ve yalancıları tokatlamak, rububiyetin bir âdeti olmasından, ef'al-i Rahmaniyet muktezasıyla bir Kur'an-ı Mu'ciz-ül Beyan'ı Muhammed'in (A.M.) eline vermesi ve bine yakın mu'cizelerin pekçok enva'ını ona vermesi ve bütün hâlâtında ve en tehlikeli vaziyetlerinde şefkatkârane himaye ve hattâ güvercin ve örümcekle muhafaza etmesi ve büyük vazifelerinde onu tam muvaffak etmesi ve dinini bütün hakikatlarıyla idamesi ve İslâmiyetini zeminin ve
 
 nev'-i beşerin başına geçirmesi ve bütün mahlukat üstünde bir makam-ı şeref ve meşahir-i insaniyenin fevkinde daimî bir rütbe-i makbuliyet ve dost ve düşmanın ittifakıyla en yüksek hasletleri taşıyan bir şahsiyeti vermekle, beşerin beşten birisini ona ümmet etmesi gayet kat'î bir tarzda sadıkıyetine ve risaletine şehadet ettiği gibi, ef'al-i rububiyet cihetinde dahi görüyoruz ki; bu âlemin mutasarrıfı ve müdebbiri, Muhammed'in (A.S.M.) risaletini bu kâinata bir manevî güneş yapıp, -Nur Risalelerinde isbat edildiği gibi- onun ile bütün karanlıkları izale ve nurani hakikatlarını gösterip ve bütün zîşuuru, belki kâinatı hayat-ı bâkiye müjdesiyle sevindirdiği gibi; dinini dahi bütün makbul ehl-i ibadetin fihriste-i kemalâtı ve harekât-ı ubudiyette sağlam bir proğram yapması gibi Muhammed'in (A.S.M.) şahsiyet-i maneviyesi olan hakikatını, Kur'anın ve Cevşen'in delaletiyle tecelliyat-ı uluhiyetine bir âyine-i câmia yapması ve sâbıkan işaret ettiğimiz hakikatların ve ondört asırda her gün ümmetinin bütün hasenatlarının bir mislini kazanmasının ve hayat-ı içtimaiye ve maneviye ve beşeriyedeki âsârının delaletiyle, nev'-i beşere en yüksek reis ve mukteda ve üstad yapması; ve onu büyük ve kudsî vazifelerle beşerin imdadına
 
-gönderip rahmet, hikmet, adalet, gıda, hava, mâ, ziya derecesinde insanları onun dinine, şeriatına, İslâmiyetteki hakikatlarına muhtaç  
+gönderip rahmet, hikmet, adalet, gıda, hava, mâ, ziya derecesinde insanları onun dinine, şeriatına, İslâmiyetteki hakikatlarına muhtaç
 
-&gt; **Hâşiye:** {(Haşiye): Ben bu ihtiyarlığım ve perişaniyetim içinde, Zât-ı Muhammediye'nin (A.S.M.) getirdiği erzak-ı maneviyenin milyondan birisini hissettim. Elimden gelse idi, milyonlar lisanla salavatlarla ona teşekkür edecektim. Şöyle ki: Ben firaktan, zevalden çok inciniyorum. Halbuki sevdiğim dünya ve dünyevîler, müfarakatla beni bırakıp gidiyorlar. Ben de gideceğimi biliyorum. Bu pek elîm ve canhıraş me'yusiyete karşı, birden saadet-i ebediye ve hayat-ı bâkiye müjdesini Zât-ı Ahmediye'den (A.S.M.) işitmekle kurtuluyorum ve tam teselli buluyorum. Hattâ teşehhüdde   اَلسَّلَامُ عَلَيْكَ اَيُّهَا النَّبِىُّ وَ رَحْمَةُ اللّٰهِ وَ بَرَكَاتُهُ  dediğimde ona hem biat, hem memuriyetine teslim ve itaat, hem vazifesini tebrik, hem bir nevi teşekkür ve saadet-i ebediye müjdesine bir mukabeledir ki; Müslümanlar her gün beş defa bu selâmı yaparlar.}
+&gt; **Hâşiye:** {(Haşiye): Ben bu ihtiyarlığım ve perişaniyetim içinde, Zât-ı Muhammediye'nin (A.S.M.) getirdiği erzak-ı maneviyenin milyondan birisini hissettim. Elimden gelse idi, milyonlar lisanla salavatlarla ona teşekkür edecektim. Şöyle ki: Ben firaktan, zevalden çok inciniyorum. Halbuki sevdiğim dünya ve dünyevîler, müfarakatla beni bırakıp gidiyorlar. Ben de gideceğimi biliyorum. Bu pek elîm ve canhıraş me'yusiyete karşı, birden saadet-i ebediye ve hayat-ı bâkiye müjdesini Zât-ı Ahmediye'den (A.S.M.) işitmekle kurtuluyorum ve tam teselli buluyorum. Hattâ teşehhüdde اَلسَّلَامُ عَلَيْكَ اَيُّهَا النَّبِىُّ وَ رَحْمَةُ اللّٰهِ وَ بَرَكَاتُهُ dediğimde ona hem biat, hem memuriyetine teslim ve itaat, hem vazifesini tebrik, hem bir nevi teşekkür ve saadet-i ebediye müjdesine bir mukabeledir ki; Müslümanlar her gün beş defa bu selâmı yaparlar.}
 
 yapması ile oniki küllî ve kat'î hüccetlerle risalet-i Muhammediyeye (A.M.) kudsî şehadet ettiği halde, acaba hiç mümkün müdür ki; sinek kanadının ve bir çiçeğin tanziminden lâkayd kalmayan bu kâinat sahibinin bu derece küllî ve geniş şehadetlerine mazhar olan risalet-i Muhammediye (A.M.), kâinatın manevî bir güneşi olmasın.
 
-İşte bu onbeş küllî şehadetler, herbiri pekçok şehadetleri, hattâ "Üçüncü Şehadet" mu'cizat lisanıyla bin şehadeti ihtiva edip öyle bir kat'iyyetle ve kuvvetle "Eşhedü Enne Muhammederresulullah" olan davayı isbat ve tahakkukunu ve kıymetini ve ehemmiyetini ilân etmiş ki; her gün beş defa âlem-i İslâm, yüzer milyon lisanlar ile teşehhüdde o davayı kâinata ilân ettiği gibi; o davanın esası olan hakikat-ı Muhammediye (A.S.M.), kâinatın çekirdek-i aslîsi, bir sebeb-i hilkati ve en mükemmel meyvesi olduğunu milyarlar ehl-i iman tereddüdsüz tasdik ederek kabul etmişler. Ve bu kâinatın sahibi (Celle Celalühü) o şahsiyet-i maneviye-i Muhammediyeyi (A.S.M.) saltanat-ı rububiyetine bir yüksek dellâlı ve kâinat tılsımının ve hilkat muammasının bir doğru keşşafı ve lütf u rahmetinin bir parlak misali ve şefkat ve muhabbetinin bir belig lisanı ve âlem-i bâkideki hayat-ı daime ve saadet-i ebediyenin en kuvvetli müjdecisi ve elçilerinin en son ve büyüğü bir resul eylemiş.  
+İşte bu onbeş küllî şehadetler, herbiri pekçok şehadetleri, hattâ "Üçüncü Şehadet" mu'cizat lisanıyla bin şehadeti ihtiva edip öyle bir kat'iyyetle ve kuvvetle "Eşhedü Enne Muhammederresulullah" olan davayı isbat ve tahakkukunu ve kıymetini ve ehemmiyetini ilân etmiş ki; her gün beş defa âlem-i İslâm, yüzer milyon lisanlar ile teşehhüdde o davayı kâinata ilân ettiği gibi; o davanın esası olan hakikat-ı Muhammediye (A.S.M.), kâinatın çekirdek-i aslîsi, bir sebeb-i hilkati ve en mükemmel meyvesi olduğunu milyarlar ehl-i iman tereddüdsüz tasdik ederek kabul etmişler. Ve bu kâinatın sahibi (Celle Celalühü) o şahsiyet-i maneviye-i Muhammediyeyi (A.S.M.) saltanat-ı rububiyetine bir yüksek dellâlı ve kâinat tılsımının ve hilkat muammasının bir doğru keşşafı ve lütf u rahmetinin bir parlak misali ve şefkat ve muhabbetinin bir belig lisanı ve âlem-i bâkideki hayat-ı daime ve saadet-i ebediyenin en kuvvetli müjdecisi ve elçilerinin en son ve büyüğü bir resul eylemiş.
 
-   Acaba bu mahiyetteki bir hakikata kanaat etmeyen veya ehemmiyet vermeyen, ne derece hasaret ve hata ve belâhet ve cinayet ettiğini kıyas eylesin!..
+Acaba bu mahiyetteki bir hakikata kanaat etmeyen veya ehemmiyet vermeyen, ne derece hasaret ve hata ve belâhet ve cinayet ettiğini kıyas eylesin!..
 
-İşte namazdaki Fatiha, nasıl İkinci Kısım'da işaratıyla, teşehhüdde "Eşhedü en lâ ilahe illallah"taki hakikat-ı tevhid davasına kat'î hüccetleri gösterir, hadsiz imzalar basar. Bu Üçüncü Kısım'da dahi yine teşehhüdde "Ve eşhedü enne Muhammederresulullah"ta hakikat-ı risalet davasına kuvvetli şahidleri getirip nihayetsiz tasdik imzalarını bastırır.  
+İşte namazdaki Fatiha, nasıl İkinci Kısım'da işaratıyla, teşehhüdde "Eşhedü en lâ ilahe illallah"taki hakikat-ı tevhid davasına kat'î hüccetleri gösterir, hadsiz imzalar basar. Bu Üçüncü Kısım'da dahi yine teşehhüdde "Ve eşhedü enne Muhammederresulullah"ta hakikat-ı risalet davasına kuvvetli şahidleri getirip nihayetsiz tasdik imzalarını bastırır.
 
-   Yâ Erhamerrâhimîn! Bu Resul-i Ekrem'in (A.S.M.) hürmetine, bizi onun şefaatine mazhar ve sünnetinin ittibaına muvaffak ve dâr-ı saadette onun âl ü ashabına komşu eyle! Âmîn.. âmîn.. âmîn..  
+Yâ Erhamerrâhimîn! Bu Resul-i Ekrem'in (A.S.M.) hürmetine, bizi onun şefaatine mazhar ve sünnetinin ittibaına muvaffak ve dâr-ı saadette onun âl ü ashabına komşu eyle! Âmîn.. âmîn.. âmîn..
 
- <span class="arabic" dir="rtl">اَللّٰهُمَّ صَلِّ وَ سَلِّمْ عَلَيْهِ وَ عَلٰى اٰلِهِ وَ صَحْبِهِ بِعَدَدِ حُرُوفِ الْقُرْاٰنِ الْمَقْرُوئَةِ وَ الْمَكْتُوبَةِ اٰم۪ينَ</span>  
+<span class="arabic" dir="rtl">اَللّٰهُمَّ صَلِّ وَ سَلِّمْ عَلَيْهِ وَ عَلٰى اٰلِهِ وَ صَحْبِهِ بِعَدَدِ حُرُوفِ الْقُرْاٰنِ الْمَقْرُوئَةِ وَ الْمَكْتُوبَةِ اٰم۪ينَ</span>
 
- <span class="arabic" dir="rtl">سُبْحَانَكَ لَا عِلْمَ لَنَٓا اِلَّا  مَا عَلَّمْتَنَٓا اِنَّكَ اَنْتَ الْعَل۪يمُ الْحَك۪يمُ</span>  
+<span class="arabic" dir="rtl">سُبْحَانَكَ لَا عِلْمَ لَنَٓا اِلَّا مَا عَلَّمْتَنَٓا اِنَّكَ اَنْتَ الْعَل۪يمُ الْحَك۪يمُ</span>
 
- * * *
+---
 
-<span class="arabic" dir="rtl">بِاسْمِهِ سُبْحَانَهُ</span>  
+<span class="arabic" dir="rtl">بِاسْمِهِ سُبْحَانَهُ</span>
 
-   Meslek-i Kur'anîde tam gitmeyen, hususan aklı, nakle tercih eden Mu'tezile imamları ve yalnız aklına itimad eden İşrakiyyun feylesofları ve onların silâhıyla onları mağlub etmeğe kendilerini mecbur zanneden ehl-i hakikat ve ehl-i sünnet velcemaat allamelerinin dersini anlamak için çok sene ders almak lâzım geliyordu.  
+Meslek-i Kur'anîde tam gitmeyen, hususan aklı, nakle tercih eden Mu'tezile imamları ve yalnız aklına itimad eden İşrakiyyun feylesofları ve onların silâhıyla onları mağlub etmeğe kendilerini mecbur zanneden ehl-i hakikat ve ehl-i sünnet velcemaat allamelerinin dersini anlamak için çok sene ders almak lâzım geliyordu.
 
-   Feyz-i Kur'an ile, Risale-i Nur bir senede o on senelik vazife-i imaniyeyi görüyor. Eski zamanda İlm-i Kelâm'da büyük âlimler ve dindar feylesoflar marifetullah için esbab silsilesinin devir ve teselsülünün muhaliyetini göstermekle marifetullah ve Vâcib-ül Vücud'un vahdaniyetini isbat ederlerdi.  
+Feyz-i Kur'an ile, Risale-i Nur bir senede o on senelik vazife-i imaniyeyi görüyor. Eski zamanda İlm-i Kelâm'da büyük âlimler ve dindar feylesoflar marifetullah için esbab silsilesinin devir ve teselsülünün muhaliyetini göstermekle marifetullah ve Vâcib-ül Vücud'un vahdaniyetini isbat ederlerdi.
 
-   Kur'an-ı Hakîm'in hakikatı ve mu'cizane mesleği, her şeyde marifetullaha bir pencere açar. O ülema ve feylesofların mecmu'-u âlemde gösterdikleri hüccet-i ehadiyet ve bürhan-ı vahdaniyeti her bir şeyde hattâ her bir zerrede gösterir.  
+Kur'an-ı Hakîm'in hakikatı ve mu'cizane mesleği, her şeyde marifetullaha bir pencere açar. O ülema ve feylesofların mecmu'-u âlemde gösterdikleri hüccet-i ehadiyet ve bürhan-ı vahdaniyeti her bir şeyde hattâ her bir zerrede gösterir.
 
- <span class="arabic" dir="rtl">وَ ف۪ى كُلِّ شَئٍْ لَهُ اٰيَةٌ تَدُلُّ عَلٰى اَنَّهُ وَاحِدٌ</span>  
+<span class="arabic" dir="rtl">وَ ف۪ى كُلِّ شَئٍْ لَهُ اٰيَةٌ تَدُلُّ عَلٰى اَنَّهُ وَاحِدٌ</span>
 
 hakikatı
 
-bunun mücmel bir ifadesidir. Yani zerrelerden yıldızlara kadar her şeyde bir pencere-i tevhid var. Doğrudan doğruya Zât-ı Vâcib-ül Vücud'u sıfâtı ile bildiren âyetler, yani delalet ve işaretler var.  
+bunun mücmel bir ifadesidir. Yani zerrelerden yıldızlara kadar her şeyde bir pencere-i tevhid var. Doğrudan doğruya Zât-ı Vâcib-ül Vücud'u sıfâtı ile bildiren âyetler, yani delalet ve işaretler var.
 
-   İşte Kur'an-ı Hakîm'in bu mu'cizane hakikatının, şimdi ehl-i imana karşı küfr-ü mutlakın dehşetli hücum ettiği bu zamanda bir cilvesi olan Risale-in Nur, yarım asırdan beri küfr-ü mutlakı kırıyor ve en muannidlerini susturuyor. Risale-i Nur'da Kur'anın feyzinden gelen iki-üç hâssa sebebi ile o, hiçbir zarar ve zahmet vermiyor. Ve tahsili için çok zaman istemiyor.  
+İşte Kur'an-ı Hakîm'in bu mu'cizane hakikatının, şimdi ehl-i imana karşı küfr-ü mutlakın dehşetli hücum ettiği bu zamanda bir cilvesi olan Risale-in Nur, yarım asırdan beri küfr-ü mutlakı kırıyor ve en muannidlerini susturuyor. Risale-i Nur'da Kur'anın feyzinden gelen iki-üç hâssa sebebi ile o, hiçbir zarar ve zahmet vermiyor. Ve tahsili için çok zaman istemiyor.
 
- Birinci Hâssa:   
+Birinci Hâssa:
 
-   Ülema-i İlm-i Kelâm'ın ve feylesofların eskiden beri münazara âdeti olarak, muarızın şübhelerini ve itirazlarını söyledikten sonra cevab vermek âdetleri, Risale-i Nur'da bir-iki risalecikten başka yoktur. Belki hakikatı öyle parlak ve kat'î surette beyan ediyor ki, o şübhe her nefsin hatırına gelmiyor. Ve şeytan dahi hatıra getiremiyor.  
+Ülema-i İlm-i Kelâm'ın ve feylesofların eskiden beri münazara âdeti olarak, muarızın şübhelerini ve itirazlarını söyledikten sonra cevab vermek âdetleri, Risale-i Nur'da bir-iki risalecikten başka yoktur. Belki hakikatı öyle parlak ve kat'î surette beyan ediyor ki, o şübhe her nefsin hatırına gelmiyor. Ve şeytan dahi hatıra getiremiyor.
 
-   Hem hiçbir bulantı vermeden en derin mesail-i hakikatı, en âmi bir adama dahi ders veriyor. Mi'rac ve haşr-i cismanî ve kader ve cüz'-i ihtiyarî gibi mes'eleler. Halbuki eski ülemanın eserlerindeki
+Hem hiçbir bulantı vermeden en derin mesail-i hakikatı, en âmi bir adama dahi ders veriyor. Mi'rac ve haşr-i cismanî ve kader ve cüz'-i ihtiyarî gibi mes'eleler. Halbuki eski ülemanın eserlerindeki
 
 derin mes'eleleri âmi ve tecrübesiz gençlere bulantı vermemek için ders verilmesi men' ve yasak ediliyordu. Fakat Risale-i Nur, en derin mesaili en âmiye, belki bir çocuğa zararsız olarak bildiriyor.
 
- İkinci Hâssa:   
+İkinci Hâssa:
 
-   Nasıl bir memlekete lâzım olan su, dağlara açılan küngânlar ve kanallarla getirilirken, şimdi nereye vurulsa su çıkaran bir âlet icad edilmesi temsili gibi; iman ve marifetullah olan âb-ı hayatı getirmek için uzak yerlere, tâ semavata ve âlemin mecmuuna lüzum kalmıyarak, her bir şeyde o âb-ı hayatı çıkaran Kur'an-ı Hakîm'in tezgahından nurani bir asânın çıkmasına benzer.
+Nasıl bir memlekete lâzım olan su, dağlara açılan küngânlar ve kanallarla getirilirken, şimdi nereye vurulsa su çıkaran bir âlet icad edilmesi temsili gibi; iman ve marifetullah olan âb-ı hayatı getirmek için uzak yerlere, tâ semavata ve âlemin mecmuuna lüzum kalmıyarak, her bir şeyde o âb-ı hayatı çıkaran Kur'an-ı Hakîm'in tezgahından nurani bir asânın çıkmasına benzer.
 
-   İşte Hazret-i Musa Aleyhisselâm'ın asâsı ile bir taşta oniki çeşme akıtması ve beraberindekileri susuzluktan kolayca kurtarması gibi; Risale-i Nur da bir asâ-yı Kur'anî olarak herkesin fehmine göre âb-ı hayatı içiriyor ve yerini gösterip susuzluktan kurtarıyor.
+İşte Hazret-i Musa Aleyhisselâm'ın asâsı ile bir taşta oniki çeşme akıtması ve beraberindekileri susuzluktan kolayca kurtarması gibi; Risale-i Nur da bir asâ-yı Kur'anî olarak herkesin fehmine göre âb-ı hayatı içiriyor ve yerini gösterip susuzluktan kurtarıyor.
 
-   Hem de Risale-i Nur'un kırk mecmuasından Asâ-yı Musa namındaki bir mecmuası, o asâ-yı Kur'anînin bir ucudur.
+Hem de Risale-i Nur'un kırk mecmuasından Asâ-yı Musa namındaki bir mecmuası, o asâ-yı Kur'anînin bir ucudur.
 
- Üçüncü Hâssa:   
+Üçüncü Hâssa:
 
-   Risale-i Nur, hem vahdet, hem vücub-u vücud isbatında bir hüccetle çok
+Risale-i Nur, hem vahdet, hem vücub-u vücud isbatında bir hüccetle çok
 
-neticeleri beraber isbat eder. Meselâ: Gözbebeğindeki bir zerrenin acib vazifesi ile hem kâinat Sâni'inin vücub-u vücudunu, hem vahdetini, hem muhit ilmini ve hadsiz kudretini ve nihayetsiz iradetini ve sair sıfatlarını aynı delilde isbat eder.  
+neticeleri beraber isbat eder. Meselâ: Gözbebeğindeki bir zerrenin acib vazifesi ile hem kâinat Sâni'inin vücub-u vücudunu, hem vahdetini, hem muhit ilmini ve hadsiz kudretini ve nihayetsiz iradetini ve sair sıfatlarını aynı delilde isbat eder.
 
- * * *
+---
 
-<span class="arabic" dir="rtl">بِاسْمِهِ سُبْحَانَهُ</span>  
+<span class="arabic" dir="rtl">بِاسْمِهِ سُبْحَانَهُ</span>
 
-   [Yedi sene evvel İstanbul Üniversitesi'ndeki bazı Nur talebelerine yazılan mektubdan bir parçadır.] 
+[Yedi sene evvel İstanbul Üniversitesi'ndeki bazı Nur talebelerine yazılan mektubdan bir parçadır.]
 
-   Asâ-yı Musa âhirinde, mübarekler pehlivanı büyük ruhlu Küçük Ali namında bir kardeşimizin sualine karşı verdiğim bir cevab var. Onu okuyunuz ki, bazı mu'terizler Risale-i Nur'un kıymetini bir derece kırmak için ona demişler: "Herkes Allah'ı bilir. Âdi bir adam, bir veli gibi Allah'a iman eder." Böylece Nurların pek yüksek ve pek çok kıymetdar ve gayet lüzumlu tahşidatını ziyade göstermek istemişler.  
+Asâ-yı Musa âhirinde, mübarekler pehlivanı büyük ruhlu Küçük Ali namında bir kardeşimizin sualine karşı verdiğim bir cevab var. Onu okuyunuz ki, bazı mu'terizler Risale-i Nur'un kıymetini bir derece kırmak için ona demişler: "Herkes Allah'ı bilir. Âdi bir adam, bir veli gibi Allah'a iman eder." Böylece Nurların pek yüksek ve pek çok kıymetdar ve gayet lüzumlu tahşidatını ziyade göstermek istemişler.
 
-   Şimdi İstanbul'da -daha dehşetli bir fikirde- anarşist fikirli küfr-ü mutlaka düşmüş bir kısım münafıklar, Risale-i Nur gibi, ekmek ve suya ihtiyaç derecesinde herkesin muhtaç olduğu imanî hakikatlardan mahrum bırakmak desisesiyle diyorlar ki: "Her millet, herkes Allah'ı bilir. Daha
+Şimdi İstanbul'da -daha dehşetli bir fikirde- anarşist fikirli küfr-ü mutlaka düşmüş bir kısım münafıklar, Risale-i Nur gibi, ekmek ve suya ihtiyaç derecesinde herkesin muhtaç olduğu imanî hakikatlardan mahrum bırakmak desisesiyle diyorlar ki: "Her millet, herkes Allah'ı bilir. Daha
 
 yeni ders almağa ihtiyacımız pek yok." diye mukabele etmek istiyorlar. Halbuki Allah'ı bilmek, bütün kâinata ihata eden rububiyetine ve zerrelerden yıldızlara kadar cüz'î ve küllî herşey onun kabza-i tasarrufunda ve kudret ve iradesiyle olduğuna kat'î iman etmek ve mülkünde hiçbir şeriki olmadığına ve "Lâ ilahe illallah" kelime-i kudsiyesinin hakikatlarına iman etmek, kalben tasdik etmekle olur. Yoksa "Bir Allah var" deyip, bütün mülkünü esbaba ve tabiata taksim etmek ve onlara isnad etmek, hâşâ hadsiz şerikler hükmünde esbabı merci' tanımak ve herşeyin yanında hazır irade ve ilmini bilmemek ve şiddetli emirlerini tanımamak ve sıfatlarını, gönderdiği elçilerini ve peygamberlerini bilmemek, elbette bu cihetle Allah'a iman hakikatı onda yoktur. Belki küfr-ü mutlaktaki manevî cehennemin dünyevî tazibinden kendini bir derece teselliye almak için o sözleri söyler.
 
-   Evet inkâr etmemek başkadır, iman etmek bütün bütün başkadır.
+Evet inkâr etmemek başkadır, iman etmek bütün bütün başkadır.
 
-   Evet kâinatta hiçbir zîşuur, kâinatın bütün eczası kadar şahidleri bulunan Hâlık-ı Zülcelal'i
+Evet kâinatta hiçbir zîşuur, kâinatın bütün eczası kadar şahidleri bulunan Hâlık-ı Zülcelal'i
 
 inkâr edemez. Etse, bütün kâinat onu tekzib edeceği için susar, lâkayd kalır. Fakat ona iman etmek: Kur'an-ı Azîmüşşan'ın ders verdiği gibi, o Hâlık'ı sıfatları ile, isimleri ile umum kâinatın şehadetine istinaden kalben tasdik etmek ve elçileriyle gönderdiği emirleri tanımak; ve günah ve emre muhalefet ettiği vakit, kalben tövbe etmek ve nedamet etmek iledir. Yoksa, bütün günahları serbest işleyip hiç istiğfar etmemek ve aldırmamak, o imandan hissesi olmadığına delildir. Her ne ise... Evlâdlarım, ehemmiyetli bir hâdise size bu uzun mes'eleyi kısaca beyan etmeye sebeb oldu.
 
- * * *
+---
 
-<span class="arabic" dir="rtl">بِاسْمِهِ سُبْحَانَهُ</span>  
+<span class="arabic" dir="rtl">بِاسْمِهِ سُبْحَانَهُ</span>
 
-   [Asâ-yı Musa'nın âhirindeki bir mektubda, Mübarekler pehlivanı büyük ruhlu Küçük Ali kardeşimizin sualine verilen cevab] 
+[Asâ-yı Musa'nın âhirindeki bir mektubda, Mübarekler pehlivanı büyük ruhlu Küçük Ali kardeşimizin sualine verilen cevab]
 
- Sual:   
+Sual:
 
-   Risale-i Nur'un erkân-ı imaniye hakkında bu derece kesretli tahşidatı nedendir? Bir âmî mü'minin imanı büyük bir velinin imanı gibidir, diye eski hocalar bize ders vermişler.  
+Risale-i Nur'un erkân-ı imaniye hakkında bu derece kesretli tahşidatı nedendir? Bir âmî mü'minin imanı büyük bir velinin imanı gibidir, diye eski hocalar bize ders vermişler.
 
- Elcevab:   
+Elcevab:
 
-   Başta matbu Âyet-ül Kübra, hem Yirmisekizinci Mektub'un Üçüncü Mes'elesinin İkinci Noktası'nda meratib-i imaniye bahislerinde, âhire yakın müceddid-i elf-i sâni İmam-ı Rabbanî'nin beyanı ve hükmü ki: "Bütün tarîkatların müntehası ve en büyük maksadları, hakaik-i imaniyenin inkişafıdır. Ve bir mes'ele-i imaniyenin kat'iyyetle vuzuhu, binler kerametlerden ve keşfiyattan daha iyidir." ve Âyet-ül Kübra'nın en âhirinde ve Lâhika'dan alınan o mektubun parçası ve tamamının beyanatı cevab olduğu gibi; Meyve Risalesi'nin tekrarat-ı Kur'aniye hakkında Onuncu Mes'elesi, tevhidde ve iman rükünleri hakkında tekraratı ve kesretli tahşidat-ı
+Başta matbu Âyet-ül Kübra, hem Yirmisekizinci Mektub'un Üçüncü Mes'elesinin İkinci Noktası'nda meratib-i imaniye bahislerinde, âhire yakın müceddid-i elf-i sâni İmam-ı Rabbanî'nin beyanı ve hükmü ki: "Bütün tarîkatların müntehası ve en büyük maksadları, hakaik-i imaniyenin inkişafıdır. Ve bir mes'ele-i imaniyenin kat'iyyetle vuzuhu, binler kerametlerden ve keşfiyattan daha iyidir." ve Âyet-ül Kübra'nın en âhirinde ve Lâhika'dan alınan o mektubun parçası ve tamamının beyanatı cevab olduğu gibi; Meyve Risalesi'nin tekrarat-ı Kur'aniye hakkında Onuncu Mes'elesi, tevhidde ve iman rükünleri hakkında tekraratı ve kesretli tahşidat-ı
 
 Kur'aniyenin hikmeti, aynen tamamen onun hakikî tefsiri olan Risale-i Nur'da cereyan etmesi cevabdır.
 
-   Hem iman-ı tahkikî ve taklidî, icmalî ve tafsilî ve imanın bütün tehacümata ve vesveselere ve şübhelere karşı dayanıp sarsılmamasını beyan eden Risale-i Nur parçalarının izahatı, büyük ruhlu Küçük Ali'nin mektubuna öyle bir cevabdır ki, bize hiç ihtiyaç bırakmıyor.
+Hem iman-ı tahkikî ve taklidî, icmalî ve tafsilî ve imanın bütün tehacümata ve vesveselere ve şübhelere karşı dayanıp sarsılmamasını beyan eden Risale-i Nur parçalarının izahatı, büyük ruhlu Küçük Ali'nin mektubuna öyle bir cevabdır ki, bize hiç ihtiyaç bırakmıyor.
 
- İkinci Cihet:   
+İkinci Cihet:
 
-   İman, yalnız icmalî ve taklidî bir tasdike münhasır değildir. Bir çekirdekten, tâ büyük hurma ağacına kadar ve eldeki âyinede görünen misalî güneşten tâ deniz yüzündeki aksine, tâ gökteki güneşe kadar mertebeleri ve inkişafatları olduğu gibi, imanın o derece kesretli hakikatları var, binler esma-i İlahiye ve sair erkân-ı imaniyenin kâinat hakikatlarıyla alâkadar çok hakikatları var, "Bütün ilimlerin ve marifetlerin ve kemalât-ı insaniyenin en büyüğü imandır ve iman-ı tahkikîden gelen tafsilli ve bürhanlı marifet-i kudsiyedir" diye ehl-i tahkik ittifak etmişler.
+İman, yalnız icmalî ve taklidî bir tasdike münhasır değildir. Bir çekirdekten, tâ büyük hurma ağacına kadar ve eldeki âyinede görünen misalî güneşten tâ deniz yüzündeki aksine, tâ gökteki güneşe kadar mertebeleri ve inkişafatları olduğu gibi, imanın o derece kesretli hakikatları var, binler esma-i İlahiye ve sair erkân-ı imaniyenin kâinat hakikatlarıyla alâkadar çok hakikatları var, "Bütün ilimlerin ve marifetlerin ve kemalât-ı insaniyenin en büyüğü imandır ve iman-ı tahkikîden gelen tafsilli ve bürhanlı marifet-i kudsiyedir" diye ehl-i tahkik ittifak etmişler.
 
-   Evet iman-ı taklidî, çabuk şübhelere mağlub olur. Ondan çok kuvvetli ve çok geniş olan iman-ı tahkikîde pek çok meratib var. O mertebelerden
+Evet iman-ı taklidî, çabuk şübhelere mağlub olur. Ondan çok kuvvetli ve çok geniş olan iman-ı tahkikîde pek çok meratib var. O mertebelerden
 
-ilmelyakîn mertebesi,  
+ilmelyakîn mertebesi,
 
 &gt; **Hâşiye:** {(Haşiye): İlmelyakîn: İlim ile yakîn hasıl etmek. Yani, bir şeyin vücudunu emareleriyle bilmek. 2- Aynelyakîn: Göz ile yakîn hasıl etmek. Yani, bir şeyi göz ile görerek bilmek. 3- Hakkalyakîn: Hakikatı ile yakîn hasıl etmek. Yani, içine girmekle bilmek. Sevgili Üstadımız Bedîüzzaman Hazretlerinden aldığımız ders ile şu üç kelimeyi şöyle izah ederiz: Meselâ uzaktan bir duman gördük. Orada bir ateşin yandığını biliriz. İlmelyakîn buna denilir. O dumana yakınlaştık, ateşi gözümüz ile gördük; aynelyakîn buna denilir. Ateşin nuru içine girip derecesini anladık. Hakkalyakîn buna denilir.}
 
-çok bürhanlarının kuvvetleriyle binler şübhelere karşı dayanır. Halbuki taklidî iman ise, bir şübheye karşı bazan mağlub olur.  
+çok bürhanlarının kuvvetleriyle binler şübhelere karşı dayanır. Halbuki taklidî iman ise, bir şübheye karşı bazan mağlub olur.
 
-   Hem iman-ı tahkikînin bir mertebesi de aynelyakîn derecesidir ki, çok mertebeleri var. Belki esma-i İlahiye adedince tezahür dereceleri var. Bütün kâinatı bir Kur'an gibi okuyabilecek derecesine gelir. Ve bir mertebesi de hakkalyakîndir ki, onun da çok mertebeleri var. Böyle imanlı zâtlara şübehat orduları hücum da etse, bir halt edemez. Ve ülema-i İlm-i Kelâm'ın binler cild kitabları, akla ve mantığa istinaden te'lif edilip, yalnız o marifet-i imaniyenin bürhanlı ve aklî bir yolunu göstermişler. Ve ehl-i hakikatın yüzer kitabları keşfe ve zevke istinaden o marifet-i imaniyeyi
+Hem iman-ı tahkikînin bir mertebesi de aynelyakîn derecesidir ki, çok mertebeleri var. Belki esma-i İlahiye adedince tezahür dereceleri var. Bütün kâinatı bir Kur'an gibi okuyabilecek derecesine gelir. Ve bir mertebesi de hakkalyakîndir ki, onun da çok mertebeleri var. Böyle imanlı zâtlara şübehat orduları hücum da etse, bir halt edemez. Ve ülema-i İlm-i Kelâm'ın binler cild kitabları, akla ve mantığa istinaden te'lif edilip, yalnız o marifet-i imaniyenin bürhanlı ve aklî bir yolunu göstermişler. Ve ehl-i hakikatın yüzer kitabları keşfe ve zevke istinaden o marifet-i imaniyeyi
 
 daha başka bir tarzda, bir cihette izhar etmişler. Fakat Kur'anın mu'cizekâr cadde-i kübrasının gösterdiği hakaik-i imaniye ve marifet-i kudsiye; o ülema ve evliyanın pek çok fevkinde bir kuvvet ve yüksekliktedir. İşte Risale-i Nur bu câmi' ve küllî ve yüksek cadde-i saadeti ve mi'rac-ı marifeti tefsir edip, bin seneden beri Kur'an aleyhine ve İslâmiyet ve insaniyet zararına ve adem âlemleri hesabına tahribatçı küllî cereyanlara karşı Kur'an ve iman namına mukabele ediyor, müdafaa ediyor. Elbette hadsiz tahşidata ihtiyacı vardır ki, o hadsiz düşmanlara karşı dayanıp ehl-i imanın imanının muhafazasına Kur'an nuruyla vesile olsun. Hadîs-i Şerif'te vardır ki: "Bir adamın seninle imana gelmesi, sana sahra dolusu kırmızı koyunlardan daha hayırlıdır." "Bazan bir saat tefekkür, bir sene ibadetten daha hayırlı olur." Hattâ Nakşîlerin hafî zikre verdikleri büyük ehemmiyet, bu nevi tefekküre yetişmek içindir. Umum kardeşlerimize birer birer selâm ve dua ediyoruz. Kusura bakmayınız, acele yazıldı. Siz tashih ve ıslah edersiniz.
 
- <span class="arabic" dir="rtl">اَلْبَاقِى هُوَ الْبَاقِى</span>  
+<span class="arabic" dir="rtl">اَلْبَاقِى هُوَ الْبَاقِى</span>
 
- Kardeşiniz   
+Kardeşiniz
 
- Said Nursî   
+Said Nursî
 
- * * *
+---
 
-<span class="arabic" dir="rtl">بِاسْمِهِ سُبْحَانَهُ</span>  
+<span class="arabic" dir="rtl">بِاسْمِهِ سُبْحَانَهُ</span>
 
- Yirmiyedinci Mektub'un Üçüncü Zeyli   
+Yirmiyedinci Mektub'un Üçüncü Zeyli
 
- (Bir lâhika mektubu)   
+(Bir lâhika mektubu)
 
- (Nur Risalelerine çok müştak ve onların mütalaasından intibaha gelen bir doktora yazılan mektub)   
+(Nur Risalelerine çok müştak ve onların mütalaasından intibaha gelen bir doktora yazılan mektub)
 
-   Merhaba ey kendi hastalığını teşhis edebilen bahtiyar doktor, samimî ve aziz dostum!  
+Merhaba ey kendi hastalığını teşhis edebilen bahtiyar doktor, samimî ve aziz dostum!
 
-   Senin hararetli mektubunun gösterdiği intibah-ı ruhî şâyan-ı tebriktir. Biliniz ki mevcudat içinde en kıymetdar, hayattır. Ve vazifeler içinde en kıymetdar, hayata hizmettir. Ve hizmet-i hayatiye içinde en kıymetdar, hayat-ı fâniyeyi hayat-ı bâkiyeye inkılab etmesi için sa'y etmektir. Şu hayatın bütün kıymeti ve ehemmiyeti ise, hayat-ı bâkiyeye çekirdek ve mebde ve menşe olması cihetindedir. Yoksa hayat-ı ebediyeyi zehirleyecek ve bozacak bir tarzda şu hayat-ı fâniyeye hasr-ı nazar etmek; âni bir şimşeği, sermedî bir güneşe tercih etmek gibi bir divaneliktir.
+Senin hararetli mektubunun gösterdiği intibah-ı ruhî şâyan-ı tebriktir. Biliniz ki mevcudat içinde en kıymetdar, hayattır. Ve vazifeler içinde en kıymetdar, hayata hizmettir. Ve hizmet-i hayatiye içinde en kıymetdar, hayat-ı fâniyeyi hayat-ı bâkiyeye inkılab etmesi için sa'y etmektir. Şu hayatın bütün kıymeti ve ehemmiyeti ise, hayat-ı bâkiyeye çekirdek ve mebde ve menşe olması cihetindedir. Yoksa hayat-ı ebediyeyi zehirleyecek ve bozacak bir tarzda şu hayat-ı fâniyeye hasr-ı nazar etmek; âni bir şimşeği, sermedî bir güneşe tercih etmek gibi bir divaneliktir.
 
 Hakikat nazarında herkesten ziyade hasta olan, maddî ve gafil doktorlardır. Eğer eczahane-i kudsiye-i Kur'aniyeden tiryak-misal imanî ilâçları alabilseler, hem kendi hastalıklarını, hem beşeriyetin yaralarını tedavi ederler, inşâallah. Senin intibahın yarana bir merhem olacağı gibi, seni dahi doktorların emrazına bir ilâç yapar. Hem bilirsin, me'yus ve ümidsiz bir hastaya manevî bir teselli, bazan bin ilâçtan daha nâfi'dir. Halbuki tabiat bataklığında boğulmuş bir tabib, o bîçare marîzin elîm ye'sine bir zulmet daha katar. İnşâallah bu intibahın seni öyle bîçarelere medar-ı teselli eder, nurlu bir tabib yapar. Bilirsin ki; ömür kısadır, lüzumlu işler pek çoktur. Acaba benim gibi sen dahi kafanı teftiş etsen, malûmatın içinde ne kadar lüzumsuz, faidesiz, ehemmiyetsiz, odun yığınları gibi camid şeyleri bulursun. Çünki ben başımı teftiş ettim, çok lüzumsuz şeyleri buldum. İşte o fennî malûmatı, o felsefî maarifi; faideli, nurlu, ruhlu yapmak çaresini aramak lâzımdır. Sen dahi Cenab-ı Hak'tan bir intibah iste ki, senin fikrini Hakîm-i Zülcelal hesabına çevirsin, tâ o odunlara bir ateş verip nurlandırsın. Lüzumsuz maarif-i fenniyen, kıymetdar maarif-i İlahiye hükmüne geçsin.
 
-Hem madem Sözler senin vicdanınla konuşabilirler. Her bir Söz'ü, şahsımdan değil belki Kur'an'ın dellâlından sana bir mektubdur ve eczahane-i kudsiye-i Kur'aniyeden birer reçetedir farzet. Gaybubiyet içinde hazırane bir musahabe dairesini onlarla aç.  
+Hem madem Sözler senin vicdanınla konuşabilirler. Her bir Söz'ü, şahsımdan değil belki Kur'an'ın dellâlından sana bir mektubdur ve eczahane-i kudsiye-i Kur'aniyeden birer reçetedir farzet. Gaybubiyet içinde hazırane bir musahabe dairesini onlarla aç.
 
- Said Nursî   
+Said Nursî
 
- * * *
+---
 
-<span class="arabic" dir="rtl">بِاسْمِهِ سُبْحَانَهُ</span>  
+<span class="arabic" dir="rtl">بِاسْمِهِ سُبْحَانَهُ</span>
 
-   [Risale-i Nur'dan Sikke-i Tasdîk-i Gaybî Mecmuası'nda, ondokuzuncu sahifedeki bir lâhika mektubundan "İman ile kabre girmek" hakkında mühim bir mektubdan bir parçadır] 
+[Risale-i Nur'dan Sikke-i Tasdîk-i Gaybî Mecmuası'nda, ondokuzuncu sahifedeki bir lâhika mektubundan "İman ile kabre girmek" hakkında mühim bir mektubdan bir parçadır]
 
-   İman-ı tahkikî ilmelyakînden hakkalyakîne yakınlaştıkça daha selbedilemeyeceğine ehl-i keşf ve tahkik hükmetmişler. Demişler ki: Sekerat vaktinde şeytan vesvesesiyle ancak akla şübheler verip tereddüde düşürebilir. Bu nevi iman-ı tahkikî ise yalnız akılda durmuyor. Belki hem kalbe, hem ruha, hem sırra, hem öyle letaife sirayet ediyor, kökleşiyor ki, şeytanın eli o yerlere yetişemiyor; öylelerin imanı zevalden mahfuz kalıyor. Bu iman-ı tahkikînin vusulüne vesile olan bir yolu, velayet-i kâmile ile keşf ve şuhud ile hakikata yetişmektir. Bu yol ehass-ı havassa mahsustur, iman-ı şuhudîdir.
+İman-ı tahkikî ilmelyakînden hakkalyakîne yakınlaştıkça daha selbedilemeyeceğine ehl-i keşf ve tahkik hükmetmişler. Demişler ki: Sekerat vaktinde şeytan vesvesesiyle ancak akla şübheler verip tereddüde düşürebilir. Bu nevi iman-ı tahkikî ise yalnız akılda durmuyor. Belki hem kalbe, hem ruha, hem sırra, hem öyle letaife sirayet ediyor, kökleşiyor ki, şeytanın eli o yerlere yetişemiyor; öylelerin imanı zevalden mahfuz kalıyor. Bu iman-ı tahkikînin vusulüne vesile olan bir yolu, velayet-i kâmile ile keşf ve şuhud ile hakikata yetişmektir. Bu yol ehass-ı havassa mahsustur, iman-ı şuhudîdir.
 
 İkinci Yol: İman-ı bilgayb cihetinde sırr-ı vahyin feyziyle bürhanî ve Kur'anî bir tarzda, akıl ve kalbin imtizacıyla hakkalyakîn derecesinde bir kuvvet ile, zaruret ve bedahet derecesine gelen bir ilmelyakîn ile hakaik-i imaniyeyi tasdik etmektir. Bu ikinci yol; Risalet-in Nur'un esası, mâyesi, temeli, ruhu, hakikatı olduğunu has talebeleri görüyorlar. Başkaları dahi insafla baksalar, Risale-i Nur'un hakaik-i imaniyeye muhalif olan yolları gayr-ı mümkin ve muhal ve mümteni' derecesinde gösterdiğini görecekler.
 
- Said Nursî   
+Said Nursî
 
- * * *
+---

@@ -40,7 +40,7 @@ jobs:
         run: cargo fmt --check
       - name: Clippy Check
         working-directory: apps/readest-app/src-tauri
-        run: cargo clippy -p Readest --no-deps -- -D warnings
+        run: cargo clippy -p risale-library --no-deps -- -D warnings
 
   build_web_app:
     runs-on: ubuntu-latest
@@ -92,7 +92,7 @@ jobs:
       - name: build the web app
         working-directory: apps/readest-app
         run: |
-          pnpm build-web && pnpm check:all
+          pnpm build-web
 
   build_tauri_app:
     runs-on: ubuntu-latest

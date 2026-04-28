@@ -1,25 +1,30 @@
 ---
-title: "Tuluat (tr)"
-book: "Tuluat"
-dir: "ltr"
-category: "small"
+title: 'Tuluat (tr)'
+book: 'Tuluat'
+dir: 'ltr'
+category: 'small'
 ---
 
 ---
+
 source_name: Hizmet Vakfı & DİB asıl nüsha metni 2016
 source_url: https://www.risaleinur.hizmetvakfi.org/
+
 ---
+
 #### Tulûat
+
 **Müellifi: Bedîüzzaman Said Nursî**
 
-***
+---
 
 ##### İFADE
+
 Telepati nevinden, ruhumla şiddet-i alâkası olan bir şahs-ı meçhul, muhtelif ve birbirinden uzak mevzulara dair; birdenbire kibrit yakmak gibi seri sualler soruyor. Ratb ve yâbis karışıyor.
 
 İntihab kāriin arzusuna tabidir.
 
-***
+---
 
 <p class="arabic" dir="rtl">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحٖيمِ</p>
 
@@ -49,7 +54,7 @@ Beşer dinsiz olamaz!
 
 İşte bu sırr-ı azîme, Hazret-i Peygamber (asm) işaret etmiştir ki: Hazret-i İsa gelecek, ümmetimden olacak; aynı şeriatımla amel edecektir.
 
-***
+---
 
 Sâniyen:
 
@@ -57,7 +62,7 @@ Sebeb-i ihtilaf-ı muzır: “Bu haktır.” düsturu yerine “Yalnız hak budu
 
 Halbuki fâsid bir delil ile hak bir netice zihinde ikame edilir. Bâtıl bir vesile ile hak bir gaye, fikirde tesbit edilir. Madem gaye ve maksat haktır; delil ve vesilelerdeki fesat, böyle inşikak-ı kulûbe sebebiyet vermemeli.
 
-***
+---
 
 Sâlisen:
 
@@ -145,9 +150,10 @@ Ben de kendi gözümle Grandük Nikolaviç’in namına iki emri gördüm. Der: 
 
 Esefâ! Gaye-i hayalden tenasi veya nisyan olmakla, ezhan enelere dönüp etrafında gezerler. İşte gaye-i hayal, maksad-ı âlî bütün vuzuhuyla meydana atılmıştır.
 
-***
+---
 
 ##### Zulmün Şedit Bir Nev’i
+
 Dünyaca havas tanılan insanlardaki meziyet, sebeb-i tevazu ve mahviyet iken tahakküm ve tekebbüre sebep olmuştur. Fukara aczi, avamın fakrı, sebeb-i merhamet ve ihsan iken esarete mahkûmiyetlerine müncer olmuştur.
 
 Bir işte mehasin ve şeref hasıl oldukça havassa peşkeş edilir; seyyiat olsa avama taksim edilir.
@@ -160,9 +166,10 @@ Mesela, bir tabur galebe çalsa şan ve şeref kumandana verilir, taksim edilmez
 
 Hem de şu içtimaî sistemdeki damar-ı zulmün bir mecrası da şudur: Yüksek tabakada birinin öldürülmesiyle, çok seneler matem tutulur. Halbuki onun cinayetiyle tabaka-i avamda yüzer belki binler kişi telef olsa bir iki günde unutulur. Şu ise adalet-i Kur’aniyeye zıttır. Bir şah, bir gedayı öldürse şeriat kısasa hükmeder, ikisini bir görür.
 
-***
+---
 
 ##### Müstahak Bir Ceza
+
 Şeriatın <span class="arabic" dir="rtl">اَلْقَاتِلُ لَا يَرِثُ</span> düstur-u âdilanesi, şeriat-ı fıtriye olan kavanin-i kadere muntabıktır ki tarîk-i gayr-ı meşru ile bir maksadı takip eden, maksudunun zıddıyla ceza görüyor. Wilson, Klemanso, Venizelos gibi.
 
 Şuna bir misal: Bidayet-i inkılabımızdan beri, sevab-ı âhiretin vesilesini dinsizcesine şan ve şerefe vasıta yapanlar, müthiş bir rezaletle neticelendi. Muvakkat bir şan ve şereften sonra, elîm bir sukut takip etti. Lisan-ı halleri <span class="arabic" dir="rtl">لَيْتَنٖى كُنْتُ نَسْيًا مَنْسِيًّا</span> tilavet ediyor.
@@ -217,7 +224,7 @@ Sıhhat ve fesada muhtemel bir şeyde, kabule temayül ve tercih şefkatten; red
 
 Sâik-i tenkit, aşk-ı hak ve arzu-yu tenzih-i hakikat olmalı. Selef-i salihînin tenkitleri gibi.
 
-***
+---
 
 **S- **Zalim gâvurların bu kadar propagandalarına nasıl mukabele edilmeli?
 
@@ -229,9 +236,10 @@ Maziye, mesaibe kader nazarıyla ve müstakbele, maâsiye teklif noktasından ba
 
 Çaresi bulunan şeyde acze, çaresi bulunmayan şeyde cez’a iltica etmemek elzemdir.
 
-***
+---
 
 ##### Hadsî Bir Hakikat
+
 **S-** Hazret-i Azrail birdir, bir anda, her yerde eceli gelenlerin ruhunu kabzeder. Hazret-i Cebrail, Sidretü’l-münteha’da suret-i hakikiyesinde olduğu anda, Dıhye veya başkasının suretinde meclis-i Nebevîde iman ve İslâm’ın erkânını soruyor veya tebliğ eder. Daha yalnız Allah bilir kaç yerlerde bulunuyor.
 
 Hazret-i Peygamber (asm) demiş: <span class="arabic" dir="rtl">مَنْ رَاٰنٖى فِى الْمَنَامِ فَقَدْ رَاٰنٖى حَقًّا</span> Şu sırrına binaen avam-ı ümmetten binlere bir anda menamen ve havassa yakazaten ve keşfen temessülü ve umum ümmetin salavatının istimaı ve âhirette umumla görüşmesi ve şefaati hem de bir veli bir anda pek çok yerlerde müşahedesi gibi sırların miftahı nedir?
@@ -242,7 +250,7 @@ Mesela, bir adam binler âyine ortasında dursa her bir âyinede aynı şahıs b
 
 Lâkin şems binler âyinede temessül etse her bir timsal çendan şemsin azamet-i mahiyetine ve mertebe-i kemaline mâlik değilse de lâkin şemsin hissi hükmünde olan **harareti**, hayatı hükmünde olan **ziyası**, aklı hükmünde olan **tenviri** olan havass-ı selâseyi câmi’dir. Nuraninin timsali hayy-ı murtabıttır. Kesifin timsali, meyyit-i müteharriktir. Ruh, en münevver bir nurdur. Tahdidi kabul etmeyen âlem-i misalin pencerelerinde temaşager bir ruhun gayr-ı mahsur timsalleri de birer ruh-u mütecessiddir. Havassına mâliktir, onun gayrı değillerdir.
 
-***
+---
 
 [^hâşiye1]: Bir zaman böyle demiştim.
 

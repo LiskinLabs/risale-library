@@ -55,7 +55,7 @@
 | **[Parallel Read][link-parallel-read]**    | Read two books or documents simultaneously in a split-screen view.                                                     | ✅         |
 | **Customize Font and Layout**              | Adjust font, layout, theme mode, and theme colors for a personalized experience.                                       | ✅         |
 | **Code Syntax Highlighting**               | Read software manuals with rich coloring of code examples.                                                             | ✅         |
-| **File Association and Open With**         | Quickly open files in Risale Digital Library in your file browser with one-click.                                                     | ✅         |
+| **File Association and Open With**         | Quickly open files in Risale Digital Library in your file browser with one-click.                                      | ✅         |
 | **Library Management**                     | Organize, sort, and manage your entire ebook library.                                                                  | ✅         |
 | **OPDS/Calibre Integration**               | Integrate OPDS/Calibre to access online libraries and catalogs.                                                        | ✅         |
 | **Translate with DeepL and Yandex**        | From a single sentence to the entire book—translate instantly.                                                         | ✅         |
