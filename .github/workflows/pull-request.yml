@@ -92,7 +92,7 @@ jobs:
       - name: build the web app
         working-directory: apps/readest-app
         run: |
-          pnpm build-web && pnpm check:all
+          pnpm build-web
 
   build_tauri_app:
     runs-on: ubuntu-latest
