@@ -1,3 +1,4 @@
+#![allow(unused_variables)]
 // Copyright 2019-2023 Tauri Programme within The Commons Conservancy
 // Copyright 2018-2023 the Deno authors.
 // SPDX-License-Identifier: Apache-2.0
