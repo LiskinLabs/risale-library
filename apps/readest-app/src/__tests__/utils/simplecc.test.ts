@@ -1,5 +1,6 @@
 import { describe, test, expect, beforeAll } from 'vitest';
-// @ts-expect-error
+// biome-ignore lint/suspicious/noTsIgnore: simplecc_wasm might not be available locally
+// @ts-ignore
 import init, { simplecc } from '@simplecc/simplecc_wasm';
 import { readFile } from 'fs/promises';
 import { join } from 'path';
