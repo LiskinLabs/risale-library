@@ -295,9 +295,9 @@ Pregunté a un gran erudito de la cadena Naqshbandi, alguien que trataba de ajus
   §Los preparadores.>
   ,_ \* _>
   #33
-  ,************\*\*\*\*************\_\_\_************\*\*\*\*************>
+  ,\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***\_\_\_\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***>
   ∑PRIMERA PARTE>
-  ,************\*\*\*\*************\_\_\_************\*\*\*\*************>
+  ,\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***\_\_\_\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***>
   §Su Primera Vida>
   #34
   \BEDIÜZZAMAN SAID NURSI>nació en el año 1293 del calendario Rumi (1876 d.C.) en el pueblo de Nurs, ubicado en el distrito de Hizan, dependiente de la provincia de Bitlis. Su padre se llamaba Mirza y su madre Nuriye. Hasta los nueve años permaneció con sus padres. Durante ese tiempo, un estado particular de su alma lo llevó a investigar cuánto provecho obtenía de la ciencia su hermano mayor, Molla Abdullah, quien estaba estudiando. Reflexionó sobre cómo Molla Abdullah, progresando continuamente, destacaba entre sus amigos del pueblo, quienes no sabían leer ni escribir, y quedó impresionado. Esto le inspiró un gran entusiasmo por estudiar y, con esta intención, fue a la madrasa de Molla Mehmed Emin Efendi en el pueblo de Tağ, dentro del área de la región de İsparit. Sin embargo, no permaneció mucho tiempo allí.
@@ -1507,9 +1507,9 @@ Pregunté a un gran erudito de la cadena Naqshbandi, alguien que trataba de ajus
     En ese momento, buscando ayuda en la noble aleya del Corán que explica la existencia y unicidad de Allah con una claridad evidente, redacté, apoyándome en el Sabio Corán, un argumento fuerte que podría destruir la cabeza de esa incredulidad. Lo escribí en una epístola en árabe y la publiqué en la imprenta Yeni Gün de Ankara. Sin embargo, lamentablemente, pocas personas sabían árabe, y aquellos que le prestaron atención también eran escasos. Como el argumento era extremadamente breve y conciso, no mostró su impacto de manera efectiva. Por desgracia, esa idea de incredulidad tanto se desarrolló como ganó fuerza..."
     Bediüzzaman, rechazando el cargo de diputado que se le ofreció y el puesto de miembro del Consejo de Consulta Religiosa en el Departamento de Asuntos Religiosos, así como el nombramiento como Predicador General de las Provincias del Este, dejó Ankara rumbo a Van, llevando consigo "el billete de tren que transportó al Viejo Said al Nuevo Said".
     #159
-    ,************\*\*\*\*************\_\_\_************\*\*\*\*************>
+    ,\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***\_\_\_\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***>
     ∑SEGUNDA PARTE>
-    ,************\*\*\*\*************\_\_\_************\*\*\*\*************>
+    ,\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***\_\_\_\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***>
     ÷Su Vida en Barla>
     #160
     La residencia en Barla donde el Maestro permaneció durante ocho años y medio, la primera madrasa, escuela de Nur, junto con su majestuoso árbol de plátano frente a ella, y el pabellón donde reflexionaba y adoraba entre las ramas.
@@ -1966,9 +1966,9 @@ Pregunté a un gran erudito de la cadena Naqshbandi, alguien que trataba de ajus
     #216
     El árbol de trementina situado en la cima de la montaña, con vista al lago Eğirdir, donde el Maestro pasaba los veranos en las Montañas de Pino.
     #217
-    ,************\*\*\*\*************\_\_\_************\*\*\*\*************>
+    ,\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***\_\_\_\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***>
     ∑TERCERA PARTE>
-    ,************\*\*\*\*************\_\_\_************\*\*\*\*************>
+    ,\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***\_\_\_\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***>
     ÷Su Vida en Eskişehir>
     #218
     Los enemigos ocultos de la religión, al darse cuenta de que Risale-i Nur estaba progresando cada vez más y de que la fe en Allah y el Islam estaban comenzando a fortalecerse, fabricaron acusaciones falsas para engañar al gobierno. Dijeron: 'Bediüzzaman está formando una sociedad secreta, está en contra del régimen y está destruyendo los fundamentos del sistema.' Así, en 1935, se presentó un caso contra él en el Tribunal Penal de Eskişehir con la intención de sentenciarlo a muerte de manera definitiva.
@@ -2483,9 +2483,9 @@ Pregunté a un gran erudito de la cadena Naqshbandi, alguien que trataba de ajus
     ~اَلْبَاقِى هُوَ الْبَاقِى|@
     §Said Nursi>
     #286
-    ,************\*\*\*\*************\_\_\_************\*\*\*\*************>
+    ,\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***\_\_\_\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***>
     ∑CUARTA PARTE>
-    ,************\*\*\*\*************\_\_\_************\*\*\*\*************>
+    ,\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***\_\_\_\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***>
     §Su Vida en Kastamonu>
     #287
     Bediüzzaman Said Nursi, después de ser liberado de la prisión de Eskişehir, fue desterrado a la provincia de Kastamonu. Tras ser obligado a residir durante un largo período en una comisaría de policía, fue trasladado a una casa ubicada justo frente a dicha comisaría, donde permaneció bajo constante vigilancia.
@@ -3425,9 +3425,9 @@ Pregunté a un gran erudito de la cadena Naqshbandi, alguien que trataba de ajus
     §Said Nursi>
     €***>
     #432
-    ,************\*\*\*\*************\_\_\_************\*\*\*\*************>
+    ,\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***\_\_\_\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***>
     ∑QUINTA PARTE>
-    ,************\*\*\*\*************\_\_\_************\*\*\*\*************>
+    ,\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***\_\_\_\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***>
     §Su Vida en Denizli>
     #433
     La difusión y expansión de Risale-i Nur continúa ampliándose día a día... Cada vez más personas leen las obras de Nur con entusiasmo. Los enemigos ocultos del Islam, al observar el impacto extraordinario y los resultados de la poderosa influencia de Risale-i Nur, tramaron otra conspiración contra estas obras y su autor, Bediüzzaman.
@@ -3769,9 +3769,9 @@ Pregunté a un gran erudito de la cadena Naqshbandi, alguien que trataba de ajus
     §Said Nursi>
     ,_ \* _>
     #470
-    ,************\*\*\*\*************\_\_\_************\*\*\*\*************>
+    ,\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***\_\_\_\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***>
     ∑SEXTA PARTE>
-    ,************\*\*\*\*************\_\_\_************\*\*\*\*************>
+    ,\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***\_\_\_\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***>
     §Su Vida en Emirdağ>
     #471
     <Introducción>
@@ -4691,9 +4691,9 @@ Pregunté a un gran erudito de la cadena Naqshbandi, alguien que trataba de ajus
     ÷Tu humilde estudiante
     HASAN FEYZİ>
     #565
-    ,************\*\*\*\*************\_\_\_************\*\*\*\*************>
+    ,\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***\_\_\_\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***>
     ∑SÉPTIMA PARTE>
-    ,************\*\*\*\*************\_\_\_************\*\*\*\*************>
+    ,\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***\_\_\_\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***>
     §Su Vida en Afyon>
     #566
     <La Detención de Bediüzzaman>
@@ -5236,9 +5236,9 @@ Pregunté a un gran erudito de la cadena Naqshbandi, alguien que trataba de ajus
     Aunque atribuyen a mi parte un mérito cien veces superior a lo que merezco, no tuve el coraje de herir los sentimientos de quienes firmaron este documento. Permanecí en silencio y acepté este elogio en nombre de la entidad colectiva de los estudiantes de Nur.
     §Said Nursi>
     #638
-    ,************\*\*\*\*************\_\_\_************\*\*\*\*************>
+    ,\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***\_\_\_\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***>
     ∑OCTAVA PARTE>
-    ,************\*\*\*\*************\_\_\_************\*\*\*\*************>
+    ,\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***\_\_\_\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***>
     §Su Vida en Isparta>
     #639
     <Después de 1950>

@@ -350,7 +350,7 @@ Bir ilâç.
 
 - At şunu. Sağlamsın. Neyin var. Alkış zamanıdır.
   `S-> 
- Hâ, şu beş nişanlı kâğıt nedir? ` C->
+Hâ, şu beş nişanlı kâğıt nedir? ` C->
   Bir bilet. Bir tayinat senedi.
 - Yırt bunları. Şu güzel bahar mevsiminde yolculuk bizim nemize lâzım! der. Herbir desise ile onu iknaa çalışır. Hattâ o bîçare, ona biraz meyleder. Evet, insan aldanır. Ben de öyle bir dessasa aldandım.
   Birden sağ cihetinden ra'd gibi bir ses gelir. Der: "Sakın aldanma. Ve o dessasa de ki: Eğer arkamdaki arslanı
