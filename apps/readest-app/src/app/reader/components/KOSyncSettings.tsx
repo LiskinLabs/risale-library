@@ -270,7 +270,9 @@ export const KOSyncSettingsWindow: React.FC = () => {
                 </label>
                 <input
                   type='text'
-                  placeholder={osName ? `Risale Digital Library (${osName})` : 'Risale Digital Library'}
+                  placeholder={
+                    osName ? `Risale Digital Library (${osName})` : 'Risale Digital Library'
+                  }
                   className='input input-bordered h-12 w-full focus:outline-none focus:ring-0'
                   value={deviceName}
                   onChange={handleDeviceNameChange}

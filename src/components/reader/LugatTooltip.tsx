@@ -13,10 +13,10 @@ export const LugatTooltip: React.FC = () => {
       // Small delay to ensure position is correct after render
       const updatePosition = () => {
         if (!tooltipRef.current) return;
-        
+
         const tooltipWidth = tooltipRef.current.offsetWidth || 280;
         const tooltipHeight = tooltipRef.current.offsetHeight || 150;
-        
+
         let x = position.x;
         let y = position.y - 10; // Show above
 
@@ -44,7 +44,7 @@ export const LugatTooltip: React.FC = () => {
           top: `${y}px`,
           transform: placement === 'top' ? 'translate(-50%, -100%)' : 'translate(-50%, 0)',
           visibility: 'visible',
-          opacity: 1
+          opacity: 1,
         });
       };
 
@@ -65,15 +65,11 @@ export const LugatTooltip: React.FC = () => {
   return (
     <>
       {/* Invisible backdrop for closing on click outside */}
-      <div 
-        className="fixed inset-0 z-[90]" 
-        onMouseDown={handleClose}
-        onTouchStart={handleClose}
-      />
-      
+      <div className='fixed inset-0 z-[90]' onMouseDown={handleClose} onTouchStart={handleClose} />
+
       <div
         ref={tooltipRef}
-        className="fixed z-[100] glass-panel shadow-2xl transition-all duration-200 lugat-tooltip"
+        className='glass-panel lugat-tooltip fixed z-[100] shadow-2xl transition-all duration-200'
         style={{
           ...styles,
           width: '300px',
@@ -85,37 +81,57 @@ export const LugatTooltip: React.FC = () => {
         }}
         onMouseDown={(e) => e.stopPropagation()}
       >
-        <div className="flex flex-col gap-2">
-          <div className="flex items-center justify-between border-b border-black/5 dark:border-white/5 pb-2 mb-1">
-            <span className="text-[10px] font-bold uppercase tracking-widest text-[var(--accent)]">
+        <div className='flex flex-col gap-2'>
+          <div className='mb-1 flex items-center justify-between border-b border-black/5 pb-2 dark:border-white/5'>
+            <span className='text-[10px] font-bold uppercase tracking-widest text-[var(--accent)]'>
               Значение слова
             </span>
-            <button onClick={handleClose} className="p-1 hover:bg-black/5 dark:hover:bg-white/5 rounded-md">
-               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <path d="M18 6L6 18M6 6l12 12" />
-               </svg>
+            <button
+              onClick={handleClose}
+              className='rounded-md p-1 hover:bg-black/5 dark:hover:bg-white/5'
+            >
+              <svg
+                width='14'
+                height='14'
+                viewBox='0 0 24 24'
+                fill='none'
+                stroke='currentColor'
+                strokeWidth='2.5'
+              >
+                <path d='M18 6L6 18M6 6l12 12' />
+              </svg>
             </button>
           </div>
-          
-          <h3 className="text-xl font-black italic m-0 text-[var(--text-primary)]" style={{ fontFamily: 'var(--reader-font)' }}>
+
+          <h3
+            className='m-0 text-xl font-black italic text-[var(--text-primary)]'
+            style={{ fontFamily: 'var(--reader-font)' }}
+          >
             {selected.word}
           </h3>
-          
-          <div className="lugat-tooltip-body overflow-y-auto max-h-[200px] scrollbar-thin pr-1">
-            <p className="text-[15px] leading-relaxed m-0 text-[var(--text-secondary)]" style={{ fontFamily: 'var(--reader-font)' }}>
+
+          <div className='lugat-tooltip-body scrollbar-thin max-h-[200px] overflow-y-auto pr-1'>
+            <p
+              className='m-0 text-[15px] leading-relaxed text-[var(--text-secondary)]'
+              style={{ fontFamily: 'var(--reader-font)' }}
+            >
               {selected.meaning}
             </p>
           </div>
         </div>
-        
+
         {/* Arrow / Tip */}
-        <div 
-          className="absolute left-1/2 -bottom-2 w-4 h-4 bg-[var(--glass-bg)] border-r border-b border-[var(--accent)] rotate-45 -translate-x-1/2" 
-          style={{ 
-            clipPath: styles.transform?.includes('-100%') ? 'none' : 'polygon(0 0, 100% 0, 100% 100%)',
+        <div
+          className='absolute -bottom-2 left-1/2 h-4 w-4 -translate-x-1/2 rotate-45 border-b border-r border-[var(--accent)] bg-[var(--glass-bg)]'
+          style={{
+            clipPath: styles.transform?.includes('-100%')
+              ? 'none'
+              : 'polygon(0 0, 100% 0, 100% 100%)',
             top: styles.transform?.includes('-100%') ? 'auto' : '-8px',
             bottom: styles.transform?.includes('-100%') ? '-8px' : 'auto',
-            transform: styles.transform?.includes('-100%') ? 'translateX(-50%) rotate(45deg)' : 'translateX(-50%) rotate(-135deg)',
+            transform: styles.transform?.includes('-100%')
+              ? 'translateX(-50%) rotate(45deg)'
+              : 'translateX(-50%) rotate(-135deg)',
           }}
         />
       </div>

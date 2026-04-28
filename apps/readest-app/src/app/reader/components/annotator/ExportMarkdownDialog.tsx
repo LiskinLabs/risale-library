@@ -153,7 +153,9 @@ const ExportMarkdownDialog: React.FC<ExportMarkdownDialogProps> = ({
 
       // Add export date
       if (exportConfig.includeDate) {
-        lines.push(`**${_('Exported from Risale Digital Library')}**: ${new Date().toISOString().slice(0, 10)}`);
+        lines.push(
+          `**${_('Exported from Risale Digital Library')}**: ${new Date().toISOString().slice(0, 10)}`,
+        );
         lines.push('');
       }
 

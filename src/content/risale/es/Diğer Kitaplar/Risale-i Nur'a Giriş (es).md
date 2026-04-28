@@ -1,8 +1,8 @@
 ---
 title: "Risale-i Nur'a Giriş 1 (es)"
 book: "Risale-i Nur'a Giriş 1"
-dir: "ltr"
-category: "other"
+dir: 'ltr'
+category: 'other'
 ---
 
 ## İçindekiler (Contents)
@@ -13,7 +13,6 @@ category: "other"
 - ¿Necesita Allah nuestra adoración?
 
 ---
-
 
 Risale-i Nur
 
@@ -64,7 +63,6 @@ Cenab-i Hak no necesita tu adoración, ciertamente no necesita nada. Pero tú ne
 
 ---
 
-
 hacia Risale-i Nur
 
 **¿Puedes permanecer joven para siempre?**
@@ -94,7 +92,7 @@ Nosotros también debemos seguir el camino de la fe y el camino recto, que es to
 
 **Nuestra juventud se nos va rápidamente**
 
- la juventud sin duda se irá. En la certeza de que el verano da lugar al otoño, el día se transforma en atardecer y noche, la juventud también se transformará en ancianidad y muerte. Si uno usa su efímera juventud transitoria para las bondades en la esfera del camino recto, todos los edictos celestiales dan buena noticia que a través de esto ganará una juventud eterna. Si la gasta para la lujuria, tal como cometer un asesinato por causa de un minuto de ira, hace que uno sufra millones de minutos de castigo de cárcel; asimismo los gozos y placeres de la juventud en la esfera ilícita, aparte de los lamentos y pecados que vienen de la responsabilidad para el Más Allá, de la tortura de la tumba y de su desaparición, y aparte de sus castigos mundanos, cada joven razonable confirma con experiencia que en el mismo placer existen dolores mayores que ese placer.
+la juventud sin duda se irá. En la certeza de que el verano da lugar al otoño, el día se transforma en atardecer y noche, la juventud también se transformará en ancianidad y muerte. Si uno usa su efímera juventud transitoria para las bondades en la esfera del camino recto, todos los edictos celestiales dan buena noticia que a través de esto ganará una juventud eterna. Si la gasta para la lujuria, tal como cometer un asesinato por causa de un minuto de ira, hace que uno sufra millones de minutos de castigo de cárcel; asimismo los gozos y placeres de la juventud en la esfera ilícita, aparte de los lamentos y pecados que vienen de la responsabilidad para el Más Allá, de la tortura de la tumba y de su desaparición, y aparte de sus castigos mundanos, cada joven razonable confirma con experiencia que en el mismo placer existen dolores mayores que ese placer.
 
 Por ejemplo, por causa de muchos defectos en amar lo prohibido como el dolor de la envidia, dolor de la separación y dolor de no recibir respuesta, ese placer pequeño se vuelve en una miel venenosa.
 Si quieres saber que caerás en el hospital por causa de la enfermedad que viene por el mal uso de la juventud, en cárceles por sus desmesuras, en los bares, lugares de diversiones ilícitos o cementerios por las angustias que surgen de la desnutrición del corazón y espíritu, y de la falta de cumplir su deber, vete y pregunta a los hospitales, cárceles, bares y cementerios. Con seguridad, generalmente escucharás lamentos, llantos y arrepentimientos por el mal uso y desmesuras de la juventud de los jóvenes, y por las bofetadas que vienen como el castigo de los placeres ilícitos. Si sigue el camino recto, la juventud siendo un otorgamiento muy agradable y bello, y un medio de bondad, que es muy dulce y fuerte, resultará en una juventud muy brillante y eterna en el Más Allá; en primer lugar el Corán con muchas aleyas suyas, todos los libros y edictos celestiales informan y dan buenas noticias de esto.
@@ -113,7 +111,6 @@ Ya que la realidad es esto; ya que la esfera de lo lícito es suficiente para el
 
 ---
 
-
 Risale-i Nur
 
 **¿Por qué Allah nos envía enfermedades y dificultades?**
@@ -123,41 +120,41 @@ De la misma manera, para manifestar las perfecciones de Su arte a través de los
 Con la pluma del decreto y de la determinación divina, inscribe ese cuerpo, mostrando así la manifestación de sus nombres. Y, además, a cada uno le otorga una perfección, un placer y una luz espiritual, de un modo acorde a él y como recompensa.
 
 ¿Acaso algún ser tiene derecho a decirle a Sani-i Zulcelal que manifiesta el misterio de " El Soberano absoluto hace lo que quiere en Su reino": "me estás causando molestias. Estás perturbando mi descanso"?
- ¡No, jamás! Las criaturas no tienen derecho en ningún aspecto frente a Vacibul Vucud, ni pueden reclamar derechos. Más bien, su deber es agradecer y alabar constantemente, cumpliendo con el derecho de las diferentes etapas de existencia que se les ha otorgado. Porque todas las etapas de existencia otorgadas son hechos que requieren una causa. Pero las etapas no otorgadas son posibilidades, y las posibilidades son inexistencia, y la inexistencia no requiere una causa, además, la inexistencia es infinita. Lo infinito no puede tener una causa. Por ejemplo, los minerales no pueden decir: "¿Por qué no nos convertimos en plantas?" No pueden quejarse; más bien, su derecho es agradecer a su Creador por haber sido dotados con la existencia mineral. Las plantas no pueden quejarse diciendo: "¿Por qué no me convertí en un animal?", sino que su derecho es agradecer por haber sido dotadas de vida junto con la existencia. Los animales no pueden quejarse diciendo: "¿Por qué no me convertí en un ser humano?", sino que al haber sido dotados con la existencia y la vida junto con una esencia valiosa llamada alma, su derecho es agradecer. Y así, se puede continuar haciendo comparaciones.
+¡No, jamás! Las criaturas no tienen derecho en ningún aspecto frente a Vacibul Vucud, ni pueden reclamar derechos. Más bien, su deber es agradecer y alabar constantemente, cumpliendo con el derecho de las diferentes etapas de existencia que se les ha otorgado. Porque todas las etapas de existencia otorgadas son hechos que requieren una causa. Pero las etapas no otorgadas son posibilidades, y las posibilidades son inexistencia, y la inexistencia no requiere una causa, además, la inexistencia es infinita. Lo infinito no puede tener una causa. Por ejemplo, los minerales no pueden decir: "¿Por qué no nos convertimos en plantas?" No pueden quejarse; más bien, su derecho es agradecer a su Creador por haber sido dotados con la existencia mineral. Las plantas no pueden quejarse diciendo: "¿Por qué no me convertí en un animal?", sino que su derecho es agradecer por haber sido dotadas de vida junto con la existencia. Los animales no pueden quejarse diciendo: "¿Por qué no me convertí en un ser humano?", sino que al haber sido dotados con la existencia y la vida junto con una esencia valiosa llamada alma, su derecho es agradecer. Y así, se puede continuar haciendo comparaciones.
 
 #### (Las Cartas — 296)
 
 **¿Cuál es el mensaje que Dios nos da con las enfermedades?**
 
-   **PRIMER REMEDIO**
+**PRIMER REMEDIO**
 
-   ¡Oh desesperado enfermo! No te preocupes, sino ten paciencia. Tu enfermedad no es una aflicción, sino que es un tipo de remedio para ti. Porque el transcurso de la vida es un capital y se está yendo. Si no se encuentra su fruto, se pierde. Además si es con comodidad y negligencia pasa muy rápido. La enfermedad provoca que ese capital tuyo se vuelva fructífero, con grandes beneficios.
+¡Oh desesperado enfermo! No te preocupes, sino ten paciencia. Tu enfermedad no es una aflicción, sino que es un tipo de remedio para ti. Porque el transcurso de la vida es un capital y se está yendo. Si no se encuentra su fruto, se pierde. Además si es con comodidad y negligencia pasa muy rápido. La enfermedad provoca que ese capital tuyo se vuelva fructífero, con grandes beneficios.
 Además no permite que la vida pase rápidamente, la mantiene y la prolonga… para que se vaya después de dar sus frutos.
 Así, como una indicación a que la duración de la vida se vuelve larga a través de la enfermedad, este proverbio se pasea por las lenguas: "El tiempo de la calamidad es muy largo, el tiempo del bienestar dura muy poco."
 
-   **SEGUNDO REMEDIO**
+**SEGUNDO REMEDIO**
 
-   ¡Oh impaciente enfermo! Ten paciencia, o mejor da gracias. Esta enfermedad tuya puede transformar cada minuto de la duración de la vida, en una hora de adoración. Porque la adoración es de dos tipos:
+¡Oh impaciente enfermo! Ten paciencia, o mejor da gracias. Esta enfermedad tuya puede transformar cada minuto de la duración de la vida, en una hora de adoración. Porque la adoración es de dos tipos:
 Uno es la adoración positiva, que son conocidas adoraciones, como oraciones rituales e invocaciones.
 El otro tipo son las adoraciones negativas; mediante las enfermedades y calamidades, aquel que sufre la calamidad percibe su inhabilidad y debilidad. Se refugia en su Halki-i Rahim, suplica a Él. Alcanza una pura adoración espiritual sin hipocresía.
 Sí, la vida que pasa con enfermedad, con la condición de no quejarse de Allah, – hay narraciones auténticas – se considera como adoración para el creyente. Incluso es contundente con la narración auténtica, y veraces descubrimientos espirituales, que un minuto de enfermedad de algunos enfermos que tienen paciencia y que dan agradecimientos, se considera como una hora de adoración, y un minuto de algunos virtuosos se considera como un día de adoración.
 No te quejes de la enfermedad que transforma un minuto de tu vida en mil minutos, y que hace que ganes una vida larga; sino que da gracias a ella.
 
-   **TERCER REMEDIO**
+**TERCER REMEDIO**
 
-   ¡Oh enfermo intolerante! El ser humano vino a este mundo no para vivir en comodidad y recibir placer; el testigo de esto es que aquellos que vienen permanentemente se van, los jóvenes se envejecen y se revuelcan continuamente en destrucción y separación.
+¡Oh enfermo intolerante! El ser humano vino a este mundo no para vivir en comodidad y recibir placer; el testigo de esto es que aquellos que vienen permanentemente se van, los jóvenes se envejecen y se revuelcan continuamente en destrucción y separación.
 Además, a pesar de que el ser humano es el más perfecto, más elevado y más rico de los seres vivos, respecto a las herramientas, a pesar de que ciertamente es como el sultán de los seres vivos; por medio de pensar en los placeres pasados y calamidades que vendrán, pasa una vida en un nivel muy bajo, con dolores y dificultades en comparación con el animal.
 Es decir, el ser humano vino a este mundo no solamente para vivir bien y pasar una vida con comodidad y paz, sino que el ser humano que tiene un gran capital en sus manos, vino a trabajar para la dicha de una vida eterna y permanente, a través de un negocio aquí. En cuanto al capital que se le dio a sus manos, es la duración de la vida. Si no existe la enfermedad, la salud y bienestar provocan negligencia, muestran el mundo como agradable y lo hacen que uno olvide el Más Allá. Uno no quiere recordar la tumba ni la muerte; hacen que uno gaste el capital de su vida en vano.
 En cuanto a la enfermedad, de repente provoca que uno abra sus ojos. Le dice a su cuerpo: "No eres inmortal ni independiente, sino que tienes un deber. Deja el orgullo, piensa en tu creador, sabes tú que irás a la tumba, y prepárate según esto."
 Así, en este punto de vista, la enfermedad es una aconsejadora que de ninguna manera engaña, y un guía que advierte. Y menos quejarse de ella, sino que se debe dar gracias en este aspecto, si se pone más grave se debe pedir paciencia.
 
-   **CUARTO REMEDIO**
+**CUARTO REMEDIO**
 
-   ¡Oh enfermo quejumbroso! Lo que mereces tú no es quejarse, sino dar gracias y tener paciencia. Porque tu cuerpo, tus órganos y herramientas no son tu propiedad. Tú no los hiciste ni los compraste desde otras mesas de trabajo. Es decir, son la propiedad de otro. Su dueño subyuga sobre su propiedad como él quiera.
+¡Oh enfermo quejumbroso! Lo que mereces tú no es quejarse, sino dar gracias y tener paciencia. Porque tu cuerpo, tus órganos y herramientas no son tu propiedad. Tú no los hiciste ni los compraste desde otras mesas de trabajo. Es decir, son la propiedad de otro. Su dueño subyuga sobre su propiedad como él quiera.
 Tal como se dijo en la Vigesimosexta Palabra, un artista que es muy hábil y muy rico, para mostrar su arte bello y su riqueza valorable, con un propósito de que una persona miserable cumpla el deber de un modelo a cambio de un pago, durante una hora, hace que ese pobre vista una camisa o una vestimenta que él cosió con mucho arte y adornos. Trabaja sobre ella y le da diferentes formas. Para mostrar las maravillosas especies de su arte, la corta, cambia, la alarga y acorta.
 Acaso si esta miserable persona pagada dijera al artista: "Me causas molestias con este trabajo, me estás dando problema por las situaciones, me haces inclinar y levantarme, y corrompes mi belleza cortando y acortando esta camisa que me embellece." ¿Tiene derecho de decir esto? ¿Puede decir: Actuaste sin compasión e injustamente?
 
-   Tal como este ejemplo, ¡oh enfermo!, Sani-i Zulcelal te vistió con una camisa de cuerpo, que está adornada con sentimientos luminosos como ojos, orejas, mente y corazón; para mostrar los bordados de los bellos nombres divinos, te cambia en muchos estados, te varia en muchas situaciones. Del mismo modo que tú conoces su nombre de Rezzak a través del hambre, que sepas su nombre de Shafi a través de tu enfermedad. Debido a que los dolores y calamidades muestran las reglas de algunos nombres suyos, existen destellos desde la sabiduría, rayos desde la misericordia y muchas bellezas dentro de esos rayos. Si se abre el velo, encontrarás agradables sentidos bellos atrás del velo de la enfermedad que temes y odias.
+Tal como este ejemplo, ¡oh enfermo!, Sani-i Zulcelal te vistió con una camisa de cuerpo, que está adornada con sentimientos luminosos como ojos, orejas, mente y corazón; para mostrar los bordados de los bellos nombres divinos, te cambia en muchos estados, te varia en muchas situaciones. Del mismo modo que tú conoces su nombre de Rezzak a través del hambre, que sepas su nombre de Shafi a través de tu enfermedad. Debido a que los dolores y calamidades muestran las reglas de algunos nombres suyos, existen destellos desde la sabiduría, rayos desde la misericordia y muchas bellezas dentro de esos rayos. Si se abre el velo, encontrarás agradables sentidos bellos atrás del velo de la enfermedad que temes y odias.
 
 #### (Los Destellos — 216)
 
@@ -168,7 +165,6 @@ Acaso si esta miserable persona pagada dijera al artista: "Me causas molestias c
 - ¿Quieres entender cuán valiosa es una persona?
 
 ---
-
 
 Risale-i Nur
 
@@ -185,7 +181,7 @@ Así, ¡oh ser humano sin confianza en Allah! Tú también entra en razón como 
 #### (Palabras — 314)
 
 **¿Por qué se crearon los demonios?**
- ¿Cuál es la sabiduría detrás de que Cenab-i Hak haya creado a Satanás y los males? ¿Es la creación del mal en sí misma un mal? La creación del mal es mal, la creación de lo repugnante es repugnante.
+¿Cuál es la sabiduría detrás de que Cenab-i Hak haya creado a Satanás y los males? ¿Es la creación del mal en sí misma un mal? La creación del mal es mal, la creación de lo repugnante es repugnante.
 Respuesta: ¡de ninguna manera! La creación del mal no es un mal; más bien, la adquisición del mal es lo que es malo. Porque la creación y la existencia de algo abarcan todos los resultados posibles, mientras que la adquisición se refiere a una acción específica y por lo tanto, a resultados específicos. Por ejemplo, la llegada de la lluvia tiene miles de resultados, todos los cuales son buenos. Si algunas personas, por su mal uso de la voluntad sufren daños por la lluvia, no pueden decir: "La creación de la lluvia no es una misericordia" o "La creación de la lluvia es un mal". Más bien, debido a su mal uso de la voluntad y la adquisición, la lluvia se convirtió en un mal para ellos. Del mismo modo, la creación del fuego tiene muchos beneficios, todos los cuales son buenos. Si algunas personas sufren daños por el fuego debido a su mal uso o mala gestión, no pueden decir: "La creación del fuego es un mal". Porque el fuego no fue creado solo para quemar a esas personas; más bien, ellas por su mal uso de la voluntad metieron la mano en el fuego, que cocinaba su comida, y convirtieron a ese sirviente en un enemigo.
 En resumen: se acepta un pequeño mal por un gran bien. Si se omite un mal menor para evitarlo, lo que resulta en un gran bien, entonces se comete un gran mal. Por ejemplo, enviar tropas al combate ciertamente implica algunos daños y males físicos y materiales menores. Sin embargo, en esa lucha hay un gran bien: el Islam se salva de ser conquistado por los incrédulos. Si se evita la lucha para evitar ese mal menor, entonces, una vez que se pierde el gran bien, surge un gran mal. Eso es, en sí mismo, una gran injusticia. De manera similar, amputar un dedo gangrenado, que debe ser cortado, es un bien y es beneficioso, aunque aparentemente es un mal. Si no se corta el dedo, se debe amputar la mano; y entonces, el mal es mayor.
 
@@ -213,7 +209,6 @@ Si la incredulidad, que consta del corte de la relación entra en el ser humano,
 
 ---
 
-
 Risale-i Nur
 
 **La muerte es el comienzo de una nueva vida**
@@ -231,7 +226,7 @@ Luego, ¡ven y mira la primavera que es el área de la resurrección anual! Pon 
 Por ejemplo, esta semilla diminuta se volvió en una higuera. Empezó a difundir los otorgamientos de Fatir-i Hakím sobre nuestras cabezas. Los dispersa; nos los lanza con las manos de sus ramas. Aquí está, estas dos semillas pequeñas que se parecen a ella aparentemente, dieron flores como girasol y pensamiento. Se adornaron para nosotros. Están sonriendo hacía nuestra cara, hacen que las amemos.
 Algunas otras semillas aquí dieron estas frutas bellas, dieron brotes y se volvieron en árboles. A través de sus sabores deliciosos, aromas dulces, formas lindas, abren nuestro apetito y nos invitan a sus seres; y sacrifican a sí mismos a sus clientes, así que suben desde el grado de la vida vegetal a la vida animal.
 Así, sucesivamente puedes comparar. Esas semillas se expandieron tanto, de una manera que ese solo puñado se volvió en un jardín lleno, con varios árboles y diversas flores. No existe alguna falta o defecto en él.
-  "Vuelve tu mirada una y otra vez: ¿acaso ves algún defecto?"
+"Vuelve tu mirada una y otra vez: ¿acaso ves algún defecto?"
 (Corán 67:3)
 
 Muestra el misterio de cada semilla, con la manifestación y otorgamiento del Nombre de Hafíz, mantiene y muestra sin confusión ni defecto la herencia que su padre y antepasado dieron desde su propiedad.
@@ -249,7 +244,7 @@ Por ejemplo, alguien puede pedir un hijo varón. Cenab-i Hak, en su lugar, le co
 Cuarta Sutileza: el fruto más hermoso, más delicado, más delicioso y más inmediato de la súplica es que la persona que suplica sabe que hay Alguien que escucha su voz, que le ofrece remedio a su aflicción, que le muestra misericordia. Sabe que la mano poderosa de ese Ser puede alcanzar todo. En esta gran posada del mundo, no está solo; hay un Ser Generoso que lo mira y le da consuelo. Además, ese Ser puede satisfacer sus necesidades infinitas y alejar a sus enemigos infinitos. Al imaginarse en la presencia de un Ser así, siente una alegría y una expansión en su corazón, como si se quitara un peso tan grande como el mundo de sus hombros y dijera: ٱلۡحَمۡدُ لِلَّهِ رَبِّ ٱلۡعَٰلَمِينَ.
 Quinta Sutileza: la súplica es el espíritu de la servidumbre y el resultado de una fe pura. Porque la persona que suplica muestra a través de su súplica, que hay Alguien que gobierna todo el universo, que está al tanto de los asuntos más pequeños y que puede hacer realidad los deseos más lejanos, que ve cada uno de sus estados y escucha su voz. Entonces, debe estar escuchando todas las voces de toda la creación, porque escucha también la suya. Él es quien hace todas esas cosas, por lo que confío en Él y le pido a Él incluso en los asuntos más pequeños. Observa la amplitud de la fe pura en la unidad divina que da la súplica y la dulzura y pureza de la luz de la fe en Allah que muestra. Entiende el misterio de قُلۡ مَا يَعۡبَؤُاْ بِكُمۡ رَبِّي لَوۡلَا دُعَآؤُكُمۡ y escucha el mandato de وَقَالَ رَبُّكُمُ ٱدۡعُونِي.
 
-#### (Cartas:  la Carta Vigésima Cuarta)
+#### (Cartas: la Carta Vigésima Cuarta)
 
 **La regla más importante del Islam: ¿Qué es el Ikhlás (sinceridad)?**
 En su obra debe existir la complacencia divina. Si Él se complaciera y todo el mundo se ofendiera, no tiene importancia. Si Él aceptara y toda la gente rechazara, no tiene influencia. Después de que Él está complacido y acepta, si Él quiere y Su sabiduría lo requiere, a pesar de que ustedes no tienen la demanda de desear, Él hace que la gente acepte, también hace que la gente esté complacida. Es por eso, que en este servicio se debe hacer directa y solamente de la complacencia de Cenab-i Hak el propósito principal.
@@ -262,7 +257,6 @@ En su obra debe existir la complacencia divina. Si Él se complaciera y todo el 
 - Una persona muy bruta entró y miró en un palacio
 
 ---
-
 
 hacia Risale-i Nur
 
@@ -294,7 +288,6 @@ Nosotros también decimos: ¡Oh estúpido borracho que se volvió en el más est
 
 ---
 
-
 hacia Risale-i Nur
 
 **11 palabras que refrescan el corazón**
@@ -324,7 +317,7 @@ Novena Palabra:
 
 Décima Palabra:
 وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ
- Es decir: Él es Vahid, Uno, Ehád, Único y Todopoderoso. Nada es difícil para Él. Crear una primavera es fácil como una flor. Crear el Paraíso es cómodo como una primavera para Él. Sus infinitos seres con arte que Él crea nuevamente cada día, cada año y cada siglo, atestiguan con infinitas lenguas Su infinito poder.
+Es decir: Él es Vahid, Uno, Ehád, Único y Todopoderoso. Nada es difícil para Él. Crear una primavera es fácil como una flor. Crear el Paraíso es cómodo como una primavera para Él. Sus infinitos seres con arte que Él crea nuevamente cada día, cada año y cada siglo, atestiguan con infinitas lenguas Su infinito poder.
 Así que esta palabra también da buena noticia. Dice: ¡Oh ser humano! El servicio que has hecho, la adoración que has cumplido, no va en vano. Se preparó una morada de recompensa y un lugar de dicha para ti. En lugar de este efímero mundo tuyo, un paraíso eterno te espera.
 Ten fe y confianza en la promesa del Halik-i Zulcelal, Creador Majestuoso que le adoras y conoces. Para Él, no cumplir la palabra es imposible. En su poder de ninguna manera existe carencia. La inhabilidad no puede interferir en sus obras. Tal como crea tu pequeño jardín, también puede crear el Paraíso para ti, ya lo creó y lo prometió a ti. Debido a que Él prometió, seguramente te tomará dentro de él.
 Ya que vemos con nuestros ojos que junta y difunde con total orden y equilibrio, con total velocidad y facilidad más de trescientas mil especies y naciones de animales y plantas cada año en la faz de la tierra, seguramente un Kadir-i Zulcelal, Todopoderoso y Majestuoso como esto, es capaz de cumplir Su promesa.
@@ -349,7 +342,6 @@ Además esta palabra da buena noticia así; dice: "¡Oh ser humano! No alucinen 
 
 ---
 
-
 hacia Risale-i Nur
 
 **¿Cómo se prueba por sí mismo el aspecto literario del Corán?**
@@ -367,7 +359,7 @@ Sin embargo, eligieron un camino largo y peligroso como la guerra. Eso quiere de
 #### (La Palabra Vigésimo Quinta)
 
 **Evidencia de la existencia de los ángeles**
- Observa este ejemplo y comprende: dos hombres, uno un beduino salvaje y el otro un hombre civilizado y sensato, se hacen amigos y viajan a una ciudad majestuosa como Estambul. En un rincón lejano de esa magnífica ciudad, encuentran una pequeña casa ruinosa y sucia, que es también una fábrica. Observan que esa casa está llena de trabajadores pobres y miserables. Dentro de la fábrica, estos hombres están trabajando en condiciones difíciles. Alrededor de esa casa, hay muchos seres vivos, pero cada uno tiene sus propias condiciones de vida y su manera de alimentarse. Algunos solo se alimentan de plantas, mientras que otros solo comen pescado. Ambos hombres ven esta escena. Luego miran a lo lejos y ven cientos de palacios adornados y espléndidos castillos. En el centro de esos palacios, hay grandes talleres y amplias plazas. Debido a la distancia, o tal vez a la debilidad de su vista, o porque los habitantes de esos palacios están ocultos, esos habitantes no son visibles para los dos hombres. Además, las condiciones de vida que se ven en la pequeña casa no existen en los palacios. El beduino salvaje, que nunca ha visto una ciudad, dice basándose en estas razones: "esos palacios están vacíos, no tienen habitantes ni seres vivos", y así expresa un juicio increíblemente ignorante.
+Observa este ejemplo y comprende: dos hombres, uno un beduino salvaje y el otro un hombre civilizado y sensato, se hacen amigos y viajan a una ciudad majestuosa como Estambul. En un rincón lejano de esa magnífica ciudad, encuentran una pequeña casa ruinosa y sucia, que es también una fábrica. Observan que esa casa está llena de trabajadores pobres y miserables. Dentro de la fábrica, estos hombres están trabajando en condiciones difíciles. Alrededor de esa casa, hay muchos seres vivos, pero cada uno tiene sus propias condiciones de vida y su manera de alimentarse. Algunos solo se alimentan de plantas, mientras que otros solo comen pescado. Ambos hombres ven esta escena. Luego miran a lo lejos y ven cientos de palacios adornados y espléndidos castillos. En el centro de esos palacios, hay grandes talleres y amplias plazas. Debido a la distancia, o tal vez a la debilidad de su vista, o porque los habitantes de esos palacios están ocultos, esos habitantes no son visibles para los dos hombres. Además, las condiciones de vida que se ven en la pequeña casa no existen en los palacios. El beduino salvaje, que nunca ha visto una ciudad, dice basándose en estas razones: "esos palacios están vacíos, no tienen habitantes ni seres vivos", y así expresa un juicio increíblemente ignorante.
 
 El segundo hombre dice: "¡Oh, desdichado! Estás viendo esta pequeña y despreciable casa llena de seres vivos y trabajadores, y hay alguien que siempre los renueva y los emplea. Mira, no hay un solo rincón de esta casa que esté vacío, está llena de seres vivos. ¿Cómo es posible que esos palacios ordenados, llenos de sabiduría y adornados artísticamente que vemos a lo lejos, no tengan habitantes nobles acordes con su grandeza? Es obvio que esos palacios están completamente llenos, y los habitantes de allí tienen sus propias condiciones de vida. En lugar de hierba, pueden comer pasteles; en lugar de pescado, pueden comer dulces. Que no los veamos debido a la distancia, a la incapacidad de tu vista o porque ellos están ocultos, no es de ninguna manera una prueba de que no existan. No verlos no significa que no existan. No ver algo no es una prueba de su inexistencia."
 Al igual que en el ejemplo anterior, a pesar de la insignificancia y densidad de la tierra entre los cuerpos celestiales y planetarios, es hogar de innumerables seres vivos, conscientes y con alma, y hasta sus partes más viles y sucias se han convertido en fuentes de vida y lugares de reunión para microorganismos. Esto demuestra, sin duda, con certeza absoluta, que el vasto espacio infinito y los majestuosos cielos, con sus torres y estrellas, están llenos de seres conscientes, vivos y dotados de alma. Aquellos que son creados a partir de fuego, luz, oscuridad, aire, sonido, fragancia, palabras, éter e incluso electricidad y otras substancias sutiles y ligeras, son nombrados por la Sharia esplendorosa de Muhammed (Aleyhissalatu Vesselam) y el Corán de Milagrosa Exposición como "ángeles, genios y seres espirituales". Los ángeles, como los cuerpos, también tienen especies de diferentes tipos. Un ángel encargado de una gota de lluvia no es del mismo tipo que el ángel encargado del sol. Los genios y los seres espirituales también tienen muchas especies diferentes.
@@ -375,10 +367,10 @@ Al igual que en el ejemplo anterior, a pesar de la insignificancia y densidad de
 #### (La Palabra Vigésimo Novena)
 
 **¿Necesita Allah a los ángeles?**
-Azrail Aleyhisselam suplicó a Cenáb-i Hak, Altísimo Verdadero y dijo: "Tus siervos se ofenderán y se quejarán de mí, en mi deber como receptáculo de los espíritus". En respuesta a él se dijo: "Haré de las enfermedades y calamidades un velo sobre tu deber, para que las quejas de mis siervos vayan a ellos y no a ti". Al igual que estos velos, el deber de Azrail Aleyhisselam también es un velo. 
-Para que las quejas injustas no lleguen a Cenab-i Hak. Porque no todos pueden ver el aspecto de la sabiduría, la misericordia, la belleza y el beneficio en la muerte. Mira la apariencia y objeta, y empieza a quejarse. Así, por la razón de que estas quejas injustas no vayan a Rahim-i Mutlak, Absolutamente Compasivo, Azrail Aleyhisselam ha sido un velo. 
+Azrail Aleyhisselam suplicó a Cenáb-i Hak, Altísimo Verdadero y dijo: "Tus siervos se ofenderán y se quejarán de mí, en mi deber como receptáculo de los espíritus". En respuesta a él se dijo: "Haré de las enfermedades y calamidades un velo sobre tu deber, para que las quejas de mis siervos vayan a ellos y no a ti". Al igual que estos velos, el deber de Azrail Aleyhisselam también es un velo.
+Para que las quejas injustas no lleguen a Cenab-i Hak. Porque no todos pueden ver el aspecto de la sabiduría, la misericordia, la belleza y el beneficio en la muerte. Mira la apariencia y objeta, y empieza a quejarse. Así, por la razón de que estas quejas injustas no vayan a Rahim-i Mutlak, Absolutamente Compasivo, Azrail Aleyhisselam ha sido un velo.
 Asimismo, los deberes de todos los ángeles, y quizás de todas las causas aparentes, son los velos de la majestad de rububiyet. Para que la gloria y la santidad del Poder Divino y la abarcatividad de Su misericordia se preserven en las cosas cuya belleza no se ven y cuya sabiduría se desconoce, para que no sean el objeto de objeción, y para que no se vea a la mirada aparente el contacto del poder divino con cosas pequeñas, insignificantes y despiadadas.
-Por lo demás, Risale-i Nur ha demostrado con sus innumerables evidencias que ninguna causa tiene ningún efecto o capacidad real para crear algo, y que los sellos del monoteísmo en todo muestran esto con certeza. Crear es exclusivo de Él. 
+Por lo demás, Risale-i Nur ha demostrado con sus innumerables evidencias que ninguna causa tiene ningún efecto o capacidad real para crear algo, y que los sellos del monoteísmo en todo muestran esto con certeza. Crear es exclusivo de Él.
 Las causas son sólo un velo. Aquellos que son conscientes, como los ángeles, no tienen nada en su poder más que una especie de servicio innato y una especie de adoración práctica, llamada kesb, que es parcial, sin creación y basada en su voluntad parcial. Sí, la dignidad y grandeza requieren que las causas sean un velo de la mano del poder divino a los ojos de la mente. El monoteísmo y la unidad divina…
 
 #### (El Undécimo Rayo – Undécimo Tema)
@@ -391,21 +383,20 @@ Las causas son sólo un velo. Aquellos que son conscientes, como los ángeles, n
 
 ---
 
-
- hacia Risale-i Nur
+hacia Risale-i Nur
 
 **oh ser humano sin oración ritual, y oh mi nefs que no le gusta la oración ritual!**
 
-En cuanto a ese rey, es nuestro Rab, Señor, nuestro Halik, Creador. En cuanto a esos dos sirvientes viajeros; uno es el devoto que cumple las oraciones rituales con fervor. El otro son las personas negligentes sin oración ritual. En cuanto a esos veinticuatro oros, es la vida de cada día de veinticuatro horas. En cuanto a esa finca especial, es el Paraíso. 
-En cuanto a esa estación, es la tumba. En cuanto a ese viaje, es el viaje del ser humano que irá a la tumba, a la resurrección y a la eternidad. Según las obras y según la abstención de los pecados, atraviesan ese camino largo en distintos grados. Alguna gente devota que abstiene de los pecados, atraviesa un camino de mil años durante un día, como un relámpago. 
+En cuanto a ese rey, es nuestro Rab, Señor, nuestro Halik, Creador. En cuanto a esos dos sirvientes viajeros; uno es el devoto que cumple las oraciones rituales con fervor. El otro son las personas negligentes sin oración ritual. En cuanto a esos veinticuatro oros, es la vida de cada día de veinticuatro horas. En cuanto a esa finca especial, es el Paraíso.
+En cuanto a esa estación, es la tumba. En cuanto a ese viaje, es el viaje del ser humano que irá a la tumba, a la resurrección y a la eternidad. Según las obras y según la abstención de los pecados, atraviesan ese camino largo en distintos grados. Alguna gente devota que abstiene de los pecados, atraviesa un camino de mil años durante un día, como un relámpago.
 Algunos otros atraviesan una distancia de cincuenta mil años durante un día. El Corán de Sublime Gloria indica esta verdad con sus dos aleyas. En cuanto a ese boleto, es la oración ritual. Una sola hora es suficiente para cinco oraciones rituales con la ablución. Acaso aquel que gasta veintitrés horas suyas para esa corta vida mundana, y que no utiliza una hora suya para esa larga vida eterna, pierde tanto, se tiraniza tanto a sí mismo y actúa tanto contra la razón. Porque si la mente acepta dar la mitad de su propiedad para el juego de lotería, en que mil personas participarán; sin embargo la posibilidad de ganar es una milésima.
 Sin embargo, en la oración ritual, el espíritu, corazón y mente tienen una paz muy enorme. Tampoco es algo tan pesado para el cuerpo. También otras ordinarias obras mundanas de la persona que cumple las oraciones rituales, se vuelven en adoración a través de una intención buena. De esta manera uno puede atribuir todo el capital de su vida para el Más Allá. Transforma su vida efímera en una vida eterna en cierto aspecto.
 
 #### (La Cuarta Palabra)
 
 **Un recordatorio importante para quienes tienen dificultad en la adoración**
-¡Oh mi nefs que adora al mundo! 
-¿Acaso tu fastidio en la adoración, y tu falta en la oración ritual vienen de la multiplicidad de las ocupaciones mundanas, o es porque no puedes encontrar tiempo por la ocupación para la lucha del sustento? 
+¡Oh mi nefs que adora al mundo!
+¿Acaso tu fastidio en la adoración, y tu falta en la oración ritual vienen de la multiplicidad de las ocupaciones mundanas, o es porque no puedes encontrar tiempo por la ocupación para la lucha del sustento?
 ¿Acaso fuiste creado solamente para el mundo, así que gastas todo el tiempo para él? Tú sabes que con respecto a la habilidad, eres superior a todos los animales, y no puedes alcanzar a un gorrión con respecto al poder para obtener las cosas necesarias de la vida mundana. ¿Por qué no entiendes esto, que el verdadero deber tuyo no es esforzarse como el animal, sino que es trabajar para una verdadera vida duradera, como un verdadero ser humano. Sin embargo, a lo que le llamas ocupaciones mundanas, la mayoría de ellas son las ocupaciones inútiles que no pertenecen a ti, interfieres en ellas en vano y las complicas. Dejas el asunto más esencial y pasas tu tiempo con las informaciones más innecesarias, como si tuvieras miles de años de vida. Por ejemplo: ¿Cuál es la cualidad de los anillos de Saturno, y cuántas gallinas hay en América? Pasas tu tiempo valioso con las cosas insignificantes como estas. Como si recibieras una virtud desde la cosmografía y la ciencia de estadística.
 
 Si dices: "Lo que me priva de la oración ritual y adoración, y lo que me fastidia, no son las cosas innecesarias como ellas, sino que son los trabajos indispensables de la lucha para el sustento." En cuyo caso yo también te digo: Si tú hicieras un trabajo diario por cien centavos, luego viniera alguien y te dijera: "Ven, excava aquí durante diez minutos, encontrarás un diamante y esmeralda de cien liras." Si tú le dijeras: "No, no voy. Porque quitarán diez centavos desde mi retribución diaria, disminuirá mi sustento." Seguramente sabes que es un pretexto tan lunático. Del mismo modo, tú trabajas en este jardín tuyo para tu sustento. Si dejas las oraciones rituales, el fruto de todo tu trabajo quedará restringido a un sustento mundano, sin importancia ni abundancia. Si tú utilizas el tiempo de descanso y respiro para las oraciones rituales, que proporcionan la paz del espíritu y el respiro del corazón, entonces, aparte de un sustento mundano con abundancia, encontrarás dos minas espirituales, que son una fuente importante para tu alimento y sustento en el Más Allá:
@@ -421,7 +412,7 @@ Observa los árboles frutales y las plantas, que al ser seres vivos necesitados 
 mientras que la confianza en Allah y la satisfacción son medios para recibir misericordia.
 Además, dentro del ámbito humano, la nación judía, que se aferra al mundo con más codicia que cualquier otra, y que se apega con amor a la vida mundana, ha recibido la bofetada de la humillación, la miseria, el asesinato y la traición de todas las demás naciones, debido a la riqueza ilícita y usuraria que han acumulado con gran esfuerzo, pero que solo les ha servido como tesoreros de esa riqueza con poco beneficio para ellos mismos. Esto muestra claramente que la codicia es la fuente de la humillación y la pérdida.
 
-También, un hombre codicioso siempre cae en pérdidas, 
+También, un hombre codicioso siempre cae en pérdidas,
 tanto que el dicho de اَلْحَرِيصُ خَائِبٌ خَاسِرٌ —"El codicioso es un perdedor"— se ha convertido en un proverbio y es aceptado universalmente como una verdad general. Dado que esto es así, si amas las riquezas, no las busques con codicia, sino con satisfacción y moderación, para que te lleguen en abundancia.
 Las personas que son satisfechas y aquellas que son codiciosas se asemejan a dos individuos que entran en la sala de recepción de una gran personalidad. Uno de ellos piensa en su corazón: "Con que me permitan entrar y me liberen del frío de afuera, eso es suficiente para mí. Incluso si me dan la silla más baja, será un acto de bondad." El segundo hombre, en cambio, entra con arrogancia, como si tuviera un derecho y como si todos estuvieran obligados a mostrarle respeto. Dice: "deberían darme la silla más alta." Entra con codicia, fijando su mirada en los lugares más altos, deseando ir allí. Pero el dueño de la sala lo hace retroceder y lo sienta en una lugar inferior. En lugar de estar agradecido, su corazón se enoja en vez de agradecer, y critica al dueño de la casa. El duele también empieza a despreciarlo. El primer hombre, sin embargo, entra con humildad y desea sentarse en la silla más baja. Su satisfacción agrada al dueño de la sala, quien le dice: "por favor, siéntense en una silla más alta." Y a medida que sube, su agradecimiento aumenta y su satisfacción crece.
 
@@ -438,7 +429,6 @@ El secreto detrás de esto es que en la esfera de la existencia, que se ve clara
 - La historia del profeta Yunus (Jonás) — la paz sea con él
 
 ---
-
 
 hacia Risale-i Nur
 
@@ -469,7 +459,7 @@ Debemos atraer su mirada de compasión para nuestro futuro a través de la frase
 إِنِّي كُنتُ مِنَ الظَّالِمِينَ,
 para nuestro mundo a través de la palabra:
 لَا إِلٰهَ إِلَّا اَللهُ,
-para nuestra alma a través de la frase : 
+para nuestra alma a través de la frase :
 سُبْحَانَكَ إِنِّي كُنتُ مِنَ الظَّالِمِينَ.
 
 Así, que nuestro futuro se ilumine a través de la luz de la fe y la luz de la luna del Corán, y el horror y atrocidad de esa noche nuestra se transforme en familiaridad y excursión. Y con el cambio permanente de la muerte y vida, en nuestro mundo y globo terráqueo en que se suben infinitos cadáveres sobre las olas de años y siglos, y se tiran a la inexistencia, entrando en la verdad del Islam, que se volvió en un barco espiritual construido en el banco de trabajo del Corán-i Hakîm, navegando sobre ese mar con seguridad, hasta que nos saque a la costa de salvación, y así que se termine el deber de nuestra vida. Las tormentas y temblores de ese mar, renovando los paisajes de la excursión como los velos del cine, animando la mirada de tomar lección y reflexión en lugar del horror y atrocidad, los acaricien e iluminen. Además, a través de ese misterio del Corán y de esa educación de Furkan, nuestra alma maligna no nos monte, sino que se vuelve en nuestra monta, nos haga montarla y sea un fuerte medio para ganar nuestra vida eterna.

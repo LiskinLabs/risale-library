@@ -14,7 +14,7 @@ interface Props {
  */
 export const ParallelReader = ({ children }: Props) => {
   return (
-    <div className="flex flex-col lg:grid lg:grid-cols-2 gap-0 lg:gap-0 my-12 border rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+    <div className='my-12 flex flex-col gap-0 overflow-hidden rounded-2xl border shadow-sm transition-shadow duration-300 hover:shadow-md lg:grid lg:grid-cols-2 lg:gap-0'>
       {children}
     </div>
   );

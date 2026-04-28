@@ -11,7 +11,12 @@ interface SelectionData {
 
 export const TextSelectionTooltip: React.FC = () => {
   const lang = useStore(bookLanguage);
-  const [selection, setSelection] = useState<SelectionData>({ text: '', x: 0, y: 0, isVisible: false });
+  const [selection, setSelection] = useState<SelectionData>({
+    text: '',
+    x: 0,
+    y: 0,
+    isVisible: false,
+  });
   const [isPlaying, setIsPlaying] = useState(false);
   const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
 
@@ -21,14 +26,14 @@ export const TextSelectionTooltip: React.FC = () => {
       if (!activeSelection || activeSelection.isCollapsed) {
         // Only hide if we are not currently playing audio for this selection
         if (!isPlaying) {
-          setSelection(prev => ({ ...prev, isVisible: false }));
+          setSelection((prev) => ({ ...prev, isVisible: false }));
         }
         return;
       }
 
       const text = activeSelection.toString().trim();
       if (!text) {
-        if (!isPlaying) setSelection(prev => ({ ...prev, isVisible: false }));
+        if (!isPlaying) setSelection((prev) => ({ ...prev, isVisible: false }));
         return;
       }
 
@@ -37,7 +42,7 @@ export const TextSelectionTooltip: React.FC = () => {
       const container = document.querySelector('.reader-page');
       if (container && container.contains(range.commonAncestorContainer)) {
         const rect = range.getBoundingClientRect();
-        
+
         // Calculate position above the selection
         // We use client bounding rect, so we need to add scroll offset if it's position absolute,
         // but we'll use fixed position to make it easier relative to viewport.
@@ -45,10 +50,10 @@ export const TextSelectionTooltip: React.FC = () => {
           text,
           x: rect.left + rect.width / 2,
           y: rect.top - 10,
-          isVisible: true
+          isVisible: true,
         });
       } else {
-        if (!isPlaying) setSelection(prev => ({ ...prev, isVisible: false }));
+        if (!isPlaying) setSelection((prev) => ({ ...prev, isVisible: false }));
       }
     };
 
@@ -82,7 +87,7 @@ export const TextSelectionTooltip: React.FC = () => {
     if (selection.text) {
       navigator.clipboard.writeText(selection.text);
       // Briefly show visual feedback? We can just hide the tooltip
-      setSelection(prev => ({ ...prev, isVisible: false }));
+      setSelection((prev) => ({ ...prev, isVisible: false }));
     }
   };
 
@@ -101,7 +106,7 @@ export const TextSelectionTooltip: React.FC = () => {
     if (!selection.text) return;
 
     const utterance = new SpeechSynthesisUtterance(selection.text);
-    
+
     // Determine language code
     let langCode = 'ru-RU';
     if (lang === 'tr' || lang === 'os') langCode = 'tr-TR';
@@ -112,18 +117,26 @@ export const TextSelectionTooltip: React.FC = () => {
 
     // Try to find the exact voices used in gemini_telegram_official (Dmitry for RU, Ahmet for TR)
     const voices = window.speechSynthesis.getVoices();
-    const targetVoices = voices.filter(v => v.lang.startsWith(langCode.split('-')[0]));
+    const targetVoices = voices.filter((v) => v.lang.startsWith(langCode.split('-')[0]));
 
     let preferredVoice = null;
 
     if (langCode === 'ru-RU') {
-      preferredVoice = targetVoices.find(v => v.name.toLowerCase().includes('dmitry')) ||
-                       targetVoices.find(v => v.name.toLowerCase().includes('pavel') || v.name.toLowerCase().includes('male'));
+      preferredVoice =
+        targetVoices.find((v) => v.name.toLowerCase().includes('dmitry')) ||
+        targetVoices.find(
+          (v) => v.name.toLowerCase().includes('pavel') || v.name.toLowerCase().includes('male'),
+        );
     } else if (langCode === 'tr-TR') {
-      preferredVoice = targetVoices.find(v => v.name.toLowerCase().includes('ahmet')) ||
-                       targetVoices.find(v => v.name.toLowerCase().includes('tolga') || v.name.toLowerCase().includes('male'));
+      preferredVoice =
+        targetVoices.find((v) => v.name.toLowerCase().includes('ahmet')) ||
+        targetVoices.find(
+          (v) => v.name.toLowerCase().includes('tolga') || v.name.toLowerCase().includes('male'),
+        );
     } else {
-      preferredVoice = targetVoices.find(v => v.name.toLowerCase().includes('male') || v.name.toLowerCase().includes('tariq'));
+      preferredVoice = targetVoices.find(
+        (v) => v.name.toLowerCase().includes('male') || v.name.toLowerCase().includes('tariq'),
+      );
     }
 
     if (preferredVoice) {
@@ -137,7 +150,7 @@ export const TextSelectionTooltip: React.FC = () => {
       // If selection is gone, hide the popup
       const activeSelection = window.getSelection();
       if (!activeSelection || activeSelection.isCollapsed) {
-        setSelection(prev => ({ ...prev, isVisible: false }));
+        setSelection((prev) => ({ ...prev, isVisible: false }));
       }
     };
     utterance.onerror = () => setIsPlaying(false);
@@ -150,7 +163,7 @@ export const TextSelectionTooltip: React.FC = () => {
 
   return (
     <div
-      className={`fixed z-50 glass-panel shadow-2xl transition-all duration-200`}
+      className={`glass-panel fixed z-50 shadow-2xl transition-all duration-200`}
       style={{
         left: `${selection.x}px`,
         top: `${selection.y}px`,
@@ -164,43 +177,74 @@ export const TextSelectionTooltip: React.FC = () => {
       }}
       onMouseDown={(e) => e.preventDefault()} // Prevent clicking from removing selection
     >
-      <button 
+      <button
         onClick={handleCopy}
-        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
+        className='flex items-center gap-1.5 rounded-lg px-3 py-1.5 transition-colors hover:bg-black/5 dark:hover:bg-white/5'
         style={{ fontSize: '13px', fontWeight: 500 }}
       >
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+        <svg
+          width='14'
+          height='14'
+          viewBox='0 0 24 24'
+          fill='none'
+          stroke='currentColor'
+          strokeWidth='2'
+          strokeLinecap='round'
+          strokeLinejoin='round'
+        >
+          <rect x='9' y='9' width='13' height='13' rx='2' ry='2'></rect>
+          <path d='M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1'></path>
         </svg>
         Копировать
       </button>
 
-      <div style={{ width: '1px', height: '20px', background: 'var(--glass-border)', margin: '0 4px' }} />
+      <div
+        style={{ width: '1px', height: '20px', background: 'var(--glass-border)', margin: '0 4px' }}
+      />
 
-      <button 
+      <button
         onClick={handleListen}
-        className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-colors ${isPlaying ? 'text-[var(--accent)] bg-[var(--accent)]/10' : 'hover:bg-black/5 dark:hover:bg-white/5'}`}
+        className={`flex items-center gap-1.5 rounded-lg px-3 py-1.5 transition-colors ${isPlaying ? 'bg-[var(--accent)]/10 text-[var(--accent)]' : 'hover:bg-black/5 dark:hover:bg-white/5'}`}
         style={{ fontSize: '13px', fontWeight: 500 }}
       >
         {isPlaying ? (
           <>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect>
+            <svg
+              width='14'
+              height='14'
+              viewBox='0 0 24 24'
+              fill='none'
+              stroke='currentColor'
+              strokeWidth='2'
+              strokeLinecap='round'
+              strokeLinejoin='round'
+            >
+              <rect x='6' y='4' width='4' height='16'></rect>
+              <rect x='14' y='4' width='4' height='16'></rect>
             </svg>
             Пауза
           </>
         ) : (
           <>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            <svg
+              width='14'
+              height='14'
+              viewBox='0 0 24 24'
+              fill='none'
+              stroke='currentColor'
+              strokeWidth='2'
+              strokeLinecap='round'
+              strokeLinejoin='round'
+            >
+              <polygon points='5 3 19 12 5 21 5 3'></polygon>
             </svg>
             Слушать
           </>
         )}
       </button>
-      
+
       {/* Downward triangle arrow */}
-      <div 
+      <div
         style={{
           position: 'absolute',
           bottom: '-6px',
@@ -211,7 +255,7 @@ export const TextSelectionTooltip: React.FC = () => {
           borderLeft: '6px solid transparent',
           borderRight: '6px solid transparent',
           borderTop: '6px solid var(--glass-bg)',
-          filter: 'drop-shadow(0 2px 2px rgba(0,0,0,0.1))'
+          filter: 'drop-shadow(0 2px 2px rgba(0,0,0,0.1))',
         }}
       />
     </div>
