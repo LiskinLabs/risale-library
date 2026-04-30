@@ -1,7 +1,5 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import {
-  PiCaretDownBold,
-  PiCaretUpBold,
   PiFolderOpenFill,
   PiEyeFill,
   PiEyeSlashFill,

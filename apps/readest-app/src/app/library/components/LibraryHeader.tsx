@@ -55,7 +55,6 @@ const LibraryHeader: React.FC<LibraryHeaderProps> = ({
   const [searchQuery, setSearchQuery] = useState(searchParams?.get('q') ?? '');
 
   const headerRef = useRef<HTMLDivElement>(null);
-  const iconSize18 = useResponsiveSize(18);
   const { safeAreaInsets: insets } = useThemeStore();
 
   useShortcuts({

@@ -135,46 +135,7 @@ export class TxtToEpubConverter {
     ];
   }
 
-  /** Internal API for tests */
-  private joinAroundUndefined(arr: (string | undefined)[]): string[] {
-    const result: string[] = [];
-    for (let i = 0; i < arr.length; i++) {
-      const item = arr[i];
-      if (item === undefined) {
-        if (result.length > 0 && i + 1 < arr.length && typeof arr[i + 1] === 'string') {
-          result[result.length - 1] += arr[i + 1];
-          i++;
-        }
-      } else {
-        result.push(item);
-      }
-    }
-    return result;
-  }
-
-  /** Internal API for tests */
-  private isGoodMatches(matches: string[], maxLength = 100000): boolean {
-    if (matches.length < 2) return false;
-    const meaningful = matches.filter((m) => m.trim().length > 0);
-    if (meaningful.length < 2) return false;
-    return meaningful.every((m) => m.length <= maxLength);
-  }
-
-  /** Internal API for tests */
-  private async *iterateSegmentsFromFile(file: File, encoding: string, lines: number) {
-    const content = await file.text();
-    const segments = content.split(new RegExp(`(?:\\r?\\n){${lines},}`));
-    for (const segment of segments) {
-      yield segment;
-    }
-  }
-
-  private extractChaptersFromSegment(
-    segment: string,
-    metadata: Metadata,
-    option: ExtractChapterOptions,
-    chapterOffset: number,
-  ): Chapter[] {
+  private extractChaptersFromSegment(segment: string, metadata: Metadata): Chapter[] {
     // Preserve page markers
     let processed = segment.replace(/<!--\s*Page\s*(\d+)\s*-->/gi, '[[PAGE_$1]]');
     processed = processed.replace(/<!--[\s\S]*?-->/g, '');
