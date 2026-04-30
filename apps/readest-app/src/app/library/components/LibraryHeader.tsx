@@ -13,7 +13,6 @@ import { useThemeStore } from '@/store/themeStore';
 import { useTranslation } from '@/hooks/useTranslation';
 import { useLibraryStore } from '@/store/libraryStore';
 import { useTrafficLight } from '@/hooks/useTrafficLight';
-import { useResponsiveSize } from '@/hooks/useResponsiveSize';
 import { debounce } from '@/utils/debounce';
 import useShortcuts from '@/hooks/useShortcuts';
 import WindowButtons from '@/components/WindowButtons';

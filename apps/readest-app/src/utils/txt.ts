@@ -99,16 +99,9 @@ export class TxtToEpubConverter {
     const chapters: Chapter[] = [];
     const segments = txtContent.split(segmentRegex);
 
-    let chapterOffset = 0;
     for (const segment of segments) {
-      const segmentChapters = this.extractChaptersFromSegment(
-        segment,
-        metadata,
-        option,
-        chapterOffset,
-      );
+      const segmentChapters = this.extractChaptersFromSegment(segment, metadata);
       chapters.push(...segmentChapters);
-      chapterOffset += segmentChapters.length;
     }
 
     if (index && index.length > 0) {
