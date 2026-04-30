@@ -35,7 +35,7 @@ const resolvePath = (path: string, base: BaseDir): ResolvedPath => {
 const dbName = 'AppFileSystem';
 const dbVersion = 1;
 
-async function openIndexedDB(): Promise<IDBDatabase> {
+export async function openIndexedDB(): Promise<IDBDatabase> {
   return new Promise((resolve, reject) => {
     const request = indexedDB.open(dbName, dbVersion);
 
@@ -78,7 +78,7 @@ const indexedDBFileSystem: FileSystem = {
     return await this.getBlobURL(path, 'None');
   },
   async openFile(path: string, base: BaseDir, filename?: string) {
-    if (isValidURL(path)) {
+    if (isValidURL(path) || path.startsWith('/books/')) {
       return await new RemoteFile(path, filename).open();
     } else {
       const content = await this.readFile(path, base, 'binary');

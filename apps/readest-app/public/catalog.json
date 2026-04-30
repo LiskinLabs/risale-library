@@ -1,0 +1,2753 @@
+[
+  {
+    "title": "Kur'an-ı Kerim",
+    "main": "Куран, Еврады и Зикры",
+    "shelf": "Молитвы и ежедневные зикры",
+    "url": "/books/kuran.md",
+    "cover": "/covers/ar_kuran.png"
+  },
+  {
+    "title": "Mealli Kur'an",
+    "main": "Куран, Еврады и Зикры",
+    "shelf": "Молитвы и ежедневные зикры",
+    "url": "/books/kuranmeal.md",
+    "cover": "/covers/ar_kuranmeal.png"
+  },
+  {
+    "title": "Meaili Büyük Cevşen",
+    "main": "Куран, Еврады и Зикры",
+    "shelf": "Молитвы и ежедневные зикры",
+    "url": "/books/d_meallihizbulhakaik.md",
+    "cover": "/covers/ar_d_meallihizbulhakaik.png"
+  },
+  {
+    "title": "Cevşen",
+    "main": "Куран, Еврады и Зикры",
+    "shelf": "Молитвы и ежедневные зикры",
+    "url": "/books/cevsen.md",
+    "cover": "/covers/ar_cevsen.png"
+  },
+  {
+    "title": "Hizb'ul Hakaik",
+    "main": "Куран, Еврады и Зикры",
+    "shelf": "Молитвы и ежедневные зикры",
+    "url": "/books/hizbulhakaik.md",
+    "cover": "/covers/ar_hizbulhakaik.png"
+  },
+  {
+    "title": "Tesbihat",
+    "main": "Куран, Еврады и Зикры",
+    "shelf": "Молитвы и ежедневные зикры",
+    "url": "/books/tesbihat.md",
+    "cover": "/covers/ar_tesbihat.png"
+  },
+  {
+    "title": "Hizb-ül Kur'an",
+    "main": "Куран, Еврады и Зикры",
+    "shelf": "Молитвы и ежедневные зикры",
+    "url": "/books/hizbkuran.md",
+    "cover": "/covers/ar_hizbkuran.png"
+  },
+  {
+    "title": "Hizb-ül Kur'an(Mealli)",
+    "main": "Куран, Еврады и Зикры",
+    "shelf": "Молитвы и ежедневные зикры",
+    "url": "/books/hizbkuranmeal.md",
+    "cover": "/covers/hizbkuranmeal.png"
+  },
+  {
+    "title": "Mealli Cevşen",
+    "main": "Куран, Еврады и Зикры",
+    "shelf": "Молитвы и ежедневные зикры",
+    "url": "/books/cevsenmeal.md",
+    "cover": "/covers/cevsenmeal.png"
+  },
+  {
+    "title": "Celcelutiye",
+    "main": "Куран, Еврады и Зикры",
+    "shelf": "Молитвы и ежедневные зикры",
+    "url": "/books/celcelutiye.md",
+    "cover": "/covers/celcelutiye.png"
+  },
+  {
+    "title": "Kenz-ül Arş duası",
+    "main": "Куран, Еврады и Зикры",
+    "shelf": "Молитвы и ежедневные зикры",
+    "url": "/books/kenzulars.md",
+    "cover": "/covers/kenzulars.png"
+  },
+  {
+    "title": "Esasat-ı Nuriye",
+    "main": "Куран, Еврады и Зикры",
+    "shelf": "Молитвы и ежедневные зикры",
+    "url": "/books/esasat.md",
+    "cover": "/covers/esasat.png"
+  },
+  {
+    "title": "Tılsımlar",
+    "main": "Куран, Еврады и Зикры",
+    "shelf": "Молитвы и ежедневные зикры",
+    "url": "/books/ihlas_tilsimlar.md",
+    "cover": "/covers/ihlas_tilsimlar.png"
+  },
+  {
+    "title": "Zülfikar",
+    "main": "Куран, Еврады и Зикры",
+    "shelf": "Молитвы и ежедневные зикры",
+    "url": "/books/ihlas_zulfikar.md",
+    "cover": "/covers/ihlas_zulfikar.png"
+  },
+  {
+    "title": "Hizmet Düsturları",
+    "main": "Куран, Еврады и Зикры",
+    "shelf": "Молитвы и ежедневные зикры",
+    "url": "/books/hizmettoplama.md",
+    "cover": "/covers/hizmettoplama.png"
+  },
+  {
+    "title": "RİYÂZUS-SÂLİHÎN",
+    "main": "Кутубу ситта",
+    "shelf": "Сборники хадисов",
+    "url": "/books/riyazussalihin.md",
+    "cover": "/covers/riyazussalihin.png"
+  },
+  {
+    "title": "MUHÂKEMÂT DERSLERİ",
+    "main": "Куран, Еврады и Зикры",
+    "shelf": "Молитвы и ежедневные зикры",
+    "url": "/books/d_ktb_muhsadi.md",
+    "cover": "/covers/d_ktb_muhsadi.png"
+  },
+  {
+    "title": "Âsâr-ı Bediiye",
+    "main": "Куран, Еврады и Зикры",
+    "shelf": "Молитвы и ежедневные зикры",
+    "url": "/books/abed.md",
+    "cover": "/covers/abed.png"
+  },
+  {
+    "title": "Mesnevî-i Nurîye(Bd.)",
+    "main": "Куран, Еврады и Зикры",
+    "shelf": "Молитвы и ежедневные зикры",
+    "url": "/books/badmesnevi.md",
+    "cover": "/covers/badmesnevi.png"
+  },
+  {
+    "title": "Peygamberimizin Hayatı",
+    "main": "Куран, Еврады и Зикры",
+    "shelf": "Молитвы и ежедневные зикры",
+    "url": "/books/pey_hayati.md",
+    "cover": "/covers/pey_hayati.png"
+  },
+  {
+    "title": "İşârat-ül İ'caz(Bd.)",
+    "main": "Куран, Еврады и Зикры",
+    "shelf": "Молитвы и ежедневные зикры",
+    "url": "/books/badisarat.md",
+    "cover": "/covers/badisarat.png"
+  },
+  {
+    "title": "Fihrist Risalesi",
+    "main": "Куран, Еврады и Зикры",
+    "shelf": "Молитвы и ежедневные зикры",
+    "url": "/books/envar_fihristris.md",
+    "cover": "/covers/envar_fihristris.png"
+  },
+  {
+    "title": "Siracün-Nur (Envar)",
+    "main": "Куран, Еврады и Зикры",
+    "shelf": "Молитвы и ежедневные зикры",
+    "url": "/books/env_siracunnur.md",
+    "cover": "/covers/env_siracunnur.png"
+  },
+  {
+    "title": "Mufassal Tarihçe 1",
+    "main": "Куран, Еврады и Зикры",
+    "shelf": "Молитвы и ежедневные зикры",
+    "url": "/books/badmuf1.md",
+    "cover": "/covers/badmuf1.png"
+  },
+  {
+    "title": "Mufassal Tarihçe 2",
+    "main": "Куран, Еврады и Зикры",
+    "shelf": "Молитвы и ежедневные зикры",
+    "url": "/books/badmuf2.md",
+    "cover": "/covers/badmuf2.png"
+  },
+  {
+    "title": "Mufassal Tarihçe 3",
+    "main": "Куран, Еврады и Зикры",
+    "shelf": "Молитвы и ежедневные зикры",
+    "url": "/books/badmuf3.md",
+    "cover": "/covers/badmuf3.png"
+  },
+  {
+    "title": "Büyük İslam İlmihali",
+    "main": "Куран, Еврады и Зикры",
+    "shelf": "Молитвы и ежедневные зикры",
+    "url": "/books/bilmen.md",
+    "cover": "/covers/bilmen.png"
+  },
+  {
+    "title": "Şafiî İlmihali",
+    "main": "Куран, Еврады и Зикры",
+    "shelf": "Молитвы и ежедневные зикры",
+    "url": "/books/safii.md",
+    "cover": "/covers/safii.png"
+  },
+  {
+    "title": "Bir Dava Adamının Notları 1",
+    "main": "Куран, Еврады и Зикры",
+    "shelf": "Молитвы и ежедневные зикры",
+    "url": "/books/davaadam1.md",
+    "cover": "/covers/davaadam1.png"
+  },
+  {
+    "title": "Bir Dava Adamının Notları 2",
+    "main": "Куран, Еврады и Зикры",
+    "shelf": "Молитвы и ежедневные зикры",
+    "url": "/books/davaadam2.md",
+    "cover": "/covers/davaadam2.png"
+  },
+  {
+    "title": "Tanıyanların Dilinden",
+    "main": "Куран, Еврады и Зикры",
+    "shelf": "Молитвы и ежедневные зикры",
+    "url": "/books/taniyanlar.md",
+    "cover": "/covers/taniyanlar.png"
+  },
+  {
+    "title": "Kütübü Sitte - 1.Cilt",
+    "main": "Кутубу ситта",
+    "shelf": "Сборники хадисов",
+    "url": "/books/kutubusitte1.md",
+    "cover": "/covers/kutubusitte1.png"
+  },
+  {
+    "title": "Kütübü Sitte - 2.Cilt",
+    "main": "Кутубу ситта",
+    "shelf": "Сборники хадисов",
+    "url": "/books/kutubusitte2.md",
+    "cover": "/covers/kutubusitte2.png"
+  },
+  {
+    "title": "Kütübü Sitte - 3.Cilt",
+    "main": "Кутубу ситта",
+    "shelf": "Сборники хадисов",
+    "url": "/books/kutubusitte3.md",
+    "cover": "/covers/kutubusitte3.png"
+  },
+  {
+    "title": "Kütübü Sitte - 4.Cilt",
+    "main": "Кутубу ситта",
+    "shelf": "Сборники хадисов",
+    "url": "/books/kutubusitte4.md",
+    "cover": "/covers/kutubusitte4.png"
+  },
+  {
+    "title": "Kütübü Sitte - 5.Cilt",
+    "main": "Кутубу ситта",
+    "shelf": "Сборники хадисов",
+    "url": "/books/kutubusitte5.md",
+    "cover": "/covers/kutubusitte5.png"
+  },
+  {
+    "title": "Kütübü Sitte -  6.Cilt",
+    "main": "Кутубу ситта",
+    "shelf": "Сборники хадисов",
+    "url": "/books/kutubusitte6.md",
+    "cover": "/covers/kutubusitte6.png"
+  },
+  {
+    "title": "Kütübü Sitte - 7.Cilt",
+    "main": "Кутубу ситта",
+    "shelf": "Сборники хадисов",
+    "url": "/books/kutubusitte7.md",
+    "cover": "/covers/kutubusitte7.png"
+  },
+  {
+    "title": "Kütübü Sitte - 8.Cilt",
+    "main": "Кутубу ситта",
+    "shelf": "Сборники хадисов",
+    "url": "/books/kutubusitte8.md",
+    "cover": "/covers/kutubusitte8.png"
+  },
+  {
+    "title": "Kütübü Sitte - 9.Cilt",
+    "main": "Кутубу ситта",
+    "shelf": "Сборники хадисов",
+    "url": "/books/kutubusitte9.md",
+    "cover": "/covers/kutubusitte9.png"
+  },
+  {
+    "title": "Kütübü Sitte - 10.Cilt",
+    "main": "Кутубу ситта",
+    "shelf": "Сборники хадисов",
+    "url": "/books/kutubusitte10.md",
+    "cover": "/covers/kutubusitte10.png"
+  },
+  {
+    "title": "Kütübü Sitte - 11.Cilt",
+    "main": "Кутубу ситта",
+    "shelf": "Сборники хадисов",
+    "url": "/books/kutubusitte11.md",
+    "cover": "/covers/kutubusitte11.png"
+  },
+  {
+    "title": "Kütübü Sitte - 12.Cilt",
+    "main": "Кутубу ситта",
+    "shelf": "Сборники хадисов",
+    "url": "/books/kutubusitte12.md",
+    "cover": "/covers/kutubusitte12.png"
+  },
+  {
+    "title": "Kütübü Sitte - 13.Cilt",
+    "main": "Кутубу ситта",
+    "shelf": "Сборники хадисов",
+    "url": "/books/kutubusitte13.md",
+    "cover": "/covers/kutubusitte13.png"
+  },
+  {
+    "title": "Kütübü Sitte - 14.Cilt",
+    "main": "Кутубу ситта",
+    "shelf": "Сборники хадисов",
+    "url": "/books/kutubusitte14.md",
+    "cover": "/covers/kutubusitte14.png"
+  },
+  {
+    "title": "Kütübü Sitte - 15.Cilt",
+    "main": "Кутубу ситта",
+    "shelf": "Сборники хадисов",
+    "url": "/books/kutubusitte15.md",
+    "cover": "/covers/kutubusitte15.png"
+  },
+  {
+    "title": "Kütübü Sitte - 16.Cilt",
+    "main": "Кутубу ситта",
+    "shelf": "Сборники хадисов",
+    "url": "/books/kutubusitte16.md",
+    "cover": "/covers/kutubusitte16.png"
+  },
+  {
+    "title": "Kütübü Sitte - 17.Cilt",
+    "main": "Кутубу ситта",
+    "shelf": "Сборники хадисов",
+    "url": "/books/kutubusitte17.md",
+    "cover": "/covers/kutubusitte17.png"
+  },
+  {
+    "title": "Sözler",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Большие книги",
+    "url": "/books/sozlerY.md",
+    "cover": "/covers/tr_sozlerY.png"
+  },
+  {
+    "title": "Mektubat",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Большие книги",
+    "url": "/books/mektubatY.md",
+    "cover": "/covers/tr_mektubatY.png"
+  },
+  {
+    "title": "Lem'alar",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Большие книги",
+    "url": "/books/lemalarY.md",
+    "cover": "/covers/tr_lemalarY.png"
+  },
+  {
+    "title": "Şualar",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Большие книги",
+    "url": "/books/sualarY.md",
+    "cover": "/covers/tr_sualarY.png"
+  },
+  {
+    "title": "Mesnevi-i Nuriye",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Большие книги",
+    "url": "/books/mesneviY.md",
+    "cover": "/covers/tr_mesneviY.png"
+  },
+  {
+    "title": "İşârât-ül İ'caz",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Большие книги",
+    "url": "/books/isaratY.md",
+    "cover": "/covers/tr_isaratY.png"
+  },
+  {
+    "title": "Barla Lâhikası",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Большие книги",
+    "url": "/books/barlaY.md",
+    "cover": "/covers/tr_barlaY.png"
+  },
+  {
+    "title": "Kastamonu Lâhikası",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Большие книги",
+    "url": "/books/kastamonuY.md",
+    "cover": "/covers/tr_kastamonuY.png"
+  },
+  {
+    "title": "Emirdağ Lâhikası 1",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Большие книги",
+    "url": "/books/emirdag1Y.md",
+    "cover": "/covers/tr_emirdag1Y.png"
+  },
+  {
+    "title": "Emirdağ Lâhikası 2",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Большие книги",
+    "url": "/books/emirdag2Y.md",
+    "cover": "/covers/tr_emirdag2Y.png"
+  },
+  {
+    "title": "Sikke-i Tasdiki Gaybî",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Большие книги",
+    "url": "/books/stgaybY.md",
+    "cover": "/covers/tr_stgaybY.png"
+  },
+  {
+    "title": "Tarihçe-i Hayat",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Большие книги",
+    "url": "/books/tarihceY.md",
+    "cover": "/covers/tr_tarihceY.png"
+  },
+  {
+    "title": "Asâ-yı Mûsa",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Большие книги",
+    "url": "/books/asamusaY.md",
+    "cover": "/covers/tr_asamusaY.png"
+  },
+  {
+    "title": "İman ve Küfür Müv.",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Большие книги",
+    "url": "/books/imankufur.md",
+    "cover": "/covers/imankufur.png"
+  },
+  {
+    "title": "Muhâkemat",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Большие книги",
+    "url": "/books/muhakematY.md",
+    "cover": "/covers/tr_muhakematY.png"
+  },
+  {
+    "title": "Âyet-ül Kübra",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_ayetkubra.md",
+    "cover": "/covers/rnk_ayetkubra.png"
+  },
+  {
+    "title": "B.Cevap Veriyor",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_bcevab.md",
+    "cover": "/covers/rnk_bcevab.png"
+  },
+  {
+    "title": "Divan-ı Harb-i Örfî",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_dvan.md",
+    "cover": "/covers/rnk_dvan.png"
+  },
+  {
+    "title": "Elhüccetüzzehra",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_elhuccet.md",
+    "cover": "/covers/rnk_elhuccet.png"
+  },
+  {
+    "title": "Ene ve Zerre",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_e_nezerre.md",
+    "cover": "/covers/rnk_e_nezerre.png"
+  },
+  {
+    "title": "Gençlik Rehberi",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_gencreh.md",
+    "cover": "/covers/rnk_gencreh.png"
+  },
+  {
+    "title": "Hakikat Nurları",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_haknurlari.md",
+    "cover": "/covers/rnk_haknurlari.png"
+  },
+  {
+    "title": "Hanımlar Rehberi",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_hanimreh.md",
+    "cover": "/covers/rnk_hanimreh.png"
+  },
+  {
+    "title": "Haşir Risalesi",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_hasir.md",
+    "cover": "/covers/rnk_hasir.png"
+  },
+  {
+    "title": "Hastalar Risalesi",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_hastalar.md",
+    "cover": "/covers/rnk_hastalar.png"
+  },
+  {
+    "title": "Hizmet Rehberi",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_hizmetreh.md",
+    "cover": "/covers/rnk_hizmetreh.png"
+  },
+  {
+    "title": "Hutbe-i Şamiye",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_hutbe.md",
+    "cover": "/covers/rnk_hutbe.png"
+  },
+  {
+    "title": "İhlas Risalesi",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_ihlas.md",
+    "cover": "/covers/rnk_ihlas.png"
+  },
+  {
+    "title": "İkinci Şua",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_ikincisua.md",
+    "cover": "/covers/rnk_ikincisua.png"
+  },
+  {
+    "title": "İman Hakikatleri",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_imanhak.md",
+    "cover": "/covers/rnk_imanhak.png"
+  },
+  {
+    "title": "Konferans",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_konferans.md",
+    "cover": "/covers/rnk_konferans.png"
+  },
+  {
+    "title": "Küçük Sözler",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_ksozler.md",
+    "cover": "/covers/rnk_ksozler.png"
+  },
+  {
+    "title": "Latif Nükteler",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_latifnukte.md",
+    "cover": "/covers/rnk_latifnukte.png"
+  },
+  {
+    "title": "Meyve Risalesi",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_meyve.md",
+    "cover": "/covers/rnk_meyve.png"
+  },
+  {
+    "title": "Miftah-ul İman",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_miftah.md",
+    "cover": "/covers/rnk_miftah.png"
+  },
+  {
+    "title": "Mirac ve Şakk-ı Kamer",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_mirackamer.md",
+    "cover": "/covers/rnk_mirackamer.png"
+  },
+  {
+    "title": "Mu'cizât-ı Ahmediye",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_muahmed.md",
+    "cover": "/covers/rnk_muahmed.png"
+  },
+  {
+    "title": "Mu'cizat-ı Kur'âniye",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_mukuran.md",
+    "cover": "/covers/rnk_mukuran.png"
+  },
+  {
+    "title": "Münâcât",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_munacat.md",
+    "cover": "/covers/rnk_munacat.png"
+  },
+  {
+    "title": "Münâzarât",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_munazarat.md",
+    "cover": "/covers/rnk_munazarat.png"
+  },
+  {
+    "title": "Nur Çeşmesi",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_nurcesme.md",
+    "cover": "/covers/rnk_nurcesme.png"
+  },
+  {
+    "title": "Nur Aleminin Bir Anahtarı",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_nuralemi.md",
+    "cover": "/covers/rnk_nuralemi.png"
+  },
+  {
+    "title": "Nur'un İlk Kapısı",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_nurilkka.md",
+    "cover": "/covers/rnk_nurilkka.png"
+  },
+  {
+    "title": "On Üçüncü Şua",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_onucsua.md",
+    "cover": "/covers/rnk_onucsua.png"
+  },
+  {
+    "title": "Otuzüç Pencere",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_otuzuc.md",
+    "cover": "/covers/rnk_otuzuc.png"
+  },
+  {
+    "title": "Otuzuncu Lem'a",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_otuzlema.md",
+    "cover": "/covers/rnk_otuzlema.png"
+  },
+  {
+    "title": "Rahmet ve Şefkat İlaçları",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_rahmetsefkat.md",
+    "cover": "/covers/rnk_rahmetsefkat.png"
+  },
+  {
+    "title": "Ramazan İktisad Şükür",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_ramazan.md",
+    "cover": "/covers/rnk_ramazan.png"
+  },
+  {
+    "title": "Sünuhat Tüluhat İşârat",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_sunuhat.md",
+    "cover": "/covers/rnk_sunuhat.png"
+  },
+  {
+    "title": "Sünnet-i Seniyye Ris.",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_sunnetseniye.md",
+    "cover": "/covers/rnk_sunnetseniye.png"
+  },
+  {
+    "title": "Tabiat Risalesi",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_tabiat.md",
+    "cover": "/covers/rnk_tabiat.png"
+  },
+  {
+    "title": "Uhuvvet Risalesi",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_uhuvvet.md",
+    "cover": "/covers/rnk_uhuvvet.png"
+  },
+  {
+    "title": "Vesvese ve Hikmetü'l-İstiâze",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_vesvese.md",
+    "cover": "/covers/rnk_vesvese.png"
+  },
+  {
+    "title": "Yirmi Dördüncü Mektub",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_yirmidortmek.md",
+    "cover": "/covers/rnk_yirmidortmek.png"
+  },
+  {
+    "title": "Yirmi Üçüncü Söz",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_yirmiuc.md",
+    "cover": "/covers/rnk_yirmiuc.png"
+  },
+  {
+    "title": "Zühret-ün Nur",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Другие трактаты",
+    "url": "/books/rnk_zuhretunnur.md",
+    "cover": "/covers/rnk_zuhretunnur.png"
+  },
+  {
+    "title": "الكلمات",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Арабский язык",
+    "url": "/books/ar_sozler.md",
+    "cover": "/covers/ar_sozler.png"
+  },
+  {
+    "title": "المكتوبات",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Арабский язык",
+    "url": "/books/ar_mektubat.md",
+    "cover": "/covers/ar_mektubat.png"
+  },
+  {
+    "title": "اللمعات",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Арабский язык",
+    "url": "/books/ar_lemalar.md",
+    "cover": "/covers/ar_lemalar.png"
+  },
+  {
+    "title": "الشعاعات",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Арабский язык",
+    "url": "/books/ar_sualar.md",
+    "cover": "/covers/ar_sualar.png"
+  },
+  {
+    "title": "إشارات الإعجاز",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Арабский язык",
+    "url": "/books/ar_isarat.md",
+    "cover": "/covers/ar_isarat.png"
+  },
+  {
+    "title": "المثنوي العربي النوري",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Арабский язык",
+    "url": "/books/ar_mesnevi.md",
+    "cover": "/covers/ar_mesnevi.png"
+  },
+  {
+    "title": "سيرة ذاتية",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Арабский язык",
+    "url": "/books/ar_tarihce.md",
+    "cover": "/covers/ar_tarihce.png"
+  },
+  {
+    "title": "الملاحق",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Арабский язык",
+    "url": "/books/ar_lahikalar.md",
+    "cover": "/covers/ar_lahikalar.png"
+  },
+  {
+    "title": "صيقل الإسلام",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Арабский язык",
+    "url": "/books/ar_asaribediyye.md",
+    "cover": "/covers/ar_asaribediyye.png"
+  },
+  {
+    "title": "The Words",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Английский язык",
+    "url": "/books/en_sozler.md",
+    "cover": "/covers/en_sozler.png"
+  },
+  {
+    "title": "The Rays Collection",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Английский язык",
+    "url": "/books/en_sualar.md",
+    "cover": "/covers/en_sualar.png"
+  },
+  {
+    "title": "The Letters",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Английский язык",
+    "url": "/books/en_mektubat.md",
+    "cover": "/covers/en_mektubat.png"
+  },
+  {
+    "title": "The Flashes Collection",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Английский язык",
+    "url": "/books/en_lemalar.md",
+    "cover": "/covers/en_lemalar.png"
+  },
+  {
+    "title": "Signs of Miraculousness",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Английский язык",
+    "url": "/books/en_isarat.md",
+    "cover": "/covers/en_isarat.png"
+  },
+  {
+    "title": "The Staff of Moses",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Английский язык",
+    "url": "/books/en_asamusa.md",
+    "cover": "/covers/en_asamusa.png"
+  },
+  {
+    "title": "Emirdağ Letters",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Английский язык",
+    "url": "/books/en_emirdag.md",
+    "cover": "/covers/en_emirdag.png"
+  },
+  {
+    "title": "Rational Arguments",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Английский язык",
+    "url": "/books/en_muhakemat.md",
+    "cover": "/covers/en_muhakemat.png"
+  },
+  {
+    "title": "Bediuzzaman Said Nursi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Английский язык",
+    "url": "/books/en_tarihce.md",
+    "cover": "/covers/en_tarihce.png"
+  },
+  {
+    "title": "The Damascus Sermon",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Английский язык",
+    "url": "/books/en_hutbe.md",
+    "cover": "/covers/en_hutbe.png"
+  },
+  {
+    "title": "The Thirty-Third Word",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Английский язык",
+    "url": "/books/en_otuzucpen.md",
+    "cover": "/covers/en_otuzucpen.png"
+  },
+  {
+    "title": "Sözler(Os.)",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Османские издания",
+    "url": "/books/ossozler.md",
+    "cover": "/covers/ossozler.png"
+  },
+  {
+    "title": "Mektubat(Os.)",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Османские издания",
+    "url": "/books/osmektubat.md",
+    "cover": "/covers/osmektubat.png"
+  },
+  {
+    "title": "Lem'alar(Os.)",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Османские издания",
+    "url": "/books/oslemalar.md",
+    "cover": "/covers/oslemalar.png"
+  },
+  {
+    "title": "Şualar(Os.)",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Османские издания",
+    "url": "/books/ossualar.md",
+    "cover": "/covers/ossualar.png"
+  },
+  {
+    "title": "Mesnevi-i Nuriye(Os.)",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Османские издания",
+    "url": "/books/osmesnevi.md",
+    "cover": "/covers/osmesnevi.png"
+  },
+  {
+    "title": "İşârât-ül İ'caz(Os.)",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Османские издания",
+    "url": "/books/osisarat.md",
+    "cover": "/covers/osisarat.png"
+  },
+  {
+    "title": "Barla Lâhikası(Os.)",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Османские издания",
+    "url": "/books/osbarla.md",
+    "cover": "/covers/osbarla.png"
+  },
+  {
+    "title": "Kastamonu Lâhikası(Os.)",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Османские издания",
+    "url": "/books/oskastamonu.md",
+    "cover": "/covers/oskastamonu.png"
+  },
+  {
+    "title": "Emirdağ Lâhikası 1(Os.)",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Османские издания",
+    "url": "/books/osemirdag1.md",
+    "cover": "/covers/osemirdag1.png"
+  },
+  {
+    "title": "Emirdağ Lâhikası 2(Os.)",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Османские издания",
+    "url": "/books/osemirdag2.md",
+    "cover": "/covers/osemirdag2.png"
+  },
+  {
+    "title": "Sikke-i Tasdiki Gaybî(Os.)",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Османские издания",
+    "url": "/books/osstgayb.md",
+    "cover": "/covers/osstgayb.png"
+  },
+  {
+    "title": "Tarihçe-i Hayat(Os.)",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Османские издания",
+    "url": "/books/ostarihce.md",
+    "cover": "/covers/ostarihce.png"
+  },
+  {
+    "title": "Asâ-yı Mûsa(Os.)",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Османские издания",
+    "url": "/books/osasamusa.md",
+    "cover": "/covers/osasamusa.png"
+  },
+  {
+    "title": "Fihrist Risalesi(Os.)",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Османские издания",
+    "url": "/books/osfihrist.md",
+    "cover": "/covers/osfihrist.png"
+  },
+  {
+    "title": "Sirac-ün Nur(Os.)",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Османские издания",
+    "url": "/books/ossiracnur.md",
+    "cover": "/covers/ossiracnur.png"
+  },
+  {
+    "title": "Tılsımlar(Os.)",
+    "main": "Рисале-и Нур (Оригинал)",
+    "shelf": "Османские издания",
+    "url": "/books/ostilsimlar.md",
+    "cover": "/covers/ostilsimlar.png"
+  },
+  {
+    "title": "Musanyň hasasy",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Туркменский язык",
+    "url": "/books/tm_musanyn.md",
+    "cover": "/covers/tm_musanyn.png"
+  },
+  {
+    "title": "Hassalyk hakda hakykat",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Туркменский язык",
+    "url": "/books/tm_hastalar.md",
+    "cover": "/covers/tm_hastalar.png"
+  },
+  {
+    "title": "Imanyň miweleri",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Туркменский язык",
+    "url": "/books/tm_meyve.md",
+    "cover": "/covers/tm_meyve.png"
+  },
+  {
+    "title": "On bir aýyň soltany remezan",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Туркменский язык",
+    "url": "/books/tm_ramazan.md",
+    "cover": "/covers/tm_ramazan.png"
+  },
+  {
+    "title": "Tebigat hakda hakykat",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Туркменский язык",
+    "url": "/books/tm_tabiat.md",
+    "cover": "/covers/tm_tabiat.png"
+  },
+  {
+    "title": "Yhlas hakda hakykat",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Туркменский язык",
+    "url": "/books/tm_ihlas.md",
+    "cover": "/covers/tm_ihlas.png"
+  },
+  {
+    "title": "Zenanlara ýol görkeziji",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Туркменский язык",
+    "url": "/books/tm_hanimlar.md",
+    "cover": "/covers/tm_hanimlar.png"
+  },
+  {
+    "title": "Mynajat",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Туркменский язык",
+    "url": "/books/tm_munacat.md",
+    "cover": "/covers/tm_munacat.png"
+  },
+  {
+    "title": "Sunnet yoly",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Туркменский язык",
+    "url": "/books/tm_sunnetyolu.md",
+    "cover": "/covers/tm_sunnetyolu.png"
+  },
+  {
+    "title": "Lemalar",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Туркменский язык",
+    "url": "/books/tm_lemalar.md",
+    "cover": "/covers/tm_lemalar.png"
+  },
+  {
+    "title": "Gençlik Rehberi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Туркменский язык",
+    "url": "/books/tm_genclik.md",
+    "cover": "/covers/tm_genclik.png"
+  },
+  {
+    "title": "Iman we ynsan",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Туркменский язык",
+    "url": "/books/tm_23soz.md",
+    "cover": "/covers/tm_23soz.png"
+  },
+  {
+    "title": "Küçük Sözler",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Туркменский язык",
+    "url": "/books/tm_kucuksozler.md",
+    "cover": "/covers/tm_kucuksozler.png"
+  },
+  {
+    "title": "Doganlyk hakda hakykat",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Туркменский язык",
+    "url": "/books/tm_uhuvvet.md",
+    "cover": "/covers/tm_uhuvvet.png"
+  },
+  {
+    "title": "TARYKAT HAKDA HAKYKAT",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Туркменский язык",
+    "url": "/books/tm_tarikat.md",
+    "cover": "/covers/tm_tarikat.png"
+  },
+  {
+    "title": "De Brieven",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Нидерландский язык",
+    "url": "/books/nl_mektubat.md",
+    "cover": "/covers/nl_mektubat.png"
+  },
+  {
+    "title": "Boodschap voor de Zieken",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Нидерландский язык",
+    "url": "/books/nl_hastalar.md",
+    "cover": "/covers/nl_hastalar.png"
+  },
+  {
+    "title": "De Korte Woorden",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Нидерландский язык",
+    "url": "/books/nl_ksozler.md",
+    "cover": "/covers/nl_ksozler.png"
+  },
+  {
+    "title": "Het Grootste Teken",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Нидерландский язык",
+    "url": "/books/nl_ayetulkubra.md",
+    "cover": "/covers/nl_ayetulkubra.png"
+  },
+  {
+    "title": "Vesvese",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Китайский язык",
+    "url": "/books/zh_vesvese.md",
+    "cover": "/covers/zh_vesvese.png"
+  },
+  {
+    "title": "23. Söz",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Китайский язык",
+    "url": "/books/zh_23soz.md",
+    "cover": "/covers/zh_23soz.png"
+  },
+  {
+    "title": "Uhuvvet",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Китайский язык",
+    "url": "/books/zh_uhuvvet.md",
+    "cover": "/covers/zh_uhuvvet.png"
+  },
+  {
+    "title": "书札十九",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Китайский язык",
+    "url": "/books/zh_mucizat.md",
+    "cover": "/covers/zh_mucizat.png"
+  },
+  {
+    "title": "箴言",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Китайский язык",
+    "url": "/books/zh_kucuksozler.md",
+    "cover": "/covers/zh_kucuksozler.png"
+  },
+  {
+    "title": "Çince Ramazan Risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Китайский язык",
+    "url": "/books/zh_ramazan.md",
+    "cover": "/covers/zh_ramazan.png"
+  },
+  {
+    "title": "给病人们的疗方",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Китайский язык",
+    "url": "/books/zh_hastalar.md",
+    "cover": "/covers/zh_hastalar.png"
+  },
+  {
+    "title": "驳自然创造论",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Китайский язык",
+    "url": "/books/zh_tabiat.md",
+    "cover": "/covers/zh_tabiat.png"
+  },
+  {
+    "title": "Слова",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Русский язык",
+    "url": "/books/ru_sozler.md",
+    "cover": "/covers/ru_sozler.png"
+  },
+  {
+    "title": "Лучи",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Русский язык",
+    "url": "/books/ru_sualar.md",
+    "cover": "/covers/ru_sualar.png"
+  },
+  {
+    "title": "Письма",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Русский язык",
+    "url": "/books/ru_mektubat.md",
+    "cover": "/covers/ru_mektubat.png"
+  },
+  {
+    "title": "Сияния",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Русский язык",
+    "url": "/books/ru_lemalar.md",
+    "cover": "/covers/ru_lemalar.png"
+  },
+  {
+    "title": "ПОСОХ МУСЫ",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Русский язык",
+    "url": "/books/ru_asamusa.md",
+    "cover": "/covers/ru_asamusa.png"
+  },
+  {
+    "title": "Месневи Нурие",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Русский язык",
+    "url": "/books/ru_mesnevi.md",
+    "cover": "/covers/ru_mesnevi.png"
+  },
+  {
+    "title": "Эмирдагское Приложение-I",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Русский язык",
+    "url": "/books/ru_emirdag1.md",
+    "cover": "/covers/ru_emirdag1.png"
+  },
+  {
+    "title": "История жизни",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Русский язык",
+    "url": "/books/ru_tarihce.md",
+    "cover": "/covers/ru_tarihce.png"
+  },
+  {
+    "title": "Путеводитель для женщин",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Русский язык",
+    "url": "/books/ru_hanimreh.md",
+    "cover": "/covers/ru_hanimreh.png"
+  },
+  {
+    "title": "Дамасская Проповедь",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Русский язык",
+    "url": "/books/ru_hutbe.md",
+    "cover": "/covers/ru_hutbe.png"
+  },
+  {
+    "title": "Nur aleminin bir anahtarı",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Русский язык",
+    "url": "/books/ru_nuralemianahtar.md",
+    "cover": "/covers/ru_nuralemianahtar.png"
+  },
+  {
+    "title": "Worte",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Немецкий язык",
+    "url": "/books/de_sozler.md",
+    "cover": "/covers/de_sozler.png"
+  },
+  {
+    "title": "Briefe",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Немецкий язык",
+    "url": "/books/de_mektubat.md",
+    "cover": "/covers/de_mektubat.png"
+  },
+  {
+    "title": "Blitze",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Немецкий язык",
+    "url": "/books/de_lemalar.md",
+    "cover": "/covers/de_lemalar.png"
+  },
+  {
+    "title": "Stab Mosis",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Немецкий язык",
+    "url": "/books/de_asamusa.md",
+    "cover": "/covers/de_asamusa.png"
+  },
+  {
+    "title": "Biografie Fertig",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Немецкий язык",
+    "url": "/books/de_tarihce.md",
+    "cover": "/covers/de_tarihce.png"
+  },
+  {
+    "title": "Harmonie des Lichts",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Немецкий язык",
+    "url": "/books/de_mesnevi.md",
+    "cover": "/covers/de_mesnevi.png"
+  },
+  {
+    "title": "Das große Zeichen",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Немецкий язык",
+    "url": "/books/de_ayetkubra.md",
+    "cover": "/covers/de_ayetkubra.png"
+  },
+  {
+    "title": "Wegweiser für die Jugend",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Немецкий язык",
+    "url": "/books/de_genclik.md",
+    "cover": "/covers/de_genclik.png"
+  },
+  {
+    "title": "Die Auferstehung",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Немецкий язык",
+    "url": "/books/de_hasir.md",
+    "cover": "/covers/de_hasir.png"
+  },
+  {
+    "title": "Islamische Glaubenswahrheiten",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Немецкий язык",
+    "url": "/books/de_imanhak.md",
+    "cover": "/covers/de_imanhak.png"
+  },
+  {
+    "title": "Kleine Worte",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Немецкий язык",
+    "url": "/books/de_kucuksoz.md",
+    "cover": "/covers/de_kucuksoz.png"
+  },
+  {
+    "title": "Wunder Mohammeds (A.S.M.)",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Немецкий язык",
+    "url": "/books/de_muahmed.md",
+    "cover": "/covers/de_muahmed.png"
+  },
+  {
+    "title": "Bruderschaft und Wahrhaftigkeit im Islam",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Немецкий язык",
+    "url": "/books/de_uhuvvet.md",
+    "cover": "/covers/de_uhuvvet.png"
+  },
+  {
+    "title": "Im Aufscheinen des Morgensterns",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Немецкий язык",
+    "url": "/books/de_zuhreisik.md",
+    "cover": "/covers/de_zuhreisik.png"
+  },
+  {
+    "title": "Maqalaa",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Урду",
+    "url": "/books/ur_sozler.md",
+    "cover": "/covers/ur_sozler.png"
+  },
+  {
+    "title": "لمعات",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Урду",
+    "url": "/books/ur_lamalar.md",
+    "cover": "/covers/ur_lamalar.png"
+  },
+  {
+    "title": "مکتوبات",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Урду",
+    "url": "/books/ur_mektubat.md",
+    "cover": "/covers/ur_mektubat.png"
+  },
+  {
+    "title": "حیات و واقعات",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Урду",
+    "url": "/books/ur_tarihceihayat.md",
+    "cover": "/covers/ur_tarihceihayat.png"
+  },
+  {
+    "title": "معجزاتِ رسولﷺ",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Урду",
+    "url": "/books/ur_19mektup.md",
+    "cover": "/covers/ur_19mektup.png"
+  },
+  {
+    "title": "تیسواں لمعہ",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Урду",
+    "url": "/books/ur_ismiazam.md",
+    "cover": "/covers/ur_ismiazam.png"
+  },
+  {
+    "title": "رمضان کا پیغام",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Урду",
+    "url": "/books/ur_ramazan.md",
+    "cover": "/covers/ur_ramazan.png"
+  },
+  {
+    "title": "دریچے",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Урду",
+    "url": "/books/ur_33pencere.md",
+    "cover": "/covers/ur_33pencere.png"
+  },
+  {
+    "title": "رسالہ حشر",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Урду",
+    "url": "/books/ur_hasir.md",
+    "cover": "/covers/ur_hasir.png"
+  },
+  {
+    "title": "سنت کا زینہ",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Урду",
+    "url": "/books/ur_sunnat.md",
+    "cover": "/covers/ur_sunnat.png"
+  },
+  {
+    "title": "قرآنی معجزات",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Урду",
+    "url": "/books/ur_25soz.md",
+    "cover": "/covers/ur_25soz.png"
+  },
+  {
+    "title": "تعارف",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Урду",
+    "url": "/books/ur_saidnursikimdir.md",
+    "cover": "/covers/ur_saidnursikimdir.png"
+  },
+  {
+    "title": "تئیسواں لمعہ",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Урду",
+    "url": "/books/ur_tabiat.md",
+    "cover": "/covers/ur_tabiat.png"
+  },
+  {
+    "title": "بیسواں لمعہ",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Урду",
+    "url": "/books/ur_ihlas.md",
+    "cover": "/covers/ur_ihlas.png"
+  },
+  {
+    "title": "بائیسواں مکتوب",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Урду",
+    "url": "/books/ur_uhuvvet.md",
+    "cover": "/covers/ur_uhuvvet.png"
+  },
+  {
+    "title": "Palabras",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Испанский язык",
+    "url": "/books/es_sozler.md",
+    "cover": "/covers/es_sozler.png"
+  },
+  {
+    "title": "Cartas",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Испанский язык",
+    "url": "/books/es_mektubat.md",
+    "cover": "/covers/es_mektubat.png"
+  },
+  {
+    "title": "Destellos",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Испанский язык",
+    "url": "/books/es_lemalar.md",
+    "cover": "/covers/es_lemalar.png"
+  },
+  {
+    "title": "Rayos",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Испанский язык",
+    "url": "/books/es_sualar.md",
+    "cover": "/covers/es_sualar.png"
+  },
+  {
+    "title": "Mesnevî-i Nuriye",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Испанский язык",
+    "url": "/books/es_mesnevi.md",
+    "cover": "/covers/es_mesnevi.png"
+  },
+  {
+    "title": "Asa-yı Musa",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Испанский язык",
+    "url": "/books/es_asamusa.md",
+    "cover": "/covers/es_asamusa.png"
+  },
+  {
+    "title": "İşaret-ül İ'caz",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Испанский язык",
+    "url": "/books/es_iicaz.md",
+    "cover": "/covers/es_iicaz.png"
+  },
+  {
+    "title": "Barla",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Испанский язык",
+    "url": "/books/es_barla.md",
+    "cover": "/covers/es_barla.png"
+  },
+  {
+    "title": "Kastamonu Lahikası",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Испанский язык",
+    "url": "/books/es_kastamonu.md",
+    "cover": "/covers/es_kastamonu.png"
+  },
+  {
+    "title": "Emirdağ Lahikası 1",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Испанский язык",
+    "url": "/books/es_emirdag1.md",
+    "cover": "/covers/es_emirdag1.png"
+  },
+  {
+    "title": "Sikke-i Tasdik-i Gaybî",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Испанский язык",
+    "url": "/books/es_stg.md",
+    "cover": "/covers/es_stg.png"
+  },
+  {
+    "title": "Emirdağ Lahikası 1",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Испанский язык",
+    "url": "/books/es_emirdag2.md",
+    "cover": "/covers/es_emirdag2.png"
+  },
+  {
+    "title": "Tarihçe-i Hayat",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Испанский язык",
+    "url": "/books/es_tarihceihayat.md",
+    "cover": "/covers/es_tarihceihayat.png"
+  },
+  {
+    "title": "Mucizat-ı Ahmediye",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Испанский язык",
+    "url": "/books/es_muahmed.md",
+    "cover": "/covers/es_muahmed.png"
+  },
+  {
+    "title": "Ayet-el Kübra",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Испанский язык",
+    "url": "/books/es_ayetkubra.md",
+    "cover": "/covers/es_ayetkubra.png"
+  },
+  {
+    "title": "30. Lema",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Испанский язык",
+    "url": "/books/es_esmaisitte.md",
+    "cover": "/covers/es_esmaisitte.png"
+  },
+  {
+    "title": "Hüccet-üz Zehra",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Испанский язык",
+    "url": "/books/es_huccetzehra.md",
+    "cover": "/covers/es_huccetzehra.png"
+  },
+  {
+    "title": "Meyve Risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Испанский язык",
+    "url": "/books/es_meyve.md",
+    "cover": "/covers/es_meyve.png"
+  },
+  {
+    "title": "Nur Çeşmesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Испанский язык",
+    "url": "/books/es_nurcesme.md",
+    "cover": "/covers/es_nurcesme.png"
+  },
+  {
+    "title": "23. Söz",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Испанский язык",
+    "url": "/books/es_23soz.md",
+    "cover": "/covers/es_23soz.png"
+  },
+  {
+    "title": "Küçük Sözler",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Испанский язык",
+    "url": "/books/es_kucuksozler.md",
+    "cover": "/covers/es_kucuksozler.png"
+  },
+  {
+    "title": "Haşir Risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Испанский язык",
+    "url": "/books/es_10soz.md",
+    "cover": "/covers/es_10soz.png"
+  },
+  {
+    "title": "33. Söz",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Испанский язык",
+    "url": "/books/es_33soz.md",
+    "cover": "/covers/es_33soz.png"
+  },
+  {
+    "title": "Hastalar Risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Испанский язык",
+    "url": "/books/es_hastalar.md",
+    "cover": "/covers/es_hastalar.png"
+  },
+  {
+    "title": "Ramazan, İktisat, Şükür",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Испанский язык",
+    "url": "/books/es_ramazan.md",
+    "cover": "/covers/es_ramazan.png"
+  },
+  {
+    "title": "Tabiat Risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Испанский язык",
+    "url": "/books/es_tabiat.md",
+    "cover": "/covers/es_tabiat.png"
+  },
+  {
+    "title": "İhtiyarlar Risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Испанский язык",
+    "url": "/books/es_ihtiyarlar.md",
+    "cover": "/covers/es_ihtiyarlar.png"
+  },
+  {
+    "title": "İhlas Risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Испанский язык",
+    "url": "/books/es_ihlas.md",
+    "cover": "/covers/es_ihlas.png"
+  },
+  {
+    "title": "30. Söz",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Испанский язык",
+    "url": "/books/es_30soz.md",
+    "cover": "/covers/es_30soz.png"
+  },
+  {
+    "title": "Nur Aleminin Bir Anahtarı",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Испанский язык",
+    "url": "/books/es_nuralemi.md",
+    "cover": "/covers/es_nuralemi.png"
+  },
+  {
+    "title": "Münacat",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Испанский язык",
+    "url": "/books/es_munacat.md",
+    "cover": "/covers/es_munacat.png"
+  },
+  {
+    "title": "Dava adamının notları 1",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Испанский язык",
+    "url": "/books/es_davadami.md",
+    "cover": "/covers/es_davadami.png"
+  },
+  {
+    "title": "Sözler",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_sozler.md",
+    "cover": "/covers/oz_sozler.png"
+  },
+  {
+    "title": "Divan-ı Harb-i Örfî",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_divaniharbiorfi.md",
+    "cover": "/covers/oz_divaniharbiorfi.png"
+  },
+  {
+    "title": "MAKTUBOT",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_mektubat.md",
+    "cover": "/covers/oz_mektubat.png"
+  },
+  {
+    "title": "YOG′DULAR",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_lemalar.md",
+    "cover": "/covers/oz_lemalar.png"
+  },
+  {
+    "title": "SHU`LALAR",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_sualar.md",
+    "cover": "/covers/oz_sualar.png"
+  },
+  {
+    "title": "MASNAVI-I NURIYA",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_mesnevi.md",
+    "cover": "/covers/oz_mesnevi.png"
+  },
+  {
+    "title": "ISHOROT-UL I`JOZ",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_isarat.md",
+    "cover": "/covers/oz_isarat.png"
+  },
+  {
+    "title": "BARLA ILOVASI",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_barlalah.md",
+    "cover": "/covers/oz_barlalah.png"
+  },
+  {
+    "title": "KASTAMONU ILOVASI",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_kasttmnlah.md",
+    "cover": "/covers/oz_kasttmnlah.png"
+  },
+  {
+    "title": "AMIRTOG′ ILOVASI-I",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_emirdag1.md",
+    "cover": "/covers/oz_emirdag1.png"
+  },
+  {
+    "title": "AMIRTOG′ ILOVASI-II",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_emirdag2.md",
+    "cover": "/covers/oz_emirdag2.png"
+  },
+  {
+    "title": "Uhuvvet Risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_uhuvvet.md",
+    "cover": "/covers/oz_uhuvvet.png"
+  },
+  {
+    "title": "Hakikat Nurları",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_hakikat.md",
+    "cover": "/covers/oz_hakikat.png"
+  },
+  {
+    "title": "Ene ve Zerre",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_enezerre.md",
+    "cover": "/covers/oz_enezerre.png"
+  },
+  {
+    "title": "Sikka-i Tasdiqi G'aybiy",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_sikke.md",
+    "cover": "/covers/oz_sikke.png"
+  },
+  {
+    "title": "Tarihçe-i Hayat",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_rn_tarihce.md",
+    "cover": "/covers/oz_rn_tarihce.png"
+  },
+  {
+    "title": "ASOYI MUSO",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_asamusa.md",
+    "cover": "/covers/oz_asamusa.png"
+  },
+  {
+    "title": "MUHOKAMOT",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_muhakemat.md",
+    "cover": "/covers/oz_muhakemat.png"
+  },
+  {
+    "title": "YIGIRMA IKKINCHI SO'Z",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_22soz.md",
+    "cover": "/covers/oz_22soz.png"
+  },
+  {
+    "title": "Yigirma Uchinchi Lam`a",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_23lematabiat.md",
+    "cover": "/covers/oz_23lematabiat.png"
+  },
+  {
+    "title": "O'ttizinchi Lam`a",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_32lema.md",
+    "cover": "/covers/oz_32lema.png"
+  },
+  {
+    "title": "O'TTIZ IKKINCHI SO'Z",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_32soz.md",
+    "cover": "/covers/oz_32soz.png"
+  },
+  {
+    "title": "O'TTIZ UCHINCHI SO'Z",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_33pencere.md",
+    "cover": "/covers/oz_33pencere.png"
+  },
+  {
+    "title": "Hutbe-i Şamiye",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_hutbe.md",
+    "cover": "/covers/oz_hutbe.png"
+  },
+  {
+    "title": "OYAT-UL KUBRO",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_ayetkubra.md",
+    "cover": "/covers/oz_ayetkubra.png"
+  },
+  {
+    "title": "Hashr Bahsi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_hasir.md",
+    "cover": "/covers/oz_hasir.png"
+  },
+  {
+    "title": "KICHIK SO’ZLAR",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_kucuksozler.md",
+    "cover": "/covers/oz_kucuksozler.png"
+  },
+  {
+    "title": "Meva Risolasi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_meyve.md",
+    "cover": "/covers/oz_meyve.png"
+  },
+  {
+    "title": "YIGIRMANCHI MAKTUB",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_20mektup.md",
+    "cover": "/covers/oz_20mektup.png"
+  },
+  {
+    "title": "MUNOZOROT",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_munazarat.md",
+    "cover": "/covers/oz_munazarat.png"
+  },
+  {
+    "title": "LAMAAT",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_lemaat.md",
+    "cover": "/covers/oz_lemaat.png"
+  },
+  {
+    "title": "Vasvasa",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_vesvese.md",
+    "cover": "/covers/oz_vesvese.png"
+  },
+  {
+    "title": "O'N BESHINCHI SHU`LA",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/tm_elhzehra.md",
+    "cover": "/covers/tm_elhzehra.png"
+  },
+  {
+    "title": "Mirkatüs-Sünnet ve Tiryak-u Marazil-Bid`a",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_mitkatsunneh.md",
+    "cover": "/covers/oz_mitkatsunneh.png"
+  },
+  {
+    "title": "23. Söz",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_rn_23soz.md",
+    "cover": "/covers/oz_rn_23soz.png"
+  },
+  {
+    "title": "Gençlik Rehberi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_rn_genclikrehb.md",
+    "cover": "/covers/oz_rn_genclikrehb.png"
+  },
+  {
+    "title": "Hanımlar",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_rn_hanimlar.md",
+    "cover": "/covers/oz_rn_hanimlar.png"
+  },
+  {
+    "title": "Hastalar Risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_rn_hastalar.md",
+    "cover": "/covers/oz_rn_hastalar.png"
+  },
+  {
+    "title": "İhlas Risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_rn_ihlas.md",
+    "cover": "/covers/oz_rn_ihlas.png"
+  },
+  {
+    "title": "İhtiyarlar risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_rn_ihtiyar.md",
+    "cover": "/covers/oz_rn_ihtiyar.png"
+  },
+  {
+    "title": "Münacat",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_rn_munacat.md",
+    "cover": "/covers/oz_rn_munacat.png"
+  },
+  {
+    "title": "Ramazan, İktisat ve Şükür",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_rn_ramazaniktisat.md",
+    "cover": "/covers/oz_rn_ramazaniktisat.png"
+  },
+  {
+    "title": "Hutuvat-ı Sitte",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_hutuvat.md",
+    "cover": "/covers/oz_hutuvat.png"
+  },
+  {
+    "title": "Hizmet Rehberi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_hizmetreh.md",
+    "cover": "/covers/oz_hizmetreh.png"
+  },
+  {
+    "title": "İman Hakikatleri",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_rn_imanhakikatleri.md",
+    "cover": "/covers/oz_rn_imanhakikatleri.png"
+  },
+  {
+    "title": "Mesnevi-i Nuriye",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/uz_mesnevi.md",
+    "cover": "/covers/uz_mesnevi.png"
+  },
+  {
+    "title": "Hizmet Rehberi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/uz_hizmetreh.md",
+    "cover": "/covers/uz_hizmetreh.png"
+  },
+  {
+    "title": "Hutuvat-ı Sitte",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/uz_hutuvat.md",
+    "cover": "/covers/uz_hutuvat.png"
+  },
+  {
+    "title": "Divan-ı Harb-i Örfî",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/uz_divaniharbiorfi.md",
+    "cover": "/covers/uz_divaniharbiorfi.png"
+  },
+  {
+    "title": "El Hüccet-üz Zehra",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/uz_zehra.md",
+    "cover": "/covers/uz_zehra.png"
+  },
+  {
+    "title": "Uhuvvet Risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/uz_uhuvvet.md",
+    "cover": "/covers/uz_uhuvvet.png"
+  },
+  {
+    "title": "Lemalar",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/uz_lemalar.md",
+    "cover": "/covers/uz_lemalar.png"
+  },
+  {
+    "title": "Tarihçe-i Hayat",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_tarihce.md",
+    "cover": "/covers/oz_tarihce.png"
+  },
+  {
+    "title": "Asa-yı Musa",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/uz_asamusa.md",
+    "cover": "/covers/uz_asamusa.png"
+  },
+  {
+    "title": "КИЧИК СЎЗЛАР",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_kucuksoz.md",
+    "cover": "/covers/oz_kucuksoz.png"
+  },
+  {
+    "title": "ХОНИМЛАР РАҲБАРИ",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_hanimlar.md",
+    "cover": "/covers/oz_hanimlar.png"
+  },
+  {
+    "title": "РАМАЗОН, ИҚТИСОД, ШУКР РИСОЛАЛАРИ",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_ramazaniktisat.md",
+    "cover": "/covers/oz_ramazaniktisat.png"
+  },
+  {
+    "title": "Hakikat Nurları",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/uz_hakikat.md",
+    "cover": "/covers/uz_hakikat.png"
+  },
+  {
+    "title": "Gençlik Rehberi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/uz_genclik.md",
+    "cover": "/covers/uz_genclik.png"
+  },
+  {
+    "title": "Ene ve Zerre",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/uz_enezerre.md",
+    "cover": "/covers/uz_enezerre.png"
+  },
+  {
+    "title": "Пайғамбаримизнинг Ҳаётлари",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_peygamberhayati.md",
+    "cover": "/covers/oz_peygamberhayati.png"
+  },
+  {
+    "title": "САРВАРИ КОИНОТ",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_siyer2.md",
+    "cover": "/covers/oz_siyer2.png"
+  },
+  {
+    "title": "Ёшларга Раҳнамо",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_genclikrehb.md",
+    "cover": "/covers/oz_genclikrehb.png"
+  },
+  {
+    "title": "ЙИГИРМА УЧИНЧИ СЎЗ",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_23soz.md",
+    "cover": "/covers/oz_23soz.png"
+  },
+  {
+    "title": "Мева Рисоласи",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_meyve-kril.md",
+    "cover": "/covers/oz_meyve-kril.png"
+  },
+  {
+    "title": "Кексалар Рисоласи",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_ihtiyar-kril.md",
+    "cover": "/covers/oz_ihtiyar-kril.png"
+  },
+  {
+    "title": "Mirkatüs-Sünnet ve Tiryak-u Marazil-Bid`a",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/uz_mirkatsunneh.md",
+    "cover": "/covers/uz_mirkatsunneh.png"
+  },
+  {
+    "title": "ХАСТАЛАР РИСОЛАСИ",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_hastalar.md",
+    "cover": "/covers/oz_hastalar.png"
+  },
+  {
+    "title": "Ихлос Рисолалари",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_ihlas.md",
+    "cover": "/covers/oz_ihlas.png"
+  },
+  {
+    "title": "Иймон ҳақиқатлари",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_imanhakikatleri.md",
+    "cover": "/covers/oz_imanhakikatleri.png"
+  },
+  {
+    "title": "УЧИНЧИ ШУЪЛА",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_munacat.md",
+    "cover": "/covers/oz_munacat.png"
+  },
+  {
+    "title": "Табиат Рисоласи",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/oz_tabiat.md",
+    "cover": "/covers/oz_tabiat.png"
+  },
+  {
+    "title": "Hutbe-i Şamiye",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/uz_hutbe.md",
+    "cover": "/covers/uz_hutbe.png"
+  },
+  {
+    "title": "33 pencere",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/uz_33pencere.md",
+    "cover": "/covers/uz_33pencere.png"
+  },
+  {
+    "title": "Ayetel Kübra",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/uz_ayetkubra.md",
+    "cover": "/covers/uz_ayetkubra.png"
+  },
+  {
+    "title": "Haşir Risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Узбекский язык",
+    "url": "/books/uz_hasir.md",
+    "cover": "/covers/uz_hasir.png"
+  },
+  {
+    "title": "Risaalada Bukaanka",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Сомалийский язык",
+    "url": "/books/so_hastalar.md",
+    "cover": "/covers/so_hastalar.png"
+  },
+  {
+    "title": "Os Lampejos",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Португальский язык",
+    "url": "/books/po_lemalar.md",
+    "cover": "/covers/po_lemalar.png"
+  },
+  {
+    "title": "MENSAGEM AO ENFERMO",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Португальский язык",
+    "url": "/books/pt_hastalar.md",
+    "cover": "/covers/pt_hastalar.png"
+  },
+  {
+    "title": "Ramadan Frugalidade Agradecimento",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Португальский язык",
+    "url": "/books/po_ramazan.md",
+    "cover": "/covers/po_ramazan.png"
+  },
+  {
+    "title": "Eu busco refúgio em Allah contra o maldito Satanás",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Португальский язык",
+    "url": "/books/pt_13lema.md",
+    "cover": "/covers/pt_13lema.png"
+  },
+  {
+    "title": "Sobre A Sinceridade",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Португальский язык",
+    "url": "/books/pt_ihlas.md",
+    "cover": "/covers/pt_ihlas.png"
+  },
+  {
+    "title": "Mensagem Para as Pessoas Idosas",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Португальский язык",
+    "url": "/books/pt_ihtiyar.md",
+    "cover": "/covers/pt_ihtiyar.png"
+  },
+  {
+    "title": "Confidências",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Португальский язык",
+    "url": "/books/pt_munacat.md",
+    "cover": "/covers/pt_munacat.png"
+  },
+  {
+    "title": "A Posição das Práticas do Profeta  Muhammed (a.s.m)",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Португальский язык",
+    "url": "/books/pt_sunnetiseniyye.md",
+    "cover": "/covers/pt_sunnetiseniyye.png"
+  },
+  {
+    "title": "NATUREZA:CAUSA OU EFEITO?",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Португальский язык",
+    "url": "/books/pt_tabiat.md",
+    "cover": "/covers/pt_tabiat.png"
+  },
+  {
+    "title": "Küçük Sözler",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Бирманский язык",
+    "url": "/books/ms_kucuksoz.md",
+    "cover": "/covers/ms_kucuksoz.png"
+  },
+  {
+    "title": "30. Lema",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Бирманский язык",
+    "url": "/books/ms_30lema.md",
+    "cover": "/covers/ms_30lema.png"
+  },
+  {
+    "title": "Hanımlar Risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Бирманский язык",
+    "url": "/books/ms_hanimlar.md",
+    "cover": "/covers/ms_hanimlar.png"
+  },
+  {
+    "title": "Hastalar Risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Бирманский язык",
+    "url": "/books/ms_hastalar.md",
+    "cover": "/covers/ms_hastalar.png"
+  },
+  {
+    "title": "İçtihad Risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Бирманский язык",
+    "url": "/books/ms_ictihad.md",
+    "cover": "/covers/ms_ictihad.png"
+  },
+  {
+    "title": "İhlas Risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Бирманский язык",
+    "url": "/books/ms_ihlas.md",
+    "cover": "/covers/ms_ihlas.png"
+  },
+  {
+    "title": "İman",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Бирманский язык",
+    "url": "/books/ms_imaninsan.md",
+    "cover": "/covers/ms_imaninsan.png"
+  },
+  {
+    "title": "Münacat",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Бирманский язык",
+    "url": "/books/ms_munacat.md",
+    "cover": "/covers/ms_munacat.png"
+  },
+  {
+    "title": "Ramazan Risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Бирманский язык",
+    "url": "/books/ms_ramazan.md",
+    "cover": "/covers/ms_ramazan.png"
+  },
+  {
+    "title": "Tabiat Risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Бирманский язык",
+    "url": "/books/ms_tabiat.md",
+    "cover": "/covers/ms_tabiat.png"
+  },
+  {
+    "title": "Tevhid",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Бирманский язык",
+    "url": "/books/ms_tevhidpenceresi.md",
+    "cover": "/covers/ms_tevhidpenceresi.png"
+  },
+  {
+    "title": "20. Mektup",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Бирманский язык",
+    "url": "/books/ms_20mektup.md",
+    "cover": "/covers/ms_20mektup.png"
+  },
+  {
+    "title": "질병! 숨겨진 메시지가 있다",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Корейский язык",
+    "url": "/books/ko_hastalar.md",
+    "cover": "/covers/ko_hastalar.png"
+  },
+  {
+    "title": "Sözler",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Бенгальский язык",
+    "url": "/books/bn_sozler.md",
+    "cover": "/covers/bn_sozler.png"
+  },
+  {
+    "title": "Asa-yı Musa",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Бенгальский язык",
+    "url": "/books/bn_asayimusa.md",
+    "cover": "/covers/bn_asayimusa.png"
+  },
+  {
+    "title": "Ramazan Risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Бенгальский язык",
+    "url": "/books/bn_ramazan.md",
+    "cover": "/covers/bn_ramazan.png"
+  },
+  {
+    "title": "Hastalar Risalesi (Bengalce)",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Бенгальский язык",
+    "url": "/books/bn_hastalar.md",
+    "cover": "/covers/bn_hastalar.png"
+  },
+  {
+    "title": "Tarihçe",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Бенгальский язык",
+    "url": "/books/bn_tarih_muh.md",
+    "cover": "/covers/bn_tarih_muh.png"
+  },
+  {
+    "title": "İhlas&Uhuvvet",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Бенгальский язык",
+    "url": "/books/bn_ihlasuhuvvet.md",
+    "cover": "/covers/bn_ihlasuhuvvet.png"
+  },
+  {
+    "title": "Küçük Sözler",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Бенгальский язык",
+    "url": "/books/bn_kucuksoz.md",
+    "cover": "/covers/bn_kucuksoz.png"
+  },
+  {
+    "title": "Mu'cizat-ı Kur'an",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Бенгальский язык",
+    "url": "/books/bn_mucizatikuran.md",
+    "cover": "/covers/bn_mucizatikuran.png"
+  },
+  {
+    "title": "23. Söz",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Бенгальский язык",
+    "url": "/books/bn_23soz.md",
+    "cover": "/covers/bn_23soz.png"
+  },
+  {
+    "title": "10. SÖZ",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Бенгальский язык",
+    "url": "/books/bn_hasir.md",
+    "cover": "/covers/bn_hasir.png"
+  },
+  {
+    "title": "30. Lema",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Бенгальский язык",
+    "url": "/books/bn_30lema.md",
+    "cover": "/covers/bn_30lema.png"
+  },
+  {
+    "title": "Szöler",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Польский язык",
+    "url": "/books/pl_sozler.md",
+    "cover": "/covers/pl_sozler.png"
+  },
+  {
+    "title": "Lemalar",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Польский язык",
+    "url": "/books/pl_lemalar.md",
+    "cover": "/covers/pl_lemalar.png"
+  },
+  {
+    "title": "Sözler",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Венгерский язык",
+    "url": "/books/hu_sozler.md",
+    "cover": "/covers/hu_sozler.png"
+  },
+  {
+    "title": "Barla",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Венгерский язык",
+    "url": "/books/hu_barla.md",
+    "cover": "/covers/hu_barla.png"
+  },
+  {
+    "title": "Şualar",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Венгерский язык",
+    "url": "/books/hu_sualar.md",
+    "cover": "/covers/hu_sualar.png"
+  },
+  {
+    "title": "Mektubat",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Венгерский язык",
+    "url": "/books/hu_mektubat.md",
+    "cover": "/covers/hu_mektubat.png"
+  },
+  {
+    "title": "Mesnevi-i Nuriye",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Венгерский язык",
+    "url": "/books/hu_mesnevi.md",
+    "cover": "/covers/hu_mesnevi.png"
+  },
+  {
+    "title": "Asa-yı Musa",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Венгерский язык",
+    "url": "/books/hu_asamusa.md",
+    "cover": "/covers/hu_asamusa.png"
+  },
+  {
+    "title": "Hastalar Risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Венгерский язык",
+    "url": "/books/hu_hastalar.md",
+    "cover": "/covers/hu_hastalar.png"
+  },
+  {
+    "title": "Divan-ı Harb-i Örfi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Венгерский язык",
+    "url": "/books/hu_harbiorfi.md",
+    "cover": "/covers/hu_harbiorfi.png"
+  },
+  {
+    "title": "Küçük Sözler",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Венгерский язык",
+    "url": "/books/hu_kucuksoz.md",
+    "cover": "/covers/hu_kucuksoz.png"
+  },
+  {
+    "title": "23. Söz",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Венгерский язык",
+    "url": "/books/hu_23soz.md",
+    "cover": "/covers/hu_23soz.png"
+  },
+  {
+    "title": "33. Söz",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Венгерский язык",
+    "url": "/books/hu_33soz.md",
+    "cover": "/covers/hu_33soz.png"
+  },
+  {
+    "title": "Ene ve Zerre",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Венгерский язык",
+    "url": "/books/hu_enezerre.md",
+    "cover": "/covers/hu_enezerre.png"
+  },
+  {
+    "title": "Hanımlar Risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Венгерский язык",
+    "url": "/books/hu_hanimlar.md",
+    "cover": "/covers/hu_hanimlar.png"
+  },
+  {
+    "title": "Uhuvvet Risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Венгерский язык",
+    "url": "/books/hu_uhuvvet.md",
+    "cover": "/covers/hu_uhuvvet.png"
+  },
+  {
+    "title": "Haşir Risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Венгерский язык",
+    "url": "/books/hu_hasir.md",
+    "cover": "/covers/hu_hasir.png"
+  },
+  {
+    "title": "23. Söz",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Финский язык",
+    "url": "/books/fi_23soz.md",
+    "cover": "/covers/fi_23soz.png"
+  },
+  {
+    "title": "Küçük sözler",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Финский язык",
+    "url": "/books/fi_kucuksozler.md",
+    "cover": "/covers/fi_kucuksozler.png"
+  },
+  {
+    "title": "Hastalar Risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Финский язык",
+    "url": "/books/fi_hastalar.md",
+    "cover": "/covers/fi_hastalar.png"
+  },
+  {
+    "title": "Tabiat Risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Финский язык",
+    "url": "/books/fi_tabiat.md",
+    "cover": "/covers/fi_tabiat.png"
+  },
+  {
+    "title": "Ramazan, İktisat, Şükür",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Финский язык",
+    "url": "/books/fi_ramazaniktisadsukur.md",
+    "cover": "/covers/fi_ramazaniktisadsukur.png"
+  },
+  {
+    "title": "Münacat Risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Финский язык",
+    "url": "/books/fi_munacat.md",
+    "cover": "/covers/fi_munacat.png"
+  },
+  {
+    "title": "Meyve Risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Финский язык",
+    "url": "/books/fi_meyve.md",
+    "cover": "/covers/fi_meyve.png"
+  },
+  {
+    "title": "İhtiyarlar Risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Финский язык",
+    "url": "/books/fi_ihtiyar.md",
+    "cover": "/covers/fi_ihtiyar.png"
+  },
+  {
+    "title": "Haşir Risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Финский язык",
+    "url": "/books/fi_hasir.md",
+    "cover": "/covers/fi_hasir.png"
+  },
+  {
+    "title": "Ayet-ül Kübra",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Финский язык",
+    "url": "/books/fi_ayetkubra.md",
+    "cover": "/covers/fi_ayetkubra.png"
+  },
+  {
+    "title": "33 Pencere",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Финский язык",
+    "url": "/books/fi_33pencere.md",
+    "cover": "/covers/fi_33pencere.png"
+  },
+  {
+    "title": "23. Söz",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Греческий язык",
+    "url": "/books/el_23soz.md",
+    "cover": "/covers/el_23soz.png"
+  },
+  {
+    "title": "Asayı Musa",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Греческий язык",
+    "url": "/books/el_asamusa.md",
+    "cover": "/covers/el_asamusa.png"
+  },
+  {
+    "title": "Küçük Sözler",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Греческий язык",
+    "url": "/books/el_kucuksozler.md",
+    "cover": "/covers/el_kucuksozler.png"
+  },
+  {
+    "title": "Mucizat-ı Ahmediyye",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Греческий язык",
+    "url": "/books/el_19soz.md",
+    "cover": "/covers/el_19soz.png"
+  },
+  {
+    "title": "Ayet-ük Kübra",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Греческий язык",
+    "url": "/books/el_ayetkubra.md",
+    "cover": "/covers/el_ayetkubra.png"
+  },
+  {
+    "title": "Haşir Risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Греческий язык",
+    "url": "/books/el_hasir.md",
+    "cover": "/covers/el_hasir.png"
+  },
+  {
+    "title": "Hastalar Risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Греческий язык",
+    "url": "/books/el_hastalar.md",
+    "cover": "/covers/el_hastalar.png"
+  },
+  {
+    "title": "İhlas Risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Греческий язык",
+    "url": "/books/el_ihlas.md",
+    "cover": "/covers/el_ihlas.png"
+  },
+  {
+    "title": "Kur'an Nedir",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Греческий язык",
+    "url": "/books/el_kurannedir.md",
+    "cover": "/covers/el_kurannedir.png"
+  },
+  {
+    "title": "Ramazan, İktisad, Şükür",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Греческий язык",
+    "url": "/books/el_ramazaniktisadsukur.md",
+    "cover": "/covers/el_ramazaniktisadsukur.png"
+  },
+  {
+    "title": "Uhuvvet Risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Греческий язык",
+    "url": "/books/el_uhuvvet.md",
+    "cover": "/covers/el_uhuvvet.png"
+  },
+  {
+    "title": "Tabiat Risalesi",
+    "main": "Рисале-и Нур (Переводы)",
+    "shelf": "Греческий язык",
+    "url": "/books/el_tabiat.md",
+    "cover": "/covers/el_tabiat.png"
+  },
+  {
+    "title": "Es Cevsen",
+    "main": "Рисале-и Нур (Библиотека)",
+    "shelf": "Испанский",
+    "url": "/books/es_cevsen.md",
+    "cover": "/covers/es_cevsen.png"
+  },
+  {
+    "title": "Oz Cevsen",
+    "main": "Рисале-и Нур (Библиотека)",
+    "shelf": "Узбекский",
+    "url": "/books/oz_cevsen.md",
+    "cover": "/covers/oz_cevsen.png"
+  },
+  {
+    "title": "Oz Rn Imankufur",
+    "main": "Рисале-и Нур (Библиотека)",
+    "shelf": "Узбекский",
+    "url": "/books/oz_rn_imankufur.md",
+    "cover": "/covers/oz_rn_imankufur.png"
+  },
+  {
+    "title": "Uz Cevsen",
+    "main": "Рисале-и Нур (Библиотека)",
+    "shelf": "Узбекский",
+    "url": "/books/uz_cevsen.md",
+    "cover": "/covers/uz_cevsen.png"
+  }
+]

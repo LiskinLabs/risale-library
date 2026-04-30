@@ -1,5 +1,7 @@
 {
   "library": [
+    "/books/risale/tr/sozler.md",
+    "/books/risale/ru/sozler-ru.md",
     "https://cdn.readest.com/books/a-room-of-one-s-own.epub",
     "https://cdn.readest.com/books/hamlet.epub",
     "https://cdn.readest.com/books/meditations.epub",

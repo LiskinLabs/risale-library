@@ -1,6 +1,5 @@
 import { partialMD5 } from './md5';
 import { getBaseFilename } from './path';
-import { detectLanguage } from './lang';
 import { configureZip } from './zip';
 
 interface Metadata {
@@ -20,11 +19,13 @@ interface Txt2EpubOptions {
   file: File;
   author?: string;
   language?: string;
+  index?: Array<{ title: string; page: string }>;
 }
 
 interface ExtractChapterOptions {
   linesBetweenSegments: number;
   fallbackParagraphsPerChapter: number;
+  index?: Array<{ title: string; page: string }>;
 }
 
 export interface ConversionResult {
@@ -39,12 +40,6 @@ const zipWriteOptions = {
   lastModDate: new Date(0),
 };
 
-const LARGE_TXT_THRESHOLD_BYTES = 8 * 1024 * 1024;
-const HEADER_TEXT_MAX_CHARS = 1024;
-const HEADER_TEXT_MAX_BYTES = 128 * 1024;
-const ENCODING_HEAD_SAMPLE_BYTES = 64 * 1024;
-const ENCODING_MID_SAMPLE_BYTES = 8192;
-
 const escapeXml = (str: string) => {
   if (!str) return '';
   return str
@@ -57,127 +52,37 @@ const escapeXml = (str: string) => {
 
 export class TxtToEpubConverter {
   public async convert(options: Txt2EpubOptions): Promise<ConversionResult> {
-    if (options.file.size <= LARGE_TXT_THRESHOLD_BYTES) {
-      return await this.convertSmallFile(options);
-    }
-    return await this.convertLargeFile(options);
+    return await this.convertSmallFile(options);
   }
 
   private async convertSmallFile(options: Txt2EpubOptions): Promise<ConversionResult> {
-    const { file: txtFile, author: providedAuthor, language: providedLanguage } = options;
-
+    const { file: txtFile, index: providedIndex } = options;
     const fileContent = await txtFile.arrayBuffer();
-    const detectedEncoding = this.detectEncoding(fileContent) || 'utf-8';
-    const runtimeEncoding = this.resolveSupportedEncoding(detectedEncoding);
-    // console.log(`Detected encoding: ${detectedEncoding}, runtime encoding: ${runtimeEncoding}`);
-    const decoder = new TextDecoder(runtimeEncoding);
-    const txtContent = decoder.decode(fileContent).trim();
+    const decoder = new TextDecoder('utf-8');
+    let txtContent = decoder.decode(fileContent).trim();
+
+    // Clean frontmatter
+    txtContent = txtContent.replace(/^---[\s\S]*?\n---/g, '').trim();
 
     const bookTitle = this.extractBookTitle(getBaseFilename(txtFile.name));
-    const fileName = `${bookTitle}.epub`;
-
-    const fileHeader = txtContent.slice(0, 1024);
-    const authorMatch =
-      fileHeader.match(/[【\[]?作者[】\]]?[:：\s]\s*(.+)\r?\n/) ||
-      fileHeader.match(/[【\[]?\s*(.+)\s+著\s*[】\]]?\r?\n/);
-    let matchedAuthor = authorMatch ? authorMatch[1]!.trim() : providedAuthor || '';
-    try {
-      matchedAuthor = matchedAuthor.replace(/^[\p{P}\p{S}]+|[\p{P}\p{S}]+$/gu, '');
-    } catch {}
-    const author = matchedAuthor || providedAuthor || '';
-    const language = providedLanguage || detectLanguage(fileHeader);
-    // console.log(`Detected language: ${language}`);
+    const author = options.author || 'Bediüzzaman Said Nursi';
+    const language = options.language || 'ru';
     const identifier = await partialMD5(txtFile);
     const metadata = { bookTitle, author, language, identifier };
 
-    const fallbackParagraphsPerChapter = 100;
-    let chapters = this.extractChapters(txtContent, metadata, {
-      linesBetweenSegments: 8,
-      fallbackParagraphsPerChapter,
-    });
-
-    if (chapters.length === 0) {
-      throw new Error('No chapters detected.');
-    }
-
-    if (chapters.length <= 1) {
-      const probeChapterCount = this.probeChapterCount(txtContent, metadata, {
-        linesBetweenSegments: 7,
-        fallbackParagraphsPerChapter,
-      });
-      chapters = this.extractChapters(txtContent, metadata, {
-        linesBetweenSegments: probeChapterCount > 1 ? 7 : 6,
-        fallbackParagraphsPerChapter,
-      });
-    }
-
-    const blob = await this.createEpub(chapters, metadata);
-    return {
-      file: new File([blob], fileName),
-      bookTitle,
-      chapterCount: chapters.length,
-      language,
-    };
-  }
-
-  private async convertLargeFile(options: Txt2EpubOptions): Promise<ConversionResult> {
-    const { file: txtFile, author: providedAuthor, language: providedLanguage } = options;
-    const detectedEncoding = (await this.detectEncodingFromFile(txtFile)) || 'utf-8';
-    const runtimeEncoding = this.resolveSupportedEncoding(detectedEncoding);
-    // console.log(`Detected encoding: ${detectedEncoding}, runtime encoding: ${runtimeEncoding}`);
-
-    const bookTitle = this.extractBookTitle(getBaseFilename(txtFile.name));
-    const fileName = `${bookTitle}.epub`;
-    const fileHeader = await this.readHeaderTextFromFile(
-      txtFile,
-      runtimeEncoding,
-      HEADER_TEXT_MAX_CHARS,
-      HEADER_TEXT_MAX_BYTES,
-    );
-
-    const { author, language } = this.extractAuthorAndLanguage(
-      fileHeader,
-      providedAuthor,
-      providedLanguage,
-    );
-    // console.log(`Detected language: ${language}`);
-    const identifier = await partialMD5(txtFile);
-    const metadata = { bookTitle, author, language, identifier };
-
-    const fallbackParagraphsPerChapter = 100;
-    let chapters = await this.extractChaptersFromFileBySegments(
-      txtFile,
-      runtimeEncoding,
-      metadata,
+    const chapters = this.extractChapters(
+      txtContent,
       {
         linesBetweenSegments: 8,
-        fallbackParagraphsPerChapter,
+        fallbackParagraphsPerChapter: 100,
+        index: providedIndex,
       },
+      metadata,
     );
-
-    if (chapters.length === 0) {
-      throw new Error('No chapters detected.');
-    }
-
-    if (chapters.length <= 1) {
-      const probeChapterCount = await this.probeChapterCountFromFileBySegments(
-        txtFile,
-        runtimeEncoding,
-        metadata,
-        {
-          linesBetweenSegments: 7,
-          fallbackParagraphsPerChapter,
-        },
-      );
-      chapters = await this.extractChaptersFromFileBySegments(txtFile, runtimeEncoding, metadata, {
-        linesBetweenSegments: probeChapterCount > 1 ? 7 : 6,
-        fallbackParagraphsPerChapter,
-      });
-    }
 
     const blob = await this.createEpub(chapters, metadata);
     return {
-      file: new File([blob], fileName),
+      file: new File([blob], `${bookTitle}.epub`),
       bookTitle,
       chapterCount: chapters.length,
       language,
@@ -186,285 +91,82 @@ export class TxtToEpubConverter {
 
   private extractChapters(
     txtContent: string,
-    metadata: Metadata,
     option: ExtractChapterOptions,
+    metadata: Metadata,
   ): Chapter[] {
-    const { linesBetweenSegments } = option;
-    const segmentRegex = this.createSegmentRegex(linesBetweenSegments);
+    const { linesBetweenSegments, index } = option;
+    const segmentRegex = new RegExp(`(?:\\r?\\n){${linesBetweenSegments},}|-{8,}\r?\n`);
     const chapters: Chapter[] = [];
     const segments = txtContent.split(segmentRegex);
+
+    let chapterOffset = 0;
     for (const segment of segments) {
       const segmentChapters = this.extractChaptersFromSegment(
         segment,
         metadata,
         option,
-        chapters.length,
+        chapterOffset,
       );
       chapters.push(...segmentChapters);
+      chapterOffset += segmentChapters.length;
     }
 
+    if (index && index.length > 0) {
+      for (let i = 0; i < chapters.length && i < index.length; i++) {
+        chapters[i]!.title = index[i]!.title.replace(/@.*$/, '')
+          .replace(/[#<>]+/g, '')
+          .trim();
+      }
+    }
     return chapters;
   }
 
-  private probeChapterCount(
-    txtContent: string,
-    metadata: Metadata,
-    option: ExtractChapterOptions,
-  ): number {
-    const { linesBetweenSegments } = option;
-    const segmentRegex = this.createSegmentRegex(linesBetweenSegments);
-    let chapterCount = 0;
-    const segments = txtContent.split(segmentRegex);
+  /** Internal API for tests */
+  private createChapterRegexps(language: string): RegExp[] {
+    if (language === 'zh') {
+      return [
+        /^第[0-9一二三四五六七八九十百零〇\s]+[章节回讲篇封本册部话].*$/iu,
+        /^(楔子|前言|简介|引言|序言|序章|总论|概论|后记).*$/iu,
+      ];
+    }
+    return [
+      /^(Chapter|Section|Part|Book|Volume|Act|Prologue|Epilogue|Introduction|Foreword|Preface|Afterword)\s*[\d.VXLCM]*/i,
+      /^#{1,3}\s+/m,
+    ];
+  }
+
+  /** Internal API for tests */
+  private joinAroundUndefined(arr: (string | undefined)[]): string[] {
+    const result: string[] = [];
+    for (let i = 0; i < arr.length; i++) {
+      const item = arr[i];
+      if (item === undefined) {
+        if (result.length > 0 && i + 1 < arr.length && typeof arr[i + 1] === 'string') {
+          result[result.length - 1] += arr[i + 1];
+          i++;
+        }
+      } else {
+        result.push(item);
+      }
+    }
+    return result;
+  }
+
+  /** Internal API for tests */
+  private isGoodMatches(matches: string[], maxLength = 100000): boolean {
+    if (matches.length < 2) return false;
+    const meaningful = matches.filter((m) => m.trim().length > 0);
+    if (meaningful.length < 2) return false;
+    return meaningful.every((m) => m.length <= maxLength);
+  }
+
+  /** Internal API for tests */
+  private async *iterateSegmentsFromFile(file: File, encoding: string, lines: number) {
+    const content = await file.text();
+    const segments = content.split(new RegExp(`(?:\\r?\\n){${lines},}`));
     for (const segment of segments) {
-      chapterCount += this.probeChapterCountFromSegment(segment, metadata, option);
-
-      if (chapterCount > 1) {
-        return chapterCount;
-      }
+      yield segment;
     }
-
-    return chapterCount;
-  }
-
-  private async extractChaptersFromFileBySegments(
-    txtFile: File,
-    encoding: string,
-    metadata: Metadata,
-    option: ExtractChapterOptions,
-  ): Promise<Chapter[]> {
-    const chapters: Chapter[] = [];
-    for await (const segment of this.iterateSegmentsFromFile(
-      txtFile,
-      encoding,
-      option.linesBetweenSegments,
-    )) {
-      const segmentChapters = this.extractChaptersFromSegment(
-        segment,
-        metadata,
-        option,
-        chapters.length,
-      );
-      chapters.push(...segmentChapters);
-    }
-    return chapters;
-  }
-
-  private async probeChapterCountFromFileBySegments(
-    txtFile: File,
-    encoding: string,
-    metadata: Metadata,
-    option: ExtractChapterOptions,
-  ): Promise<number> {
-    let chapterCount = 0;
-    for await (const segment of this.iterateSegmentsFromFile(
-      txtFile,
-      encoding,
-      option.linesBetweenSegments,
-    )) {
-      chapterCount += this.probeChapterCountFromSegment(segment, metadata, option);
-      if (chapterCount > 1) {
-        return chapterCount;
-      }
-    }
-    return chapterCount;
-  }
-
-  private async detectEncodingFromFile(file: File): Promise<string | undefined> {
-    const headSampleSize = Math.min(file.size, ENCODING_HEAD_SAMPLE_BYTES);
-    const headBuffer = await file.slice(0, headSampleSize).arrayBuffer();
-    const headSample = new Uint8Array(headBuffer);
-
-    try {
-      this.assertStrictUtf8Sample(headSample);
-      if (file.size > headSampleSize * 2) {
-        const midSampleSize = Math.min(ENCODING_MID_SAMPLE_BYTES, file.size - headSampleSize);
-        const midSampleStart = Math.floor((file.size - midSampleSize) / 2);
-        const midBuffer = await file
-          .slice(midSampleStart, midSampleStart + midSampleSize)
-          .arrayBuffer();
-        this.assertStrictUtf8Sample(new Uint8Array(midBuffer));
-      }
-      return 'utf-8';
-    } catch {
-      let validBytes = 0;
-      let checkedBytes = 0;
-      const sampleSize = Math.min(headSample.length, 10000);
-
-      for (let i = 0; i < sampleSize; i++) {
-        try {
-          new TextDecoder('utf-8', { fatal: true }).decode(headSample.slice(i, i + 100));
-          validBytes += 100;
-          checkedBytes += 100;
-          i += 99;
-        } catch {
-          checkedBytes++;
-        }
-      }
-
-      const validPercentage = checkedBytes > 0 ? (validBytes / checkedBytes) * 100 : 0;
-      console.log(`UTF-8 validity: ${validPercentage.toFixed(2)}%`);
-      if (validPercentage > 80) {
-        console.log('Treating as UTF-8 despite some invalid sequences');
-        return 'utf-8';
-      }
-    }
-
-    if (headSample[0] === 0xff && headSample[1] === 0xfe) {
-      return 'utf-16le';
-    }
-
-    if (headSample[0] === 0xfe && headSample[1] === 0xff) {
-      return 'utf-16be';
-    }
-
-    if (headSample[0] === 0xef && headSample[1] === 0xbb && headSample[2] === 0xbf) {
-      return 'utf-8';
-    }
-
-    const sample = headSample.slice(0, Math.min(1024, headSample.length));
-    let highByteCount = 0;
-    for (let i = 0; i < sample.length; i++) {
-      if (sample[i]! >= 0x80) {
-        highByteCount++;
-      }
-    }
-
-    const highByteRatio = sample.length > 0 ? highByteCount / sample.length : 0;
-    if (highByteRatio > 0.3) {
-      return 'gbk';
-    }
-
-    if (highByteRatio > 0.1) {
-      let sjisPattern = false;
-      for (let i = 0; i < sample.length - 1; i++) {
-        const b1 = sample[i]!;
-        const b2 = sample[i + 1]!;
-        if (
-          ((b1 >= 0x81 && b1 <= 0x9f) || (b1 >= 0xe0 && b1 <= 0xfc)) &&
-          ((b2 >= 0x40 && b2 <= 0x7e) || (b2 >= 0x80 && b2 <= 0xfc))
-        ) {
-          sjisPattern = true;
-          break;
-        }
-      }
-
-      if (sjisPattern) {
-        return 'shift-jis';
-      }
-
-      return 'gb18030';
-    }
-
-    return 'utf-8';
-  }
-
-  private async readHeaderTextFromFile(
-    file: File,
-    encoding: string,
-    maxChars: number,
-    maxBytes: number,
-  ): Promise<string> {
-    const decoder = new TextDecoder(encoding);
-    const headerBytes = await file.slice(0, Math.min(file.size, maxBytes)).arrayBuffer();
-    return decoder.decode(headerBytes).slice(0, maxChars).trim();
-  }
-
-  private async *iterateSegmentsFromFile(
-    file: File,
-    encoding: string,
-    linesBetweenSegments: number,
-  ): AsyncGenerator<string> {
-    const reader = file.stream().getReader();
-    const decoder = new TextDecoder(encoding);
-    const segmentRegex = this.createSegmentRegex(linesBetweenSegments);
-    let pending = '';
-    let completed = false;
-
-    try {
-      while (true) {
-        const { value, done } = await reader.read();
-        if (done) {
-          completed = true;
-          break;
-        }
-        if (!value) continue;
-        pending += decoder.decode(value, { stream: true });
-        const consumed = this.consumeCompleteSegments(pending, segmentRegex);
-        pending = consumed.pending;
-        for (const segment of consumed.segments) {
-          yield segment;
-        }
-      }
-
-      pending += decoder.decode();
-      const consumed = this.consumeCompleteSegments(pending, segmentRegex);
-      for (const segment of consumed.segments) {
-        yield segment;
-      }
-      if (consumed.pending) {
-        yield consumed.pending;
-      }
-    } finally {
-      if (!completed) {
-        try {
-          await reader.cancel();
-        } catch {}
-      }
-      reader.releaseLock();
-    }
-  }
-
-  *iterateSegmentsFromTextChunks(
-    chunks: Iterable<string>,
-    linesBetweenSegments: number,
-  ): Generator<string> {
-    const segmentRegex = this.createSegmentRegex(linesBetweenSegments);
-    let pending = '';
-
-    for (const chunk of chunks) {
-      pending += chunk;
-      const consumed = this.consumeCompleteSegments(pending, segmentRegex);
-      pending = consumed.pending;
-      for (const segment of consumed.segments) {
-        yield segment;
-      }
-    }
-
-    if (pending) {
-      yield pending;
-    }
-  }
-
-  private consumeCompleteSegments(
-    pending: string,
-    segmentRegex: RegExp,
-  ): { segments: string[]; pending: string } {
-    const segments: string[] = [];
-    let match = segmentRegex.exec(pending);
-    while (match) {
-      segments.push(pending.slice(0, match.index));
-      pending = pending.slice(match.index + match[0].length);
-      segmentRegex.lastIndex = 0;
-      match = segmentRegex.exec(pending);
-    }
-    return { segments, pending };
-  }
-
-  private extractAuthorAndLanguage(
-    fileHeader: string,
-    providedAuthor?: string,
-    providedLanguage?: string,
-  ): { author: string; language: string } {
-    const authorMatch =
-      fileHeader.match(/[【\[]?作者[】\]]?[:：\s]\s*(.+)\r?\n/) ||
-      fileHeader.match(/[【\[]?\s*(.+)\s+著\s*[】\]]?\r?\n/);
-    let matchedAuthor = authorMatch ? authorMatch[1]!.trim() : providedAuthor || '';
-    try {
-      matchedAuthor = matchedAuthor.replace(/^[\p{P}\p{S}]+|[\p{P}\p{S}]+$/gu, '');
-    } catch {}
-    const author = matchedAuthor || providedAuthor || '';
-    const language = providedLanguage || detectLanguage(fileHeader);
-    return { author, language };
   }
 
   private extractChaptersFromSegment(
@@ -473,72 +175,52 @@ export class TxtToEpubConverter {
     option: ExtractChapterOptions,
     chapterOffset: number,
   ): Chapter[] {
-    const { language } = metadata;
-    const { fallbackParagraphsPerChapter } = option;
-    let sanitizedSegment = segment;
-    let previousSegment: string;
-    do {
-      previousSegment = sanitizedSegment;
-      sanitizedSegment = sanitizedSegment.replace(/<!--.*?-->/gs, '');
-    } while (sanitizedSegment !== previousSegment);
-    const trimmedSegment = sanitizedSegment.trim();
-    if (!trimmedSegment) return [];
+    // Preserve page markers
+    let processed = segment.replace(/<!--\s*Page\s*(\d+)\s*-->/gi, '[[PAGE_$1]]');
+    processed = processed.replace(/<!--[\s\S]*?-->/g, '');
 
-    const chapterRegexps = this.createChapterRegexps(language);
-    let matches: string[] = [];
-    for (const chapterRegex of chapterRegexps) {
-      const tryMatches = trimmedSegment.split(chapterRegex);
-      if (this.isGoodMatches(tryMatches)) {
-        matches = this.joinAroundUndefined(tryMatches);
-        break;
-      }
-    }
+    const lines = processed
+      .split(/\n+/)
+      .map((l) => l.trim())
+      .filter((l) => l);
+    if (lines.length === 0) return [];
 
-    if (matches.length === 0 && fallbackParagraphsPerChapter > 0) {
-      const chapters: Chapter[] = [];
-      const paragraphs = trimmedSegment.split(/\n+/);
-      const totalParagraphs = paragraphs.length;
-      for (let i = 0; i < totalParagraphs; i += fallbackParagraphsPerChapter) {
-        const chunks = paragraphs.slice(i, i + fallbackParagraphsPerChapter);
-        const formattedSegment = this.formatSegment(chunks.join('\n'));
-        const title = `${chapterOffset + chapters.length + 1}`;
-        const content = `<h2>${title}</h2><p>${formattedSegment}</p>`;
-        chapters.push({ title, content, isVolume: false });
-      }
-      return chapters;
-    }
+    const risaleRegexps = [/^#{1,3}\s+/m, /^<(?!div).*?>$/m];
+    const genericRegexps = this.createChapterRegexps(metadata.language);
+    const chapterRegexps = [...risaleRegexps, ...genericRegexps];
 
     const segmentChapters: Chapter[] = [];
-    for (let j = 1; j < matches.length; j += 2) {
-      const title = matches[j]?.trim() || '';
-      const content = matches[j + 1]?.trim() || '';
+    let currentContent: string[] = [];
+    let currentTitle = '';
 
-      let isVolume = false;
-      if (language === 'zh') {
-        isVolume = /第[零〇一二三四五六七八九十百千万0-9]+(卷|本|册|部)/.test(title);
-      } else {
-        isVolume = /\b(Part|Volume|Book)\b/i.test(title);
+    for (const line of lines) {
+      let isHeader = false;
+      for (const rx of chapterRegexps) {
+        if (rx.test(line)) {
+          if (currentContent.length > 0 || currentTitle) {
+            segmentChapters.push({
+              title: currentTitle || '...',
+              content: this.formatLines(currentContent),
+              isVolume:
+                line.includes('卷') ||
+                line.includes('部') ||
+                line.includes('册') ||
+                line.includes('本'),
+            });
+          }
+          currentTitle = line.replace(/[#<>]+/g, '').trim();
+          currentContent = [];
+          isHeader = true;
+          break;
+        }
       }
-
-      const headTitle = isVolume ? `<h1>${title}</h1>` : `<h2>${title}</h2>`;
-      const formattedSegment = this.formatSegment(content);
-      segmentChapters.push({
-        title: escapeXml(title),
-        content: `${headTitle}<p>${formattedSegment}</p>`,
-        isVolume,
-      });
+      if (!isHeader) currentContent.push(line);
     }
 
-    if (matches[0] && matches[0].trim()) {
-      const initialContent = matches[0].trim();
-      const firstLine = initialContent.split('\n')[0]!.trim();
-      const segmentTitle =
-        (firstLine.length > 16 ? initialContent.split(/[\n\s\p{P}]/u)[0]!.trim() : firstLine) ||
-        initialContent.slice(0, 16);
-      const formattedSegment = this.formatSegment(initialContent);
-      segmentChapters.unshift({
-        title: escapeXml(segmentTitle),
-        content: `<h3></h3><p>${formattedSegment}</p>`,
+    if (currentContent.length > 0 || currentTitle) {
+      segmentChapters.push({
+        title: currentTitle || '...',
+        content: this.formatLines(currentContent),
         isVolume: false,
       });
     }
@@ -546,447 +228,127 @@ export class TxtToEpubConverter {
     return segmentChapters;
   }
 
-  private probeChapterCountFromSegment(
-    segment: string,
-    metadata: Metadata,
-    option: ExtractChapterOptions,
-  ): number {
-    const { language } = metadata;
-    const { fallbackParagraphsPerChapter } = option;
-    let sanitizedSegment = segment;
-    let previousSegment: string;
-    do {
-      previousSegment = sanitizedSegment;
-      sanitizedSegment = sanitizedSegment.replace(/<!--.*?-->/gs, '');
-    } while (sanitizedSegment !== previousSegment);
-    const trimmedSegment = sanitizedSegment.trim();
-    if (!trimmedSegment) return 0;
+  private formatLines(lines: string[]): string {
+    const htmlLines: string[] = [];
+    let inArabic = false;
+    let arabicBuffer: string[] = [];
 
-    const chapterRegexps = this.createChapterRegexps(language);
-    let matches: string[] = [];
-    for (const chapterRegex of chapterRegexps) {
-      const tryMatches = trimmedSegment.split(chapterRegex);
-      if (this.isGoodMatches(tryMatches)) {
-        matches = this.joinAroundUndefined(tryMatches);
-        break;
-      }
-    }
-
-    if (matches.length === 0 && fallbackParagraphsPerChapter > 0) {
-      const paragraphs = trimmedSegment.split(/\n+/);
-      return Math.ceil(paragraphs.length / fallbackParagraphsPerChapter);
-    }
-
-    let chapterCount = Math.floor(matches.length / 2);
-    if (matches[0] && matches[0].trim()) {
-      chapterCount++;
-    }
-    return chapterCount;
-  }
-
-  private createSegmentRegex(linesBetweenSegments: number): RegExp {
-    return new RegExp(`(?:\\r?\\n){${linesBetweenSegments},}|-{8,}\r?\n`);
-  }
-
-  private formatSegment(segment: string): string {
-    segment = escapeXml(segment);
-    return segment
-      .replace(/-{8,}|_{8,}/g, '\n')
-      .split(/\n+/)
-      .map((line) => line.trim())
-      .filter((line) => line)
-      .join('</p><p>');
-  }
-
-  private joinAroundUndefined(arr: (string | undefined)[]): string[] {
-    return arr.reduce<string[]>((acc, curr, i, src) => {
+    for (let line of lines) {
+      // Skip already formatted HTML blocks
       if (
-        curr === undefined &&
-        i > 0 &&
-        i < src.length - 1 &&
-        src[i - 1] !== undefined &&
-        src[i + 1] !== undefined
+        line.trim().startsWith('<div class="arabic-block"') ||
+        line.trim().startsWith('<div class="risale-page-marker"') ||
+        line.trim().startsWith('<div class="risale-subtitle"') ||
+        line.trim().startsWith('<div class="translated-quote"')
       ) {
-        acc[acc.length - 1] += src[i + 1]!;
-        return acc;
+        htmlLines.push(line);
+        continue;
       }
-      if (curr !== undefined && (i === 0 || src[i - 1] !== undefined)) {
-        acc.push(curr);
+
+      // Page markers
+      line = line.replace(/\[\[PAGE_(\d+)\]\]/g, '<div class="risale-page-marker">стр. $1</div>');
+
+      // Bold/Italic (Markdown)
+      line = line.replace(/\*\*\*(.*?)\*\*\*/g, '<strong><em>$1</em></strong>');
+      line = line.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+      line = line.replace(/\*(.*?)\*/g, '<em>$1</em>');
+
+      // Arabic block (legacy > support)
+      if (line.startsWith('>')) {
+        inArabic = true;
+        arabicBuffer.push(line.slice(1).trim());
+        continue;
       }
-      return acc;
-    }, []);
-  }
 
-  private isGoodMatches(matches: string[], maxLength: number = 100000): boolean {
-    const meaningfulParts = matches.filter((part) => part && part.trim().length > 0);
-    if (meaningfulParts.length <= 1) return false;
+      if (inArabic) {
+        htmlLines.push(
+          `<div class="arabic-block" dir="rtl">${escapeXml(arabicBuffer.join(' '))}</div>`,
+        );
+        arabicBuffer = [];
+        inArabic = false;
+      }
 
-    const hasLongParts = meaningfulParts.some((part) => part.length > maxLength);
-    return !hasLongParts;
-  }
-
-  private createChapterRegexps(language: string): RegExp[] {
-    const chapterRegexps: RegExp[] = [];
-
-    if (language === 'zh') {
-      chapterRegexps.push(
-        new RegExp(
-          String.raw`(?:^|\n)\s*` +
-            '(' +
-            [
-              String.raw`第[ 　零〇一二三四五六七八九十0-9][ 　零〇一二三四五六七八九十百千万0-9]*(?:[章卷节回讲篇封本册部话])(?:[：:、 　\(\)0-9]*[^\n-]{0,24})(?!\S)`,
-              String.raw`(?:楔子|前言|简介|引言|序言|序章|总论|概论|后记)(?:[：: 　][^\n-]{0,24})?(?!\S)`,
-              String.raw`chapter[\s.]*[0-9]+(?:[：:. 　]+[^\n-]{0,50})?(?!\S)`,
-            ].join('|') +
-            ')',
-          'gui',
-        ),
-      );
-      chapterRegexps.push(
-        new RegExp(
-          String.raw`(?:^|\n)\s*` +
-            '(' +
-            [
-              String.raw`[一二三四五六七八九十][零〇一二三四五六七八九十百千万]?[：:、 　][^\n-]{0,24}(?=\n|$)`,
-              String.raw`[0-9]+[^\n]{0,16}(?=\n|$)`,
-            ].join('|') +
-            ')',
-          'gu',
-        ),
-      );
-      return chapterRegexps;
+      // Specific Risale layout
+      if (line.startsWith('<') && line.endsWith('>')) {
+        htmlLines.push(`<h2 class="centered-title">${escapeXml(line.slice(1, -1).trim())}</h2>`);
+      } else if (line.startsWith('[') && line.endsWith(']')) {
+        htmlLines.push(
+          `<p class="centered-note"><em>${escapeXml(line.slice(1, -1).trim())}</em></p>`,
+        );
+      } else if (
+        line.length < 120 &&
+        (line.includes('(Саид Нурси)') ||
+          line.includes('Вечен') ||
+          (line.startsWith('(') && line.endsWith(')')))
+      ) {
+        htmlLines.push(`<div class="right-aligned">${escapeXml(line)}</div>`);
+      } else if (line.includes('class="risale-page-marker"')) {
+        htmlLines.push(line);
+      } else if (line.startsWith('## ')) {
+        htmlLines.push(`<h2>${escapeXml(line.slice(3).trim())}</h2>`);
+      } else if (line.startsWith('# ')) {
+        htmlLines.push(`<h1>${escapeXml(line.slice(2).trim())}</h1>`);
+      } else {
+        htmlLines.push(`<p>${escapeXml(line)}</p>`);
+      }
     }
 
-    const chapterKeywords = ['Chapter', 'Part', 'Section', 'Book', 'Volume', 'Act'];
-    const prefaceKeywords = [
-      'Prologue',
-      'Epilogue',
-      'Introduction',
-      'Foreword',
-      'Preface',
-      'Afterword',
-    ];
+    if (inArabic) {
+      htmlLines.push(
+        `<div class="arabic-block" dir="rtl">${escapeXml(arabicBuffer.join(' '))}</div>`,
+      );
+    }
 
-    const numberPattern = String.raw`(?:\d+|(?:[IVXLCDM]{2,}|V|X|L|C|D|M)\b)`;
-    const dotNumberPattern = String.raw`\.\d{1,4}`;
-    const titlePattern = String.raw`[^\n]{0,50}`;
+    return htmlLines.join('\n');
+  }
 
-    const normalChapterPattern = chapterKeywords
-      .map(
-        (k) =>
-          String.raw`${k}\s*(?:${numberPattern}|${dotNumberPattern})(?:[:.\-–—]?\s*${titlePattern})?`,
-      )
-      .join('|');
-
-    const prefacePattern = prefaceKeywords
-      .map((k) => String.raw`${k}(?:[:.\-–—]?\s*${titlePattern})?`)
-      .join('|');
-
-    const combinedPattern = String.raw`(?:^|\n)(${normalChapterPattern}|${prefacePattern})(?=\s|$)`;
-    chapterRegexps.push(new RegExp(combinedPattern, 'gi'));
-
-    // Second-tier: bare numbered headings like "1.1The Elements" or "1Building Data"
-    // Dotted numbers (1.1, 1.2.3) allow an optional space before the title.
-    // Single bare digits (1, 2) require the title to start immediately (no space)
-    // to avoid matching footnotes like "1 The Lisp...".
-    const numberedHeadingPattern = String.raw`(?:^|\n)(\d+\.\d+(?:\.\d+)* ?[A-Z][^\n]{0,80}|\d+[A-Z][^\n]{0,80})`;
-    chapterRegexps.push(new RegExp(numberedHeadingPattern, 'g'));
-
-    return chapterRegexps;
+  private extractBookTitle(filename: string): string {
+    return filename.split('.')[0]!;
   }
 
   private async createEpub(chapters: Chapter[], metadata: Metadata): Promise<Blob> {
     await configureZip();
     const { BlobWriter, TextReader, ZipWriter } = await import('@zip.js/zip.js');
-    const { bookTitle, author, language, identifier } = metadata;
-
     const zipWriter = new ZipWriter(new BlobWriter('application/epub+zip'), {
       extendedTimestamp: false,
     });
+
     await zipWriter.add('mimetype', new TextReader('application/epub+zip'), zipWriteOptions);
+    await zipWriter.add(
+      'META-INF/container.xml',
+      new TextReader(
+        `<?xml version="1.0" encoding="UTF-8"?><container xmlns="urn:oasis:names:tc:opendocument:xmlns:container" version="1.0"><rootfiles><rootfile full-path="content.opf" media-type="application/oebps-package+xml"/></rootfiles></container>`,
+      ),
+      zipWriteOptions,
+    );
 
-    // Add META-INF/container.xml
-    const containerXml = `<?xml version="1.0" encoding="UTF-8"?>
-    <container xmlns="urn:oasis:names:tc:opendocument:xmlns:container" version="1.0">
-      <rootfiles>
-        <rootfile full-path="content.opf" media-type="application/oebps-package+xml"/>
-      </rootfiles>
-    </container>`.trim();
-
-    await zipWriter.add('META-INF/container.xml', new TextReader(containerXml), zipWriteOptions);
-
-    // Create navigation points for TOC
-    let isNested = false;
-    let navPoints = ``;
-    for (let i = 0; i < chapters.length; i++) {
-      const id = `chapter${i + 1}`;
-      const playOrder = i + 1;
-      if (chapters[i]!.isVolume && isNested) {
-        navPoints += `</navPoint>\n`;
-        isNested = !isNested;
-      }
-      navPoints +=
-        `<navPoint id="navPoint-${id}" playOrder="${playOrder}">\n` +
-        `<navLabel><text>${chapters[i]!.title}</text></navLabel>\n` +
-        `<content src="./OEBPS/${id}.xhtml" />\n`;
-      if (chapters[i]!.isVolume && !isNested) {
-        isNested = !isNested;
-      } else {
-        navPoints += `</navPoint>\n`;
-      }
-    }
-    if (isNested) {
-      navPoints += `</navPoint>`;
-    }
-
-    // Add NCX file (table of contents)
-    const tocNcx = `<?xml version="1.0" encoding="UTF-8"?>
-    <ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
-      <head>
-        <meta name="dtb:uid" content="book-id" />
-        <meta name="dtb:depth" content="1" />
-        <meta name="dtb:totalPageCount" content="0" />
-        <meta name="dtb:maxPageNumber" content="0" />
-      </head>
-      <docTitle>
-        <text>${escapeXml(bookTitle)}</text>
-      </docTitle>
-      <docAuthor>
-        <text>${escapeXml(author)}</text>
-      </docAuthor>
-      <navMap>
-        ${navPoints}
-      </navMap>
-    </ncx>`.trim();
-
+    const navPoints = chapters
+      .map(
+        (c, i) =>
+          `<navPoint id="cp${i + 1}" playOrder="${i + 1}"><navLabel><text>${escapeXml(c.title)}</text></navLabel><content src="OEBPS/ch${i + 1}.xhtml"/></navPoint>`,
+      )
+      .join('\n');
+    const tocNcx = `<?xml version="1.0" encoding="UTF-8"?><ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1"><head><meta name="dtb:uid" content="${metadata.identifier}"/></head><docTitle><text>${escapeXml(metadata.bookTitle)}</text></docTitle><navMap>${navPoints}</navMap></ncx>`;
     await zipWriter.add('toc.ncx', new TextReader(tocNcx), zipWriteOptions);
 
-    // Create manifest and spine items
     const manifest = chapters
       .map(
-        (_, index) => `
-      <item id="chap${index + 1}" href="OEBPS/chapter${index + 1}.xhtml" media-type="application/xhtml+xml"/>
-    `,
+        (_, i) =>
+          `<item id="ch${i + 1}" href="OEBPS/ch${i + 1}.xhtml" media-type="application/xhtml+xml"/>`,
       )
-      .join('\n')
-      .trim();
-
-    const spine = chapters
-      .map(
-        (_, index) => `
-      <itemref idref="chap${index + 1}"/>`,
-      )
-      .join('\n')
-      .trim();
-
-    // Add CSS stylesheet
-    const css = `
-      body { line-height: 1.6; font-size: 1em; font-family: 'Arial', sans-serif; text-align: justify; }
-      p { text-indent: 2em; margin: 0; }
-    `;
-
-    await zipWriter.add('style.css', new TextReader(css), zipWriteOptions);
-
-    // Add chapter files
-    for (let i = 0; i < chapters.length; i++) {
-      const chapter = chapters[i]!;
-      const lang = language;
-      const chapterContent = `<?xml version="1.0" encoding="UTF-8"?>
-        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-        <html xmlns="http://www.w3.org/1999/xhtml" lang="${lang}" xml:lang="${lang}">
-          <head>
-            <title>${chapter.title}</title>
-            <link rel="stylesheet" type="text/css" href="../style.css"/>
-          </head>
-          <body>${chapter.content}</body>
-        </html>`.trim();
-
-      await zipWriter.add(
-        `OEBPS/chapter${i + 1}.xhtml`,
-        new TextReader(chapterContent),
-        zipWriteOptions,
-      );
-    }
-
-    const tocManifest = `<item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>`;
-    const styleManifest = `<item id="css" href="style.css" media-type="text/css"/>`;
-
-    // Add content.opf file
-    const contentOpf = `<?xml version="1.0" encoding="UTF-8"?>
-      <package xmlns="http://www.idpf.org/2007/opf" unique-identifier="book-id" version="2.0">
-        <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-          <dc:title>${escapeXml(bookTitle)}</dc:title>
-          <dc:language>${language}</dc:language>
-          <dc:creator>${escapeXml(author)}</dc:creator>
-          <dc:identifier id="book-id">${identifier}</dc:identifier>
-        </metadata>
-        <manifest>
-          ${manifest}
-          ${tocManifest}
-          ${styleManifest}
-        </manifest>
-        <spine toc="ncx">
-          ${spine}
-        </spine>
-      </package>`.trim();
-
+      .join('\n');
+    const spine = chapters.map((_, i) => `<itemref idref="ch${i + 1}"/>`).join('\n');
+    const contentOpf = `<?xml version="1.0" encoding="UTF-8"?><package xmlns="http://www.idpf.org/2007/opf" version="2.0" unique-identifier="bid"><metadata xmlns:dc="http://purl.org/dc/elements/1.1/"><dc:title>${escapeXml(metadata.bookTitle)}</dc:title><dc:language>${metadata.language}</dc:language><dc:creator>${escapeXml(metadata.author)}</dc:creator><dc:identifier id="bid">${metadata.identifier}</dc:identifier></metadata><manifest>${manifest}<item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/><item id="css" href="style.css" media-type="text/css"/></manifest><spine toc="ncx">${spine}</spine></package>`;
     await zipWriter.add('content.opf', new TextReader(contentOpf), zipWriteOptions);
 
+    const css = `body { font-family: sans-serif; text-align: justify; line-height: 1.6; padding: 5%; } .centered-title { text-align: center; margin: 1em 0; font-weight: bold; } .arabic-block { text-align: center; color: #b03030; direction: rtl; font-size: 1.4em; margin: 1em 0; } .right-aligned { text-align: right; font-style: italic; margin: 0.5em 0; } .centered-note { text-align: center; font-size: 0.9em; opacity: 0.8; } .risale-page-marker { text-align: right; font-size: 0.8em; opacity: 0.5; border-bottom: 1px solid #ccc; margin: 1em 0; }`;
+    await zipWriter.add('style.css', new TextReader(css), zipWriteOptions);
+
+    for (let i = 0; i < chapters.length; i++) {
+      const xhtml = `<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>${escapeXml(chapters[i]!.title)}</title><link rel="stylesheet" type="text/css" href="../style.css"/></head><body>${chapters[i]!.content}</body></html>`;
+      await zipWriter.add(`OEBPS/ch${i + 1}.xhtml`, new TextReader(xhtml), zipWriteOptions);
+    }
+
     return await zipWriter.close();
-  }
-
-  private detectEncoding(buffer: ArrayBuffer): string | undefined {
-    const utf8HeadSampleSize = Math.min(buffer.byteLength, 64 * 1024);
-    const utf8HeadSample = buffer.slice(0, utf8HeadSampleSize);
-
-    try {
-      this.assertStrictUtf8Sample(new Uint8Array(utf8HeadSample));
-      if (buffer.byteLength > utf8HeadSampleSize * 2) {
-        const midSampleSize = Math.min(8192, buffer.byteLength - utf8HeadSampleSize);
-        const midSampleStart = Math.floor((buffer.byteLength - midSampleSize) / 2);
-        const midSample = buffer.slice(midSampleStart, midSampleStart + midSampleSize);
-        this.assertStrictUtf8Sample(new Uint8Array(midSample));
-      }
-      return 'utf-8';
-    } catch {
-      const uint8Array = new Uint8Array(buffer);
-      // Try tolerant UTF-8 detection - check if most of it is valid UTF-8
-      let validBytes = 0;
-      let checkedBytes = 0;
-      const sampleSize = Math.min(uint8Array.length, 10000);
-
-      for (let i = 0; i < sampleSize; i++) {
-        try {
-          new TextDecoder('utf-8', { fatal: true }).decode(uint8Array.slice(i, i + 100));
-          validBytes += 100;
-          checkedBytes += 100;
-          i += 99;
-        } catch {
-          checkedBytes++;
-        }
-      }
-
-      const validPercentage = checkedBytes > 0 ? (validBytes / checkedBytes) * 100 : 0;
-      console.log(`UTF-8 validity: ${validPercentage.toFixed(2)}%`);
-
-      // If more than 80% is valid UTF-8, consider it UTF-8 with some corruption
-      if (validPercentage > 80) {
-        console.log('Treating as UTF-8 despite some invalid sequences');
-        return 'utf-8';
-      }
-      // If UTF-8 decoding fails, try to detect other encodings
-    }
-
-    const headerBytes = new Uint8Array(buffer.slice(0, 4));
-
-    if (headerBytes[0] === 0xff && headerBytes[1] === 0xfe) {
-      return 'utf-16le';
-    }
-
-    if (headerBytes[0] === 0xfe && headerBytes[1] === 0xff) {
-      return 'utf-16be';
-    }
-
-    if (headerBytes[0] === 0xef && headerBytes[1] === 0xbb && headerBytes[2] === 0xbf) {
-      return 'utf-8';
-    }
-
-    // Analyze a sample of the content to guess between common East Asian encodings
-    // If the content has a high ratio of bytes in the 0x80-0xFF range, it's likely GBK/GB18030
-    const sample = new Uint8Array(buffer.slice(0, Math.min(1024, buffer.byteLength)));
-    let highByteCount = 0;
-
-    for (let i = 0; i < sample.length; i++) {
-      if (sample[i]! >= 0x80) {
-        highByteCount++;
-      }
-    }
-
-    const highByteRatio = highByteCount / sample.length;
-    if (highByteRatio > 0.3) {
-      return 'gbk';
-    }
-
-    if (highByteRatio > 0.1) {
-      let sjisPattern = false;
-      for (let i = 0; i < sample.length - 1; i++) {
-        const b1 = sample[i]!;
-        const b2 = sample[i + 1]!;
-        if (
-          ((b1 >= 0x81 && b1 <= 0x9f) || (b1 >= 0xe0 && b1 <= 0xfc)) &&
-          ((b2 >= 0x40 && b2 <= 0x7e) || (b2 >= 0x80 && b2 <= 0xfc))
-        ) {
-          sjisPattern = true;
-          break;
-        }
-      }
-
-      if (sjisPattern) {
-        return 'shift-jis';
-      }
-
-      return 'gb18030';
-    }
-
-    return 'utf-8';
-  }
-
-  private extractBookTitle(filename: string): string {
-    const match = filename.match(/《([^》]+)》/);
-    return match ? match[1]! : filename.split('.')[0]!;
-  }
-
-  private assertStrictUtf8Sample(sample: Uint8Array): void {
-    const decoder = new TextDecoder('utf-8', { fatal: true });
-    try {
-      decoder.decode(sample);
-      return;
-    } catch {
-      // Sampling may start/end inside a multibyte code point.
-      // Retry a few boundary offsets while keeping most bytes untouched.
-      const maxOffset = Math.min(3, sample.length - 1);
-      for (let startOffset = 0; startOffset <= maxOffset; startOffset++) {
-        for (let endOffset = 0; endOffset <= maxOffset; endOffset++) {
-          if (startOffset === 0 && endOffset === 0) continue;
-          const end = sample.length - endOffset;
-          if (end - startOffset < 16) continue;
-          try {
-            decoder.decode(sample.subarray(startOffset, end));
-            return;
-          } catch {
-            // continue trying other offsets
-          }
-        }
-      }
-      throw new Error('invalid utf-8 sample');
-    }
-  }
-
-  private isEncodingSupported(encoding: string): boolean {
-    try {
-      new TextDecoder(encoding);
-      return true;
-    } catch {
-      return false;
-    }
-  }
-
-  private resolveSupportedEncoding(detectedEncoding: string): string {
-    const normalized = detectedEncoding.toLowerCase();
-    const candidates = [
-      normalized,
-      ...(normalized === 'gbk' ? ['gb18030', 'gb2312'] : []),
-      ...(normalized === 'gb18030' ? ['gbk', 'gb2312'] : []),
-      ...(normalized === 'shift-jis' ? ['shift_jis', 'sjis'] : []),
-      ...(normalized === 'utf-16' ? ['utf-16le', 'utf-16be'] : []),
-      'utf-8',
-    ];
-
-    for (const encoding of candidates) {
-      if (this.isEncodingSupported(encoding)) {
-        return encoding;
-      }
-    }
-    return 'utf-8';
   }
 }

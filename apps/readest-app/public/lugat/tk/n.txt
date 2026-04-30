@@ -1,0 +1,7 @@
+nahw lysany=Arap diliniň waspy. Grammatik kadalara bagly belagat dili.
+nakdi-ömür=Ömür baýlygy.
+nakgaşy-ezeli=Başlangyjy we soňy bolmadyk, ýaradýan barlyklarynyň birkemsiz bezegini ýetirýän, ezeli nagyşlar çitýän Alla (j.j).
+nakgaşy-haki:m=Ýaradan barlyklarynda sansyz hikmeti, peýdany göz öňünde tutýan, olaryň birkemsiz bezegini ýetirýän Alla (j.j).
+nakgaşy-züljelal=Soňsuz beýikligiň eýesi, ýaradýan barlyklarynyň birkemsiz bezegini ýetirýän Alla (j.j).
+nebsi-emmare=Betpygyl nebis. Nebsiň birinji mertebesi.
+nebsi=«özüm» diýmegi aňladýar. 

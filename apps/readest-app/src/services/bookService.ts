@@ -256,9 +256,12 @@ export async function importBook(
         fileobj = file;
         filename = file.name;
       }
-      if (/\.txt$/i.test(filename)) {
+      if (/\.(txt|md)$/i.test(filename)) {
         const txt2epub = new TxtToEpubConverter();
-        ({ file: fileobj } = await txt2epub.convert({ file: fileobj }));
+        ({ file: fileobj } = await txt2epub.convert({
+          file: fileobj,
+          index: options.index,
+        }));
       }
       if (!fileobj || fileobj.size === 0) {
         throw new Error('Invalid or empty book file');
@@ -367,7 +370,7 @@ export async function importBook(
     }
     const bookFilename = getLocalBookFilename(book);
     if (saveBook && !transient && (!(await fs.exists(bookFilename, 'Books')) || overwrite)) {
-      if (/\.txt$/i.test(filename)) {
+      if (/\.(txt|md)$/i.test(filename)) {
         await fs.writeFile(bookFilename, 'Books', fileobj);
       } else if (typeof file === 'string' && isContentURI(file)) {
         await fs.copyFile(file, bookFilename, 'Books');

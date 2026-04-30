@@ -17,8 +17,17 @@
   font-style: italic;
   font-display: swap;
 }
-
 :root {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Lora', Georgia, serif;
+  --font-display: 'Playfair Display', serif;
+  --font-arabic: 'Amiri', serif;
+
+  --background-ivory: #f8f5f0;
+  --background-midnight: #0f172a;
+  --accent-gold: #c5a059;
+  --accent-emerald: #064e3b;
+
   border-radius: 10px;
   scrollbar-gutter: auto !important;
   overscroll-behavior: none;
@@ -29,6 +38,62 @@
   --safe-area-inset-right: env(safe-area-inset-right);
   --safe-area-inset-bottom: env(safe-area-inset-bottom);
   --safe-area-inset-left: env(safe-area-inset-left);
+}
+
+/* Premium Grain Texture */
+.paper-texture {
+  position: relative;
+}
+
+.paper-texture::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 1000;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Smooth motion primitives */
+.premium-transition {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 25px -5px theme('colors.premium.gold/0.3');
+}
+
+/* Book page aesthetics */
+.library-page {
+  font-family: var(--font-sans);
+  background-color: var(--background-ivory);
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, transparent 100%);
+}
+
+[data-theme='dark'] .library-page {
+  background-color: var(--background-midnight);
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, transparent 100%);
+}
+
+.shelf-title {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+.book-title {
+  font-family: var(--font-serif);
+}
+
+/* Override DaisyUI base backgrounds for premium feel */
+html[data-page='library'] {
+  background: var(--background-ivory);
+}
+
+[data-theme='dark'] html[data-page='library'] {
+  background: var(--background-midnight);
 }
 
 /* Fixes the scrollbar gutter issue for DaisyUI */
@@ -820,4 +885,298 @@ body.atmosphere #atmosphere-overlay {
 
 .animate-shake {
   animation: shake 0.8s ease-in-out;
+}
+
+/* Premium Glassmorphism & Depth */
+.premium-glass {
+  @apply border border-white/20 bg-white/40 backdrop-blur-xl dark:border-white/5 dark:bg-black/40;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Subtle Shimmer for Skeletons */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-effect {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Page Entrance Reveal */
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-step {
+  opacity: 0;
+  animation: revealUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* CSS-Only Visual: Light Rays (NUR) */
+@keyframes lightRay {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.nur-particle {
+  position: absolute;
+  background: radial-gradient(circle, theme('colors.premium.gold/0.4') 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: lightRay 15s linear infinite;
+}
+
+/* 3D Book FIX: Unified Object */
+.book-3d-container {
+  perspective: 2000px;
+}
+
+.book-3d-object {
+  transform-style: preserve-3d;
+  transform: rotateY(-25deg) rotateX(10deg);
+  transition: transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+  width: 100%;
+  height: 100%;
+}
+
+.book-3d-object:hover {
+  transform: rotateY(-10deg) rotateX(5deg);
+}
+
+/* Fixed Spine Positioning */
+.book-side {
+  position: absolute;
+  background: #1e293b; /* Darker spine */
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  transform: rotateY(-90deg) translateZ(20px);
+  transform-origin: left;
+  box-shadow: inset -10px 0 30px rgba(0, 0, 0, 0.5);
+  border-left: 2px solid theme('colors.premium.gold/20');
+}
+
+/* Page Shimmer (New CSS Art) */
+.page-edge {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 15px;
+  height: 100%;
+  background: linear-gradient(90deg, #f8f5f0 0%, #e5e7eb 100%);
+  transform: rotateY(90deg) translateZ(280px);
+  transform-origin: right;
+}
+
+/* Gold Foil Texture in CSS */
+.gold-foil {
+  background: linear-gradient(
+    135deg,
+    #c5a059 0%,
+    #f3e5ab 25%,
+    #c5a059 50%,
+    #f3e5ab 75%,
+    #c5a059 100%
+  );
+  background-size: 400% 400%;
+  animation: goldShimmer 8s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes goldShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* CSS-Only Premium Icon: The NUR Logo (Version 2.0) */
+.nur-logo-container {
+  @apply relative flex items-center justify-center;
+  width: 48px;
+  height: 48px;
+}
+
+.nur-logo-core {
+  @apply bg-premium-gold absolute rounded-full shadow-[0_0_25px_theme('colors.premium.gold/0.6')];
+  width: 14px;
+  height: 14px;
+  z-index: 2;
+  animation: pulseLight 3s ease-in-out infinite;
+}
+
+.nur-logo-wing {
+  @apply border-premium-gold/40 absolute border-[1.5px];
+  width: 20px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.wing-left {
+  left: 4px;
+  transform: rotateY(-45deg) skewY(-5deg);
+  border-radius: 2px 10px 10px 2px;
+  border-right: none;
+}
+
+.wing-right {
+  right: 4px;
+  transform: rotateY(45deg) skewY(5deg);
+  border-radius: 10px 2px 2px 10px;
+  border-left: none;
+}
+
+.nur-logo-container:hover .wing-left {
+  transform: rotateY(-15deg) scale(1.1);
+}
+.nur-logo-container:hover .wing-right {
+  transform: rotateY(15deg) scale(1.1);
+}
+
+@keyframes pulseLight {
+  0%,
+  100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.4);
+    filter: brightness(1.3) blur(1px);
+  }
+}
+
+/* Mobile & Tablet Refinements */
+@media (max-width: 1024px) {
+  .shelf-title {
+    font-size: 2.5rem;
+  }
+  .hero-text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .book-3d-container {
+    transform: scale(0.7);
+    margin-top: -50px;
+  }
+  .hero-glass {
+    border-radius: 2rem;
+    padding: 2rem 1rem;
+  }
+}
+
+/* Risale-specific styling */
+.arabic-block {
+  font-family: 'Amiri', serif;
+  font-size: 1.5em;
+  line-height: 1.8;
+  text-align: center;
+  direction: rtl;
+  color: #2c3e50;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.02);
+  border-radius: 8px;
+}
+
+.risale-page-marker {
+  display: block;
+  text-align: right;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  border-bottom: 1px solid #e2e8f0;
+  margin: 2rem 0 1rem 0;
+  padding-bottom: 0.25rem;
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  user-select: none;
+}
+
+.risale-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #64748b;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.centered-title {
+  text-align: center;
+  font-weight: 700;
+  margin: 2rem 0;
+}
+
+.translated-quote {
+  border-left: 4px solid #cbd5e1;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: #475569;
+  font-style: italic;
+}
+
+[data-theme='dark'] .arabic-block {
+  color: #e2e8f0;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme='dark'] .risale-page-marker {
+  color: #64748b;
+  border-bottom-color: #334155;
 }

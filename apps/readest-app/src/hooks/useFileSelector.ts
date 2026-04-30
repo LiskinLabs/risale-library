@@ -32,11 +32,26 @@ const selectFileWeb = (options: FileSelectorOptions): Promise<File[]> => {
     fileInput.type = 'file';
     fileInput.accept = options.accept || '*/*';
     fileInput.multiple = options.multiple || false;
-    fileInput.click();
+    fileInput.style.display = 'none';
+    document.body.appendChild(fileInput);
 
     fileInput.onchange = () => {
       resolve(Array.from(fileInput.files || []));
+      document.body.removeChild(fileInput);
     };
+
+    // Fallback cleanup if dialog is cancelled
+    const onFocus = () => {
+      window.removeEventListener('focus', onFocus);
+      setTimeout(() => {
+        if (document.body.contains(fileInput)) {
+          document.body.removeChild(fileInput);
+        }
+      }, 1000);
+    };
+    window.addEventListener('focus', onFocus);
+
+    fileInput.click();
   });
 };
 

@@ -1,34 +1,60 @@
-# Risale-i Nur Digital Library: Project Roadmap & AI Mandates
+# Risale Digital Library: Core Directives & Roadmap
 
-## 🎯 Project Vision
+## 🦾 Operational Mode: Ultra-Autonomous (Priority 999)
 
-Developing a comprehensive, multi-platform ecosystem for studying the Risale-i Nur collection.
+- **No Redundant Questions:** I perform all necessary actions (shell commands, file edits, environment tuning) without asking for permission.
+- **Proactive Execution:** I deliver finished results. If a dependency is missing, I install it. If a bug is found, I fix it and verify.
+- **Truth in Code:** My changes must be idiomatically perfect, type-safe, and consistent with the project's premium vision.
 
-1.  **Web Version:** High-performance SEO-friendly reader (Astro + React).
-2.  **PC Application (Current Focus):** Lightweight, offline-first desktop application using **Tauri (Rust + React)**.
-3.  **Mobile Application:** Future-facing cross-platform mobile experience.
+## 🎯 Global Vision
 
-## 🛠️ Technical Principles
-
-- **Source of Truth:** Verified `.docx` files from "RNK doc" are the primary source for content.
-- **Performance:** Minimal bundle size, lightning-fast search (Pagefind/Orama), and efficient memory usage (Tauri).
-- **Architecture:** Shared logic between Web and PC/Mobile versions to ensure consistency.
-
-## 📜 Specialized Translation Mandate (Expert Mode)
-
-_This prompt MUST be used for all future translation tasks within this project._
-
-**Роль:** Ты — высококвалифицированный переводчик-востоковед и специалист по исламскому богословию, глубоко понимающий традицию классических текстов (в частности, трудов Саида Нурси «Рисале-и Нур»). Твоя задача — переводить тексты с османского, турецкого или арабского на русский язык, сохраняя их многомерность, духовную глубину и кораническую эстетику.
-
-**Основное правило:** Категорически запрещается секуляризировать (обмирщвлять) текст, использовать плоские бытовые синонимы для глубоких исламских понятий или пытаться «адаптировать» текст в ущерб оригинальному смыслу. Перевод должен аргументированно отражать богатство исламской культуры и мировоззрения.
-
-### Принципы перевода:
-
-1.  **Терминологическая честность.** Исламские концепты (например, нафс, хакикат, баракат, вирд, насихат) — это несущие конструкции текста. Не переводи их просто как «душа», «правда» или «совет». Если термин теряет объем при прямом переводе, оставляй его в русской транслитерации курсивом и давай точный смысловой перевод в скобках или в контексте (например: нафс (эго), химайя (покровительство)).
-2.  **Военная и тактическая точность (Askerlik Temsilâtı).** Автор часто использует военные аллегории и примеры выживания во враждебной среде (пустыне). Переводи эти фрагменты с четкостью и суровостью, свойственной качественной военной мемуаристике. Логика текста должна быть ясной, как тактический инструктаж: гордость — это уязвимость, а покорность Творцу — это безопасность (салямат) и надежная логистика.
-3.  **Уважение к «языку простого народа» (Avam Lisanı).** Текст должен звучать благородно, искренне и без академической гордыни. Избегай сложных, искусственных философских конструкций. Говори просто, но с огромным достоинством, как мудрец разговаривает с солдатом.
-4.  **Ритм и интонация.** Сохраняй спокойную, убедительную и наставительную интонацию оригинала.
+Создание премиальной цифровой экосистемы для глубокого изучения «Рисале-и Нур». Главный приоритет — безупречный пользовательский опыт (UX) и стабильность на всех платформах (Web, Desktop, Mobile).
 
 ---
 
-_Last updated: 2026-03-24_
+## 🗺️ Strategic Roadmap (v2.0)
+
+### Phase 1: Web Stability & Core Features (CURRENT)
+
+- **Goal:** Безупречная работа веб-версии как основного ядра.
+- [ ] **Catalog Reconciliation:** Исправить 404 ошибки, синхронизировав `catalog.json` с фактическими MD-файлами в `public/books`.
+- [ ] **Search Engine (Orama/Pagefind):** Обеспечить мгновенный и точный поиск по всем книгам.
+- [ ] **Study Tools:** Проверка и финализация инструментов изучения (Лугат, Заметки, Закладки).
+- [ ] **Multilingual UI:** Унификация интерфейса (устранение смешения языков).
+
+### Phase 2: Premium UI/UX Design Overhaul
+
+- **Goal:** Трансформация из «простого ридера» в премиальный продукт.
+- [ ] **Aesthetic Refinement:** Внедрение современной типографики, мягких анимаций и глубоких цветовых схем.
+- [ ] **Interactive Elements:** Улучшение визуального отклика на действия пользователя.
+
+### Phase 3: Content & Translation Excellence
+
+- **Goal:** Идеальное форматирование и смысловая точность.
+- [ ] **Formatting Audit:** Приведение всех MD-файлов к единому стандарту заголовков и ссылок.
+- [ ] **Semantic Translation:** Глубокая доработка русского перевода согласно мандату «Терминологической честности».
+
+### Phase 4: Multi-platform Expansion
+
+- **Goal:** Стабилизация и выпуск Desktop (Tauri) и Mobile версий.
+- [ ] **Native Integration:** Оптимизация под Windows, macOS и мобильные ОС.
+
+### Phase 5: Public Launch & Identity
+
+- **Goal:** Выход в паблик.
+- [ ] **Official Landing Page:** Создание сайта на GitHub Pages.
+- [ ] **Documentation:** Полная переработка README.md и технической базы.
+
+---
+
+## 📜 Specialized Translation Mandate (Summary)
+
+_Подробные инструкции по переводу сохранены в MEMORY.md._
+
+1. **Терминологическая честность:** Сохранение оригинальных исламских терминов (_нафс, хакикат, фикр_).
+2. **Военная точность:** Четкая логика аллегорий.
+3. **Благородная простота:** Язык, доступный народу, но исполненный достоинства.
+
+---
+
+_Last updated: 2026-04-29_

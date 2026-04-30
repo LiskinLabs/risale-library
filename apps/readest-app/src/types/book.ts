@@ -62,6 +62,8 @@ export interface ImportBookOptions {
   transient?: boolean;
   /** Pre-built lookup index for O(1) dedup during batch imports. */
   lookupIndex?: BookLookupIndex;
+  /** Custom TOC index. */
+  index?: Array<{ title: string; page: string }>;
 }
 
 export interface Book {

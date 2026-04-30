@@ -127,6 +127,9 @@ export const useLibraryStore = create<LibraryState>((set, get) => ({
 
   updateBook: async (envConfig: EnvConfigType, book: Book) => {
     const appService = await envConfig.getAppService();
+    if (!book.coverImageUrl) {
+      book.coverImageUrl = await appService.generateCoverImageUrl(book);
+    }
     const { library, hashIndex } = get();
     const idx = hashIndex.get(book.hash);
     // Build the new library immutably — never mutate the previous-state array.
@@ -148,6 +151,15 @@ export const useLibraryStore = create<LibraryState>((set, get) => ({
   ) => {
     if (!books?.length) return;
 
+    const appService = await envConfig.getAppService();
+    await Promise.all(
+      books.map(async (book) => {
+        if (!book.coverImageUrl) {
+          book.coverImageUrl = await appService.generateCoverImageUrl(book);
+        }
+      }),
+    );
+
     const { library, refreshGroups } = get();
 
     const newLibrary = Array.from(new Map([...library, ...books].map((b) => [b.hash, b])).values());
@@ -159,7 +171,6 @@ export const useLibraryStore = create<LibraryState>((set, get) => ({
     refreshGroups();
 
     if (!options?.skipSave) {
-      const appService = await envConfig.getAppService();
       await appService.saveLibraryBooks(newLibrary);
     }
   },

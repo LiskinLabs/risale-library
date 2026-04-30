@@ -2,8 +2,14 @@ import * as React from 'react';
 import { ViewTransitions } from 'next-view-transitions';
 import { EnvProvider } from '@/context/EnvContext';
 import Providers from '@/components/Providers';
+import { Inter, Lora, Playfair_Display, Amiri } from 'next/font/google';
 
 import '../styles/globals.css';
+
+const inter = Inter({ subsets: ['latin', 'cyrillic'], variable: '--font-sans' });
+const lora = Lora({ subsets: ['latin', 'cyrillic'], variable: '--font-serif' });
+const playfair = Playfair_Display({ subsets: ['latin', 'cyrillic'], variable: '--font-display' });
+const amiri = Amiri({ weight: ['400', '700'], subsets: ['arabic'], variable: '--font-arabic' });
 
 const url = 'https://web.readest.com/';
 const title = 'Risale Digital Library — Where You Read, Digest and Get Insight';
@@ -44,7 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang='en'
-      className={process.env['NEXT_PUBLIC_APP_PLATFORM'] === 'tauri' ? 'edge-to-edge' : ''}
+      className={`${inter.variable} ${lora.variable} ${playfair.variable} ${amiri.variable} ${process.env['NEXT_PUBLIC_APP_PLATFORM'] === 'tauri' ? 'edge-to-edge' : ''}`}
     >
       <head>
         <title>{title}</title>

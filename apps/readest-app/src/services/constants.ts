@@ -48,6 +48,8 @@ export const SUPPORTED_BOOK_EXTS = [
   'cbz',
   'pdf',
   'txt',
+  'md',
+  'markdown',
 ];
 export const BOOK_ACCEPT_FORMATS = SUPPORTED_BOOK_EXTS.map((ext) => `.${ext}`).join(', ');
 export const BOOK_UNGROUPED_NAME = '';

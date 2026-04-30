@@ -1,0 +1,30 @@
+{
+  "library": [
+    "/books/ru_sozler.md",
+    "/books/ru_mektubat.md",
+    "/books/ru_lemalar.md",
+    "/books/ru_sualar.md",
+    "/books/ru_asamusa.md",
+    "/books/ru_mesnevi.md",
+    "/books/ru_tarihce.md",
+    "/books/ru_hanimreh.md",
+    "/books/ru_hutbe.md",
+    "/books/ru_nuralemianahtar.md",
+    "/books/tr_abed.md",
+    "/books/tr_rnk_yirmiuc.md",
+    "/books/tr_rnk_hastalar.md",
+    "/books/tr_rnk_gencreh.md",
+    "/books/ar_kuran.md",
+    "/books/ar_ar_sozler.md",
+    "/books/ar_ar_mektubat.md",
+    "/books/ar_ar_lemalar.md",
+    "/books/ar_ar_sualar.md",
+    "/books/ar_cevsen.md",
+    "/books/en_en_sozler.md",
+    "/books/en_en_mektubat.md",
+    "/books/de_de_sozler.md",
+    "/books/de_de_mektubat.md",
+    "/books/es_es_sozler.md",
+    "/books/es_es_mektubat.md"
+  ]
+}
