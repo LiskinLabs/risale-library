@@ -1,8 +1,7 @@
+import { create, insertMultiple, search as oramaSearch, load, save } from '@orama/orama';
+import type { Orama } from '@orama/orama';
 import { TextChunk, ScoredChunk, BookIndexMeta, AIConversation, AIMessage } from '../types';
 import { aiLogger } from '../logger';
-
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-const lunr = require('lunr') as typeof import('lunr');
 
 const DB_NAME = 'readest-ai';
 const DB_VERSION = 3;
@@ -29,7 +28,7 @@ function cosineSimilarity(a: number[], b: number[]): number {
 class AIStore {
   private db: IDBDatabase | null = null;
   private chunkCache = new Map<string, TextChunk[]>();
-  private indexCache = new Map<string, lunr.Index>();
+  private indexCache = new Map<string, Orama<any>>();
   private metaCache = new Map<string, BookIndexMeta>();
   private conversationCache = new Map<string, AIConversation[]>();
 
@@ -172,19 +171,29 @@ class AIStore {
   }
 
   async saveBM25Index(bookHash: string, chunks: TextChunk[]): Promise<void> {
-    const index = lunr(function (this: lunr.Builder) {
-      this.ref('id');
-      this.field('text');
-      this.field('chapterTitle');
-      this.pipeline.remove(lunr.stemmer);
-      this.searchPipeline.remove(lunr.stemmer);
-      for (const chunk of chunks)
-        this.add({ id: chunk.id, text: chunk.text, chapterTitle: chunk.chapterTitle });
+    const index = await create({
+      schema: {
+        id: 'string',
+        text: 'string',
+        chapterTitle: 'string',
+      },
     });
+
+    await insertMultiple(
+      index,
+      chunks.map((c) => ({
+        id: c.id,
+        text: c.text,
+        chapterTitle: c.chapterTitle,
+      })),
+    );
+
+    const serializedIndex = await save(index);
+
     const db = await this.openDB();
     return new Promise((resolve, reject) => {
       const tx = db.transaction(BM25_STORE, 'readwrite');
-      tx.objectStore(BM25_STORE).put({ bookHash, serialized: JSON.stringify(index) });
+      tx.objectStore(BM25_STORE).put({ bookHash, serialized: JSON.stringify(serializedIndex) });
       tx.oncomplete = () => {
         this.indexCache.set(bookHash, index);
         resolve();
@@ -196,19 +205,27 @@ class AIStore {
     });
   }
 
-  private async loadBM25Index(bookHash: string): Promise<lunr.Index | null> {
+  private async loadBM25Index(bookHash: string): Promise<Orama<any> | null> {
     if (this.indexCache.has(bookHash)) return this.indexCache.get(bookHash)!;
     const db = await this.openDB();
     return new Promise((resolve, reject) => {
       const req = db.transaction(BM25_STORE, 'readonly').objectStore(BM25_STORE).get(bookHash);
-      req.onsuccess = () => {
+      req.onsuccess = async () => {
         const data = req.result as { serialized: string } | undefined;
         if (!data) {
           resolve(null);
           return;
         }
         try {
-          const index = lunr.Index.load(JSON.parse(data.serialized));
+          const indexData = JSON.parse(data.serialized);
+          const index = await create({
+            schema: {
+              id: 'string',
+              text: 'string',
+              chapterTitle: 'string',
+            },
+          });
+          await load(index, indexData);
           this.indexCache.set(bookHash, index);
           resolve(index);
         } catch {
@@ -256,14 +273,13 @@ class AIStore {
     const chunks = await this.getChunks(bookHash);
     const chunkMap = new Map(chunks.map((c) => [c.id, c]));
     try {
-      const results = index.search(query);
+      const searchResults = await oramaSearch(index, { term: query, limit: topK });
       const scored: ScoredChunk[] = [];
-      for (const result of results) {
-        const chunk = chunkMap.get(result.ref);
+      for (const result of searchResults.hits) {
+        const chunk = chunkMap.get(result.document.id as string);
         if (!chunk) continue;
         if (maxPage !== undefined && chunk.pageNumber > maxPage) continue;
         scored.push({ ...chunk, score: result.score, searchMethod: 'bm25' });
-        if (scored.length >= topK) break;
       }
       if (scored.length > 0) aiLogger.search.bm25Results(scored.length, scored[0]!.score);
       return scored;

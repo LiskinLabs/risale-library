@@ -1,0 +1,25 @@
+diff a/apps/readest-app/src/__tests__/ai/ai-store.test.ts b/apps/readest-app/src/__tests__/ai/ai-store.test.ts	(rejected hunks)
+@@ -1,16 +1,13 @@
+ import { describe, test, expect, vi } from 'vitest';
+ 
+-vi.mock('lunr', () => {
+-  // mock lunr index for testing
++vi.mock('@orama/orama', () => {
++  // mock orama index for testing
+   return {
+-    default: () => ({
+-      search: vi.fn(() => []),
+-    }),
+-    Index: {
+-      load: vi.fn(() => ({
+-        search: vi.fn(() => []),
+-      })),
+-    },
++    create: vi.fn(() => ({})),
++    insertMultiple: vi.fn(),
++    search: vi.fn(() => ({ hits: [] })),
++    load: vi.fn(),
++    save: vi.fn(() => ({})),
+   };
+ });
+ 

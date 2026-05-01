@@ -1,6 +1,0 @@
-Implement Advanced PWA and Offline Support.
-1. Implement full offline caching for opened books (EPUB/PDF) to ensure they are readable without internet.
-2. Add an "Offline Ready" visual indicator for books in the library.
-3. Implement Background Sync for notes and highlights: automatically sync local changes to the cloud when connection is restored.
-4. Optimize 'sw.ts' for aggressive caching of premium fonts (Lora, Playfair Display) to ensure instant UI loading.
-5. Cleanup any obsolete offline logic.

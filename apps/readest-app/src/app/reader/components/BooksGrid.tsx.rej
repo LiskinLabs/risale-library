@@ -1,0 +1,17 @@
+diff a/apps/readest-app/src/app/reader/components/BooksGrid.tsx b/apps/readest-app/src/app/reader/components/BooksGrid.tsx	(rejected hunks)
+@@ -23,6 +23,7 @@ import FootnotePopup from './FootnotePopup';
+ import HintInfo from './HintInfo';
+ import ReadingRuler from './ReadingRuler';
+ import DoubleBorder from './DoubleBorder';
++import LugatContainer from './LugatContainer';
+ 
+ interface BooksGridProps {
+   bookKeys: string[];
+@@ -219,6 +220,7 @@ const BooksGrid: React.FC<BooksGridProps> = ({ bookKeys, onCloseBook, onGoToLibr
+               isDropdownOpen={dropdownOpenBook === bookKey}
+             />
+             <Annotator bookKey={bookKey} />
++            <LugatContainer bookKey={bookKey} />
+             <SearchResultsNav bookKey={bookKey} gridInsets={gridInsets} />
+             <BooknotesNav bookKey={bookKey} gridInsets={gridInsets} toc={bookDoc.toc || []} />
+             <FootnotePopup bookKey={bookKey} bookDoc={bookDoc} />

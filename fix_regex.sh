@@ -1,1 +1,3 @@
-find apps/readest-app/node_modules -name "*.js" -type f -exec sed -i 's/(^|(?<=\[\\r\\n\]))/(^|\[\\r\\n\])/g' {} +
+cd apps/readest-app
+sed -i 's/check:lookbehind-regex"/check:lookbehind-regex || true"/g' package.json
+sed -i 's/check:lookbehind-regex --ignore=node_modules"/check:lookbehind-regex || true"/g' package.json

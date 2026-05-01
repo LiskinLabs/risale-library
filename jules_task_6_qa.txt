@@ -1,6 +1,0 @@
-Implement Advanced QA, Accessibility and Performance Testing.
-1. Create Playwright E2E tests for core user journeys: "Import Book -> Open Reader -> Dictionary Lookup -> Search Quote".
-2. Set up automated Accessibility (A11y) checks to ensure compliance with standards (contrast, ARIA labels).
-3. Integrate Performance Testing (e.g., Lighthouse CI scripts) to ensure the premium CSS effects do not impact mobile performance.
-4. Clean up any redundant or failing legacy tests.
-5. Ensure these tests run successfully in GitHub Actions.

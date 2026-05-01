@@ -1,4 +1,0 @@
-Implement Search and Dictionary features. 
-1. Add Orama/Pagefind full-text search indexing on startup for instant book quotes search. 
-2. Implement 'Lugat' (Dictionary) integration: write a React hook/service that highlights complex Arabic/Ottoman words in the reader and shows translations in a popup using the existing lugat/ database. 
-3. Remove obsolete search logic if any.
