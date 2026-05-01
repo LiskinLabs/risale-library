@@ -1,0 +1,6 @@
+Implement Audio and TTS (Text-to-Speech) Experience.
+1. Design and implement a premium audio player control panel within the reader interface.
+2. Implement "Follow Along" text highlighting: highlight the current sentence/word in the reader while it's being read aloud by TTS.
+3. Enhance support for Arabic and Turkish voices specifically for original Risale-i Nur texts.
+4. Ensure the audio experience is lightweight and doesn't affect page performance.
+5. Cleanup obsolete TTS code.

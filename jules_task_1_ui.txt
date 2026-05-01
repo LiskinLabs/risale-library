@@ -1,0 +1,5 @@
+Implement Premium UI/UX Design Overhaul. 
+1. Create a lightweight, pure CSS design for the library. 
+2. Convert all book covers to 3D CSS objects (matching the premium style of the site). No heavy JS libraries for 3D, strictly CSS.
+3. Integrate 'Bookshelf' logic (sorting, virtualization) into the premium 'RisaleCatalog' grid to make it fully responsive. 
+4. Remove unused legacy UI scripts.

@@ -1,3 +1,5 @@
+import { getAssetPath } from '@/utils/assetPath';
+
 /**
  * Lugat Service for Risale Digital Library
  * Handles multilingual dictionary lookups from metadata.json
@@ -21,7 +23,7 @@ class LugatService {
     if (this.metadata || this.loading) return;
     this.loading = true;
     try {
-      const response = await fetch('/metadata.json');
+      const response = await fetch(getAssetPath('/metadata.json'));
       this.metadata = await response.json();
       console.log('Lugat metadata loaded successfully');
     } catch (error) {

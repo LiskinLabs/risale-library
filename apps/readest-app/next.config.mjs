@@ -18,6 +18,9 @@ const nextConfig = {
   // https://nextjs.org/docs/pages/building-your-application/deploying/static-exports
   output: exportOutput ? 'export' : undefined,
   basePath: isGithubActions ? '/risale-library' : '',
+  env: {
+    NEXT_PUBLIC_BASE_PATH: isGithubActions ? '/risale-library' : '',
+  },
   pageExtensions: exportOutput ? ['jsx', 'tsx'] : ['js', 'jsx', 'ts', 'tsx'],
   // Note: This feature is required to use the Next.js Image component in SSG mode.
   // See https://nextjs.org/docs/messages/export-image-api for different workarounds.

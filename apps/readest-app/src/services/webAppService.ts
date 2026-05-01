@@ -4,6 +4,7 @@ import { SchemaType } from '@/services/database/migrate';
 import { getOSPlatform, isValidURL } from '@/utils/misc';
 import { isSafariBrowser } from '@/utils/ua';
 import { RemoteFile } from '@/utils/file';
+import { getAssetPath } from '@/utils/assetPath';
 import { isPWA } from './environment';
 import { BaseAppService } from './appService';
 import {
@@ -79,7 +80,7 @@ const indexedDBFileSystem: FileSystem = {
   },
   async openFile(path: string, base: BaseDir, filename?: string) {
     if (isValidURL(path) || path.startsWith('/books/')) {
-      return await new RemoteFile(path, filename).open();
+      return await new RemoteFile(getAssetPath(path), filename).open();
     } else {
       const content = await this.readFile(path, base, 'binary');
       return new File([content], filename || path);

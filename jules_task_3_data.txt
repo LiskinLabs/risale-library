@@ -1,0 +1,5 @@
+Implement Data, i18n and SEO improvements. 
+1. Optimize IndexedDB logic and 'useBooksSync' for faster loading without extra re-renders. Add smart cache cleanup/recovery. 
+2. Clean up 'locales/' JSON files, fix missing keys for RU, TR, EN. 
+3. Add dynamic SEO meta tags and OG tags for each book/chapter for social sharing. 
+4. Delete unused scripts or garbage files found during implementation.

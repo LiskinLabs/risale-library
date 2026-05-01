@@ -63,10 +63,11 @@ const BookItem: React.FC<BookItemProps> = ({
     >
       <div
         className={clsx(
-          'bookitem-main relative flex aspect-[28/41] justify-center overflow-hidden rounded',
-          coverFit === 'crop' && 'shadow-md',
-          mode === 'grid' && 'items-end',
-          mode === 'list' && 'min-w-20 items-center',
+          'bookitem-main relative flex aspect-[28/41] justify-center',
+          mode === 'grid'
+            ? 'book-3d-container w-full items-end'
+            : 'min-w-20 items-center overflow-hidden rounded',
+          mode === 'list' && coverFit === 'crop' && 'shadow-md',
         )}
       >
         <BookCover
@@ -74,17 +75,22 @@ const BookItem: React.FC<BookItemProps> = ({
           book={book}
           coverFit={coverFit}
           showSpine={false}
-          imageClassName='rounded shadow-md'
+          imageClassName={mode === 'grid' ? '' : 'rounded shadow-md'}
         />
         {bookSelected && (
-          <div className='absolute inset-0 bg-black opacity-30 transition-opacity duration-300'></div>
+          <div
+            className={clsx(
+              'pointer-events-none absolute inset-0 z-30 bg-black opacity-30 transition-opacity duration-300',
+              mode === 'list' ? 'rounded' : 'rounded-r-lg border-l-[4px] border-transparent',
+            )}
+          ></div>
         )}
         {isSelectMode && (
-          <div className='absolute bottom-1 right-1'>
+          <div className='absolute bottom-1 right-1 z-30'>
             {bookSelected ? (
-              <MdCheckCircle className='fill-blue-500' />
+              <MdCheckCircle className='fill-blue-500 drop-shadow-md' />
             ) : (
-              <MdCheckCircleOutline className='fill-gray-300 drop-shadow-sm' />
+              <MdCheckCircleOutline className='fill-gray-300 drop-shadow-md' />
             )}
           </div>
         )}

@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 
 import { useEnv } from '@/context/EnvContext';
 import { Book } from '@/types/book';
+import { getAssetPath } from '@/utils/assetPath';
 
 import risaleLibrary from '@/data/demo/risale.json';
 import { openIndexedDB } from '@/services/webAppService';
@@ -33,7 +34,7 @@ export const useDemoBooks = () => {
           const results = await Promise.all(
             batch.map(async (url) => {
               try {
-                return await appService.importBook(url, [], { saveBook: true });
+                return await appService.importBook(getAssetPath(url), [], { saveBook: true });
               } catch (e) {
                 console.warn(`Failed to import demo book: ${url}`, e);
                 return null;
