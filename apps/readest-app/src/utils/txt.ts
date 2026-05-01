@@ -459,7 +459,7 @@ export class TxtToEpubConverter {
       const item = arr[i];
       if (item === undefined) {
         if (result.length > 0 && i + 1 < arr.length && typeof arr[i + 1] === 'string') {
-          result[result.length - 1] += arr[i + 1];
+          result[result.length - 1] = (result[result.length - 1] ?? '') + arr[i + 1];
           i++;
         }
       } else {
