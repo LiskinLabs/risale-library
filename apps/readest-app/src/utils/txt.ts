@@ -160,12 +160,12 @@ export class TxtToEpubConverter {
           `^\\s*(?:第[0-9一二三四五六七八九十百零〇\\s]+[章节回讲篇封本册部话卷]|楔子|前言|简介|引言|序言|序章|总论|概论|后记|${englishKeywords}).*$`,
           'ium',
         ),
-        /^\s*(?:[0-9一二三四五六七八九十百零〇\s]+(?:[：:]|\s+)|#{1,3}\s+).*$/imu,
+        /^\s*(?:[0-9一二三四五六七八九十百零〇\\s]+(?:[：:]|\\s+)|#{1,3}\\s+).*$/imu,
       ];
     }
     return [
       new RegExp(
-        `^\\s*(?:${englishKeywords})(?:[\\s.:]+(?:[\\d.VXLCDM]+|[IVXLCDM]{2,}))?(?![\\s]*[a-zA-Z])`,
+        `^\\s*(?:${englishKeywords})(?:[\\s.:]+(?:[\\d.VXLCDM]+|[IVXLCDM]{2,}))?(?:[:\\s-]|$)`,
         'im',
       ),
       /^\s*(?:#{1,3}\s+|\\d+(?:\\.\\d+)*\\s*[A-Z]|\\d+[A-Z]).*$/m,
@@ -477,7 +477,7 @@ export class TxtToEpubConverter {
     return meaningful.every((m) => m.length <= maxLength);
   }
 
-  public async createEpub(chapters: Chapter[], metadata: Metadata): Promise<Blob> {
+  private async createEpub(chapters: Chapter[], metadata: Metadata): Promise<Blob> {
     await configureZip();
     const { BlobWriter, TextReader, ZipWriter } = await import('@zip.js/zip.js');
     const zipWriter = new ZipWriter(new BlobWriter('application/epub+zip'), {
