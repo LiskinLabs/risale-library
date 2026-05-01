@@ -6,9 +6,15 @@ import { getLocale } from '@/utils/misc';
 import { walkTextNodes } from '@/utils/walk';
 import { debounce } from '@/utils/debounce';
 
+type FoliateViewExtended = FoliateView & {
+  renderer?: {
+    doc: Document;
+  };
+};
+
 export function useLugatHighlight(
   bookKey: string,
-  view: FoliateView | HTMLElement | null,
+  view: FoliateViewExtended | HTMLElement | null,
   enabled = true,
   onWordClick: (word: string, lang: string) => void,
 ) {
@@ -34,11 +40,11 @@ export function useLugatHighlight(
     try {
       const doc =
         'renderer' in view && view.renderer
-          ? (view.renderer as any).doc
+          ? view.renderer.doc
           : (view as HTMLElement).ownerDocument;
       if (!doc) return;
 
-      const nodes = walkTextNodes(view, ['pre', 'code', 'math', 'ruby', 'rt']);
+      const nodes = walkTextNodes(view as HTMLElement, ['pre', 'code', 'math', 'ruby', 'rt']);
 
       for (const node of nodes) {
         if (!node.textContent || node.textContent.trim().length === 0) continue;
@@ -61,7 +67,7 @@ export function useLugatHighlight(
 
         // Extract words. Simple regex for word boundaries
         // This regex matches Ottoman/Arabic letters and basic Latin
-        const words = node.textContent.split(/([\s\.,;:\!\?\(\)\[\]\"\'\??\??\???\-]+)/);
+        const words = node.textContent.split(/([\s\.,;:\!\?\(\)\[\]\"\'\«\»\—\-]+)/);
 
         let hasMatches = false;
         const fragments: (string | Node)[] = [];
@@ -76,7 +82,7 @@ export function useLugatHighlight(
               span.textContent = w;
               span.className =
                 'lugat-highlight cursor-help border-b-2 border-dotted border-primary/50 hover:bg-primary/10 transition-colors';
-              span.dataset.word = w;
+              span.dataset['word'] = w;
               span.onclick = (e: MouseEvent) => {
                 e.preventDefault();
                 e.stopPropagation();
@@ -124,9 +130,7 @@ export function useLugatHighlight(
 
     // observer for DOM changes
     const doc =
-      'renderer' in view && view.renderer
-        ? (view.renderer as any).doc
-        : (view as HTMLElement).ownerDocument;
+      'renderer' in view && view.renderer ? view.renderer.doc : (view as HTMLElement).ownerDocument;
     if (doc) {
       observerRef.current = new MutationObserver(() => {
         debouncedHighlight();

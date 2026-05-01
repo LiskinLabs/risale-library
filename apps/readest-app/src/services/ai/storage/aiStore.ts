@@ -25,10 +25,16 @@ function cosineSimilarity(a: number[], b: number[]): number {
   return denom === 0 ? 0 : dot / denom;
 }
 
+type BM25Schema = {
+  id: 'string';
+  text: 'string';
+  chapterTitle: 'string';
+};
+
 class AIStore {
   private db: IDBDatabase | null = null;
   private chunkCache = new Map<string, TextChunk[]>();
-  private indexCache = new Map<string, Orama<any>>();
+  private indexCache = new Map<string, Orama<BM25Schema>>();
   private metaCache = new Map<string, BookIndexMeta>();
   private conversationCache = new Map<string, AIConversation[]>();
 
@@ -205,7 +211,7 @@ class AIStore {
     });
   }
 
-  private async loadBM25Index(bookHash: string): Promise<Orama<any> | null> {
+  private async loadBM25Index(bookHash: string): Promise<Orama<BM25Schema> | null> {
     if (this.indexCache.has(bookHash)) return this.indexCache.get(bookHash)!;
     const db = await this.openDB();
     return new Promise((resolve, reject) => {
