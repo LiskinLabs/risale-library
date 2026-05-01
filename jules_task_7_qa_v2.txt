@@ -1,0 +1,7 @@
+Implement Advanced QA and Stability. 
+1. Create Playwright E2E tests for core user journeys: 'Import Book -> Open Reader -> Dictionary Lookup'.
+2. CRITICAL: DO NOT modify package.json or pnpm-lock.yaml. Use existing dependencies only. 
+3. CRITICAL: DO NOT delete existing tests. 
+4. Add automated Accessibility (A11y) checks using Playwright.
+5. Ensure tests are lightweight and run in GitHub Actions.
+6. Fix any minor bugs found during testing.

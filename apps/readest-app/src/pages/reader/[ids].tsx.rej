@@ -1,0 +1,70 @@
+diff a/apps/readest-app/src/pages/reader/[ids].tsx b/apps/readest-app/src/pages/reader/[ids].tsx	(rejected hunks)
+@@ -1,22 +1,59 @@
++import Head from 'next/head';
+ import { useRouter } from 'next/router';
++import { useEffect, useState } from 'react';
+ import { AuthProvider } from '@/context/AuthContext';
+ import { EnvProvider } from '@/context/EnvContext';
+ import { CSPostHogProvider } from '@/context/PHContext';
+ import { SyncProvider } from '@/context/SyncContext';
+ import Reader from '@/app/reader/components/Reader';
++import { useLibraryStore } from '@/store/libraryStore';
+ 
+ export default function Page() {
+   const router = useRouter();
+   const ids = router.query['ids'] as string;
++  const [seoData, setSeoData] = useState({ title: '', description: '', image: '' });
++
++  useEffect(() => {
++    if (!ids) return;
++    const loadBookSeoData = async () => {
++      // Basic dynamic SEO metadata from the first id
++      const idArray = ids.split(',');
++      const bookId = idArray[0];
++      const library = useLibraryStore.getState().library;
++      const book = library.find(b => b.hash === bookId);
++      
++      if (book) {
++        setSeoData({
++          title: `${book.title} - Risale Digital Library`,
++          description: book.metadata?.description || `Read ${book.title} ${book.author ? `by ${book.author}` : ''} on Risale Digital Library`,
++          image: book.coverImageUrl || 'https://cdn.readest.com/images/open_graph_preview_read_now.png'
++        });
++      }
++    };
++    loadBookSeoData();
++  }, [ids]);
++
+   return (
+-    <CSPostHogProvider>
+-      <EnvProvider>
+-        <AuthProvider>
+-          <SyncProvider>
+-            <Reader ids={ids} />
+-          </SyncProvider>
+-        </AuthProvider>
+-      </EnvProvider>
+-    </CSPostHogProvider>
++    <>
++      <Head>
++        {seoData.title && <title>{seoData.title}</title>}
++        {seoData.description && <meta name='description' content={seoData.description} />}
++        {seoData.title && <meta property='og:title' content={seoData.title} />}
++        {seoData.description && <meta property='og:description' content={seoData.description} />}
++        {seoData.image && <meta property='og:image' content={seoData.image} />}
++        {seoData.title && <meta name='twitter:title' content={seoData.title} />}
++        {seoData.description && <meta name='twitter:description' content={seoData.description} />}
++        {seoData.image && <meta name='twitter:image' content={seoData.image} />}
++      </Head>
++      <CSPostHogProvider>
++        <EnvProvider>
++          <AuthProvider>
++            <SyncProvider>
++              <Reader ids={ids} />
++            </SyncProvider>
++          </AuthProvider>
++        </EnvProvider>
++      </CSPostHogProvider>
++    </>
+   );
+ }

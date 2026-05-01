@@ -31,6 +31,7 @@ const BookCover: React.FC<BookCoverProps> = memo<BookCoverProps>(
     const coverRef = useRef<HTMLDivElement>(null);
     const [imageLoaded, setImageLoaded] = useState(false);
     const [imageError, setImageError] = useState(false);
+    const [currentCoverIdx, setCurrentCoverIdx] = useState(0);
 
     const shouldShowSpine = showSpine && imageLoaded && !imageError;
 
@@ -53,18 +54,41 @@ const BookCover: React.FC<BookCoverProps> = memo<BookCoverProps>(
       toggleImageVisibility(true);
     };
 
-    const handleImageError = () => {
-      setImageLoaded(false);
-      setImageError(true);
-      toggleImageVisibility(false);
-      onImageError?.();
+    const getPotentialCoverUrls = () => {
+      const base = book.metadata?.coverImageUrl || book.coverImageUrl || '';
+      if (!base || base === '/covers/default.png') return [getAssetPath('/covers/default.png')];
+
+      const filename = base.split('/').pop() || '';
+      const urls = [getAssetPath(base)];
+
+      // Try common language prefixes if the original fails
+      if (!filename.includes('_')) {
+        urls.push(getAssetPath(`/covers/ar_${filename}`));
+        urls.push(getAssetPath(`/covers/tr_${filename}`));
+        urls.push(getAssetPath(`/covers/ru_${filename}`));
+      }
+
+      return urls;
     };
 
-    const coverUrl = getAssetPath(
-      book.metadata?.coverImageUrl || book.coverImageUrl || '/covers/default.png',
-    );
+    const potentialUrls = getPotentialCoverUrls();
+    const coverUrl = potentialUrls[currentCoverIdx] || potentialUrls[0]!;
+
+    const handleImageError = () => {
+      if (currentCoverIdx < potentialUrls.length - 1) {
+        setCurrentCoverIdx(currentCoverIdx + 1);
+      } else {
+        setImageLoaded(false);
+        setImageError(true);
+        toggleImageVisibility(false);
+        onImageError?.();
+      }
+    };
 
     useEffect(() => {
+      setCurrentCoverIdx(0);
+      setImageError(false);
+      setImageLoaded(false);
       toggleImageVisibility(true);
     }, [book.metadata?.coverImageUrl, book.coverImageUrl]);
 
@@ -82,69 +106,75 @@ const BookCover: React.FC<BookCoverProps> = memo<BookCoverProps>(
           <div
             className={clsx(
               'absolute inset-0 z-20 overflow-hidden bg-[#0c1222]',
-              mode === 'grid' ? 'border-premium-gold/20 rounded-r-lg border-l-[4px]' : 'rounded-lg',
+              mode === 'grid' ? 'border-premium-gold/30 rounded-r-lg border-l-[4px]' : 'rounded-lg',
             )}
           >
-            {coverFit === 'crop' ? (
-              <Image
-                src={coverUrl}
-                alt={book.title}
-                fill={true}
-                loading='lazy'
-                className={clsx('cover-image crop-cover-img object-cover', imageClassName)}
-                onLoad={handleImageLoad}
-                onError={handleImageError}
-              />
-            ) : (
-              <div className={clsx('flex h-full w-full justify-start')}>
-                <div
-                  className={clsx(
-                    'flex h-full max-h-full items-end',
-                    mode === 'grid' ? 'items-end' : 'items-center',
-                  )}
-                >
+            {!imageError && (
+              <>
+                {coverFit === 'crop' ? (
                   <Image
                     src={coverUrl}
                     alt={book.title}
-                    width={0}
-                    height={0}
-                    sizes='100vw'
+                    fill={true}
                     loading='lazy'
-                    className={clsx(
-                      'cover-image fit-cover-img h-auto max-h-full w-auto max-w-full',
-                      imageClassName,
-                    )}
+                    className={clsx('cover-image crop-cover-img object-cover', imageClassName)}
                     onLoad={handleImageLoad}
                     onError={handleImageError}
                   />
-                </div>
-              </div>
+                ) : (
+                  <div className={clsx('flex h-full w-full justify-start')}>
+                    <div
+                      className={clsx(
+                        'flex h-full max-h-full items-end',
+                        mode === 'grid' ? 'items-end' : 'items-center',
+                      )}
+                    >
+                      <Image
+                        src={coverUrl}
+                        alt={book.title}
+                        width={0}
+                        height={0}
+                        sizes='100vw'
+                        loading='lazy'
+                        className={clsx(
+                          'cover-image fit-cover-img h-auto max-h-full w-auto max-w-full',
+                          imageClassName,
+                        )}
+                        onLoad={handleImageLoad}
+                        onError={handleImageError}
+                      />
+                    </div>
+                  </div>
+                )}
+              </>
             )}
 
             <div
               className={clsx(
-                'fallback-cover invisible absolute inset-0 p-2',
-                'text-neutral-content text-center font-serif font-medium',
-                isPreview ? 'bg-base-200/50' : 'bg-base-100',
+                'fallback-cover absolute inset-0 p-4',
+                'flex flex-col items-center justify-center text-center',
+                'bg-gradient-to-b from-[#1e293b] to-[#0f172a]',
+                imageLoaded && !imageError ? 'invisible' : 'visible',
                 imageClassName,
               )}
             >
-              <div className='flex h-1/2 items-center justify-center'>
+              <div className='premium-glass absolute inset-2 rounded-md opacity-20' />
+              <div className='z-10 flex flex-col gap-4'>
                 <span
                   className={clsx(
-                    isPreview ? 'line-clamp-2' : mode === 'grid' ? 'line-clamp-3' : 'line-clamp-2',
-                    isPreview ? 'text-[0.5em]' : mode === 'grid' ? 'text-lg' : 'text-sm',
+                    'gold-foil-glow font-serif font-bold leading-tight',
+                    isPreview ? 'text-[0.6em]' : mode === 'grid' ? 'text-xl' : 'text-sm',
+                    'line-clamp-4',
                   )}
                 >
                   {formatTitle(book.title)}
                 </span>
-              </div>
-              <div className='h-1/6'></div>
-              <div className='flex h-1/3 items-center justify-center'>
+                <div className='bg-premium-gold/30 mx-auto h-[1px] w-12' />
                 <span
                   className={clsx(
-                    'text-neutral-content/50 line-clamp-1',
-                    isPreview ? 'text-[0.4em]' : mode === 'grid' ? 'text-base' : 'text-xs',
+                    'text-premium-gold/60 font-medium uppercase tracking-widest',
+                    isPreview ? 'text-[0.4em]' : mode === 'grid' ? 'text-[10px]' : 'text-[8px]',
+                    'line-clamp-2',
                   )}
                 >
                   {formatAuthors(book.author)}

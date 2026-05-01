@@ -1,0 +1,12 @@
+diff a/apps/readest-app/src/app/library/hooks/useBooksSync.ts b/apps/readest-app/src/app/library/hooks/useBooksSync.ts	(rejected hunks)
+@@ -158,7 +158,9 @@ export const useBooksSync = () => {
+         await Promise.all(batch.map(processNewBook));
+         const progress = Math.min((i + batchSize) / newBooks.length, 1);
+         setSyncProgress(progress);
+-        setLibrary([...updatedLibrary]);
++        if (i + batchSize >= newBooks.length) {
++          setLibrary([...updatedLibrary]);
++        }
+         appService?.saveLibraryBooks(updatedLibrary);
+       }
+     } catch (err) {

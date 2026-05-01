@@ -1,0 +1,51 @@
+diff a/apps/readest-app/src/app/reader/components/tts/TTSControl.tsx b/apps/readest-app/src/app/reader/components/tts/TTSControl.tsx	(rejected hunks)
+@@ -8,6 +8,7 @@ import { useResponsiveSize } from '@/hooks/useResponsiveSize';
+ import { useTTSControl } from '@/app/reader/hooks/useTTSControl';
+ import { getPopupPosition, Position } from '@/utils/sel';
+ import { Insets } from '@/types/misc';
++import { RiVoiceAiFill } from 'react-icons/ri';
+ import { Overlay } from '@/components/Overlay';
+ import Popup from '@/components/Popup';
+ import TTSPanel from './TTSPanel';
+@@ -166,7 +167,7 @@ const TTSControl: React.FC<TTSControlProps> = ({ bookKey, gridInsets }) => {
+             'absolute left-1/2 top-0 z-50 -translate-x-1/2',
+             'transition-opacity duration-300',
+             isBackButtonVisible ? 'opacity-100' : 'opacity-0',
+-            safeAreaInsets?.top ? '' : 'py-1',
++            safeAreaInsets?.top ? 'py-4' : 'py-5',
+           )}
+           style={{
+             top: `${safeAreaInsets?.top || 0}px`,
+@@ -175,10 +176,10 @@ const TTSControl: React.FC<TTSControlProps> = ({ bookKey, gridInsets }) => {
+           <button
+             onClick={tts.handleBackToCurrentTTSLocation}
+             className={clsx(
+-              'not-eink:bg-base-300 eink-bordered rounded-full px-4 py-2 font-sans text-sm shadow-lg',
+-              safeAreaInsets?.top ? 'h-11' : 'h-9',
++              'premium-glass hover-glow premium-transition eink-bordered flex items-center gap-2 rounded-full px-5 py-2.5 font-sans text-sm font-medium tracking-wide text-premium-gold shadow-2xl hover:-translate-y-0.5',
+             )}
+           >
++            <RiVoiceAiFill className="text-lg" />
+             {_('Back to TTS Location')}
+           </button>
+         </div>
+@@ -188,8 +189,8 @@ const TTSControl: React.FC<TTSControlProps> = ({ bookKey, gridInsets }) => {
+         <div
+           ref={iconRef}
+           className={clsx(
+-            'absolute h-12 w-12',
+-            'transition-transform duration-300',
++            'absolute h-14 w-14',
++            'transition-all duration-300 hover:scale-110',
+             viewSettings?.rtl ? 'left-8' : 'right-6',
+             !appService?.hasSafeAreaInset && 'bottom-[70px] sm:bottom-14',
+           )}
+@@ -212,7 +213,7 @@ const TTSControl: React.FC<TTSControlProps> = ({ bookKey, gridInsets }) => {
+           height={popupHeight}
+           position={panelPosition}
+           trianglePosition={trianglePosition}
+-          className='bg-base-200 flex shadow-lg'
++          className='flex !bg-transparent shadow-none'
+           onDismiss={handleDismissPopup}
+         >
+           <TTSPanel

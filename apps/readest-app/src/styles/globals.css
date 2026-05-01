@@ -971,63 +971,89 @@ body.atmosphere #atmosphere-overlay {
   animation: lightRay 15s linear infinite;
 }
 
-/* 3D Book FIX: Unified Object */
+/* 3D Book FIX: Unified Object with Realistic Depth */
 .book-3d-container {
-  perspective: 2000px;
+  perspective: 2500px;
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.4));
 }
 
 .book-3d-object {
   transform-style: preserve-3d;
-  transform: rotateY(-25deg) rotateX(10deg);
-  transition: transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transform: rotateY(-28deg) rotateX(8deg);
+  transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
   width: 100%;
   height: 100%;
 }
 
 .book-3d-object:hover {
-  transform: rotateY(-10deg) rotateX(5deg);
+  transform: rotateY(-12deg) rotateX(4deg) scale(1.02);
 }
 
-/* Fixed Spine Positioning */
+/* Fixed Spine Positioning - Deep Midnight Blue with Gold Accent */
 .book-side {
   position: absolute;
-  background: #1e293b; /* Darker spine */
+  background: linear-gradient(to right, #0f172a 0%, #1e293b 100%);
   left: 0;
   top: 0;
-  width: 40px;
+  width: 35px;
   height: 100%;
-  transform: rotateY(-90deg) translateZ(20px);
+  transform: rotateY(-90deg) translateZ(17.5px);
   transform-origin: left;
-  box-shadow: inset -10px 0 30px rgba(0, 0, 0, 0.5);
-  border-left: 2px solid theme('colors.premium.gold/20');
+  box-shadow: inset -5px 0 15px rgba(0, 0, 0, 0.6);
+  border-left: 1.5px solid rgba(197, 160, 89, 0.4); /* Gold accent */
 }
 
-/* Page Shimmer (New CSS Art) */
+/* Page Shimmer - Realistic Paper Texture */
 .page-edge {
   position: absolute;
   right: 0;
   top: 0;
-  width: 15px;
-  height: 100%;
-  background: linear-gradient(90deg, #f8f5f0 0%, #e5e7eb 100%);
-  transform: rotateY(90deg) translateZ(280px);
+  width: 12px;
+  height: 98%;
+  margin-top: 1%;
+  background: linear-gradient(
+    90deg,
+    #fcfaf5 0%,
+    #f3e5ab 20%,
+    #e5e7eb 50%,
+    #fcfaf5 80%,
+    #ffffff 100%
+  );
+  background-size: 200% 100%;
+  transform: rotateY(90deg) translateZ(260px);
   transform-origin: right;
+  border-radius: 0 2px 2px 0;
 }
 
-/* Gold Foil Texture in CSS */
-.gold-foil {
+/* Premium Glassmorphism for Headers/Panels */
+.premium-glass {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(197, 160, 89, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Gold Foil Shimmer Animation */
+.gold-foil-glow {
   background: linear-gradient(
     135deg,
     #c5a059 0%,
     #f3e5ab 25%,
-    #c5a059 50%,
+    #fff8dc 50%,
     #f3e5ab 75%,
     #c5a059 100%
   );
   background-size: 400% 400%;
-  animation: goldShimmer 8s ease infinite;
+  animation: goldShimmer 12s ease infinite;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 20px rgba(197, 160, 89, 0.2);
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 25px rgba(197, 160, 89, 0.3);
 }
 
 @keyframes goldShimmer {
