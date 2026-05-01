@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { MdCheckCircle, MdCheckCircleOutline } from 'react-icons/md';
+import { MdCheckCircle, MdCheckCircleOutline, MdOfflinePin } from 'react-icons/md';
 import {
   LiaCloudUploadAltSolid,
   LiaCloudDownloadAltSolid,
@@ -86,6 +86,11 @@ const BookItem: React.FC<BookItemProps> = ({
             ) : (
               <MdCheckCircleOutline className='fill-gray-300 drop-shadow-sm' />
             )}
+          </div>
+        )}
+        {!isSelectMode && book.downloadedAt && (
+          <div className='absolute top-1 right-1' title={_('Offline Ready')}>
+            <MdOfflinePin className='fill-green-500 drop-shadow-sm opacity-80' size={useResponsiveSize(18)} />
           </div>
         )}
       </div>

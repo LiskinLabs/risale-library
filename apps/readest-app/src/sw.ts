@@ -1,5 +1,5 @@
 import type { PrecacheEntry, SerwistGlobalConfig } from 'serwist';
-import { NetworkFirst, CacheFirst, ExpirationPlugin, Serwist } from 'serwist';
+import { NetworkFirst, NetworkOnly, CacheFirst, ExpirationPlugin, BackgroundSyncPlugin, Serwist } from 'serwist';
 
 declare global {
   interface WorkerGlobalScope extends SerwistGlobalConfig {
@@ -70,7 +70,10 @@ const serwist = new Serwist({
           url.hostname === 'ik.imagekit.io' ||
           url.hostname === 'db.onlinewebfonts.com';
 
-        return isFontFile || isFontRequest || isFontCDN;
+        // Match Next.js Google Fonts (Inter, Lora, Playfair Display)
+        const isNextFont = url.pathname.includes('/_next/static/media/') && /\.(woff2?|ttf|otf)$/i.test(url.pathname);
+
+        return isFontFile || isFontRequest || isFontCDN || isNextFont;
       },
       handler: new CacheFirst({
         cacheName: 'fonts-cache',
@@ -79,6 +82,36 @@ const serwist = new Serwist({
             maxEntries: 200, // More entries for various font files
             maxAgeSeconds: 365 * 24 * 60 * 60 * 2, // 2 years - fonts rarely change
             purgeOnQuotaError: true, // Automatically purge if storage quota exceeded
+          }),
+        ],
+      }),
+    },
+    // Cache for Book Assets (EPUB/PDF/MOBI/AZW/CBZ/FB2/TXT/MD content)
+    {
+      matcher: ({ url }) => {
+        const isBookAsset = /\.(epub|pdf|mobi|azw|azw3|cbz|fb2|fbz|txt|md|opf|ncx|html|htm|css|js|jpg|jpeg|png|gif|svg|webp)(\?.*)?$/i.test(url.pathname);
+        return isBookAsset && !url.pathname.startsWith('/api/');
+      },
+      handler: new CacheFirst({
+        cacheName: 'book-assets-cache',
+        plugins: [
+          new ExpirationPlugin({
+            maxEntries: 1000,
+            maxAgeSeconds: 365 * 24 * 60 * 60, // 1 year
+            purgeOnQuotaError: true,
+          }),
+        ],
+      }),
+    },
+    // Background Sync for notes and highlights
+    {
+      matcher: ({ url }) => {
+        return url.pathname.includes('/api/') || url.pathname.includes('/kosync');
+      },
+      handler: new NetworkOnly({
+        plugins: [
+          new BackgroundSyncPlugin('notes-sync-queue', {
+            maxRetentionTime: 24 * 60, // Retry for max of 24 Hours (specified in minutes)
           }),
         ],
       }),
