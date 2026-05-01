@@ -158,7 +158,9 @@ export const useBooksSync = () => {
         await Promise.all(batch.map(processNewBook));
         const progress = Math.min((i + batchSize) / newBooks.length, 1);
         setSyncProgress(progress);
-        setLibrary([...updatedLibrary]);
+        if (i + batchSize >= newBooks.length) {
+          setLibrary([...updatedLibrary]);
+        }
         appService?.saveLibraryBooks(updatedLibrary);
       }
     } catch (err) {

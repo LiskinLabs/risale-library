@@ -35,7 +35,12 @@ const resolvePath = (path: string, base: BaseDir): ResolvedPath => {
 const dbName = 'AppFileSystem';
 const dbVersion = 1;
 
+let dbInstance: IDBDatabase | null = null;
+
 export async function openIndexedDB(): Promise<IDBDatabase> {
+  if (dbInstance) {
+    return dbInstance;
+  }
   return new Promise((resolve, reject) => {
     const request = indexedDB.open(dbName, dbVersion);
 
@@ -46,8 +51,34 @@ export async function openIndexedDB(): Promise<IDBDatabase> {
       }
     };
 
-    request.onsuccess = () => resolve(request.result);
-    request.onerror = () => reject(request.error);
+    request.onsuccess = () => {
+      dbInstance = request.result;
+
+      // Handle connection closing abnormally (e.g. user clears data)
+      dbInstance.onclose = () => {
+        dbInstance = null;
+      };
+
+      dbInstance.onversionchange = () => {
+        dbInstance?.close();
+        dbInstance = null;
+      };
+
+      resolve(dbInstance);
+    };
+
+    request.onerror = () => {
+      // Smart recovery attempt if DB is blocked or corrupted
+      if (request.error?.name === 'VersionError' || request.error?.name === 'UnknownError') {
+        console.warn('IndexedDB corrupted or version error. Attempting recovery by deleting DB.');
+        try {
+          indexedDB.deleteDatabase(dbName);
+        } catch (e) {
+          console.error('Failed to delete IndexedDB for recovery', e);
+        }
+      }
+      reject(request.error);
+    };
   });
 }
 
