@@ -6,9 +6,9 @@ import { Book } from '@/types/book';
 
 vi.mock('next/image', () => ({
   __esModule: true,
-  default: (props: Record<string, unknown>) => {
+  default: ({ fill, sizes, ...props }: Record<string, unknown>) => {
     // biome-ignore lint/a11y/useAltText: test mock; alt comes from spread props
-    return <img {...props} />;
+    return <img data-fill={fill} data-sizes={sizes} {...props} />;
   },
 }));
 
