@@ -14,8 +14,12 @@ import type { EnvConfigType } from '@/services/environment';
 import type { AppService } from '@/types/system';
 
 function makeEnvConfig(appService: Partial<AppService>): EnvConfigType {
+  const mockAppService = {
+    generateCoverImageUrl: vi.fn().mockResolvedValue('cover-url'),
+    ...appService,
+  };
   return {
-    getAppService: vi.fn().mockResolvedValue(appService as AppService),
+    getAppService: vi.fn().mockResolvedValue(mockAppService as AppService),
   };
 }
 
