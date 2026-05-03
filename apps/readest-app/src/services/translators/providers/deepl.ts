@@ -37,8 +37,7 @@ export const deeplProvider: TranslationProvider = {
     }
 
     const normalizedSourceLang = normalizeToShortLang(sourceLang).toUpperCase();
-    const processedText = text.map((t) => t.replaceAll('
-', '').trim());
+    const processedText = text.map((t) => t.replaceAll('\n', '').trim());
     const body = JSON.stringify({
       text: processedText,
       ...(normalizedSourceLang !== 'AUTO' ? { source_lang: normalizedSourceLang } : {}),
