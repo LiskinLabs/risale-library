@@ -1,3 +1,4 @@
+import { sanitizeHTML } from '@/utils/sanitize';
 import clsx from 'clsx';
 import React from 'react';
 import {
@@ -284,7 +285,7 @@ const BookDetailView: React.FC<BookDetailViewProps> = ({
               <p
                 className='text-neutral-content prose prose-sm max-w-full whitespace-pre-line text-sm'
                 dangerouslySetInnerHTML={{
-                  __html: metadata?.description || _('No description available'),
+                  __html: sanitizeHTML(metadata?.description || _('No description available')),
                 }}
               ></p>
             </div>
