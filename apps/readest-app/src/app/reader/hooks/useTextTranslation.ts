@@ -196,7 +196,7 @@ export function useTextTranslation(
 
   const translateElement = async (el: HTMLElement) => {
     if (!enabled.current) return;
-    const text = el.textContent?.replaceAll('\n', '').trim();
+    const text = el.textContent?.trim();
     if (!text) return;
 
     if (el.classList.contains('translation-target')) {
