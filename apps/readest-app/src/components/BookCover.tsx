@@ -33,7 +33,7 @@ const BookCover: React.FC<BookCoverProps> = memo<BookCoverProps>(
     const [imageError, setImageError] = useState(false);
     const [currentCoverIdx, setCurrentCoverIdx] = useState(0);
 
-    const shouldShowSpine = showSpine && imageLoaded && !imageError;
+    const shouldShowSpine = showSpine; // Always show spine for both loaded image and fallback
 
     const toggleImageVisibility = (showImage: boolean) => {
       if (coverRef.current) {
@@ -91,6 +91,20 @@ const BookCover: React.FC<BookCoverProps> = memo<BookCoverProps>(
       setImageLoaded(false);
       toggleImageVisibility(true);
     }, [book.metadata?.coverImageUrl, book.coverImageUrl]);
+
+    const getCategoryGradient = () => {
+      const titleLower = formatTitle(book.title).toLowerCase();
+      if (titleLower.includes('külliyat') || titleLower.includes('kulliyat')) {
+        return 'bg-kulliyat-cover';
+      }
+      if (titleLower.includes('lâhika') || titleLower.includes('lahika')) {
+        return 'bg-lahikalar-cover';
+      }
+      if (titleLower.includes('risale') || titleLower.includes('sözler') || titleLower.includes('mektubat') || titleLower.includes('lem\'alar') || titleLower.includes('şualar')) {
+        return 'bg-risaleler-cover';
+      }
+      return 'bg-default-cover';
+    };
 
     return (
       <div
@@ -153,7 +167,7 @@ const BookCover: React.FC<BookCoverProps> = memo<BookCoverProps>(
               className={clsx(
                 'fallback-cover absolute inset-0 p-4',
                 'flex flex-col items-center justify-center text-center',
-                'bg-gradient-to-b from-[#1e293b] to-[#0f172a]',
+                getCategoryGradient(),
                 imageLoaded && !imageError ? 'invisible' : 'visible',
                 imageClassName,
               )}

@@ -21,6 +21,7 @@ function cosineSimilarity(a: number[], b: number[]): number {
     normA += a[i]! * a[i]!;
     normB += b[i]! * b[i]!;
   }
+  if (normA === 0 || normB === 0) return 0;
   const denom = Math.sqrt(normA) * Math.sqrt(normB);
   return denom === 0 ? 0 : dot / denom;
 }
@@ -307,7 +308,7 @@ class AIStore {
     ]);
     const normalize = (results: ScoredChunk[], weight: number) => {
       if (results.length === 0) return [];
-      const max = Math.max(...results.map((r) => r.score));
+      const max = results.length > 0 ? Math.max(...results.map((r) => r.score)) : 0;
       return results.map((r) => ({ ...r, score: max > 0 ? (r.score / max) * weight : 0 }));
     };
     const weighted = [...normalize(vectorResults, 1.0), ...normalize(bm25Results, 0.8)];

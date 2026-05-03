@@ -887,6 +887,20 @@ body.atmosphere #atmosphere-overlay {
   animation: shake 0.8s ease-in-out;
 }
 
+/* Book Cover Categories */
+.bg-kulliyat-cover {
+  background: linear-gradient(to bottom, #064e3b, #022c22);
+}
+.bg-lahikalar-cover {
+  background: linear-gradient(to bottom, #1e3a8a, #172554);
+}
+.bg-risaleler-cover {
+  background: linear-gradient(to bottom, #991b1b, #450a0a);
+}
+.bg-default-cover {
+  background: linear-gradient(to bottom, #1e293b, #0f172a);
+}
+
 /* Premium Glassmorphism & Depth */
 .premium-glass {
   @apply border border-white/20 bg-white/40 backdrop-blur-xl dark:border-white/5 dark:bg-black/40;
