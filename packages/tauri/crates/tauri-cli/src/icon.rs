@@ -895,8 +895,7 @@ fn content_bounds(img: &DynamicImage) -> Option<(u32, u32, u32, u32)> {
 
 fn resize_asset(img: &DynamicImage, target_size: u32, scale_percent: f32) -> DynamicImage {
   let cropped = if let Some((x, y, cw, ch)) = content_bounds(img) {
-    // TODO: Use `&` here instead when we raise MSRV to above 1.79
-    Cow::Owned(img.crop_imm(x, y, cw, ch))
+    Cow::Borrowed(&img.crop_imm(x, y, cw, ch))
   } else {
     Cow::Borrowed(img)
   };
