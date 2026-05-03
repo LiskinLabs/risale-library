@@ -49,7 +49,7 @@ export const useDemoBooks = () => {
       }
     };
 
-    const DATA_VERSION = '2026-04-30-v5';
+    const DATA_VERSION = '2026-05-03-v10-premium';
     const demoBooksVersion = localStorage.getItem('demoBooksVersion');
 
     if (demoBooksVersion !== DATA_VERSION) {
