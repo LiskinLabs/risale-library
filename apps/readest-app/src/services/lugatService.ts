@@ -44,14 +44,24 @@ class LugatService {
     // 1. Direct match
     if (dict[normalizedWord]) return dict[normalizedWord];
 
-    // 2. Try common Turkish suffixes removal (very basic)
-    const stems = [
-      normalizedWord,
-      normalizedWord.replace(/[ıiueoöü]n[ıiueoöü]$/, ''), // genitive
-      normalizedWord.replace(/[ıiueoöü]m[ıiueoöü]$/, ''), // possessive
-      normalizedWord.replace(/l[ıiueoöü]r$/, ''), // plural
-      normalizedWord.replace(/[ıiueoöü]$/, ''), // accusative
-    ];
+    // 2. Language-specific suffix removal
+    const stems = [normalizedWord];
+
+    if (lang === 'tr') {
+      stems.push(
+        normalizedWord.replace(/[ıiueoöü]n[ıiueoöü]$/, ''), // genitive
+        normalizedWord.replace(/[ıiueoöü]m[ıiueoöü]$/, ''), // possessive
+        normalizedWord.replace(/l[ıiueoöü]r$/, ''), // plural
+        normalizedWord.replace(/[ıiueoöü]$/, ''), // accusative
+      );
+    } else if (lang === 'ru') {
+      stems.push(
+        normalizedWord.replace(/[аеиоуынэюя]$/, ''), // singular endings
+        normalizedWord.replace(/(ии|ие|ия|ию|ием|ии|ях|ями)$/, 'и'), // common plural/declension
+        normalizedWord.replace(/(ом|ам|ем|им|ыми|ами|ями)$/, ''), // instrumental/plural
+        normalizedWord.replace(/(ого|его|ому|ему)$/, ''), // genitive/dative
+      );
+    }
 
     for (const stem of stems) {
       if (dict[stem]) return dict[stem];
