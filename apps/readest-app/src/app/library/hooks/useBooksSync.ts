@@ -103,15 +103,15 @@ export const useBooksSync = () => {
 
     // Process old books first so that when we update the library the order is preserved
     syncedBooks.sort((a, b) => a.updatedAt - b.updatedAt);
-    const bookHashesInSynced = new Set(syncedBooks.map((book) => book.hash));
+    const syncedBooksMap = new Map<string, Book>(syncedBooks.map((book) => [book.hash, book]));
     const liveLibrary = useLibraryStore.getState().library;
-    const oldBooks = liveLibrary.filter((book) => bookHashesInSynced.has(book.hash));
+    const oldBooks = liveLibrary.filter((book) => syncedBooksMap.has(book.hash));
     const oldBooksNeedsDownload = oldBooks.filter((book) => {
       return !book.deletedAt && book.uploadedAt && !book.coverDownloadedAt;
     });
 
     const processOldBook = async (oldBook: Book) => {
-      const matchingBook = syncedBooks.find((newBook) => newBook.hash === oldBook.hash);
+      const matchingBook = syncedBooksMap.get(oldBook.hash);
       if (matchingBook) {
         if (!matchingBook.deletedAt && matchingBook.uploadedAt && !oldBook.coverDownloadedAt) {
           oldBook.coverImageUrl = await appService?.generateCoverImageUrl(oldBook);
