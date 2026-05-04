@@ -161,24 +161,20 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
   useOpenWithBooks();
   useTransferQueue(libraryLoaded);
 
-  const { pullLibrary, pushLibrary } = useBooksSync();
-  const { isDragging } = useDragDropImport();
+  const { pullLibrary, pushLibrary } = useBooksSync(libraryLoaded);
 
-  usePullToRefresh(
-    scrollRef,
-    async () => {
-      await pullLibrary(false, true);
-    },
-    async () => {
-      await pullLibrary(true, true);
-    },
-  );
-  useScreenWakeLock(settings.screenWakeLock);
+  const { isDragging } = useDragDropImport(containerRef, (files) => {
+    const groupId = searchParams?.get('group') || '';
+    importBooks(files, groupId);
+  });
 
   useShortcuts({
-    onToggleFullscreen: async () => {
+    onToggleSidebar: () => {
+      // not used in library
+    },
+    onToggleFullScreen: () => {
       if (isTauriAppPlatform()) {
-        await tauriHandleToggleFullScreen();
+        tauriHandleToggleFullScreen();
       }
     },
     onCloseWindow: async () => {
@@ -203,14 +199,6 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
     sessionStorage.setItem('lastLibraryParams', searchParams?.toString() || '');
   }, [searchParams]);
 
-  // Strip the empty `group=` param that `handleLibraryNavigation` sets as a
-  // workaround for a Next.js 16.2 static-export regression (see the NOTE
-  // above `handleLibraryNavigation` for full context). This effect runs
-  // after the router.replace() has committed, so React has already
-  // re-rendered with the new (empty) group state; we're only rewriting the
-  // URL cosmetically via window.history.replaceState — Next.js' patched
-  // replaceState will pick up the new canonical URL without triggering
-  // another navigation.
   useEffect(() => {
     if (typeof window === 'undefined') return;
     if (searchParams?.get('group') !== '') return;
@@ -220,35 +208,20 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
     window.history.replaceState(null, '', cleanHref);
   }, [searchParams]);
 
-  // Unified navigation function that handles scroll position and direction.
-  // Workaround for a Next.js 16.2 static-export regression: navigating to a
-  // same-pathname URL with an empty search string causes `router.replace()`
-  // to silently no-op (e.g. `/library?group=foo` -> `/library`), which broke
-  // the breadcrumb "All" button. By always calling `params.set('group',
-  // targetGroup)` — including when `targetGroup` is an empty string — the
-  // resulting URL becomes `/library?group=` instead of `/library`, which
-  // Next.js does commit. The trailing empty `group=` is stripped via a
-  // cleanup effect below (purely cosmetic URL rewrite). See
-  // https://github.com/readest/readest/issues/3782.
   const handleLibraryNavigation = useCallback(
     (targetGroup: string) => {
       const currentGroup = searchParams?.get('group') || '';
 
-      // Save current scroll position BEFORE navigation
       saveScrollPosition(currentGroup);
 
-      // Detect and set navigation direction
       const direction = currentGroup && !targetGroup ? 'back' : 'forward';
       document.documentElement.setAttribute('data-nav-direction', direction);
 
-      // Build query params — always `set` so the search string is non-empty
-      // even when targetGroup is '' (the Next.js 16.2 workaround).
       const params = new URLSearchParams(searchParams?.toString());
       params.set('group', targetGroup);
 
       navigateToLibrary(router, `${params.toString()}`);
     },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     [searchParams, router],
   );
 
@@ -283,8 +256,7 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
       tauriHandleSetAlwaysOnTop(settings.alwaysOnTop);
     }
     doCheckAppUpdates();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [appService?.hasUpdater, settings]);
+  }, [appService?.hasUpdater, settings, _]);
 
   useEffect(() => {
     if (appService?.isMobileApp) {
@@ -296,11 +268,6 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
     if (appService?.hasWindow) {
       const currentWebview = getCurrentWebview();
       const unlisten = currentWebview.listen('close-reader-window', async () => {
-        // Reader windows are independent Tauri webviews with their own
-        // libraryStore instance — progress / readingStatus / move-to-front
-        // updates from the reader window do NOT propagate to this main
-        // window's store. Reload from disk so the library reflects the
-        // changes the reader just persisted.
         const appService = await envConfig.getAppService();
         const settings = await appService.loadSettings();
         const library = await appService.loadLibraryBooks();
@@ -312,15 +279,13 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
       };
     }
     return;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [appService, envConfig]);
+  }, [appService, envConfig, setSettings, setLibrary]);
 
   const handleImportBookFiles = useCallback(async (event: CustomEvent) => {
     const selectedFiles: SelectedFile[] = event.detail.files;
     const groupId: string = event.detail.groupId || '';
     if (selectedFiles.length === 0) return;
     await importBooks(selectedFiles, groupId);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -334,7 +299,6 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
     if (!libraryBooks.some((book) => !book.deletedAt)) {
       handleSetSelectMode(false);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [libraryBooks]);
 
   const processOpenWithFiles = useCallback(
@@ -342,7 +306,6 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
       const settings = await appService.loadSettings();
       const bookIds: string[] = [];
       for (const file of openWithFiles) {
-        console.log('Open with book:', file);
         try {
           const temp = appService.isMobile ? false : !settings.autoImportBooksOnOpen;
           const book = await appService.importBook(file, libraryBooks, { transient: temp });
@@ -351,9 +314,7 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
           }
           if (user && book && !temp && !book.uploadedAt && settings.autoUpload) {
             setTimeout(() => {
-              console.log('Queueing upload for book:', book.title);
               transferManager.queueUpload(book);
-              // wait for the initialization of the transfer manager and opening of the book
             }, 3000);
           }
         } catch (error) {
@@ -363,15 +324,13 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
       setLibrary(libraryBooks);
       appService.saveLibraryBooks(libraryBooks);
 
-      console.log('Opening books:', bookIds);
       if (bookIds.length > 0) {
         setPendingNavigationBookIds(bookIds);
         return true;
       }
       return false;
     },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [],
+    [user, setLibrary],
   );
 
   const handleOpenLastBooks = async (
@@ -387,7 +346,6 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
         bookIds.push(book.hash);
       }
     }
-    console.log('Opening last books:', bookIds);
     if (bookIds.length > 0) {
       setPendingNavigationBookIds(bookIds);
       return true;
@@ -440,7 +398,6 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
       const settings = await appService.loadSettings();
       setSettings(settings);
 
-      // Reuse the library from the store when we return from the reader
       const library = libraryBooks.length > 0 ? libraryBooks : await appService.loadLibraryBooks();
       let opened = false;
       if (checkOpenWithBooks) {
@@ -474,9 +431,7 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
       setCheckLastOpenBooks(false);
       isInitiating.current = false;
     };
-    // searchParams is used to tigger parsing OPEN_WITH_FILES
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchParams]);
+  }, [searchParams, envConfig, libraryBooks, checkOpenWithBooks, checkLastOpenBooks, setSettings, setLibrary, setCheckOpenWithBooks, setCheckLastOpenBooks, router, saveSettings, processOpenWithFiles]);
 
   useEffect(() => {
     const group = searchParams?.get('group') || '';
@@ -489,7 +444,6 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
     restoreScrollPosition(group);
   }, [searchParams, restoreScrollPosition]);
 
-  // Track current series/author group for navigation header
   useEffect(() => {
     const groupId = searchParams?.get('group') || '';
     const groupByParam = searchParams?.get('groupBy');
@@ -499,7 +453,6 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
       groupId &&
       (groupBy === LibraryGroupByType.Series || groupBy === LibraryGroupByType.Author)
     ) {
-      // Find the group to get its name
       const allGroups = createBookGroups(
         libraryBooks.filter((b) => !b.deletedAt),
         groupBy,
@@ -533,16 +486,11 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
       setLibrary(newLibrary);
       appService?.saveLibraryBooks(newLibrary);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [demoBooks, libraryLoaded]);
+  }, [demoBooks, libraryLoaded, libraryBooks, setLibrary, appService]);
 
   const importBooks = async (files: SelectedFile[], groupId?: string) => {
     setLoading(true);
     const { library } = useLibraryStore.getState();
-    // Build the lookup index ONCE per import batch so each book lookup is
-    // O(1) instead of O(n) over the existing library. importBook also keeps
-    // the index updated as new books are appended, so subsequent files in
-    // the same batch see the additions.
     const lookupIndex = buildBookLookupIndex(library);
     const failedImports: Array<{ filename: string; errorMessage: string }> = [];
     const successfulImports: string[] = [];
@@ -565,7 +513,6 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
         }
 
         if (user && !book.uploadedAt && settings.autoUpload) {
-          console.log('Queueing upload for book:', book.title);
           transferManager.queueUpload(book);
         }
         successfulImports.push(book.title);
@@ -575,7 +522,6 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
         const baseFilename = getFilename(filename);
         const errorMessage = error instanceof Error ? _(getImportErrorMessage(error.message)) : '';
         failedImports.push({ filename: baseFilename, errorMessage });
-        console.error('Failed to import book:', filename, error);
         return null;
       }
     };
@@ -584,14 +530,9 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
     for (let i = 0; i < files.length; i += concurrency) {
       const batch = files.slice(i, i + concurrency);
       const importedBooks = (await Promise.all(batch.map(processFile))).filter((book) => !!book);
-      // Update store state per batch (so the UI can render imported books
-      // incrementally) but defer disk persistence until the entire batch is
-      // done — saving library.json once per batch of 4 books was the dominant
-      // cost for large imports.
       await updateBooks(envConfig, importedBooks, { skipSave: true });
     }
 
-    // Persist the full library once after every file in the batch is done.
     if (successfulImports.length > 0) {
       const finalLibrary = useLibraryStore.getState().library;
       const finalAppService = await envConfig.getAppService();
@@ -636,7 +577,6 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
 
   const handleBookUpload = useCallback(
     async (book: Book, _syncBooks = true) => {
-      // Use transfer queue for uploads - priority 1 for manual uploads (higher priority)
       const transferId = transferManager.queueUpload(book, 1);
       if (transferId) {
         eventDispatcher.dispatch('toast', {
@@ -650,8 +590,7 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
       }
       return false;
     },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [],
+    [_],
   );
 
   const handleBookDownload = useCallback(
@@ -682,7 +621,6 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
         }
       }
 
-      // Use transfer queue for normal downloads - priority 1 for manual downloads
       const transferId = transferManager.queueDownload(book, 1);
       if (transferId) {
         eventDispatcher.dispatch('toast', {
@@ -696,8 +634,7 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
       }
       return false;
     },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [appService],
+    [appService, _, envConfig, updateBook, updateBookTransferProgress],
   );
 
   const handleBookDelete = (deleteAction: DeleteAction) => {
@@ -714,7 +651,6 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
       };
 
       try {
-        // Handle local deletion immediately
         if (deleteAction === 'local' || deleteAction === 'both') {
           await appService?.deleteBook(book, 'local');
           if (deleteAction === 'both') {
@@ -727,7 +663,6 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
           if (syncBooks) pushLibrary();
         }
 
-        // Queue cloud deletion
         if (deleteAction === 'cloud' || deleteAction === 'both') {
           const transferId = transferManager.queueDelete(book, 1, true);
           if (!transferId) {
@@ -770,7 +705,6 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
       }
     }
     if (isWebAppPlatform()) {
-      // Clear HTTP cover image URL if cover is updated with a local file
       if (metadata.coverImageBlobUrl) {
         metadata.coverImageUrl = undefined;
       }
@@ -784,7 +718,6 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
 
   const handleImportBooksFromFiles = async () => {
     setIsSelectMode(false);
-    console.log('Importing books from files...');
     selectFiles({ type: 'books', multiple: true }).then((result) => {
       if (result.files.length === 0 || result.error) return;
       const groupId = searchParams?.get('group') || '';
@@ -796,7 +729,6 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
     if (!appService || !isTauriAppPlatform()) return;
 
     setIsSelectMode(false);
-    console.log('Importing books from directory...');
     let importDirectory: string | undefined = '';
     if (appService.isAndroidApp) {
       if (!(await requestStoragePermission())) return;
@@ -807,7 +739,6 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
       importDirectory = selectedDir;
     }
     if (!importDirectory) {
-      console.log('No directory selected');
       return;
     }
     const files = await appService.readDirectory(importDirectory, 'None');
@@ -860,7 +791,8 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
     return <div className={clsx('full-height', !appService?.isLinuxApp && 'bg-base-200')} />;
   }
 
-  const showBookshelf = libraryLoaded || libraryBooks.length > 0;
+  const hasAnyBooks = libraryBooks.some((book) => !book.deletedAt) || demoBooks.length > 0;
+  const showBookshelf = libraryLoaded || hasAnyBooks;
 
   return (
     <div
@@ -893,8 +825,7 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
         />
         <progress
           aria-label={_('Library Sync Progress')}
-          aria-hidden={isSyncing ? 'false' : 'true'}
-          className={clsx(
+          aria-hidden={isSyncing ? 'false' : 'true'}\n          className={clsx(
             'progress progress-success absolute bottom-0 left-0 right-0 h-1 translate-y-[2px] transition-opacity duration-200 sm:translate-y-[4px]',
             isSyncing ? 'opacity-100' : 'opacity-0',
           )}
@@ -948,7 +879,7 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
         />
       )}
       {showBookshelf &&
-        (libraryBooks.some((book) => !book.deletedAt) ? (
+        (hasAnyBooks ? (
           <div aria-label={_('Your Bookshelf')} className='flex min-h-0 flex-grow flex-col'>
             <div
               ref={containerRef}
@@ -963,7 +894,7 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
             >
               <DropIndicator />
               <Bookshelf
-                libraryBooks={libraryBooks}
+                libraryBooks={libraryBooks.length > 0 ? libraryBooks : demoBooks}
                 isSelectMode={isSelectMode}
                 isSelectAll={isSelectAll}
                 isSelectNone={isSelectNone}
