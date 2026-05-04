@@ -825,7 +825,8 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
         />
         <progress
           aria-label={_('Library Sync Progress')}
-          aria-hidden={isSyncing ? 'false' : 'true'}\n          className={clsx(
+          aria-hidden={isSyncing ? 'false' : 'true'}
+          className={clsx(
             'progress progress-success absolute bottom-0 left-0 right-0 h-1 translate-y-[2px] transition-opacity duration-200 sm:translate-y-[4px]',
             isSyncing ? 'opacity-100' : 'opacity-0',
           )}
