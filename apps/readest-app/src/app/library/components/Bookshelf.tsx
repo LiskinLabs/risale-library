@@ -3,7 +3,7 @@ import * as React from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { PiPlus } from 'react-icons/pi';
-import { Book, BooksGroup, ReadingStatus } from '@/types/book';
+import { Book, ReadingStatus } from '@/types/book';
 import {
   LibraryCoverFitType,
   LibraryGroupByType,
