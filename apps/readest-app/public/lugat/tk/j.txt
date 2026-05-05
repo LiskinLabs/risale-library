@@ -1,0 +1,10 @@
+﻿jehri tarykat=Sesini eşitdirip açyk-aýdyň zikir edýän tarykat ýoly.
+jelaly=Allanyň deňsiz-taýsyz, haýykdyryjy beýikligi bilen baglanyşykly.
+jelaly sypatlar=Allanyň beýikligini bildirýän sypatlar.
+jelil=Mertebesi belent bolmak, beýik, uly, beýiklik eýesi Alla.
+jelili-jemil=Soňsuz gözelligiň we beýikligiň eýesi Alla (j.j).
+jemaly=Allanyň deňsiz-taýsyz gözelligi bilen baglanyşykly.
+jemil=Owadan, göze, hakyky gözelligiň eýesi bolan Alla (j.j).
+jemili-züljelal=Soňsuz beýikligiň we çäksiz gözelligiň eýesi Alla (j.j).
+jewşenul-kebir=«Beýik sowut» diýmek. Muhammet (aleýhyssalatu wessalam) pygambere wahyý bolup gelen, özünde Allanyň atlaryny jemleýän deňsiz-taýsyz mynajat. 
+jewwady-mutlak=Çäksiz jomart bolan Alla (j.j).

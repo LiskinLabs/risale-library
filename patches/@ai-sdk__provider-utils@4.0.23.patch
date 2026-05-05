@@ -1,0 +1,17 @@
+diff --git a/src/to-json-schema/zod3-to-json-schema/parsers/string.ts b/src/to-json-schema/zod3-to-json-schema/parsers/string.ts
+index 9cc298da8ab4b80b2e0625739ff028228c8ef4b9..27601afef1c1f893cb38e20b31f70f0a40c9bc17 100644
+--- a/src/to-json-schema/zod3-to-json-schema/parsers/string.ts
++++ b/src/to-json-schema/zod3-to-json-schema/parsers/string.ts
+@@ -388,10 +388,10 @@ function stringifyRegExpWithFlags(regex: RegExp, refs: Refs): string {
+
+     if (flags.m) {
+       if (source[i] === '^') {
+-        pattern += `(^|(?<=[\r\n]))`;
++        pattern += `(^|[\r\n])`;
+         continue;
+       } else if (source[i] === '$') {
+-        pattern += `($|(?=[\r\n]))`;
++        pattern += `($|[\r\n])`;
+         continue;
+       }
+     }
