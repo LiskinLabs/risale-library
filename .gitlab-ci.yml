@@ -8,7 +8,6 @@ stages:
 variables:
   PNPM_HOME: /root/.local/share/pnpm
   PNPM_STORE: /root/.local/share/pnpm/store
-  GIT_SUBMODULE_STRATEGY: recursive
 
 cache:
   key: ${CI_COMMIT_REF_SLUG}
@@ -21,10 +20,19 @@ before_script:
   - corepack prepare pnpm@10.33.0 --activate
   - pnpm config set store-dir $PNPM_STORE
 
+# Init only the submodules needed for web build.
+# GIT_SUBMODULE_STRATEGY is NOT set because some submodules have
+# nested dependencies that fail on GitLab shared runners.
+.init-submodules: &init-submodules
+  - git submodule sync --recursive
+  - git submodule update --init --recursive --depth 1 packages/foliate-js packages/simplecc-wasm packages/qcms packages/tauri packages/tauri-plugins packages/js-mdict apps/readest-app/.claude/skills/gstack || true
+  - git submodule update --init --recursive --depth 1 || true
+
 install:
   stage: install
   script:
-    - pnpm install --frozen-lockfile
+    - *init-submodules
+    - pnpm install --no-frozen-lockfile
   artifacts:
     paths:
       - node_modules/
@@ -35,6 +43,7 @@ build-web:
   stage: build
   needs: [install]
   script:
+    - *init-submodules
     - cd apps/readest-app
     - echo "NEXT_PUBLIC_APP_PLATFORM=web" > .env.web
     - touch .env.local
