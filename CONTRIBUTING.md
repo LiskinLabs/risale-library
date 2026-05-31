@@ -1,104 +1,95 @@
-# Contribution Guidelines
+# Руководство по внесению вклада
 
-When contributing to `Readest`, whether on GitHub or in other community spaces:
+При участии в разработке Risale Digital Library:
 
-- Be respectful, civil, and open-minded.
-- Before opening a new pull request, try searching through the [issue tracker](https://github.com/readest/readest/issues) for known issues or fixes.
-- If you want to make code changes based on your personal opinion(s), make sure you open an issue first describing the changes you want to make, and open a pull request only when your suggestions get approved by maintainers.
+- Будьте уважительны, вежливы и открыты к диалогу.
+- Перед созданием нового pull request проверьте [существующие issues](https://github.com/LiskinLabs/risale-library/issues) на наличие известных проблем или исправлений.
+- Если вы хотите внести изменения на основе личных предпочтений, сначала откройте issue с описанием предлагаемых изменений и создавайте pull request только после одобрения мейнтейнерами.
 
-## How to Contribute
+## Как внести вклад
 
-### Prerequisites
+### Начало работы
 
-In order to not waste your time implementing a change that has already been declined, or is generally not needed, start by [opening an issue](https://github.com/readest/readest/issues/new/choose) describing the problem you would like to solve.
+Чтобы не тратить время на реализацию изменений, которые уже были отклонены или не требуются, начните с [создания issue](https://github.com/LiskinLabs/risale-library/issues/new/choose) с описанием проблемы, которую вы хотите решить.
 
-For the best experience to build Readest for yourself, use a recent version of Node.js and Rust. Refer to the [Tauri documentation](https://v2.tauri.app/start/prerequisites/) for details on setting up the development environment prerequisites on different platforms.
+Для сборки Risale Digital Library вам понадобятся последние версии Node.js и Rust. Подробные инструкции по настройке окружения для разных платформ доступны в [документации Tauri](https://v2.tauri.app/start/prerequisites/).
 
-Basically you need to install or update the following development tools:
+Необходимые инструменты разработки:
 
-- **Node.js** and **pnpm** for Next.js development
-- **Rust** and **Cargo** for Tauri development
+- **Node.js** и **pnpm** для разработки Next.js
+- **Rust** и **Cargo** для разработки Tauri
 
 ```bash
-nvm install v22
-nvm use v22
+nvm install v24
+nvm use v24
 npm install -g pnpm
 rustup update
 ```
 
-### Getting Started
+### Быстрый старт
 
-To get started with Readest, follow these steps to clone and build the project.
-
-#### 1. Clone the Repository
+#### 1. Клонирование репозитория
 
 ```bash
-git clone https://github.com/readest/readest.git
-cd readest
+git clone https://github.com/LiskinLabs/risale-library.git
+cd risale-library
 git submodule update --init --recursive
 ```
 
-#### 2. Install Dependencies
+#### 2. Установка зависимостей
 
 ```bash
-# might need to rerun this when code is updated
 pnpm install
-# copy vendors dist libs to public directory
-pnpm --filter @readest/readest-app setup-vendors
+pnpm --filter @LiskinLabs/app setup-vendors
 ```
 
-#### 3. Verify Dependencies Installation
-
-To confirm that all dependencies are correctly installed, run the following command:
+#### 3. Проверка установки
 
 ```bash
 pnpm tauri info
 ```
 
-This command will display information about the installed Tauri dependencies and configuration on your platform. Note that the output may vary depending on the operating system and environment setup. Please review the output specific to your platform for any potential issues.
+Для Windows требуется "Build Tools for Visual Studio 2022" (или старшая редакция Visual Studio) с компонентом "Desktop development with C++". Для ARM64 дополнительно нужны "VS 2022 C++ ARM64 build tools" и "C++ Clang Compiler for Windows".
 
-For Windows targets, “Build Tools for Visual Studio 2022” (or a higher edition of Visual Studio) and the “Desktop development with C++” workflow must be installed. For Windows ARM64 targets, the “VS 2022 C++ ARM64 build tools” and "C++ Clang Compiler for Windows" components must be installed. And make sure `clang` can be found in the path by adding `C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\Llvm\x64\bin` for example in the environment variable `Path`.
-
-#### 4. Build for Development
+#### 4. Сборка для разработки
 
 ```bash
 pnpm tauri dev
 ```
 
-#### 5. Build for Production
+#### 5. Production сборка
 
 ```bash
 pnpm tauri build
 ```
 
-Now you're all setup and can start implementing your changes.
+### Внесение изменений
 
-### Implement your changes
+Этот проект — монорепозиторий. Код основного приложения находится в `apps/readest-app/`. Полезные команды для разработки только фронтенда:
 
-This project is a monorepo. The code for the `readest-app` is in the `apps/readest-app` directory. Here are some useful scripts for developing the frontend only without compiling Tauri:
+| Команда | Описание |
+|---|---|
+| `pnpm dev-web` | Запуск dev-сервера для Web версии |
+| `pnpm build-web` | Сборка Web версии |
 
-| Command          | Description                                        |
-| ---------------- | -------------------------------------------------- |
-| `pnpm dev-web`   | Starts the development server for the web app only |
-| `pnpm build-web` | Builds the web app                                 |
-
-Recommended Visual Studio Code plugins for development:
+Рекомендуемые расширения VS Code:
 
 - JavaScript and TypeScript Nightly (ms-vscode.vscode-typescript-next)
-- VS Code ESLint extension (dbaeumer.vscode-eslint)
-- Prettier - Code formatter (esbenp.prettier-vscode)
-- rust-analyzer (rust-lang.rust-analyzer) (for Tauri development only)
+- Biome — Code formatter and linter (biomejs.biome)
+- rust-analyzer (rust-lang.rust-analyzer) (только для Tauri)
 
-### When you're done
+### Перед отправкой изменений
 
-Check that your code follows the project's style guidelines by running:
+Проверьте, что ваш код соответствует стилю проекта:
 
 ```bash
-pnpm build
+pnpm format:check
+pnpm lint
+pnpm test
 ```
 
-Please also make a manual, functional test of your changes. When all that's done, it's time to file a pull request to upstream and fill out the title and body appropriately.
+Также выполните ручное функциональное тестирование ваших изменений. После этого создайте pull request с информативным заголовком и описанием.
 
-## Credits
+---
 
-This documented was inspired by the contributing guidelines for [cloudflare/wrangler2](https://github.com/cloudflare/wrangler2/blob/main/CONTRIBUTING.md).
+*Этот документ вдохновлён руководством [cloudflare/wrangler2](https://github.com/cloudflare/wrangler2/blob/main/CONTRIBUTING.md).*

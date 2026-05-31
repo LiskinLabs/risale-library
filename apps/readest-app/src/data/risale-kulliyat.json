@@ -1,0 +1,112 @@
+{
+  "tr": [
+    {
+      "id": "sozler",
+      "title": "Sözler",
+      "author": "Bediüzzaman Said Nursi",
+      "path": "/books/risale-i-nur/tr/sozler.epub",
+      "cover": "/books/covers/sozler-tr.png"
+    },
+    {
+      "id": "mektubat",
+      "title": "Mektubat",
+      "author": "Bediüzzaman Said Nursi",
+      "path": "/books/risale-i-nur/tr/mektubat.epub",
+      "cover": "/books/covers/mektubat-tr.png"
+    },
+    {
+      "id": "lemalar",
+      "title": "Lem'alar",
+      "author": "Bediüzzaman Said Nursi",
+      "path": "/books/risale-i-nur/tr/lemalar.epub",
+      "cover": "/books/covers/lemalar-tr.png"
+    },
+    {
+      "id": "sualar",
+      "title": "Şualar",
+      "author": "Bediüzzaman Said Nursi",
+      "path": "/books/risale-i-nur/tr/sualar.epub",
+      "cover": "/books/covers/sualar-tr.png"
+    },
+    {
+      "id": "asa-yi-musa",
+      "title": "Asa-yı Musa",
+      "author": "Bediüzzaman Said Nursi",
+      "path": "/books/risale-i-nur/tr/asa-yi-musa.epub",
+      "cover": "/books/covers/asa-yi-musa-tr.png"
+    },
+    {
+      "id": "barla-lahikasi",
+      "title": "Barla Lahikası",
+      "author": "Bediüzzaman Said Nursi",
+      "path": "/books/risale-i-nur/tr/barla-lahikasi.epub",
+      "cover": "/books/covers/barla-lahikasi-tr.png"
+    },
+    {
+      "id": "kastamonu-lahikasi",
+      "title": "Kastamonu Lahikası",
+      "author": "Bediüzzaman Said Nursi",
+      "path": "/books/risale-i-nur/tr/kastamonu-lahikasi.epub",
+      "cover": "/books/covers/kastamonu-lahikasi-tr.png"
+    },
+    {
+      "id": "emirdag-lahikasi-1",
+      "title": "Emirdağ Lahikası 1",
+      "author": "Bediüzzaman Said Nursi",
+      "path": "/books/risale-i-nur/tr/emirdag-lahikasi-1.epub",
+      "cover": "/books/covers/emirdag-lahikasi-1-tr.png"
+    },
+    {
+      "id": "emirdag-lahikasi-2",
+      "title": "Emirdağ Lahikası 2",
+      "author": "Bediüzzaman Said Nursi",
+      "path": "/books/risale-i-nur/tr/emirdag-lahikasi-2.epub",
+      "cover": "/books/covers/emirdag-lahikasi-2-tr.png"
+    },
+    {
+      "id": "sikke-i-tasdik",
+      "title": "Sikke-i Tasdik-i Gaybi",
+      "author": "Bediüzzaman Said Nursi",
+      "path": "/books/risale-i-nur/tr/sikke-i-tasdik.epub",
+      "cover": "/books/covers/sikke-i-tasdik-tr.png"
+    },
+    {
+      "id": "mesnevi-i-nuriye",
+      "title": "Mesnevi-i Nuriye",
+      "author": "Bediüzzaman Said Nursi",
+      "path": "/books/risale-i-nur/tr/mesnevi-i-nuriye.epub",
+      "cover": "/books/covers/mesnevi-i-nuriye-tr.png"
+    },
+    {
+      "id": "isharat-ul-icaz",
+      "title": "İşarat-ül İ'caz",
+      "author": "Bediüzzaman Said Nursi",
+      "path": "/books/risale-i-nur/tr/isharat-ul-icaz.epub",
+      "cover": "/books/covers/isharat-ul-icaz-tr.png"
+    },
+    {
+      "id": "muhakemat",
+      "title": "Muhakemat",
+      "author": "Bediüzzaman Said Nursi",
+      "path": "/books/risale-i-nur/tr/muhakemat.epub",
+      "cover": "/books/covers/muhakemat-tr.png"
+    },
+    {
+      "id": "tarihce-i-hayat",
+      "title": "Tarihçe-i Hayat",
+      "author": "Bediüzzaman Said Nursi",
+      "path": "/books/risale-i-nur/tr/tarihce-i-hayat.epub",
+      "cover": "/books/covers/tarihce-i-hayat-tr.png"
+    }
+  ],
+  "kucuk": [
+    {
+      "id": "kucuk-kitaplar",
+      "title": "Küçük Kitaplar (Külliyat)",
+      "author": "Bediüzzaman Said Nursi",
+      "path": "/books/risale-i-nur/tr/kucuk-kitaplar.epub",
+      "cover": "/books/covers/kucuk-kitaplar-tr.png"
+    }
+  ],
+  "ru": []
+}

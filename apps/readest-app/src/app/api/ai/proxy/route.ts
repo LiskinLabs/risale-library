@@ -1,44 +1,190 @@
 import { NextResponse } from 'next/server';
 
+/**
+ * Server-side AI proxy — forwards requests to external AI providers using
+ * server-side API keys when configured. This keeps keys out of the client
+ * bundle and IndexedDB, and avoids sending them in request bodies.
+ *
+ * Supported endpoints:
+ * - /api/ai/proxy/openai  → https://api.openai.com/v1
+ * - /api/ai/proxy/deepseek → https://api.deepseek.com/v1
+ * - /api/ai/proxy/gemini   → https://generativelanguage.googleapis.com/v1beta
+ * - /api/ai/proxy/custom   → any OpenAI-compatible endpoint (passed in body)
+ *
+ * Server-side env vars (set in .env or .env.local):
+ * - OPENAI_API_KEY
+ * - DEEPSEEK_API_KEY
+ * - GEMINI_API_KEY
+ * - OPENROUTER_API_KEY
+ * - AI_GATEWAY_API_KEY
+ *
+ * If a server-side key is configured, the proxy uses it and ignores the
+ * client-supplied key. If no server key is set, it falls back to the
+ * `apiKey` field in the request body (current client-side behavior).
+ *
+ * Body format (OpenAI-compatible endpoints):
+ * {
+ *   endpoint: string,     // full base URL, used when provider is 'custom'
+ *   model: string,
+ *   messages: [...],
+ *   stream?: boolean,
+ *   apiKey?: string,      // client key fallback
+ *   ...other OpenAI params
+ * }
+ */
+
 const PROVIDER_KEYS: Record<string, string | undefined> = {
-  openai: process.env['OPENAI_API_KEY'], deepseek: process.env['DEEPSEEK_API_KEY'],
-  gemini: process.env['GEMINI_API_KEY'], openrouter: process.env['OPENROUTER_API_KEY'],
+  openai: process.env['OPENAI_API_KEY'],
+  deepseek: process.env['DEEPSEEK_API_KEY'],
+  gemini: process.env['GEMINI_API_KEY'],
+  openrouter: process.env['OPENROUTER_API_KEY'],
   'ai-gateway': process.env['AI_GATEWAY_API_KEY'],
 };
-const PROVIDER_BASE_URLS: Record<string, string> = {
-  openai: 'https://api.openai.com/v1', deepseek: 'https://api.deepseek.com/v1',
-  openrouter: 'https://openrouter.ai/api/v1', gemini: 'https://generativelanguage.googleapis.com/v1beta',
-};
-const BLOCKED_HOSTS = [/^169\.254\./, /^127\./, /^localhost$/i, /^10\./, /^172\.(1[6-9]|2\d|3[01])\./, /^192\.168\./, /^0\.0\.0\.0$/, /^::1$/i, /^fc00:/i, /^fe80:/i, /^metadata\.google\.internal$/i];
 
-function isSafe(url: string): boolean {
-  try { const u = new URL(url); if (u.protocol !== 'https:') return false;
-    for (const p of BLOCKED_HOSTS) if (p.test(u.hostname)) return false; return true; }
-  catch { return false; }
+const PROVIDER_BASE_URLS: Record<string, string> = {
+  openai: 'https://api.openai.com/v1',
+  deepseek: 'https://api.deepseek.com/v1',
+  openrouter: 'https://openrouter.ai/api/v1',
+  gemini: 'https://generativelanguage.googleapis.com/v1beta',
+};
+
+// Blocklist of host patterns that must never be proxied to.
+// Covers cloud metadata endpoints, loopback, link-local, and private ranges.
+const BLOCKED_HOST_PATTERNS: RegExp[] = [
+  /^169\.254\./, // link-local (AWS/GCP/Azure IMDS)
+  /^127\./, // loopback
+  /^localhost$/i,
+  /^10\./, // private class A
+  /^172\.(1[6-9]|2\d|3[01])\./, // private class B
+  /^192\.168\./, // private class C
+  /^0\.0\.0\.0$/,
+  /^::1$/i, // IPv6 loopback
+  /^fc00:/i, // IPv6 unique local
+  /^fe80:/i, // IPv6 link-local
+  /^metadata\.google\.internal$/i, // GCP IMDS
+];
+
+function isEndpointSafe(endpoint: string): boolean {
+  try {
+    const url = new URL(endpoint);
+    // Must be HTTPS for external endpoints
+    if (url.protocol !== 'https:') {
+      return false;
+    }
+    const host = url.hostname.toLowerCase();
+    for (const pattern of BLOCKED_HOST_PATTERNS) {
+      if (pattern.test(host)) {
+        return false;
+      }
+    }
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 export async function POST(req: Request): Promise<Response> {
   try {
-    const { provider, endpoint, model, messages, stream = false, apiKey: clientKey, ...rest } = await req.json();
-    if (!messages || !Array.isArray(messages)) return NextResponse.json({ error: 'Messages array required' }, { status: 400 });
+    const body = await req.json();
+    const {
+      provider,
+      endpoint,
+      model,
+      messages,
+      stream = false,
+      apiKey: clientKey,
+      ...rest
+    } = body;
 
-    let baseUrl: string; let useServerKey = false;
-    if (provider && PROVIDER_BASE_URLS[provider]) { baseUrl = PROVIDER_BASE_URLS[provider]!; useServerKey = true; }
-    else if (endpoint) { if (!isSafe(endpoint)) return NextResponse.json({ error: 'Unsafe endpoint' }, { status: 400 }); baseUrl = endpoint.replace(/\/+$/, ''); }
-    else return NextResponse.json({ error: 'provider or endpoint required' }, { status: 400 });
+    if (!messages || !Array.isArray(messages)) {
+      return NextResponse.json({ error: 'Messages array required' }, { status: 400 });
+    }
 
-    const apiKey = useServerKey ? (provider ? PROVIDER_KEYS[provider] : undefined) || clientKey : clientKey;
-    if (!apiKey) return NextResponse.json({ error: 'No API key' }, { status: 401 });
+    // Resolve the base URL
+    let baseUrl: string;
+    let useServerKey = false;
 
-    const r = await fetch(`${baseUrl}/chat/completions`, {
-      method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${apiKey}` },
-      body: JSON.stringify({ model, messages, stream, ...rest }), redirect: 'manual',
+    if (provider && PROVIDER_BASE_URLS[provider]) {
+      // Known provider with hardcoded URL — safe to use server key
+      baseUrl = PROVIDER_BASE_URLS[provider]!;
+      useServerKey = true;
+    } else if (endpoint) {
+      // Custom endpoint — validate strictly, never use server key
+      if (!isEndpointSafe(endpoint)) {
+        return NextResponse.json(
+          { error: 'Invalid or unsafe endpoint URL. Use HTTPS and avoid internal addresses.' },
+          { status: 400 },
+        );
+      }
+      baseUrl = endpoint.replace(/\/+$/, '');
+      useServerKey = false;
+    } else {
+      return NextResponse.json(
+        { error: 'Either "provider" or "endpoint" is required.' },
+        { status: 400 },
+      );
+    }
+
+    // Resolve the API key: only use server-side key for known providers
+    const apiKey = useServerKey
+      ? (provider ? PROVIDER_KEYS[provider] : undefined) || clientKey
+      : clientKey;
+
+    if (!apiKey) {
+      return NextResponse.json(
+        {
+          error: useServerKey
+            ? `No API key configured for provider "${provider}". Set the server-side environment variable or provide an API key in settings.`
+            : 'No API key provided. Configure a provider or supply an API key in settings.',
+        },
+        { status: 401 },
+      );
+    }
+
+    const url = `${baseUrl}/chat/completions`;
+
+    const upstreamResponse = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        model,
+        messages,
+        stream,
+        ...rest,
+      }),
+      redirect: 'manual',
     });
 
-    if (stream && r.ok) return new Response(r.body, { status: r.status, headers: { 'Content-Type': r.headers.get('Content-Type') || 'text/event-stream', 'Cache-Control': 'no-cache', Connection: 'keep-alive' } });
+    // For streaming responses, pipe the stream through
+    if (stream && upstreamResponse.ok) {
+      return new Response(upstreamResponse.body, {
+        status: upstreamResponse.status,
+        headers: {
+          'Content-Type': upstreamResponse.headers.get('Content-Type') || 'text/event-stream',
+          'Cache-Control': 'no-cache',
+          Connection: 'keep-alive',
+        },
+      });
+    }
 
-    const data = await r.json();
-    if (!r.ok) return NextResponse.json({ error: data.error?.message || `Upstream error: ${r.status}` }, { status: r.status });
+    // For non-streaming, return the JSON response
+    const data = await upstreamResponse.json();
+
+    if (!upstreamResponse.ok) {
+      return NextResponse.json(
+        {
+          error: data.error?.message || data.error || `Upstream error: ${upstreamResponse.status}`,
+        },
+        { status: upstreamResponse.status },
+      );
+    }
+
     return NextResponse.json(data);
-  } catch (e) { return NextResponse.json({ error: `AI proxy error: ${(e as Error).message}` }, { status: 500 }); }
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    return NextResponse.json({ error: `AI proxy error: ${errorMessage}` }, { status: 500 });
+  }
 }
