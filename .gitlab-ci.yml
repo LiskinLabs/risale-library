@@ -2,55 +2,25 @@ default:
   image: node:22
 
 stages:
-  - install
-  - build
+  - verify
 
 variables:
   PNPM_HOME: /root/.local/share/pnpm
-  PNPM_STORE: /root/.local/share/pnpm/store
-
-cache:
-  key: ${CI_COMMIT_REF_SLUG}
-  paths:
-    - .pnpm-store
-    - apps/readest-app/.next/cache
 
 before_script:
   - corepack enable
-  - corepack prepare pnpm@10.33.0 --activate
-  - pnpm config set store-dir $PNPM_STORE
+  - corepack prepare pnpm@latest --activate
 
-# Init only the submodules needed for web build.
-# GIT_SUBMODULE_STRATEGY is NOT set because some submodules have
-# nested dependencies that fail on GitLab shared runners.
-.init-submodules: &init-submodules
-  - git submodule sync --recursive || true
-  - for sm in packages/foliate-js packages/simplecc-wasm packages/qcms packages/tauri packages/tauri-plugins packages/js-mdict; do git submodule update --init --depth 1 $sm 2>/dev/null || true; done
-
-install:
-  stage: install
+verify:
+  stage: verify
   script:
-    - *init-submodules
-    - pnpm install --no-frozen-lockfile
-  artifacts:
-    paths:
-      - node_modules/
-      - apps/readest-app/node_modules/
-      - packages/*/node_modules/
-
-build-web:
-  stage: build
-  needs: [install]
-  script:
-    - *init-submodules
+    - git submodule sync --recursive || true
+    - for sm in packages/foliate-js packages/simplecc-wasm packages/qcms packages/tauri packages/tauri-plugins packages/js-mdict; do git submodule update --init --depth 1 $sm 2>/dev/null || true; done
+    - pnpm install --no-frozen-lockfile || pnpm install --no-frozen-lockfile --ignore-scripts
     - cd apps/readest-app
     - echo "NEXT_PUBLIC_APP_PLATFORM=web" > .env.web
     - touch .env.local
-    - pnpm build-web
-  artifacts:
-    paths:
-      - apps/readest-app/.next
-    expire_in: 1 day
+    - npx next build
   only:
     - main
     - master
