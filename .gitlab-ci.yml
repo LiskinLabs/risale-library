@@ -1,0 +1,65 @@
+default:
+  image: node:22
+
+stages:
+  - install
+  - build
+  - deploy
+
+variables:
+  PNPM_HOME: /root/.local/share/pnpm
+  PNPM_STORE: /root/.local/share/pnpm/store
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - .pnpm-store
+    - apps/readest-app/.next/cache
+    - apps/readest-app/node_modules
+
+before_script:
+  - corepack enable
+  - corepack prepare pnpm@10.33.0 --activate
+  - pnpm config set store-dir $PNPM_STORE
+
+install:
+  stage: install
+  script:
+    - pnpm install --frozen-lockfile
+  artifacts:
+    paths:
+      - node_modules/
+      - apps/readest-app/node_modules/
+      - packages/*/node_modules/
+
+build-web:
+  stage: build
+  needs: [install]
+  script:
+    - cd apps/readest-app
+    - cp .env.web.example .env.web 2>/dev/null || echo "NEXT_PUBLIC_APP_PLATFORM=web" > .env.web
+    - cp .env.local.example .env.local 2>/dev/null || touch .env.local
+    - pnpm build-web
+  artifacts:
+    paths:
+      - apps/readest-app/.next
+    expire_in: 1 day
+  only:
+    - main
+    - master
+
+# Build Docker image and push to GitLab Container Registry
+docker-build:
+  stage: deploy
+  needs: [build-web]
+  image: docker:latest
+  services:
+    - docker:dind
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+  script:
+    - docker build -t $CI_REGISTRY_IMAGE:latest .
+    - docker push $CI_REGISTRY_IMAGE:latest
+  only:
+    - main
+    - master
