@@ -10,6 +10,8 @@ export const GATEWAY_MODELS = {
   QWEN_3_235B: 'alibaba/qwen-3-235b',
 } as const;
 
+export const DEEPSEEK_MODELS = { V3: 'deepseek-chat', R1: 'deepseek-reasoner' } as const;
+
 export const MODEL_PRICING: Record<string, { input: string; output: string }> = {
   [GATEWAY_MODELS.GEMINI_FLASH_LITE]: { input: '0.1', output: '0.4' },
   [GATEWAY_MODELS.GPT_5_NANO]: { input: '0.05', output: '0.4' },
@@ -29,6 +31,19 @@ export const DEFAULT_AI_SETTINGS: AISettings = {
 
   aiGatewayModel: 'google/gemini-2.5-flash-lite',
   aiGatewayEmbeddingModel: 'openai/text-embedding-3-small',
+
+  openrouterBaseUrl: 'https://openrouter.ai/api/v1',
+  openrouterModel: '',
+  openrouterEmbeddingModel: '',
+
+  geminiApiKey: '',
+  geminiModel: 'gemini-2.5-flash',
+
+  deepseekApiKey: '',
+  deepseekModel: 'deepseek-chat',
+  deepseekEmbeddingModel: '',
+
+  embeddingProvider: 'auto' as const,
 
   spoilerProtection: true,
   maxContextChunks: 10,

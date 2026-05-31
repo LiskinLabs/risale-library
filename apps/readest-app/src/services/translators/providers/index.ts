@@ -1,18 +1,17 @@
+import { useSettingsStore } from '@/store/settingsStore';
 import { TranslationProvider } from '../types';
 import { deeplProvider } from './deepl';
 import { azureProvider } from './azure';
 import { googleProvider } from './google';
 import { yandexProvider } from './yandex';
+import { geminiProvider } from './gemini';
+import { aiProvider } from './ai';
 
 function createTranslator<T extends string>(
   name: T,
   implementation: TranslationProvider,
 ): TranslationProvider & { name: T } {
-  if (name !== implementation.name) {
-    throw Error(
-      `Translator name "${name}" does not match implementation name "${implementation.name}"`,
-    );
-  }
+  if (name !== implementation.name) throw Error(`Translator name "${name}" does not match implementation name "${implementation.name}"`);
   return implementation as TranslationProvider & { name: T };
 }
 
@@ -20,63 +19,42 @@ const deeplTranslator = createTranslator('deepl', deeplProvider);
 const azureTranslator = createTranslator('azure', azureProvider);
 const googleTranslator = createTranslator('google', googleProvider);
 const yandexTranslator = createTranslator('yandex', yandexProvider);
+const geminiTranslator = createTranslator('gemini', geminiProvider);
+const aiTranslator = createTranslator('ai', aiProvider);
 
-const availableTranslators = [
-  deeplTranslator,
-  azureTranslator,
-  googleTranslator,
-  yandexTranslator,
-  // Add more translators here
-];
+const availableTranslators = [deeplTranslator, azureTranslator, googleTranslator, yandexTranslator, geminiTranslator, aiTranslator];
 
 export type TranslatorName = (typeof availableTranslators)[number]['name'];
+export const getTranslator = (name: TranslatorName): TranslationProvider | undefined => availableTranslators.find((t) => t.name === name);
+export const getTranslators = (): TranslationProvider[] => availableTranslators;
 
-export const getTranslator = (name: TranslatorName): TranslationProvider | undefined => {
-  return availableTranslators.find((translator) => translator.name === name);
-};
+function isAiProviderConfigured(): boolean {
+  const { settings } = useSettingsStore.getState();
+  const ai = settings?.aiSettings;
+  if (!ai?.enabled) return false;
+  switch (ai.provider) {
+    case 'ollama': return true;
+    case 'ai-gateway': return !!(ai.aiGatewayApiKey || process.env['AI_GATEWAY_API_KEY']);
+    case 'openrouter': return !!(ai.openrouterApiKey || process.env['OPENROUTER_API_KEY']);
+    case 'gemini': return !!(ai.geminiApiKey || process.env['GEMINI_API_KEY']);
+    case 'deepseek': return !!(ai.deepseekApiKey || process.env['DEEPSEEK_API_KEY']);
+    default: return false;
+  }
+}
 
-export const getTranslators = (): TranslationProvider[] => {
-  return availableTranslators;
-};
-
-/**
- * Single source of truth for "can this provider actually be used right now?".
- * Used by auto-selection / fallback logic in `useTranslator`, the settings
- * panel, and the translator popup. Disabled providers (e.g. temporarily down
- * upstream services) are still returned from `getTranslators()` so the UI can
- * render them greyed out, but this predicate excludes them so they can never
- * be chosen or fallen back to.
- */
-export const isTranslatorAvailable = (
-  translator: TranslationProvider,
-  hasToken: boolean,
-): boolean => {
-  if (translator.disabled) return false;
-  if (translator.quotaExceeded) return false;
+export const isTranslatorAvailable = (translator: TranslationProvider, hasToken: boolean): boolean => {
+  if (translator.disabled || translator.quotaExceeded) return false;
   if (translator.authRequired && !hasToken) return false;
+  if (translator.name === 'gemini') { const { settings } = useSettingsStore.getState(); if (!settings.aiSettings?.geminiApiKey) return false; }
+  if (translator.name === 'ai') { if (!isAiProviderConfigured()) return false; }
   return true;
 };
 
-/**
- * Builds the user-facing dropdown label for a provider, appending a short
- * status suffix when the provider is unavailable. Kept next to
- * `isTranslatorAvailable` so the two stay in sync when a new unavailability
- * reason is added. The `_` translation function is passed in so this module
- * stays free of React imports.
- */
-export const getTranslatorDisplayLabel = (
-  translator: TranslationProvider,
-  hasToken: boolean,
-  _: (key: string) => string,
-): string => {
-  if (translator.disabled) {
-    return `${translator.label} (${_('Unavailable')})`;
-  }
-  if (translator.authRequired && !hasToken) {
-    return `${translator.label} (${_('Login Required')})`;
-  }
-  if (translator.quotaExceeded) {
-    return `${translator.label} (${_('Quota Exceeded')})`;
-  }
+export const getTranslatorDisplayLabel = (translator: TranslationProvider, hasToken: boolean, _: (key: string) => string): string => {
+  if (translator.disabled) return `${translator.label} (${_('Unavailable')})`;
+  if (translator.authRequired && !hasToken) return `${translator.label} (${_('Login Required')})`;
+  if (translator.quotaExceeded) return `${translator.label} (${_('Quota Exceeded')})`;
+  if (translator.name === 'gemini') { const { settings } = useSettingsStore.getState(); if (!settings.aiSettings?.geminiApiKey) return `${translator.label} (${_('API Key Required')})`; }
+  if (translator.name === 'ai') { if (!isAiProviderConfigured()) { const { settings } = useSettingsStore.getState(); const p = settings?.aiSettings?.provider ?? 'ollama'; return `${translator.label} [${p}] (${_('API Key Required')})`; } }
   return translator.label;
 };
