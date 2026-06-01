@@ -1,0 +1,6 @@
+{
+  "buildCommand": "npx dotenv -e .env.web -- next build",
+  "outputDirectory": ".next",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "framework": "nextjs"
+}

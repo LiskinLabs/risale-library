@@ -1,0 +1,39 @@
+# Dependencies
+node_modules
+.pnpm-store
+
+# Git
+.git
+.gitmodules
+
+# Tauri desktop (keep plugin guest-js for TypeScript)
+apps/readest-app/src-tauri/*.rs
+apps/readest-app/src-tauri/**/*.rs
+apps/readest-app/src-tauri/target
+apps/readest-app/src-tauri/gen
+apps/readest-app/src-tauri/icons
+apps/readest-app/src-tauri/tauri.*.conf.json
+
+# Rust build artifacts
+target
+
+# KOReader plugin (Lua, not needed for web)
+apps/readest.koplugin
+
+# Test files
+**/__tests__
+**/*.test.ts
+**/*.test.tsx
+**/*.spec.ts
+
+# Dev tools
+.husky
+.claude
+.agents
+
+# IDE
+.vscode
+.idea
+
+# Build artifacts
+*.tsbuildinfo
