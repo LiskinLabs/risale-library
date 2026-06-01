@@ -152,13 +152,25 @@ const indexedDBFileSystem: FileSystem = {
       content = await content.arrayBuffer();
     }
     return new Promise<void>((resolve, reject) => {
-      const transaction = db.transaction('files', 'readwrite');
-      const store = transaction.objectStore('files');
+      try {
+        const transaction = db.transaction('files', 'readwrite');
+        const store = transaction.objectStore('files');
 
-      store.put({ path: fp, content });
+        store.put({ path: fp, content });
 
-      transaction.oncomplete = () => resolve();
-      transaction.onerror = () => reject(transaction.error);
+        transaction.oncomplete = () => resolve();
+        transaction.onerror = () => {
+          const error = transaction.error || new Error('Unknown IndexedDB transaction error');
+          console.error(`IndexedDB writeFile error for ${fp}:`, error);
+          reject(error);
+        };
+        transaction.onabort = () => {
+          reject(new Error(`IndexedDB transaction aborted for ${fp}`));
+        };
+      } catch (e) {
+        console.error(`IndexedDB transaction creation failed for ${fp}:`, e);
+        reject(e instanceof Error ? e : new Error(String(e)));
+      }
     });
   },
   async removeFile(path: string, base: BaseDir) {
@@ -166,13 +178,20 @@ const indexedDBFileSystem: FileSystem = {
     const db = await openIndexedDB();
 
     return new Promise<void>((resolve, reject) => {
-      const transaction = db.transaction('files', 'readwrite');
-      const store = transaction.objectStore('files');
+      try {
+        const transaction = db.transaction('files', 'readwrite');
+        const store = transaction.objectStore('files');
 
-      store.delete(fp);
+        store.delete(fp);
 
-      transaction.oncomplete = () => resolve();
-      transaction.onerror = () => reject(transaction.error);
+        transaction.oncomplete = () => resolve();
+        transaction.onerror = () => {
+          const error = transaction.error || new Error('Unknown IndexedDB delete error');
+          reject(error);
+        };
+      } catch (e) {
+        reject(e instanceof Error ? e : new Error(String(e)));
+      }
     });
   },
   async createDir(path: string, base: BaseDir) {

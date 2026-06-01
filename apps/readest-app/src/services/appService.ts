@@ -326,6 +326,7 @@ export abstract class BaseAppService implements AppService {
       replicaId,
       filename,
       dst,
+      base,
       onProgress,
     });
   }

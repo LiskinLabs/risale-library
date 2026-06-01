@@ -126,6 +126,7 @@ export async function downloadReplicaFileFromCloud(
     replicaId: string;
     filename: string;
     dst: string;
+    base: BaseDir;
     onProgress?: ProgressHandler;
   },
 ): Promise<void> {
@@ -134,6 +135,7 @@ export async function downloadReplicaFileFromCloud(
     appService,
     cfp,
     dst: opts.dst,
+    base: opts.base,
     onProgress: opts.onProgress,
   });
 }
@@ -208,20 +210,19 @@ export async function uploadBook(
 
 export async function downloadCloudFile(
   appService: AppService,
-  localBooksDir: string,
+  _localBooksDir: string,
   lfp: string,
   cfp: string,
   onProgress: ProgressHandler,
 ): Promise<void> {
   console.log('Downloading file:', cfp, 'to', lfp);
-  const dstPath = `${localBooksDir}/${lfp}`;
-  await downloadFile({ appService, cfp, dst: dstPath, onProgress });
+  await downloadFile({ appService, cfp, dst: lfp, base: 'Books', onProgress });
 }
 
 export async function downloadBookCovers(
   appService: AppService,
   fs: FileSystem,
-  localBooksDir: string,
+  _localBooksDir: string,
   books: Book[],
 ): Promise<void> {
   const booksLfps = new Map(
@@ -245,9 +246,14 @@ export async function downloadBookCovers(
   await Promise.all(
     downloadUrls.map(async (file) => {
       try {
-        const dst = `${localBooksDir}/${file.lfp}`;
         if (!file.downloadUrl) return;
-        await downloadFile({ appService, dst, cfp: file.cfp, url: file.downloadUrl });
+        await downloadFile({
+          appService,
+          dst: file.lfp,
+          base: 'Books',
+          cfp: file.cfp,
+          url: file.downloadUrl,
+        });
         const book = booksLfps.get(file.lfp);
         if (book && !book.coverDownloadedAt) {
           book.coverDownloadedAt = Date.now();

@@ -93,14 +93,19 @@ async function processFileKeys(
 
   if (missingFileKeys.length > 0) {
     const fallbackCandidates = missingFileKeys
-      .filter((key) => key.includes('Readest/Book'))
       .map((key) => {
+        // Book paths are structured as: <userId>/<DataSubDir>/Books/<hash>/<filename>
+        // We want to extract the hash and extension to find any matching record for this book.
         const parts = key.split('/');
-        if (parts.length === 5) {
-          const bookHash = parts[3]!;
-          const filename = parts[4]!;
-          const fileExtension = filename.split('.').pop() || '';
-          return { originalKey: key, bookHash, fileExtension };
+        if (parts.length >= 4) {
+          // Find the segment after 'Books'
+          const booksIdx = parts.indexOf('Books');
+          if (booksIdx > 0 && parts.length > booksIdx + 1) {
+            const bookHash = parts[booksIdx + 1]!;
+            const filename = parts[parts.length - 1]!;
+            const fileExtension = filename.split('.').pop() || '';
+            return { originalKey: key, bookHash, fileExtension };
+          }
         }
         return null;
       })
@@ -109,6 +114,8 @@ async function processFileKeys(
     if (fallbackCandidates.length > 0) {
       const bookHashes = [...new Set(fallbackCandidates.map((c) => c.bookHash))];
 
+      // Query for ANY file record matching these book hashes for this user.
+      // This will catch records stored under the old 'Readest' prefix or any other previous prefix.
       const { data: fallbackRecords, error: fallbackError } = await supabase
         .from('files')
         .select('user_id, file_key, book_hash')
