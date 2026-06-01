@@ -26,7 +26,7 @@ jobs:
     strategy:
       fail-fast: false
     env:
-      RELEASE_R2_BUCKET: risale-library-releases
+      RELEASE_R2_BUCKET: risale-ai-studio-releases
       RELEASE_R2_ACCOUNT_ID: ${{ secrets.RELEASE_R2_ACCOUNT_ID }}
       RELEASE_R2_ACCESS_KEY_ID: ${{ secrets.RELEASE_R2_ACCESS_KEY_ID }}
       RELEASE_R2_SECRET_ACCESS_KEY: ${{ secrets.RELEASE_R2_SECRET_ACCESS_KEY }}
@@ -34,7 +34,7 @@ jobs:
     steps:
       - name: Download release assets
         run: |
-          gh release download "${{ inputs.tag }}" --repo risale-foundation/risale-library --dir ./release-assets
+          gh release download "${{ inputs.tag }}" --repo risale-foundation/risale-ai-studio --dir ./release-assets
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -57,7 +57,7 @@ jobs:
 
       - name: Modify latest.json download URLs
         run: |
-          GITHUB_BASE_URL="https://github.com/risale-foundation/risale-library/releases/download"
+          GITHUB_BASE_URL="https://github.com/risale-foundation/risale-ai-studio/releases/download"
           RISALE_BASE_URL="https://download.risale.foundation/releases"
           sed -i "s#${GITHUB_BASE_URL}#${RISALE_BASE_URL}#g" ./release-assets/latest.json
 

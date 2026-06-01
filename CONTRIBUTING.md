@@ -1,18 +1,18 @@
 # Руководство по внесению вклада
 
-При участии в разработке Risale Digital Library:
+При участии в разработке Risale AI Studio:
 
 - Будьте уважительны, вежливы и открыты к диалогу.
-- Перед созданием нового pull request проверьте [существующие issues](https://github.com/LiskinLabs/risale-library/issues) на наличие известных проблем или исправлений.
+- Перед созданием нового pull request проверьте [существующие issues](https://github.com/LiskinLabs/risale-ai-studio/issues) на наличие известных проблем или исправлений.
 - Если вы хотите внести изменения на основе личных предпочтений, сначала откройте issue с описанием предлагаемых изменений и создавайте pull request только после одобрения мейнтейнерами.
 
 ## Как внести вклад
 
 ### Начало работы
 
-Чтобы не тратить время на реализацию изменений, которые уже были отклонены или не требуются, начните с [создания issue](https://github.com/LiskinLabs/risale-library/issues/new/choose) с описанием проблемы, которую вы хотите решить.
+Чтобы не тратить время на реализацию изменений, которые уже были отклонены или не требуются, начните с [создания issue](https://github.com/LiskinLabs/risale-ai-studio/issues/new/choose) с описанием проблемы, которую вы хотите решить.
 
-Для сборки Risale Digital Library вам понадобятся последние версии Node.js и Rust. Подробные инструкции по настройке окружения для разных платформ доступны в [документации Tauri](https://v2.tauri.app/start/prerequisites/).
+Для сборки Risale AI Studio вам понадобятся последние версии Node.js и Rust. Подробные инструкции по настройке окружения для разных платформ доступны в [документации Tauri](https://v2.tauri.app/start/prerequisites/).
 
 Необходимые инструменты разработки:
 
@@ -31,7 +31,7 @@ rustup update
 #### 1. Клонирование репозитория
 
 ```bash
-git clone https://github.com/LiskinLabs/risale-library.git
+git clone https://github.com/LiskinLabs/risale-ai-studio.git
 cd risale-library
 git submodule update --init --recursive
 ```

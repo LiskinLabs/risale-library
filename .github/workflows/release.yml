@@ -277,7 +277,7 @@ jobs:
           # ("Not Found") into latest.json and clobbering the release asset with
           # invalid JSON, which then breaks tauri-action's updater merge on every
           # subsequent build.
-          if ! curl -fsSL https://github.com/risale-foundation/risale-library/releases/latest/download/latest.json -o latest.json; then
+          if ! curl -fsSL https://github.com/risale-foundation/risale-ai-studio/releases/latest/download/latest.json -o latest.json; then
             echo "::error::Failed to download existing latest.json; aborting to avoid clobbering the release asset."
             exit 1
           fi
@@ -287,8 +287,8 @@ jobs:
           fi
 
           version=${{ needs.get-release.outputs.release_version }}
-          universial_apk_url="https://github.com/risale-foundation/risale-library/releases/download/${{ needs.get-release.outputs.release_tag }}/RisaleLibrary_${version}_universal.apk"
-          arm64_apk_url="https://github.com/risale-foundation/risale-library/releases/download/${{ needs.get-release.outputs.release_tag }}/RisaleLibrary_${version}_arm64.apk"
+          universial_apk_url="https://github.com/risale-foundation/risale-ai-studio/releases/download/${{ needs.get-release.outputs.release_tag }}/RisaleLibrary_${version}_universal.apk"
+          arm64_apk_url="https://github.com/risale-foundation/risale-ai-studio/releases/download/${{ needs.get-release.outputs.release_tag }}/RisaleLibrary_${version}_arm64.apk"
 
           universial_sig=$(cat RisaleLibrary_${version}_universal.apk.sig)
           arm64_sig=$(cat RisaleLibrary_${version}_arm64.apk.sig)
@@ -368,7 +368,7 @@ jobs:
             exit 1
           fi
 
-          exe_file="target/${{ matrix.config.rust_target }}/release/risale-foundation.exe"
+          exe_file="target/${{ matrix.config.rust_target }}/release/risale-ai-studio.exe"
           # Browsers on Windows won't download zip files that contain exe files
           # so upload the exe files instead. This is totally stupid.
           # powershell.exe -Command "Compress-Archive -Path $exe_file -DestinationPath $bin_file -Force"
@@ -394,7 +394,7 @@ jobs:
           # ("Not Found") into latest.json and clobbering the release asset with
           # invalid JSON, which then breaks tauri-action's updater merge on every
           # subsequent build.
-          if ! curl -fsSL https://github.com/risale-foundation/risale-library/releases/latest/download/latest.json -o latest.json; then
+          if ! curl -fsSL https://github.com/risale-foundation/risale-ai-studio/releases/latest/download/latest.json -o latest.json; then
             echo "::error::Failed to download existing latest.json; aborting to avoid clobbering the release asset."
             exit 1
           fi
@@ -417,7 +417,7 @@ jobs:
             exit 1
           fi
 
-          portable_url="https://github.com/risale-foundation/risale-library/releases/download/${{ needs.get-release.outputs.release_tag }}/$bin_file"
+          portable_url="https://github.com/risale-foundation/risale-ai-studio/releases/download/${{ needs.get-release.outputs.release_tag }}/$bin_file"
           portable_sig=$(cat $bin_file.sig)
 
           jq --arg url "$portable_url" \

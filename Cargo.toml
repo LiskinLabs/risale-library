@@ -29,10 +29,10 @@ nix = "0.20.2"
 glib = "0.20.0"
 
 [workspace.package]
-authors = ["The Risale Foundation"]
-homepage = "https://github.com/LiskinLabs/risale-library"
+authors = ["Risale AI Studio"]
+homepage = "https://github.com/LiskinLabs/risale-ai-studio"
 license = "AGPL-3.0"
-repository = "https://github.com/LiskinLabs/risale-library"
+repository = "https://github.com/LiskinLabs/risale-ai-studio"
 categories = []
 edition = "2021"
 rust-version = "1.77.2"

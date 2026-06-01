@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <id>com.risale.foundation</id>
+  <id>com.risale-ai.studio</id>
 
-  <name>The Risale Foundation</name>
+  <name>The Risale AI Studio</name>
   <summary>Digital ecosystem for the Risale-i Nur Studies</summary>
 
   <description>
-    <p>The Risale Foundation is a comprehensive digital ecosystem designed for studying the Risale-i Nur collection. It offers deep textual analysis, bilingual reading, and advanced study tools.</p>
+    <p>The Risale AI Studio is a comprehensive digital ecosystem designed for studying the Risale-i Nur collection. It offers deep textual analysis, bilingual reading, and advanced study tools.</p>
     <p>Built as a specialized platform, it leverages modern technologies to provide a smooth, cross-platform experience across macOS, Windows, Linux, Android, and iOS.</p>
-    <p>Whether you are a scholar or a curious reader, The Risale Foundation adapts to your needs with powerful features for deep, thoughtful study.</p>
+    <p>Whether you are a scholar or a curious reader, The Risale AI Studio adapts to your needs with powerful features for deep, thoughtful study.</p>
     <p>Key features include:</p>
     <ul>
       <li>Built-in Risale-i Nur Library: Complete collection available by default.</li>
@@ -39,7 +39,7 @@
   <url type="donation">https://github.com/sponsors/LiskinLabs</url>
   <url type="vcs-browser">https://github.com/LiskinLabs/LiskinLabs</url>
 
-  <launchable type="desktop-id">com.risale.foundation.desktop</launchable>
+  <launchable type="desktop-id">com.risale-ai.studio.desktop</launchable>
 
   <releases>
     <release version="0.11.2" date="2026-05-31">
@@ -215,8 +215,8 @@
   <metadata_license>FSFAP</metadata_license>
   <project_license>AGPL-3.0-or-later</project_license>
 
-  <developer id="com.risale.foundation">
-    <name>Risale Foundation</name>
+  <developer id="com.risale-ai.studio">
+    <name>Risale AI Studio</name>
   </developer>
 
   <screenshots>

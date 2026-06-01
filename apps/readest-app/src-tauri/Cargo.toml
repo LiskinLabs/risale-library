@@ -1,8 +1,8 @@
 [package]
-name = "RisaleFoundation"
+name = "RisaleAiStudio"
 version = "0.1.0"
 description = "Digital ecosystem for the Risale-i Nur Studies"
-authors = ["The Risale Foundation Team"]
+authors = ["The Risale AI Studio Team"]
 license = ""
 repository = ""
 edition = "2021"
@@ -11,7 +11,7 @@ rust-version = "1.77.2"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [lib]
-name = "risalelib"
+name = "risaleailib"
 crate-type = ["staticlib", "cdylib", "lib"]
 
 [features]

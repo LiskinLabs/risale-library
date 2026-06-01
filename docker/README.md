@@ -4,7 +4,7 @@
 
 | Сервис | Образ | Описание |
 |---|---|---|
-| **client** | `ghcr.io/LiskinLabs/risale-library` | Risale Digital Library фронтенд |
+| **client** | `ghcr.io/LiskinLabs/risale-ai-studio` | Risale Digital Library фронтенд |
 | **db** | `supabase/postgres` | psql база данных с расширениями supabase |
 | **kong** | `kong:2.8.1` | API gateway для маршрутизации запросов к сервисам supabase |
 | **auth** | `supabase/gotrue:v2.185.0` | Сервис авторизации (email, JWT) |
@@ -16,7 +16,7 @@
 
 | Порт | Сервис |
 |---|---|
-| `3000` | Risale Library |
+| `3000` | Risale AI Studio |
 | `8000` | Kong API gateway |
 | `9000` | MinIO S3 API |
 | `9001` | MinIO консоль |
@@ -49,13 +49,13 @@ cd docker
 docker compose up -d
 ```
 
-Это загрузит `${RISALE_IMAGE}` (по умолчанию: `ghcr.io/LiskinLabs/risale-library:latest`) вместо локальной сборки.
+Это загрузит `${RISALE_IMAGE}` (по умолчанию: `ghcr.io/LiskinLabs/risale-ai-studio:latest`) вместо локальной сборки.
 Веб-клиент читает `SUPABASE_PUBLIC_URL`, `SUPABASE_ANON_KEY`, `API_BASE_URL`, `OBJECT_STORAGE_TYPE`, `STORAGE_FIXED_QUOTA` и `TRANSLATION_FIXED_QUOTA` из переменных окружения контейнера.
 
 Если вы предпочитаете Docker Hub, задайте `RISALE_IMAGE` в `docker/.env`:
 
 ```env
-RISALE_IMAGE=docker.io/your-dockerhub-username/risale-library:latest
+RISALE_IMAGE=docker.io/your-dockerhub-username/risale-ai-studio:latest
 ```
 
 Доступные теги:
@@ -78,7 +78,7 @@ docker compose -f compose.yaml -f compose.build.yaml up --build -d
 
 ### 3. Доступ
 
-- Risale Library: `http://localhost:3000`
+- Risale AI Studio: `http://localhost:3000`
 - MinIO консоль: `http://localhost:9001` (логин: `MINIO_ROOT_USER` / `MINIO_ROOT_PASSWORD`)
 
 ### Hot Reload (разработка)
@@ -114,7 +114,7 @@ docker compose down -v
 docker build \
   --target production-stage \
   --build-arg NEXT_PUBLIC_APP_PLATFORM=web \
-  -t risale-library-client \
+  -t risale-ai-studio-client \
   .
 ```
 
@@ -131,12 +131,12 @@ docker run -p 3000:3000 \
   -e S3_ENDPOINT=http://host.docker.internal:9000 \
   -e S3_PUBLIC_ENDPOINT=http://localhost:9000 \
   -e S3_REGION=us-east-1 \
-  -e S3_BUCKET_NAME=risale-files \
+  -e S3_BUCKET_NAME=risale-ai-studio-files \
   -e S3_ACCESS_KEY_ID=<minio-user> \
   -e S3_SECRET_ACCESS_KEY=<minio-password> \
   -e STORAGE_FIXED_QUOTA=1073741824 \
   -e TRANSLATION_FIXED_QUOTA=50000 \
-  risale-library-client
+  risale-ai-studio-client
 ```
 
 На Linux, если Docker не разрешает `host.docker.internal`, замените его на IP хоста или запустите с:

@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>📚 Risale Digital Library</h1>
+  <h1>📚 Risale AI Studio</h1>
   <br>
 
 **Кроссплатформенная библиотека для глубокого изучения Рисале-и Нур**
@@ -7,7 +7,7 @@
 [![AGPL-3.0](https://img.shields.io/badge/license-AGPL--3.0-blue.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows%20%7C%20Linux%20%7C%20iOS%20%7C%20Android%20%7C%20Web-lightgrey)]()
 
-Risale Digital Library — это open-source платформа для чтения и изучения исламских текстов, созданная специально для работы с коллекцией Рисале-и Нур. Приложение объединяет мощный движок чтения электронных книг с инструментами глубокого анализа текста и AI-ассистентом.
+Risale AI Studio — это open-source платформа для чтения и изучения исламских текстов, созданная специально для работы с коллекцией Рисале-и Нур. Приложение объединяет мощный движок чтения электронных книг с инструментами глубокого анализа текста и AI-ассистентом.
 
 Платформа работает на **macOS, Windows, Linux, Android, iOS и Web** с синхронизацией прогресса, заметок и библиотеки между устройствами.
 
@@ -141,7 +141,7 @@ rustup update
 
 ```bash
 # 1. Клонирование репозитория
-git clone https://github.com/LiskinLabs/risale-library.git
+git clone https://github.com/LiskinLabs/risale-ai-studio.git
 cd risale-library
 git submodule update --init --recursive
 
@@ -237,4 +237,4 @@ docker compose up -d
 
 ---
 
-*The Risale Foundation — цифровая экосистема для изучения Рисале-и Нур.*
+*The Risale AI Studio — цифровая экосистема для изучения Рисале-и Нур.*
