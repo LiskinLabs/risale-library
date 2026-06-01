@@ -1,8 +1,7 @@
 {
   "framework": "nextjs",
-  "rootDirectory": "apps/readest-app",
   "installCommand": "pnpm install --no-frozen-lockfile",
-  "buildCommand": "echo 'NEXT_PUBLIC_APP_PLATFORM=web' > apps/readest-app/.env.web && touch apps/readest-app/.env.local && cd apps/readest-app && npx next build",
+  "buildCommand": "cd apps/readest-app && echo 'NEXT_PUBLIC_APP_PLATFORM=web' > .env.web && touch .env.local && npx next build",
   "outputDirectory": "apps/readest-app/.next",
   "build": {
     "env": {

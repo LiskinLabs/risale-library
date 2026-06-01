@@ -36,13 +36,31 @@ const nextConfig = {
     config.resolve.alias = {
       ...config.resolve.alias,
       nunjucks: 'nunjucks/browser/nunjucks.js',
+      ...(appPlatform === 'web' ? {
+        'tauri-plugin-turso': false,
+        'tauri-plugin-turso-api': false,
+        '@tauri-apps/plugin-http': false,
+      } : {}),
       ...(appPlatform !== 'web' ? { '@tursodatabase/database-wasm': false } : {}),
+    };
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      ...(appPlatform === 'web' ? {
+        fs: false,
+        path: false,
+        os: false,
+      } : {}),
     };
     return config;
   },
   turbopack: {
     resolveAlias: {
       nunjucks: 'nunjucks/browser/nunjucks.js',
+      ...(appPlatform === 'web' ? {
+        'tauri-plugin-turso': './src/utils/stub.ts',
+        'tauri-plugin-turso-api': './src/utils/stub.ts',
+        '@tauri-apps/plugin-http': './src/utils/stub.ts',
+      } : {}),
       ...(appPlatform !== 'web' ? { '@tursodatabase/database-wasm': './src/utils/stub.ts' } : {}),
     },
   },
