@@ -112,7 +112,7 @@ Stay tuned for continuous improvements and updates! Contributions and suggestion
 - macOS / iOS / iPadOS : Search and install **Risale AI Studio** on the [App Store][link-appstore], _also_ available on TestFlight for beta test (send your Apple ID to <readestapp@gmail.com> to request access).
 - Windows / Linux / Android: Visit and download **Risale AI Studio** at [https://risale-ai-studio.com][link-website] or the [Releases on GitHub][link-gh-releases].
 - Linux users can also install [Risale AI Studio on Flathub][link-flathub].
-- Web: Visit and use **Risale AI Studio for Web** at [https://web.risale-ai-studio.com][link-web-readest].
+- Web: Visit and use **Risale AI Studio for Web** at [https://web.risale-ai-studio.com][link-web-readest] or [https://risale-ai-studio.vercel.app][link-vercel].
 
 ## Requirements
 
@@ -350,6 +350,7 @@ We would also like to thank the [Web Chinese Fonts Plan](https://chinese-font.ne
 [link-website]: https://risale-ai-studio.com?utm_source=github&utm_medium=referral&utm_campaign=readme
 [link-flathub]: https://flathub.org/en/apps/com.liskinlabs.risale-ai-studio
 [link-web-readest]: https://web.risale-ai-studio.com
+[link-vercel]: https://risale-ai-studio.vercel.app
 [link-gh-releases]: https://github.com/LiskinLabs/risale-ai-studio/releases
 [link-gh-commits]: https://github.com/LiskinLabs/risale-ai-studio/commits/main
 [link-gh-pulse]: https://github.com/LiskinLabs/risale-ai-studio/pulse
