@@ -12,8 +12,18 @@ vi.mock('@/utils/event', () => ({
 }));
 
 vi.mock('@/utils/access', () => ({
-  ...vi.importActual('@/utils/access'),
   getAccessToken: vi.fn<() => Promise<string | null>>().mockResolvedValue('test-token'),
+  getSubscriptionPlan: () => 'free',
+  getUserProfilePlan: () => 'free',
+  getStoragePlanData: () => ({ plan: 'free', usage: 0, quota: 5 * 1024 * 1024 * 1024 }),
+  getTranslationPlanData: () => ({ plan: 'free', usage: 0, quota: 5000 }),
+  getDailyTranslationPlanData: () => ({ plan: 'free', quota: 5000 }),
+  STORAGE_QUOTA_GRACE_BYTES: 10 * 1024 * 1024,
+  validateUserAndToken: async () => ({}),
+  getUserID: async () => 'test-user-id',
+  isEmailInPlan: () => false,
+  EMAIL_IN_PLANS: [],
+  getTranslationQuota: () => 5000,
 }));
 
 // After the module-level mock declarations, import the SUT
@@ -105,7 +115,6 @@ const translationFn = (key: string, params?: Record<string, string | number>) =>
 };
 
 beforeEach(() => {
-  vi.useFakeTimers();
   resetTransferStore();
   resetTransferManager();
   vi.clearAllMocks();
@@ -116,6 +125,7 @@ beforeEach(() => {
 
 afterEach(() => {
   vi.restoreAllMocks();
+  vi.useRealTimers();
 });
 
 // ── Tests ────────────────────────────────────────────────────────────
@@ -516,12 +526,15 @@ describe('TransferManager', () => {
         translationFn,
       );
 
+      // Drain the fire-and-forget processQueue from initialize()
+      await Promise.resolve();
+      await Promise.resolve();
+
       const id = transferManager.queueUpload(book)!;
 
-      // Flush microtasks to let processQueue start, then advance timers
-      await Promise.resolve();
-      await Promise.resolve();
-      await vi.advanceTimersByTimeAsync(500);
+      // Drain the fire-and-forget processQueue from queueUpload.
+      // Multiple microtasks: getAccessToken → uploadBook → updateBook → complete
+      for (let i = 0; i < 10; i++) await Promise.resolve();
 
       expect(appService['uploadBook']).toHaveBeenCalled();
       expect(updateBook).toHaveBeenCalled();
@@ -542,9 +555,12 @@ describe('TransferManager', () => {
         translationFn,
       );
 
+      await Promise.resolve();
+      await Promise.resolve();
+
       const id = transferManager.queueDownload(book)!;
 
-      await vi.advanceTimersByTimeAsync(500);
+      for (let i = 0; i < 10; i++) await Promise.resolve();
 
       expect(appService['downloadBook']).toHaveBeenCalled();
       expect(updateBook).toHaveBeenCalled();
@@ -565,9 +581,12 @@ describe('TransferManager', () => {
         translationFn,
       );
 
+      await Promise.resolve();
+      await Promise.resolve();
+
       const id = transferManager.queueDelete(book)!;
 
-      await vi.advanceTimersByTimeAsync(500);
+      for (let i = 0; i < 10; i++) await Promise.resolve();
 
       expect(appService['deleteBook']).toHaveBeenCalled();
 
@@ -586,8 +605,13 @@ describe('TransferManager', () => {
         translationFn,
       );
 
+      // Drain init processQueue
+      await Promise.resolve();
+      await Promise.resolve();
+
       transferManager.queueUpload(book);
-      await vi.advanceTimersByTimeAsync(500);
+      // Drain queueUpload processQueue
+      for (let i = 0; i < 10; i++) await Promise.resolve();
 
       expect(eventDispatcher.dispatch).toHaveBeenCalledWith(
         'toast',
@@ -606,8 +630,15 @@ describe('TransferManager', () => {
         translationFn,
       );
 
+      // Drain init processQueue
+      await Promise.resolve();
+      await Promise.resolve();
+
       transferManager.queueDelete(book, 10, true);
-      await vi.advanceTimersByTimeAsync(500);
+      // Drain queueDelete processQueue
+      await Promise.resolve();
+      await Promise.resolve();
+      await Promise.resolve();
 
       // The toast dispatch should not include an 'info' toast
       const calls = (eventDispatcher.dispatch as Mock).mock.calls;
@@ -618,6 +649,7 @@ describe('TransferManager', () => {
     });
 
     test('failed transfer with retries schedules retry', async () => {
+      vi.useFakeTimers({ toFake: ['setTimeout', 'setInterval'] });
       const book = makeBook({ hash: 'h1', title: 'Retry Book' });
       const appService = makeAppService();
       (appService['uploadBook'] as Mock).mockRejectedValue(new Error('Network fail'));
@@ -630,11 +662,18 @@ describe('TransferManager', () => {
       );
 
       const id = transferManager.queueUpload(book)!;
-      await vi.advanceTimersByTimeAsync(500);
+      const mgr = transferManager as unknown as Record<string, unknown>;
+      // First attempt fails → schedules setTimeout retry
+      await (mgr['processQueue'] as () => Promise<void>).call(mgr);
+      // Advance past RETRY_DELAY_BASE_MS (2000ms) to trigger the retry timer
+      await vi.advanceTimersByTimeAsync(3000);
+      // Flush the retry
+      await (mgr['processQueue'] as () => Promise<void>).call(mgr);
 
       // After first failure, retryCount should be incremented and status back to pending
       const transfer = useTransferStore.getState().transfers[id];
       expect(transfer!.retryCount).toBeGreaterThanOrEqual(1);
+      vi.useRealTimers();
     });
 
     test('paused queue does not process transfers', async () => {
@@ -651,13 +690,15 @@ describe('TransferManager', () => {
       transferManager.pauseQueue();
       transferManager.queueUpload(book);
 
-      await vi.advanceTimersByTimeAsync(500);
+      const mgr = transferManager as unknown as Record<string, unknown>;
+      await (mgr['processQueue'] as () => Promise<void>).call(mgr);
 
       // The upload should not have been called because queue is paused
       expect(appService['uploadBook']).not.toHaveBeenCalled();
     });
 
     test('book not found in library dispatches error', async () => {
+      vi.useFakeTimers({ toFake: ['setTimeout', 'setInterval'] });
       const book = makeBook({ hash: 'not-in-lib', title: 'Missing' });
       const appService = makeAppService();
 
@@ -669,13 +710,21 @@ describe('TransferManager', () => {
       );
 
       transferManager.queueUpload(book);
-      await vi.advanceTimersByTimeAsync(10000);
+      const mgr = transferManager as unknown as Record<string, unknown>;
+      // First attempt fails (book not found) → schedules retry via setTimeout
+      await (mgr['processQueue'] as () => Promise<void>).call(mgr);
+      // Advance timers and retry for each retry attempt (maxRetries=3, delays: 2s, 4s, 8s)
+      for (const delay of [2000, 4000, 8000]) {
+        await vi.advanceTimersByTimeAsync(delay + 100);
+        await (mgr['processQueue'] as () => Promise<void>).call(mgr);
+      }
 
       // After all retries exhausted, error toast should be dispatched
       expect(eventDispatcher.dispatch).toHaveBeenCalledWith(
         'toast',
         expect.objectContaining({ type: 'error' }),
       );
+      vi.useRealTimers();
     });
   });
 
@@ -832,6 +881,10 @@ describe('TransferManager', () => {
       appService['downloadReplicaFile'] = downloadSpy;
       await transferManager.initialize(appService as never, () => [], vi.fn(), translationFn);
 
+      // Drain init processQueue
+      await Promise.resolve();
+      await Promise.resolve();
+
       transferManager.queueReplicaDownload(
         'dictionary',
         'content-hash-abc',
@@ -840,8 +893,10 @@ describe('TransferManager', () => {
         'Dictionaries',
       );
 
-      // Drain the queue.
-      await vi.runAllTimersAsync();
+      // Drain queueReplicaDownload processQueue
+      await Promise.resolve();
+      await Promise.resolve();
+      await Promise.resolve();
 
       expect(downloadSpy).toHaveBeenCalledOnce();
       // Args: (kind, replicaId, filename, lfp, base, onProgress)
