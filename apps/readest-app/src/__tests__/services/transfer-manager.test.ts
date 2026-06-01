@@ -11,6 +11,11 @@ vi.mock('@/utils/event', () => ({
   },
 }));
 
+vi.mock('@/utils/access', () => ({
+  ...vi.importActual('@/utils/access'),
+  getAccessToken: vi.fn<() => Promise<string | null>>().mockResolvedValue('test-token'),
+}));
+
 // After the module-level mock declarations, import the SUT
 import { transferManager } from '@/services/transferManager';
 import { eventDispatcher } from '@/utils/event';
@@ -100,7 +105,7 @@ const translationFn = (key: string, params?: Record<string, string | number>) =>
 };
 
 beforeEach(() => {
-  vi.useFakeTimers({ shouldAdvanceTime: true });
+  vi.useFakeTimers();
   resetTransferStore();
   resetTransferManager();
   vi.clearAllMocks();
@@ -513,7 +518,9 @@ describe('TransferManager', () => {
 
       const id = transferManager.queueUpload(book)!;
 
-      // Let the async queue processing run
+      // Flush microtasks to let processQueue start, then advance timers
+      await Promise.resolve();
+      await Promise.resolve();
       await vi.advanceTimersByTimeAsync(500);
 
       expect(appService['uploadBook']).toHaveBeenCalled();
@@ -835,8 +842,6 @@ describe('TransferManager', () => {
 
       // Drain the queue.
       await vi.runAllTimersAsync();
-      await Promise.resolve();
-      await Promise.resolve();
 
       expect(downloadSpy).toHaveBeenCalledOnce();
       // Args: (kind, replicaId, filename, lfp, base, onProgress)

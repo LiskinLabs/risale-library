@@ -33,7 +33,7 @@ const settings: WebDAVSettings = {
   password: 'secret',
   // `/` is the canonical root used by every other test; matches what
   // `normalizeRoot` would do to an unset rootPath, so the assertions
-  // below can hard-code "/Readest/books/<hash>".
+  // below can hard-code "/Risale AI Studio/books/<hash>".
   rootPath: '/',
 };
 
@@ -61,22 +61,24 @@ afterEach(() => {
 describe('deleteDirectory', () => {
   test('204 No Content resolves without throwing', async () => {
     fetchMock.mockResolvedValueOnce(buildResponse(204));
-    await expect(deleteDirectory(config, '/Readest/books/abc')).resolves.toBeUndefined();
+    await expect(deleteDirectory(config, '/Risale AI Studio/books/abc')).resolves.toBeUndefined();
   });
 
   test('200 OK resolves without throwing', async () => {
     fetchMock.mockResolvedValueOnce(buildResponse(200));
-    await expect(deleteDirectory(config, '/Readest/books/abc')).resolves.toBeUndefined();
+    await expect(deleteDirectory(config, '/Risale AI Studio/books/abc')).resolves.toBeUndefined();
   });
 
   test('404 Not Found is treated as success (already gone)', async () => {
     fetchMock.mockResolvedValueOnce(buildResponse(404));
-    await expect(deleteDirectory(config, '/Readest/books/missing')).resolves.toBeUndefined();
+    await expect(
+      deleteDirectory(config, '/Risale AI Studio/books/missing'),
+    ).resolves.toBeUndefined();
   });
 
   test('401 Unauthorized throws AUTH_FAILED', async () => {
     fetchMock.mockResolvedValueOnce(buildResponse(401));
-    await expect(deleteDirectory(config, '/Readest/books/abc')).rejects.toMatchObject({
+    await expect(deleteDirectory(config, '/Risale AI Studio/books/abc')).rejects.toMatchObject({
       code: 'AUTH_FAILED',
       status: 401,
     });
@@ -84,7 +86,7 @@ describe('deleteDirectory', () => {
 
   test('403 Forbidden throws AUTH_FAILED', async () => {
     fetchMock.mockResolvedValueOnce(buildResponse(403));
-    await expect(deleteDirectory(config, '/Readest/books/abc')).rejects.toMatchObject({
+    await expect(deleteDirectory(config, '/Risale AI Studio/books/abc')).rejects.toMatchObject({
       code: 'AUTH_FAILED',
       status: 403,
     });
@@ -92,14 +94,14 @@ describe('deleteDirectory', () => {
 
   test('500 Internal Server Error throws WebDAVRequestError with the status', async () => {
     fetchMock.mockResolvedValueOnce(buildResponse(500));
-    await expect(deleteDirectory(config, '/Readest/books/abc')).rejects.toMatchObject({
+    await expect(deleteDirectory(config, '/Risale AI Studio/books/abc')).rejects.toMatchObject({
       status: 500,
     });
   });
 
   test('fetch network failure surfaces as a NETWORK error', async () => {
     fetchMock.mockRejectedValueOnce(new TypeError('Failed to fetch'));
-    await expect(deleteDirectory(config, '/Readest/books/abc')).rejects.toMatchObject({
+    await expect(deleteDirectory(config, '/Risale AI Studio/books/abc')).rejects.toMatchObject({
       code: 'NETWORK',
     });
   });
@@ -111,10 +113,10 @@ describe('deleteDirectory', () => {
     // future refactor can't silently drop the header and still pass
     // the rest of the suite.
     fetchMock.mockResolvedValueOnce(buildResponse(204));
-    await deleteDirectory(config, '/Readest/books/abc');
+    await deleteDirectory(config, '/Risale AI Studio/books/abc');
     expect(fetchMock).toHaveBeenCalledTimes(1);
     const [url, init] = fetchMock.mock.calls[0]!;
-    expect(url).toBe('https://dav.example.com/Readest/books/abc');
+    expect(url).toBe('https://dav.example.com/Risale%20AI%20Studio/books/abc');
     expect(init?.method).toBe('DELETE');
     const headers = init?.headers as Record<string, string>;
     expect(headers['Depth']).toBe('infinity');
@@ -156,7 +158,7 @@ describe('deleteRemoteBookDir', () => {
     });
   });
 
-  test('targets the correct per-hash directory under <rootPath>/Readest/books', async () => {
+  test('targets the correct per-hash directory under <rootPath>/Risale AI Studio/books', async () => {
     // The remote layout is documented in WebDAVPaths.ts; this test
     // pins the contract so neither side can drift. A custom
     // rootPath is used to make sure buildBookDirPath honours it
@@ -165,6 +167,6 @@ describe('deleteRemoteBookDir', () => {
     fetchMock.mockResolvedValueOnce(buildResponse(204));
     await deleteRemoteBookDir({ ...settings, rootPath: '/MyDav' }, HASH);
     const [url] = fetchMock.mock.calls[0]!;
-    expect(url).toBe('https://dav.example.com/MyDav/Readest/books/abc123');
+    expect(url).toBe('https://dav.example.com/MyDav/Risale%20AI%20Studio/books/abc123');
   });
 });

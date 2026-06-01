@@ -28,23 +28,22 @@ export const useDemoBooks = () => {
 
     const userLang = getUserLang() as keyof typeof libraries;
     const fetchDemoBooks = async () => {
-      try {
-        const appService = await envConfig.getAppService();
-        const demoBooks = libraries[userLang] || (libraries.en as DemoBooks);
-        // Use allSettled so one failed fetch doesn't cancel all others
-        const results = await Promise.allSettled(
-          demoBooks.library.map((url) => appService.importBook(url, [], { saveBook: false })),
+      const appService = await envConfig.getAppService();
+      const demoBooks = libraries[userLang] || (libraries.en as DemoBooks);
+      // Use allSettled so one failed fetch doesn't cancel all others
+      const results = await Promise.allSettled(
+        demoBooks.library.map((url) =>
+          appService.importBook(url, [], { saveBook: false }).catch(() => null),
+        ),
+      );
+      const books = results
+        .filter((r) => r.status === 'fulfilled' && r.value !== null)
+        .map((r) => (r as PromiseFulfilledResult<Book>).value);
+      setBooks(books);
+      if (books.length === 0 && results.length > 0) {
+        console.warn(
+          'Demo books unavailable — CDN may not be configured. Running in offline/local mode.',
         );
-        const books = results
-          .filter((r) => r.status === 'fulfilled' && r.value !== null)
-          .map((r) => (r as PromiseFulfilledResult<Book>).value);
-        setBooks(books);
-        if (books.length === 0 && results.length > 0) {
-          console.log('Demo books unavailable — running in offline/local mode');
-        }
-      } catch (error) {
-        // Silently ignore — demo books are optional for local development
-        console.log('Demo books not available:', (error as Error).message);
       }
     };
 
