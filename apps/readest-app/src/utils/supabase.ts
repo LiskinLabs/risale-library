@@ -28,6 +28,13 @@ export const createSupabaseClient = (accessToken?: string) => {
 
 export const createSupabaseAdminClient = () => {
   const supabaseAdminKey = process.env['SUPABASE_ADMIN_KEY'] || '';
+  if (!supabaseAdminKey) {
+    console.error(
+      'WARNING: SUPABASE_ADMIN_KEY is not set. Server-side Supabase operations (storage, sharing, payments) will fail.\n' +
+        'Get the service_role key from https://supabase.com/dashboard → Project Settings → API → service_role\n' +
+        'Then add it to apps/readest-app/.env.local: SUPABASE_ADMIN_KEY=<your-key>',
+    );
+  }
   return createClient(supabaseUrl, supabaseAdminKey, {
     auth: {
       persistSession: false,

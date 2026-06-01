@@ -244,6 +244,7 @@
     "jsdom": "^28.1.0",
     "mkdirp": "^3.0.1",
     "node-env-run": "^4.0.2",
+    "pg": "^8.21.0",
     "playwright": "^1.58.2",
     "postcss": "^8.4.49",
     "postcss-cli": "^11.0.0",

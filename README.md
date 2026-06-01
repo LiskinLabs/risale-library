@@ -8,7 +8,7 @@
 [Risale AI Studio][link-website] is an open-source ebook reader designed for immersive and deep reading experiences. Built as a modern rewrite of [Foliate](https://github.com/johnfactotum/foliate), it leverages [Next.js 16](https://github.com/vercel/next.js) and [Tauri v2](https://github.com/tauri-apps/tauri) to deliver a smooth, cross-platform experience across macOS, Windows, Linux, Android, iOS, and the Web.
 
 [![Website][badge-website]][link-website]
-[![Web App][badge-web-app]][link-web-readest]
+[![Web App][badge-web-app]][link-vercel]
 [![OS][badge-platforms]][link-website]
 <br>
 [![Discord][badge-discord]][link-discord]
@@ -112,7 +112,7 @@ Stay tuned for continuous improvements and updates! Contributions and suggestion
 - macOS / iOS / iPadOS : Search and install **Risale AI Studio** on the [App Store][link-appstore], _also_ available on TestFlight for beta test (send your Apple ID to <readestapp@gmail.com> to request access).
 - Windows / Linux / Android: Visit and download **Risale AI Studio** at [https://risale-ai-studio.com][link-website] or the [Releases on GitHub][link-gh-releases].
 - Linux users can also install [Risale AI Studio on Flathub][link-flathub].
-- Web: Visit and use **Risale AI Studio for Web** at [https://web.risale-ai-studio.com][link-web-readest] or [https://risale-ai-studio.vercel.app][link-vercel].
+- Web: Visit and use **Risale AI Studio for Web** at [https://risale-ai-studio.vercel.app][link-vercel].
 
 ## Requirements
 
@@ -333,7 +333,7 @@ We would also like to thank the [Web Chinese Fonts Plan](https://chinese-font.ne
 <div align="center" style="color: gray;">Happy reading with Risale AI Studio!</div>
 
 [badge-website]: https://img.shields.io/badge/website-risale-ai-studio.com-orange
-[badge-web-app]: https://img.shields.io/badge/read%20online-web.risale-ai-studio.com-orange
+[badge-web-app]: https://img.shields.io/badge/read%20online-risale--ai--studio.vercel.app-orange
 [badge-license]: https://img.shields.io/github/license/readest/readest?color=teal
 [badge-release]: https://img.shields.io/github/release/readest/readest?color=green
 [badge-platforms]: https://img.shields.io/badge/platforms-macOS%2C%20Windows%2C%20Linux%2C%20Android%2C%20iOS%2C%20Web%2C%20PWA-green

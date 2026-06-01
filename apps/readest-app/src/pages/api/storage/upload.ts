@@ -49,6 +49,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(400).json({ error: 'Missing file info' });
     }
 
+    const supabaseAdminKey = process.env['SUPABASE_ADMIN_KEY'];
+    if (!supabaseAdminKey) {
+      console.error('SUPABASE_ADMIN_KEY is not configured — cloud storage is unavailable');
+      return res.status(503).json({
+        error:
+          'Cloud storage not configured. Set SUPABASE_ADMIN_KEY in .env.local (service_role key from Supabase dashboard).',
+      });
+    }
+
     const { usage, quota } = getStoragePlanData(token);
     if (usage + fileSize > quota + STORAGE_QUOTA_GRACE_BYTES) {
       return res.status(403).json({ error: 'Insufficient storage quota', usage });
@@ -103,7 +112,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       res.status(500).json({ error: 'Could not create presigned post' });
     }
   } catch (error) {
-    console.error(error);
+    console.error('Upload handler error:', error);
     return res.status(500).json({ error: 'Something went wrong' });
   }
 }

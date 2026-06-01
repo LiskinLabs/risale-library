@@ -33,6 +33,9 @@ const BookCover: React.FC<BookCoverProps> = memo<BookCoverProps>(
     const [imageLoaded, setImageLoaded] = useState(false);
     const [imageError, setImageError] = useState(false);
 
+    const coverSrc = book.metadata?.coverImageUrl || book.coverImageUrl;
+    const hasValidSrc = coverSrc && coverSrc.length > 0;
+
     const shouldShowSpine = showSpine && imageLoaded && !imageError;
 
     const toggleImageVisibility = (showImage: boolean) => {
@@ -74,10 +77,10 @@ const BookCover: React.FC<BookCoverProps> = memo<BookCoverProps>(
         ref={coverRef}
         className={clsx('book-cover-container relative flex h-full w-full', className)}
       >
-        {coverFit === 'crop' ? (
+        {hasValidSrc && coverFit === 'crop' ? (
           <>
             <Image
-              src={book.metadata?.coverImageUrl || book.coverImageUrl!}
+              src={coverSrc!}
               alt={book.title}
               fill={true}
               loading='lazy'
@@ -90,7 +93,7 @@ const BookCover: React.FC<BookCoverProps> = memo<BookCoverProps>(
               className={`book-spine absolute inset-0 ${shouldShowSpine ? 'visible' : 'invisible'}`}
             />
           </>
-        ) : (
+        ) : hasValidSrc ? (
           <div className={clsx('flex h-full w-full justify-start')}>
             <div
               className={clsx(
@@ -99,7 +102,7 @@ const BookCover: React.FC<BookCoverProps> = memo<BookCoverProps>(
               )}
             >
               <Image
-                src={book.metadata?.coverImageUrl || book.coverImageUrl!}
+                src={coverSrc!}
                 alt={book.title}
                 width={0}
                 height={0}
@@ -118,7 +121,7 @@ const BookCover: React.FC<BookCoverProps> = memo<BookCoverProps>(
               />
             </div>
           </div>
-        )}
+        ) : null}
 
         <div
           className={clsx(
