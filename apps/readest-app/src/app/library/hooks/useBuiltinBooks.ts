@@ -25,10 +25,14 @@ export const useBuiltinBooks = () => {
   const libraryLoaded = useLibraryStore((s) => s.libraryLoaded);
 
   useEffect(() => {
-    if (isLoading.current || !libraryLoaded) return;
-    isLoading.current = true;
+    if (!libraryLoaded) return;
 
     const importMissing = async () => {
+      // Guard against concurrent runs while keeping the ability to
+      // retry on subsequent mounts (e.g. after a failed import).
+      if (isLoading.current) return;
+      isLoading.current = true;
+
       const appService = await envConfig.getAppService();
       const newBooks: Book[] = [];
 
@@ -43,7 +47,6 @@ export const useBuiltinBooks = () => {
           console.log(`[BuiltinBooks] Importing: ${entry.title} from ${url}`);
           const book = await appService.importBook(url, [], { saveBook: true });
           if (book) {
-            // Tag as built-in
             book.builtin = true;
             newBooks.push(book);
           }
@@ -52,6 +55,7 @@ export const useBuiltinBooks = () => {
         }
       }
 
+      isLoading.current = false;
       if (newBooks.length) {
         setBooks(newBooks);
       }
@@ -59,7 +63,7 @@ export const useBuiltinBooks = () => {
 
     importMissing();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [library.length]);
+  }, [libraryLoaded, library.length]);
 
   return books;
 };
