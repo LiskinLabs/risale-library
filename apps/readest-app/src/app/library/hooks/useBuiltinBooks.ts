@@ -20,8 +20,12 @@ export const useBuiltinBooks = () => {
   const isLoading = useRef(false);
   const library = useLibraryStore((s) => s.library);
 
+  // Track whether the library store has been initialised so we run once
+  // whether the library is empty or not.
+  const libraryLoaded = useLibraryStore((s) => s.libraryLoaded);
+
   useEffect(() => {
-    if (isLoading.current || !library.length) return;
+    if (isLoading.current || !libraryLoaded) return;
     isLoading.current = true;
 
     const importMissing = async () => {
