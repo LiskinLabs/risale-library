@@ -22,22 +22,67 @@ BOOKS = [
 ]
 
 
-# HTML tags/attributes that are safe to pass through from Diyanet source.
-# Everything else is stripped. The source is trusted (official Diyanet text)
-# but we sanitize for defence-in-depth.
-_ALLOWED_TAGS = {"p", "h1", "h2", "h3", "h4", "strong", "em", "span", "br"}
-_ALLOWED_ATTRS = {"span": {"class"}, "p": {"class"}, "h1": {"class"}, "h2": {"class"}, "h3": {"class"}, "h4": {"class"}}
+# HTML tags/attributes allowed through from Diyanet source.
+# We use a proper HTML-parser-based whitelist (not regex) for safety.
+# Source is trusted official Diyanet text; this is defence-in-depth.
+_ALLOWED_TAGS = {"p", "h1", "h2", "h3", "h4", "strong", "em", "br"}
+_ALLOWED_ATTRS = {"class"}
 
 
 def sanitize_html(html: str) -> str:
-    """Strip dangerous tags/attributes from Diyanet HTML."""
-    # Remove <script>, <iframe>, event handlers, javascript: URIs
-    html = re.sub(r"<script[^>]*>.*?</script>", "", html, flags=re.DOTALL | re.I)
-    html = re.sub(r"<iframe[^>]*>.*?</iframe>", "", html, flags=re.DOTALL | re.I)
-    html = re.sub(r"\bon\w+\s*=\s*[\"'][^\"']*[\"']", "", html, flags=re.I)
-    html = re.sub(r"javascript\s*:", "blocked:", html, flags=re.I)
-    html = re.sub(r"<([^>]+)\s+on\w+\s*=\s*[^>]*>", r"<\1>", html, flags=re.I)
-    return html
+    """Strip non-whitelisted tags/attributes using a real HTML parser."""
+    from html.parser import HTMLParser
+
+    class Sanitizer(HTMLParser):
+        def __init__(self):
+            super().__init__()
+            self.result = []
+            self.skip_level = 0
+
+        def handle_starttag(self, tag, attrs):
+            if tag in ("script", "iframe", "style", "object", "embed", "applet"):
+                self.skip_level += 1
+                return
+            if self.skip_level > 0:
+                return
+            if tag in _ALLOWED_TAGS:
+                filtered = [
+                    (k, v) for k, v in attrs
+                    if k in _ALLOWED_ATTRS and "javascript" not in v.lower()
+                ]
+                if filtered:
+                    attrs_str = "".join(f' {k}="{v}"' for k, v in filtered)
+                    self.result.append(f"<{tag}{attrs_str}>")
+                else:
+                    self.result.append(f"<{tag}>")
+
+        def handle_endtag(self, tag):
+            if tag in ("script", "iframe", "style", "object", "embed", "applet"):
+                self.skip_level = max(0, self.skip_level - 1)
+                return
+            if self.skip_level > 0:
+                return
+            if tag in _ALLOWED_TAGS:
+                self.result.append(f"</{tag}>")
+
+        def handle_data(self, data):
+            if self.skip_level > 0:
+                return
+            self.result.append(data)
+
+        def handle_entityref(self, name):
+            if self.skip_level > 0:
+                return
+            self.result.append(f"&{name};")
+
+        def handle_charref(self, name):
+            if self.skip_level > 0:
+                return
+            self.result.append(f"&#{name};")
+
+    s = Sanitizer()
+    s.feed(html)
+    return "".join(s.result)
 
 
 def is_arabic_text(text: str) -> bool:
