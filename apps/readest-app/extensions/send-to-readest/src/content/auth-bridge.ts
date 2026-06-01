@@ -1,5 +1,5 @@
 /**
- * Runs on `web.readest.com` (and the dev host). Reads Readest's Supabase
+ * Runs on `web.risale-ai-studio.com` (and the dev host). Reads Readest's Supabase
  * session token out of the page's localStorage and copies it into
  * `chrome.storage.local`, so the extension popup can authenticate to
  * `/api/send/inbox` without prompting the user for credentials.

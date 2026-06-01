@@ -81,7 +81,7 @@ async function waitForOffscreenReady(): Promise<void> {
   // execution. `setTimeout` keeps the SW awake while waiting.
   for (let i = 0; i < 40; i++) {
     try {
-      const reply = (await chrome.runtime.sendMessage({ type: 'send-to-readest:ping' })) as
+      const reply = (await chrome.runtime.sendMessage({ type: 'send-to-risale-ai-studio:ping' })) as
         | { ok?: boolean }
         | undefined;
       if (reply?.ok) return;
@@ -144,7 +144,7 @@ export async function clipAndUploadViaOffscreen(opts: {
   const endpoint = await resolveUploadEndpoint();
 
   const sendPromise = chrome.runtime.sendMessage({
-    type: 'send-to-readest:clip-and-upload',
+    type: 'send-to-risale-ai-studio:clip-and-upload',
     html: opts.html,
     url: opts.url,
     token: opts.token,

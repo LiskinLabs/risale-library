@@ -1,6 +1,6 @@
 /**
  * Auth-token storage helpers. The token is captured by the `auth-bridge`
- * content script while the user is signed in at web.readest.com and read by
+ * content script while the user is signed in at web.risale-ai-studio.com and read by
  * the service worker / popup. We never store the user's password — only the
  * short-lived Supabase access token Readest hands out.
  */

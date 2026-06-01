@@ -127,9 +127,6 @@ export const useLibraryStore = create<LibraryState>((set, get) => ({
 
   updateBook: async (envConfig: EnvConfigType, book: Book) => {
     const appService = await envConfig.getAppService();
-    if (!book.coverImageUrl) {
-      book.coverImageUrl = await appService.generateCoverImageUrl(book);
-    }
     const { library, hashIndex } = get();
     const idx = hashIndex.get(book.hash);
     // Build the new library immutably — never mutate the previous-state array.
@@ -151,16 +148,22 @@ export const useLibraryStore = create<LibraryState>((set, get) => ({
   ) => {
     if (!books?.length) return;
 
-    const appService = await envConfig.getAppService();
-    await Promise.all(
-      books.map(async (book) => {
-        if (!book.coverImageUrl) {
-          book.coverImageUrl = await appService.generateCoverImageUrl(book);
-        }
-      }),
-    );
-
-    const { library, refreshGroups } = get();
+    // Hardening: if a caller (e.g. /send, the inbox drainer) hits us before
+    // `setLibrary` has populated the store, merging against the empty
+    // in-memory array would persist `books` as the *entire* library and
+    // clobber whatever is on disk. Load the real library first.
+    let { library } = get();
+    const { libraryLoaded, refreshGroups } = get();
+    if (!libraryLoaded) {
+      const appService = await envConfig.getAppService();
+      library = await appService.loadLibraryBooks();
+      set({
+        library,
+        libraryLoaded: true,
+        hashIndex: buildHashIndex(library),
+        visibleLibrary: library.filter((b) => !b.deletedAt),
+      });
+    }
 
     const newLibrary = Array.from(new Map([...library, ...books].map((b) => [b.hash, b])).values());
     set({
@@ -171,6 +174,7 @@ export const useLibraryStore = create<LibraryState>((set, get) => ({
     refreshGroups();
 
     if (!options?.skipSave) {
+      const appService = await envConfig.getAppService();
       await appService.saveLibraryBooks(newLibrary);
     }
   },

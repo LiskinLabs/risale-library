@@ -1,51 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <id>com.risale-ai.studio</id>
+  <id>com.bilingify.readest</id>
 
-  <name>The Risale AI Studio</name>
-  <summary>Digital ecosystem for the Risale-i Nur Studies</summary>
+  <name>Readest</name>
+  <summary>Modern, feature-rich ebook reader</summary>
 
   <description>
-    <p>The Risale AI Studio is a comprehensive digital ecosystem designed for studying the Risale-i Nur collection. It offers deep textual analysis, bilingual reading, and advanced study tools.</p>
-    <p>Built as a specialized platform, it leverages modern technologies to provide a smooth, cross-platform experience across macOS, Windows, Linux, Android, and iOS.</p>
-    <p>Whether you are a scholar or a curious reader, The Risale AI Studio adapts to your needs with powerful features for deep, thoughtful study.</p>
+    <p>Readest is a modern, feature-rich ebook reader designed for avid readers offering seamless cross-platform access, powerful tools, and an intuitive interface to elevate your reading experience.</p>
+    <p>Built as a modern rewrite of Foliate, Readest leverages Next.js 15 and Tauri v2 to deliver a smooth, cross-platform experience across macOS, Windows, Linux, Android, iOS, and the Web.</p>
+    <p>Whether you're analyzing complex texts, immersing yourself in stories, or exploring new ideas, Readest adapts to your needs with powerful features for deep, thoughtful reading.</p>
     <p>Key features include:</p>
     <ul>
-      <li>Built-in Risale-i Nur Library: Complete collection available by default.</li>
-      <li>Integrated Dictionary (Lugat): Instant lookups for complex terms and Ottoman vocabulary.</li>
-      <li>Multi-format support for EPUB, MOBI, PDF and more.</li>
-      <li>Parallel Reading: Study original texts and translations side-by-side.</li>
-      <li>Cross-platform synchronization of study progress, notes, and bookmarks.</li>
+      <li>Multi-format support for EPUB, MOBI, KF8 (AZW3), FB2, CBZ, TXT, and PDF (experimental).</li>
+      <li>Switch between scrolling or paginated reading modes for your preferred reading style.</li>
+      <li>Full-text search across the entire book to find relevant sections quickly.</li>
+      <li>Add highlights, bookmarks, and notes to enhance your reading experience and learning.</li>
+      <li>Easily excerpt text from books for detailed notes and analysis.</li>
+      <li>Instantly look up words and terms with built-in dictionary and Wikipedia integration.</li>
+      <li>Translate selected text instantly using DeepL for accurate translations.</li>
+      <li>Parallel Reading: Read two books or documents simultaneously in a split-screen view, perfect for researchers, language learners, and multitaskers.</li>
+      <li>Customize fonts, layout, theme mode, and theme colors for a personalized reading experience.</li>
+      <li>Cross-platform synchronization of book files, reading progress, notes, and bookmarks across all supported platforms.</li>
+      <li>Text-to-Speech functionality for a more accessible reading experience.</li>
+      <li>Organize, sort, and manage your entire ebook library with advanced library management tools.</li>
+      <li>One-click file association to quickly open files in Readest from your file browser.</li>
     </ul>
+    <p>Readest also includes custom CSS support for personalized styling, and code syntax highlighting for technical books. The application is designed to honor the legacy of deep reading while embracing modern technology for an enhanced experience.</p>
   </description>
 
   <categories>
     <category>Office</category>
     <category>Education</category>
-    <category>Religion</category>
+    <category>Literature</category>
   </categories>
 
   <keywords>
-    <keyword translate="no">risale</keyword>
-    <keyword translate="no">nur</keyword>
-    <keyword>islamic</keyword>
-    <keyword>study</keyword>
-    <keyword>library</keyword>
+    <keyword translate="no">readest</keyword>
+    <keyword>ebook</keyword>
+    <keyword>reader</keyword>
+    <keyword>epub</keyword>
+    <keyword>mobi</keyword>
+    <keyword>pdf</keyword>
+    <keyword>reading</keyword>
+    <keyword>books</keyword>
+    <keyword>annotation</keyword>
+    <keyword>highlight</keyword>
+    <keyword>notes</keyword>
+    <keyword>translation</keyword>
+    <keyword>tts</keyword>
+    <keyword>sync</keyword>
   </keywords>
 
-  <url type="homepage">https://github.com/LiskinLabs/LiskinLabs</url>
-  <url type="bugtracker">https://github.com/LiskinLabs/LiskinLabs/issues</url>
-  <url type="help">https://github.com/LiskinLabs/LiskinLabs/wiki</url>
-  <url type="donation">https://github.com/sponsors/LiskinLabs</url>
-  <url type="vcs-browser">https://github.com/LiskinLabs/LiskinLabs</url>
+  <url type="homepage">https://github.com/readest/readest</url>
+  <url type="bugtracker">https://github.com/readest/readest/issues</url>
+  <url type="help">https://github.com/readest/readest/wiki</url>
+  <url type="donation">https://github.com/sponsors/readest</url>
+  <url type="vcs-browser">https://github.com/readest/readest</url>
 
-  <launchable type="desktop-id">com.risale-ai.studio.desktop</launchable>
+  <launchable type="desktop-id">com.bilingify.readest.desktop</launchable>
 
   <releases>
     <release version="0.11.2" date="2026-05-31">
       <description>
         <ul>
-          <li>Send to Library: Clip web pages and articles into your library via the system share sheet, or by emailing them in</li>
+          <li>Send to Readest: Clip web pages and articles into your library via the system share sheet, or by emailing them in</li>
           <li>Dictionary: Look up words with your device's built-in system dictionary on macOS, iOS, and Android, plus faster MDict and StarDict imports</li>
           <li>Library: Import books from a folder with format and size filters, or read them in place from external folders without copying</li>
           <li>Reading: The reading ruler now follows individual lines, you can swipe along the edge to adjust brightness on mobile, and customize hardware-button page turning</li>
@@ -63,7 +81,7 @@
         <ul>
           <li>Dictionaries: You can now import your own StarDict and MDict dictionaries</li>
           <li>Sync: Your custom dictionaries, custom fonts, background textures and OPDS catalogs now sync across devices</li>
-          <li>KOReader Sync: Browse your full Risale Library from inside KOReader, with improved sync diagnostics</li>
+          <li>KOReader Sync: Browse your full Readest Library from inside KOReader, with improved sync diagnostics</li>
           <li>OPDS: Stream books over OPDS-PSE and optionally auto-download new titles from feeds</li>
           <li>Sharing: Create share links for books, jump directly to book via deep links in exported annotations</li>
           <li>Library: Added an optional 4-digit PIN lock at app launch to keep your library private</li>
@@ -127,7 +145,7 @@
           <li>Reading: Added current time and battery display in footer</li>
           <li>Reading: Added TTS, annotation support, pinch-to-zoom, and scroll mode for PDFs</li>
           <li>Library: Added backup/restore to a zip file and batch metadata refresh</li>
-          <li>KOReader: Added bookmark and annotation sync between KOReader and Risale Library devices</li>
+          <li>KOReader: Added bookmark and annotation sync between KOReader and Readest devices</li>
           <li>Footnotes: Added back navigation with link history and more responsive popup sizing</li>
           <li>Annotations: Added loupe display when selecting text in instant annotation mode</li>
           <li>Text-to-Speech: Fixed TTS reading position tracking in scrolled mode</li>
@@ -215,26 +233,26 @@
   <metadata_license>FSFAP</metadata_license>
   <project_license>AGPL-3.0-or-later</project_license>
 
-  <developer id="com.risale-ai.studio">
-    <name>Risale AI Studio</name>
+  <developer id="com.readest">
+    <name>Readest Team</name>
   </developer>
 
   <screenshots>
     <screenshot type="default">
-      <caption>Risale Library main interface with annotation</caption>
-      <image type="source">https://raw.githubusercontent.com/LiskinLabs/risale-library/refs/heads/main/data/screenshots/annotations.png</image>
+      <caption>Readest main interface with annotation</caption>
+      <image type="source">https://raw.githubusercontent.com/readest/readest/refs/heads/main/data/screenshots/annotations.png</image>
     </screenshot>
     <screenshot>
       <caption>Reading interface with dark mode</caption>
-      <image type="source">https://raw.githubusercontent.com/LiskinLabs/risale-library/refs/heads/main/data/screenshots/dark_mode.png</image>
+      <image type="source">https://raw.githubusercontent.com/readest/readest/refs/heads/main/data/screenshots/dark_mode.png</image>
     </screenshot>
     <screenshot>
       <caption>Reading with TTS speak out</caption>
-      <image type="source">https://raw.githubusercontent.com/LiskinLabs/risale-library/refs/heads/main/data/screenshots/tts_speak_aloud.png</image>
+      <image type="source">https://raw.githubusercontent.com/readest/readest/refs/heads/main/data/screenshots/tts_speak_aloud.png</image>
     </screenshot>
     <screenshot>
       <caption>Reading tools with Wikipedia integration</caption>
-      <image type="source">https://raw.githubusercontent.com/LiskinLabs/risale-library/refs/heads/main/data/screenshots/wikipedia_vertical.png</image>
+      <image type="source">https://raw.githubusercontent.com/readest/readest/refs/heads/main/data/screenshots/wikipedia_vertical.png</image>
     </screenshot>
   </screenshots>
 

@@ -9,7 +9,7 @@
 import type { ClipErrorCode } from '../lib/messages';
 import { translate as _ } from '../lib/i18n';
 
-const DEFAULT_API_BASE = 'https://web.readest.com';
+const DEFAULT_API_BASE = 'https://web.risale-ai-studio.com';
 const INBOX_FILE_PATH = '/api/send/inbox/file';
 
 /**
@@ -37,7 +37,7 @@ export async function resolveUploadEndpoint(): Promise<string> {
       }
     }
   } catch (err) {
-    console.warn('[send-to-readest/upload] could not read readestApiBase', err);
+    console.warn('[send-to-risale-ai-studio/upload] could not read readestApiBase', err);
   }
   return `${DEFAULT_API_BASE}${INBOX_FILE_PATH}`;
 }

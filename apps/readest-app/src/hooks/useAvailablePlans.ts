@@ -5,12 +5,12 @@ import { AvailablePlan } from '@/types/quota';
 import { stubTranslation as _ } from '@/utils/misc';
 
 const IAP_PRODUCT_IDS = [
-  'com.bilingify.readest.monthly.plus',
-  'com.bilingify.readest.monthly.pro',
-  'com.bilingify.readest.storage.1gb.purchase',
-  'com.bilingify.readest.storage.2gb.purchase',
-  'com.bilingify.readest.storage.5gb.purchase',
-  'com.bilingify.readest.storage.10gb.purchase',
+  'com.liskinlabs.risale-ai-studio.monthly.plus',
+  'com.liskinlabs.risale-ai-studio.monthly.pro',
+  'com.liskinlabs.risale-ai-studio.storage.1gb.purchase',
+  'com.liskinlabs.risale-ai-studio.storage.2gb.purchase',
+  'com.liskinlabs.risale-ai-studio.storage.5gb.purchase',
+  'com.liskinlabs.risale-ai-studio.storage.10gb.purchase',
 ];
 
 interface UseAvailablePlansParams {

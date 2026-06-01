@@ -4,7 +4,6 @@ export interface TxtConverterWorkerRequest {
     file: File;
     author?: string;
     language?: string;
-    index?: Array<{ title: string; page: string }>;
   };
 }
 

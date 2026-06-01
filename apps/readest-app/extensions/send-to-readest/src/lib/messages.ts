@@ -42,19 +42,19 @@ export type ClipErrorCode =
 
 /** popup → service worker */
 export interface ClipRequest {
-  type: 'send-to-readest:clip';
+  type: 'send-to-risale-ai-studio:clip';
   tabId: number;
 }
 
 /** service worker → popup (broadcast updates) */
 export interface ClipProgressMessage {
-  type: 'send-to-readest:progress';
+  type: 'send-to-risale-ai-studio:progress';
   progress: ClipProgress;
 }
 
 /** popup → service worker: get current state on popup (re-)open. */
 export interface StatusRequest {
-  type: 'send-to-readest:status';
+  type: 'send-to-risale-ai-studio:status';
 }
 
 export interface StatusResponse {

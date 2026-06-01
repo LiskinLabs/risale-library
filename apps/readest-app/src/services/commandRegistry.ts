@@ -1,6 +1,6 @@
 import { Fzf, FzfResultItem, byLengthAsc } from 'fzf';
 import { SettingsPanelType } from '@/components/settings/SettingsDialog';
-import { RiFontSize, RiDashboardLine, RiTranslate } from 'react-icons/ri';
+import { RiFontSize, RiDashboardLine, RiTranslate, RiShareLine } from 'react-icons/ri';
 import { VscSymbolColor } from 'react-icons/vsc';
 import { LiaHandPointerSolid } from 'react-icons/lia';
 import { IoAccessibilityOutline } from 'react-icons/io5';
@@ -154,6 +154,7 @@ const panelIcons: Record<SettingsPanelType, IconType> = {
   TTS: PiSpeakerHigh,
   Language: RiTranslate,
   AI: PiRobot,
+  Integrations: RiShareLine,
   Custom: IoAccessibilityOutline,
 };
 
@@ -484,6 +485,12 @@ const controlPanelItems = [
     section: 'Device',
   },
   {
+    id: 'settings.control.screenWakeLock',
+    labelKey: _('Keep Screen Awake'),
+    keywords: ['screen', 'wake', 'lock', 'awake', 'sleep', 'display'],
+    section: 'Device',
+  },
+  {
     id: 'settings.control.allowJavascript',
     labelKey: _('Allow JavaScript'),
     keywords: ['javascript', 'js', 'script', 'security', 'allow'],
@@ -575,6 +582,24 @@ const aiPanelItems = [
     keywords: ['gateway', 'model', 'openai', 'gpt', 'claude'],
     section: 'AI Gateway',
   },
+  {
+    id: 'settings.ai.openrouterApiKey',
+    labelKey: _('OpenRouter API Key'),
+    keywords: ['openrouter', 'api', 'key', 'token', 'secret'],
+    section: 'OpenRouter',
+  },
+  {
+    id: 'settings.ai.openrouterBaseUrl',
+    labelKey: _('OpenRouter Base URL'),
+    keywords: ['openrouter', 'base', 'url', 'endpoint', 'openai', 'compatible'],
+    section: 'OpenRouter',
+  },
+  {
+    id: 'settings.ai.openrouterModel',
+    labelKey: _('OpenRouter Model'),
+    keywords: ['openrouter', 'model', 'claude', 'gpt', 'llama', 'deepseek'],
+    section: 'OpenRouter',
+  },
 ];
 
 // custom panel items
@@ -631,12 +656,12 @@ const actionItems = [
   },
   {
     id: 'action.about',
-    labelKey: _('About Risale Digital Library'),
+    labelKey: _('About Risale AI Studio'),
     keywords: ['about', 'readest', 'version', 'info'],
   },
   {
     id: 'action.telemetry',
-    labelKey: _('Help improve Risale Digital Library'),
+    labelKey: _('Help improve Risale AI Studio'),
     keywords: ['telemetry', 'analytics', 'improve', 'statistics'],
   },
 ];

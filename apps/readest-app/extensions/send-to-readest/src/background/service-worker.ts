@@ -1,7 +1,7 @@
 /**
- * Send to Readest — background service worker. Orchestrates the clip:
+ * Send to Risale AI Studio — background service worker. Orchestrates the clip:
  *
- *   popup → SW: `send-to-readest:clip` (with tabId)
+ *   popup → SW: `send-to-risale-ai-studio:clip` (with tabId)
  *   SW: injects `content/capture.js` into the active tab. The content
  *       script opens a long-lived Port back to the SW — that keeps the
  *       SW alive through the whole capture and gives us a clear
@@ -15,7 +15,7 @@
  *       desktop / mobile `/send` URL clipping flow uses, so the EPUBs
  *       are byte-identical for the same URL.
  *   SW: POSTs the resulting EPUB to /api/send/inbox/file.
- *   SW → popup: `send-to-readest:progress` broadcasts at each phase.
+ *   SW → popup: `send-to-risale-ai-studio:progress` broadcasts at each phase.
  */
 
 import type {
@@ -31,7 +31,7 @@ import { translate as _ } from '../lib/i18n';
 import { setBadge } from './badge';
 import { clipAndUploadViaOffscreen } from './offscreen';
 
-const LOG = '[send-to-readest/sw]';
+const LOG = '[send-to-risale-ai-studio/sw]';
 
 interface State {
   inFlight: boolean;
@@ -42,7 +42,9 @@ const state: State = { inFlight: false, lastProgress: null };
 
 function broadcast(progress: ClipProgress): void {
   state.lastProgress = progress;
-  chrome.runtime.sendMessage({ type: 'send-to-readest:progress', progress }).catch(() => undefined);
+  chrome.runtime
+    .sendMessage({ type: 'send-to-risale-ai-studio:progress', progress })
+    .catch(() => undefined);
 }
 
 function emitError(code: ClipErrorCode, message: string): void {
@@ -61,7 +63,7 @@ interface PendingCapture {
   resolve: (result: CaptureResult) => void;
 }
 
-const CAPTURE_PORT_NAME = 'send-to-readest:capture';
+const CAPTURE_PORT_NAME = 'send-to-risale-ai-studio:capture';
 const CAPTURE_HARD_TIMEOUT_MS = 25_000;
 const PORT_CONNECT_GRACE_MS = 4_000;
 const pendingByTab = new Map<number, PendingCapture>();
@@ -146,7 +148,7 @@ async function runClip(tabId: number): Promise<void> {
 
     const stored = await readToken();
     if (!stored) {
-      return emitError('not-signed-in', _('Sign in at web.readest.com first'));
+      return emitError('not-signed-in', _('Sign in at web.risale-ai-studio.com first'));
     }
 
     setBadge('cap');
@@ -208,7 +210,7 @@ chrome.runtime.onMessage.addListener((message: unknown, _sender, sendResponse): 
   if (!message || typeof message !== 'object') return false;
   const m = message as { type?: string };
 
-  if (m.type === 'send-to-readest:clip') {
+  if (m.type === 'send-to-risale-ai-studio:clip') {
     const { tabId } = message as ClipRequest;
     runClip(tabId).catch((err) =>
       emitError('unknown', err instanceof Error ? err.message : _('Unknown error')),
@@ -217,7 +219,7 @@ chrome.runtime.onMessage.addListener((message: unknown, _sender, sendResponse): 
     return true;
   }
 
-  if (m.type === 'send-to-readest:status') {
+  if (m.type === 'send-to-risale-ai-studio:status') {
     void (async (): Promise<void> => {
       const token = await readToken();
       const response: StatusResponse = {

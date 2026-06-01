@@ -15,7 +15,7 @@ import type { ClipProgress, StatusResponse } from '../lib/messages';
 
 const POPUP_DOM = `
   <header>
-    <h1>Send to Readest</h1>
+    <h1>Send to Risale AI Studio</h1>
     <span id="auth-badge" class="signed-out-badge hidden">Signed out</span>
   </header>
   <section id="signed-in-view">
@@ -23,7 +23,7 @@ const POPUP_DOM = `
       <p id="page-title" class="page-title">Loading…</p>
       <p id="page-url" class="page-url"></p>
     </div>
-    <button id="send" class="primary" disabled>Send to Readest</button>
+    <button id="send" class="primary" disabled>Send to Risale AI Studio</button>
     <div id="progress" class="progress">
       <div class="progress-label" id="progress-label">Preparing…</div>
       <div class="progress-bar indeterminate"><div class="progress-bar-fill"></div></div>
@@ -32,7 +32,7 @@ const POPUP_DOM = `
   </section>
   <section id="signed-out-view" class="sign-in hidden">
     <p>Sign in to Readest to start clipping pages.</p>
-    <button id="open-readest" class="primary">Open web.readest.com</button>
+    <button id="open-readest" class="primary">Open web.risale-ai-studio.com</button>
   </section>
 `;
 
@@ -44,7 +44,7 @@ function setStatus(overrides: Partial<StatusResponse> = {}): void {
     if (
       msg &&
       typeof msg === 'object' &&
-      (msg as { type?: string }).type === 'send-to-readest:status'
+      (msg as { type?: string }).type === 'send-to-risale-ai-studio:status'
     ) {
       return {
         signedIn: true,
@@ -84,7 +84,7 @@ async function loadPopup(): Promise<void> {
 
 function pushProgress(progress: ClipProgress): void {
   if (!progressHandler) throw new Error('progress handler never registered');
-  progressHandler({ type: 'send-to-readest:progress', progress });
+  progressHandler({ type: 'send-to-risale-ai-studio:progress', progress });
 }
 
 describe('popup — initial render', () => {
@@ -187,9 +187,9 @@ describe('popup — Send button', () => {
 
     const clipCall = chromeMock.runtime.sendMessage.mock.calls.find((c) => {
       const m = c[0] as { type?: string };
-      return m?.type === 'send-to-readest:clip';
+      return m?.type === 'send-to-risale-ai-studio:clip';
     });
     expect(clipCall).toBeDefined();
-    expect(clipCall![0]).toEqual({ type: 'send-to-readest:clip', tabId: 7 });
+    expect(clipCall![0]).toEqual({ type: 'send-to-risale-ai-studio:clip', tabId: 7 });
   });
 });

@@ -28,7 +28,7 @@
       "identifier": "fs:scope-appdata-recursive",
       "allow": [
         {
-          "path": "$APPDATA/Readest/**/*"
+          "path": "$APPDATA/risale-ai-studio/**/*"
         }
       ],
       "deny": []
@@ -56,9 +56,6 @@
           "path": "$APPCACHE/**/*"
         },
         {
-          "path": "/home/runner/work/risale-library/risale-library/**/*"
-        },
-        {
           "path": "/private/var/mobile/Containers/Data/Application/**/*"
         }
       ]
@@ -70,9 +67,6 @@
           "path": "$APPCACHE/**/*"
         },
         {
-          "path": "/home/runner/work/risale-library/risale-library/**/*"
-        },
-        {
           "path": "/private/var/mobile/Containers/Data/Application/**/*"
         }
       ]
@@ -81,16 +75,19 @@
       "identifier": "fs:scope",
       "allow": [
         {
-          "path": "**/Readest"
+          "path": "**/risale-ai-studio"
         },
         {
-          "path": "**/Readest/**/*"
+          "path": "**/risale-ai-studio/**/*"
         },
         {
           "path": "**/com.github.johnfactotum.Foliate/**/*"
         },
         {
           "path": "**/last-book-cover.png"
+        },
+        {
+          "path": "$TEMP/**/*"
         }
       ]
     },
@@ -98,7 +95,7 @@
       "identifier": "http:default",
       "allow": [
         {
-          "url": "https://*.readest.com"
+          "url": "https://*.risale-ai-studio.com"
         },
         {
           "url": "https://github.com/readest/*"
@@ -141,7 +138,9 @@
     "core:window:default",
     "core:window:allow-close",
     "core:window:allow-center",
+    "core:window:allow-show",
     "core:window:allow-minimize",
+    "core:window:allow-unminimize",
     "core:window:allow-maximize",
     "core:window:allow-unmaximize",
     "core:window:allow-set-size",
@@ -177,17 +176,17 @@
         {
           "name": "start-readest",
           "cmd": "cmd",
-          "args": ["/C", "start", "", { "validator": "^.*Readest(.*)\\.exe$" }]
+          "args": ["/C", "start", "", { "validator": "^.*Risale AI Studio(.*)\\.exe$" }]
         },
         {
           "name": "chmod-appimage",
           "cmd": "chmod",
-          "args": ["+x", { "validator": "^.*Readest(.*)\\.AppImage$" }]
+          "args": ["+x", { "validator": "^.*Risale AI Studio(.*)\\.AppImage$" }]
         },
         {
           "name": "launch-appimage",
           "cmd": "setsid",
-          "args": [{ "validator": "^.*Readest(.*)\\.AppImage$" }]
+          "args": [{ "validator": "^.*Risale AI Studio(.*)\\.AppImage$" }]
         }
       ]
     },

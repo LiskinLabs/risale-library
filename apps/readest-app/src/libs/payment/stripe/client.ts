@@ -65,25 +65,15 @@ export const createStripeCheckoutSession = async (
   return response.json();
 };
 
-export const redirectToStripeCheckout = async (sessionId?: string, url?: string): Promise<void> => {
+export const redirectToStripeCheckout = async (url?: string): Promise<void> => {
   if (url) {
     if (isWebAppPlatform()) {
       window.location.href = url;
     } else if (isTauriAppPlatform()) {
       await openUrl(url);
     }
-  } else if (sessionId) {
-    const stripe = await getStripe();
-    if (!stripe) {
-      throw new Error('Stripe not loaded');
-    }
-    // biome-ignore lint/suspicious/noExplicitAny: Stripe redirectToCheckout type issues
-    const result = await (stripe as any).redirectToCheckout({ sessionId });
-    if (result.error) {
-      throw result.error;
-    }
   } else {
-    throw new Error('No sessionId or url returned from checkout API');
+    throw new Error('No checkout URL returned from the Stripe API');
   }
 };
 

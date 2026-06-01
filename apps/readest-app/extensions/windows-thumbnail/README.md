@@ -1,13 +1,13 @@
-# Windows Thumbnail Provider for Readest
+# Windows Thumbnail Provider for Risale AI Studio
 
-This crate provides Windows Explorer thumbnail support for eBook files when Readest is set as the default application.
+This crate provides Windows Explorer thumbnail support for eBook files when Risale AI Studio is set as the default application.
 
 ## Features
 
 - **Automatic Cover Extraction**: Extracts cover images from EPUB, MOBI, AZW, AZW3, FB2, CBZ, CBR files
-- **Readest Branding**: Adds a small Readest icon overlay at the bottom-right corner
+- **Risale AI Studio Branding**: Adds a small Risale AI Studio icon overlay at the bottom-right corner
 - **Smart Caching**: Caches generated thumbnails for faster subsequent loads
-- **File Association Aware**: Only shows thumbnails when Readest is the default app for the file type
+- **File Association Aware**: Only shows thumbnails when Risale AI Studio is the default app for the file type
 - **COM Integration**: Full Windows Shell extension implementation via `IThumbnailProvider`
 
 ## Supported Formats
@@ -43,7 +43,7 @@ cargo build --release --features cli
 
 ## Installation
 
-The thumbnail provider DLL is automatically registered when Readest is installed via the NSIS installer.
+The thumbnail provider DLL is automatically registered when Risale AI Studio is installed via the NSIS installer.
 
 ### Manual Registration (for development)
 
@@ -62,7 +62,7 @@ After registration, you may need to restart Windows Explorer or log out/in for c
 
 ## Usage (Development / Manual testing)
 
-For local development and testing, build the Windows DLL (or the library) from the Readest Tauri app folder and register it manually. The legacy CLI test harness used to live in the separate `packages/tauri` workspace, but the thumbnail handler implementation now lives inside Readest's Tauri app.
+For local development and testing, build the Windows DLL (or the library) from the Risale AI Studio Tauri app folder and register it manually. The legacy CLI test harness used to live in the separate `packages/tauri` workspace, but the thumbnail handler implementation now lives inside Risale AI Studio's Tauri app.
 
 Build the DLL (for Windows explorer integration):
 
@@ -86,7 +86,7 @@ regsvr32 /s /u target\release\windows_thumbnail.dll
 ie4uinit.exe -show
 ```
 
-This generates a thumbnail with the Readest overlay at the specified size.
+This generates a thumbnail with the Risale AI Studio overlay at the specified size.
 
 ## Architecture
 
@@ -99,13 +99,13 @@ This generates a thumbnail with the Readest overlay at the specified size.
 │                          │         │                             │
 │                          │         ▼                             │
 │                          │    Check File Association             │
-│                          │    (is Readest the default?)          │
+│                          │    (is Risale AI Studio the default?)          │
 │                          │         │                             │
 │                          │         ▼ (if yes)                    │
 │                          │    Extract Cover Image                │
 │                          │         │                             │
 │                          │         ▼                             │
-│                          │    Add Readest Overlay                │
+│                          │    Add Risale AI Studio Overlay                │
 │                          │         │                             │
 │                          │         ▼                             │
 │                          │    Return HBITMAP                     │
@@ -123,11 +123,11 @@ This generates a thumbnail with the Readest overlay at the specified size.
 
 1. When Windows Explorer needs a thumbnail, it queries the registered shell extension
 2. The COM DLL implements `IInitializeWithItem` to receive the file path
-3. It checks if Readest.exe is the default application for that file type using `AssocQueryStringW`
-4. If Readest is the default, it extracts the cover and generates the thumbnail
-5. If Readest is NOT the default, it returns `S_FALSE` to let Windows use other handlers
+3. It checks if Risale AI Studio.exe is the default application for that file type using `AssocQueryStringW`
+4. If Risale AI Studio is the default, it extracts the cover and generates the thumbnail
+5. If Risale AI Studio is NOT the default, it returns `S_FALSE` to let Windows use other handlers
 
-This ensures thumbnails only appear for files the user has associated with Readest.
+This ensures thumbnails only appear for files the user has associated with Risale AI Studio.
 
 ## License
 

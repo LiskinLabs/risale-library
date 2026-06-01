@@ -1,57 +1,52 @@
 import { useEffect, useRef, useState } from 'react';
-import { Book } from '@/types/book';
-import { getAssetPath } from '@/utils/assetPath';
-import { md5Fingerprint } from '@/utils/md5';
 
-interface CatalogBook {
-  title: string;
-  main: string;
-  shelf: string;
-  url: string;
-  cover: string;
+import { useEnv } from '@/context/EnvContext';
+import { Book } from '@/types/book';
+import { getUserLang } from '@/utils/misc';
+import { isWebAppPlatform } from '@/services/environment';
+
+import libraryEn from '@/data/demo/library.en.json';
+import libraryZh from '@/data/demo/library.zh.json';
+
+const libraries = {
+  en: libraryEn,
+  zh: libraryZh,
+};
+
+interface DemoBooks {
+  library: string[];
 }
 
 export const useDemoBooks = () => {
+  const { envConfig } = useEnv();
   const [books, setBooks] = useState<Book[]>([]);
-  const isLoaded = useRef(false);
+  const isLoading = useRef(false);
 
   useEffect(() => {
-    if (isLoaded.current) return;
-    isLoaded.current = true;
+    if (isLoading.current) return;
+    isLoading.current = true;
 
-    const fetchCatalog = async () => {
+    const userLang = getUserLang() as keyof typeof libraries;
+    const fetchDemoBooks = async () => {
       try {
-        const response = await fetch(getAssetPath('/catalog.json'));
-        if (!response.ok) throw new Error('Failed to fetch catalog');
-
-        const library: CatalogBook[] = await response.json();
-
-        const catalogBooks: Book[] = library.map((item) => {
-          // Use a deterministic hash based on the URL for catalog books
-          const hash = md5Fingerprint(item.url);
-
-          return {
-            hash,
-            title: item.title,
-            author: 'Said Nursi', // Default author for Risale-i Nur
-            format: 'MD',
-            url: getAssetPath(item.url),
-            coverImageUrl: getAssetPath(item.cover),
-            groupName: item.shelf,
-            createdAt: Date.now(),
-            updatedAt: Date.now(),
-            downloadedAt: Date.now(), // Treat as available since it's in public/
-          };
-        });
-
-        setBooks(catalogBooks);
+        const appService = await envConfig.getAppService();
+        const demoBooks = libraries[userLang] || (libraries.en as DemoBooks);
+        const books = await Promise.all(
+          demoBooks.library.map((url) => appService.importBook(url, [], { saveBook: false })),
+        );
+        setBooks(books.filter((book) => book !== null) as Book[]);
       } catch (error) {
-        console.error('Failed to load catalog library:', error);
+        console.error('Failed to import demo books:', error);
       }
     };
 
-    fetchCatalog();
+    const demoBooksFetchedFlag = localStorage.getItem('demoBooksFetched');
+    if (isWebAppPlatform() && !demoBooksFetchedFlag) {
+      fetchDemoBooks();
+      localStorage.setItem('demoBooksFetched', 'true');
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return { books };
+  return books;
 };

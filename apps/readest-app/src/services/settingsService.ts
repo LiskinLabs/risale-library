@@ -106,7 +106,7 @@ export async function loadSettings(ctx: Context): Promise<SystemSettings> {
     ...DEFAULT_SYSTEM_SETTINGS,
     ...(ctx.isMobile ? DEFAULT_MOBILE_SYSTEM_SETTINGS : {}),
     version: SYSTEM_SETTINGS_VERSION,
-    localBooksDir: 'C:/Users/silvestr.liskin/Desktop/risale-library/books',
+    localBooksDir: await ctx.fs.getPrefix('Books'),
     koreaderSyncDeviceId: uuidv4(),
     globalReadSettings: {
       ...DEFAULT_READSETTINGS,
@@ -146,10 +146,23 @@ export async function loadSettings(ctx: Context): Promise<SystemSettings> {
     ...settings.aiSettings,
   };
 
-  settings.localBooksDir = 'C:/Users/silvestr.liskin/Desktop/risale-library/books';
+  settings.localBooksDir = await ctx.fs.getPrefix('Books');
+
+  // Coerce stale `'wikipedia'` quick-action to `'dictionary'`. The Wikipedia
+  // annotation tool was removed; Wikipedia is now reachable as a tab inside
+  // the unified dictionary popup. Without this guard, users who had set the
+  // quick action to wikipedia would get a no-op.
+  if ((settings.globalViewSettings.annotationQuickAction as string) === 'wikipedia') {
+    settings.globalViewSettings.annotationQuickAction = 'dictionary';
+  }
 
   if (!settings.kosync.deviceId) {
     settings.kosync.deviceId = uuidv4();
+    await saveSettings(ctx.fs, settings);
+  }
+
+  if (!settings.replicaDeviceId) {
+    settings.replicaDeviceId = uuidv4();
     await saveSettings(ctx.fs, settings);
   }
 

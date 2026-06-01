@@ -7,8 +7,8 @@ vi.mock('@/services/environment', () => ({
   isTauriAppPlatform: vi.fn(() => false),
   getAPIBaseUrl: () => '/api',
   getNodeAPIBaseUrl: () => '/node-api',
-  getBaseUrl: () => 'https://web.readest.com',
-  getNodeBaseUrl: () => 'https://node.readest.com',
+  getBaseUrl: () => 'https://web.risale-ai-studio.com',
+  getNodeBaseUrl: () => 'https://node.risale-ai-studio.com',
   isWebDevMode: () => true,
 }));
 
@@ -16,6 +16,22 @@ vi.mock('@/services/environment', () => ({
 vi.mock('@tauri-apps/plugin-http', () => ({
   fetch: vi.fn(),
 }));
+
+type FakeResponseInit = {
+  status?: number;
+  body?: string;
+  wwwAuthenticate?: string;
+};
+
+const makeResponse = ({ status = 200, body = '', wwwAuthenticate }: FakeResponseInit = {}) => ({
+  ok: status >= 200 && status < 300,
+  status,
+  headers: {
+    get: (name: string) =>
+      name.toLowerCase() === 'www-authenticate' ? (wwwAuthenticate ?? null) : null,
+  },
+  text: async () => body,
+});
 
 describe('opdsReq', () => {
   let needsProxy: typeof import('@/app/opds/utils/opdsReq').needsProxy;
@@ -81,7 +97,7 @@ describe('opdsReq', () => {
         'CF-Access-Client-Id': 'client-id',
         'CF-Access-Client-Secret': 'secret',
       });
-      const params = new URL(proxied, 'https://web.readest.com').searchParams;
+      const params = new URL(proxied, 'https://web.risale-ai-studio.com').searchParams;
 
       expect(deserializeOPDSCustomHeaders(params.get('headers'))).toEqual({
         'CF-Access-Client-Id': 'client-id',
@@ -107,6 +123,77 @@ describe('opdsReq', () => {
       const url = 'https://standardebooks.org/opds/all';
       const proxied = getProxiedURL(url);
       expect(proxied).toContain('/node-api/opds/proxy');
+    });
+  });
+
+  describe('fetchWithAuth', () => {
+    let fetchWithAuth: typeof import('@/app/opds/utils/opdsReq').fetchWithAuth;
+    let fetchMock: ReturnType<typeof vi.fn>;
+
+    beforeEach(async () => {
+      const opdsReq = await import('@/app/opds/utils/opdsReq');
+      fetchWithAuth = opdsReq.fetchWithAuth;
+      fetchMock = vi.fn();
+      vi.stubGlobal('fetch', fetchMock);
+    });
+
+    afterEach(() => {
+      vi.unstubAllGlobals();
+    });
+
+    it('sends Basic auth on the first request when credentials are provided', async () => {
+      // Servers that allow anonymous access return 200 without a challenge.
+      // The credentials must be sent preemptively or the user keeps seeing
+      // guest content (issue #4202).
+      fetchMock.mockResolvedValue(makeResponse({ status: 200, body: '<feed/>' }));
+
+      await fetchWithAuth('https://opds.example.com/feed', 'alice', 's3cret', false);
+
+      expect(fetchMock).toHaveBeenCalledTimes(1);
+      const init = fetchMock.mock.calls[0]![1] as RequestInit;
+      const headers = init.headers as Record<string, string>;
+      expect(headers['Authorization']).toBe(`Basic ${btoa('alice:s3cret')}`);
+    });
+
+    it('does not send an Authorization header when no credentials are provided', async () => {
+      fetchMock.mockResolvedValue(makeResponse({ status: 200, body: '<feed/>' }));
+
+      await fetchWithAuth('https://opds.example.com/feed', undefined, undefined, false);
+
+      expect(fetchMock).toHaveBeenCalledTimes(1);
+      const init = fetchMock.mock.calls[0]![1] as RequestInit;
+      const headers = init.headers as Record<string, string>;
+      expect(headers['Authorization']).toBeUndefined();
+    });
+
+    it('passes preemptive auth through the proxy URL when useProxy is true', async () => {
+      fetchMock.mockResolvedValue(makeResponse({ status: 200, body: '<feed/>' }));
+
+      await fetchWithAuth('https://opds.example.com/feed', 'alice', 's3cret', true);
+
+      expect(fetchMock).toHaveBeenCalledTimes(1);
+      const proxyUrl = fetchMock.mock.calls[0]![0] as string;
+      const auth = new URL(proxyUrl, 'https://web.risale-ai-studio.com').searchParams.get('auth');
+      expect(auth).toBe(`Basic ${btoa('alice:s3cret')}`);
+    });
+
+    it('retries with Digest auth when the server issues a Digest challenge', async () => {
+      fetchMock
+        .mockResolvedValueOnce(
+          makeResponse({
+            status: 401,
+            wwwAuthenticate: 'Digest realm="opds", nonce="abc123", qop="auth"',
+          }),
+        )
+        .mockResolvedValueOnce(makeResponse({ status: 200, body: '<feed/>' }));
+
+      const res = await fetchWithAuth('https://opds.example.com/feed', 'alice', 's3cret', false);
+
+      expect(fetchMock).toHaveBeenCalledTimes(2);
+      const init = fetchMock.mock.calls[1]![1] as RequestInit;
+      const headers = init.headers as Record<string, string>;
+      expect(headers['Authorization']).toMatch(/^Digest /);
+      expect(res.status).toBe(200);
     });
   });
 });

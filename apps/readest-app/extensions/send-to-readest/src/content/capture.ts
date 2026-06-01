@@ -19,8 +19,8 @@
 
 import type { PageSnapshot } from '../lib/messages';
 
-const LOG = '[send-to-readest]';
-const PORT_NAME = 'send-to-readest:capture';
+const LOG = '[send-to-risale-ai-studio]';
+const PORT_NAME = 'send-to-risale-ai-studio:capture';
 
 function snapshot(): PageSnapshot {
   const sourceUrl =

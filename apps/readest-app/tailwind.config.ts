@@ -20,21 +20,11 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-sans)', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        serif: ['var(--font-serif)', 'Lora', 'Georgia', 'serif'],
-        display: ['var(--font-display)', 'Playfair Display', 'serif'],
-        arabic: ['var(--font-arabic)', 'Amiri', 'serif'],
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
-        premium: {
-          midnight: '#0f172a', // Midnight Ink
-          ivory: '#f8f5f0', // Antique Paper
-          gold: '#c5a059', // Muted Gold
-          emerald: '#064e3b', // Deep Emerald
-          paper: '#fffdfa', // Pure Paper
-        },
       },
     },
   },

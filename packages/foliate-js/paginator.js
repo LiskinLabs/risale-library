@@ -136,11 +136,20 @@ const getBoundingClientRect = target => {
 }
 
 const getVisibleRange = (doc, start, end, mapRect) => {
+    // A resize/scroll callback can fire after the view's document has been
+    // torn down (e.g. during teardown, or while an async section load is still
+    // settling); there is nothing to measure without a body.
+    if (!doc?.body) return
     // first get all visible nodes
     const acceptNode = node => {
         const name = node.localName?.toLowerCase()
         // ignore all scripts, styles, and their children
         if (name === 'script' || name === 'style') return FILTER_REJECT
+        // ignore cfi-inert nodes (e.g. injected a11y skip-links) and their
+        // subtree: they are invisible to CFI, so anchoring the visible range on
+        // one yields a degenerate CFI and can crash `fromRange` when such a node
+        // is the only child of its parent (content-less background sections).
+        if (node.nodeType === 1 && node.hasAttribute?.('cfi-inert')) return FILTER_REJECT
         if (node.nodeType === 1) {
             const { left, right } = mapRect(node.getBoundingClientRect())
             if (left === 0 && right === 0) return FILTER_REJECT
@@ -221,6 +230,18 @@ const setSelectionTo = (target, collapse) => {
     }
 }
 
+// Whether a view's bounding rect overlaps the visible region of its container.
+// Used by #syncA11y to mark only the pre-loaded views that lie outside the
+// viewport as `aria-hidden`. Views still visible to sighted users (e.g. the
+// right column in a dual-page spread that belongs to a different section
+// than the left column) stay exposed to assistive tech.
+// See readest/readest#4243 and readest/readest#4259.
+export const isViewVisibleInContainer = (viewRect, containerRect) =>
+    viewRect.right > containerRect.left
+    && viewRect.left < containerRect.right
+    && viewRect.bottom > containerRect.top
+    && viewRect.top < containerRect.bottom
+
 export const getDirection = doc => {
     const { defaultView } = doc
     let { writingMode, direction } = defaultView.getComputedStyle(doc.body)
@@ -249,6 +270,36 @@ const getBackground = doc => {
         && bodyStyle.backgroundImage === 'none'
         ? doc.defaultView.getComputedStyle(doc.documentElement).background
         : bodyStyle.background
+}
+
+// Compute the full-bleed background segments for paginated mode. Each rendered
+// view yields one segment positioned so it tracks its content on screen
+// (segStart = inset + viewOffset - scrollPos). Because the paginator rebuilds
+// these on every scroll, the backgrounds stay glued to the content while the
+// user drags a swipe; when two sections with different backgrounds are both on
+// screen the seam falls on the real content boundary instead of one flat colour
+// spanning the viewport. A segment that meets a content edge is stretched out
+// into the full-bleed gutter (outside #container) so a coloured page fills the
+// screen edge to edge, matching its content area. `views` is the sorted list of
+// { size, bg } with bg already resolved ('' = transparent → no segment).
+export const computeBackgroundSegments = (views, scrollPos, bgSize, inset, containerSize) => {
+    const containerStart = inset
+    const containerEnd = inset + containerSize
+    const segments = []
+    let offset = 0
+    for (const view of views) {
+        const segStart = inset + offset - scrollPos
+        const segEnd = segStart + view.size
+        offset += view.size
+        if (segEnd <= 0 || segStart >= bgSize) continue // off screen
+        if (!view.bg) continue // transparent → let the host/theme show through
+        let start = segStart
+        let end = segEnd
+        if (start <= containerStart && end > containerStart) start = 0
+        if (start < containerEnd && end >= containerEnd) end = bgSize
+        segments.push({ start, size: end - start, bg: view.bg })
+    }
+    return segments
 }
 
 const makeMarginals = (length, part) => Array.from({ length }, () => {
@@ -322,7 +373,7 @@ class View {
     async load(src, data, afterLoad, beforeRender) {
         if (typeof src !== 'string') throw new Error(`${src} is not string`)
         return new Promise(resolve => {
-            this.#iframe.addEventListener('load', () => {
+            this.#iframe.addEventListener('load', async () => {
                 const doc = this.document
                 afterLoad?.(doc)
 
@@ -332,21 +383,52 @@ class View {
                 const { vertical, rtl } = getDirection(doc)
                 this.docBackground = getBackground(doc)
                 doc.body.style.background = 'none'
-                // Preload background image to get natural dimensions;
-                // in scrolled mode the view expands to fit the image.
+                // Resolve the body background image's natural size BEFORE the
+                // first render so the scrolled-mode view is sized to fit it
+                // from the start. Sizing it lazily — expanding only once the
+                // image loads — grows the view *after* navigation has already
+                // scrolled to it. On reopen that growth lands above the saved
+                // position (e.g. a preloaded previous section's full-page
+                // illustration) and, with no reliable cross-iframe scroll
+                // anchoring on WebKit, drifts the viewport to the chapter
+                // start. Awaiting a local EPUB resource here is near-instant.
+                let bgRendered = false
                 const bgUrl = this.docBackground
                     ?.match(/url\(["']?([^"')]+)["']?\)/)?.[1]
-                if (bgUrl) {
+                if (bgUrl && !this.container.noBackground) {
                     const img = new Image()
+                    let resolveWait
+                    const waited = new Promise(res => { resolveWait = res })
                     img.onload = () => {
                         this.#bgImageSize = {
                             width: img.naturalWidth,
                             height: img.naturalHeight,
                         }
-                        if (!this.#column) this.expand()
+                        // If the image only resolves after this view has
+                        // already rendered (slower than the bounded wait
+                        // below), grow to fit it now — the original lazy path,
+                        // kept as a fallback rather than the norm.
+                        if (bgRendered && !this.#column) this.expand()
+                        resolveWait()
                     }
+                    // A missing or broken image just renders without the
+                    // background, exactly as before.
+                    img.onerror = () => resolveWait()
                     img.src = bgUrl
+                    // Bound the wait so a missing, broken, or hung image (one
+                    // that fires neither load nor error) can never block the
+                    // section from rendering.
+                    let timer
+                    await Promise.race([
+                        waited,
+                        new Promise(res => { timer = setTimeout(res, 3000) }),
+                    ])
+                    clearTimeout(timer)
                 }
+                // Awaiting the background image yields control, so the view may
+                // have been torn down or reloaded meanwhile — don't render into
+                // a stale document.
+                if (this.document !== doc) return resolve()
                 this.#iframe.style.display = 'none'
 
                 this.#vertical = vertical
@@ -356,6 +438,7 @@ class View {
                 const layout = beforeRender?.({ vertical, rtl })
                 this.#iframe.style.display = 'block'
                 this.render(layout)
+                bgRendered = true
                 this.#observer.observe(doc.body)
 
                 // the resize observer above doesn't work in Firefox
@@ -390,16 +473,18 @@ class View {
         })
         const availableWidth = Math.trunc(width - marginLeft - marginRight)
         const availableHeight = Math.trunc(height - marginTop - marginBottom)
+        const sidePaddingLeft = marginLeft / 2 + gap / 2
+        const sidePaddingRight = marginRight / 2 + gap / 2
         setStyles(doc.documentElement, {
             'padding': vertical
                 ? `${marginTop * 1.5}px 0px ${marginBottom * 1.5}px 0px`
-                : `0px ${gap / 2 + marginRight / 2}px 0px ${gap / 2 + marginLeft / 2}px`,
+                : `0px ${sidePaddingRight}px 0px ${sidePaddingLeft}px`,
             '--page-margin-top': `${vertical ? marginTop * 1.5 : marginTop}px`,
-            '--page-margin-right': `${vertical ? marginRight : marginRight + gap /2}px`,
+            '--page-margin-right': `${vertical ? marginRight : sidePaddingRight}px`,
             '--page-margin-bottom': `${vertical ? marginBottom * 1.5 : marginBottom}px`,
-            '--page-margin-left': `${vertical ? marginLeft : marginLeft + gap / 2}px`,
-            '--full-width': `${Math.trunc(window.innerWidth)}`,
-            '--full-height': `${Math.trunc(window.innerHeight)}`,
+            '--page-margin-left': `${vertical ? marginLeft : sidePaddingLeft}px`,
+            '--full-width': `${Math.trunc(width)}`,
+            '--full-height': `${Math.trunc(height)}`,
             '--available-width': `${availableWidth}`,
             '--available-height': `${availableHeight}`,
         })
@@ -419,10 +504,13 @@ class View {
         this.#columnCount = columnCount || 1
 
         const doc = this.document
+        const horizontalColumnGap = columnCount > 1 ? (marginLeft + marginRight) / 4 + gap / 2 : (marginLeft + marginRight) / 2 + gap
+        const sidePaddingLeft = columnCount > 1 ? marginLeft / 4 + gap / 4 : marginLeft / 2 + gap / 2
+        const sidePaddingRight = columnCount > 1 ? marginRight / 4 + gap / 4 : marginRight / 2 + gap / 2
         setStylesImportant(doc.documentElement, {
             'box-sizing': 'border-box',
             'column-width': `${Math.trunc(columnWidth)}px`,
-            'column-gap': vertical ? `${(marginTop + marginBottom) * 1.5}px` : `${gap + marginRight / 2 + marginLeft / 2}px`,
+            'column-gap': vertical ? `${(marginTop + marginBottom) * 1.5}px` : `${horizontalColumnGap}px`,
             'column-fill': 'auto',
             ...(vertical
                 ? { 'width': `${width}px` }
@@ -446,13 +534,13 @@ class View {
         setStyles(doc.documentElement, {
             'padding': vertical
                 ? `${marginTop * 1.5}px ${marginRight}px ${marginBottom * 1.5}px ${marginLeft}px`
-                : `${marginTop}px ${gap / 2 + marginRight / 2}px ${marginBottom}px ${gap / 2 + marginLeft / 2}px`,
+                : `${marginTop}px ${sidePaddingRight}px ${marginBottom}px ${sidePaddingLeft}px`,
             '--page-margin-top': `${vertical ? marginTop * 1.5 : marginTop}px`,
-            '--page-margin-right': `${vertical ? marginRight : marginRight / 2 + gap /2}px`,
+            '--page-margin-right': `${vertical ? marginRight : sidePaddingRight}px`,
             '--page-margin-bottom': `${vertical ? marginBottom * 1.5 : marginBottom}px`,
-            '--page-margin-left': `${vertical ? marginLeft : marginLeft / 2 + gap / 2}px`,
-            '--full-width': `${Math.trunc(window.innerWidth)}`,
-            '--full-height': `${Math.trunc(window.innerHeight)}`,
+            '--page-margin-left': `${vertical ? marginLeft : sidePaddingLeft}px`,
+            '--full-width': `${Math.trunc(availableWidth)}`,
+            '--full-height': `${Math.trunc(availableHeight)}`,
             '--available-width': `${availableWidth}`,
             '--available-height': `${availableHeight}`,
         })
@@ -472,6 +560,12 @@ class View {
         const vertical = this.#vertical
         const doc = this.document
         const pageFullscreen = doc.documentElement.hasAttribute('data-duokan-page-fullscreen')
+        // The fullscreen treatment pins the image with position:absolute and
+        // height:100% so it fills the fixed-height page. That only works in
+        // paginated (columnized) mode; in scrolled mode the container height is
+        // `auto`, so height:100% resolves to 0 and the cover collapses out of
+        // sight (#4379). Apply it only when columnized.
+        const applyFullscreen = pageFullscreen && this.#column
         for (const el of doc.body.querySelectorAll('img, svg, video')) {
             // clear previous inline constraints so we read CSS-authored values,
             // not stale pixel values from a previous resize (#3634)
@@ -488,16 +582,16 @@ class View {
             setStylesImportant(el, {
                 'max-height': vertical
                     ? (maxHeight !== 'none' && maxHeight !== '0px' ? maxHeight : '100%')
-                    : `${height - (pageFullscreen ? 0 : (marginTop + marginBottom))}px`,
+                    : `${height - (applyFullscreen ? 0 : (marginTop + marginBottom))}px`,
                 'max-width': vertical
-                    ? `${width - (pageFullscreen ? 0 : (marginLeft + marginRight))}px`
+                    ? `${width - (applyFullscreen ? 0 : (marginLeft + marginRight))}px`
                     : (maxWidth !== 'none' && maxWidth !== '0px' ? maxWidth : '100%'),
-                'object-fit': pageFullscreen ? 'cover': 'contain',
+                'object-fit': 'contain',
                 'page-break-inside': 'avoid',
                 'break-inside': 'avoid',
                 'box-sizing': 'border-box',
             })
-            if (pageFullscreen) {
+            if (applyFullscreen) {
                 setStylesImportant(doc.documentElement, {
                     position: 'relative',
                 })
@@ -519,7 +613,25 @@ class View {
                     ancestor = ancestor.parentElement
                 }
                 if (el.localName === 'svg') {
-                    el.setAttribute('preserveAspectRatio', 'xMidYMid slice')
+                    el.setAttribute('preserveAspectRatio', 'xMidYMid meet')
+                }
+            } else if (pageFullscreen) {
+                // Scrolled mode for a fullscreen-cover doc: undo any absolute
+                // pinning left over from a previous paginated render so the
+                // image flows normally, bounded by the max-height set above
+                // (#4379). Without this, toggling paginated -> scrolled keeps
+                // the stale position:absolute/height:100% and the cover stays
+                // collapsed.
+                doc.documentElement.style.removeProperty('position')
+                for (const prop of ['position', 'inset', 'width', 'height', 'margin']) {
+                    el.style.removeProperty(prop)
+                }
+                let ancestor = el.parentElement
+                while (ancestor && ancestor !== doc.body) {
+                    for (const prop of ['width', 'height', 'margin', 'padding']) {
+                        ancestor.style.removeProperty(prop)
+                    }
+                    ancestor = ancestor.parentElement
                 }
             }
         }
@@ -769,7 +881,7 @@ export class Paginator extends HTMLElement {
     static observedAttributes = [
         'flow', 'gap', 'margin-top', 'margin-bottom', 'margin-left', 'margin-right',
         'max-inline-size', 'max-block-size', 'max-column-count',
-        'no-preload', 'no-continuous-scroll',
+        'no-preload', 'no-background', 'no-continuous-scroll',
     ]
     #root = this.attachShadow({ mode: 'open' })
     #observer = new ResizeObserver(() => this.render())
@@ -801,6 +913,10 @@ export class Paginator extends HTMLElement {
     #fillPromise = null // tracks in-progress #fillVisibleArea for awaiting
     #stabilizing = false // true while #display is stabilizing layout
     #rendered = false // true after first #display completes
+    #lastLayout = null // cached layout from the last #beforeRender call
+    // Cache of section index → vertical (boolean). Populated as views
+    // are loaded so we can check direction *before* loading a section.
+    #directionCache = new Map()
     constructor() {
         super()
         this.#root.innerHTML = `<style>
@@ -831,13 +947,16 @@ export class Paginator extends HTMLElement {
             --_half-margin-right: calc(var(--_margin-right) / 2);
             --_max-width: calc(var(--_max-inline-size) * var(--_max-column-count-spread));
             --_max-height: var(--_max-block-size);
+            --_column-count: 1;
+            --_outer-min-left: calc((var(--_column-count) - 1) * (var(--_margin-left) / 4 + var(--_gap) / 4));
+            --_outer-min-right: calc((var(--_column-count) - 1) * (var(--_margin-right) / 4 + var(--_gap) / 4));
             display: grid;
             grid-template-columns:
-                minmax(0, 1fr)
+                minmax(var(--_outer-min-left), 1fr)
                 var(--_margin-left)
                 minmax(0, calc(var(--_max-width) - var(--_gap)))
                 var(--_margin-right)
-                minmax(0, 1fr);
+                minmax(var(--_outer-min-right), 1fr);
             grid-template-rows:
                 minmax(var(--_margin-top), 1fr)
                 minmax(0, var(--_max-height))
@@ -859,6 +978,8 @@ export class Paginator extends HTMLElement {
         #background {
             grid-column: 1 / -1;
             grid-row: 1 / -1;
+            position: relative;
+            overflow: hidden;
         }
         #container {
             grid-column: 2 / 5;
@@ -947,27 +1068,19 @@ export class Paginator extends HTMLElement {
                 if (this.#stabilizing) return
                 if (this.#justAnchored) this.#justAnchored = false
                 else this.#afterScroll('scroll')
-                // Load previous section when user scrolls near the top.
-                // Done in debounced handler (not instant) to avoid cascade
-                // from rapid DOM insertions breaking scroll anchoring.
-                if (!this.noPreload && !this.noContinuousScroll && !this.#filling && this.#renderedStart < this.size) {
-                    const sorted = this.#sortedViews
-                    const firstIndex = sorted[0]?.[0]
-                    if (firstIndex != null) {
-                        const prevIdx = this.#adjacentIndex(-1, firstIndex)
-                        if (prevIdx != null && !this.#views.has(prevIdx)) {
-                            this.#filling = true
-                            this.#loadAdjacentSection(prevIdx)
-                                .finally(() => { this.#filling = false })
-                        }
-                    }
-                }
+                // Backward preloading is handled eagerly in the (non-debounced)
+                // scroll listener below, mirroring the forward buffer.
             } else if (!this.scrolled) {
               this.#afterScroll('container-scroll')
             }
         }, 250)
         this.#container.addEventListener('scroll', () => {
             if (!this.#isAnimating) this.dispatchEvent(new Event('scroll'))
+            // Keep the per-view backgrounds glued to the content while a swipe
+            // drag scrolls the container (no animation runs then). During the
+            // snap animation #isAnimating is set and the destination background
+            // is already in place, so the rebuild is skipped.
+            if (!this.scrolled && !this.#isAnimating) this.#replaceBackground()
             // Preload forward when fewer than minPages ahead
             if (!this.noPreload && !this.noContinuousScroll && !this.#filling && !this.#stabilizing) {
                 const minPages = 5
@@ -979,10 +1092,40 @@ export class Paginator extends HTMLElement {
                     const lastIndex = sorted[sorted.length - 1]?.[0]
                     if (lastIndex != null) {
                         const nextIdx = this.#adjacentIndex(1, lastIndex)
-                        if (nextIdx != null && !this.#views.has(nextIdx)) {
+                        if (nextIdx != null && !this.#views.has(nextIdx) && this.#isSameDirection(nextIdx)) {
                             this.#filling = true
                             this.#loadAdjacentSection(nextIdx)
-                                .finally(() => { this.#filling = false })
+                                .finally(() => {
+                                    this.#filling = false
+                                    this.dispatchEvent(new Event('stabilized'))
+                                })
+                        }
+                    }
+                }
+            }
+            // Preload backward when fewer than minPages behind, mirroring the
+            // forward buffer so scrolling up never dead-ends at the top with the
+            // previous section unloaded (readest/readest#4112). The
+            // #loadAdjacentSection scroll compensation keeps the viewport
+            // anchored as the section is inserted above.
+            if (this.scrolled && !this.noPreload && !this.noContinuousScroll
+                && !this.#filling && !this.#stabilizing) {
+                const minPages = 5
+                const pagesBehind = this.size > 0
+                    ? Math.floor(this.#renderedStart / this.size)
+                    : 0
+                if (pagesBehind < minPages) {
+                    const sorted = this.#sortedViews
+                    const firstIndex = sorted[0]?.[0]
+                    if (firstIndex != null) {
+                        const prevIdx = this.#adjacentIndex(-1, firstIndex)
+                        if (prevIdx != null && !this.#views.has(prevIdx) && this.#isSameDirection(prevIdx)) {
+                            this.#filling = true
+                            this.#loadAdjacentSection(prevIdx)
+                                .finally(() => {
+                                    this.#filling = false
+                                    this.dispatchEvent(new Event('stabilized'))
+                                })
                         }
                     }
                 }
@@ -1066,6 +1209,27 @@ export class Paginator extends HTMLElement {
     get primaryIndex() {
         return this.#primaryIndex
     }
+    setAttribute(name, value) {
+        // The scrolled-mode scroll handler is debounced, so #anchor and
+        // #primaryIndex can lag behind the user's actual viewport by up to
+        // ~250ms. Toggling out of scrolled mode within that window made
+        // render() restore the stale anchor — reverting the position to a
+        // previously visible section. Flush the pending scroll state here,
+        // before the attribute change so the layout is still in scrolled
+        // mode and `this.scrolled` (which reads the attribute) is still true.
+        if (name === 'flow'
+            && this.scrolled
+            && String(value) !== 'scrolled'
+            && this.#views.size > 0) {
+            this.#flushScrolledState()
+        }
+        super.setAttribute(name, value)
+    }
+    #flushScrolledState() {
+        if (this.#views.size > 1) this.#detectPrimaryView()
+        const result = this.#getVisibleRange()
+        if (result?.range && !result.range.collapsed) this.#anchor = result.range
+    }
     attributeChangedCallback(name, _, value) {
         switch (name) {
             case 'flow':
@@ -1137,20 +1301,26 @@ export class Paginator extends HTMLElement {
         this.#syncA11y()
         return view
     }
-    // Hide non-primary views from accessibility tree so screen-reader
-    // swipe-next does not wander into pre-loaded adjacent sections
-    // (which would land several pages into the next section instead
-    // of its first paragraph). Uses `inert` (blocks focus/keyboard
-    // traversal) and `aria-hidden` (removes from accessibility tree).
+    // Hide off-screen pre-loaded views from the accessibility tree so
+    // screen-reader swipe-next does not wander into them (which would land
+    // several pages into the next section instead of its first paragraph).
+    //
+    // Only `aria-hidden` is used — `inert` would also block pointer events
+    // and text selection, which breaks visible non-primary views such as
+    // the right column of a dual-page spread when each column belongs to
+    // a different section (readest/readest#4243, readest/readest#4259).
+    //
+    // Visible non-primary views stay exposed to assistive tech because a
+    // sighted user can read them on the same spread.
     #syncA11y() {
+        const containerRect = this.#container.getBoundingClientRect()
         for (const [index, view] of this.#views) {
-            if (index === this.#primaryIndex) {
-                view.element.removeAttribute('inert')
-                view.element.removeAttribute('aria-hidden')
-            } else {
-                view.element.setAttribute('inert', '')
-                view.element.setAttribute('aria-hidden', 'true')
-            }
+            const isPrimary = index === this.#primaryIndex
+            const isVisible = isPrimary
+                || isViewVisibleInContainer(
+                    view.element.getBoundingClientRect(), containerRect)
+            if (isVisible) view.element.removeAttribute('aria-hidden')
+            else view.element.setAttribute('aria-hidden', 'true')
         }
     }
     #destroyView(index) {
@@ -1169,12 +1339,19 @@ export class Paginator extends HTMLElement {
             if (!keepIndices.has(index)) this.#destroyView(index)
         }
     }
+    // Check if a section has the same writing direction as current primary.
+    // Returns true if same or unknown (not yet cached).
+    #isSameDirection(index) {
+        if (!this.#directionCache.has(index)) return true
+        return this.#directionCache.get(index) === this.#vertical
+    }
     // Update the #background grid so each column shows the correct section's
     // background. Pass atPosition to pre-compute for a destination scroll
     // position (e.g. before an animation starts).
     #replaceBackground(atPosition) {
         const doc = this.#primaryView?.document
         if (!doc?.documentElement) return
+        if (this.noBackground) return
         const htmlStyle = doc.defaultView.getComputedStyle(doc.documentElement)
         const themeBgColor = htmlStyle.getPropertyValue('--theme-bg-color')
         const overrideColor = htmlStyle.getPropertyValue('--override-color') === 'true'
@@ -1218,50 +1395,57 @@ export class Paginator extends HTMLElement {
             return
         }
 
-        const cc = this.columnCount
-        const columnSize = this.size / cc
-        const sorted = this.#sortedViews
+        // Paint one full-bleed background segment per rendered view, positioned
+        // so each tracks its content on screen. Rebuilding on every scroll keeps
+        // the backgrounds glued to the content during a swipe drag — so when two
+        // sections with different backgrounds are both visible, each half shows
+        // its own colour instead of one flat colour flashing across the viewport.
+        const bgRect = this.#background.getBoundingClientRect()
+        const containerRect = this.#container.getBoundingClientRect()
+        const startEdge = this.#vertical ? 'top' : 'left'
+        const bgSize = bgRect[this.sideProp]
+        const inset = containerRect[startEdge] - bgRect[startEdge]
+        const scrollPos = Math.abs(atPosition ?? this.#renderedStart)
+        const views = this.#sortedViews.map(([, view]) => ({
+            size: view.element.getBoundingClientRect()[this.sideProp],
+            bg: resolveBackground(view.docBackground),
+        }))
+        const segments = computeBackgroundSegments(views, scrollPos, bgSize, inset, this.size)
 
         this.#background.innerHTML = ''
-        this.#background.style.display = 'grid'
-        this.#background.style.gridTemplateColumns = `repeat(${cc}, 1fr)`
+        this.#background.style.display = ''
+        this.#background.style.background = fallbackBg
 
-        const scrollPos = atPosition ?? this.#renderedStart
-        for (let i = 0; i < cc; i++) {
-            const columnMid = Math.abs(scrollPos) + (i + 0.5) * columnSize
-            let bg = fallbackBg
-
-            // Find which view's content area contains this column
-            let offset = 0
-            for (const [, view] of sorted) {
-                const viewSize = view.element.getBoundingClientRect()[this.sideProp]
-                if (columnMid < offset + viewSize) {
-                    const contentStart = offset
-                    const contentEnd = contentStart + view.contentPages * columnSize
-                    if (columnMid >= contentStart && columnMid < contentEnd) {
-                        bg = resolveBackground(view.docBackground)
-                    }
-                    break
-                }
-                offset += viewSize
-            }
-
-            const col = document.createElement('div')
-            col.style.background = bg
-            col.style.backgroundAttachment = 'initial'
-            col.style.width = '100%'
-            col.style.height = '100%'
-            this.#background.appendChild(col)
+        const posProp = this.#vertical ? 'top' : 'left'
+        const sizeProp = this.#vertical ? 'height' : 'width'
+        const crossPosProp = this.#vertical ? 'left' : 'top'
+        const crossSizeProp = this.#vertical ? 'width' : 'height'
+        for (const { start, size, bg } of segments) {
+            const seg = document.createElement('div')
+            seg.style.position = 'absolute'
+            seg.style[posProp] = `${start}px`
+            seg.style[sizeProp] = `${size}px`
+            seg.style[crossPosProp] = '0'
+            seg.style[crossSizeProp] = '100%'
+            seg.style.background = bg
+            seg.style.backgroundAttachment = 'initial'
+            this.#background.appendChild(seg)
         }
     }
     #beforeRender({ vertical, rtl }) {
+        // If writing-mode is about to change, destroy all non-primary
+        // views BEFORE updating global state. This prevents stale views
+        // with the wrong direction from remaining in the container while
+        // flex-direction / scrollProp / sideProp flip.
+        if (this.#rendered && vertical !== this.#vertical) {
+            for (const [i] of this.#views) {
+                if (i !== this.#primaryIndex) this.#destroyView(i)
+            }
+        }
         this.#vertical = vertical
         this.#rtl = rtl
         this.#top.classList.toggle('vertical', vertical)
         this.#container.classList.toggle('vertical', vertical)
-
-        const { width, height } = this.#container.getBoundingClientRect()
-        const size = vertical ? height : width
 
         const style = getComputedStyle(this.#top)
         const maxInlineSize = parseFloat(style.getPropertyValue('--_max-inline-size'))
@@ -1272,6 +1456,28 @@ export class Paginator extends HTMLElement {
         const marginLeft = parseFloat(style.getPropertyValue('--_margin-left'))
         this.#marginTop = marginTop
         this.#marginBottom = marginBottom
+
+        // Compute the column count from the host (Paginator) size rather than
+        // the #container size. The container width depends on --_column-count
+        // via the grid template (the outer 1fr tracks have a non-zero min for
+        // multi-column spreads), so deriving the column count from container
+        // size at threshold widths creates a feedback loop where the layout
+        // oscillates between 1 and 2 columns on resize.
+        const flow = this.getAttribute('flow')
+        const hostRect = this.getBoundingClientRect()
+        const hostSize = vertical ? hostRect.height : hostRect.width
+        const divisor = flow === 'scrolled'
+            ? 1
+            : Math.min(
+                maxColumnCount + (vertical ? 1 : 0),
+                Math.ceil(Math.floor(hostSize) / Math.floor(maxInlineSize)),
+            )
+        // Set --_column-count BEFORE measuring the container so the read
+        // below reflects the grid template that will actually be used.
+        this.#top.style.setProperty('--_column-count', divisor)
+
+        const { width, height } = this.#container.getBoundingClientRect()
+        const size = vertical ? height : width
 
         const g = parseFloat(style.getPropertyValue('--_gap')) / 100
         // The gap will be a percentage of the #container, not the whole view.
@@ -1293,7 +1499,6 @@ export class Paginator extends HTMLElement {
         // So we apply the inverse, f⁻¹ = -x / (x - 1) to the column gap.
         const gap = -g / (g - 1) * size
 
-        const flow = this.getAttribute('flow')
         if (flow === 'scrolled') {
             // FIXME: vertical-rl only, not -lr
             this.setAttribute('dir', vertical ? 'rtl' : 'ltr')
@@ -1308,10 +1513,11 @@ export class Paginator extends HTMLElement {
             this.columnCount = 1
             this.#replaceBackground()
 
-            return { width, height, flow, marginTop, marginRight, marginBottom, marginLeft, gap, columnWidth, columnCount: 1 }
+            const layout = { width, height, flow, marginTop, marginRight, marginBottom, marginLeft, gap, columnWidth, columnCount: 1 }
+            this.#lastLayout = layout
+            return layout
         }
 
-        const divisor = Math.min(maxColumnCount + (vertical ? 1 : 0), Math.ceil(Math.floor(size) / Math.floor(maxInlineSize)))
         const columnWidth = vertical
             ? (size / divisor - marginTop * 1.5 - marginBottom * 1.5)
             : (size / divisor - gap - marginRight / 2 - marginLeft / 2)
@@ -1339,7 +1545,9 @@ export class Paginator extends HTMLElement {
         this.#header.replaceChildren(...heads)
         this.#footer.replaceChildren(...feet)
 
-        return { width, height, marginTop, marginRight, marginBottom, marginLeft, gap, columnWidth, columnCount: divisor }
+        const layout = { width, height, marginTop, marginRight, marginBottom, marginLeft, gap, columnWidth, columnCount: divisor }
+        this.#lastLayout = layout
+        return layout
     }
     render() {
         if (this.#views.size === 0) return
@@ -1365,6 +1573,9 @@ export class Paginator extends HTMLElement {
     }
     get noPreload() {
         return this.hasAttribute('no-preload')
+    }
+    get noBackground() {
+        return this.hasAttribute('no-background')
     }
     get noContinuousScroll() {
         return this.scrolled && this.hasAttribute('no-continuous-scroll')
@@ -1503,6 +1714,10 @@ export class Paginator extends HTMLElement {
         if (state.pinched) return
         state.pinched = globalThis.visualViewport.scale > 1
         if (this.scrolled || state.pinched) return
+        // When the host opts out of swipe-to-paginate, let touch events reach
+        // native behavior (text selection, etc.) without us tracking or
+        // pre-empting them.
+        if (this.hasAttribute('no-swipe')) return
         if (e.touches.length > 1) {
             if (this.#touchScrolled) e.preventDefault()
             return
@@ -1544,6 +1759,7 @@ export class Paginator extends HTMLElement {
         if (!this.#touchScrolled) return
         this.#touchScrolled = false
         if (this.scrolled) return
+        if (this.hasAttribute('no-swipe')) return
 
         // XXX: Firefox seems to report scale as 1... sometimes...?
         // at this point I'm basically throwing `requestAnimationFrame` at
@@ -1600,11 +1816,28 @@ export class Paginator extends HTMLElement {
         if (this.scrolled && this.#vertical) offset = -offset
         if ((reason === 'snap' || smooth) && this.hasAttribute('animated') && !this.hasAttribute('eink')) {
             const startPosition = this.containerPosition
-            // Pre-set background for the destination so it's already
-            // correct when the slide animation reveals the new page
-            if (!this.scrolled) this.#replaceBackground(offset)
-            // Use GPU-accelerated scroll animation for smoother experience on high refresh rate screens
             this.#isAnimating = true
+            // Slide the per-view backgrounds in lockstep with the content. The
+            // content animates via a transform on each view; we re-sync the
+            // backgrounds to that animated offset every frame so each page's
+            // colour stays glued to its content as it slides. Pre-setting the
+            // destination instead made the outgoing page lose its background the
+            // instant the animation started, flashing the wrong colour across
+            // the part of the screen it still covered until it slid off.
+            if (!this.scrolled) {
+                this.#replaceBackground(startPosition)
+                const child = this.#container.children[0]
+                const syncBackground = () => {
+                    if (!this.#isAnimating) return
+                    const transform = child && getComputedStyle(child).transform
+                    const tx = transform && transform !== 'none'
+                        ? new DOMMatrix(transform)[this.#vertical ? 'm42' : 'm41'] : 0
+                    this.#replaceBackground(startPosition - tx)
+                    requestAnimationFrame(syncBackground)
+                }
+                requestAnimationFrame(syncBackground)
+            }
+            // Use GPU-accelerated scroll animation for smoother experience on high refresh rate screens
             return animateScroll(
                 this.#container,
                 this.scrollProp,
@@ -1766,6 +1999,8 @@ export class Paginator extends HTMLElement {
                 if (lastIndex == null) break
                 const nextIdx = this.#adjacentIndex(1, lastIndex)
                 if (nextIdx == null) break
+                // Stop preloading at writing-mode boundaries
+                if (!this.#isSameDirection(nextIdx)) break
                 await this.#loadAdjacentSection(nextIdx)
                 if (!this.#views.has(nextIdx)) break
             }
@@ -1775,12 +2010,19 @@ export class Paginator extends HTMLElement {
             await new Promise(r => requestAnimationFrame(r))
         } finally {
             this.#filling = false
+            this.dispatchEvent(new Event('stabilized'))
         }
     }
     #afterScroll(reason) {
         // In multi-view, detect which section is primary
         if (this.#views.size > 1 && reason !== 'anchor' && reason !== 'navigation') {
             this.#detectPrimaryView()
+            // Scrolling can bring a previously off-screen view into the
+            // viewport (e.g. the next section's first column joining the
+            // current section's last column in a dual-page spread) without
+            // changing which view is primary. Re-sync a11y attributes so
+            // a newly visible view stops being aria-hidden.
+            this.#syncA11y()
         }
         const { range, index: visibleIndex } = this.#getVisibleRange() || {}
         if (!range) return
@@ -1838,6 +2080,11 @@ export class Paginator extends HTMLElement {
             }
             const beforeRender = this.#beforeRender.bind(this)
             await view.load(src, data, afterLoad, beforeRender)
+            // Cache direction for future preload boundary checks
+            if (view.document) {
+                const dir = getDirection(view.document)
+                this.#directionCache.set(index, dir.vertical)
+            }
             this.dispatchEvent(new CustomEvent('create-overlayer', {
                 detail: {
                     doc: view.document, index,
@@ -1857,7 +2104,7 @@ export class Paginator extends HTMLElement {
                 const firstIndex = sorted[0]?.[0]
                 if (firstIndex != null) {
                     const prevIdx = this.#adjacentIndex(-1, firstIndex)
-                    if (prevIdx != null) {
+                    if (prevIdx != null && this.#isSameDirection(prevIdx)) {
                         await this.#loadAdjacentSection(prevIdx)
                     }
                 }
@@ -1886,6 +2133,15 @@ export class Paginator extends HTMLElement {
         if (this.#views.has(index) || !this.#canGoToIndex(index)) return
         const section = this.sections[index]
         if (!section || section.linear === 'no') return
+        // Detect a prepend: a section being inserted *above* every currently
+        // loaded view in scrolled mode. The browser suppresses scroll
+        // anchoring while scrollTop is 0, so the inserted section would push
+        // the visible content down and the viewport would drift into the
+        // previous section (readest/readest#4112). Capture the scroll position
+        // before the insertion so it can be restored once the view renders.
+        const firstIndex = this.#sortedViews[0]?.[0]
+        const isPrepend = this.scrolled && firstIndex != null && index < firstIndex
+        const startBefore = isPrepend ? this.#renderedStart : 0
         try {
             const src = await section.load()
             const data = await section.loadContent?.()
@@ -1903,8 +2159,34 @@ export class Paginator extends HTMLElement {
                 this.setStyles(this.#styles)
                 this.dispatchEvent(new CustomEvent('load', { detail: { doc, index } }))
             }
-            const beforeRender = this.#beforeRender.bind(this)
+            // Adjacent sections reuse the primary view's cached layout
+            // — they must NOT call #beforeRender, which would modify
+            // global state (direction, CSS classes, dir attribute, etc.).
+            const cachedLayout = this.#lastLayout
+            const beforeRender = () => cachedLayout
             await view.load(src, data, afterLoad, beforeRender)
+            // Cache direction for future preload boundary checks
+            if (view.document) {
+                const dir = getDirection(view.document)
+                this.#directionCache.set(index, dir.vertical)
+                // Destroy views with a different writing-mode immediately.
+                // Mixed-direction views corrupt scroll/page calculations.
+                if (dir.vertical !== this.#vertical) {
+                    this.#destroyView(index)
+                    return
+                }
+            }
+            // Keep the previously visible content anchored: the new view added
+            // `addedSize` px above it, so the scroll position must grow by the
+            // same amount. This corrects the browser's scroll-anchoring
+            // suppression at scrollTop 0 and is a no-op when anchoring already
+            // handled the shift (correction ≈ 0).
+            if (isPrepend) {
+                const addedSize = view.element.getBoundingClientRect()[this.sideProp]
+                const correction = startBefore + addedSize - this.#renderedStart
+                if (Math.abs(correction) > 0.5)
+                    this.containerPosition += (this.#vertical ? -1 : 1) * correction
+            }
             this.dispatchEvent(new CustomEvent('create-overlayer', {
                 detail: {
                     doc: view.document, index,
@@ -1940,7 +2222,7 @@ export class Paginator extends HTMLElement {
                 const firstIndex = sorted[0]?.[0]
                 if (firstIndex != null && firstIndex >= this.#primaryIndex) {
                     const prevIdx = this.#adjacentIndex(-1, firstIndex)
-                    if (prevIdx != null) {
+                    if (prevIdx != null && this.#isSameDirection(prevIdx)) {
                         await this.#loadAdjacentSection(prevIdx)
                     }
                 }
@@ -1958,12 +2240,17 @@ export class Paginator extends HTMLElement {
                 if (lastIndex == null) break
                 const nextIdx = this.#adjacentIndex(1, lastIndex)
                 if (nextIdx == null) break
+                // Stop at writing-mode boundaries
+                if (!this.#isSameDirection(nextIdx)) break
                 await this.#loadAdjacentSection(nextIdx)
                 if (!this.#views.has(nextIdx)) break
             }
             if (reanchor) this.#scrollToAnchor(this.#anchor)
         } finally {
             this.#filling = false
+            // Emit stabilized so post-layout processing (e.g. warichu)
+            // runs for newly loaded adjacent sections.
+            this.dispatchEvent(new Event('stabilized'))
         }
     }
     // Trim views whose content is entirely more than 10 pages away
@@ -1986,54 +2273,91 @@ export class Paginator extends HTMLElement {
         return index >= 0 && index <= this.sections.length - 1
     }
     async #goTo({ index, anchor, select }) {
+        // Check if the target section has a different writing-mode.
+        // If direction changes, we must destroy all views and do a full
+        // rebuild via #display — mixed-direction views cannot coexist.
+        let directionChanged = false
         if (this.#views.has(index)) {
+            const view = this.#views.get(index)
+            if (view?.document) {
+                const { vertical } = getDirection(view.document)
+                directionChanged = vertical !== this.#vertical
+            }
+        } else if (this.#directionCache.has(index)) {
+            directionChanged = this.#directionCache.get(index) !== this.#vertical
+        }
+        // When direction is unknown (not cached), #beforeRender will
+        // detect and clean up stale views if a change actually occurs.
+
+        if (this.#views.has(index) && !directionChanged) {
             // View already loaded — reuse it without
             // clearing/reloading. Just change primary and scroll.
             this.#stabilizing = true
-            this.#container.style.opacity = '0'
+            // Continuous scrolled mode keeps the target view rendered, so we
+            // scroll straight to it without fading the container — fading
+            // produced a hard blank-screen flash on adjacent navigation
+            // (readest/readest#4112 follow-up). Paginated mode and discrete
+            // no-continuous-scroll still fade to hide the page reposition.
+            const blank = !this.scrolled || this.noContinuousScroll
+            if (blank) this.#container.style.opacity = '0'
             const hasFocus = this.#primaryView?.document?.hasFocus()
             this.#primaryIndex = index
             this.#syncA11y()
             this.#trimDistantViews()
-            // Handle short section alignment
-            const primaryView = this.#primaryView
-            if (!this.noPreload && !this.noContinuousScroll && primaryView
-                && primaryView.contentPages > 0
-                && primaryView.contentPages < this.columnCount) {
-                const sorted = this.#sortedViews
-                const firstIndex = sorted[0]?.[0]
-                if (firstIndex != null) {
-                    const prevIdx = this.#adjacentIndex(-1, firstIndex)
-                    if (prevIdx != null) {
-                        await this.#loadAdjacentSection(prevIdx)
-                    }
-                }
-            }
             // In noContinuousScroll mode, destroy all non-primary views
             if (this.noContinuousScroll) {
                 for (const [i] of this.#views) {
                     if (i !== index) this.#destroyView(i)
                 }
             }
-            await this.scrollToAnchor((typeof anchor === 'function'
-                ? anchor(primaryView.document) : anchor) ?? 0, select)
-            this.#container.style.opacity = '1'
+            const primaryView = this.#primaryView
+            const resolvedAnchor = (typeof anchor === 'function'
+                ? anchor(primaryView.document) : anchor) ?? 0
+            // Pre-load the previous section so the user can move backward right
+            // away: a short paginated primary needs it to fill the leading
+            // columns; scrolled mode needs it so scrolling up reveals the
+            // previous section instead of dead-ending at the top (the debounced
+            // backward-preload can't cover this — it bails while navigation is
+            // stabilizing). Paginated must load it before revealing; scrolled
+            // mode loads it after the scroll so the transition stays instant,
+            // with #loadAdjacentSection compensation keeping the viewport
+            // anchored as the section is inserted above.
+            const needsPrev = primaryView && primaryView.contentPages > 0
+                && primaryView.contentPages < this.columnCount
+            const loadPrev = async () => {
+                if (this.noPreload || this.noContinuousScroll) return
+                if (!(needsPrev || this.scrolled)) return
+                const firstIndex = this.#sortedViews[0]?.[0]
+                if (firstIndex == null) return
+                const prevIdx = this.#adjacentIndex(-1, firstIndex)
+                if (prevIdx != null && this.#isSameDirection(prevIdx))
+                    await this.#loadAdjacentSection(prevIdx)
+            }
+            if (!this.scrolled) await loadPrev()
+            await this.scrollToAnchor(resolvedAnchor, select)
+            if (this.scrolled) await loadPrev()
+            if (blank) this.#container.style.opacity = '1'
             if (hasFocus) this.focusView()
             // Load remaining adjacent sections progressively;
             // keep #stabilizing true until fill completes
             this.#fillPromise = this.#fillVisibleArea()
             this.#fillPromise.then(() => { this.#stabilizing = false })
         } else {
-            // Keep already-loaded views near the target instead of
-            // clearing everything — avoids reloading sections that
-            // are still useful as adjacent views
-            const keep = new Set([index])
-            if (!this.noContinuousScroll) {
-                for (const [i] of this.#views) {
-                    if (Math.abs(i - index) <= 2) keep.add(i)
+            // When direction changes, clear ALL views — no reuse possible
+            // across writing-mode boundaries. When direction is unknown
+            // (not yet cached), keep nearby views; #beforeRender will
+            // clean up if the loaded section turns out to differ.
+            if (directionChanged) {
+                this.#destroyAllViews()
+            } else {
+                const keep = new Set([index])
+                if (!this.noContinuousScroll) {
+                    for (const [i] of this.#views) {
+                        if (Math.abs(i - index) <= 2) keep.add(i)
+                    }
                 }
+                this.#clearViewsExcept(keep)
             }
-            this.#clearViewsExcept(keep)
             const oldIndex = this.#primaryIndex
             const onLoad = detail => {
                 if (oldIndex >= 0 && !this.#views.has(oldIndex))

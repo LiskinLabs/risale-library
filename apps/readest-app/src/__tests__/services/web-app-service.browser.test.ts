@@ -49,16 +49,16 @@ describe('WebAppService', () => {
 
   it('should resolve file paths with base prefix', async () => {
     const resolved = await service.resolveFilePath('test.json', 'Books');
-    expect(resolved).toBe('Risale Digital Library/Books/test.json');
+    expect(resolved).toBe('Readest/Books/test.json');
   });
 
   it('should resolve empty Data path to prefix', async () => {
     const resolved = await service.resolveFilePath('', 'Data');
-    expect(resolved).toBe('Risale Digital Library');
+    expect(resolved).toBe('Readest');
   });
 
   it('should set localBooksDir after init', () => {
-    expect(service.localBooksDir).toBe('Risale Digital Library/Books');
+    expect(service.localBooksDir).toBe('Readest/Books');
   });
 
   fsTests(() => service);

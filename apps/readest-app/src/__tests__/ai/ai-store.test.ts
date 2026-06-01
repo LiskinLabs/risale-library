@@ -1,13 +1,16 @@
 import { describe, test, expect, vi } from 'vitest';
 
-vi.mock('@orama/orama', () => {
-  // mock orama index for testing
+vi.mock('lunr', () => {
+  // mock lunr index for testing
   return {
-    create: vi.fn(() => ({})),
-    insertMultiple: vi.fn(),
-    search: vi.fn(() => ({ hits: [] })),
-    load: vi.fn(),
-    save: vi.fn(() => ({})),
+    default: () => ({
+      search: vi.fn(() => []),
+    }),
+    Index: {
+      load: vi.fn(() => ({
+        search: vi.fn(() => []),
+      })),
+    },
   };
 });
 

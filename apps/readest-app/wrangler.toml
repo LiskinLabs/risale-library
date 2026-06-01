@@ -6,18 +6,18 @@ workers_dev = true
 preview_urls = true
 
 [[routes]]
-pattern = "web-cf.readest.com"
-zone_name = "readest.com"
+pattern = "web-cf.risale-ai-studio.com"
+zone_name = "risale-ai-studio.com"
 custom_domain = true
 
 [[routes]]
-pattern = "api-cf.readest.com"
-zone_name = "readest.com"
+pattern = "api-cf.risale-ai-studio.com"
+zone_name = "risale-ai-studio.com"
 custom_domain = true
 
 [[routes]]
-pattern = "web.readest.com"
-zone_name = "readest.com"
+pattern = "web.risale-ai-studio.com"
+zone_name = "risale-ai-studio.com"
 custom_domain = true
 
 [vars]

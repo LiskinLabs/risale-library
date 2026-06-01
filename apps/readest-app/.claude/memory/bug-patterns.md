@@ -98,7 +98,14 @@
 
 **Fix Strategy:** Use physical `view.renderer.page`/`view.renderer.pages` instead of estimated section metadata. Check boundary conditions (0-indexed vs 1-indexed, inclusive vs exclusive).
 
-### 11. Multiview Paginator Side Effects
+### 11. Debounced State Stale on User-Initiated Layout Change
+**Pattern:** A scroll/resize handler is debounced for performance, but during the debounce window any code path that re-runs layout based on saved state (e.g. `#anchor`, `#primaryIndex`) sees stale values.
+**Example:**
+- Scrolled-mode toggle reverted to previous chapter (#3987): the paginator's scroll handler is debounced 250 ms, so toggling `flow=scrolled → flow=paginated` within that window made `render() → scrollToAnchor(#anchor)` restore the anchor from before the user scrolled into the next section. Both `#anchor` and `#primaryIndex` were stale together, sending the position back.
+
+**Fix Strategy:** When an external trigger forces a re-render (here, `setAttribute('flow', ...)`), flush the debounced state synchronously *before* changing the layout. In paginator.js this means overriding `setAttribute` and calling `#detectPrimaryView()` + `#getVisibleRange()` while `this.scrolled` is still true.
+
+### 12. Multiview Paginator Side Effects
 **Pattern:** The multiview paginator (e925e9d+) loads adjacent sections in background. Events from these loads can interfere with user interactions on the primary section.
 **Examples:**
 - `load` event from adjacent section triggers `docLoadHandler` which re-adds ALL annotations, overwriting drag edits
@@ -106,6 +113,13 @@
 - `MagnifierLoupe` destroying/recreating body clone on every drag tick triggers ResizeObserver → expand → redraw
 
 **Fix Strategy:** Scope event handlers to the loaded section's index. Use unique IDs for SVG elements across overlayer instances. Minimize iframe DOM mutations during drag operations.
+
+### 13. Whole-Field-Synced Flag Reaches an Unsupported Platform
+**Pattern:** A setting is whole-field synced across devices (e.g. `dictionarySettings.providerEnabled`), so a flag enabled on one platform arrives `true` on a platform where that feature isn't supported. The lookup/runtime path correctly gates on platform support, but a *secondary consumer* (usually UI gating) reads the raw synced flag and misbehaves.
+**Example:**
+- System Dictionary enabled on macOS synced to web → web's `CustomDictionaries.tsx` locked all other dictionary toggles read-only (`lockedBySystem`) even though System Dictionary is hidden + a no-op there. The annotator's lookup path used the platform-gated `isSystemDictionaryEnabled(settings)` (registry.ts, gates on `isSystemDictionarySupported()`), but the settings UI compared the raw `providerEnabled[systemDictionary] === true`.
+
+**Fix Strategy:** Every consumer of a synced flag for a platform-specific feature must route through the *same* platform-aware gate the runtime uses — not the raw `providerEnabled[...]`/setting value. Here: `lockedBySystem = isSystemDictionaryEnabled(settings) && ...`. Search for other readers of the raw flag when fixing one.
 
 ## Debugging Workflow
 

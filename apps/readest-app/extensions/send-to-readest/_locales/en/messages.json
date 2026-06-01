@@ -4,7 +4,7 @@
     "description": "Extension name shown in the browser toolbar and the Chrome Web Store listing."
   },
   "app_description": {
-    "message": "Save web pages to your Risale AI Studio",
+    "message": "Save web pages to your Risale AI Studio library",
     "description": "Short description shown in the Chrome Web Store listing."
   },
   "action_title": {

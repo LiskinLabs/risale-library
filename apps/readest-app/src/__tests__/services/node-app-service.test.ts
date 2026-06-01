@@ -40,7 +40,7 @@ describe('NodeAppService', () => {
   it('should copy files from absolute path', async () => {
     const srcPath = path.join(tmpDir, 'source.txt');
     await fsp.writeFile(srcPath, 'copy me');
-    await service.copyFile(srcPath, 'copied.txt', 'Data');
+    await service.copyFile(srcPath, 'None', 'copied.txt', 'Data');
     const content = await service.readFile('copied.txt', 'Data', 'text');
     expect(content).toBe('copy me');
   });
@@ -54,24 +54,24 @@ describe('NodeAppService', () => {
   });
 
   it('should set localBooksDir after init', () => {
-    expect(service.localBooksDir).toBe(path.join(tmpDir, 'Risale Digital Library', 'Books'));
+    expect(service.localBooksDir).toBe(path.join(tmpDir, 'Readest', 'Books'));
   });
 
   it('should resolve file paths correctly', async () => {
     const resolved = await service.resolveFilePath('test.json', 'Books');
-    expect(resolved).toBe(path.join(tmpDir, 'Risale Digital Library', 'Books', 'test.json'));
+    expect(resolved).toBe(path.join(tmpDir, 'Readest', 'Books', 'test.json'));
   });
 
   it('should resolve empty path to prefix', async () => {
     const resolved = await service.resolveFilePath('', 'Data');
-    expect(resolved).toBe(path.join(tmpDir, 'Risale Digital Library'));
+    expect(resolved).toBe(path.join(tmpDir, 'Readest'));
   });
 
   it('should switch to new root via setCustomRootDir', async () => {
     const newRoot = await fsp.mkdtemp(path.join(SANDBOX_DIR, 'custom-'));
     try {
       await service.setCustomRootDir(newRoot);
-      expect(service.localBooksDir).toBe(path.join(newRoot, 'Risale Digital Library', 'Books'));
+      expect(service.localBooksDir).toBe(path.join(newRoot, 'Readest', 'Books'));
       await service.writeFile('test.txt', 'Settings', 'settings data');
       const content = await service.readFile('test.txt', 'Settings', 'text');
       expect(content).toBe('settings data');

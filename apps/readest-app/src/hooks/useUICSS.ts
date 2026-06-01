@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import { useReaderStore } from '@/store/readerStore';
 import { useSettingsStore } from '@/store/settingsStore';
 
@@ -8,24 +8,24 @@ export const useUICSS = (bookKey?: string) => {
   const { settings } = useSettingsStore();
   const { getViewSettings } = useReaderStore();
   const viewSettings = getViewSettings(bookKey || '');
-  const styleRef = useRef<HTMLStyleElement | null>(null);
+  const [styleElement, setStyleElement] = useState<HTMLStyleElement | null>(null);
 
   useEffect(() => {
+    if (styleElement) {
+      styleElement.remove();
+    }
+
     const rawCSS =
       viewSettings?.userUIStylesheet || settings?.globalViewSettings?.userUIStylesheet || '';
 
-    if (!styleRef.current) {
-      styleRef.current = document.createElement('style');
-      document.head.appendChild(styleRef.current);
-    }
-    
-    styleRef.current.textContent = rawCSS.replace('foliate-view', `#foliate-view-${bookKey}`);
+    const newStyleEl = document.createElement('style');
+    newStyleEl.textContent = rawCSS.replace('foliate-view', `#foliate-view-${bookKey}`);
+    document.head.appendChild(newStyleEl);
+    setStyleElement(newStyleEl);
 
     return () => {
-      if (styleRef.current) {
-        styleRef.current.remove();
-        styleRef.current = null;
-      }
+      newStyleEl.remove();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [viewSettings?.userUIStylesheet, settings?.globalViewSettings?.userUIStylesheet, bookKey]);
 };

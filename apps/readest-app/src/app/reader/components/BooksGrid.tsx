@@ -23,7 +23,6 @@ import FootnotePopup from './FootnotePopup';
 import HintInfo from './HintInfo';
 import ReadingRuler from './ReadingRuler';
 import DoubleBorder from './DoubleBorder';
-import LugatContainer from './LugatContainer';
 
 interface BooksGridProps {
   bookKeys: string[];
@@ -105,10 +104,8 @@ const BooksGrid: React.FC<BooksGridProps> = ({ bookKeys, onCloseBook, onGoToLibr
           bottom: gridInsets.bottom + viewInsets.bottom,
           left: gridInsets.left + viewInsets.left,
         };
-        const scrolled = viewSettings.scrolled;
-        const showBarsOnScroll = viewSettings.showBarsOnScroll;
-        const showHeader = viewSettings.showHeader && (scrolled ? showBarsOnScroll : true);
-        const showFooter = viewSettings.showFooter && (scrolled ? showBarsOnScroll : true);
+        const showHeader = viewSettings.showHeader;
+        const showFooter = viewSettings.showFooter;
 
         return (
           <div
@@ -220,7 +217,6 @@ const BooksGrid: React.FC<BooksGridProps> = ({ bookKeys, onCloseBook, onGoToLibr
               isDropdownOpen={dropdownOpenBook === bookKey}
             />
             <Annotator bookKey={bookKey} />
-            <LugatContainer bookKey={bookKey} />
             <SearchResultsNav bookKey={bookKey} gridInsets={gridInsets} />
             <BooknotesNav bookKey={bookKey} gridInsets={gridInsets} toc={bookDoc.toc || []} />
             <FootnotePopup bookKey={bookKey} bookDoc={bookDoc} />

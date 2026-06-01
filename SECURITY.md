@@ -1,132 +1,142 @@
-# Политика безопасности
+# Security Policy
 
-## Модель угроз
+## Threat Model
 
-### Обзор
+### Overview
 
-Risale AI Studio — это кроссплатформенное приложение для чтения (macOS, Windows, Linux, Android, iOS, Web), построенное на Next.js и Tauri. Приложение обрабатывает пользовательские файлы электронных книг, синхронизирует данные с облаком, интегрируется с внешними сервисами (OPDS-каталоги, KOReader, AI-провайдеры) и выполняет аутентификацию пользователей.
+Risale AI Studio is a cross-platform e-reader (macOS, Windows, Linux, Android, iOS, Web) built on Next.js and Tauri. It processes user-supplied ebook files, syncs data to the cloud, integrates with external services (OPDS catalogs, KOReader, DeepL, Yandex), and handles user authentication.
 
-### Активы
+### Assets
 
-| Актив | Описание |
-|---|---|
-| Ebook файлы | EPUB, MOBI, PDF и другие форматы, хранящиеся локально и в облаке |
-| Прогресс чтения и аннотации | Выделения, закладки и заметки, синхронизируемые между устройствами |
-| Учётные данные | Токены аутентификации и сессионные данные для облачной синхронизации |
-| Пользовательские настройки | Предпочтения чтения, шрифты, конфигурации тем |
-| Внешние API ключи | Ключи AI-провайдеров, настроенные пользователями |
+| Asset                          | Description                                                                          |
+| ------------------------------ | ------------------------------------------------------------------------------------ |
+| Ebook files                    | User-uploaded EPUB, MOBI, PDF, and other formats stored locally and in cloud storage |
+| Reading progress & annotations | Highlights, bookmarks, and notes synced across devices                               |
+| User credentials               | Authentication tokens and session data for cloud sync                                |
+| User preferences & settings    | Reading preferences, custom fonts, theme configurations                              |
+| External API keys              | Translation service credentials (DeepL, Yandex) configured by users                  |
 
-### Векторы атак
+### Threat Actors
 
-| Вектор | Мотивация |
-|---|---|
-| Вредоносный автор ebook | Создать искажённый файл для эксплуатации парсера или рендерера |
-| Сетевой атакующий (MitM) | Перехват синхронизационного трафика для кражи учётных данных или инъекции данных |
-| Вредоносный OPDS сервер | Отправка искажённых ответов каталога для эксплуатации клиента |
-| Скомпрометированная зависимость | Атака на цепочку поставок через экосистему npm или Cargo |
-| Неавторизованный пользователь | Доступ к синхронизированной библиотеке или аннотациям другого пользователя |
+| Actor                   | Motivation                                                 |
+| ----------------------- | ---------------------------------------------------------- |
+| Malicious ebook author  | Craft a malformed file to exploit the parser or renderer   |
+| Network attacker (MitM) | Intercept sync traffic to steal credentials or inject data |
+| Malicious OPDS server   | Serve crafted catalog responses to exploit the client      |
+| Compromised dependency  | Supply chain attack via npm or Cargo ecosystem             |
+| Unauthorized user       | Access another user's synced library or annotations        |
 
-### Поверхности атак и меры защиты
+### Attack Surfaces & Mitigations
 
-#### 1. Парсинг файлов книг
+#### 1. Ebook File Parsing
 
-- **Риск:** Искажённые EPUB/MOBI/PDF файлы могут вызвать ошибки парсера, обход путей или инъекцию скриптов через встроенный HTML/JS.
-- **Защита:** Контент книг рендерится в sandboxed iframe. Выполнение внешних скриптов заблокировано. Парсинг файлов изолирован от основного процесса.
+- **Risk:** Malformed EPUB/MOBI/PDF files could trigger parser bugs, path traversal, or script injection via embedded HTML/JS.
+- **Mitigations:** Ebook content is rendered in a sandboxed iframe. External script execution is blocked. File parsing is isolated from the main process.
 
-#### 2. Облачная синхронизация и аутентификация
+#### 2. Cloud Sync & Authentication
 
-- **Риск:** Кража учётных данных, перехват сессий или неавторизованный доступ к данным библиотеки другого пользователя.
-- **Защита:** Весь синхронизационный трафик использует HTTPS/TLS. Токены аутентификации хранятся безопасно (OS keychain/secure storage). Серверная авторизация гарантирует доступ пользователей только к своим данным.
+- **Risk:** Credential theft, session hijacking, or unauthorized access to another user's library data.
+- **Mitigations:** All sync traffic uses HTTPS/TLS. Authentication tokens are stored securely (OS keychain/secure storage). Server-side authorization ensures users can only access their own data.
 
-#### 3. OPDS / Внешние каталоги
+#### 3. OPDS / External Catalog Integration
 
-- **Риск:** Вредоносный OPDS сервер может отправить искажённый XML для эксплуатации парсера или перенаправить загрузки на вредоносные файлы.
-- **Защита:** OPDS ответы парсятся с защитными мерами. Пользователи явно добавляют источники каталогов. Загруженные файлы рассматриваются как ненадёжный пользовательский контент.
+- **Risk:** A malicious OPDS server could serve crafted XML to exploit the parser, or redirect downloads to malicious files.
+- **Mitigations:** OPDS responses are parsed defensively. Users explicitly add catalog sources. Downloaded files are treated as untrusted user content.
 
-#### 4. HTML/JS в контенте книг
+#### 4. Rendered HTML/JS in Ebook Content
 
-- **Риск:** Встроенный JavaScript в EPUB файлах может попытаться выполнить XSS или эксфильтрацию данных.
-- **Защита:** Контент книг рендерится в sandboxed iframe с ограничениями скриптов. Навигация вне контекста книги заблокирована.
+- **Risk:** Embedded JavaScript in EPUB files could attempt XSS or data exfiltration.
+- **Mitigations:** Book content is rendered in a sandboxed iframe with scripting restrictions. Navigation outside the book context is blocked.
 
-#### 5. Цепочка поставок
+#### 5. Supply Chain
 
-- **Риск:** Скомпрометированные npm или Cargo пакеты могут внедрить вредоносный код.
-- **Защита:** Зависимости зафиксированы через `pnpm-lock.yaml` и `Cargo.lock`. Dependabot и GitHub dependency review включены для автоматического обнаружения уязвимостей.
+- **Risk:** Compromised npm or Cargo packages could introduce malicious code.
+- **Mitigations:** Dependencies are pinned via `pnpm-lock.yaml` and `Cargo.lock`. Dependabot and GitHub's dependency review are enabled for automated vulnerability detection.
 
-#### 6. Нативный код (Tauri)
+#### 6. Desktop Native Code (Tauri)
 
-- **Риск:** Tauri IPC команды могут быть использованы вредоносным веб-контентом для доступа к файловой системе или API ОС.
-- **Защита:** Tauri allowlist ограничивает доступные IPC команды. Доступ к файловой системе ограничен директорией данных приложения.
+- **Risk:** Tauri IPC commands could be abused by malicious web content to access the filesystem or OS APIs.
+- **Mitigations:** Tauri's allowlist restricts which IPC commands are exposed. File system access is scoped to the application data directory.
 
-### Вне области действия
+### Out of Scope
 
-- Уязвимости в операционной системе или браузере пользователя вне контроля Risale AI Studio
-- Атаки физического доступа к устройству пользователя
-- Проблемы в сторонних сервисах (AI-провайдеры, внешние каталоги)
+- Vulnerabilities in user's operating system or browser outside of Risale AI Studio's control
+- Physical access attacks to a user's device
+- Issues in third-party services (DeepL, Yandex, Calibre) themselves
 
-## Поддерживаемые версии
+## Supported Versions
 
-Обновления безопасности предоставляются только для последней релизной серии.
+Risale AI Studio does not currently maintain separate release channels. Security updates are provided only for the latest release series.
 
-| Версия | Поддержка |
-|---|---|
-| 0.11.x | :white_check_mark: |
-| < 0.11 | :x: |
+| Version | Supported          |
+| ------- | ------------------ |
+| 0.10.x  | :white_check_mark: |
+| < 0.10  | :x:                |
 
-## Сообщение об уязвимости
+## Reporting a Vulnerability
 
-Пожалуйста, сообщайте о предполагаемых уязвимостях приватно. Не открывайте публичный GitHub issue или обсуждение для отчётов, связанных с безопасностью.
+Please report suspected vulnerabilities privately. Do not open a public GitHub
+issue or discussion for security-sensitive reports.
 
-Используйте приватный механизм сообщения об уязвимостях GitHub:
+Use GitHub's private vulnerability reporting for this repository:
 
-<https://github.com/LiskinLabs/risale-ai-studio/security/advisories/new>
+<https://github.com/readest/readest/security/advisories/new>
 
-При отправке отчёта включите:
+When submitting a report, include:
 
-- Чёткое описание проблемы и затронутого компонента
-- Шаги для воспроизведения, proof of concept или минимальный тестовый случай
-- Версии, платформы и окружения, которые вы тестировали
-- Предлагаемые меры по устранению или смягчению, если доступны
+- A clear description of the issue and the affected component
+- Steps to reproduce, proof of concept, or a minimal test case
+- The versions, platforms, or environments you tested
+- Any suggested remediation or mitigating details, if available
 
-Что ожидать после отправки:
+What to expect after you report:
 
-- Мы постараемся подтвердить получение в течение 3 рабочих дней.
-- Мы можем связаться с вами для уточнения деталей, шагов воспроизведения или валидации.
-- Если отчёт принят, мы будем работать над исправлением и координировать раскрытие.
-- Если отчёт отклонён, мы объясним причину.
+- We will aim to acknowledge receipt within 3 business days.
+- We may contact you for additional details, reproduction steps, or validation.
+- If the report is accepted, we will work on a fix and coordinate disclosure.
+- If the report is declined, we will explain why, for example if the behavior is
+  expected, unsupported, or not reproducible.
 
-Пожалуйста, сохраняйте детали уязвимости в тайне до тех пор, пока исправление не будет доступно и мейнтейнеры не одобрят раскрытие.
+Please keep vulnerability details private until a fix is available and the
+maintainers have approved disclosure.
 
-## План реагирования на инциденты
+## Incident Response Plan
 
-### 1. Триаж (День 1–2)
-- Назначение уровня серьёзности (Critical / High / Medium / Low)
-- Определение затронутых версий, компонентов и пользователей
-- Назначение ответственного за координацию
+When a security vulnerability is confirmed, we follow this process:
 
-### 2. Сдерживание (День 1–3)
-- Оценка возможности немедленного смягчения или обходного решения
-- Ограничение дальнейшего воздействия
+### 1. Triage (Day 1–2)
 
-### 3. Исправление (День 3–14, в зависимости от серьёзности)
-- Разработка и внутреннее ревью исправления
-- Валидация отсутствия регрессий
-- Подготовка патч-релиза и обновление changelog
+- Assign a severity level (Critical / High / Medium / Low) based on impact and exploitability.
+- Identify affected versions, components, and users.
+- Assign an owner responsible for coordinating the response.
 
-### 4. Раскрытие и релиз
-- Координация времени раскрытия с отправителем
-- Публикация GitHub Security Advisory с CVE (если применимо)
-- Выпуск исправленной версии и уведомление пользователей
+### 2. Containment (Day 1–3)
 
-### 5. Пост-инцидентный анализ
-- Документирование корневой причины, timeline и решения
-- Обновление процессов для предотвращения повторения
+- Assess whether an immediate mitigation or workaround can be published.
+- Limit further exposure where possible (e.g., disable affected features, update dependencies).
 
-### Уровни серьёзности
+### 3. Remediation (Day 3–14, depending on severity)
 
-| Уровень | Описание |
-|---|---|
-| Critical | Удалённое выполнение кода, полная компрометация данных или обход аутентификации |
-| High | Значительное раскрытие данных, повышение привилегий или отказ в обслуживании |
-| Medium | Ограниченное раскрытие данных или нарушение функциональности |
-| Low | Незначительные проблемы с минимальным влиянием на безопасность |
+- Develop and internally review a fix.
+- Validate the fix does not introduce regressions.
+- Prepare a patched release and update changelog.
+
+### 4. Disclosure & Release
+
+- Coordinate disclosure timing with the reporter.
+- Publish a GitHub Security Advisory with CVE if applicable.
+- Release the patched version and notify users via release notes.
+
+### 5. Post-Incident Review
+
+- Document the root cause, timeline, and resolution.
+- Update processes or controls to prevent recurrence.
+
+### Severity Definitions
+
+| Severity | Description                                                           |
+| -------- | --------------------------------------------------------------------- |
+| Critical | Remote code execution, full data compromise, or authentication bypass |
+| High     | Significant data exposure, privilege escalation, or denial of service |
+| Medium   | Limited data exposure or functionality disruption                     |
+| Low      | Minor issues with minimal security impact                             |

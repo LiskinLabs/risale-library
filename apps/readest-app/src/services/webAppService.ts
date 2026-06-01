@@ -4,12 +4,12 @@ import { SchemaType } from '@/services/database/migrate';
 import { getOSPlatform, isValidURL } from '@/utils/misc';
 import { isSafariBrowser } from '@/utils/ua';
 import { RemoteFile } from '@/utils/file';
-import { getAssetPath } from '@/utils/assetPath';
 import { isPWA } from './environment';
 import { BaseAppService } from './appService';
 import {
   DATA_SUBDIR,
   LOCAL_BOOKS_SUBDIR,
+  LOCAL_DICTIONARIES_SUBDIR,
   LOCAL_FONTS_SUBDIR,
   LOCAL_IMAGES_SUBDIR,
 } from './constants';
@@ -26,6 +26,8 @@ const resolvePath = (path: string, base: BaseDir): ResolvedPath => {
       return { baseDir: 0, basePrefix, fp: `${LOCAL_FONTS_SUBDIR}/${path}`, base };
     case 'Images':
       return { baseDir: 0, basePrefix, fp: `${LOCAL_IMAGES_SUBDIR}/${path}`, base };
+    case 'Dictionaries':
+      return { baseDir: 0, basePrefix, fp: `${LOCAL_DICTIONARIES_SUBDIR}/${path}`, base };
     case 'None':
       return { baseDir: 0, basePrefix, fp: path, base };
     default:
@@ -36,12 +38,7 @@ const resolvePath = (path: string, base: BaseDir): ResolvedPath => {
 const dbName = 'AppFileSystem';
 const dbVersion = 1;
 
-let dbInstance: IDBDatabase | null = null;
-
-export async function openIndexedDB(): Promise<IDBDatabase> {
-  if (dbInstance) {
-    return dbInstance;
-  }
+async function openIndexedDB(): Promise<IDBDatabase> {
   return new Promise((resolve, reject) => {
     const request = indexedDB.open(dbName, dbVersion);
 
@@ -52,34 +49,8 @@ export async function openIndexedDB(): Promise<IDBDatabase> {
       }
     };
 
-    request.onsuccess = () => {
-      dbInstance = request.result;
-
-      // Handle connection closing abnormally (e.g. user clears data)
-      dbInstance.onclose = () => {
-        dbInstance = null;
-      };
-
-      dbInstance.onversionchange = () => {
-        dbInstance?.close();
-        dbInstance = null;
-      };
-
-      resolve(dbInstance);
-    };
-
-    request.onerror = () => {
-      // Smart recovery attempt if DB is blocked or corrupted
-      if (request.error?.name === 'VersionError' || request.error?.name === 'UnknownError') {
-        console.warn('IndexedDB corrupted or version error. Attempting recovery by deleting DB.');
-        try {
-          indexedDB.deleteDatabase(dbName);
-        } catch (e) {
-          console.error('Failed to delete IndexedDB for recovery', e);
-        }
-      }
-      reject(request.error);
-    };
+    request.onsuccess = () => resolve(request.result);
+    request.onerror = () => reject(request.error);
   });
 }
 
@@ -110,29 +81,30 @@ const indexedDBFileSystem: FileSystem = {
     return await this.getBlobURL(path, 'None');
   },
   async openFile(path: string, base: BaseDir, filename?: string) {
-    if (isValidURL(path) || path.startsWith('/books/')) {
-      return await new RemoteFile(getAssetPath(path), filename).open();
+    if (isValidURL(path)) {
+      return await new RemoteFile(path, filename).open();
     } else {
       const content = await this.readFile(path, base, 'binary');
       return new File([content], filename || path);
     }
   },
-  async copyFile(srcPath: string, dstPath: string, base: BaseDir) {
-    const { fp } = this.resolvePath(dstPath, base);
+  async copyFile(srcPath: string, srcBase: BaseDir, dstPath: string, dstBase: BaseDir) {
+    const { fp: srcFp } = this.resolvePath(srcPath, srcBase);
+    const { fp: dstFp } = this.resolvePath(dstPath, dstBase);
     const db = await openIndexedDB();
 
     return new Promise<void>((resolve, reject) => {
       const transaction = db.transaction('files', 'readwrite');
       const store = transaction.objectStore('files');
-      const getRequest = store.get(srcPath);
+      const getRequest = store.get(srcFp);
 
       getRequest.onsuccess = () => {
         const data = getRequest.result;
         if (data) {
-          store.put({ path: fp, content: data.content });
+          store.put({ path: dstFp, content: data.content });
           resolve();
         } else {
-          reject(new Error(`File not found: ${srcPath}`));
+          reject(new Error(`File not found: ${srcFp}`));
         }
       };
 
@@ -362,10 +334,50 @@ export class WebAppService extends BaseAppService {
   async saveFile(
     filename: string,
     content: string | ArrayBuffer,
-    options?: { filePath?: string; mimeType?: string },
+    options?: {
+      filePath?: string;
+      mimeType?: string;
+      share?: boolean;
+      // Web ignores `sharePosition` — `navigator.share()` anchors itself
+      // natively to the calling element on Safari / iOS.
+      sharePosition?: { x: number; y: number; preferredEdge?: 'top' | 'bottom' | 'left' | 'right' };
+    },
   ): Promise<boolean> {
+    const mimeType = options?.mimeType || 'application/octet-stream';
+    if (
+      options?.share &&
+      typeof navigator !== 'undefined' &&
+      typeof navigator.share === 'function'
+    ) {
+      let shareData: ShareData | null = null;
+      try {
+        const file = new File([content], filename, { type: mimeType });
+        const candidate: ShareData = { files: [file], title: filename };
+        if (typeof navigator.canShare !== 'function' || navigator.canShare(candidate)) {
+          shareData = candidate;
+        }
+      } catch (error) {
+        // File constructor unavailable or rejected the input; fall through to download.
+        console.warn('Failed to build share file; falling back to download:', error);
+      }
+      if (shareData) {
+        try {
+          await navigator.share(shareData);
+          return true;
+        } catch (error) {
+          // AbortError = user dismissed the sheet; respect that as an explicit
+          // "don't share" choice. Any other error (e.g., NotAllowedError on
+          // desktop Chrome where canShare lies about file support) means the
+          // share never happened — fall through to the download fallback.
+          if ((error as DOMException)?.name === 'AbortError') {
+            return true;
+          }
+          console.warn('navigator.share failed; falling back to download:', error);
+        }
+      }
+    }
     try {
-      const blob = new Blob([content], { type: options?.mimeType || 'application/octet-stream' });
+      const blob = new Blob([content], { type: mimeType });
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
@@ -392,8 +404,12 @@ export class WebAppService extends BaseAppService {
     opts?: DatabaseOpts,
   ): Promise<DatabaseService> {
     const fullPath = await this.resolveFilePath(path, base);
+    // OPFS `getFileHandle` rejects names containing path separators, and the
+    // Turso WASM connector passes the whole string as a single OPFS handle
+    // name without traversing directories. Flatten to a safe single segment.
+    const opfsName = fullPath.replace(/[/\\]+/g, '_').replace(/^_+/, '');
     const { WebDatabaseService } = await import('./database/webDatabaseService');
-    const db = await WebDatabaseService.open(fullPath, opts);
+    const db = await WebDatabaseService.open(opfsName, opts);
     const { migrate } = await import('./database/migrate');
     const { getMigrations } = await import('./database/migrations');
     await migrate(db, getMigrations(schema));

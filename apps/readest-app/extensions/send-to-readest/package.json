@@ -1,8 +1,8 @@
 {
-  "name": "@LiskinLabs/risale-ai-studio-extension",
+  "name": "@readest/send-to-readest-extension",
   "version": "0.2.0",
   "private": true,
-  "description": "Browser extension that clips the current web page into the user's Risale Library as a self-contained EPUB.",
+  "description": "Browser extension that clips the current web page into the user's Risale AI Studio library as a self-contained EPUB.",
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack --watch --mode development",

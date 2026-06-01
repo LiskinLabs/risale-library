@@ -8,7 +8,6 @@ import { useResponsiveSize } from '@/hooks/useResponsiveSize';
 import { useTTSControl } from '@/app/reader/hooks/useTTSControl';
 import { getPopupPosition, Position } from '@/utils/sel';
 import { Insets } from '@/types/misc';
-import { RiVoiceAiFill } from 'react-icons/ri';
 import { Overlay } from '@/components/Overlay';
 import Popup from '@/components/Popup';
 import TTSPanel from './TTSPanel';
@@ -167,7 +166,7 @@ const TTSControl: React.FC<TTSControlProps> = ({ bookKey, gridInsets }) => {
             'absolute left-1/2 top-0 z-50 -translate-x-1/2',
             'transition-opacity duration-300',
             isBackButtonVisible ? 'opacity-100' : 'opacity-0',
-            safeAreaInsets?.top ? 'py-4' : 'py-5',
+            safeAreaInsets?.top ? '' : 'py-1',
           )}
           style={{
             top: `${safeAreaInsets?.top || 0}px`,
@@ -176,10 +175,10 @@ const TTSControl: React.FC<TTSControlProps> = ({ bookKey, gridInsets }) => {
           <button
             onClick={tts.handleBackToCurrentTTSLocation}
             className={clsx(
-              'premium-glass hover-glow premium-transition eink-bordered text-premium-gold flex items-center gap-2 rounded-full px-5 py-2.5 font-sans text-sm font-medium tracking-wide shadow-2xl hover:-translate-y-0.5',
+              'not-eink:bg-base-300 eink-bordered whitespace-nowrap rounded-full px-4 py-2 font-sans text-sm shadow-lg',
+              safeAreaInsets?.top ? 'h-11' : 'h-9',
             )}
           >
-            <RiVoiceAiFill className='text-lg' />
             {_('Back to TTS Location')}
           </button>
         </div>
@@ -189,8 +188,8 @@ const TTSControl: React.FC<TTSControlProps> = ({ bookKey, gridInsets }) => {
         <div
           ref={iconRef}
           className={clsx(
-            'absolute h-14 w-14',
-            'transition-all duration-300 hover:scale-110',
+            'absolute h-12 w-12',
+            'transition-transform duration-300',
             viewSettings?.rtl ? 'left-8' : 'right-6',
             !appService?.hasSafeAreaInset && 'bottom-[70px] sm:bottom-14',
           )}
@@ -213,7 +212,7 @@ const TTSControl: React.FC<TTSControlProps> = ({ bookKey, gridInsets }) => {
           height={popupHeight}
           position={panelPosition}
           trianglePosition={trianglePosition}
-          className='flex !bg-transparent shadow-none'
+          className='bg-base-200 flex shadow-lg'
           onDismiss={handleDismissPopup}
         >
           <TTSPanel

@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import { useEffect, useState } from 'react';
 import { MdCheckCircle, MdCheckCircleOutline } from 'react-icons/md';
 import {
   LiaCloudUploadAltSolid,
@@ -49,6 +50,21 @@ const BookItem: React.FC<BookItemProps> = ({
   const { settings } = useSettingsStore();
   const iconSize15 = useResponsiveSize(15);
 
+  const [coverAspect, setCoverAspect] = useState<number | null>(null);
+  useEffect(() => {
+    setCoverAspect(null);
+  }, [book.hash, book.metadata?.coverImageUrl, book.coverImageUrl]);
+
+  const CELL_ASPECT_RATIO = 28 / 41;
+  const fitCoverInGrid = mode === 'grid' && coverFit === 'fit' && coverAspect !== null;
+  const shouldShrinkWidth = fitCoverInGrid && coverAspect! < CELL_ASPECT_RATIO;
+  const bookitemMainStyle = fitCoverInGrid
+    ? {
+        aspectRatio: coverAspect!,
+        ...(shouldShrinkWidth ? { width: `${(coverAspect! / CELL_ASPECT_RATIO) * 100}%` } : {}),
+      }
+    : undefined;
+
   return (
     <div
       role='none'
@@ -63,34 +79,31 @@ const BookItem: React.FC<BookItemProps> = ({
     >
       <div
         className={clsx(
-          'bookitem-main relative flex aspect-[28/41] justify-center',
-          mode === 'grid'
-            ? 'book-3d-container w-full items-end'
-            : 'min-w-20 items-center overflow-hidden rounded',
-          mode === 'list' && coverFit === 'crop' && 'shadow-md',
+          'bookitem-main relative flex justify-center overflow-hidden rounded',
+          !fitCoverInGrid && 'aspect-[28/41]',
+          coverFit === 'crop' && 'shadow-md',
+          mode === 'grid' && 'items-end',
+          mode === 'list' && 'min-w-20 items-center',
         )}
+        style={bookitemMainStyle}
       >
         <BookCover
           mode={mode}
           book={book}
           coverFit={coverFit}
           showSpine={false}
-          imageClassName={mode === 'grid' ? '' : 'rounded shadow-md'}
+          imageClassName='rounded shadow-md'
+          onAspectRatioChange={setCoverAspect}
         />
         {bookSelected && (
-          <div
-            className={clsx(
-              'pointer-events-none absolute inset-0 z-30 bg-black opacity-30 transition-opacity duration-300',
-              mode === 'list' ? 'rounded' : 'rounded-r-lg border-l-[4px] border-transparent',
-            )}
-          ></div>
+          <div className='absolute inset-0 bg-black opacity-30 transition-opacity duration-300'></div>
         )}
         {isSelectMode && (
-          <div className='absolute bottom-1 right-1 z-30'>
+          <div className='absolute bottom-1 right-1'>
             {bookSelected ? (
-              <MdCheckCircle className='fill-blue-500 drop-shadow-md' />
+              <MdCheckCircle className='fill-blue-500' />
             ) : (
-              <MdCheckCircleOutline className='fill-gray-300 drop-shadow-md' />
+              <MdCheckCircleOutline className='fill-gray-300 drop-shadow-sm' />
             )}
           </div>
         )}
@@ -105,9 +118,9 @@ const BookItem: React.FC<BookItemProps> = ({
         <div className={clsx('min-w-0 flex-1', mode === 'list' && 'flex flex-col gap-2')}>
           <h4
             className={clsx(
-              'overflow-hidden text-ellipsis font-bold book-title',
-              mode === 'grid' && 'block whitespace-nowrap text-[0.7em] text-xs opacity-90',
-              mode === 'list' && 'line-clamp-2 text-lg',
+              'overflow-hidden text-ellipsis font-semibold',
+              mode === 'grid' && 'block whitespace-nowrap text-[0.6em] text-xs',
+              mode === 'list' && 'line-clamp-2 text-base',
             )}
           >
             {book.title}

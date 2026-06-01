@@ -11,11 +11,12 @@ import { BaseAppService } from './appService';
 import {
   DATA_SUBDIR,
   LOCAL_BOOKS_SUBDIR,
+  LOCAL_DICTIONARIES_SUBDIR,
   LOCAL_FONTS_SUBDIR,
   LOCAL_IMAGES_SUBDIR,
 } from './constants';
 
-const APP_NAME = 'Risale Digital Library';
+const APP_NAME = 'Risale AI Studio';
 
 // System directory getters matching Tauri's appDataDir, appConfigDir, etc.
 function getAppDataDir(): string {
@@ -99,9 +100,16 @@ const getPathResolver = ({ customRootDir }: { customRootDir?: string } = {}) => 
   const isCustomBaseDir = Boolean(customRootDir);
   const getCustomBasePrefix = isCustomBaseDir
     ? (base: BaseDir) => {
-        const dataDirs: BaseDir[] = ['Settings', 'Data', 'Books', 'Fonts', 'Images'];
+        const dataDirs: BaseDir[] = [
+          'Settings',
+          'Data',
+          'Books',
+          'Fonts',
+          'Images',
+          'Dictionaries',
+        ];
         const leafDir = dataDirs.includes(base) ? '' : base;
-        return leafDir ? nodePath.join(customRootDir!, leafDir) : customRootDir!;
+        return leafDir ? `${customRootDir}/${leafDir}` : customRootDir!;
       }
     : undefined;
 
@@ -112,7 +120,7 @@ const getPathResolver = ({ customRootDir }: { customRootDir?: string } = {}) => 
         return {
           baseDir: 0,
           basePrefix: async () => custom ?? getAppConfigDir(),
-          fp: custom ? (fp ? nodePath.join(custom, fp) : custom) : fp,
+          fp: custom ? `${custom}${fp ? `/${fp}` : ''}` : fp,
           base,
         };
       case 'Cache':
@@ -126,14 +134,16 @@ const getPathResolver = ({ customRootDir }: { customRootDir?: string } = {}) => 
         return {
           baseDir: 0,
           basePrefix: async () => custom ?? getAppLogDir(),
-          fp: custom ? (fp ? nodePath.join(custom, fp) : custom) : fp,
+          fp: custom ? `${custom}${fp ? `/${fp}` : ''}` : fp,
           base,
         };
       case 'Data':
         return {
           baseDir: 0,
           basePrefix: async () => custom ?? getAppDataDir(),
-          fp: custom ? nodePath.join(custom, DATA_SUBDIR, fp) : nodePath.join(DATA_SUBDIR, fp),
+          fp: custom
+            ? `${custom}/${DATA_SUBDIR}${fp ? `/${fp}` : ''}`
+            : `${DATA_SUBDIR}${fp ? `/${fp}` : ''}`,
           base,
         };
       case 'Books':
@@ -141,8 +151,8 @@ const getPathResolver = ({ customRootDir }: { customRootDir?: string } = {}) => 
           baseDir: 0,
           basePrefix: async () => custom ?? getAppDataDir(),
           fp: custom
-            ? nodePath.join(custom, LOCAL_BOOKS_SUBDIR, fp)
-            : nodePath.join(LOCAL_BOOKS_SUBDIR, fp),
+            ? `${custom}/${LOCAL_BOOKS_SUBDIR}${fp ? `/${fp}` : ''}`
+            : `${LOCAL_BOOKS_SUBDIR}${fp ? `/${fp}` : ''}`,
           base,
         };
       case 'Fonts':
@@ -150,8 +160,8 @@ const getPathResolver = ({ customRootDir }: { customRootDir?: string } = {}) => 
           baseDir: 0,
           basePrefix: async () => custom ?? getAppDataDir(),
           fp: custom
-            ? nodePath.join(custom, LOCAL_FONTS_SUBDIR, fp)
-            : nodePath.join(LOCAL_FONTS_SUBDIR, fp),
+            ? `${custom}/${LOCAL_FONTS_SUBDIR}${fp ? `/${fp}` : ''}`
+            : `${LOCAL_FONTS_SUBDIR}${fp ? `/${fp}` : ''}`,
           base,
         };
       case 'Images':
@@ -159,8 +169,17 @@ const getPathResolver = ({ customRootDir }: { customRootDir?: string } = {}) => 
           baseDir: 0,
           basePrefix: async () => custom ?? getAppDataDir(),
           fp: custom
-            ? nodePath.join(custom, LOCAL_IMAGES_SUBDIR, fp)
-            : nodePath.join(LOCAL_IMAGES_SUBDIR, fp),
+            ? `${custom}/${LOCAL_IMAGES_SUBDIR}${fp ? `/${fp}` : ''}`
+            : `${LOCAL_IMAGES_SUBDIR}${fp ? `/${fp}` : ''}`,
+          base,
+        };
+      case 'Dictionaries':
+        return {
+          baseDir: 0,
+          basePrefix: async () => custom ?? getAppDataDir(),
+          fp: custom
+            ? `${custom}/${LOCAL_DICTIONARIES_SUBDIR}${fp ? `/${fp}` : ''}`
+            : `${LOCAL_DICTIONARIES_SUBDIR}${fp ? `/${fp}` : ''}`,
           base,
         };
       case 'None':
@@ -217,10 +236,16 @@ export const nodeFileSystem: FileSystem = {
     return new File([buffer], fileName);
   },
 
-  async copyFile(srcPath: string, dstPath: string, base: BaseDir): Promise<void> {
-    const fullDst = await toAbsolute(this.resolvePath(dstPath, base));
+  async copyFile(
+    srcPath: string,
+    srcBase: BaseDir,
+    dstPath: string,
+    dstBase: BaseDir,
+  ): Promise<void> {
+    const fullSrc = await toAbsolute(this.resolvePath(srcPath, srcBase));
+    const fullDst = await toAbsolute(this.resolvePath(dstPath, dstBase));
     await fsp.mkdir(nodePath.dirname(fullDst), { recursive: true });
-    await fsp.copyFile(srcPath, fullDst);
+    await fsp.copyFile(fullSrc, fullDst);
   },
 
   async readFile(
@@ -342,11 +367,6 @@ export class NodeAppService extends BaseAppService {
     return this.fs.resolvePath(fp, base);
   }
 
-  override async resolveFilePath(path: string, base: BaseDir): Promise<string> {
-    const prefix = await this.fs.getPrefix(base);
-    return path ? nodePath.join(prefix, path) : prefix;
-  }
-
   async init(): Promise<void> {
     await this.prepareBooksDir();
   }
@@ -367,7 +387,12 @@ export class NodeAppService extends BaseAppService {
   async saveFile(
     _filename: string,
     content: string | ArrayBuffer,
-    options?: { filePath?: string; mimeType?: string },
+    options?: {
+      filePath?: string;
+      mimeType?: string;
+      share?: boolean;
+      sharePosition?: { x: number; y: number; preferredEdge?: 'top' | 'bottom' | 'left' | 'right' };
+    },
   ): Promise<boolean> {
     try {
       const filepath = options?.filePath ?? '';

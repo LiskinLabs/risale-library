@@ -31,6 +31,56 @@ const getViewport = (doc, viewport) => {
     return { width: 1000, height: 2000 }
 }
 
+const clamp = (value, min, max) => Math.min(max, Math.max(min, value))
+
+export const captureScrollModeAnchor = (pages, scrollTop, fallbackIndex = -1) => {
+    const fallbackPage = pages.find(page => page.index === fallbackIndex)
+    const currentPage = pages.find(page =>
+        page.height > 0
+        && scrollTop >= page.top
+        && scrollTop < page.top + page.height)
+        ?? fallbackPage
+        ?? pages.find(page => page.height > 0)
+
+    if (!currentPage) return null
+    return {
+        index: currentPage.index,
+        fraction: currentPage.height > 0
+            ? clamp((scrollTop - currentPage.top) / currentPage.height, 0, 1)
+            : 0,
+        scrollTop,
+    }
+}
+
+export const restoreScrollModeAnchor = (pages, anchor, maxScrollTop) => {
+    if (!anchor) return 0
+    const page = pages.find(candidate => candidate.index === anchor.index)
+    if (!page || page.height <= 0) return clamp(anchor.scrollTop, 0, maxScrollTop)
+    return clamp(page.top + page.height * anchor.fraction, 0, maxScrollTop)
+}
+
+// Align the SVG overlayer's coord system with the iframe's unscaled content.
+// When the iframe is visually scaled via CSS transform (non-PDF path),
+// getClientRects() inside the iframe returns positions in the iframe's native
+// coord system, so the SVG must use a matching viewBox to scale rects to the
+// on-screen size. PDFs re-render their text layer at scale via onZoom, so
+// rects are already in scaled coords and no viewBox is needed.
+export const applyOverlayerViewBox = (frame, overlayer) => {
+    if (!overlayer?.element) return
+    const el = overlayer.element
+    if (frame?.onZoom) {
+        el.removeAttribute('viewBox')
+        el.removeAttribute('preserveAspectRatio')
+    } else {
+        const w = frame?.width ?? frame?.vpWidth
+        const h = frame?.height ?? frame?.vpHeight
+        if (w && h) {
+            el.setAttribute('viewBox', `0 0 ${w} ${h}`)
+            el.setAttribute('preserveAspectRatio', 'none')
+        }
+    }
+}
+
 export class FixedLayout extends HTMLElement {
     static observedAttributes = ['zoom', 'scale-factor', 'spread', 'flow']
     #root = this.attachShadow({ mode: 'open' })
@@ -69,6 +119,33 @@ export class FixedLayout extends HTMLElement {
     #scrollMaxLoaded = 8
     #scrollIdleTimer = null
     #scrollCurrentIndex = -1
+    #getScrollModePageMetrics() {
+        return this.#scrollPages.map(page => ({
+            index: page.index,
+            top: page.el.offsetTop,
+            height: page.el.offsetHeight,
+        }))
+    }
+    #captureScrollModeAnchor() {
+        if (!this.#scrollPages.length) return null
+        const fallbackIndex = this.#scrollCurrentIndex >= 0
+            ? this.#scrollCurrentIndex : this.#getScrollIndex()
+        return captureScrollModeAnchor(
+            this.#getScrollModePageMetrics(),
+            this.scrollTop,
+            fallbackIndex,
+        )
+    }
+    #restoreScrollModeAnchor(anchor) {
+        if (!anchor || !this.#scrollPages.length) return
+        const maxScrollTop = Math.max(0, this.scrollHeight - this.clientHeight)
+        this.scrollTop = restoreScrollModeAnchor(
+            this.#getScrollModePageMetrics(),
+            anchor,
+            maxScrollTop,
+        )
+        this.#scrollCurrentIndex = anchor.index
+    }
     constructor() {
         super()
 
@@ -280,6 +357,11 @@ export class FixedLayout extends HTMLElement {
                         width: `${(width ?? blankWidth) * scale}px`,
                         height: `${(height ?? blankHeight) * scale}px`,
                     })
+                    applyOverlayerViewBox({
+                        onZoom,
+                        width: width ?? blankWidth,
+                        height: height ?? blankHeight,
+                    }, overlayer)
                     overlayer.redraw()
                 }
             }
@@ -384,6 +466,7 @@ export class FixedLayout extends HTMLElement {
                             attach: overlayer => {
                                 this.#overlayers.set(index, overlayer)
                                 frame.element.append(overlayer.element)
+                                applyOverlayerViewBox(frame, overlayer)
                             },
                         },
                     }))
@@ -582,12 +665,14 @@ export class FixedLayout extends HTMLElement {
 
             pageData.frame = frame
             pageData.state = 'loaded'
+            const scrollAnchor = this.#captureScrollModeAnchor()
             // Update dimensions from actual page viewport
             if (frame.width && frame.height) {
                 pageData.vpWidth = frame.width
                 pageData.vpHeight = frame.height
             }
             this.#renderScrollPage(pageData)
+            this.#restoreScrollModeAnchor(scrollAnchor)
 
             // Create overlayer
             const doc = frame.iframe.contentDocument
@@ -598,6 +683,7 @@ export class FixedLayout extends HTMLElement {
                         attach: overlayer => {
                             this.#overlayers.set(pageData.index, overlayer)
                             frame.element.append(overlayer.element)
+                            applyOverlayerViewBox(frame, overlayer)
                         },
                     },
                 }))
@@ -643,8 +729,7 @@ export class FixedLayout extends HTMLElement {
     #renderScrollMode() {
         const { width: hostWidth } = this.getBoundingClientRect()
         if (!hostWidth) return
-        // Remember current page so we can restore scroll position after resize
-        const currentIndex = this.#getScrollIndex()
+        const scrollAnchor = this.#captureScrollModeAnchor()
         for (const page of this.#scrollPages) {
             const scale = (hostWidth / page.vpWidth) * this.#scaleFactor
             page.el.style.width = `${page.vpWidth * scale}px`
@@ -653,11 +738,7 @@ export class FixedLayout extends HTMLElement {
                 this.#renderScrollPage(page)
             }
         }
-        // Restore scroll position to keep current page in view after resize
-        if (currentIndex >= 0 && currentIndex < this.#scrollPages.length) {
-            this.#scrollPages[currentIndex].el.scrollIntoView()
-            this.#scrollCurrentIndex = currentIndex
-        }
+        this.#restoreScrollModeAnchor(scrollAnchor)
     }
     #renderScrollPage(pageData) {
         const { width: hostWidth } = this.getBoundingClientRect()
@@ -699,6 +780,7 @@ export class FixedLayout extends HTMLElement {
                 width: `${vw * scale}px`,
                 height: `${vh * scale}px`,
             })
+            applyOverlayerViewBox(frame, overlayer)
             overlayer.redraw()
         }
     }

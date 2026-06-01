@@ -120,7 +120,7 @@ export const UpdaterContent = ({
         const arch = OS_ARCH === 'aarch64' ? 'arm64' : 'universal';
         const downloadUrl = data.platforms[platformKey]?.url as string;
         const apkFilePath = await appService.resolveFilePath(
-          `Risale Digital Library_${data.version}_${arch}.apk`,
+          `RisaleAiStudio_${data.version}_${arch}.apk`,
           'Cache',
         );
         setUpdate({
@@ -218,7 +218,7 @@ export const UpdaterContent = ({
         const arch = OS_ARCH === 'x86_64' ? 'x64' : 'arm64';
         const downloadUrl = data.platforms[platformKey]?.url as string;
         const execDir = await invoke<string>('get_executable_dir');
-        const exeFileName = `Risale Digital Library_${data.version}_${arch}-portable.exe`;
+        const exeFileName = `RisaleAiStudio_${data.version}_${arch}-portable.exe`;
         const exeFilePath = await join(execDir, exeFileName);
         setUpdate({
           currentVersion,
@@ -253,7 +253,7 @@ export const UpdaterContent = ({
           OS_ARCH === 'x86_64' ? 'linux-x86_64-appimage' : 'linux-aarch64-appimage';
         const arch = OS_ARCH === 'x86_64' ? 'x86_64' : 'aarch64';
         const downloadUrl = data.platforms[platformKey]?.url as string;
-        const appImageFileName = `Risale Digital Library_${data.version}_${arch}.AppImage`;
+        const appImageFileName = `RisaleAiStudio_${data.version}_${arch}.AppImage`;
         const appImageFilePath = await join(await desktopDir(), appImageFileName);
         setUpdate({
           currentVersion,
@@ -434,11 +434,11 @@ export const UpdaterContent = ({
           {checkUpdate ? (
             <div className='text-base-content flex-grow text-sm'>
               <h2 className='mb-4 text-center font-bold sm:text-start'>
-                {_('A new version of Risale Digital Library is available!')}
+                {_('A new version of Risale AI Studio is available!')}
               </h2>
               <p className='mb-2'>
                 {_(
-                  'Risale Digital Library {{newVersion}} is available (installed version {{currentVersion}}).',
+                  'Risale AI Studio {{newVersion}} is available (installed version {{currentVersion}}).',
                   {
                     newVersion,
                     currentVersion,
@@ -505,7 +505,7 @@ export const UpdaterContent = ({
 
                     {appService?.isAndroidApp && (
                       <Link
-                        href='https://play.google.com/store/apps/details?id=com.bilingify.readest'
+                        href='https://play.google.com/store/apps/details?id=com.liskinlabs.risale-ai-studio'
                         target='_blank'
                         rel='noopener noreferrer'
                         className='btn btn-primary btn-sm'
@@ -604,7 +604,7 @@ export const UpdaterWindow = () => {
     <Dialog
       id='updater_window'
       isOpen={isOpen}
-      title={checkUpdate ? _('Software Update') : _("What's New in Risale Digital Library")}
+      title={checkUpdate ? _('Software Update') : _("What's New in Risale AI Studio")}
       onClose={() => setIsOpen(false)}
       boxClassName='sm:!w-[75%] sm:h-auto sm:!max-h-[85vh] sm:!max-w-2xl'
     >

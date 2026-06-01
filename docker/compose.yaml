@@ -1,4 +1,4 @@
-name: risale-ai-studio
+name: readest
 
 services:
   db:
@@ -88,7 +88,7 @@ services:
     command: ["postgrest"]
 
   minio:
-    container_name: risale-ai-studio-minio
+    container_name: readest-minio
     image: minio/minio
     restart: unless-stopped
     ports:
@@ -118,8 +118,8 @@ services:
       "
 
   client:
-    container_name: risale-ai-studio-client
-    image: ${RISALE_IMAGE:-ghcr.io/LiskinLabs/risale-ai-studio:latest}
+    container_name: readest-client
+    image: ${READEST_IMAGE:-ghcr.io/readest/readest:latest}
     pull_policy: missing
     restart: unless-stopped
     ports:

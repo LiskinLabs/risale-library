@@ -9,17 +9,16 @@ const defaultSubstitutions: TextSubstitutions = {
 
 export const basicSubstitute = (text: string, substitutions: TextSubstitutions): string => {
   const allSubstitutions = { ...defaultSubstitutions, ...substitutions };
-  const cleanedText = text.replaceAll('\n', '').trim();
 
   if (Object.keys(allSubstitutions).length === 0) {
-    return cleanedText;
+    return text;
   }
 
-  if (allSubstitutions[cleanedText]) {
-    return allSubstitutions[cleanedText];
+  if (allSubstitutions[text]) {
+    return allSubstitutions[text];
   }
 
-  return cleanedText;
+  return text;
 };
 
 export function createPreprocessor(substitutions: TextSubstitutions = {}): Preprocessor {

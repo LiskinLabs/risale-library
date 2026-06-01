@@ -1,4 +1,3 @@
-import { sanitizeHTML } from '@/utils/sanitize';
 import clsx from 'clsx';
 import React from 'react';
 import {
@@ -102,13 +101,13 @@ const BookDetailView: React.FC<BookDetailViewProps> = ({
             {onDelete && (
               <Dropdown
                 label={_('Delete Book Options')}
-                className='dropdown-bottom flex justify-center'
+                className='dropdown-bottom dropdown-center flex justify-center'
                 buttonClassName='btn btn-ghost h-8 min-h-8 w-8 p-0'
                 toggleButton={<MdOutlineDelete className='fill-red-500' />}
               >
                 <div
                   className={clsx(
-                    'delete-menu dropdown-content dropdown-center no-triangle',
+                    'delete-menu dropdown-content no-triangle !relative',
                     'border-base-300 !bg-base-200 z-20 mt-1 max-w-[90vw] shadow-2xl',
                   )}
                 >
@@ -285,7 +284,7 @@ const BookDetailView: React.FC<BookDetailViewProps> = ({
               <p
                 className='text-neutral-content prose prose-sm max-w-full whitespace-pre-line text-sm'
                 dangerouslySetInnerHTML={{
-                  __html: sanitizeHTML(metadata?.description || _('No description available')),
+                  __html: metadata?.description || _('No description available'),
                 }}
               ></p>
             </div>

@@ -9,7 +9,7 @@ type TxtConverterPrivateAPI = {
 };
 
 class TestableConverter extends TxtToEpubConverter {
-  override getChapterRegexps(language: string): RegExp[] {
+  getChapterRegexps(language: string): RegExp[] {
     return (this as unknown as TxtConverterPrivateAPI).createChapterRegexps(language);
   }
 }

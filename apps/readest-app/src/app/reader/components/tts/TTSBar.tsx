@@ -41,23 +41,19 @@ const TTSBar = ({
   return (
     <div
       className={clsx(
-        'premium-glass border-premium-gold/10 absolute bottom-0 z-40 mb-4 rounded-full border shadow-2xl',
-        'inset-x-0 mx-auto flex w-fit justify-center',
+        'bg-base-100 absolute bottom-0 z-40',
+        'inset-x-0 mx-auto flex w-full justify-center sm:w-fit',
         'transition-opacity duration-300',
         isVisible ? `pointer-events-auto opacity-100` : `pointer-events-none opacity-0`,
       )}
-      style={{
-        marginBottom: appService?.hasSafeAreaInset
-          ? `calc(${gridInsets.bottom * 0.33}px + 1rem)`
-          : '1rem',
-      }}
+      style={{ paddingBottom: appService?.hasSafeAreaInset ? `${gridInsets.bottom * 0.33}px` : 0 }}
       onMouseEnter={() => !appService?.isMobile && setHoveredBookKey('')}
       onTouchStart={() => !appService?.isMobile && setHoveredBookKey('')}
     >
-      <div className='flex h-[52px] items-center gap-1 px-4 sm:gap-2'>
+      <div className='text-base-content flex h-[52px] items-center space-x-2 px-2'>
         <button
           onClick={onBackward.bind(null, false)}
-          className='text-base-content/70 hover:text-premium-gold premium-transition hover:bg-base-content/5 rounded-full p-1.5 hover:scale-110'
+          className='rounded-full p-1 transition-transform duration-200 hover:scale-105'
           title={_('Previous Paragraph')}
           aria-label={_('Previous Paragraph')}
         >
@@ -65,25 +61,23 @@ const TTSBar = ({
         </button>
         <button
           onClick={onBackward.bind(null, true)}
-          className='text-base-content/70 hover:text-premium-gold premium-transition hover:bg-base-content/5 rounded-full p-1.5 hover:scale-110'
+          className='rounded-full p-1 transition-transform duration-200 hover:scale-105'
           title={_('Previous Sentence')}
           aria-label={_('Previous Sentence')}
         >
           <MdSkipPrevious size={iconSize32} />
         </button>
-        <div className='bg-premium-gold/20 mx-1 h-6 w-[1px]' />
         <button
           onClick={onTogglePlay}
-          className='text-premium-gold hover-glow premium-transition bg-base-content/5 hover:bg-base-content/10 mx-1 rounded-full p-1.5 hover:scale-110'
+          className='rounded-full p-1 transition-transform duration-200 hover:scale-105'
           title={isPlaying ? _('Pause') : _('Play')}
           aria-label={isPlaying ? _('Pause') : _('Play')}
         >
           {isPlaying ? <MdOutlinePause size={iconSize48} /> : <MdPlayArrow size={iconSize48} />}
         </button>
-        <div className='bg-premium-gold/20 mx-1 h-6 w-[1px]' />
         <button
           onClick={onForward.bind(null, true)}
-          className='text-base-content/70 hover:text-premium-gold premium-transition hover:bg-base-content/5 rounded-full p-1.5 hover:scale-110'
+          className='rounded-full p-1 transition-transform duration-200 hover:scale-105'
           title={_('Next Sentence')}
           aria-label={_('Next Sentence')}
         >
@@ -91,7 +85,7 @@ const TTSBar = ({
         </button>
         <button
           onClick={onForward.bind(null, false)}
-          className='text-base-content/70 hover:text-premium-gold premium-transition hover:bg-base-content/5 rounded-full p-1.5 hover:scale-110'
+          className='rounded-full p-1 transition-transform duration-200 hover:scale-105'
           title={_('Next Paragraph')}
           aria-label={_('Next Paragraph')}
         >

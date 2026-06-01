@@ -93,7 +93,7 @@ async function processFileKeys(
 
   if (missingFileKeys.length > 0) {
     const fallbackCandidates = missingFileKeys
-      .filter((key) => key.includes('Risale Digital Library/Book'))
+      .filter((key) => key.includes('Readest/Book'))
       .map((key) => {
         const parts = key.split('/');
         if (parts.length === 5) {

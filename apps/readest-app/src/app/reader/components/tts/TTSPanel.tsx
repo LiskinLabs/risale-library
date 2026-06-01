@@ -203,20 +203,18 @@ const TTSPanel = ({
   const timeoutOptions = getTTSTimeoutOptions(_);
 
   return (
-    <div className='premium-glass flex w-full flex-col items-center justify-center gap-4 rounded-[2rem] px-6 py-5 shadow-2xl sm:gap-3'>
-      {/* Rate Slider Area */}
-      <div className='flex w-full flex-col items-center gap-1 opacity-90 transition-opacity hover:opacity-100'>
+    <div className='flex w-full flex-col items-center justify-center gap-2 rounded-2xl px-4 pt-4 sm:gap-1'>
+      <div className='flex w-full flex-col items-center gap-0.5'>
         <input
-          className='range range-sm'
+          className='range'
           type='range'
           min={0.0}
           max={3.0}
           step='0.1'
           value={rate}
           onChange={handleSetRate}
-          style={{ accentColor: 'var(--fallback-p, #c5a059)' }}
         />
-        <div className='text-premium-gold/60 grid w-full grid-cols-7 text-[10px] font-medium tracking-widest'>
+        <div className='grid w-full grid-cols-7 text-xs'>
           <span className='text-center'>|</span>
           <span className='text-center'>|</span>
           <span className='text-center'>|</span>
@@ -225,7 +223,7 @@ const TTSPanel = ({
           <span className='text-center'>|</span>
           <span className='text-center'>|</span>
         </div>
-        <div className='text-premium-gold/80 grid w-full grid-cols-7 text-[10px] font-semibold uppercase tracking-wider'>
+        <div className='grid w-full grid-cols-7 text-xs'>
           <span className='text-center'>{_('Slow')}</span>
           <span className='text-center'></span>
           <span className='text-center'>1.0</span>
@@ -235,40 +233,39 @@ const TTSPanel = ({
           <span className='text-center'>{_('Fast')}</span>
         </div>
       </div>
-
-      {/* Main Controls Area */}
-      <div className='flex w-full items-center justify-between'>
+      <div className='flex items-center justify-between space-x-2'>
         <button
           onClick={() => onBackward()}
-          className='text-base-content/70 hover:text-premium-gold premium-transition hover:bg-base-content/5 rounded-full p-2 hover:scale-110'
+          className='rounded-full p-1 transition-transform duration-200 hover:scale-105'
           title={_('Previous Paragraph')}
           aria-label={_('Previous Paragraph')}
         >
           <MdFastRewind size={iconSize32} />
         </button>
-
         <button
           onClick={onTogglePlay}
-          className='text-premium-gold hover-glow premium-transition bg-base-content/5 hover:bg-base-content/10 flex items-center justify-center rounded-full p-2 hover:scale-110'
+          className='rounded-full p-1 transition-transform duration-200 hover:scale-105'
           title={isPlaying ? _('Pause') : _('Play')}
           aria-label={isPlaying ? _('Pause') : _('Play')}
         >
-          {isPlaying ? <MdPauseCircle size={iconSize48} /> : <MdPlayCircle size={iconSize48} />}
+          {isPlaying ? (
+            <MdPauseCircle size={iconSize48} className='fill-primary' />
+          ) : (
+            <MdPlayCircle size={iconSize48} className='fill-primary' />
+          )}
         </button>
-
         <button
           onClick={() => onForward()}
-          className='text-base-content/70 hover:text-premium-gold premium-transition hover:bg-base-content/5 rounded-full p-2 hover:scale-110'
+          className='rounded-full p-1 transition-transform duration-200 hover:scale-105'
           title={_('Next Paragraph')}
           aria-label={_('Next Paragraph')}
         >
           <MdFastForward size={iconSize32} />
         </button>
-
         <div className='dropdown dropdown-top'>
           <button
             tabIndex={0}
-            className='text-base-content/70 hover:text-premium-gold premium-transition hover:bg-base-content/5 relative flex flex-col items-center justify-center rounded-full p-2 hover:scale-110'
+            className='flex flex-col items-center justify-center rounded-full p-1 transition-transform duration-200 hover:scale-105'
             onClick={(e) => e.currentTarget.focus()}
             title={_('Set Timeout')}
             aria-label={_('Set Timeout')}
@@ -277,7 +274,8 @@ const TTSPanel = ({
             {timeoutCountdown && (
               <span
                 className={clsx(
-                  'bg-premium-gold text-premium-midnight absolute -bottom-1 -right-2 min-w-[3rem] rounded-full px-1.5 py-0.5 text-center text-[10px] font-bold shadow-sm',
+                  'absolute bottom-0 left-1/2 w-12 translate-x-[-50%] translate-y-[80%] px-1',
+                  'bg-primary/80 text-base-100 rounded-full text-center text-xs',
                 )}
               >
                 {timeoutCountdown}
@@ -288,8 +286,8 @@ const TTSPanel = ({
             // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
             tabIndex={0}
             className={clsx(
-              'dropdown-content premium-glass border-premium-gold/10 menu menu-vertical absolute right-0 z-[1] rounded-2xl border shadow-2xl',
-              'mt-4 inline max-h-96 w-[200px] overflow-y-scroll py-2',
+              'dropdown-content bgcolor-base-200 no-triangle menu menu-vertical rounded-box absolute right-0 z-[1] shadow',
+              'mt-4 inline max-h-96 w-[200px] overflow-y-scroll',
             )}
           >
             {timeoutOptions.map((option, index) => (
@@ -297,26 +295,17 @@ const TTSPanel = ({
               <li
                 key={`${index}-${option.value}`}
                 onClick={() => onSelectTimeout(bookKey, option.value)}
-                className='hover:bg-premium-gold/10 premium-transition'
               >
-                <div className='flex items-center gap-3 px-3 py-2'>
+                <div className='flex items-center px-2'>
                   <span
-                    className='text-premium-gold flex items-center justify-center'
                     style={{
                       width: `${defaultIconSize}px`,
                       height: `${defaultIconSize}px`,
                     }}
                   >
-                    {timeoutOption === option.value && <MdCheck size={20} />}
+                    {timeoutOption === option.value && <MdCheck className='text-base-content' />}
                   </span>
-                  <span
-                    className={clsx(
-                      'text-sm font-medium tracking-wide',
-                      timeoutOption === option.value ? 'text-premium-gold' : 'text-base-content',
-                    )}
-                  >
-                    {option.label}
-                  </span>
+                  <span className={clsx('text-base sm:text-sm')}>{option.label}</span>
                 </div>
               </li>
             ))}
@@ -326,7 +315,7 @@ const TTSPanel = ({
         <div className='dropdown dropdown-top'>
           <button
             tabIndex={0}
-            className='text-base-content/70 hover:text-premium-gold premium-transition hover:bg-base-content/5 rounded-full p-2 hover:scale-110'
+            className='rounded-full p-1 transition-transform duration-200 hover:scale-105'
             onClick={(e) => e.currentTarget.focus()}
           >
             <RiVoiceAiFill size={iconSize32} />
@@ -335,8 +324,8 @@ const TTSPanel = ({
             // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
             tabIndex={0}
             className={clsx(
-              'dropdown-content premium-glass border-premium-gold/10 menu menu-vertical absolute right-0 z-[1] rounded-2xl border shadow-2xl',
-              'mt-4 inline max-h-96 w-[250px] overflow-y-scroll py-2',
+              'dropdown-content bgcolor-base-200 no-triangle menu menu-vertical rounded-box absolute right-0 z-[1] shadow',
+              'mt-4 inline max-h-96 w-[250px] overflow-y-scroll',
             )}
             title={_('Select Voice')}
             aria-label={_('Select Voice')}
@@ -344,11 +333,11 @@ const TTSPanel = ({
             {voiceGroups.map((voiceGroup, index) => {
               return (
                 <div key={voiceGroup.id} className=''>
-                  <div className='flex items-center gap-3 px-3 py-1'>
+                  <div className='flex items-center gap-2 px-2 py-1'>
                     <span
                       style={{ width: `${defaultIconSize}px`, height: `${defaultIconSize}px` }}
                     ></span>
-                    <span className='text-premium-gold/60 text-[10px] font-bold uppercase tracking-wider'>
+                    <span className='text-sm text-gray-400 sm:text-xs'>
                       {_('{{engine}}: {{count}} voices', {
                         engine: _(voiceGroup.name),
                         count: voiceGroup.voices.length,
@@ -360,26 +349,20 @@ const TTSPanel = ({
                     <li
                       key={`${index}-${voiceGroup.id}-${voiceIndex}`}
                       onClick={() => !voice.disabled && handleSelectVoice(voice.id, voice.lang)}
-                      className='hover:bg-premium-gold/10 premium-transition'
                     >
-                      <div className='flex items-center gap-3 px-3 py-1.5'>
+                      <div className='flex items-center px-2'>
                         <span
-                          className='text-premium-gold flex items-center justify-center'
                           style={{
                             width: `${defaultIconSize}px`,
                             height: `${defaultIconSize}px`,
                           }}
                         >
-                          {selectedVoice === voice.id && <MdCheck size={20} />}
+                          {selectedVoice === voice.id && <MdCheck className='text-base-content' />}
                         </span>
                         <span
                           className={clsx(
-                            'max-w-[180px] overflow-hidden text-ellipsis text-sm font-medium tracking-wide',
-                            voice.disabled
-                              ? 'text-base-content/30'
-                              : selectedVoice === voice.id
-                                ? 'text-premium-gold'
-                                : 'text-base-content',
+                            'max-w-[180px] overflow-hidden text-ellipsis text-base sm:text-sm',
+                            voice.disabled && 'text-gray-400',
                           )}
                         >
                           {_(voice.name)}
@@ -393,7 +376,7 @@ const TTSPanel = ({
           </ul>
         </div>
       </div>
-      <div className='text-base-content/40 hover:text-premium-gold premium-transition flex h-4 items-center justify-center hover:scale-110'>
+      <div className='flex h-4 items-center justify-center opacity-60 transition-transform duration-200 hover:scale-105 hover:opacity-100'>
         <button
           onClick={onToogleTTSBar}
           className='p-0'

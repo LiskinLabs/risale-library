@@ -110,6 +110,10 @@ export class NativeFile extends File implements ClosableFile {
     return this.#lastModified;
   }
 
+  getNativeLocation(): { path: string; baseDir: BaseDirectory | null } {
+    return { path: this.#fp, baseDir: this.#baseDir };
+  }
+
   async stat() {
     return this.#handle?.stat();
   }
@@ -336,30 +340,11 @@ export class RemoteFile extends File implements ClosableFile {
   }
 
   async open() {
-    try {
-      // FIXME: currently HEAD request in asset protocol is not supported on Android
-      if (getOSPlatform() === 'android') {
-        return await this._open_with_range();
-      } else {
-        return await this._open_with_head();
-      }
-    } catch (e) {
-      console.warn('Falling back to standard GET request for RemoteFile:', e);
-      const response = await fetch(this.url);
-      if (!response.ok) {
-        throw new Error(`Failed to fetch file: ${response.status}`);
-      }
-      // Use Content-Length if available, otherwise read as blob
-      const contentLength = response.headers.get('content-length');
-      if (contentLength) {
-        this.#size = Number(contentLength);
-        this.#type = response.headers.get('content-type') || '';
-      } else {
-        const blob = await response.blob();
-        this.#size = blob.size;
-        this.#type = blob.type || response.headers.get('content-type') || '';
-      }
-      return this;
+    // FIXME: currently HEAD request in asset protocol is not supported on Android
+    if (getOSPlatform() === 'android') {
+      return this._open_with_range();
+    } else {
+      return this._open_with_head();
     }
   }
 

@@ -119,10 +119,10 @@ const _ = (stubKey: string) => stubKey;
 export const themes = [
   {
     name: 'default',
-    label: _('Premium'),
+    label: _('Default'),
     colors: {
-      light: generateLightPalette({ fg: '#2c2421', bg: '#f8f5f0', primary: '#a68a56' }),
-      dark: generateDarkPalette({ fg: '#e2e2e2', bg: '#0f172a', primary: '#c5a059' }),
+      light: generateLightPalette({ fg: '#171717', bg: '#ffffff', primary: '#0066cc' }),
+      dark: generateDarkPalette({ fg: '#e0e0e0', bg: '#222222', primary: '#77bbee' }),
     },
   },
   {

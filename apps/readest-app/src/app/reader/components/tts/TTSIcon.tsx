@@ -22,39 +22,35 @@ const TTSIcon: React.FC<TTSIconProps> = ({ isPlaying, ttsInited, onClick }) => {
       }}
       onClick={onClick}
     >
-      <div className='from-premium-gold/80 via-premium-gold to-premium-gold/40 absolute inset-0 overflow-hidden rounded-full bg-gradient-to-br shadow-[0_0_15px_theme("colors.premium.gold/0.3")]'>
+      <div className='absolute inset-0 overflow-hidden rounded-full bg-gradient-to-r from-blue-500 via-emerald-500 to-violet-500'>
         <div
-          className='from-premium-gold/40 via-premium-gold to-premium-gold/80 absolute -inset-full rounded-full bg-gradient-to-br'
+          className='absolute -inset-full rounded-full bg-gradient-to-r from-blue-500 via-emerald-500 to-violet-500'
           style={{
-            animation:
-              isPlaying && ttsInited ? 'moveGradient 4s ease-in-out infinite alternate' : 'none',
+            animation: isPlaying && ttsInited ? 'moveGradient 2s alternate infinite' : 'none',
           }}
         />
       </div>
 
-      <div className='absolute inset-0 flex items-center justify-center bg-black/10'>
+      <div className='absolute inset-0 flex items-center justify-center'>
         <style>{`
           @keyframes moveGradient {
-            0% { transform: translate(-10%, -10%) scale(1); }
-            100% { transform: translate(10%, 10%) scale(1.1); }
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(25%, 25%); }
           }
           @keyframes bounce {
-            0%, 100% { transform: scaleY(0.4); opacity: 0.8; }
-            50% { transform: scaleY(1); opacity: 1; }
+            0%, 100% { transform: scaleY(1); }
+            50% { transform: scaleY(0.6); }
           }
         `}</style>
-        <div className='flex items-end space-x-[3px]'>
+        <div className='flex items-end space-x-1'>
           {bars.map((bar) => (
             <div
               key={bar}
-              className='w-[3px] rounded-full bg-white shadow-sm'
+              className='w-1 rounded-t bg-white'
               style={{
-                height: '18px',
-                transformOrigin: 'bottom',
-                transform: isPlaying ? 'scaleY(0.4)' : 'scaleY(0.2)',
-                opacity: isPlaying ? 0.8 : 0.5,
+                height: '16px',
                 animationName: isPlaying ? 'bounce' : 'none',
-                animationDuration: isPlaying ? `${0.8 + bar * 0.15}s` : '0s',
+                animationDuration: isPlaying ? `${1 + bar * 0.1}s` : '0s',
                 animationTimingFunction: 'ease-in-out',
                 animationIterationCount: 'infinite',
                 animationDelay: `${bar * 0.1}s`,

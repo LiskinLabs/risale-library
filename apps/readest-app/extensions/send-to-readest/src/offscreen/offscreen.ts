@@ -13,7 +13,7 @@
  * keeps the EPUB in one realm.
  *
  * Protocol:
- *   SW → offscreen: { type:'send-to-readest:clip-and-upload',
+ *   SW → offscreen: { type:'send-to-risale-ai-studio:clip-and-upload',
  *                     html, url, token }
  *   offscreen → SW: { ok:true, inboxId, title, author, byteSize }
  *               or  { ok:false, code, message }
@@ -24,7 +24,7 @@ import { convertToEpub } from '@/services/send/conversion/convertToEpub';
 import type { ClipErrorCode } from '../lib/messages';
 import { uploadEpub } from '../background/upload';
 
-const LOG = '[send-to-readest/offscreen]';
+const LOG = '[send-to-risale-ai-studio/offscreen]';
 
 configureZip().catch((err) => console.warn(LOG, 'configureZip failed', err));
 
@@ -34,13 +34,13 @@ configureZip().catch((err) => console.warn(LOG, 'configureZip failed', err));
 chrome.runtime.onMessage.addListener((message: unknown, _sender, sendResponse): boolean => {
   if (!message || typeof message !== 'object') return false;
   const m = message as { type?: string };
-  if (m.type !== 'send-to-readest:ping') return false;
+  if (m.type !== 'send-to-risale-ai-studio:ping') return false;
   sendResponse({ ok: true });
   return false;
 });
 
 interface ClipAndUploadRequest {
-  type: 'send-to-readest:clip-and-upload';
+  type: 'send-to-risale-ai-studio:clip-and-upload';
   html: string;
   url: string;
   token: string;
@@ -59,7 +59,7 @@ chrome.runtime.onMessage.addListener(
   (message: unknown, _sender, sendResponse: (response: ClipAndUploadResponse) => void): boolean => {
     if (!message || typeof message !== 'object') return false;
     const m = message as { type?: string };
-    if (m.type !== 'send-to-readest:clip-and-upload') return false;
+    if (m.type !== 'send-to-risale-ai-studio:clip-and-upload') return false;
 
     const req = message as ClipAndUploadRequest;
 
