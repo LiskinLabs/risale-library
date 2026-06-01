@@ -238,7 +238,7 @@ jobs:
           cd apps/readest-app/
           rm -rf src-tauri/gen/android
           pnpm tauri android init
-          pnpm tauri icon ../../data/icons/readest-book.png
+          pnpm tauri icon ../../data/icons/risale-ai-studio-book.png
           git checkout .
 
           pushd src-tauri/gen/android
@@ -368,7 +368,7 @@ jobs:
             exit 1
           fi
 
-          exe_file="target/${{ matrix.config.rust_target }}/release/readest.exe"
+          exe_file="target/${{ matrix.config.rust_target }}/release/risale-ai-studio.exe"
           # Browsers on Windows won't download zip files that contain exe files
           # so upload the exe files instead. This is totally stupid.
           # powershell.exe -Command "Compress-Archive -Path $exe_file -DestinationPath $bin_file -Force"

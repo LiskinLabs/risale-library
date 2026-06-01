@@ -12,7 +12,7 @@ RUN --mount=type=cache,id=pnpm,sharing=locked,target=/pnpm/store pnpm install --
 RUN test -f packages/foliate-js/vendor/pdfjs/annotation_layer_builder.css \
     && test -d packages/simplecc-wasm/dist/web \
     || { printf '\nERROR: Required git submodules are not initialized in the source directory.\nEnsure submodules are initialized before running docker build.\nRun: git submodule update --init packages/foliate-js packages/simplecc-wasm\n\n'; exit 1; }
-RUN pnpm --filter @readest/readest-app setup-vendors
+RUN pnpm --filter @LiskinLabs/risale-ai-studio-app setup-vendors
 
 FROM docker.io/library/node:24-slim@sha256:24dc26ef1e3c3690f27ebc4136c9c186c3133b25563ae4d7f0692e4d1fe5db0e AS development-stage
 ENV PNPM_HOME="/pnpm"
