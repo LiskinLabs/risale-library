@@ -5,6 +5,7 @@ import { TranslationFunc } from '@/hooks/useTranslation';
 import { ProgressHandler, ProgressPayload } from '@/utils/transfer';
 import { eventDispatcher } from '@/utils/event';
 import { getTransferMessages } from './transferMessages';
+import { getAccessToken } from '@/utils/access';
 
 const TRANSFER_QUEUE_KEY = 'readest_transfer_queue';
 const RETRY_DELAY_BASE_MS = 2000;
@@ -257,6 +258,20 @@ class TransferManager {
   private async processQueue(): Promise<void> {
     if (this.isProcessing) return;
 
+    // Don't process transfers if user is not authenticated —
+    // cloud operations require a valid token.
+    try {
+      const token = await getAccessToken();
+      if (!token) {
+        // Clear any persisted transfers that can't run without auth
+        useTransferStore.getState().clearAll();
+        return;
+      }
+    } catch {
+      // Auth check failed — bail out silently
+      return;
+    }
+
     this.isProcessing = true;
 
     try {
@@ -368,10 +383,9 @@ class TransferManager {
         }, delay);
       } else {
         if (errorMessage.includes('Not authenticated')) {
-          eventDispatcher.dispatch('toast', {
-            type: 'error',
-            message: _('Please log in to continue'),
-          });
+          // Clear all persisted transfers — they can't run without auth
+          currentStore.clearAll();
+          this.persistQueue();
         } else if (errorMessage.includes('Insufficient storage quota')) {
           eventDispatcher.dispatch('toast', {
             type: 'error',

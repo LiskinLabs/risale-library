@@ -14,7 +14,7 @@ const SupportLinks = () => {
       </p>
       <div className='flex gap-4'>
         <Link
-          href='https://github.com/readest/readest'
+          href='https://github.com/LiskinLabs/risale-ai-studio'
           className='flex items-center gap-2 rounded-full bg-gray-800 p-1.5 text-white transition-colors hover:bg-gray-700'
           title='GitHub'
           aria-label='GitHub'

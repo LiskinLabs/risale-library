@@ -80,7 +80,7 @@ issue or discussion for security-sensitive reports.
 
 Use GitHub's private vulnerability reporting for this repository:
 
-<https://github.com/readest/readest/security/advisories/new>
+<https://github.com/LiskinLabs/risale-ai-studio/security/advisories/new>
 
 When submitting a report, include:
 

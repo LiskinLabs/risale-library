@@ -96,7 +96,14 @@ export const checkAppReleaseNotes = async (isAutoCheck = true) => {
         return true;
       }
     } catch (err) {
-      console.warn('Failed to fetch release notes', err);
+      // Release notes are hosted on the production CDN — unavailable
+      // in local dev or when the domain doesn't resolve.
+      const msg = err instanceof Error ? err.message : String(err);
+      if (msg.includes('Failed to fetch') || msg.includes('NetworkError')) {
+        // Expected in local dev — no CDN available
+        return false;
+      }
+      console.warn('Failed to fetch release notes:', msg);
     }
   } else if (!lastShownVersion) {
     setLastShownReleaseNotesVersion(currentVersion);

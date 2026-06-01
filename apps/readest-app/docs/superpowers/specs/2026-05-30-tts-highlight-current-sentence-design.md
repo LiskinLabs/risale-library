@@ -2,7 +2,7 @@
 
 **Date:** 2026-05-30
 **Status:** Approved (pending spec review)
-**Issue:** [#4085](https://github.com/readest/readest/issues/4085)
+**Issue:** [#4085](https://github.com/LiskinLabs/risale-ai-studio/issues/4085)
 
 ## Problem
 

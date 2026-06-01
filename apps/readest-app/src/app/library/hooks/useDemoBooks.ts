@@ -31,12 +31,20 @@ export const useDemoBooks = () => {
       try {
         const appService = await envConfig.getAppService();
         const demoBooks = libraries[userLang] || (libraries.en as DemoBooks);
-        const books = await Promise.all(
+        // Use allSettled so one failed fetch doesn't cancel all others
+        const results = await Promise.allSettled(
           demoBooks.library.map((url) => appService.importBook(url, [], { saveBook: false })),
         );
-        setBooks(books.filter((book) => book !== null) as Book[]);
+        const books = results
+          .filter((r) => r.status === 'fulfilled' && r.value !== null)
+          .map((r) => (r as PromiseFulfilledResult<Book>).value);
+        setBooks(books);
+        if (books.length === 0 && results.length > 0) {
+          console.log('Demo books unavailable — running in offline/local mode');
+        }
       } catch (error) {
-        console.error('Failed to import demo books:', error);
+        // Silently ignore — demo books are optional for local development
+        console.log('Demo books not available:', (error as Error).message);
       }
     };
 

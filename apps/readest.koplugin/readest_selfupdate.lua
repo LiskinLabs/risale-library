@@ -10,11 +10,11 @@ local SelfUpdate = {}
 
 local UPDATE_URLS = {
     "https://download.risale-ai-studio.com/releases/latest.json",
-    "https://github.com/readest/readest/releases/latest/download/latest.json",
+    "https://github.com/LiskinLabs/risale-ai-studio/releases/latest/download/latest.json",
 }
 local DOWNLOAD_URLS = {
-    "https://download.risale-ai-studio.com/releases/%s/Readest-%s-1.koplugin.zip",
-    "https://github.com/readest/readest/releases/download/%s/Readest-%s-1.koplugin.zip",
+    "https://download.risale-ai-studio.com/releases/%s/RisaleAiStudio-%s-1.koplugin.zip",
+    "https://github.com/LiskinLabs/risale-ai-studio/releases/download/%s/RisaleAiStudio-%s-1.koplugin.zip",
 }
 
 function SelfUpdate:compareVersions(v1, v2)
@@ -117,7 +117,7 @@ function SelfUpdate:downloadAndInstall(plugin_path, version)
     end
 
     local tag = "v" .. version
-    local zip_name = "Readest-" .. version .. "-1.koplugin.zip"
+    local zip_name = "RisaleAiStudio-" .. version .. "-1.koplugin.zip"
     local tmp_path = DataStorage:getDataDir() .. "/" .. zip_name
 
     UIManager:show(InfoMessage:new{

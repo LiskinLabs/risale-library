@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://risale-ai-studio.com?utm_source=github&utm_medium=referral&utm_campaign=readme" target="_blank">
-    <img src="https://github.com/readest/readest/blob/main/apps/readest-app/src-tauri/icons/icon.png?raw=true" alt="Risale AI Studio Logo" width="20%" />
+    <img src="https://github.com/LiskinLabs/risale-ai-studio/blob/main/apps/readest-app/src-tauri/icons/icon.png?raw=true" alt="Risale AI Studio Logo" width="20%" />
   </a>
   <h1>Risale AI Studio</h1>
   <br>
@@ -135,7 +135,7 @@ To get started with Risale AI Studio, follow these steps to clone and build the 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/readest/readest.git
+git clone https://github.com/LiskinLabs/risale-ai-studio.git
 cd readest
 ```
 
@@ -207,7 +207,7 @@ pnpm tauri ios build
 ```
 
 Please refer to our release script if you experience any issues:
-https://github.com/readest/readest/blob/main/.github/workflows/release.yml
+https://github.com/LiskinLabs/risale-ai-studio/blob/main/.github/workflows/release.yml
 
 ### 6. Setup dev environment with Nix
 
@@ -255,7 +255,7 @@ Please check the [wiki][link-gh-wiki] of this project for more information on de
 
 **Still Stuck?**
 
-- See Issue [readest/readest#358](https://github.com/readest/readest/issues/358) for further details, or head over to our [Discord][link-discord] server and open a support discussion with detailed logs of your environment and the steps you’ve taken.
+- See Issue [LiskinLabs/risale-ai-studio#358](https://github.com/LiskinLabs/risale-ai-studio/issues/358) for further details, or head over to our [Discord][link-discord] server and open a support discussion with detailed logs of your environment and the steps you’ve taken.
 
 ### 2. AppImage Launches but Only Shows a Taskbar Icon
 
@@ -287,7 +287,7 @@ If you prefer a more reliable out-of-the-box experience on Arch Linux, consider 
 
 Risale AI Studio is open-source, and contributions are welcome! Feel free to open issues, suggest features, or submit pull requests. Please **review our [contributing guidelines](CONTRIBUTING.md) before you start**. We also welcome you to join our [Discord][link-discord] community for either support or contributing guidance.
 
-<a href="https://github.com/readest/readest/graphs/contributors">
+<a href="https://github.com/LiskinLabs/risale-ai-studio/graphs/contributors">
   <p align="left">
     <img width="500" src="https://contrib.rocks/image?repo=readest/readest" alt="A table of avatars from the project's contributors" />
   </p>
@@ -350,15 +350,15 @@ We would also like to thank the [Web Chinese Fonts Plan](https://chinese-font.ne
 [link-website]: https://risale-ai-studio.com?utm_source=github&utm_medium=referral&utm_campaign=readme
 [link-flathub]: https://flathub.org/en/apps/com.liskinlabs.risale-ai-studio
 [link-web-readest]: https://web.risale-ai-studio.com
-[link-gh-releases]: https://github.com/readest/readest/releases
-[link-gh-commits]: https://github.com/readest/readest/commits/main
-[link-gh-pulse]: https://github.com/readest/readest/pulse
-[link-gh-wiki]: https://github.com/readest/readest/wiki
+[link-gh-releases]: https://github.com/LiskinLabs/risale-ai-studio/releases
+[link-gh-commits]: https://github.com/LiskinLabs/risale-ai-studio/commits/main
+[link-gh-pulse]: https://github.com/LiskinLabs/risale-ai-studio/pulse
+[link-gh-wiki]: https://github.com/LiskinLabs/risale-ai-studio/wiki
 [link-discord]: https://discord.gg/gntyVNk3BJ
 [link-parallel-read]: https://risale-ai-studio.com/#parallel-read
 [link-koreader]: https://github.com/koreader/koreader
 [link-hellogithub]: https://hellogithub.com/repository/8a5b6ade2aee461a8bd94e59200682a7
 [link-deepwiki]: https://deepwiki.com/readest/readest
-[link-locales]: https://github.com/readest/readest/tree/main/apps/readest-app/public/locales
-[link-kosync-wiki]: https://github.com/readest/readest/wiki/Sync-with-Koreader-devices
+[link-locales]: https://github.com/LiskinLabs/risale-ai-studio/tree/main/apps/readest-app/public/locales
+[link-kosync-wiki]: https://github.com/LiskinLabs/risale-ai-studio/wiki/Sync-with-Koreader-devices
 [link-reddit]: https://reddit.com/r/readest/

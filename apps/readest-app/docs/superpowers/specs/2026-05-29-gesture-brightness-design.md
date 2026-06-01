@@ -1,6 +1,6 @@
 # Gesture-Based Brightness Control (iOS / Android)
 
-GitHub issue: https://github.com/readest/readest/issues/3021
+GitHub issue: https://github.com/LiskinLabs/risale-ai-studio/issues/3021
 
 ## Summary
 

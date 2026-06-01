@@ -51,11 +51,11 @@
     <keyword>sync</keyword>
   </keywords>
 
-  <url type="homepage">https://github.com/readest/readest</url>
-  <url type="bugtracker">https://github.com/readest/readest/issues</url>
-  <url type="help">https://github.com/readest/readest/wiki</url>
+  <url type="homepage">https://github.com/LiskinLabs/risale-ai-studio</url>
+  <url type="bugtracker">https://github.com/LiskinLabs/risale-ai-studio/issues</url>
+  <url type="help">https://github.com/LiskinLabs/risale-ai-studio/wiki</url>
   <url type="donation">https://github.com/sponsors/readest</url>
-  <url type="vcs-browser">https://github.com/readest/readest</url>
+  <url type="vcs-browser">https://github.com/LiskinLabs/risale-ai-studio</url>
 
   <launchable type="desktop-id">com.bilingify.readest.desktop</launchable>
 

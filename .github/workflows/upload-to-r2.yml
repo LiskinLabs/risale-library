@@ -57,7 +57,7 @@ jobs:
 
       - name: Modify latest.json download URLs
         run: |
-          GITHUB_BASE_URL="https://github.com/readest/readest/releases/download"
+          GITHUB_BASE_URL="https://github.com/LiskinLabs/risale-ai-studio/releases/download"
           READEST_BASE_URL="https://download.risale-ai-studio.com/releases"
           sed -i "s#${GITHUB_BASE_URL}#${READEST_BASE_URL}#g" ./release-assets/latest.json
 

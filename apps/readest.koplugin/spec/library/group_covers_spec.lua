@@ -8,7 +8,7 @@
 --     download for cloud-present children so a subsequent paint can
 --     compose the mosaic. Without this hook, a freshly-pulled library
 --     renders every group as FakeCover until the user drills into each
---     group individually (see https://github.com/readest/readest/… for
+--     group individually (see https://github.com/LiskinLabs/risale-ai-studio/… for
 --     the bug report).
 
 require("spec_helper")
