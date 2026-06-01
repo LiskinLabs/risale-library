@@ -51,7 +51,10 @@ def sanitize_html(html: str) -> str:
                     if k in _ALLOWED_ATTRS and "javascript" not in v.lower()
                 ]
                 if filtered:
-                    attrs_str = "".join(f' {k}="{v}"' for k, v in filtered)
+                    attrs_str = "".join(
+                        f' {k}="{escape(v).replace(chr(34), "&quot;")}"'
+                        for k, v in filtered
+                    )
                     self.result.append(f"<{tag}{attrs_str}>")
                 else:
                     self.result.append(f"<{tag}>")
