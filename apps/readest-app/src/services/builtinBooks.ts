@@ -44,9 +44,18 @@ export const BUILTIN_BOOKS: BuiltinBookEntry[] = [
   // { filename: 'sualar.epub', title: 'Şuâlar', ... },
 ];
 
-/** URL prefix for fetching builtin books */
-export const BUILTIN_BOOKS_BASE_URL =
-  process.env['NEXT_PUBLIC_BUILTIN_BOOKS_URL'] || '/builtin-books';
+/** URL prefix for fetching builtin books.
+ * Must be an absolute URL for the book import pipeline. */
+export function getBuiltinBooksBaseUrl(): string {
+  if (typeof window !== 'undefined') {
+    return `${window.location.origin}/builtin-books`;
+  }
+  // Fallback for SSR — should be overridden via env var in production
+  return process.env['NEXT_PUBLIC_BUILTIN_BOOKS_URL'] || 'http://localhost:3000/builtin-books';
+}
+
+/** @deprecated — prefer getBuiltinBooksBaseUrl() */
+export const BUILTIN_BOOKS_BASE_URL = '/builtin-books';
 
 // ── Helpers ─────────────────────────────────────────────────────────
 

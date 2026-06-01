@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 
 import { useEnv } from '@/context/EnvContext';
 import type { Book } from '@/types/book';
-import { BUILTIN_BOOKS, BUILTIN_BOOKS_BASE_URL } from '@/services/builtinBooks';
+import { BUILTIN_BOOKS, getBuiltinBooksBaseUrl } from '@/services/builtinBooks';
 import { useLibraryStore } from '@/store/libraryStore';
 
 /**
@@ -38,7 +38,8 @@ export const useBuiltinBooks = () => {
         if (exists) continue;
 
         try {
-          const url = `${BUILTIN_BOOKS_BASE_URL}/${entry.filename}`;
+          const baseUrl = getBuiltinBooksBaseUrl();
+          const url = `${baseUrl}/${entry.filename}`;
           console.log(`[BuiltinBooks] Importing: ${entry.title} from ${url}`);
           const book = await appService.importBook(url, [], { saveBook: true });
           if (book) {
