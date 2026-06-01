@@ -38,6 +38,7 @@ jobs:
         run: |
           platform=${{ matrix.platform }}
           echo "PLATFORM_PAIR=${platform//\//-}" >> "$GITHUB_ENV"
+          echo "REPO_OWNER=${GITHUB_REPOSITORY_OWNER,,}" >> "$GITHUB_ENV"
 
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
         with:
@@ -57,7 +58,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@80c7e94dd9b9319bd5eb7a0e0fe9291e23a2a2e9 # v6.1.0
         with:
-          images: ghcr.io/${{ github.repository_owner }}/risale-ai-studio
+          images: ghcr.io/${{ env.REPO_OWNER }}/risale-ai-studio
 
       - name: Build and push by digest
         id: build
@@ -69,9 +70,9 @@ jobs:
           platforms: ${{ matrix.platform }}
           labels: ${{ steps.meta.outputs.labels }}
           build-args: ${{ env.BUILD_ARGS }}
-          cache-from: type=registry,ref=ghcr.io/${{ github.repository_owner }}/risale-ai-studio:buildcache-${{ env.PLATFORM_PAIR }}
-          cache-to: type=registry,ref=ghcr.io/${{ github.repository_owner }}/risale-ai-studio:buildcache-${{ env.PLATFORM_PAIR }},mode=max
-          outputs: type=image,name=ghcr.io/${{ github.repository_owner }}/risale-ai-studio,push-by-digest=true,name-canonical=true,push=true
+          cache-from: type=registry,ref=ghcr.io/${{ env.REPO_OWNER }}/risale-ai-studio:buildcache-${{ env.PLATFORM_PAIR }}
+          cache-to: type=registry,ref=ghcr.io/${{ env.REPO_OWNER }}/risale-ai-studio:buildcache-${{ env.PLATFORM_PAIR }},mode=max
+          outputs: type=image,name=ghcr.io/${{ env.REPO_OWNER }}/risale-ai-studio,push-by-digest=true,name-canonical=true,push=true
 
       - name: Export digest
         run: |
@@ -100,6 +101,9 @@ jobs:
           path: /tmp/digests
           pattern: digests-*
           merge-multiple: true
+
+      - name: Prepare env
+        run: echo "REPO_OWNER=${GITHUB_REPOSITORY_OWNER,,}" >> "$GITHUB_ENV"
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@d7f5e7f509e45cec5c76c4d5afdd7de93d0b3df5 # v4.1.0
@@ -132,7 +136,7 @@ jobs:
         if: steps.dockerhub.outputs.enabled != 'true'
         uses: docker/metadata-action@80c7e94dd9b9319bd5eb7a0e0fe9291e23a2a2e9 # v6.1.0
         with:
-          images: ghcr.io/${{ github.repository_owner }}/risale-ai-studio
+          images: ghcr.io/${{ env.REPO_OWNER }}/risale-ai-studio
           tags: |
             type=raw,value=main,enable={{is_default_branch}}
             type=raw,value=latest,enable={{is_default_branch}}
@@ -147,7 +151,7 @@ jobs:
         uses: docker/metadata-action@80c7e94dd9b9319bd5eb7a0e0fe9291e23a2a2e9 # v6.1.0
         with:
           images: |
-            ghcr.io/${{ github.repository_owner }}/risale-ai-studio
+            ghcr.io/${{ env.REPO_OWNER }}/risale-ai-studio
             docker.io/${{ secrets.DOCKERHUB_USERNAME }}/risale-ai-studio
           tags: |
             type=raw,value=main,enable={{is_default_branch}}
@@ -165,7 +169,7 @@ jobs:
         run: |
           docker buildx imagetools create \
             $(jq -cr '.tags | map("-t " + .) | join(" ")' <<< "$DOCKER_METADATA_OUTPUT_JSON") \
-            $(printf 'ghcr.io/${{ github.repository_owner }}/risale-ai-studio@sha256:%s ' *)
+            $(printf 'ghcr.io/${{ env.REPO_OWNER }}/risale-ai-studio@sha256:%s ' *)
 
       - name: Create manifest list and push (GHCR + Docker Hub)
         if: steps.dockerhub.outputs.enabled == 'true'
@@ -175,7 +179,7 @@ jobs:
         run: |
           docker buildx imagetools create \
             $(jq -cr '.tags | map("-t " + .) | join(" ")' <<< "$DOCKER_METADATA_OUTPUT_JSON") \
-            $(printf 'ghcr.io/${{ github.repository_owner }}/risale-ai-studio@sha256:%s ' *)
+            $(printf 'ghcr.io/${{ env.REPO_OWNER }}/risale-ai-studio@sha256:%s ' *)
 
       - name: Published image summary
         run: |
