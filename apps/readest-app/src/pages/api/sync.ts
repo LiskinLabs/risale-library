@@ -176,7 +176,7 @@ export async function POST(req: NextRequest) {
   const body = await req.json();
   const { books = [], configs = [], notes = [] } = body as SyncData;
 
-  const BATCH_SIZE = 100;
+  const BATCH_SIZE = 50;
   const upsertRecords = async (
     table: TableName,
     primaryKeys: (keyof BookDataRecord)[],
@@ -232,8 +232,8 @@ export async function POST(req: NextRequest) {
       });
 
       // Separate into inserts and updates
-      const toInsert: (DBBook | DBBookConfig | DBBookConfig)[] = [];
-      const toUpdate: (DBBook | DBBookConfig | DBBookConfig)[] = [];
+      const toInsert: (DBBook | DBBookConfig)[] = [];
+      const toUpdate: (DBBook | DBBookConfig)[] = [];
       const batchAuthoritativeRecords: BookDataRecord[] = [];
 
       for (const { original, db: dbRec } of dbRecords) {
@@ -263,11 +263,13 @@ export async function POST(req: NextRequest) {
         }
       }
 
-      // Batch insert
+      const onConflict = ['user_id', ...primaryKeys].join(',');
+
+      // Batch insert (use upsert to handle race conditions where record was created between select and insert)
       if (toInsert.length > 0) {
         const { data: inserted, error: insertError } = await supabase
           .from(table)
-          .insert(toInsert)
+          .upsert(toInsert, { onConflict })
           .select();
 
         if (insertError) {
@@ -277,13 +279,11 @@ export async function POST(req: NextRequest) {
         batchAuthoritativeRecords.push(...(inserted || []));
       }
 
-      // Batch upsert
+      // Batch update
       if (toUpdate.length > 0) {
         const { data: updated, error: updateError } = await supabase
           .from(table)
-          .upsert(toUpdate, {
-            onConflict: ['user_id', ...primaryKeys].join(','),
-          })
+          .upsert(toUpdate, { onConflict })
           .select();
 
         if (updateError) {

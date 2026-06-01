@@ -76,9 +76,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (fetchError && fetchError.code !== 'PGRST116') {
       return res.status(500).json({ error: fetchError.message });
     }
-    let objSize = fileSize;
+
     if (existingRecord) {
-      objSize = existingRecord.file_size;
+      // Re-uploading: update size and clear deleted_at. We use the incoming
+      // fileSize to sign the URL, so the DB record must match.
+      const { error: updateError } = await supabase
+        .from('files')
+        .update({
+          file_size: fileSize,
+          book_hash: bookHash ?? existingRecord.book_hash,
+          replica_kind: replicaKind ?? existingRecord.replica_kind,
+          replica_id: replicaId ?? existingRecord.replica_id,
+          deleted_at: null,
+          updated_at: new Date().toISOString(),
+        })
+        .eq('id', existingRecord.id);
+
+      if (updateError) return res.status(500).json({ error: updateError.message });
     } else {
       const { data: inserted, error: insertError } = await supabase
         .from('files')
@@ -99,7 +113,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     try {
-      const uploadUrl = await getUploadSignedUrl(fileKey, objSize, 1800);
+      const uploadUrl = await getUploadSignedUrl(fileKey, fileSize, 1800);
 
       res.status(200).json({
         uploadUrl,
