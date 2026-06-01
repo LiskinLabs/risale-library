@@ -194,19 +194,27 @@ p.arabic, p.separator { text-indent: 0; }
 # ── EPUB Generator ───────────────────────────────────────────────────
 
 
+class TocEntry:
+    """A single TOC node."""
+    def __init__(self, title: str, href: str, level: int, play_order: int):
+        self.title = title
+        self.href = href
+        self.level = level
+        self.play_order = play_order
+        self.children: list[TocEntry] = []
+
+
 class DiyanetEPUBGenerator:
     def __init__(self, book_dir: Path, title: str, author: str):
         self.book_dir = Path(book_dir)
         self.title = title
         self.author = author
-        self.sections = []  # list of (filename, html_content)
-        self._fix_punctuation = re.compile(
-            r"([ıi̇])̂",  # fix decomposed i-hat
-        )
+        self.sections = []     # list of (filename, html_content)
+        self.toc_entries = []  # list of TocEntry
+        self._heading_counter = 0
 
     def parse(self):
         """Read all HTML files in order, extract body content."""
-        # Master TOC file is "01 SOZLER.html"
         files = sorted(
             [f for f in self.book_dir.glob("*.html") if not f.name.startswith("01 ")],
             key=lambda f: f.name,
@@ -216,7 +224,6 @@ class DiyanetEPUBGenerator:
             with open(fpath, "r", encoding="utf-8") as f:
                 html = f.read()
 
-            # Extract <div class="entry-content">...</div>
             m = re.search(
                 r'<div\s+class="entry-content">(.*?)</div>', html, re.DOTALL
             )
@@ -230,8 +237,8 @@ class DiyanetEPUBGenerator:
 
         print(f"  Parsed {len(self.sections)} sections")
 
-    def _convert_body(self, body: str) -> str:
-        """Convert Diyanet HTML body to EPUB-ready XHTML."""
+    def _convert_body(self, body: str, section_idx: int) -> str:
+        """Convert Diyanet HTML body to EPUB-ready XHTML with anchor IDs."""
         lines = body.split("\n")
         out = []
 
@@ -240,9 +247,21 @@ class DiyanetEPUBGenerator:
             if not line:
                 continue
 
-            # Pass through headings as-is (already <h1>-<h4>)
-            if re.match(r"^<h[1-4]>", line):
-                out.append(line)
+            # Headings: add unique anchor ID for TOC linking
+            m = re.match(r"^<h([1-4])>(.*)</h\1>$", line)
+            if m:
+                level = int(m.group(1))
+                heading_text = m.group(2).strip()
+                self._heading_counter += 1
+                anchor = f"heading-{self._heading_counter}"
+                # Store for TOC
+                href = f"section_{section_idx + 1:03d}.xhtml#{anchor}"
+                self.toc_entries.append(
+                    TocEntry(heading_text, href, level, len(self.toc_entries) + 1)
+                )
+                out.append(
+                    f'<h{level} id="{anchor}">{heading_text}</h{level}>'
+                )
                 continue
 
             # Paragraphs
@@ -295,8 +314,9 @@ class DiyanetEPUBGenerator:
 
             body_parts = []
             for sec_name, sec_body in chunk:
+                sec_idx = self.sections.index((sec_name, sec_body))
                 body_parts.append(
-                    f'<!-- {escape(sec_name)} -->\n{self._convert_body(sec_body)}'
+                    f'<!-- {escape(sec_name)} -->\n{self._convert_body(sec_body, sec_idx)}'
                 )
 
             xhtml = f"""<?xml version="1.0" encoding="UTF-8"?>
@@ -383,15 +403,23 @@ class DiyanetEPUBGenerator:
             "</package>"
         )
 
-    def _ncx(self, book_id, xhtml_files):
-        nav_points = []
-        for f in xhtml_files:
-            nav_points.append(
-                f'<navPoint id="nav_{f["id"]}" playOrder="{f["play_order"]}">'
-                f"<navLabel><text>{escape(f['title'])}</text></navLabel>"
-                f'<content src="{f["filename"]}"/>'
-                "</navPoint>"
-            )
+    def _ncx(self, book_id, _xhtml_files):
+        """Build hierarchical NCX from extracted headings."""
+
+        def render_ncx(entries: list[TocEntry]) -> str:
+            parts = []
+            for e in entries:
+                inner = render_ncx(e.children)
+                parts.append(
+                    f'<navPoint id="nav_{e.play_order}" playOrder="{e.play_order}">'
+                    f"<navLabel><text>{escape(e.title)}</text></navLabel>"
+                    f'<content src="{e.href}"/>'
+                    f"{inner}"
+                    "</navPoint>"
+                )
+            return "".join(parts)
+
+        tree = self._build_toc_tree()
         return (
             '<?xml version="1.0" encoding="UTF-8"?>'
             '<!DOCTYPE ncx PUBLIC "-//NISO//DTD ncx 2005-1//EN" '
@@ -402,16 +430,42 @@ class DiyanetEPUBGenerator:
             f"<docTitle><text>{escape(self.title)}</text></docTitle>"
             f"<docAuthor><text>{escape(self.author)}</text></docAuthor>"
             "<navMap>"
-            + " ".join(nav_points)
+            + render_ncx(tree)
             + "</navMap></ncx>"
         )
 
-    def _nav(self, xhtml_files):
-        items = []
-        for f in xhtml_files:
-            items.append(
-                f'<li><a href="{f["filename"]}">{escape(f["title"])}</a></li>'
-            )
+    def _build_toc_tree(self) -> list[TocEntry]:
+        """Build hierarchical TOC from flat heading list."""
+        root: list[TocEntry] = []
+        stack: list[TocEntry] = []
+
+        for entry in self.toc_entries:
+            # Pop stack until we find a parent (lower or equal level)
+            while stack and stack[-1].level >= entry.level:
+                stack.pop()
+            if stack:
+                stack[-1].children.append(entry)
+            else:
+                root.append(entry)
+            stack.append(entry)
+
+        return root
+
+    def _nav(self, _xhtml_files):
+        """Build EPUB 3 NAV with hierarchical TOC."""
+
+        def render_nav(entries: list[TocEntry]) -> str:
+            if not entries:
+                return ""
+            items = []
+            for e in entries:
+                inner = render_nav(e.children)
+                items.append(
+                    f'<li><a href="{e.href}">{escape(e.title)}</a>{inner}</li>'
+                )
+            return f"<ol>{''.join(items)}</ol>"
+
+        tree = self._build_toc_tree()
         return (
             '<?xml version="1.0" encoding="UTF-8"?>'
             '<!DOCTYPE html>'
@@ -420,14 +474,9 @@ class DiyanetEPUBGenerator:
             f"<head><title>{escape(self.title)} — Icindekiler</title></head>"
             "<body>"
             '<nav epub:type="toc" id="toc">'
-            "<h1>Icindekiler</h1><ol>"
-            + " ".join(items)
-            + "</ol></nav>"
-            '<nav epub:type="landmarks" hidden="">'
-            "<h2>Kilavuz</h2><ol>"
-            f'<li><a epub:type="bodymatter" href="{xhtml_files[0]["filename"]}">Baslangic</a></li>'
-            "</ol></nav>"
-            "</body></html>"
+            "<h1>Icindekiler</h1>"
+            + render_nav(tree)
+            + "</nav></body></html>"
         )
 
 
