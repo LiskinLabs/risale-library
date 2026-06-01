@@ -101,15 +101,16 @@ def is_arabic_text(text: str) -> bool:
 
 # ── CSS ─────────────────────────────────────────────────────────────
 
-CSS = r"""/* ── eRisale-style Risale-i Nur CSS ──────────────── */
+CSS = r"""/* ── Risale-i Nur EPUB CSS (structural only) ──────
+   Colors and backgrounds are left to the reader app's
+   theme system (sepia, dark mode, etc.). This CSS only
+   defines text structure: headings, Arabic detection,
+   Sual/Elcevap blocks, and separators. */
+
+/* ── Body ─────────────────────────────────────── */
 body {
   font-family: "Georgia", "Noto Serif", "Crimson Text", serif;
-  font-size: 1.08rem;
   line-height: 1.95;
-  color: #1a1a1a;
-  background: #fdfaf5;
-  margin: 2rem 2.5rem;
-  max-width: 42rem;
   text-align: justify;
   hyphens: auto;
   font-variant-ligatures: common-ligatures;
@@ -121,7 +122,6 @@ h1 {
   font-size: 1.8rem;
   font-weight: bold;
   text-align: center;
-  color: #2c3e50;
   margin: 2.5rem 0 1.5rem;
   line-height: 1.3;
   page-break-before: always;
@@ -130,7 +130,6 @@ h2 {
   font-size: 1.45rem;
   font-weight: bold;
   text-align: center;
-  color: #34495e;
   margin: 2rem 0 1rem;
   line-height: 1.35;
 }
@@ -138,57 +137,45 @@ h3 {
   font-size: 1.22rem;
   font-weight: bold;
   text-align: center;
-  color: #3d566e;
   margin: 1.8rem 0 0.8rem;
 }
 h4 {
   font-size: 1.12rem;
   font-weight: bold;
   text-align: center;
-  color: #4a6278;
   margin: 1.5rem 0 0.6rem;
 }
 
-/* ── Arabic ────────────────────────────────────── */
+/* ── Arabic (eRisale-style: centered, larger, no background) ── */
 .arabic {
   display: block;
-  text-align: right;
+  text-align: center;
   direction: rtl;
   font-family: "Traditional Arabic", "Scheherazade New", "Amiri", "Noto Naskh Arabic", serif;
   font-size: 1.5rem;
   line-height: 2.5;
-  color: #1a4a2e;
   margin: 1rem 0;
   padding: 0.6rem 1rem;
-  border-right: 3px solid #c8a96e;
-  background: linear-gradient(to left, #f7f3eb 0%, transparent 100%);
 }
+/* Inline Arabic within regular text */
 .arabic-inline {
   direction: rtl;
   font-family: "Traditional Arabic", "Scheherazade New", "Amiri", serif;
-  font-size: 1.25rem;
-  color: #1a4a2e;
+  font-size: 1.2rem;
   unicode-bidi: embed;
-}
-
-/* ── Key terms ─────────────────────────────────── */
-strong {
-  color: #2c3e50;
 }
 
 /* ── Sual / Elcevap ────────────────────────────── */
 .sual-elcevap {
   margin: 1rem 0;
   padding: 0.5rem 1rem;
-  border-left: 3px solid #c8a96e;
-  background: #f9f6f0;
+  border-left: 3px solid;
 }
 
 /* ── Separator ─────────────────────────────────── */
 .separator {
   text-align: center;
   margin: 1.5rem 0;
-  color: #c8a96e;
   font-size: 1.2rem;
   letter-spacing: 0.5rem;
   text-indent: 0;
@@ -201,17 +188,6 @@ p {
 }
 p:first-of-type { text-indent: 0; }
 p.arabic, p.separator { text-indent: 0; }
-.no-indent { text-indent: 0; }
-
-/* ── Dark mode ─────────────────────────────────── */
-@media (prefers-color-scheme: dark) {
-  body { color: #e0d8c8; background: #1a1814; }
-  h1, h2, h3, h4 { color: #c8b88a; }
-  .arabic { color: #8fbc8f; background: linear-gradient(to left, #2a2520, transparent); border-right-color: #5a7a5a; }
-  .arabic-inline { color: #8fbc8f; }
-  strong { color: #c8b88a; }
-  .sual-elcevap { background: #252220; border-left-color: #5a7a5a; }
-}
 """
 
 
