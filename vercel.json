@@ -1,0 +1,12 @@
+{
+  "buildCommand": "cd apps/readest-app && echo 'NEXT_PUBLIC_APP_PLATFORM=web' > .env.web && touch .env.local && npx next build",
+  "outputDirectory": "apps/readest-app/.next",
+  "installCommand": "pnpm install --no-frozen-lockfile",
+  "framework": "nextjs",
+  "build": {
+    "env": {
+      "NEXT_PUBLIC_APP_PLATFORM": "web",
+      "PNPM_VERSION": "10.33.0"
+    }
+  }
+}
