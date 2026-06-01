@@ -106,6 +106,8 @@ export interface Book {
   progress?: [number, number]; // Add progress field: [current, total], 1-based page number
   readingStatus?: ReadingStatus;
   primaryLanguage?: string;
+  /** Built-in book that ships with the app — cannot be deleted by the user. */
+  builtin?: boolean;
 
   metadata?: BookMetadata;
 }

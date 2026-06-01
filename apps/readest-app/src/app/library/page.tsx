@@ -35,6 +35,7 @@ import { usePullToRefresh } from '@/hooks/usePullToRefresh';
 import { useTheme } from '@/hooks/useTheme';
 import { useUICSS } from '@/hooks/useUICSS';
 import { useDemoBooks } from './hooks/useDemoBooks';
+import { useBuiltinBooks } from './hooks/useBuiltinBooks';
 import { useBooksSync } from './hooks/useBooksSync';
 import { useInboxDrainer } from '@/hooks/useInboxDrainer';
 import { useOPDSSubscriptions } from '@/hooks/useOPDSSubscriptions';
@@ -215,6 +216,7 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
   const iconSize = useResponsiveSize(18);
   const viewSettings = settings.globalViewSettings;
   const demoBooks = useDemoBooks();
+  const builtinBooks = useBuiltinBooks();
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const handleScrollerRef = useCallback((el: HTMLDivElement | null) => {
     scrollRef.current = el;
@@ -671,6 +673,24 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [demoBooks, libraryLoaded]);
 
+  // Add built-in Risale books to library when imported
+  useEffect(() => {
+    if (builtinBooks.length > 0 && libraryLoaded) {
+      const newLibrary = [...libraryBooks];
+      for (const book of builtinBooks) {
+        const idx = newLibrary.findIndex((b) => b.hash === book.hash);
+        if (idx === -1) {
+          newLibrary.push(book);
+        } else {
+          newLibrary[idx] = book;
+        }
+      }
+      setLibrary(newLibrary);
+      appService?.saveLibraryBooks(newLibrary);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [builtinBooks, libraryLoaded]);
+
   const importBooks = async (files: SelectedFile[], groupId?: string) => {
     setLoading(true);
     const { library } = useLibraryStore.getState();
@@ -868,6 +888,15 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
 
   const handleBookDelete = (deleteAction: DeleteAction) => {
     return async (book: Book, syncBooks = true) => {
+      // Protect built-in books from deletion
+      if (book.builtin && (deleteAction === 'local' || deleteAction === 'both')) {
+        eventDispatcher.dispatch('toast', {
+          type: 'error',
+          message: _('Cannot delete built-in books'),
+        });
+        return false;
+      }
+
       const deletionMessages = {
         both: _('Book deleted: {{title}}', { title: book.title }),
         cloud: _('Deleted cloud backup of the book: {{title}}', { title: book.title }),
