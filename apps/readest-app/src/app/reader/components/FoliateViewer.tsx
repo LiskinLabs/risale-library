@@ -181,6 +181,7 @@ const FoliateViewer: React.FC<{
                 'style',
                 'punctuation',
                 'footnote',
+                'hasiye',
                 'whitespace',
                 'language',
                 'sanitizer',

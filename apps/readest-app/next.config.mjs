@@ -32,7 +32,7 @@ const nextConfig = {
     // between runs. Dev caching is on by default since Next 16.1; build
     // caching is opt-in (beta).
     turbopackFileSystemCacheForDev: true,
-    turbopackFileSystemCacheForBuild: true,
+    turbopackFileSystemCacheForBuild: false,
   },
   // Configure assetPrefix or else the server won't properly resolve your assets.
   assetPrefix: '',
@@ -48,6 +48,8 @@ const nextConfig = {
       // Without an alias, webpack walks up from that source location and
       // can't find fflate (only installed in this app's node_modules).
       fflate: path.resolve(__dirname, 'node_modules/fflate'),
+      '@pdfjs': path.resolve(__dirname, 'public/vendor/pdfjs'),
+      '@simplecc': path.resolve(__dirname, 'public/vendor/simplecc'),
       ...(appPlatform !== 'web'
         ? { '@tursodatabase/database-wasm': false }
         : { 'tauri-plugin-turso': false }),
@@ -60,6 +62,8 @@ const nextConfig = {
       // Turbopack rejects absolute paths in resolveAlias ("server relative
       // imports not implemented") — use a project-relative path.
       fflate: './node_modules/fflate',
+      '@pdfjs': './public/vendor/pdfjs',
+      '@simplecc': './public/vendor/simplecc',
       ...(appPlatform !== 'web'
         ? { '@tursodatabase/database-wasm': './src/utils/stub.ts' }
         : { 'tauri-plugin-turso': './src/utils/stub.ts' }),
@@ -127,7 +131,7 @@ const nextConfig = {
   },
 };
 
-const pwaDisabled = isDev || appPlatform !== 'web';
+const pwaDisabled = true; // isDev || appPlatform !== 'web';
 
 const withPWA = pwaDisabled
   ? (config) => config

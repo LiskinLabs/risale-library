@@ -8,10 +8,12 @@ import { simpleccTransformer } from './simplecc';
 import { styleTransformer } from './style';
 import { proofreadTransformer } from './proofread';
 import { warichuTransformer } from './warichu';
+import { hasiyeTransformer } from './hasiye';
 
 export const availableTransformers: Transformer[] = [
   punctuationTransformer,
   footnoteTransformer,
+  hasiyeTransformer,
   languageTransformer,
   styleTransformer,
   whitespaceTransformer,
