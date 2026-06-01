@@ -22,6 +22,24 @@ BOOKS = [
 ]
 
 
+# HTML tags/attributes that are safe to pass through from Diyanet source.
+# Everything else is stripped. The source is trusted (official Diyanet text)
+# but we sanitize for defence-in-depth.
+_ALLOWED_TAGS = {"p", "h1", "h2", "h3", "h4", "strong", "em", "span", "br"}
+_ALLOWED_ATTRS = {"span": {"class"}, "p": {"class"}, "h1": {"class"}, "h2": {"class"}, "h3": {"class"}, "h4": {"class"}}
+
+
+def sanitize_html(html: str) -> str:
+    """Strip dangerous tags/attributes from Diyanet HTML."""
+    # Remove <script>, <iframe>, event handlers, javascript: URIs
+    html = re.sub(r"<script[^>]*>.*?</script>", "", html, flags=re.DOTALL | re.I)
+    html = re.sub(r"<iframe[^>]*>.*?</iframe>", "", html, flags=re.DOTALL | re.I)
+    html = re.sub(r"\bon\w+\s*=\s*[\"'][^\"']*[\"']", "", html, flags=re.I)
+    html = re.sub(r"javascript\s*:", "blocked:", html, flags=re.I)
+    html = re.sub(r"<([^>]+)\s+on\w+\s*=\s*[^>]*>", r"<\1>", html, flags=re.I)
+    return html
+
+
 def is_arabic_text(text: str) -> bool:
     """Check if text is primarily Arabic script."""
     if not text.strip():
@@ -181,7 +199,7 @@ class DiyanetEPUBGenerator:
             if not m:
                 continue
 
-            body = m.group(1).strip()
+            body = sanitize_html(m.group(1).strip())
             if not body:
                 continue
             self.sections.append((fpath.stem, body))
