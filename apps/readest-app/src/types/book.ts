@@ -156,6 +156,13 @@ export interface BookNote {
   createdAt: number;
   updatedAt: number;
   deletedAt?: number | null;
+
+  /** Protected notes cannot be deleted by the user (author notes, built-in layers) */
+  protected?: boolean;
+  /** Which annotation layer this note belongs to */
+  layer?: AnnotationLayer;
+  /** Locale of the annotation (ru, tr, en, ...) */
+  locale?: string;
 }
 
 export interface BooknoteGroup {
@@ -298,7 +305,13 @@ export interface ViewConfig {
   readingRulerColor: ReadingRulerColor;
 
   dictionaryLevel: number;
+  dictionaryLanguage: string;
+  /** Anlam Açık Modu: 'open' = inline definitions, 'closed' = clean text */
+  meaningDisplayMode: 'open' | 'closed';
 }
+
+/** Annotation layers for multi-layer annotation system */
+export type AnnotationLayer = 'user' | 'author' | 'hasiye' | 'lugat';
 
 export interface TTSConfig {
   ttsRate: number;

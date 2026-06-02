@@ -255,12 +255,12 @@
 | 1.1 | Protected books | 1 | ✅ |
 | 1.2 | Full-text search | 1 | ✅ |
 | 1.3 | RisaleLugatProvider | 1 | ✅ |
-| 1.4 | Sözlük seviyesi | 1 | 🔶 (UI готов, нет frekans-данных) |
+| 1.4 | Sözlük seviyesi | 1 | ✅ |
 | 1.5 | Haşiye transformer | 1 | ✅ |
-| 1.6 | Osmanlı fonts | 1 | 🔶 (UI/CSS готовы, нет шрифтов) |
+| 1.6 | Osmanlı fonts | 1 | 🔶 (UI/CSS готовы, шрифты на R2) |
 | 2.1 | Parallel translation | 2 | 🔶 (store есть, sync отсутствует) |
-| 2.2 | Annotation layers | 2 | ⬜ |
-| 2.3 | Anlam Açık Modu | 2 | ⬜ |
+| 2.2 | Annotation layers | 2 | 🔶 (типы + LayerToggle готовы) |
+| 2.3 | Anlam Açık Modu | 2 | 🔶 (трансформер + toggle готовы) |
 | 2.4 | AI assistant (RAG) | 2 | 🔶 (общая AI-инфра готова, нет Risale-специфики) |
 | 2.5 | Author notes | 2 | ⬜ |
 | 2.6 | Quote widget | 2 | ⬜ |
@@ -270,4 +270,4 @@
 | 3.4 | KOReader sync | 3 | ⬜ |
 
 > 🔶 = частично реализовано | ✅ = полностью | ⬜ = не начато
-> Обновлено: 2026-06-02 (аудит кодовой базы)
+> Обновлено: 2026-06-02 (Sözlük Seviyesi + Anlam Açık + Annotation Layers)

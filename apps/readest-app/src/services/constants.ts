@@ -359,6 +359,8 @@ export const DEFAULT_VIEW_CONFIG: ViewConfig = {
   readingRulerColor: 'transparent',
 
   dictionaryLevel: 3,
+  dictionaryLanguage: 'en',
+  meaningDisplayMode: 'closed',
 };
 
 export const DEFAULT_TTS_CONFIG: TTSConfig = {
