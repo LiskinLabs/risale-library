@@ -12,16 +12,57 @@ interface LugatEntry extends Record<string, string | null> {
 
 export const createRisaleLugatProvider = (appService: AppService): DictionaryProvider => {
   let db: DatabaseService | null = null;
+  let initPromise: Promise<DatabaseService | null> | null = null;
 
   const getDb = async (): Promise<DatabaseService | null> => {
     if (db) return db;
-    try {
-      db = await appService.openDatabase('lugat', 'lugat.db', 'Data');
-      return db;
-    } catch (error) {
-      console.error('Failed to open lugat database', error);
-      return null;
-    }
+    if (initPromise) return initPromise;
+
+    initPromise = (async () => {
+      try {
+        // On web platform, we need to ensure the DB exists in OPFS.
+        // It's shipped in the public/data directory.
+        if (appService.isWebApp) {
+          try {
+            const root = await navigator.storage.getDirectory();
+            // The opfsName is generated in webAppService.ts as fullPath with replaced slashes
+            const opfsName = 'Risale_AI_Studio_Dictionaries_lugat.db'; // typically Data maps to Risale AI Studio/Dictionaries or similar
+            // Actually let's just write to all possible OPFS names to be safe, or
+            // wait, we can just use the path that libSQL will use.
+            const pathInfo = await (appService as any).resolveFilePath?.('lugat.db', 'Data');
+            const targetName = pathInfo
+              ? pathInfo.replace(/[/\\]+/g, '_').replace(/^_+/, '')
+              : 'Risale_AI_Studio_Data_lugat.db';
+
+            try {
+              await root.getFileHandle(targetName);
+            } catch (e) {
+              // File doesn't exist in OPFS, fetch it
+              console.log('Fetching lugat.db into OPFS...', targetName);
+              const response = await fetch('/data/lugat.db');
+              if (response.ok) {
+                const arrayBuffer = await response.arrayBuffer();
+                const fileHandle = await root.getFileHandle(targetName, { create: true });
+                const writable = await fileHandle.createWritable();
+                await writable.write(arrayBuffer);
+                await writable.close();
+                console.log('lugat.db successfully written to OPFS');
+              }
+            }
+          } catch (e) {
+            console.warn('OPFS preloading failed:', e);
+          }
+        }
+
+        db = await appService.openDatabase('lugat', 'lugat.db', 'Data');
+        return db;
+      } catch (error) {
+        console.error('Failed to open lugat database', error);
+        return null;
+      }
+    })();
+
+    return initPromise;
   };
 
   return {

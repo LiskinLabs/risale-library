@@ -209,6 +209,16 @@ export const handleClick = (
       return;
     }
 
+    const hasiye = element?.closest('.hasiye-arabic');
+    if (hasiye) {
+      eventDispatcher.dispatch('hasiye-popup', {
+        bookKey,
+        element: hasiye,
+        encodedText: hasiye.getAttribute('data-hasiye-text') || '',
+      });
+      return;
+    }
+
     // if long hold is detected, we don't want to send single click event
     if (!longHoldTimeout) {
       return;

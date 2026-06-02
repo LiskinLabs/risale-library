@@ -41,7 +41,8 @@ body {
   font-family: "Georgia", "Noto Serif", "Crimson Text", serif;
   line-height: 1.85;
   text-align: justify;
-  margin: 1rem;
+  margin: 1.2rem;
+  color: #2b2b2b;
 }
 
 h1 {
@@ -50,75 +51,98 @@ h1 {
   text-align: center;
   margin: 2.2rem 0 1.2rem;
   line-height: 1.3;
+  color: #8b191b;
   page-break-before: always;
 }
 
 h2 {
-  font-size: 1.4rem;
+  font-size: 1.45rem;
   font-weight: bold;
   text-align: center;
   margin: 1.8rem 0 0.9rem;
   line-height: 1.35;
+  color: #8b191b;
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: bold;
   text-align: center;
   margin: 1.5rem 0 0.8rem;
+  color: #8b191b;
 }
 
 h4 {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: bold;
   text-align: center;
   margin: 1.3rem 0 0.6rem;
+  color: #8b191b;
 }
 
 h5 {
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   font-weight: bold;
   text-align: center;
   margin: 1.1rem 0 0.5rem;
+  color: #8b191b;
 }
 
 h6 {
-  font-size: 1rem;
+  font-size: 1.02rem;
   font-weight: bold;
   text-align: center;
   margin: 1rem 0 0.4rem;
+  color: #8b191b;
 }
 
-/* Block-level Arabic */
+/* Block-level Arabic (Quranic verses and Hadiths) */
 .arabic {
   display: block;
   text-align: center;
   direction: rtl;
   font-family: "Traditional Arabic", "Scheherazade New", "Amiri", "Noto Naskh Arabic", serif;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   line-height: 2.3;
-  margin: 1.2rem 0;
+  margin: 1.5rem 0;
   padding: 0.5rem 1rem;
+  color: #8b191b;
 }
 
 /* Inline Arabic inside Turkish sentences */
 .arabic-inline, span.arabic {
   direction: rtl;
   font-family: "Traditional Arabic", "Scheherazade New", "Amiri", "Noto Naskh Arabic", serif;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   unicode-bidi: embed;
+  color: #8b191b;
 }
 
-/* Sual / Elcevap / Ihtar / Elhasil blocks */
+/* Sual / Elcevap / Ihtar / Elhasil block markers */
+.mark-label {
+  color: #8b191b;
+  font-weight: bold;
+  font-style: normal;
+}
+
 .sual-elcevap {
-  margin: 1rem 0;
-  padding: 0.5rem 1rem;
-  border-left: 3px solid #8b191b;
-  font-style: italic;
+  margin: 0.8rem 0 1rem;
+  text-indent: 1.5rem;
 }
 
 .sual-elcevap strong, .sual-elcevap em {
   color: #8b191b;
+}
+
+/* Blockquotes styling (inspired by eRisale premium quotes) */
+blockquote, .text-blockquote {
+  font-style: italic;
+  margin: 1.2rem 2rem;
+  padding-left: 1.2rem;
+  border-left: 3px solid #8b191b;
+  color: #4a4a4a;
+  line-height: 1.75;
+  text-indent: 0;
 }
 
 /* Separators */
@@ -127,6 +151,7 @@ h6 {
   margin: 1.5rem 0;
   font-size: 1.2rem;
   letter-spacing: 0.5rem;
+  color: #8b191b;
 }
 
 p {
@@ -134,23 +159,44 @@ p {
   text-indent: 1.5rem;
 }
 
-p.arabic, p.separator, p.sual-elcevap {
+p.arabic, p.separator, p.sual-elcevap, p.text-blockquote, blockquote p {
   text-indent: 0;
 }
 
-/* EPUB 3 Footnotes styling */
-aside[epub\:type="footnote"], .footnote {
+/* EPUB 3 Footnotes styling (Clean book haşiye look) */
+.footnote, aside[epub\:type="footnote"] {
   font-size: 0.88rem;
-  line-height: 1.5;
-  margin-top: 1.5rem;
-  padding: 0.5rem;
-  border-top: 1px solid #ddd;
+  line-height: 1.6;
+  color: #555;
+  margin-top: 1rem;
+  padding: 0.6rem 0.8rem;
+  background-color: #fcfaf7;
+  border-left: 2px solid #8b191b;
+  border-top: none;
+}
+
+.footnote p {
+  margin: 0;
+  text-indent: 0;
+}
+
+.footnote-backref {
+  color: #8b191b;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 0.3rem;
+}
+
+.footnote .arabic, .footnote span.arabic {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #8b191b;
 }
 
 .footnotes-container {
-  margin-top: 2.5rem;
-  border-top: 2px solid #8b191b;
-  padding-top: 1rem;
+  margin-top: 3rem;
+  border-top: 1px double #8b191b;
+  padding-top: 1.5rem;
 }
 """
 
@@ -199,6 +245,52 @@ def is_arabic_text(text: str) -> bool:
     arabic = sum(1 for c in clean if "\u0600" <= c <= "\u06FF")
     return (arabic / len(clean)) > 0.4
 
+def process_blockquotes(lines: list[str]) -> list[str]:
+    """Pre-process markdown lines to group blockquotes (lines starting with '>') and handle Obsidian callouts."""
+    processed = []
+    in_quote = False
+    quote_lines = []
+    
+    for line in lines:
+        line_strip = line.strip()
+        if line_strip.startswith(">"):
+            in_quote = True
+            # Strip the '>' and leading space
+            content = re.sub(r"^>\s*", "", line_strip)
+            # Handle callout syntax like [!NOTE], [!QUESTION], [!İHTAR] etc.
+            m = re.match(r"^\[!([^\]]+)\]\s*(.*)$", content)
+            if m:
+                c_type = m.group(1).upper()
+                c_title = m.group(2).strip()
+                # Map standard English labels to Turkish for the book
+                label_map = {
+                    "NOTE": "Not",
+                    "QUESTION": "Sual",
+                    "WARNING": "Uyarı",
+                    "TIP": "İpucu",
+                    "IMPORTANT": "Önemli"
+                }
+                label = label_map.get(c_type, c_type.capitalize())
+                if c_title:
+                    content = f"<strong>{label}: {c_title}</strong>"
+                else:
+                    content = f"<strong>{label}:</strong>"
+            quote_lines.append(content)
+        else:
+            if in_quote:
+                # Close the blockquote
+                inner_html = "<br/>".join(quote_lines)
+                processed.append(f'<blockquote class="text-blockquote">{inner_html}</blockquote>')
+                quote_lines = []
+                in_quote = False
+            processed.append(line)
+            
+    if in_quote:
+        inner_html = "<br/>".join(quote_lines)
+        processed.append(f'<blockquote class="text-blockquote">{inner_html}</blockquote>')
+        
+    return processed
+
 def markdown_to_html(text: str, book_slug: str) -> tuple[str, list[dict]]:
     """Convert simple Markdown elements to XHTML, replacing footnotes and detecting Arabic blocks."""
     # 1. Extract footnotes
@@ -213,7 +305,9 @@ def markdown_to_html(text: str, book_slug: str) -> tuple[str, list[dict]]:
         return f'<h{level} id="{anchor}">{content}</h{level}>', level, content, anchor
 
     headers = []
-    lines = body_text.split("\n")
+    raw_lines = body_text.split("\n")
+    # Preprocess blockquotes
+    lines = process_blockquotes(raw_lines)
     html_lines = []
     
     # Track headers for TOC
@@ -244,12 +338,12 @@ def markdown_to_html(text: str, book_slug: str) -> tuple[str, list[dict]]:
                 html_lines.append(f'<p class="arabic" dir="rtl">{line_strip}</p>')
             continue
             
-        # Check Sual / Elcevap / Ihtar / Elhasil blocks
+        # Check Sual / Elcevap / Ihtar / Elhasil blocks and any markers in ***Word***
         is_sual_elcevap = False
-        for marker in ["Sual:", "Elcevap:", "İhtar:", "Elhasıl:", "Sual", "Elcevap"]:
-            pattern = rf"\*\*\*{marker}\*\*\*"
-            if re.search(pattern, line_strip):
-                line_strip = re.sub(pattern, f"<strong><em>{marker}</em></strong>", line_strip)
+        if "***" in line_strip:
+            new_line, count = re.subn(r"\*\*\*([^*]+)\*\*\*", r'<span class="mark-label">\1</span>', line_strip)
+            if count > 0:
+                line_strip = new_line
                 is_sual_elcevap = True
         
         # Format bold and italic (simple markdown regexes)
@@ -268,7 +362,7 @@ def markdown_to_html(text: str, book_slug: str) -> tuple[str, list[dict]]:
         # Wrap in appropriate paragraph
         if is_sual_elcevap:
             html_lines.append(f'<p class="sual-elcevap">{line_strip}</p>')
-        elif line_strip.startswith("<p") or line_strip.startswith("<div") or line_strip.startswith("<span"):
+        elif line_strip.startswith("<p") or line_strip.startswith("<div") or line_strip.startswith("<span") or line_strip.startswith("<blockquote"):
             html_lines.append(line_strip)
         else:
             html_lines.append(f'<p>{line_strip}</p>')

@@ -25,6 +25,7 @@ import { useThemeStore } from '@/store/themeStore';
 import { useAutoFocus } from '@/hooks/useAutoFocus';
 import { useSettingsStore } from '@/store/settingsStore';
 import { useLibraryStore } from '@/store/libraryStore';
+import { useLibrarySearch } from '@/hooks/useLibrarySearch';
 import { useTranslation } from '@/hooks/useTranslation';
 import { useResponsiveSize } from '@/hooks/useResponsiveSize';
 import { navigateToLibrary, navigateToReader, showReaderWindow } from '@/utils/nav';
@@ -190,6 +191,8 @@ const Bookshelf: React.FC<BookshelfProps> = ({
 
   const uiLanguage = localStorage?.getItem('i18nextLng') || '';
 
+  const searchResults = useLibrarySearch(queryTerm || '');
+
   const updateUrlParams = useCallback(
     (updates: Record<string, string | null>) => {
       const params = new URLSearchParams(searchParams?.toString());
@@ -219,9 +222,8 @@ const Bookshelf: React.FC<BookshelfProps> = ({
   );
 
   const filteredBooks = useMemo(() => {
-    const bookFilter = createBookFilter(queryTerm);
-    return queryTerm ? libraryBooks.filter((book) => bookFilter(book)) : libraryBooks;
-  }, [libraryBooks, queryTerm]);
+    return queryTerm ? searchResults : libraryBooks;
+  }, [libraryBooks, queryTerm, searchResults]);
 
   const currentBookshelfItems = useMemo(() => {
     if (groupBy === LibraryGroupByType.Group) {
