@@ -341,10 +341,14 @@ export class RemoteFile extends File implements ClosableFile {
 
   async open() {
     // FIXME: currently HEAD request in asset protocol is not supported on Android
+    // Some CDNs/Servers also block HEAD requests or don't allow CORS for them.
     if (getOSPlatform() === 'android') {
       return this._open_with_range();
-    } else {
-      return this._open_with_head();
+    }
+    try {
+      return await this._open_with_head();
+    } catch {
+      return this._open_with_range();
     }
   }
 

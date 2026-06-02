@@ -525,6 +525,50 @@ export class ReedyDb {
 
     return reciprocalRankFusion(vectorRows, ftsRows, k);
   }
+
+  async globalHybridSearch(args: {
+    queryText: string;
+    queryEmbedding: number[];
+    k: number;
+  }): Promise<ScoredChunk[]> {
+    const { queryText, queryEmbedding, k } = args;
+    if (k <= 0) return [];
+
+    const fetchK = Math.max(k, k * RRF_FETCH_MULTIPLIER);
+
+    // Vector path — brute-force cosine over ALL chunks.
+    const vectorRows = await this.db.select<ScoredChunkRowSql>(
+      `SELECT c.id, c.book_hash, c.section_index, c.chapter_title,
+              c.start_cfi, c.end_cfi, c.position_index, c.text, c.token_count,
+              vector_distance_cos(e.embedding, vector32(?)) AS metric
+         FROM reedy_book_chunk_embeddings e
+         JOIN reedy_book_chunks c ON c.id = e.chunk_id
+        ORDER BY metric ASC
+        LIMIT ?`,
+      [serializeVector(queryEmbedding), fetchK],
+    );
+
+    // FTS path — Tantivy BM25 over ALL chunks.
+    let ftsRows: ScoredChunkRowSql[] = [];
+    if (queryText.trim().length > 0) {
+      try {
+        ftsRows = await this.db.select<ScoredChunkRowSql>(
+          `SELECT c.id, c.book_hash, c.section_index, c.chapter_title,
+                  c.start_cfi, c.end_cfi, c.position_index, c.text, c.token_count,
+                  fts_score(c.text, ?) AS metric
+             FROM reedy_book_chunks c
+            WHERE fts_match(c.text, ?)
+            ORDER BY metric DESC
+            LIMIT ?`,
+          [queryText, queryText, fetchK],
+        );
+      } catch {
+        ftsRows = [];
+      }
+    }
+
+    return reciprocalRankFusion(vectorRows, ftsRows, k);
+  }
 }
 
 // ---------------------------------------------------------------------------

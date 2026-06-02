@@ -121,6 +121,43 @@ export class BookRetriever {
     }
     return { passages, status: 'ok' };
   }
+
+  async globalSearch(args: {
+    query: string;
+    k: number;
+    activeEmbeddingModel: EmbeddingModel;
+    embeddingTimeoutMs?: number;
+  }): Promise<RetrieverResult> {
+    const timeoutMs = args.embeddingTimeoutMs ?? DEFAULT_EMBEDDING_TIMEOUT_MS;
+    const { embedding, degraded, reason } = await embedQueryWithTimeout(
+      args.activeEmbeddingModel,
+      args.query,
+      timeoutMs,
+    );
+
+    const scored = await this.reedy.globalHybridSearch({
+      queryText: args.query,
+      queryEmbedding: embedding ?? new Array(args.activeEmbeddingModel.dim).fill(0),
+      k: args.k,
+    });
+
+    const passages: RetrievedChunk[] = scored.map((s) => ({
+      id: s.id,
+      bookHash: s.bookHash,
+      cfi: s.startCfi,
+      endCfi: s.endCfi,
+      sectionIndex: s.sectionIndex,
+      chapterTitle: s.chapterTitle,
+      text: s.text,
+      positionIndex: s.positionIndex,
+      score: s.score,
+    }));
+
+    if (degraded) {
+      return { passages, status: 'degraded', reason };
+    }
+    return { passages, status: 'ok' };
+  }
 }
 
 async function embedQueryWithTimeout(

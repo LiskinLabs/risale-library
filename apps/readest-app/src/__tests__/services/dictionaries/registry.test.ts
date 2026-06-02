@@ -6,6 +6,7 @@ import type {
   ImportedDictionary,
   WebSearchEntry,
 } from '@/services/dictionaries/types';
+import type { AppService } from '@/types/system';
 
 const baseSettings: DictionarySettings = {
   providerOrder: [BUILTIN_PROVIDER_IDS.wiktionary, BUILTIN_PROVIDER_IDS.wikipedia],
@@ -156,7 +157,12 @@ describe('dictionary registry', () => {
         'stardict:nope': true,
       },
     };
-    const providers = getEnabledProviders({ settings, dictionaries: dicts, fs });
+
+    const providers = getEnabledProviders({
+      settings,
+      dictionaries: dicts,
+      fs: fs as unknown as AppService,
+    });
     expect(providers.map((p) => p.id)).toEqual([
       BUILTIN_PROVIDER_IDS.wiktionary,
       'mdict:available',

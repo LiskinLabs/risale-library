@@ -154,6 +154,27 @@ const migrations: Record<SchemaType, MigrationEntry[]> = {
       `,
     },
   ],
+  lugat: [
+    {
+      name: '2026060201_lugat_init',
+      sql: `
+        CREATE TABLE IF NOT EXISTS lugat (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            term TEXT NOT NULL,
+            arabic TEXT,
+            definition TEXT NOT NULL
+        );
+        CREATE INDEX IF NOT EXISTS idx_term ON lugat(term);
+        
+        CREATE VIRTUAL TABLE IF NOT EXISTS lugat_fts USING fts5(
+            term,
+            definition,
+            content='lugat',
+            content_rowid='id'
+        );
+      `,
+    },
+  ],
 };
 
 export function getMigrations(schema: SchemaType): MigrationEntry[] {

@@ -247,14 +247,14 @@
 
 | ID | Задача | Фаза | Статус |
 |---|---|---|---|
-| 0.1 | EPUB generator | 0 | ⬜ |
-| 0.2 | Lugat import | 0 | ⬜ |
+| 0.1 | EPUB generator | 0 | ✅ |
+| 0.2 | Lugat import | 0 | ✅ |
 | 0.3 | RAG passages import | 0 | ⬜ |
 | 0.4 | Meal import | 0 | ⬜ |
 | 0.5 | Diyanet validation | 0 | ⬜ |
-| 1.1 | Protected books | 1 | ⬜ |
-| 1.2 | Full-text search | 1 | ⬜ |
-| 1.3 | RisaleLugatProvider | 1 | ⬜ |
+| 1.1 | Protected books | 1 | ✅ |
+| 1.2 | Full-text search | 1 | ✅ |
+| 1.3 | RisaleLugatProvider | 1 | ✅ |
 | 1.4 | Sözlük seviyesi | 1 | ⬜ |
 | 1.5 | Haşiye transformer | 1 | ⬜ |
 | 1.6 | Osmanlı fonts | 1 | ⬜ |

@@ -13,6 +13,7 @@ interface BookCoverProps {
   imageClassName?: string;
   showSpine?: boolean;
   isPreview?: boolean;
+  is3d?: boolean;
   onImageError?: () => void;
   onAspectRatioChange?: (ratio: number) => void;
 }
@@ -26,6 +27,7 @@ const BookCover: React.FC<BookCoverProps> = memo<BookCoverProps>(
     className,
     imageClassName,
     isPreview,
+    is3d = true,
     onImageError,
     onAspectRatioChange,
   }) => {
@@ -75,42 +77,25 @@ const BookCover: React.FC<BookCoverProps> = memo<BookCoverProps>(
     return (
       <div
         ref={coverRef}
-        className={clsx('book-cover-container relative flex h-full w-full', className)}
+        className={clsx(
+          'book-cover-container relative flex h-full w-full',
+          is3d && 'book-3d-container',
+          className,
+        )}
       >
-        {hasValidSrc && coverFit === 'crop' ? (
-          <>
-            <Image
-              src={coverSrc!}
-              alt={book.title}
-              fill={true}
-              loading='lazy'
-              draggable={false}
-              className={clsx('cover-image crop-cover-img object-cover', imageClassName)}
-              onLoad={handleImageLoad}
-              onError={handleImageError}
-            />
-            <div
-              className={`book-spine absolute inset-0 ${shouldShowSpine ? 'visible' : 'invisible'}`}
-            />
-          </>
-        ) : hasValidSrc ? (
-          <div className={clsx('flex h-full w-full justify-start')}>
-            <div
-              className={clsx(
-                'flex h-full max-h-full items-end',
-                mode === 'grid' ? 'items-end' : 'items-center',
-              )}
-            >
+        <div className={clsx('relative h-full w-full', is3d && 'book-3d-cover')}>
+          {is3d && <div className='book-3d-side' />}
+          {hasValidSrc && coverFit === 'crop' ? (
+            <>
               <Image
                 src={coverSrc!}
                 alt={book.title}
-                width={0}
-                height={0}
-                sizes='100vw'
+                fill={true}
                 loading='lazy'
                 draggable={false}
                 className={clsx(
-                  'cover-image fit-cover-img h-auto max-h-full w-auto max-w-full shadow-md',
+                  'cover-image crop-cover-img object-cover',
+                  is3d && 'book-gold-edge',
                   imageClassName,
                 )}
                 onLoad={handleImageLoad}
@@ -119,38 +104,68 @@ const BookCover: React.FC<BookCoverProps> = memo<BookCoverProps>(
               <div
                 className={`book-spine absolute inset-0 ${shouldShowSpine ? 'visible' : 'invisible'}`}
               />
+            </>
+          ) : hasValidSrc ? (
+            <div className={clsx('flex h-full w-full justify-start')}>
+              <div
+                className={clsx(
+                  'flex h-full max-h-full items-end',
+                  mode === 'grid' ? 'items-end' : 'items-center',
+                )}
+              >
+                <Image
+                  src={coverSrc!}
+                  alt={book.title}
+                  width={0}
+                  height={0}
+                  sizes='100vw'
+                  loading='lazy'
+                  draggable={false}
+                  className={clsx(
+                    'cover-image fit-cover-img h-auto max-h-full w-auto max-w-full shadow-md',
+                    is3d && 'book-gold-edge',
+                    imageClassName,
+                  )}
+                  onLoad={handleImageLoad}
+                  onError={handleImageError}
+                />
+                <div
+                  className={`book-spine absolute inset-0 ${shouldShowSpine ? 'visible' : 'invisible'}`}
+                />
+              </div>
             </div>
-          </div>
-        ) : null}
+          ) : null}
 
-        <div
-          className={clsx(
-            'fallback-cover invisible absolute inset-0 p-2',
-            'text-neutral-content text-center font-serif font-medium',
-            isPreview ? 'bg-base-200/50' : 'bg-base-100',
-            imageClassName,
-          )}
-        >
-          <div className='flex h-1/2 items-center justify-center'>
-            <span
-              className={clsx(
-                isPreview ? 'line-clamp-2' : mode === 'grid' ? 'line-clamp-3' : 'line-clamp-2',
-                isPreview ? 'text-[0.5em]' : mode === 'grid' ? 'text-lg' : 'text-sm',
-              )}
-            >
-              {formatTitle(book.title)}
-            </span>
-          </div>
-          <div className='h-1/6'></div>
-          <div className='flex h-1/3 items-center justify-center'>
-            <span
-              className={clsx(
-                'text-neutral-content/50 line-clamp-1',
-                isPreview ? 'text-[0.4em]' : mode === 'grid' ? 'text-base' : 'text-xs',
-              )}
-            >
-              {formatAuthors(book.author || book.metadata?.author || '')}
-            </span>
+          <div
+            className={clsx(
+              'fallback-cover invisible absolute inset-0 p-2',
+              'text-neutral-content text-center font-serif font-medium',
+              isPreview ? 'bg-base-200/50' : 'bg-base-100',
+              is3d && 'book-gold-edge',
+              imageClassName,
+            )}
+          >
+            <div className='flex h-1/2 items-center justify-center'>
+              <span
+                className={clsx(
+                  isPreview ? 'line-clamp-2' : mode === 'grid' ? 'line-clamp-3' : 'line-clamp-2',
+                  isPreview ? 'text-[0.5em]' : mode === 'grid' ? 'text-lg' : 'text-sm',
+                )}
+              >
+                {formatTitle(book.title)}
+              </span>
+            </div>
+            <div className='h-1/6'></div>
+            <div className='flex h-1/3 items-center justify-center'>
+              <span
+                className={clsx(
+                  'text-neutral-content/50 line-clamp-1',
+                  isPreview ? 'text-[0.4em]' : mode === 'grid' ? 'text-base' : 'text-xs',
+                )}
+              >
+                {formatAuthors(book.author || book.metadata?.author || '')}
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -164,6 +179,7 @@ const BookCover: React.FC<BookCoverProps> = memo<BookCoverProps>(
       prevProps.mode === nextProps.mode &&
       prevProps.coverFit === nextProps.coverFit &&
       prevProps.isPreview === nextProps.isPreview &&
+      prevProps.is3d === nextProps.is3d &&
       prevProps.showSpine === nextProps.showSpine &&
       prevProps.className === nextProps.className &&
       prevProps.imageClassName === nextProps.imageClassName

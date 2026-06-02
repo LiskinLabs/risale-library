@@ -12,6 +12,7 @@ import { useEnv } from '@/context/EnvContext';
 import { useThemeStore } from '@/store/themeStore';
 import { useTranslation } from '@/hooks/useTranslation';
 import { useLibraryStore } from '@/store/libraryStore';
+import { useKulliyatSearchStore } from '@/store/kulliyatSearchStore';
 import { useTrafficLight } from '@/hooks/useTrafficLight';
 import { useResponsiveSize } from '@/hooks/useResponsiveSize';
 import { debounce } from '@/utils/debounce';
@@ -53,6 +54,7 @@ const LibraryHeader: React.FC<LibraryHeaderProps> = ({
   const { appService } = useEnv();
   const { systemUIVisible, statusBarHeight } = useThemeStore();
   const { currentBookshelf } = useLibraryStore();
+  const openKulliyatSearch = useKulliyatSearchStore((s) => s.open);
   const [searchQuery, setSearchQuery] = useState(searchParams?.get('q') ?? '');
 
   const headerRef = useRef<HTMLDivElement>(null);
@@ -125,6 +127,11 @@ const LibraryHeader: React.FC<LibraryHeaderProps> = ({
                   : _('Search Books...')
               }
               onChange={handleSearchChange}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' && searchQuery.trim().length > 2) {
+                  openKulliyatSearch(searchQuery);
+                }
+              }}
               spellCheck='false'
               className={clsx(
                 'search-input input h-9 w-full rounded-full pr-[30%] ps-10 sm:h-7',

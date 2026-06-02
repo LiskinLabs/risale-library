@@ -313,7 +313,9 @@ const BookshelfItem: React.FC<BookshelfItemProps> = ({
     if (book.downloadedAt || book.uploadedAt) {
       menu.append(shareBookMenuItem);
     }
-    menu.append(deleteBookMenuItem);
+    if (!book.builtin) {
+      menu.append(deleteBookMenuItem);
+    }
     menu.popup();
   };
 

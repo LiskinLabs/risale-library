@@ -383,7 +383,9 @@ const Bookshelf: React.FC<BookshelfProps> = ({
   // which already includes nested sub-folder books.
   const getBooksToDelete = () => {
     const wanted = new Set(bookIdsToDelete);
-    return filteredBooks.filter((book) => wanted.has(book.hash) && !book.deletedAt);
+    return filteredBooks.filter(
+      (book) => wanted.has(book.hash) && !book.deletedAt && !book.builtin,
+    );
   };
 
   const confirmDelete = async () => {

@@ -23,12 +23,14 @@ import { BUILTIN_PROVIDER_IDS } from './types';
 import { isSystemDictionarySupported } from './systemDictionary';
 import { wiktionaryProvider } from './providers/wiktionaryProvider';
 import { wikipediaProvider } from './providers/wikipediaProvider';
+import { createRisaleLugatProvider } from './providers/risaleLugatProvider';
 import { createStarDictProvider, type DictionaryFileOpener } from './providers/starDictProvider';
 import { createMdictProvider } from './providers/mdictProvider';
 import { createDictProvider } from './providers/dictProvider';
 import { createSlobProvider } from './providers/slobProvider';
 import { createWebSearchProvider } from './providers/webSearchProvider';
 import { getBuiltinWebSearch } from './webSearchTemplates';
+import { AppService } from '@/types/system';
 
 const instanceCache = new Map<string, DictionaryProvider>();
 
@@ -40,12 +42,13 @@ interface RegistryArgs {
    * dictionaries — their providers open files via this accessor on first
    * lookup. Builtin-only callers (e.g. tests) may omit it.
    */
-  fs?: DictionaryFileOpener;
+  fs?: AppService;
 }
 
-const builtinFor = (id: string): DictionaryProvider | undefined => {
+const builtinFor = (id: string, fs?: AppService): DictionaryProvider | undefined => {
   if (id === BUILTIN_PROVIDER_IDS.wiktionary) return wiktionaryProvider;
   if (id === BUILTIN_PROVIDER_IDS.wikipedia) return wikipediaProvider;
+  if (id === BUILTIN_PROVIDER_IDS.risaleLugat && fs) return createRisaleLugatProvider(fs);
   // System dictionary is a sentinel — it has no in-popup UI. The
   // annotator handles it before reaching the popup; the registry
   // filters it out of `getEnabledProviders` so no empty tab appears.

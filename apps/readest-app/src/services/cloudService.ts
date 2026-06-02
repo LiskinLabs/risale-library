@@ -24,6 +24,10 @@ export async function deleteBook(
   book: Book,
   deleteAction: DeleteAction,
 ): Promise<void> {
+  if (book.builtin) {
+    console.log('Cannot delete built-in book:', book.title);
+    return;
+  }
   if (deleteAction === 'local' || deleteAction === 'both') {
     const source = await resolveBookContentSource(fs, book);
     if (source.kind === 'external') {

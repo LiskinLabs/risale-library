@@ -487,7 +487,8 @@ export async function importBook(
 
     return existingBook || book;
   } catch (error) {
-    console.error('Error importing book:', error);
+    // Re-throw without console.error to avoid duplicate noise and scary dev overlays
+    // when the caller is already handling the catch (like in useDemoBooks).
     throw error;
   }
 }
