@@ -50,6 +50,12 @@ export type CustomTextureInfo = Partial<BackgroundTexture> &
 
 export const PREDEFINED_TEXTURES: BackgroundTexture[] = [
   { id: 'none', name: 'None', url: '', loaded: true },
+  {
+    id: 'premium-grain',
+    name: 'Premium Grain',
+    url: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iMC42NSIgbnVtT2N0YXZlcz0iMyIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNuKSIgb3BhY2l0eT0iMC4wNSIvPjwvc3ZnPg==',
+    loaded: true,
+  },
   { id: 'concrete', name: 'Concrete', url: '/images/concrete-texture.png', loaded: true },
   { id: 'paper', name: 'Paper', url: '/images/paper-texture.png', loaded: true },
   { id: 'sand', name: 'Sand', url: '/images/sand-texture.jpg', loaded: true },

@@ -75,6 +75,20 @@ h4 {
   margin: 1.3rem 0 0.6rem;
 }
 
+h5 {
+  font-size: 1.05rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 1.1rem 0 0.5rem;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 1rem 0 0.4rem;
+}
+
 /* Block-level Arabic */
 .arabic {
   display: block;
@@ -209,7 +223,7 @@ def markdown_to_html(text: str, book_slug: str) -> tuple[str, list[dict]]:
             continue
             
         # Headers
-        h_match = re.match(r"^(#{1,4})\s+(.*)$", line_strip)
+        h_match = re.match(r"^(#{1,6})\s+(.*)$", line_strip)
         if h_match:
             h_html, level, title, anchor = repl_h(h_match)
             headers.append({"level": level, "title": title, "anchor": anchor})

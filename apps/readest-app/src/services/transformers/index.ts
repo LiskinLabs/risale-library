@@ -9,11 +9,13 @@ import { styleTransformer } from './style';
 import { proofreadTransformer } from './proofread';
 import { warichuTransformer } from './warichu';
 import { hasiyeTransformer } from './hasiye';
+import { uiEffectsTransformer } from './uiEffects';
 
 export const availableTransformers: Transformer[] = [
   punctuationTransformer,
   footnoteTransformer,
   hasiyeTransformer,
+  uiEffectsTransformer,
   languageTransformer,
   styleTransformer,
   whitespaceTransformer,
