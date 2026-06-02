@@ -172,7 +172,7 @@ export const VECIZELER: Vecize[] = [
 export function getRandomQuote(bookFilter?: string): Vecize {
   const pool = bookFilter ? VECIZELER.filter((v) => v.book === bookFilter) : VECIZELER;
   const idx = Math.floor(Math.random() * pool.length);
-  return pool[idx] || VECIZELER[0];
+  return pool[idx] ?? VECIZELER[0]!;
 }
 
 /**
@@ -191,5 +191,5 @@ export function getDailyQuote(): Vecize {
     (today.getTime() - new Date(today.getFullYear(), 0, 0).getTime()) / 86400000,
   );
   const idx = dayOfYear % VECIZELER.length;
-  return VECIZELER[idx];
+  return VECIZELER[idx] ?? VECIZELER[0]!;
 }

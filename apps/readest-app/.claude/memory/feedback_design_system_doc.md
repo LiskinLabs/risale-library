@@ -1,6 +1,6 @@
 ---
 name: Design rules live in DESIGN.md
-description: Risale AI Studio has a design system doc — codify recurring UI/UX rules there, don't just apply them ad-hoc. Memory points at the canonical location and the patterns it covers.
+description: Readest has a design system doc — codify recurring UI/UX rules there, don't just apply them ad-hoc. Memory points at the canonical location and the patterns it covers.
 type: feedback
 originSessionId: 85757e57-a029-40f8-b098-88039c43514b
 ---
@@ -9,7 +9,7 @@ The project's design system is documented at `apps/readest-app/DESIGN.md`.
 convention"), add it to DESIGN.md so it persists for the team and for future
 sessions — don't just apply it inline and move on.
 
-**Why:** Risale AI Studio's UI is Adwaita-aligned, e-ink-first, cross-platform-aware.
+**Why:** Readest's UI is Adwaita-aligned, e-ink-first, cross-platform-aware.
 A doc'd system avoids drift across panels and gives reviewers a reference
 point. The user explicitly asked to "remember the UI/UX rules somewhere"
 when refining the OPDS Integration sub-page.
@@ -27,7 +27,7 @@ when refining the OPDS Integration sub-page.
 - §2.8: RTL — always use logical properties (`ps`/`pe`/`ms`/`me`/`text-start`
   /`text-end`/`border-s`/`border-e`/`start-*`/`end-*`). Never `pl`/`pr`/`ml`
   /`mr`/`text-left`/`text-right`/`left-*`/`right-*`. The user is strict on
-  this — Risale AI Studio ships RTL languages.
+  this — Readest ships RTL languages.
 - §2.9: every panel/sub-page must open with title + one-line description.
 - §3: surface tier hierarchy (window/view/card → base-200/100-tinted/100).
 - §4: action vocabulary (Accent CTA, Suggested, Flat, Pill, Destructive,

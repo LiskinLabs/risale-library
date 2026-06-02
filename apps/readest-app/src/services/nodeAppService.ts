@@ -386,7 +386,7 @@ export class NodeAppService extends BaseAppService {
 
   async saveFile(
     _filename: string,
-    content: string | ArrayBuffer,
+    content: string | ArrayBuffer | null,
     options?: {
       filePath?: string;
       mimeType?: string;
@@ -395,12 +395,16 @@ export class NodeAppService extends BaseAppService {
     },
   ): Promise<boolean> {
     try {
+      // When content is null the file already lives at filePath and the caller
+      // just needs the node-side path resolved — nothing to write.
       const filepath = options?.filePath ?? '';
-      await fsp.mkdir(nodePath.dirname(filepath), { recursive: true });
-      if (typeof content === 'string') {
-        await fsp.writeFile(filepath, content, 'utf-8');
-      } else {
-        await fsp.writeFile(filepath, Buffer.from(content));
+      if (content != null) {
+        await fsp.mkdir(nodePath.dirname(filepath), { recursive: true });
+        if (typeof content === 'string') {
+          await fsp.writeFile(filepath, content, 'utf-8');
+        } else {
+          await fsp.writeFile(filepath, Buffer.from(content));
+        }
       }
       return true;
     } catch (error) {

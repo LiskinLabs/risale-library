@@ -5,7 +5,7 @@
   <h1>Risale AI Studio</h1>
   <br>
 
-[Risale AI Studio][link-website] is an open-source ebook reader designed for immersive and deep reading experiences. Built as a modern rewrite of [Foliate](https://github.com/johnfactotum/foliate), it leverages [Next.js 16](https://github.com/vercel/next.js) and [Tauri v2](https://github.com/tauri-apps/tauri) to deliver a smooth, cross-platform experience across macOS, Windows, Linux, Android, iOS, and the Web.
+[Risale AI Studio][link-website] is the world's premier digital library for the Risale-i Nur collection — a cross-platform ebook reader designed for immersive and deep reading experiences. Built as a modern rewrite of [Foliate](https://github.com/johnfactotum/foliate), it leverages [Next.js 16](https://github.com/vercel/next.js) and [Tauri v2](https://github.com/tauri-apps/tauri) to deliver a smooth, cross-platform experience across macOS, Windows, Linux, Android, iOS, and the Web. Features professional Turkish/Ottoman/Arabic/Russian typography, built-in Ottoman-Turkish dictionary, AI-powered study tools, and smart annotations.
 
 [![Website][badge-website]][link-website]
 [![Web App][badge-web-app]][link-vercel]
@@ -64,6 +64,21 @@
 | [**Sync with Koreader**][link-kosync-wiki] | Synchronize reading progress, notes, and bookmarks with [Koreader][link-koreader] devices.                             | ✅         |
 | **Accessibility**                          | Provides full keyboard navigation and supports for screen readers such as VoiceOver, TalkBack, NVDA, and Orca.         | ✅         |
 | **Visual & Focus Aids**                    | Reading ruler, paragraph-by-paragraph reading mode, and speed reading features.                                        | ✅         |
+
+## Risale-i Nur Features
+
+| **Feature**                            | **Description**                                                                                     | **Status** |
+| -------------------------------------- | --------------------------------------------------------------------------------------------------- | ---------- |
+| **Built-in Risale Books (15 EPUBs)**   | Sözler, Mektubat, Lemalar, Şualar, and 11 more — auto-imported on first launch                     | ✅         |
+| **Külliyat Search**                    | Full-text search across all 15 Risale books simultaneously using Orama FTS                          | ✅         |
+| **Risale Lugat (Ottoman Dictionary)**  | 38,963 terms with FTS5/LIKE search, 4 proficiency levels (Temel→Tümü)                              | ✅         |
+| **Anlam Açık Modu**                    | Inline word definitions from the dictionary with green dashed underline + tooltip                   | ✅         |
+| **Haşiye (Verse Commentary)**          | Arabic verse popups with meal index — block-level + inline dotted underline                         | ✅         |
+| **Professional Typography**            | ITC Souvenir, Minion Pro, Nassim Arabic Pro, Kazimir Text — per-script font system                  | ✅         |
+| **Parallel Translation Sync**          | Side-by-side reading of original + translation with shared scroll position                          | 🛠         |
+| **AI Assistant with RAG**              | Ask questions about the Risale with context-aware AI (Reedy RAG, OpenRouter/Ollama)                | 🛠         |
+| **Quote Widget (Vecize)**              | Daily wisdom from the Risale collection                                                            | ✅         |
+| **Annotation Layers**                  | Multiple annotation layers: personal notes, haşiye, dictionary, author notes                        | 🛠         |
 
 ## Planned Features
 
@@ -136,7 +151,7 @@ To get started with Risale AI Studio, follow these steps to clone and build the 
 
 ```bash
 git clone https://github.com/LiskinLabs/risale-ai-studio.git
-cd readest
+cd risale-ai-studio
 ```
 
 ### 2. Install Dependencies

@@ -34,6 +34,9 @@ export interface DictionaryLookupContext {
   fg?: string;
   /** Filter level for the lookup. */
   dictionaryLevel?: number;
+  /** Preferred language for dictionary definitions (ISO 639-1, e.g. 'ru', 'tr', 'en').
+   *  Providers use this to select which language edition to query. */
+  dictionaryLanguage?: string;
 }
 
 export type DictionaryLookupOutcome =
@@ -205,6 +208,8 @@ export const BUILTIN_WEB_SEARCH_IDS = {
   urban: 'web:builtin:urban',
   merriamWebster: 'web:builtin:merriam-webster',
   tdkSozluk: 'web:builtin:tdk-sozluk',
+  sesliSozluk: 'web:builtin:sesli-sozluk',
+  vikisozluk: 'web:builtin:vikisozluk',
 } as const;
 
 export type BuiltinWebSearchId =

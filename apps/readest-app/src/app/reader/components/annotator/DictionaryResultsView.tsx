@@ -81,6 +81,9 @@ export function useDictionaryResults({
 
   const viewSettings = bookKey ? getViewSettings(bookKey) : generalSettings.globalViewSettings;
   const dictionaryLevel = viewSettings?.dictionaryLevel ?? 3;
+  const dictionaryLanguage =
+    viewSettings?.dictionaryLanguage ||
+    (generalSettings.globalViewSettings?.dictionaryLanguage ?? 'en');
 
   const computedProviders = getEnabledProviders({
     settings: dictSettings,
@@ -236,6 +239,7 @@ export function useDictionaryResults({
                 bg: themeCode.bg,
                 fg: themeCode.fg,
                 dictionaryLevel,
+                dictionaryLanguage,
               });
               if (controller.signal.aborted) return;
               if (outcome.ok || outcome.reason !== 'empty') break;
@@ -275,6 +279,7 @@ export function useDictionaryResults({
     themeCode.bg,
     themeCode.fg,
     dictionaryLevel,
+    dictionaryLanguage,
   ]);
 
   // Visible cards = providers that are still loading or finished with a

@@ -48,9 +48,13 @@ const CONTEXT_WINDOW_TABLE: Array<{
   reservedOutput: number;
   supportsTools: boolean;
 }> = [
-  // Google
+  // Google — Gemini 3.x and 2.5.x all have 2M token context windows
   {
-    match: (id) => id.includes('gemini-2.5') || id.includes('gemini-3'),
+    match: (id) =>
+      id.includes('gemini-2.5') ||
+      id.includes('gemini-2.0') ||
+      id.includes('gemini-3') ||
+      id.includes('gemini-1.5'),
     contextWindow: 2_000_000,
     reservedOutput: 8_192,
     supportsTools: true,
@@ -76,7 +80,14 @@ const CONTEXT_WINDOW_TABLE: Array<{
     reservedOutput: 2_048,
     supportsTools: true,
   },
-  // DeepSeek + Qwen + Grok — all support tool calls in the 2025+ generations
+  // DeepSeek V4 — 1M context window, reasoning support
+  {
+    match: (id) => id.includes('deepseek-v4'),
+    contextWindow: 1_000_000,
+    reservedOutput: 4_096,
+    supportsTools: true,
+  },
+  // DeepSeek V3 + Qwen + Grok — all support tool calls in the 2025+ generations
   {
     match: (id) => id.includes('deepseek-v3') || id.includes('qwen-3') || id.includes('grok-4'),
     contextWindow: 128_000,
@@ -120,6 +131,10 @@ function chatModelIdFor(settings: AISettings): string {
       );
     case 'openrouter':
       return settings.openrouterModel || 'openai/gpt-4o-mini';
+    case 'gemini':
+      return settings.geminiModel || 'gemini-2.5-flash';
+    case 'deepseek':
+      return settings.deepseekModel || 'deepseek-v4-pro';
   }
 }
 
@@ -132,7 +147,7 @@ function adaptEmbeddingModel(
   id: string,
   settings: AISettings,
 ): EmbeddingModel {
-  const batchSize = settings.provider === 'ollama' ? 4 : 16;
+  const batchSize = settings.provider === 'ollama' ? 4 : settings.provider === 'deepseek' ? 8 : 16;
   let dim: number | null = null;
   return {
     id,
@@ -173,5 +188,9 @@ function embeddingModelIdFor(settings: AISettings): string {
       return settings.aiGatewayEmbeddingModel || 'openai/text-embedding-3-small';
     case 'openrouter':
       return settings.openrouterEmbeddingModel || 'openai/text-embedding-3-small';
+    case 'gemini':
+      return settings.geminiEmbeddingModel || 'text-embedding-004';
+    case 'deepseek':
+      return settings.deepseekEmbeddingModel || '';
   }
 }

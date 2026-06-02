@@ -23,7 +23,7 @@ Active feature on branch `dev` as of 2026-05-02. Plan file: `/Users/chrox/.claud
 - **Per-user 50-share cap**, enforced at create-time.
 - **Auth detection on /s landing**: server-render via Supabase auth cookie in `app/s/layout.tsx`. No layout shift. Falls back to anonymous flow + post-hydration upgrade if SSR fails.
 - **Cover-less `og.png` fallback**: text-only display-type card. NO placeholder rectangle, NO procedural pattern.
-- **Universal Links / App Links**: handle `https://web.risale-ai-studio.com/s/...` in v1 via `useOpenShareLink`. Tauri's `applinks` config already covers the host.
+- **Universal Links / App Links**: handle `https://web.readest.com/s/...` in v1 via `useOpenShareLink`. Tauri's `applinks` config already covers the host.
 
 ## Cherry-picks accepted (CEO review SELECTIVE EXPANSION)
 

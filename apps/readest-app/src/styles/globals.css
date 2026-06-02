@@ -899,59 +899,166 @@ body.atmosphere #atmosphere-overlay {
  * was visually redundant and read as a "double border". Buttons keep
  * their focus ring for accessibility — only typed-in surfaces lose it.
  */
-/* 3D Book Cover Effects */
+/* 3D Book Cover Effects - Page Flip Edition */
 .book-3d-container {
-  perspective: 1000px;
-  transition: transform 0.4s ease;
+  perspective: 1500px;
 }
 
-.book-3d-cover {
+.book-3d-wrapper {
   position: relative;
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  transition: transform 0.5s cubic-bezier(0.2, 0, 0.2, 1);
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform: rotateY(-10deg) rotateX(2deg);
 }
 
-.book-3d-container:hover .book-3d-cover {
-  transform: rotateY(-25deg) translateX(10px);
+@media (min-width: 768px) {
+  .book-3d-container:hover .book-3d-wrapper {
+    transform: rotateY(-5deg) rotateX(2deg) scale(1.02);
+  }
 }
 
-.book-3d-side {
+.book-3d-front {
   position: absolute;
   top: 0;
   left: 0;
-  width: 40px; /* thickness of the book */
+  width: 100%;
   height: 100%;
-  background: #f5f5f5; /* page color */
-  background-image: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.05) 0%,
-    rgba(255, 255, 255, 0.1) 50%,
-    rgba(0, 0, 0, 0.05) 100%
-  );
-  transform: rotateY(-90deg) translateX(-20px) translateZ(-20px);
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  transform-origin: left center;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 10;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-.book-3d-side::after {
-  content: '';
+.book-front-content {
   position: absolute;
   inset: 0;
-  background-image: repeating-linear-gradient(
-    transparent,
-    transparent 2px,
-    rgba(0, 0, 0, 0.03) 2px,
-    rgba(0, 0, 0, 0.03) 3px
-  );
+  backface-visibility: hidden;
+  transform: translateZ(1px); /* ensure it stays above inside */
+}
+
+@media (min-width: 768px) {
+  .book-3d-container:hover .book-3d-front {
+    transform: rotateY(-140deg);
+    box-shadow:
+      inset 4px 0 10px rgba(0, 0, 0, 0.1),
+      -5px 0 15px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.book-3d-front-inside {
+  position: absolute;
+  inset: 0;
+  background: #f0ead6;
+  transform: translateZ(-1px) rotateY(180deg);
+  backface-visibility: hidden;
+  box-shadow: inset 4px 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px 0 0 4px;
+}
+
+.book-3d-back {
+  position: absolute;
+  inset: 0;
+  background: var(--book-bg, #1a1a3e);
+  transform: translateZ(-10px);
+  border-radius: 0 4px 4px 0;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.book-3d-spine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 100%;
+  background: var(--book-bg, #1a1a3e);
+  transform: rotateY(-90deg) translateX(-5px) translateZ(-5px);
+  filter: brightness(0.85);
+}
+
+.book-3d-page {
+  position: absolute;
+  top: 1%;
+  left: 0;
+  width: 98%;
+  height: 98%;
+  background: #fdfbf7;
+  transform-origin: left center;
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: 1px solid #e0dcd2;
+  border-radius: 0 3px 3px 0;
+  overflow: hidden;
+}
+
+.book-3d-page.page-1 {
+  z-index: 9;
+  transform: translateZ(-2px);
+  transition-delay: 0.05s;
+}
+.book-3d-page.page-2 {
+  z-index: 8;
+  transform: translateZ(-4px);
+  transition-delay: 0.1s;
+}
+.book-3d-page.page-3 {
+  z-index: 7;
+  transform: translateZ(-6px);
+  transition-delay: 0.15s;
+}
+.book-3d-page.page-4 {
+  z-index: 6;
+  transform: translateZ(-8px);
+  transition-delay: 0.2s;
+}
+.book-3d-page.page-5 {
+  z-index: 5;
+  transform: translateZ(-10px);
+  transition-delay: 0.25s;
+}
+
+@media (min-width: 768px) {
+  .book-3d-container:hover .book-3d-page.page-1 {
+    transform: rotateY(-130deg) translateZ(-2px);
+  }
+  .book-3d-container:hover .book-3d-page.page-2 {
+    transform: rotateY(-120deg) translateZ(-4px);
+  }
+  .book-3d-container:hover .book-3d-page.page-3 {
+    transform: rotateY(-110deg) translateZ(-6px);
+  }
+  .book-3d-container:hover .book-3d-page.page-4 {
+    transform: rotateY(-100deg) translateZ(-8px);
+  }
+  .book-3d-container:hover .book-3d-page.page-5 {
+    transform: rotateY(-90deg) translateZ(-10px);
+  }
 }
 
 .book-gold-edge {
-  border: 1px solid #d4af37; /* Gold color */
+  border: 1px solid rgba(212, 175, 55, 0.6); /* Gold color, softer */
   box-shadow:
-    0 0 2px #d4af37,
-    inset 0 0 2px #d4af37;
+    0 0 1px rgba(212, 175, 55, 0.3),
+    inset 0 0 1px rgba(212, 175, 55, 0.3);
+}
+
+/* New Book Item Classes */
+.book-card {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.book-card-hover:hover {
+  transform: translateY(-4px);
+}
+
+.book-card-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.25;
 }
 
 /* Premium UI Effects */

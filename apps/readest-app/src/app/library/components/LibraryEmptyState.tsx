@@ -1,9 +1,8 @@
 import * as React from 'react';
 import clsx from 'clsx';
-import { PiBooks } from 'react-icons/pi';
-
 import { useEnv } from '@/context/EnvContext';
 import { useAuth } from '@/context/AuthContext';
+import { Logo } from '@/components/Logo';
 import { useTranslation } from '@/hooks/useTranslation';
 import { useAppRouter } from '@/hooks/useAppRouter';
 import { navigateToLogin } from '@/utils/nav';
@@ -22,7 +21,7 @@ const LibraryEmptyState: React.FC<LibraryEmptyStateProps> = ({ onImport }) => {
   return (
     <div className='hero-content text-neutral-content text-center'>
       <div className='flex max-w-md flex-col items-center'>
-        <PiBooks aria-hidden className='text-base-content/60 mb-10 size-16' />
+        <Logo size='lg' className='mb-10 text-primary drop-shadow-[0_0_12px_rgba(var(--p),0.5)]' />
         <h1 className='mb-5 text-balance text-4xl font-semibold leading-tight tracking-tight'>
           {_('Start your library')}
         </h1>

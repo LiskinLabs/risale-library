@@ -67,6 +67,7 @@ export const viewport: Viewport = {
   maximumScale: 1,
   userScalable: false,
   viewportFit: 'cover',
+  themeColor: '#1a1a3e',
   // `interactive-widget=resizes-content` is appended client-side on
   // Android only — see Providers.tsx. Other browsers warn about the
   // unrecognized key on every page load, so we keep it out of SSR.

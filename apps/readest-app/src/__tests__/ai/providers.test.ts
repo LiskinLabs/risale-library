@@ -33,6 +33,16 @@ vi.mock('@ai-sdk/openai-compatible', () => ({
   })),
 }));
 
+// mock @ai-sdk/google so GeminiProvider can be constructed
+vi.mock('@ai-sdk/google', () => ({
+  createGoogleGenerativeAI: vi.fn(() => {
+    const googleFn = Object.assign(vi.fn(), {
+      textEmbeddingModel: vi.fn(),
+    });
+    return googleFn;
+  }),
+}));
+
 import { OllamaProvider } from '@/services/ai/providers/OllamaProvider';
 import { AIGatewayProvider } from '@/services/ai/providers/AIGatewayProvider';
 import { OpenRouterProvider } from '@/services/ai/providers/OpenRouterProvider';
@@ -297,6 +307,48 @@ describe('getAIProvider', () => {
       provider: 'openrouter',
     };
     expect(() => getAIProvider(settings)).toThrow('API key required for OpenRouter');
+  });
+
+  test('should return GeminiProvider for gemini', () => {
+    const settings: AISettings = {
+      ...DEFAULT_AI_SETTINGS,
+      enabled: true,
+      provider: 'gemini',
+      geminiApiKey: 'test-key',
+    };
+    const provider = getAIProvider(settings);
+
+    expect(provider.id).toBe('gemini');
+  });
+
+  test('should throw for gemini without API key', () => {
+    const settings: AISettings = {
+      ...DEFAULT_AI_SETTINGS,
+      enabled: true,
+      provider: 'gemini',
+    };
+    expect(() => getAIProvider(settings)).toThrow('API key required for Gemini');
+  });
+
+  test('should return DeepSeekProvider for deepseek', () => {
+    const settings: AISettings = {
+      ...DEFAULT_AI_SETTINGS,
+      enabled: true,
+      provider: 'deepseek',
+      deepseekApiKey: 'sk-test',
+    };
+    const provider = getAIProvider(settings);
+
+    expect(provider.id).toBe('deepseek');
+  });
+
+  test('should throw for deepseek without API key', () => {
+    const settings: AISettings = {
+      ...DEFAULT_AI_SETTINGS,
+      enabled: true,
+      provider: 'deepseek',
+    };
+    expect(() => getAIProvider(settings)).toThrow('API key required for DeepSeek');
   });
 
   test('should throw for unknown provider', () => {

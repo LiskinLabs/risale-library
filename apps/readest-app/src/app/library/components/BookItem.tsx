@@ -6,6 +6,7 @@ import {
   LiaCloudDownloadAltSolid,
   LiaInfoCircleSolid,
 } from 'react-icons/lia';
+import { useDraggable } from '@dnd-kit/core';
 
 import { Book } from '@/types/book';
 import { useEnv } from '@/context/EnvContext';
@@ -50,6 +51,11 @@ const BookItem: React.FC<BookItemProps> = ({
   const { settings } = useSettingsStore();
   const iconSize15 = useResponsiveSize(15);
 
+  const { attributes, listeners, setNodeRef, isDragging } = useDraggable({
+    id: book.hash,
+    data: { book },
+  });
+
   const [_coverAspect, setCoverAspect] = useState<number | null>(null);
   useEffect(() => {
     setCoverAspect(null);
@@ -59,6 +65,9 @@ const BookItem: React.FC<BookItemProps> = ({
 
   return (
     <div
+      ref={setNodeRef}
+      {...listeners}
+      {...attributes}
       role='none'
       className={clsx(
         'book-item flex group',
@@ -70,39 +79,42 @@ const BookItem: React.FC<BookItemProps> = ({
       )}
       onClick={(e) => e.stopPropagation()}
     >
-      <div
-        className={clsx(
-          'bookitem-main relative flex w-full justify-center overflow-hidden rounded',
-          'aspect-[28/41]', // Always unified aspect ratio
-          coverFit === 'crop' && 'shadow-md',
-          mode === 'grid' && 'items-end',
-          mode === 'list' && 'min-w-20 items-center',
-          'transition-all duration-500 cubic-bezier(0.25, 0.46, 0.45, 0.94) sm:group-hover:-translate-y-2 sm:group-hover:shadow-2xl sm:group-hover:scale-[1.04]',
-        )}
-        style={bookitemMainStyle}
-      >
-        <BookCover
-          mode={mode}
-          book={book}
-          coverFit={coverFit}
-          showSpine={false}
-          imageClassName='rounded shadow-md'
-          onAspectRatioChange={setCoverAspect}
-        />
-        {/* WOW Shine Effect on hover */}
-        <div className='absolute top-0 left-[-150%] w-[100%] h-[200%] bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 group-hover:left-[150%] transition-all duration-[1200ms] ease-in-out z-20 pointer-events-none'></div>
-        {bookSelected && (
-          <div className='absolute inset-0 bg-black opacity-30 transition-opacity duration-300'></div>
-        )}
-        {isSelectMode && (
-          <div className='absolute bottom-1 right-1'>
-            {bookSelected ? (
-              <MdCheckCircle className='fill-blue-500' />
-            ) : (
-              <MdCheckCircleOutline className='fill-gray-300 drop-shadow-sm' />
-            )}
-          </div>
-        )}
+      <div className={clsx('relative w-full', mode === 'grid' && 'z-10')}>
+        {/* No wooden shelf, cleaner UI */}
+
+        <div
+          className={clsx(
+            'bookitem-main relative flex w-full justify-center overflow-visible rounded-lg z-10',
+            'aspect-[28/41]', // Always unified aspect ratio
+            coverFit === 'crop' && 'shadow-lg',
+            mode === 'grid' && 'items-end',
+            mode === 'list' && 'min-w-20 items-center',
+            'book-card book-card-hover',
+          )}
+          style={bookitemMainStyle}
+        >
+          <BookCover
+            mode={mode}
+            book={book}
+            coverFit={coverFit}
+            showSpine={false}
+            is3d={mode === 'grid'}
+            imageClassName='rounded-lg shadow-md'
+            onAspectRatioChange={setCoverAspect}
+          />
+          {bookSelected && (
+            <div className='absolute inset-0 bg-black opacity-30 transition-opacity duration-300'></div>
+          )}
+          {isSelectMode && (
+            <div className='absolute bottom-1 right-1'>
+              {bookSelected ? (
+                <MdCheckCircle className='fill-blue-500' />
+              ) : (
+                <MdCheckCircleOutline className='fill-gray-300 drop-shadow-sm' />
+              )}
+            </div>
+          )}
+        </div>
       </div>
       <div
         className={clsx(
@@ -114,18 +126,21 @@ const BookItem: React.FC<BookItemProps> = ({
         <div className={clsx('min-w-0 flex-1', mode === 'list' && 'flex flex-col gap-2')}>
           <h4
             className={clsx(
-              'overflow-hidden text-ellipsis font-semibold',
-              mode === 'grid' && 'block whitespace-nowrap text-[0.6em] text-xs',
-              mode === 'list' && 'line-clamp-2 text-base',
+              'book-card-title font-semibold',
+              mode === 'grid' && 'text-sm mt-1',
+              mode === 'list' && 'text-base',
             )}
           >
             {book.title}
           </h4>
-          {mode === 'list' && (
-            <p className='text-neutral-content line-clamp-1 text-sm'>
-              {formatAuthors(book.author, book.primaryLanguage) || ''}
-            </p>
-          )}
+          <p
+            className={clsx(
+              'text-neutral-content line-clamp-1',
+              mode === 'grid' ? 'text-xs' : 'text-sm',
+            )}
+          >
+            {formatAuthors(book.author, book.primaryLanguage) || ''}
+          </p>
         </div>
         {mode === 'list' && (
           <h4 className='text-neutral-content line-clamp-1 text-sm'>

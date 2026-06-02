@@ -136,7 +136,11 @@ export async function indexBook(
         ? settings.ollamaEmbeddingModel
         : settings.provider === 'openrouter'
           ? settings.openrouterEmbeddingModel || 'text-embedding-3-small'
-          : settings.aiGatewayEmbeddingModel || 'text-embedding-3-small';
+          : settings.provider === 'gemini'
+            ? settings.geminiEmbeddingModel || 'text-embedding-004'
+            : settings.provider === 'deepseek'
+              ? settings.deepseekEmbeddingModel || 'text-embedding-3-small'
+              : settings.aiGatewayEmbeddingModel || 'text-embedding-3-small';
     aiLogger.embedding.start(embeddingModelName, allChunks.length);
 
     const texts = allChunks.map((c) => c.text);

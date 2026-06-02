@@ -17,25 +17,8 @@ def setup_db(conn):
             definition TEXT NOT NULL
         )
     """)
-    cursor.execute("CREATE INDEX idx_term ON lugat(term)")
-    
-    # FTS5 table for search
-    cursor.execute("DROP TABLE IF EXISTS lugat_fts")
-    cursor.execute("""
-        CREATE VIRTUAL TABLE lugat_fts USING fts5(
-            term,
-            definition,
-            content='lugat',
-            content_rowid='id'
-        )
-    """)
-    
-    # Triggers to keep FTS in sync
-    cursor.execute("""
-        CREATE TRIGGER lugat_ai AFTER INSERT ON lugat BEGIN
-            INSERT INTO lugat_fts(rowid, term, definition) VALUES (new.id, new.term, new.definition);
-        END
-    """)
+    cursor.execute("CREATE INDEX IF NOT EXISTS idx_term ON lugat(term)")
+    cursor.execute("CREATE INDEX IF NOT EXISTS idx_arabic ON lugat(arabic)")
 
 def parse_line(line):
     line = line.strip()
@@ -99,10 +82,9 @@ def run_import():
         except Exception as e:
             print(f"Error reading file {file_path.name}: {e}")
     
-    conn.commit()
-    # Optimize FTS
-    print("Optimizing search index...")
-    cursor.execute("INSERT INTO lugat_fts(lugat_fts) VALUES('optimize')")
+    # Set user_version to match the migration count (1) so migrations
+    # are skipped at runtime — avoids FTS5 requirement in WASM builds.
+    cursor.execute("PRAGMA user_version = 1")
     conn.commit()
     conn.close()
     print(f"Successfully imported {count} entries.")

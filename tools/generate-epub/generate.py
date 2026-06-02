@@ -101,75 +101,182 @@ def is_arabic_text(text: str) -> bool:
 
 # ── CSS ─────────────────────────────────────────────────────────────
 
-CSS = r"""/* ── Risale-i Nur EPUB CSS (structural only) ──────
+CSS = r"""/* ── Risale-i Nur EPUB CSS v2 (structural-only) ──────
    Colors and backgrounds are left to the reader app's
    theme system (sepia, dark mode, etc.). This CSS only
-   defines text structure: headings, Arabic detection,
-   Sual/Elcevap blocks, and separators. */
+   defines text structure, typography, and semantic blocks.
+   Compatible with EPUB 3.3 + EPUB 3.4 (Annotations). */
 
 /* ── Body ─────────────────────────────────────── */
 body {
-  font-family: "Georgia", "Noto Serif", "Crimson Text", serif;
+  font-family: "Georgia", "Noto Serif", "Crimson Text", "Linux Libertine", serif;
   line-height: 1.95;
   text-align: justify;
   hyphens: auto;
-  font-variant-ligatures: common-ligatures;
+  -webkit-hyphens: auto;
+  font-variant-ligatures: common-ligatures discretionary-ligatures;
   font-kerning: normal;
+  font-variant-numeric: oldstyle-nums;
+  orphans: 2;
+  widows: 2;
 }
 
 /* ── Headings ─────────────────────────────────── */
 h1 {
   font-size: 1.8rem;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
   margin: 2.5rem 0 1.5rem;
   line-height: 1.3;
   page-break-before: always;
+  letter-spacing: -0.02em;
 }
 h2 {
   font-size: 1.45rem;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
   margin: 2rem 0 1rem;
   line-height: 1.35;
+  letter-spacing: -0.01em;
 }
 h3 {
   font-size: 1.22rem;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
   margin: 1.8rem 0 0.8rem;
 }
 h4 {
   font-size: 1.12rem;
-  font-weight: bold;
+  font-weight: 600;
   text-align: center;
   margin: 1.5rem 0 0.6rem;
 }
 
-/* ── Arabic (eRisale-style: centered, larger, no background) ── */
+/* ── Basmala (﷽) ───────────────────────────────── */
+.basmala {
+  display: block;
+  text-align: center;
+  direction: rtl;
+  font-family: "Scheherazade New", "Traditional Arabic", "Amiri",
+               "Noto Naskh Arabic", serif;
+  font-size: 2rem;
+  line-height: 2.5;
+  margin: 1.5rem 0 2rem;
+}
+
+/* ── Arabic (block-level aya) ───────────────────── */
 .arabic {
   display: block;
   text-align: center;
   direction: rtl;
-  font-family: "Traditional Arabic", "Scheherazade New", "Amiri", "Noto Naskh Arabic", serif;
+  unicode-bidi: embed;
+  font-family: "Scheherazade New", "Traditional Arabic", "Amiri",
+               "Noto Naskh Arabic", serif;
   font-size: 1.5rem;
   line-height: 2.5;
-  margin: 1rem 0;
-  padding: 0.6rem 1rem;
+  margin: 1.2rem 0;
+  padding: 0.8rem 1.5rem;
+  border-top: 1px solid rgba(128,128,128,0.15);
+  border-bottom: 1px solid rgba(128,128,128,0.15);
 }
-/* Inline Arabic within regular text */
-.arabic-inline {
-  direction: rtl;
-  font-family: "Traditional Arabic", "Scheherazade New", "Amiri", serif;
-  font-size: 1.2rem;
-  unicode-bidi: embed;
+/* Aya with tashkeel (diacritics) — extra line-height */
+.arabic.tashkeel {
+  line-height: 3;
+  font-size: 1.6rem;
+}
+/* Aya reference (sura:aya) below the Arabic text */
+.arabic .ayat-ref {
+  display: block;
+  text-align: center;
+  direction: ltr;
+  font-size: 0.75rem;
+  opacity: 0.65;
+  margin-top: 0.5rem;
+  font-family: "Georgia", serif;
 }
 
-/* ── Sual / Elcevap ────────────────────────────── */
+/* ── Inline Arabic (within Turkish/Russian text) ── */
+.arabic-inline {
+  direction: rtl;
+  unicode-bidi: embed;
+  font-family: "Scheherazade New", "Traditional Arabic", "Amiri", serif;
+  font-size: 1.2em;
+  vertical-align: baseline;
+}
+
+/* ── Hadith (distinguished from aya) ─────────────── */
+.hadith {
+  display: block;
+  text-align: center;
+  direction: rtl;
+  unicode-bidi: embed;
+  font-family: "Traditional Arabic", "Amiri", "Noto Naskh Arabic", serif;
+  font-size: 1.2rem;
+  line-height: 2.2;
+  margin: 1rem 0;
+  font-style: italic;
+}
+
+/* ── Group of consecutive ayas ──────────────────── */
+.ayat-group {
+  display: block;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  text-align: center;
+}
+.ayat-group .arabic {
+  border-top: none;
+  border-bottom: none;
+  margin: 0.5rem 0;
+}
+
+/* ── Sual (Question) ────────────────────────────── */
+.risale-sual {
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  text-indent: 0;
+}
+
+/* ── Elcevap (Answer) ───────────────────────────── */
+.risale-elcevap {
+  margin-top: 0.3rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ── Sual/Elcevap combined block ────────────────── */
 .sual-elcevap {
   margin: 1rem 0;
-  padding: 0.5rem 1rem;
-  border-left: 3px solid;
+  padding: 0.6rem 1.2rem;
+  border-left: 3px solid rgba(128,128,128,0.3);
+}
+
+/* ── Ihtar (Warning/Important Note) ─────────────── */
+.risale-ihtar {
+  margin: 1.2rem 1rem;
+  padding: 0.8rem 1.2rem;
+  border: 1px solid rgba(128,128,128,0.25);
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+/* ── Haşiye block (embedded commentary) ─────────── */
+.risale-hasiye-block {
+  margin: 0.5rem 2rem 1rem;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  opacity: 0.85;
+  border-left: 2px solid rgba(128,128,128,0.2);
+}
+
+/* ── Preface (author's introduction) ─────────────── */
+.risale-preface {
+  font-style: italic;
+  margin: 2rem 1.5rem;
+  padding: 0.8rem 1.2rem;
+  border-left: 3px solid rgba(128,128,128,0.3);
+  opacity: 0.9;
 }
 
 /* ── Separator ─────────────────────────────────── */
@@ -179,6 +286,16 @@ h4 {
   font-size: 1.2rem;
   letter-spacing: 0.5rem;
   text-indent: 0;
+  user-select: none;
+}
+
+/* ── Page marker (reference to original print page) ── */
+.page-marker {
+  display: inline;
+  font-size: 0.75rem;
+  vertical-align: super;
+  opacity: 0.5;
+  user-select: none;
 }
 
 /* ── Paragraphs ────────────────────────────────── */
@@ -187,7 +304,26 @@ p {
   text-indent: 1.5rem;
 }
 p:first-of-type { text-indent: 0; }
-p.arabic, p.separator { text-indent: 0; }
+p.arabic, p.separator, p.basmala, p.risale-sual,
+p.risale-ihtar, p.risale-hasiye-block { text-indent: 0; }
+
+/* ── Emphasis ──────────────────────────────────── */
+strong { font-weight: 700; }
+em { font-style: italic; }
+
+/* ── Responsive (mobile readers) ───────────────── */
+@media (max-width: 480px) {
+  body { font-size: 16px; line-height: 1.8; }
+  .arabic {
+    font-size: 1.25rem;
+    padding: 0.5rem 0.8rem;
+    line-height: 2.2;
+  }
+  .basmala { font-size: 1.6rem; }
+  .sual-elcevap { margin: 0.8rem 0; padding: 0.4rem 0.6rem; }
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.25rem; }
+}
 """
 
 
@@ -238,23 +374,35 @@ class DiyanetEPUBGenerator:
         print(f"  Parsed {len(self.sections)} sections")
 
     def _convert_body(self, body: str, section_idx: int) -> str:
-        """Convert Diyanet HTML body to EPUB-ready XHTML with anchor IDs."""
+        """Convert Diyanet HTML body to EPUB-ready XHTML with anchor IDs.
+
+        Semantic detection (in priority order):
+        1. Headings (h1-h4) → anchor IDs for TOC
+        2. Basmala (﷽ or Bismillah...) → .basmala
+        3. Separators (***) → .separator
+        4. Arabic text → .arabic (block-level aya)
+        5. Hadith (Arabic but shorter, italic style) → .hadith
+        6. Sual → .risale-sual
+        7. Elcevap → .risale-elcevap
+        8. Ihtar/Elhasıl → .risale-ihtar
+        9. Sual/Elcevap combined → .sual-elcevap (fallback)
+        """
         lines = body.split("\n")
         out = []
+        _prev_was_sual = False
 
         for line in lines:
             line = line.strip()
             if not line:
                 continue
 
-            # Headings: add unique anchor ID for TOC linking
+            # ── Headings ────────────────────────────────
             m = re.match(r"^<h([1-4])>(.*)</h\1>$", line)
             if m:
                 level = int(m.group(1))
                 heading_text = m.group(2).strip()
                 self._heading_counter += 1
                 anchor = f"heading-{self._heading_counter}"
-                # Store for TOC
                 href = f"section_{section_idx + 1:03d}.xhtml#{anchor}"
                 self.toc_entries.append(
                     TocEntry(heading_text, href, level, len(self.toc_entries) + 1)
@@ -264,36 +412,85 @@ class DiyanetEPUBGenerator:
                 )
                 continue
 
-            # Paragraphs
-            if line.startswith("<p>") and line.endswith("</p>"):
-                inner = line[3:-4].strip()
-
-                # Separator
-                if inner == "***" or inner == "***":
-                    out.append('<p class="separator">•&ensp;•&ensp;•</p>')
-                    continue
-
-                # Empty paragraph
-                if not inner or inner == "\xa0":
-                    continue
-
-                # Arabic detection
-                plain = re.sub(r"<[^>]+>", "", inner).strip()
-                if is_arabic_text(plain):
-                    # Block-level Arabic
-                    out.append(f'<p class="arabic">{inner}</p>')
-                    continue
-
-                # Sual/Elcevap blocks
-                if re.search(r"<strong><em>(Sual|Elcevap|İhtar|Elhasıl)", inner):
-                    out.append(f'<p class="sual-elcevap">{inner}</p>')
-                    continue
-
+            if not (line.startswith("<p>") and line.endswith("</p>")):
                 out.append(line)
                 continue
 
-            # Pass through anything else
+            inner = line[3:-4].strip()
+
+            # ── Separator ──────────────────────────────
+            if inner in ("***", "***", "---", "---"):
+                out.append('<p class="separator">•&ensp;•&ensp;•</p>')
+                _prev_was_sual = False
+                continue
+
+            # ── Empty paragraph ─────────────────────────
+            if not inner or inner == "\xa0":
+                _prev_was_sual = False
+                continue
+
+            plain = re.sub(r"<[^>]+>", "", inner).strip()
+
+            # ── Basmala detection ───────────────────────
+            if re.search(r"[﷽☫]", plain) or plain.strip().startswith(
+                "Bismill"
+            ):
+                out.append(f'<p class="basmala">{inner}</p>')
+                _prev_was_sual = False
+                continue
+
+            # ── Arabic text ─────────────────────────────
+            if is_arabic_text(plain):
+                # Check if it's a hadith (shorter, often in quotes)
+                if len(plain) < 100 and (
+                    "hadîs" in plain.lower()
+                    or "hadis" in plain.lower()
+                    or "rivayet" in plain.lower()
+                ):
+                    out.append(f'<p class="hadith">{inner}</p>')
+                else:
+                    out.append(f'<p class="arabic">{inner}</p>')
+                _prev_was_sual = False
+                continue
+
+            # ── Sual (Question) ─────────────────────────
+            if re.match(
+                r"^(?:<strong>)?\s*(?:<em>)?\s*Sual[\s:]", inner
+            ):
+                out.append(f'<p class="risale-sual">{inner}</p>')
+                _prev_was_sual = True
+                continue
+
+            # ── Elcevap (Answer) ────────────────────────
+            if re.match(
+                r"^(?:<strong>)?\s*(?:<em>)?\s*Elcevap[\s:]", inner
+            ):
+                if _prev_was_sual:
+                    out.append(f'<p class="risale-elcevap">{inner}</p>')
+                else:
+                    out.append(f'<p class="sual-elcevap">{inner}</p>')
+                _prev_was_sual = False
+                continue
+
+            # ── İhtar / Elhasıl (Warning/Summary) ────────
+            if re.match(
+                r"^(?:<strong>)?\s*(?:<em>)?\s*(?:İhtar|Elhasıl)[\s:]", inner
+            ):
+                out.append(f'<p class="risale-ihtar">{inner}</p>')
+                _prev_was_sual = False
+                continue
+
+            # ── Fallback Sual/Elcevap (combined) ────────
+            if re.search(
+                r"<strong><em>(?:Sual|Elcevap|İhtar|Elhasıl)", inner
+            ):
+                out.append(f'<p class="sual-elcevap">{inner}</p>')
+                _prev_was_sual = False
+                continue
+
+            # ── Regular paragraph ────────────────────────
             out.append(line)
+            _prev_was_sual = False
 
         return "\n".join(out)
 
@@ -382,7 +579,7 @@ class DiyanetEPUBGenerator:
 
         return (
             '<?xml version="1.0" encoding="UTF-8"?>'
-            '<package version="3.0" unique-identifier="book-id"'
+            '<package version="3.3" unique-identifier="book-id"'
             ' xmlns="http://www.idpf.org/2007/opf"'
             ' xmlns:dc="http://purl.org/dc/elements/1.1/">'
             "<metadata>"

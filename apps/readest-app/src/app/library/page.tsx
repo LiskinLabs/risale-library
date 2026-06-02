@@ -79,7 +79,7 @@ import {
   findGroupById,
   getBreadcrumbs,
 } from './utils/libraryUtils';
-import Spinner from '@/components/Spinner';
+import { LibrarySkeleton } from './components/LibrarySkeleton';
 import LibraryHeader from './components/LibraryHeader';
 import Bookshelf from './components/Bookshelf';
 import LibraryEmptyState from './components/LibraryEmptyState';
@@ -1369,7 +1369,10 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
       )}
     >
       <div
-        className='relative top-0 z-40 w-full'
+        className={clsx(
+          'relative top-0 z-40 w-full',
+          viewSettings?.isEink ? 'bg-base-100' : 'bg-base-200/80 backdrop-blur-xl saturate-150',
+        )}
         role='banner'
         tabIndex={-1}
         aria-label={_('Library Header')}
@@ -1399,11 +1402,7 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
           max='100'
         />
       </div>
-      {(loading || isSyncing) && (
-        <div className='fixed inset-0 z-50 flex items-center justify-center'>
-          <Spinner loading />
-        </div>
-      )}
+      {loading && <LibrarySkeleton />}
       {currentGroupPath && (
         <div
           className={`transition-all duration-300 ease-in-out ${

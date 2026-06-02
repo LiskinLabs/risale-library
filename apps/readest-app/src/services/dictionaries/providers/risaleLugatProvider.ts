@@ -29,12 +29,24 @@ export const createRisaleLugatProvider = (appService: AppService): DictionaryPro
             const targetName = pathInfo
               ? pathInfo.replace(/[/\\]+/g, '_').replace(/^_+/, '')
               : 'lugat.db';
+            // Cache-busting key — bump DB_VERSION when lugat.db schema changes
+            const DB_VERSION = 2;
+            const versionKey = `${targetName}.version`;
 
+            let needsFetch = true;
             try {
-              await root.getFileHandle(targetName);
+              const versionHandle = await root.getFileHandle(versionKey);
+              const versionFile = await versionHandle.getFile();
+              const storedVersion = parseInt(await versionFile.text()) || 0;
+              if (storedVersion >= DB_VERSION) {
+                needsFetch = false;
+              }
             } catch (_e) {
-              // File doesn't exist in OPFS, fetch it
-              console.log('Fetching lugat.db into OPFS...', targetName);
+              needsFetch = true;
+            }
+
+            if (needsFetch) {
+              console.log(`Fetching lugat.db v${DB_VERSION} into OPFS...`, targetName);
               const response = await fetch('/data/lugat.db');
               if (response.ok) {
                 const arrayBuffer = await response.arrayBuffer();
@@ -42,6 +54,11 @@ export const createRisaleLugatProvider = (appService: AppService): DictionaryPro
                 const writable = await fileHandle.createWritable();
                 await writable.write(arrayBuffer);
                 await writable.close();
+                // Write version stamp
+                const vHandle = await root.getFileHandle(versionKey, { create: true });
+                const vWritable = await vHandle.createWritable();
+                await vWritable.write(String(DB_VERSION));
+                await vWritable.close();
                 console.log('lugat.db successfully written to OPFS');
               }
             }
@@ -86,24 +103,13 @@ export const createRisaleLugatProvider = (appService: AppService): DictionaryPro
           params,
         );
 
-        // 2. Fallback to search if no exact match or word has potential suffixes
+        // 2. Fallback to prefix search using LIKE (FTS5 not available in WASM)
         if ((!results || results.length === 0) && query.length > 2) {
-          if (appService.appPlatform === 'web') {
-            // FTS5 is not available in WASM, use LIKE
-            const likeParams = level < 3 ? [`${query}%`, level] : [`${query}%`];
-            results = await database.select<LugatEntry>(
-              `SELECT term, arabic, definition FROM lugat WHERE term LIKE ? ${levelClause} LIMIT 1`,
-              likeParams,
-            );
-          } else {
-            const ftsLevelClause =
-              level < 3 ? 'AND id IN (SELECT id FROM lugat WHERE level >= ?)' : '';
-            const ftsParams = level < 3 ? [query, level] : [query];
-            results = await database.select<LugatEntry>(
-              `SELECT term, arabic, definition FROM lugat WHERE id IN (SELECT rowid FROM lugat_fts WHERE term MATCH ?) ${ftsLevelClause} LIMIT 1`,
-              ftsParams,
-            );
-          }
+          const likeParams = level < 3 ? [`${query}%`, level] : [`${query}%`];
+          results = await database.select<LugatEntry>(
+            `SELECT term, arabic, definition FROM lugat WHERE term LIKE ? ${levelClause} LIMIT 1`,
+            likeParams,
+          );
         }
 
         if (!results || results.length === 0) {

@@ -267,9 +267,16 @@ const getColorStyles = (
     blockquote {
       ${isDarkMode ? `background: color-mix(in srgb, ${bg} 80%, #000);` : ''}
     }
+    /* Only tint table descendants when the user has opted into color override.
+       By default, leave them transparent so a plain table (and the invisible
+       spacer cells some books use for vertical layout) keeps the page
+       background instead of a different shade. Illegible light/zebra table
+       backgrounds are handled separately by the dark-mode light-background
+       rewriters (getDarkModeLightBackgroundOverrides / transformStylesheet).
+       See #4419 (and #2377, which this gate originally fixed). */
     blockquote, table * {
-      ${isDarkMode ? `background: color-mix(in srgb, ${bg} 80%, #000);` : ''}
-      ${isDarkMode ? `background-color: color-mix(in srgb, ${bg} 80%, #000);` : ''}
+      ${isDarkMode && overrideColor ? `background: color-mix(in srgb, ${bg} 80%, #000);` : ''}
+      ${isDarkMode && overrideColor ? `background-color: color-mix(in srgb, ${bg} 80%, #000);` : ''}
     }
     /* override inline hardcoded text color */
     font[color="#000000"], font[color="#000"], font[color="black"],
@@ -743,6 +750,41 @@ const getHasiyeStyles = () => `
   }
 `;
 
+const getMeaningModeStyles = () => `
+  .meaning-annotated {
+    border-bottom: 1px dashed rgba(100, 150, 100, 0.5);
+    cursor: help;
+    position: relative;
+  }
+  .meaning-annotated:hover {
+    background: rgba(100, 150, 100, 0.12);
+    border-bottom-color: rgba(100, 150, 100, 0.8);
+  }
+  .meaning-annotated::after {
+    content: attr(data-def);
+    position: absolute;
+    bottom: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--theme-fg-color);
+    color: var(--theme-bg-color);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    white-space: nowrap;
+    max-width: 280px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    z-index: 100;
+  }
+  .meaning-annotated:hover::after {
+    opacity: 1;
+  }
+`;
+
 export interface ThemeCode {
   bg: string;
   fg: string;
@@ -845,8 +887,9 @@ export const getStyles = (viewSettings: ViewSettings, themeCode?: ThemeCode) => 
   const warichuStyles = getWarichuStyles();
   const rubyStyles = getRubyStyles();
   const hasiyeStyles = getHasiyeStyles();
+  const meaningModeStyles = getMeaningModeStyles();
   const userStylesheet = viewSettings.userStylesheet!;
-  return `${pageLayoutStyles}\n${paragraphLayoutStyles}\n${fontStyles}\n${colorStyles}\n${translationStyles}\n${warichuStyles}\n${rubyStyles}\n${hasiyeStyles}\n${userStylesheet}`;
+  return `${pageLayoutStyles}\n${paragraphLayoutStyles}\n${fontStyles}\n${colorStyles}\n${translationStyles}\n${warichuStyles}\n${rubyStyles}\n${hasiyeStyles}\n${meaningModeStyles}\n${userStylesheet}`;
 };
 
 export const applyTranslationStyle = (viewSettings: ViewSettings) => {

@@ -19,6 +19,23 @@ export const MODEL_PRICING: Record<string, { input: string; output: string }> = 
   [GATEWAY_MODELS.QWEN_3_235B]: { input: '0.07', output: '0.46' },
 };
 
+// Gemini (native) model constants — June 2026
+export const GEMINI_MODELS = {
+  PRO_PREVIEW: 'gemini-3-pro-preview',
+  FLASH_PREVIEW: 'gemini-3-flash-preview',
+  PRO: 'gemini-2.5-pro',
+  FLASH: 'gemini-2.5-flash',
+  FLASH_LITE: 'gemini-2.5-flash-lite',
+  EMBEDDING: 'text-embedding-004',
+} as const;
+
+// DeepSeek (native) model constants — June 2026
+// Note: deepseek-chat / deepseek-reasoner are deprecated as of 2026-07-24.
+export const DEEPSEEK_MODELS = {
+  V4_PRO: 'deepseek-v4-pro',
+  V4_FLASH: 'deepseek-v4-flash',
+} as const;
+
 export const DEFAULT_AI_SETTINGS: AISettings = {
   enabled: false,
   provider: 'ollama',
@@ -33,6 +50,16 @@ export const DEFAULT_AI_SETTINGS: AISettings = {
   openrouterBaseUrl: 'https://openrouter.ai/api/v1',
   openrouterModel: '',
   openrouterEmbeddingModel: '',
+
+  geminiModel: 'gemini-2.5-flash',
+  geminiEmbeddingModel: 'text-embedding-004',
+
+  deepseekBaseUrl: 'https://api.deepseek.com',
+  deepseekModel: 'deepseek-v4-pro',
+  deepseekEmbeddingModel: '',
+  deepseekThinkingMode: false,
+
+  fallbackEnabled: true,
 
   spoilerProtection: true,
   maxContextChunks: 10,

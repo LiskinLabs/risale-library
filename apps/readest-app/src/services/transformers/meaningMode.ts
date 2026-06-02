@@ -35,9 +35,8 @@ async function loadDictionary(): Promise<Map<string, string>> {
       const dbUrl = '/data/lugat.db';
       const response = await fetch(dbUrl);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      const buffer = await response.arrayBuffer();
-
       // Use a lightweight approach — we can't use SQLite WASM in a transformer
+      void (await response.arrayBuffer());
       // because it runs in the content iframe. Instead, pre-built JSON index.
       // Fallback: fetch a pre-built JSON mapping if available.
       const jsonUrl = '/data/lugat-terms.json';

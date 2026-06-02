@@ -33,7 +33,7 @@ The KOReader plugin (`apps/readest.koplugin/`) has its own gettext-based i18n sy
 
 ## Translation conventions
 
-- Brand names "Risale AI Studio" and "KOReader" stay untranslated.
+- Brand names "Readest" and "KOReader" stay untranslated.
 - Technical terms ("PDF", "API", "URL", "Supabase", "Hash") generally kept as-is, sometimes transliterated in non-Latin scripts.
 - Dialog title = title case (`Sync Info`); menu item label = sentence case (`Sync info`).
 - Lower-confidence translations (bo, si, ta, bn, sl, fa) deserve native-speaker review.

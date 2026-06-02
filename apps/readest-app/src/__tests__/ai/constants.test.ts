@@ -99,4 +99,43 @@ describe('AISettings Type', () => {
     expect(settings.provider).toBe('ai-gateway');
     expect(settings.aiGatewayApiKey).toBe('test-key');
   });
+
+  test('should support gemini provider', () => {
+    const settings: AISettings = {
+      ...DEFAULT_AI_SETTINGS,
+      enabled: true,
+      provider: 'gemini',
+      geminiApiKey: 'test-key',
+      geminiModel: 'gemini-2.5-flash',
+      geminiEmbeddingModel: 'text-embedding-004',
+    };
+
+    expect(settings.provider).toBe('gemini');
+    expect(settings.geminiApiKey).toBe('test-key');
+  });
+
+  test('should support deepseek provider', () => {
+    const settings: AISettings = {
+      ...DEFAULT_AI_SETTINGS,
+      enabled: true,
+      provider: 'deepseek',
+      deepseekApiKey: 'sk-test',
+      deepseekModel: 'deepseek-v4-pro',
+      deepseekThinkingMode: true,
+    };
+
+    expect(settings.provider).toBe('deepseek');
+    expect(settings.deepseekApiKey).toBe('sk-test');
+    expect(settings.deepseekThinkingMode).toBe(true);
+  });
+
+  test('should have fallback settings', () => {
+    const settings: AISettings = {
+      ...DEFAULT_AI_SETTINGS,
+      enabled: true,
+      fallbackEnabled: true,
+    };
+
+    expect(settings.fallbackEnabled).toBe(true);
+  });
 });

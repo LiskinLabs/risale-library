@@ -2,24 +2,29 @@
   "name": "Risale AI Studio",
   "short_name": "Risale AI Studio",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#ffffff",
+  "theme_color": "#1a1a3e",
   "description": "Risale AI Studio is an open-source eBook reader supporting EPUB, PDF, and sync across devices.",
   "icons": [
     {
       "src": "/icon.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "any maskable"
     },
     {
       "src": "/icon.png",
       "type": "image/png",
-      "sizes": "256x256"
+      "sizes": "256x256",
+      "purpose": "any maskable"
     },
     {
       "src": "/icon.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "any maskable"
     }
   ],
   "splash_pages": null

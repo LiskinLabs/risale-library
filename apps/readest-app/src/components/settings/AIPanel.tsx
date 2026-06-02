@@ -10,7 +10,13 @@ import {
   fetchOpenRouterModels,
   type OpenRouterModelInfo,
 } from '@/services/ai/providers/OpenRouterProvider';
-import { DEFAULT_AI_SETTINGS, GATEWAY_MODELS, MODEL_PRICING } from '@/services/ai/constants';
+import { fetchDeepSeekModels } from '@/services/ai/providers/DeepSeekProvider';
+import {
+  DEFAULT_AI_SETTINGS,
+  GATEWAY_MODELS,
+  MODEL_PRICING,
+  GEMINI_MODELS,
+} from '@/services/ai/constants';
 import type { AISettings, AIProviderName } from '@/services/ai/types';
 import { exportReedyMetricsBundle } from '@/services/reedy/instrumentation';
 import { isTauriAppPlatform } from '@/services/environment';
@@ -99,6 +105,35 @@ const AIPanel: React.FC = () => {
   const [openrouterModels, setOpenrouterModels] = useState<OpenRouterModelInfo[]>([]);
   const [openrouterFetchingModels, setOpenrouterFetchingModels] = useState(false);
   const [openrouterModelsError, setOpenrouterModelsError] = useState('');
+
+  // ---- Gemini state ----
+  const [geminiKey, setGeminiKey] = useState(aiSettings.geminiApiKey ?? '');
+  const [geminiModel, setGeminiModel] = useState(
+    aiSettings.geminiModel ?? DEFAULT_AI_SETTINGS.geminiModel ?? '',
+  );
+  const [geminiEmbeddingModel, setGeminiEmbeddingModel] = useState(
+    aiSettings.geminiEmbeddingModel ?? DEFAULT_AI_SETTINGS.geminiEmbeddingModel ?? '',
+  );
+
+  // ---- DeepSeek state ----
+  const [deepseekKey, setDeepseekKey] = useState(aiSettings.deepseekApiKey ?? '');
+  const [deepseekUrl, setDeepseekUrl] = useState(
+    aiSettings.deepseekBaseUrl ?? DEFAULT_AI_SETTINGS.deepseekBaseUrl ?? '',
+  );
+  const [deepseekModel, setDeepseekModel] = useState(
+    aiSettings.deepseekModel ?? DEFAULT_AI_SETTINGS.deepseekModel ?? '',
+  );
+  const [deepseekEmbeddingModel, setDeepseekEmbeddingModel] = useState(
+    aiSettings.deepseekEmbeddingModel ?? '',
+  );
+  const [deepseekThinkingMode, setDeepseekThinkingMode] = useState(
+    aiSettings.deepseekThinkingMode ?? false,
+  );
+  const [deepseekModels, setDeepseekModels] = useState<Array<{ id: string }>>([]);
+  const [deepseekFetchingModels, setDeepseekFetchingModels] = useState(false);
+
+  // ---- Fallback state ----
+  const [fallbackEnabled, setFallbackEnabled] = useState(aiSettings.fallbackEnabled ?? true);
 
   const savedCustomModel = aiSettings.aiGatewayCustomModel ?? '';
   const savedModel = aiSettings.aiGatewayModel ?? DEFAULT_AI_SETTINGS.aiGatewayModel ?? '';
@@ -203,6 +238,35 @@ const AIPanel: React.FC = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [provider, enabled, openrouterKey, openrouterUrl]);
 
+  // ---- DeepSeek: fetch /models list ----
+  const fetchDeepseekModelList = useCallback(async () => {
+    if (!enabled || !deepseekUrl || !deepseekKey) {
+      setDeepseekModels([]);
+      return;
+    }
+    setDeepseekFetchingModels(true);
+    try {
+      const models = await fetchDeepSeekModels(deepseekUrl, deepseekKey);
+      models.sort((a, b) => a.id.localeCompare(b.id));
+      setDeepseekModels(models);
+      if (models.length > 0 && !models.some((m) => m.id === deepseekModel)) {
+        setDeepseekModel(models[0]!.id);
+      }
+    } catch {
+      setDeepseekModels([]);
+    } finally {
+      setDeepseekFetchingModels(false);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [enabled, deepseekUrl, deepseekKey, deepseekModel]);
+
+  useEffect(() => {
+    if (provider === 'deepseek' && enabled && deepseekKey && deepseekUrl) {
+      fetchDeepseekModelList();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [provider, enabled, deepseekKey, deepseekUrl]);
+
   useEffect(() => {
     isMounted.current = true;
   }, []);
@@ -287,6 +351,81 @@ const AIPanel: React.FC = () => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [openrouterEmbeddingModel]);
+
+  // ---- Gemini save effects ----
+  useEffect(() => {
+    if (!isMounted.current) return;
+    if (geminiKey !== (aiSettings.geminiApiKey ?? '')) {
+      saveAiSetting('geminiApiKey', geminiKey);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [geminiKey]);
+
+  useEffect(() => {
+    if (!isMounted.current) return;
+    if (geminiModel !== (aiSettings.geminiModel ?? '')) {
+      saveAiSetting('geminiModel', geminiModel);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [geminiModel]);
+
+  useEffect(() => {
+    if (!isMounted.current) return;
+    if (geminiEmbeddingModel !== (aiSettings.geminiEmbeddingModel ?? '')) {
+      saveAiSetting('geminiEmbeddingModel', geminiEmbeddingModel);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [geminiEmbeddingModel]);
+
+  // ---- DeepSeek save effects ----
+  useEffect(() => {
+    if (!isMounted.current) return;
+    if (deepseekKey !== (aiSettings.deepseekApiKey ?? '')) {
+      saveAiSetting('deepseekApiKey', deepseekKey);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [deepseekKey]);
+
+  useEffect(() => {
+    if (!isMounted.current) return;
+    if (deepseekUrl !== (aiSettings.deepseekBaseUrl ?? '')) {
+      saveAiSetting('deepseekBaseUrl', deepseekUrl);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [deepseekUrl]);
+
+  useEffect(() => {
+    if (!isMounted.current) return;
+    if (deepseekModel !== (aiSettings.deepseekModel ?? '')) {
+      saveAiSetting('deepseekModel', deepseekModel);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [deepseekModel]);
+
+  useEffect(() => {
+    if (!isMounted.current) return;
+    if (deepseekEmbeddingModel !== (aiSettings.deepseekEmbeddingModel ?? '')) {
+      saveAiSetting('deepseekEmbeddingModel', deepseekEmbeddingModel);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [deepseekEmbeddingModel]);
+
+  useEffect(() => {
+    if (!isMounted.current) return;
+    if (deepseekThinkingMode !== (aiSettings.deepseekThinkingMode ?? false)) {
+      saveAiSetting('deepseekThinkingMode', deepseekThinkingMode);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [deepseekThinkingMode]);
+
+  // ---- Fallback save effect ----
+  useEffect(() => {
+    if (!isMounted.current) return;
+    if (fallbackEnabled !== (aiSettings.fallbackEnabled ?? true)) {
+      saveAiSetting('fallbackEnabled', fallbackEnabled);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [fallbackEnabled]);
 
   // Get the effective model ID to use (either selected or custom)
   const getEffectiveModelId = useCallback(() => {
@@ -382,6 +521,13 @@ const AIPanel: React.FC = () => {
         openrouterBaseUrl: openrouterUrl,
         openrouterModel,
         openrouterEmbeddingModel,
+        geminiApiKey: geminiKey,
+        geminiModel,
+        geminiEmbeddingModel,
+        deepseekApiKey: deepseekKey,
+        deepseekBaseUrl: deepseekUrl,
+        deepseekModel,
+        deepseekEmbeddingModel,
       };
       const aiProvider = getAIProvider(testSettings);
       const isHealthy = await aiProvider.healthCheck();
@@ -441,6 +587,26 @@ const AIPanel: React.FC = () => {
             className='radio'
             checked={provider === 'openrouter'}
             onChange={() => setProvider('openrouter')}
+            disabled={!enabled}
+          />
+        </SettingsRow>
+        <SettingsRow label={_('Google Gemini (Native)')} asLabel>
+          <input
+            type='radio'
+            name='ai-provider'
+            className='radio'
+            checked={provider === 'gemini'}
+            onChange={() => setProvider('gemini')}
+            disabled={!enabled}
+          />
+        </SettingsRow>
+        <SettingsRow label={_('DeepSeek (Native)')} asLabel>
+          <input
+            type='radio'
+            name='ai-provider'
+            className='radio'
+            checked={provider === 'deepseek'}
+            onChange={() => setProvider('deepseek')}
             disabled={!enabled}
           />
         </SettingsRow>
@@ -741,6 +907,206 @@ const AIPanel: React.FC = () => {
           </div>
         </BoxedList>
       )}
+
+      {provider === 'gemini' && (
+        <BoxedList
+          title={_('Google Gemini Configuration')}
+          description={_(
+            'Connect directly to Google Gemini API. Get your API key from Google AI Studio. Gemini offers 2M token context, fast inference, and affordable pricing.',
+          )}
+          className={disabledSection}
+        >
+          <div className='flex flex-col gap-2 pe-4 py-3'>
+            <div className='flex w-full items-center justify-between'>
+              <SettingLabel>{_('API Key')}</SettingLabel>
+              <a
+                href='https://aistudio.google.com/apikey'
+                target='_blank'
+                rel='noopener noreferrer'
+                className={clsx('link text-xs', !enabled && 'pointer-events-none')}
+              >
+                {_('Get Key')}
+              </a>
+            </div>
+            <input
+              type='password'
+              className='input input-bordered input-sm w-full'
+              value={geminiKey}
+              onChange={(e) => setGeminiKey(e.target.value)}
+              placeholder='AIza...'
+              disabled={!enabled}
+              autoComplete='off'
+            />
+          </div>
+          <div className='flex flex-col gap-2 pe-4 py-3'>
+            <SettingLabel>{_('LLM Model')}</SettingLabel>
+            <select
+              className='select select-bordered select-sm bg-base-100 text-base-content w-full'
+              value={geminiModel}
+              onChange={(e) => setGeminiModel(e.target.value)}
+              disabled={!enabled}
+            >
+              <option value={GEMINI_MODELS.FLASH}>
+                {_('Gemini 2.5 Flash — Fast, cost-effective')}
+              </option>
+              <option value={GEMINI_MODELS.FLASH_LITE}>
+                {_('Gemini 2.5 Flash Lite — Cheapest')}
+              </option>
+              <option value={GEMINI_MODELS.PRO}>
+                {_('Gemini 2.5 Pro — Strong reasoning, 64K output')}
+              </option>
+              <option value={GEMINI_MODELS.PRO_PREVIEW}>
+                {_('Gemini 3 Pro (Preview) — Latest')}
+              </option>
+              <option value={GEMINI_MODELS.FLASH_PREVIEW}>
+                {_('Gemini 3 Flash (Preview) — Fastest')}
+              </option>
+            </select>
+          </div>
+          <div className='flex flex-col gap-2 pe-4 py-3'>
+            <SettingLabel>{_('Embedding Model')}</SettingLabel>
+            <select
+              className='select select-bordered select-sm bg-base-100 text-base-content w-full'
+              value={geminiEmbeddingModel}
+              onChange={(e) => setGeminiEmbeddingModel(e.target.value)}
+              disabled={!enabled}
+            >
+              <option value={GEMINI_MODELS.EMBEDDING}>{_('text-embedding-004 (768d)')}</option>
+            </select>
+          </div>
+        </BoxedList>
+      )}
+
+      {provider === 'deepseek' && (
+        <BoxedList
+          title={_('DeepSeek Configuration')}
+          description={_(
+            'Connect directly to DeepSeek API. DeepSeek V4 models offer 1M token context and advanced reasoning capabilities. The API is OpenAI-compatible.',
+          )}
+          className={disabledSection}
+        >
+          <div className='flex flex-col gap-2 pe-4 py-3'>
+            <div className='flex w-full items-center justify-between'>
+              <SettingLabel>{_('API Key')}</SettingLabel>
+              <a
+                href='https://platform.deepseek.com/api_keys'
+                target='_blank'
+                rel='noopener noreferrer'
+                className={clsx('link text-xs', !enabled && 'pointer-events-none')}
+              >
+                {_('Get Key')}
+              </a>
+            </div>
+            <input
+              type='password'
+              className='input input-bordered input-sm w-full'
+              value={deepseekKey}
+              onChange={(e) => setDeepseekKey(e.target.value)}
+              placeholder='sk-...'
+              disabled={!enabled}
+              autoComplete='off'
+            />
+          </div>
+
+          {/* Base URL + refresh */}
+          <div className='flex flex-col gap-2 pe-4 py-3'>
+            <div className='flex w-full items-center justify-between'>
+              <SettingLabel>{_('Base URL')}</SettingLabel>
+              <button
+                className='hover:bg-base-200 inline-flex h-7 w-7 items-center justify-center rounded-md transition-colors duration-150'
+                onClick={fetchDeepseekModelList}
+                disabled={!enabled || deepseekFetchingModels || !deepseekKey}
+                title={_('Refresh Models')}
+                aria-label={_('Refresh Models')}
+              >
+                {deepseekFetchingModels ? (
+                  <PiSpinner className='size-4 animate-spin' />
+                ) : (
+                  <PiArrowsClockwise className='size-4' />
+                )}
+              </button>
+            </div>
+            <input
+              type='text'
+              className='input input-bordered input-sm w-full'
+              value={deepseekUrl}
+              onChange={(e) => setDeepseekUrl(e.target.value)}
+              placeholder='https://api.deepseek.com'
+              disabled={!enabled}
+            />
+          </div>
+
+          {/* Model picker */}
+          <div className='flex flex-col gap-2 pe-4 py-3'>
+            <SettingLabel>{_('LLM Model')}</SettingLabel>
+            {deepseekModels.length > 0 ? (
+              <select
+                className='select select-bordered select-sm bg-base-100 text-base-content w-full'
+                value={deepseekModel}
+                onChange={(e) => setDeepseekModel(e.target.value)}
+                disabled={!enabled}
+              >
+                {deepseekModels.map((m) => (
+                  <option key={m.id} value={m.id}>
+                    {m.id}
+                  </option>
+                ))}
+              </select>
+            ) : (
+              <input
+                type='text'
+                className='input input-bordered input-sm w-full'
+                value={deepseekModel}
+                onChange={(e) => setDeepseekModel(e.target.value)}
+                placeholder='deepseek-v4-pro'
+                disabled={!enabled}
+              />
+            )}
+          </div>
+
+          {/* Embedding model — DeepSeek doesn't offer embeddings natively */}
+          <div className='flex flex-col gap-2 pe-4 py-3'>
+            <SettingLabel>{_('Embedding Model (optional)')}</SettingLabel>
+            <input
+              type='text'
+              className='input input-bordered input-sm w-full'
+              value={deepseekEmbeddingModel}
+              onChange={(e) => setDeepseekEmbeddingModel(e.target.value)}
+              placeholder='openai/text-embedding-3-small'
+              disabled={!enabled}
+            />
+            <span className='text-base-content/60 text-xs'>
+              {_(
+                'DeepSeek does not provide native embedding models. Enter an OpenAI-compatible embedding model ID (uses same base URL and auth).',
+              )}
+            </span>
+          </div>
+
+          {/* Thinking mode toggle */}
+          <SettingsSwitchRow
+            label={_('Enable Thinking Mode (DeepSeek V4)')}
+            checked={deepseekThinkingMode}
+            onChange={() => setDeepseekThinkingMode(!deepseekThinkingMode)}
+            disabled={!enabled}
+          />
+        </BoxedList>
+      )}
+
+      {/* Fallback toggle — shown regardless of provider */}
+      <BoxedList
+        title={_('AI Orchestrator')}
+        className={disabledSection}
+        description={_(
+          'When enabled, the AI system automatically falls back to alternative providers if the primary one is unavailable. This ensures AI features keep working even during outages.',
+        )}
+      >
+        <SettingsSwitchRow
+          label={_('Enable Provider Fallback')}
+          checked={fallbackEnabled}
+          onChange={() => setFallbackEnabled(!fallbackEnabled)}
+          disabled={!enabled}
+        />
+      </BoxedList>
 
       <BoxedList
         title={_('Reedy Retrieval (Beta)')}

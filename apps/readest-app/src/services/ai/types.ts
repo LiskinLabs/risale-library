@@ -1,6 +1,6 @@
 import type { LanguageModel, EmbeddingModel } from 'ai';
 
-export type AIProviderName = 'ollama' | 'ai-gateway' | 'openrouter';
+export type AIProviderName = 'ollama' | 'ai-gateway' | 'openrouter' | 'gemini' | 'deepseek';
 
 export interface AIProvider {
   id: AIProviderName;
@@ -33,6 +33,23 @@ export interface AISettings {
   openrouterBaseUrl?: string;
   openrouterModel?: string;
   openrouterEmbeddingModel?: string;
+
+  // Google Gemini (native via @ai-sdk/google).
+  geminiApiKey?: string;
+  geminiModel?: string;
+  geminiEmbeddingModel?: string;
+
+  // DeepSeek (native via @ai-sdk/openai-compatible).
+  deepseekApiKey?: string;
+  deepseekBaseUrl?: string;
+  deepseekModel?: string;
+  deepseekEmbeddingModel?: string;
+  deepseekThinkingMode?: boolean;
+  deepseekReasoningEffort?: 'high' | 'max';
+
+  // AI Orchestrator settings.
+  fallbackEnabled?: boolean;
+  fallbackProviders?: AIProviderName[];
 
   spoilerProtection: boolean;
   maxContextChunks: number;

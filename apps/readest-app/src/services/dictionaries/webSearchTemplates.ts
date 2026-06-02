@@ -44,6 +44,18 @@ export const BUILTIN_WEB_SEARCHES: BuiltinWebSearchTemplate[] = [
     nameKey: 'TDK Sözlük',
     urlTemplate: 'https://sozluk.gov.tr/?ara=%WORD%',
   },
+  {
+    id: BUILTIN_WEB_SEARCH_IDS.sesliSozluk,
+    name: 'Sesli Sözlük',
+    nameKey: 'Sesli Sözlük',
+    urlTemplate: 'https://www.seslisozluk.net/%WORD%',
+  },
+  {
+    id: BUILTIN_WEB_SEARCH_IDS.vikisozluk,
+    name: 'Vikisözlük',
+    nameKey: 'Vikisözlük',
+    urlTemplate: 'https://tr.wiktionary.org/wiki/%WORD%',
+  },
 ];
 
 const BUILTIN_BY_ID = new Map(BUILTIN_WEB_SEARCHES.map((t) => [t.id, t]));

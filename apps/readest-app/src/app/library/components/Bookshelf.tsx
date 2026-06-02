@@ -13,6 +13,17 @@ import {
   type GridListProps,
   type ListProps,
 } from 'react-virtuoso';
+import {
+  DndContext,
+  DragOverlay,
+  useSensor,
+  useSensors,
+  PointerSensor,
+  TouchSensor,
+  MouseSensor,
+  DragEndEvent,
+  DragStartEvent,
+} from '@dnd-kit/core';
 import { Book, BooksGroup, ReadingStatus } from '@/types/book';
 import {
   LibraryCoverFitType,
@@ -45,6 +56,9 @@ import {
   resolveEffectiveSecondarySort,
 } from '../utils/libraryUtils';
 import { eventDispatcher } from '@/utils/event';
+import { getLocalBookFilename } from '@/utils/book';
+import { MIMETYPES, EXTS } from '@/libs/document';
+import { makeSafeFilename } from '@/utils/misc';
 
 import { useSpatialNavigation } from '../hooks/useSpatialNavigation';
 import Alert from '@/components/Alert';
@@ -88,8 +102,8 @@ type BookshelfListContext = {
 };
 
 const BOOKSHELF_GRID_CLASSES =
-  'bookshelf-items transform-wrapper grid gap-x-4 px-4 sm:gap-x-0 sm:px-2 ' +
-  'grid-cols-3 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-12';
+  'bookshelf-items transform-wrapper grid gap-x-5 gap-y-6 px-4 sm:px-6 ' +
+  'grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6';
 
 const BOOKSHELF_LIST_CLASSES = 'bookshelf-items transform-wrapper flex flex-col';
 
@@ -433,6 +447,113 @@ const Bookshelf: React.FC<BookshelfProps> = ({
     setShowStatusAlert(true);
   };
 
+  const sendSelectedBook = async () => {
+    // "Send" hands the actual book file (epub/pdf/...) to the OS share
+    // sheet (UIActivityViewController on iOS, Intent.ACTION_SEND on
+    // Android, NSSharingServicePicker on macOS) so the user can fire it
+    // off to Mail / Messages / WeChat / AirDrop / etc. Backed by
+    // tauri-plugin-sharekit via appService.saveFile({ share: true }).
+    //
+    // This is intentionally distinct from the per-item "Share Book"
+    // context menu, which uploads the book to the readest backend and
+    // generates a public link. "Send" is offline file egress; "Share
+    // Book" is remote collaboration. They share zero infra.
+    //
+    // Linux has no system share sheet, and Windows is intentionally
+    // disabled (issue #4343 — WebView2's native share UI blocks the main
+    // thread waiting on cancel/complete callbacks that may never fire).
+    // We hide the button entirely on those platforms (see sendEnabled
+    // in the JSX) so users don't see an action that can't be honoured.
+
+    const ids = getSelectedBooks();
+    if (ids.length !== 1) return;
+    const book = filteredBooks.find((b) => b.hash === ids[0]);
+    if (!book || !appService) return;
+
+    // Anchor the macOS share popover to the selected book's cover, not
+    // to the Send button — the user just tapped/clicked the book, so
+    // their visual focus is on the cover. We look the cover up via the
+    // `data-book-hash` attribute that BookshelfItem stamps on its root
+    // div. The rect must be captured *before* setShowSelectModeActions
+    // tears the popup down (the bookshelf itself stays mounted, but we
+    // still want to grab it up front to keep the share-call site
+    // simple). preferredEdge='bottom' maps to NSMinYEdge, which in
+    // WKWebView's flipped coord space is the rect's top edge, so the
+    // popover renders above the cover (and only auto-flips below when
+    // there's no room above). On iOS / Android the share sheet is modal
+    // and ignores sharePosition, so this work is harmless there.
+    const coverEl = document.querySelector<HTMLElement>(`[data-book-hash="${book.hash}"]`);
+    const anchorRect = coverEl?.getBoundingClientRect();
+    const sharePosition = anchorRect
+      ? {
+          x: anchorRect.left + anchorRect.width / 2,
+          y: anchorRect.top + anchorRect.height / 2,
+          preferredEdge: 'bottom' as const,
+        }
+      : undefined;
+
+    setShowSelectModeActions(false);
+    handleSetSelectMode(false);
+
+    try {
+      // Resolve the file the same way bookContent.resolveBookContentSource
+      // does, but via the public AppService surface (the underlying `fs`
+      // is protected): managed copy under Books/<hash>/ first, then the
+      // device-local in-place import path. Cloud-only books or remote
+      // URL books can't be shared without first downloading them.
+      const managedPath = getLocalBookFilename(book);
+      let path: string;
+      let base: 'Books' | 'None';
+      if (await appService.exists(managedPath, 'Books')) {
+        path = managedPath;
+        base = 'Books';
+      } else if (book.filePath && (await appService.exists(book.filePath, 'None'))) {
+        path = book.filePath;
+        base = 'None';
+      } else {
+        eventDispatcher.dispatch('toast', {
+          type: 'warning',
+          message: _('Book file is not available locally'),
+          timeout: 2500,
+        });
+        return;
+      }
+      const ext = EXTS[book.format] ?? 'bin';
+      const mimeType = MIMETYPES[book.format]?.[0] ?? 'application/octet-stream';
+      const baseName = makeSafeFilename(book.sourceTitle || book.title || book.hash);
+      const shareFilename = `${baseName}.${ext}`;
+
+      // Native (Tauri) only — the Share button is hidden on web because
+      // browsers can't surface a real "share to <app>" sheet for an
+      // arbitrary local file. Hand the already-on-disk file straight to
+      // the OS share sheet via `options.filePath`. Without it,
+      // saveFile() falls back to writing a temp copy under
+      // BaseDirectory.Temp, which on Android resolves to
+      // /data/local/tmp/ — the app sandbox has no write permission
+      // there and the call fails with EACCES ("failed to open file at
+      // path: /data/local/tmp/...epub Permission denied (os error
+      // 13)"). Passing the absolute path also avoids re-buffering the
+      // whole epub/pdf into memory just to have saveFile write it back
+      // to disk.
+      const absoluteFilePath = await appService.resolveFilePath(path, base);
+      // `null` content: there's nothing to write — the file already lives at
+      // `filePath`, which the native share path reads directly.
+      await appService.saveFile(shareFilename, null, {
+        share: true,
+        mimeType,
+        filePath: absoluteFilePath,
+        sharePosition,
+      });
+    } catch (err) {
+      console.error('Failed to send book file:', err);
+      eventDispatcher.dispatch('toast', {
+        type: 'error',
+        message: _('Failed to send book'),
+        timeout: 2500,
+      });
+    }
+  };
+
   const updateBooksStatus = async (status: ReadingStatus | undefined) => {
     const selectedIds = getSelectedBooks();
     const booksToUpdate: Book[] = [];
@@ -516,6 +637,59 @@ const Bookshelf: React.FC<BookshelfProps> = ({
       eventDispatcher.off('show-share-dialog', handleShareIntent);
     };
   }, [user, _]);
+
+  // Drag and Drop State
+  const [activeDragBook, setActiveDragBook] = useState<Book | null>(null);
+
+  const sensors = useSensors(
+    useSensor(PointerSensor, {
+      activationConstraint: {
+        distance: 8, // Require 8px movement before dragging starts
+      },
+    }),
+    useSensor(TouchSensor, {
+      activationConstraint: {
+        delay: 250,
+        tolerance: 5,
+      },
+    }),
+  );
+
+  const handleDragStart = useCallback(
+    (event: DragStartEvent) => {
+      const { active } = event;
+      const book = filteredBooks.find((b) => b.hash === active.id);
+      if (book) setActiveDragBook(book);
+    },
+    [filteredBooks],
+  );
+
+  const handleDragEnd = useCallback(
+    async (event: DragEndEvent) => {
+      setActiveDragBook(null);
+      const { active, over } = event;
+      if (!over || active.id === over.id) return;
+
+      const book = filteredBooks.find((b) => b.hash === active.id);
+      if (!book) return;
+
+      const targetGroupName = over.id as string;
+      const currentGroupName = book.groupName || '';
+
+      // If dropping into the exact same folder, do nothing
+      if (currentGroupName === targetGroupName) return;
+
+      // Update book's groupName
+      const updatedBook = { ...book, groupName: targetGroupName, updatedAt: Date.now() };
+      await updateBooks(envConfig, [updatedBook]);
+      eventDispatcher.dispatch('toast', {
+        type: 'success',
+        message: _('Book moved to ' + targetGroupName),
+        timeout: 2000,
+      });
+    },
+    [filteredBooks, updateBooks, envConfig, _],
+  );
 
   // OverlayScrollbars + Virtuoso integration: Virtuoso manages its own
   // scroller; OverlayScrollbars wraps it for overlay scrollbar rendering.
@@ -657,108 +831,143 @@ const Bookshelf: React.FC<BookshelfProps> = ({
   );
 
   return (
-    <div
-      ref={autofocusRef}
-      tabIndex={-1}
-      role='main'
-      aria-label={_('Bookshelf')}
-      className='bookshelf min-h-0 flex-grow focus:outline-none'
-    >
-      <div ref={osRootRef} data-overlayscrollbars-initialize='' className='h-full'>
-        {hasItems && isGridMode && (
-          <VirtuosoGrid<unknown, BookshelfListContext>
-            overscan={200}
-            totalCount={gridTotalCount}
-            components={GRID_VIRTUOSO_COMPONENTS}
-            context={listContext}
-            computeItemKey={computeItemKey}
-            itemContent={renderBookshelfItem}
-            scrollerRef={handleScrollerRef}
-          />
-        )}
-        {hasItems && !isGridMode && (
-          <Virtuoso
-            overscan={200}
-            totalCount={sortedBookshelfItems.length}
-            components={LIST_VIRTUOSO_COMPONENTS}
-            computeItemKey={computeItemKey}
-            itemContent={renderBookshelfItem}
-            scrollerRef={handleScrollerRef}
-          />
-        )}
-      </div>
-      {loading && (
-        <div className='fixed inset-0 z-50 flex items-center justify-center'>
-          <Spinner loading />
+    <DndContext sensors={sensors} onDragStart={handleDragStart} onDragEnd={handleDragEnd}>
+      <div
+        ref={autofocusRef}
+        tabIndex={-1}
+        role='main'
+        aria-label={_('Bookshelf')}
+        className='bookshelf min-h-0 flex-grow focus:outline-none'
+      >
+        <div ref={osRootRef} data-overlayscrollbars-initialize='' className='h-full'>
+          {hasItems && isGridMode && (
+            <VirtuosoGrid<unknown, BookshelfListContext>
+              overscan={200}
+              totalCount={gridTotalCount}
+              components={GRID_VIRTUOSO_COMPONENTS}
+              context={listContext}
+              computeItemKey={computeItemKey}
+              itemContent={renderBookshelfItem}
+              scrollerRef={handleScrollerRef}
+            />
+          )}
+          {hasItems && !isGridMode && (
+            <Virtuoso
+              overscan={200}
+              totalCount={sortedBookshelfItems.length}
+              components={LIST_VIRTUOSO_COMPONENTS}
+              computeItemKey={computeItemKey}
+              itemContent={renderBookshelfItem}
+              scrollerRef={handleScrollerRef}
+            />
+          )}
         </div>
-      )}
-      {!showGroupingModal && isSelectMode && showSelectModeActions && (
-        <SelectModeActions
-          selectedBooks={selectedBooks}
-          safeAreaBottom={safeAreaInsets?.bottom || 0}
-          onOpen={openSelectedBooks}
-          onGroup={groupSelectedBooks}
-          onDetails={openBookDetails}
-          onStatus={showStatusSelection}
-          onDelete={deleteSelectedBooks}
-          onCancel={() => handleSetSelectMode(false)}
-        />
-      )}
-      {showGroupingModal && selectedBooks.length > 0 && (
-        <ModalPortal>
-          <GroupingModal
-            libraryBooks={libraryBooks}
+        {loading && (
+          <div className='fixed inset-0 z-50 flex items-center justify-center'>
+            <Spinner loading />
+          </div>
+        )}
+        {!showGroupingModal && isSelectMode && showSelectModeActions && (
+          <SelectModeActions
             selectedBooks={selectedBooks}
-            parentGroupName={getGroupName(groupId) || ''}
+            safeAreaBottom={safeAreaInsets?.bottom || 0}
+            sendEnabled={
+              !!(
+                appService &&
+                !appService.isLinuxApp &&
+                !appService.isWindowsApp &&
+                (appService.isDesktopApp || appService.isMobileApp)
+              )
+            }
+            onOpen={openSelectedBooks}
+            onGroup={groupSelectedBooks}
+            onDetails={openBookDetails}
+            onStatus={showStatusSelection}
+            onSend={sendSelectedBook}
+            onDelete={deleteSelectedBooks}
+            onCancel={() => handleSetSelectMode(false)}
+          />
+        )}
+        {showGroupingModal && selectedBooks.length > 0 && (
+          <ModalPortal>
+            <GroupingModal
+              libraryBooks={libraryBooks}
+              selectedBooks={selectedBooks}
+              parentGroupName={getGroupName(groupId) || ''}
+              onCancel={() => {
+                setShowGroupingModal(false);
+                setShowSelectModeActions(true);
+              }}
+              onConfirm={() => {
+                setShowGroupingModal(false);
+                handleSetSelectMode(false);
+              }}
+            />
+          </ModalPortal>
+        )}
+        {showDeleteAlert && (
+          <div
+            className={clsx('delete-alert fixed bottom-0 left-0 right-0 z-50 flex justify-center')}
+            style={{
+              paddingBottom: `${(safeAreaInsets?.bottom || 0) + 16}px`,
+            }}
+          >
+            <Alert
+              title={_('Confirm Deletion')}
+              message={_('Are you sure to delete {{count}} selected book(s)?', {
+                count: getBooksToDelete().length,
+              })}
+              onCancel={() => {
+                abortDeletionRef.current = true;
+                setShowDeleteAlert(false);
+                setShowSelectModeActions(true);
+              }}
+              onConfirm={confirmDelete}
+            />
+          </div>
+        )}
+        {showStatusAlert && (
+          <SetStatusAlert
+            selectedCount={getSelectedBooks().length}
+            safeAreaBottom={safeAreaInsets?.bottom || 0}
             onCancel={() => {
-              setShowGroupingModal(false);
+              setShowStatusAlert(false);
               setShowSelectModeActions(true);
             }}
-            onConfirm={() => {
-              setShowGroupingModal(false);
-              handleSetSelectMode(false);
-            }}
+            onUpdateStatus={updateBooksStatus}
           />
-        </ModalPortal>
-      )}
-      {showDeleteAlert && (
-        <div
-          className={clsx('delete-alert fixed bottom-0 left-0 right-0 z-50 flex justify-center')}
-          style={{
-            paddingBottom: `${(safeAreaInsets?.bottom || 0) + 16}px`,
-          }}
-        >
-          <Alert
-            title={_('Confirm Deletion')}
-            message={_('Are you sure to delete {{count}} selected book(s)?', {
-              count: getBooksToDelete().length,
-            })}
-            onCancel={() => {
-              abortDeletionRef.current = true;
-              setShowDeleteAlert(false);
-              setShowSelectModeActions(true);
-            }}
-            onConfirm={confirmDelete}
-          />
-        </div>
-      )}
-      {showStatusAlert && (
-        <SetStatusAlert
-          selectedCount={getSelectedBooks().length}
-          safeAreaBottom={safeAreaInsets?.bottom || 0}
-          onCancel={() => {
-            setShowStatusAlert(false);
-            setShowSelectModeActions(true);
-          }}
-          onUpdateStatus={updateBooksStatus}
+        )}
+        <ShareBookDialog
+          isOpen={!!shareDialogBook}
+          book={shareDialogBook}
+          onClose={() => setShareDialogBook(null)}
         />
-      )}
-      <ShareBookDialog
-        isOpen={!!shareDialogBook}
-        book={shareDialogBook}
-        onClose={() => setShareDialogBook(null)}
-      />
-    </div>
+        <DragOverlay zIndex={9999} dropAnimation={null}>
+          {activeDragBook ? (
+            <div className='scale-105 shadow-2xl opacity-90 rotate-2 w-32 aspect-[28/41]'>
+              <BookshelfItem
+                item={activeDragBook}
+                mode={'grid'}
+                coverFit={coverFit as LibraryCoverFitType}
+                isSelectMode={false}
+                itemSelected={false}
+                setLoading={() => {}}
+                toggleSelection={() => {}}
+                handleGroupBooks={() => {}}
+                handleBookUpload={async () => false}
+                handleBookDownload={async () => false}
+                handleBookDelete={async () => false}
+                handleSetSelectMode={() => {}}
+                handleShowDetailsBook={() => {}}
+                handleLibraryNavigation={() => {}}
+                handleUpdateReadingStatus={() => {}}
+                transferProgress={null}
+              />
+            </div>
+          ) : null}
+        </DragOverlay>
+      </div>
+    </DndContext>
   );
 };
 

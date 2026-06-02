@@ -165,13 +165,7 @@ const migrations: Record<SchemaType, MigrationEntry[]> = {
             definition TEXT NOT NULL
         );
         CREATE INDEX IF NOT EXISTS idx_term ON lugat(term);
-        
-        CREATE VIRTUAL TABLE IF NOT EXISTS lugat_fts USING fts5(
-            term,
-            definition,
-            content='lugat',
-            content_rowid='id'
-        );
+        CREATE INDEX IF NOT EXISTS idx_arabic ON lugat(arabic);
       `,
     },
   ],

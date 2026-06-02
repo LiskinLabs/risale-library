@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { getQuoteById, getDailyQuote, getRandomQuote, Vecize } from '@/services/quotes';
+import { getDailyQuote, getRandomQuote, Vecize } from '@/services/quotes';
 import { useTranslation } from '@/hooks/useTranslation';
 
 interface QuoteWidgetProps {

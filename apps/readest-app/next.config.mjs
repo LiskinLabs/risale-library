@@ -27,6 +27,9 @@ const nextConfig = {
     unoptimized: true,
   },
   devIndicators: false,
+  // React Compiler requires babel-plugin-react-compiler in node_modules.
+  // Enable when the dependency is reliably installed in the build pipeline.
+  // reactCompiler: true,
   experimental: {
     // Persist Turbopack's compilation cache to `.next/` so CI can restore it
     // between runs. Dev caching is on by default since Next 16.1; build

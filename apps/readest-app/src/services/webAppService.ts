@@ -352,7 +352,7 @@ export class WebAppService extends BaseAppService {
 
   async saveFile(
     filename: string,
-    content: string | ArrayBuffer,
+    content: string | ArrayBuffer | null,
     options?: {
       filePath?: string;
       mimeType?: string;
@@ -370,7 +370,7 @@ export class WebAppService extends BaseAppService {
     ) {
       let shareData: ShareData | null = null;
       try {
-        const file = new File([content], filename, { type: mimeType });
+        const file = new File([content ?? new ArrayBuffer(0)], filename, { type: mimeType });
         const candidate: ShareData = { files: [file], title: filename };
         if (typeof navigator.canShare !== 'function' || navigator.canShare(candidate)) {
           shareData = candidate;
@@ -396,7 +396,7 @@ export class WebAppService extends BaseAppService {
       }
     }
     try {
-      const blob = new Blob([content], { type: mimeType });
+      const blob = new Blob([content ?? new ArrayBuffer(0)], { type: mimeType });
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;

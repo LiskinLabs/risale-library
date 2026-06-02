@@ -50,6 +50,9 @@ const LangPanel: React.FC<SettingsPanelPanelProp> = ({ bookKey, onRegisterReset 
     viewSettings.convertChineseVariant,
   );
   const [dictionaryLevel, setDictionaryLevel] = useState(viewSettings.dictionaryLevel);
+  const [dictionaryLanguage, setDictionaryLanguage] = useState(
+    viewSettings.dictionaryLanguage || 'en',
+  );
   const [showCustomDictionaries, setShowCustomDictionaries] = useState(false);
 
   // Android Back / Esc: when the Manage Dictionaries sub-page is open,
@@ -85,6 +88,7 @@ const LangPanel: React.FC<SettingsPanelPanelProp> = ({ bookKey, onRegisterReset 
       ttsReadAloudText: setTtsReadAloudText,
       replaceQuotationMarks: setReplaceQuotationMarks,
       dictionaryLevel: setDictionaryLevel,
+      dictionaryLanguage: setDictionaryLanguage,
     });
   };
 
@@ -241,6 +245,12 @@ const LangPanel: React.FC<SettingsPanelPanelProp> = ({ bookKey, onRegisterReset 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dictionaryLevel]);
 
+  useEffect(() => {
+    if (dictionaryLanguage === (viewSettings.dictionaryLanguage || 'en')) return;
+    saveViewSettings(envConfig, bookKey, 'dictionaryLanguage', dictionaryLanguage, false, false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dictionaryLevel]);
+
   const getDictionaryLevelOptions = () => {
     return [
       { value: '0', label: _('Beginner (A1-A2)') },
@@ -252,6 +262,19 @@ const LangPanel: React.FC<SettingsPanelPanelProp> = ({ bookKey, onRegisterReset 
 
   const handleSelectDictionaryLevel = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setDictionaryLevel(parseInt(event.target.value, 10));
+  };
+
+  const getDictionaryLanguageOptions = () => {
+    return [
+      { value: 'en', label: _('English') },
+      { value: 'tr', label: _('Turkish') },
+      { value: 'ru', label: _('Russian') },
+      { value: 'ar', label: _('Arabic') },
+    ];
+  };
+
+  const handleSelectDictionaryLanguage = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setDictionaryLanguage(event.target.value);
   };
 
   const getConvertModeOptions: () => { value: ConvertChineseVariant; label: string }[] = () => {
@@ -331,6 +354,14 @@ const LangPanel: React.FC<SettingsPanelPanelProp> = ({ bookKey, onRegisterReset 
             onChange={handleSelectDictionaryLevel}
             ariaLabel={_('Word Level')}
             options={getDictionaryLevelOptions()}
+          />
+        </SettingsRow>
+        <SettingsRow label={_('Dictionary Language')}>
+          <SettingsSelect
+            value={dictionaryLanguage}
+            onChange={handleSelectDictionaryLanguage}
+            ariaLabel={_('Dictionary Language')}
+            options={getDictionaryLanguageOptions()}
           />
         </SettingsRow>
       </BoxedList>

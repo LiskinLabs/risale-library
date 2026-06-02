@@ -24,8 +24,10 @@ export const wikipediaProvider: DictionaryProvider = {
   kind: 'builtin',
   label: _('Wikipedia'),
   async lookup(word, ctx): Promise<DictionaryLookupOutcome> {
+    // Use the user's preferred dictionary language if set, otherwise the book language.
     const bookLang = typeof ctx.lang === 'string' ? ctx.lang : ctx.lang?.[0];
-    const langCode = bookLang ? bookLang.split('-')[0]! : 'en';
+    const preferredLang = ctx.dictionaryLanguage || bookLang?.split('-')[0] || 'en';
+    const langCode = preferredLang.split('-')[0]!;
     try {
       const response = await fetch(
         `https://${langCode}.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(word)}`,

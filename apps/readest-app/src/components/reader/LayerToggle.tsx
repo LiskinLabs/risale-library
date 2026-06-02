@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import { useTranslation } from '@/hooks/useTranslation';
 import type { AnnotationLayer } from '@/types/book';
 

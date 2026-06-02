@@ -22,15 +22,15 @@ interface SyncState {
 
 export const useParallelSync = (bookKey: string) => {
   const { getProgress, setProgress } = useReaderStore();
-  const { getParallels, areParallels } = useParallelViewStore();
+  const { getParallels } = useParallelViewStore();
   const lastSynced = useRef<SyncState | null>(null);
 
   useEffect(() => {
     // Only activate for primary books in a parallel pair
     const parallels = getParallels(bookKey);
-    if (!parallels || parallels.length === 0) return;
+    if (!parallels || parallels.size === 0) return;
 
-    const pairedKey = parallels[0]; // Currently one-to-one pairs
+    const pairedKey = [...parallels][0]!; // Currently one-to-one pairs
 
     // Poll for sync (~500ms interval — lightweight DOM-based check)
     const interval = setInterval(() => {
@@ -40,8 +40,10 @@ export const useParallelSync = (bookKey: string) => {
       if (!srcProgress || !dstProgress) return;
 
       const current: SyncState = {
-        section: srcProgress.section?.index ?? 0,
-        percentage: srcProgress.section?.percentage ?? 0,
+        // NOTE: PageInfo.index/percentage are planned additions for CFI-based sync.
+        // Using explicit type assertion for forward-compatible WIP code.
+        section: (srcProgress.section as { index?: number } | null)?.index ?? 0,
+        percentage: (srcProgress.section as { percentage?: number } | null)?.percentage ?? 0,
         timestamp: Date.now(),
       };
 
@@ -59,9 +61,10 @@ export const useParallelSync = (bookKey: string) => {
       // Mirror progress to paired book
       // Uses section index matching (same TOC structure)
       const dstSection = dstProgress.section;
-      if (dstSection && dstSection.index === current.section) {
+      const dstIndex = (dstSection as { index?: number } | null)?.index;
+      if (dstIndex === current.section) {
         // Same section — no need to change section, just scroll
-      } else if (dstSection && dstSection.index !== current.section) {
+      } else {
         // Different section — navigate paired book to matching section
         // (Handled via FoliateViewer's cross-book message passing)
         const iframe = document.querySelector(
