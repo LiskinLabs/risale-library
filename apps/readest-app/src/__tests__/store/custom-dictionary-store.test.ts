@@ -651,6 +651,9 @@ describe('customDictionaryStore — loadCustomDictionaries reconciliation', () =
       'builtin:system',
       'builtin:risale-lugat',
       'web:builtin:google',
+      'web:builtin:tdk-sozluk',
+      'web:builtin:sesli-sozluk',
+      'web:builtin:vikisozluk',
       'web:builtin:urban',
       'web:builtin:merriam-webster',
     ]);
