@@ -16,6 +16,15 @@ import {
 } from '@/styles/themes';
 import { getOSPlatform } from './misc';
 
+/** Escape a font-family name for safe interpolation into a CSS string. */
+const escapeFontFamily = (name: string): string =>
+  name.replace(/["\\\n\r]/g, (ch) => {
+    if (ch === '"') return '\\"';
+    if (ch === '\\') return '\\\\';
+    if (ch === '\n') return '\\n';
+    return '\\r';
+  });
+
 const getFontStyles = (
   serif: string,
   sansSerif: string,
@@ -62,7 +71,7 @@ const getFontStyles = (
     :lang(ar), :lang(ota), :lang(fa), :lang(ur), :lang(ps), :lang(ku),
     [lang|=ar], [lang|=fa], [lang|=ur], [lang|=ota],
     .arabic, .hasiye-arabic {
-      font-family: "${arabicFont}", "Scheherazade New", "Traditional Arabic", serif !important;
+      font-family: "${escapeFontFamily(arabicFont)}", "Scheherazade New", "Traditional Arabic", serif !important;
       font-size: 1.2em;
     }`);
   }
@@ -70,14 +79,14 @@ const getFontStyles = (
     scriptFontStyles.push(`
     :lang(ru), :lang(bg), :lang(uk), :lang(sr), :lang(mk), :lang(be),
     [lang|=ru], [lang|=bg], [lang|=uk] {
-      font-family: "${cyrillicFont}", "Georgia", "Times New Roman", serif;
+      font-family: "${escapeFontFamily(cyrillicFont)}", "Georgia", "Times New Roman", serif;
     }`);
   }
   if (latinFont) {
     scriptFontStyles.push(`
     :lang(tr), :lang(en), :lang(de), :lang(fr), :lang(es), :lang(nl), :lang(pl), :lang(pt),
     [lang|=tr], [lang|=en] {
-      font-family: "${latinFont}", "Georgia", "Times New Roman", serif;
+      font-family: "${escapeFontFamily(latinFont)}", "Georgia", "Times New Roman", serif;
     }`);
   }
   // Legacy hattiKuran toggle — overrides Arabic font when enabled
@@ -687,6 +696,48 @@ const getRubyStyles = () => `
   }
   rp {
     display: none !important;
+  }
+`;
+
+/**
+ * Haşiye styles — visual hints for interactive Arabic/Quranic text.
+ * Colors use rgba so they blend with any theme (sepia, dark, light).
+ * The reader app's theme system handles the actual bg/fg colors;
+ * these only add the interaction cues.
+ */
+const getHasiyeStyles = () => `
+  /* ── Haşiye: interactive Arabic text ──────────── */
+  .hasiye-arabic {
+    /* Subtle golden dotted underline as "you can tap me" hint */
+    text-decoration: underline;
+    text-decoration-color: rgba(180, 150, 50, 0.4);
+    text-decoration-style: dotted;
+    text-underline-offset: 0.3em;
+    cursor: pointer;
+    transition: text-decoration-color 0.2s ease;
+  }
+  .hasiye-arabic:hover {
+    text-decoration-color: rgba(180, 150, 50, 0.8);
+  }
+
+  /* Basmala — no interaction hint needed, it's decorative */
+  .basmala {
+    cursor: default;
+  }
+
+  /* Block-level aya — subtle top/bottom borders via EPUB CSS,
+     interaction hint via haşiye class */
+  .arabic.hasiye-arabic,
+  .hadith.hasiye-arabic {
+    cursor: pointer;
+  }
+
+  /* Inline Arabic word — matching underline */
+  .arabic-inline.hasiye-arabic {
+    text-decoration: underline;
+    text-decoration-color: rgba(180, 150, 50, 0.35);
+    text-decoration-style: dotted;
+    text-underline-offset: 0.2em;
   }
 `;
 
