@@ -59,7 +59,10 @@ pub fn handle_menu_event(app: &AppHandle, event: &MenuEvent) {
     } else if event.id() == "privacy_policy" {
         let _ = opener.open_url("https://readest.com/privacy-policy", None::<&str>);
     } else if event.id() == "report_issue" {
-        let _ = opener.open_url("https://github.com/LiskinLabs/risale-ai-studio/issues", None::<&str>);
+        let _ = opener.open_url(
+            "https://github.com/LiskinLabs/risale-ai-studio/issues",
+            None::<&str>,
+        );
     } else if event.id() == "readest_help" {
         let _ = opener.open_url("https://readest.com/support", None::<&str>);
     }
