@@ -149,6 +149,9 @@ const FontPanel: React.FC<SettingsPanelPanelProp> = ({ bookKey, onRegisterReset 
   const [monospaceFont, setMonospaceFont] = useState(viewSettings.monospaceFont);
   const [fontWeight, setFontWeight] = useState(viewSettings.fontWeight);
   const [hattiKuran, setHattiKuran] = useState(viewSettings.hattiKuran);
+  const [latinFont, setLatinFont] = useState(viewSettings.latinFont ?? '');
+  const [cyrillicFont, setCyrillicFont] = useState(viewSettings.cyrillicFont ?? '');
+  const [arabicFont, setArabicFont] = useState(viewSettings.arabicFont ?? '');
 
   const [customFonts, setCustomFonts] = useState<string[]>(getFontFamilies());
   const [CJKFonts, setCJKFonts] = useState<string[]>(() => {
@@ -169,6 +172,9 @@ const FontPanel: React.FC<SettingsPanelPanelProp> = ({ bookKey, onRegisterReset 
       monospaceFont: setMonospaceFont,
       fontWeight: setFontWeight,
       hattiKuran: setHattiKuran,
+      latinFont: setLatinFont,
+      cyrillicFont: setCyrillicFont,
+      arabicFont: setArabicFont,
     });
   };
 
@@ -291,6 +297,21 @@ const FontPanel: React.FC<SettingsPanelPanelProp> = ({ bookKey, onRegisterReset 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hattiKuran]);
 
+  useEffect(() => {
+    saveViewSettings(envConfig, bookKey, 'latinFont', latinFont || undefined);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [latinFont]);
+
+  useEffect(() => {
+    saveViewSettings(envConfig, bookKey, 'cyrillicFont', cyrillicFont || undefined);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [cyrillicFont]);
+
+  useEffect(() => {
+    saveViewSettings(envConfig, bookKey, 'arabicFont', arabicFont || undefined);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [arabicFont]);
+
   const handleFontFamilyFont = (option: string) => {
     switch (option) {
       case 'Serif':
@@ -360,6 +381,62 @@ const FontPanel: React.FC<SettingsPanelPanelProp> = ({ bookKey, onRegisterReset 
         <SettingsSwitchRow
           label={_("Hatt-ı Kur'ân")}
           description={_('Use Ottoman fonts for Arabic text')}
+          checked={hattiKuran}
+          onChange={() => setHattiKuran(!hattiKuran)}
+          data-setting-id='settings.font.hattiKuran'
+        />
+      </BoxedList>
+
+      <BoxedList title={_('Per-Script Fonts')}>
+        <SettingsRow label={_('Latin Font')} data-setting-id='settings.font.latinFont'>
+          <FontDropdown
+            options={[
+              { option: '', label: _('Default') },
+              { option: 'ITC Souvenir', label: 'ITC Souvenir' },
+              { option: 'Minion Pro', label: 'Minion Pro' },
+              { option: 'Bitter', label: 'Bitter' },
+              { option: 'Literata', label: 'Literata' },
+              { option: 'Merriweather', label: 'Merriweather' },
+              ...customFonts.map((f) => ({ option: f, label: f })),
+            ]}
+            selected={latinFont || ''}
+            onSelect={setLatinFont}
+            onGetFontFamily={handleFontFamilyFont}
+          />
+        </SettingsRow>
+        <SettingsRow label={_('Cyrillic Font')} data-setting-id='settings.font.cyrillicFont'>
+          <FontDropdown
+            options={[
+              { option: '', label: _('Default') },
+              { option: 'Kazimir Text', label: 'Kazimir Text' },
+              { option: 'PT Serif', label: 'PT Serif' },
+              { option: 'PT Sans', label: 'PT Sans' },
+              ...customFonts.map((f) => ({ option: f, label: f })),
+            ]}
+            selected={cyrillicFont || ''}
+            onSelect={setCyrillicFont}
+            onGetFontFamily={handleFontFamilyFont}
+          />
+        </SettingsRow>
+        <SettingsRow label={_('Arabic Font')} data-setting-id='settings.font.arabicFont'>
+          <FontDropdown
+            options={[
+              { option: '', label: _('Default') },
+              { option: 'Nassim Arabic Pro', label: 'Nassim Arabic Pro' },
+              { option: 'Scheherazade New', label: 'Scheherazade New' },
+              { option: 'Traditional Arabic', label: 'Traditional Arabic' },
+              ...customFonts.map((f) => ({ option: f, label: f })),
+            ]}
+            selected={arabicFont || ''}
+            onSelect={setArabicFont}
+            onGetFontFamily={handleFontFamilyFont}
+          />
+        </SettingsRow>
+        <SettingsSwitchRow
+          label={_("Hatt-ı Kur'ân Override")}
+          description={_(
+            'Override Arabic font with Ottoman style when no custom Arabic font is set',
+          )}
           checked={hattiKuran}
           onChange={() => setHattiKuran(!hattiKuran)}
           data-setting-id='settings.font.hattiKuran'

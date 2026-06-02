@@ -35,6 +35,7 @@ const getAdditionalBasicFontLinks = () => `
     )
     .join('&')}&display=swap" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/opendyslexic@2.11.3/opendyslexic.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="/fonts/builtin-fonts.css" crossorigin="anonymous">
 `;
 
 const getAdditionalCJKFontLinks = () => `

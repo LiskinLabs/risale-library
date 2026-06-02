@@ -55,3 +55,8 @@ result*
 .claude/settings.local.json
 
 __pycache__/
+
+# Purchased/commercial fonts — stored locally for dev, served via CDN in production
+apps/readest-app/public/fonts/latin/
+apps/readest-app/public/fonts/arabic/
+apps/readest-app/public/fonts/cyrillic/

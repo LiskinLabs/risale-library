@@ -27,6 +27,9 @@ const getFontStyles = (
   fontWeight: number,
   overrideFont: boolean,
   hattiKuran: boolean,
+  latinFont?: string,
+  cyrillicFont?: string,
+  arabicFont?: string,
 ) => {
   const lastSerifFonts = ['Georgia', 'Times New Roman'];
   const serifFonts = [
@@ -50,14 +53,43 @@ const getFontStyles = (
   ];
   const monospaceFonts = [monospace, ...MONOSPACE_FONTS.filter((font) => font !== monospace)];
   const defaultFontFamily = defaultFont.toLowerCase() === 'serif' ? '--serif' : '--sans-serif';
-  const hattiKuranStyles = hattiKuran
-    ? `
+
+  // Per-script font families for professional multilingual typesetting.
+  // Arabic/Ottoman/Persian/Urdu → Arabic font; Cyrillic → Cyrillic font.
+  const scriptFontStyles = [];
+  if (arabicFont) {
+    scriptFontStyles.push(`
+    :lang(ar), :lang(ota), :lang(fa), :lang(ur), :lang(ps), :lang(ku),
+    [lang|=ar], [lang|=fa], [lang|=ur], [lang|=ota],
+    .arabic, .hasiye-arabic {
+      font-family: "${arabicFont}", "Scheherazade New", "Traditional Arabic", serif !important;
+      font-size: 1.2em;
+    }`);
+  }
+  if (cyrillicFont) {
+    scriptFontStyles.push(`
+    :lang(ru), :lang(bg), :lang(uk), :lang(sr), :lang(mk), :lang(be),
+    [lang|=ru], [lang|=bg], [lang|=uk] {
+      font-family: "${cyrillicFont}", "Georgia", "Times New Roman", serif;
+    }`);
+  }
+  if (latinFont) {
+    scriptFontStyles.push(`
+    :lang(tr), :lang(en), :lang(de), :lang(fr), :lang(es), :lang(nl), :lang(pl), :lang(pt),
+    [lang|=tr], [lang|=en] {
+      font-family: "${latinFont}", "Georgia", "Times New Roman", serif;
+    }`);
+  }
+  // Legacy hattiKuran toggle — overrides Arabic font when enabled
+  const hattiKuranStyles =
+    hattiKuran && !arabicFont
+      ? `
     .arabic, .hasiye-arabic, [dir="rtl"] {
       font-family: "Scheherazade New", "Traditional Arabic", serif !important;
       font-size: 1.25em !important;
     }
   `
-    : '';
+      : '';
 
   const fontStyles = `
     html {
@@ -83,6 +115,7 @@ const getFontStyles = (
       ${overrideFont ? `font-family: var(${defaultFontFamily}) !important;` : ''}
     }
     ${hattiKuranStyles}
+    ${scriptFontStyles.join('\n')}
     font[size="1"] {
       font-size: ${minFontSize}px;
     }
@@ -744,6 +777,9 @@ export const getStyles = (viewSettings: ViewSettings, themeCode?: ThemeCode) => 
     viewSettings.fontWeight!,
     viewSettings.overrideFont!,
     viewSettings.hattiKuran || false,
+    viewSettings.latinFont,
+    viewSettings.cyrillicFont,
+    viewSettings.arabicFont,
   );
   const colorStyles = getColorStyles(
     viewSettings.overrideColor!,

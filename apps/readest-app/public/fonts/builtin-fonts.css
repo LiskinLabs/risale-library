@@ -1,0 +1,158 @@
+/* Built-in fonts for Risale AI Studio — per-script professional typesetting */
+
+/* ─── Latin: ITC Souvenir (8 weights/styles) ─── */
+@font-face {
+  font-family: 'ITC Souvenir';
+  src: url('/fonts/latin/ITCSouvenir/ITC Souvenir Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ITC Souvenir';
+  src: url('/fonts/latin/ITCSouvenir/ITC Souvenir Light Italic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ITC Souvenir';
+  src: url('/fonts/latin/ITCSouvenir/ITC Souvenir Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ITC Souvenir';
+  src: url('/fonts/latin/ITCSouvenir/ITC Souvenir Medium Italic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ITC Souvenir';
+  src: url('/fonts/latin/ITCSouvenir/ITC Souvenir Demi.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ITC Souvenir';
+  src: url('/fonts/latin/ITCSouvenir/ITC Souvenir Demi Italic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ITC Souvenir';
+  src: url('/fonts/latin/ITCSouvenir/ITC Souvenir Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ITC Souvenir';
+  src: url('/fonts/latin/ITCSouvenir/ITC Souvenir Bold Italic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ─── Latin: Minion Pro (serif, professional book typography) ─── */
+@font-face {
+  font-family: 'Minion Pro';
+  src: url('/fonts/latin/MinionPro/MinionPro-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Minion Pro';
+  src: url('/fonts/latin/MinionPro/MinionPro-It.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Minion Pro';
+  src: url('/fonts/latin/MinionPro/MinionPro-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Minion Pro';
+  src: url('/fonts/latin/MinionPro/MinionPro-MediumIt.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Minion Pro';
+  src: url('/fonts/latin/MinionPro/MinionPro-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Minion Pro';
+  src: url('/fonts/latin/MinionPro/MinionPro-SemiboldIt.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Minion Pro';
+  src: url('/fonts/latin/MinionPro/MinionPro-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Minion Pro';
+  src: url('/fonts/latin/MinionPro/MinionPro-BoldIt.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ─── Arabic / Ottoman / Persian: Nassim Arabic Pro ─── */
+@font-face {
+  font-family: 'Nassim Arabic Pro';
+  src: url('/fonts/arabic/NassimPro/fonnts.com-Nassim-Arabic-Pro-.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Nassim Arabic Pro';
+  src: url('/fonts/arabic/NassimPro/fonnts.com-Nassim-Arabic-Pro-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Nassim Arabic Pro';
+  src: url('/fonts/arabic/NassimPro/fonnts.com-Nassim-Arabic-Pro-Semibold-.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Nassim Arabic Pro';
+  src: url('/fonts/arabic/NassimPro/fonnts.com-Nassim-Arabic-Pro-Extrabold-.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── Cyrillic: Kazimir Text ─── */
+@font-face {
+  font-family: 'Kazimir Text';
+  src:
+    url('/fonts/cyrillic/KazimirText/kazimirtext-regular.woff2') format('woff2'),
+    url('/fonts/cyrillic/KazimirText/kazimirtext-regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

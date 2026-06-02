@@ -240,6 +240,10 @@ export interface BookFont {
   defaultFontSize: number;
   minimumFontSize: number;
   fontWeight: number;
+  /** Per-script font families: 'latin', 'cyrillic', 'arabic', 'cjk' */
+  latinFont?: string;
+  cyrillicFont?: string;
+  arabicFont?: string;
 }
 
 export type ConvertChineseVariant =
