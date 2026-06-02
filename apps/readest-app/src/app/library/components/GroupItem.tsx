@@ -98,12 +98,18 @@ const GroupItem: React.FC<GroupItemProps> = ({ mode, group, isSelectMode, groupS
   };
 
   return (
-    <div className={clsx('group-item', appService?.hasContextMenu ? 'cursor-pointer' : '')}>
+    <div
+      className={clsx(
+        'group-item group transition-all duration-300',
+        appService?.hasContextMenu ? 'cursor-pointer' : '',
+      )}
+    >
       <div
         className={clsx(
           'groupitem-main relative flex overflow-hidden rounded',
           mode === 'grid' && 'bg-base-100 aspect-[28/41] items-center justify-center shadow-md',
           mode === 'list' && 'items-center justify-start gap-4 py-2',
+          'transition-all duration-500 cubic-bezier(0.25, 0.46, 0.45, 0.94) sm:group-hover:-translate-y-2 sm:group-hover:shadow-2xl sm:group-hover:scale-[1.04]',
         )}
       >
         <div
@@ -145,6 +151,8 @@ const GroupItem: React.FC<GroupItemProps> = ({ mode, group, isSelectMode, groupS
               </div>
             ))}
           </div>
+          {/* WOW Shine Effect on hover */}
+          <div className='absolute top-0 left-[-150%] w-[100%] h-[200%] bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 group-hover:left-[150%] transition-all duration-[1200ms] ease-in-out z-20 pointer-events-none'></div>
           {mode === 'list' && showLeftArrow && (
             <div className='absolute left-[-0.5px] top-0 h-full w-12'>
               <div className='from-base-200/85 via-base-200/20 absolute inset-0 bg-gradient-to-r to-transparent'></div>

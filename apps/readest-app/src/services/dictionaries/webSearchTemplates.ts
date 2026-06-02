@@ -38,6 +38,12 @@ export const BUILTIN_WEB_SEARCHES: BuiltinWebSearchTemplate[] = [
     nameKey: 'Merriam-Webster',
     urlTemplate: 'https://www.merriam-webster.com/dictionary/%WORD%',
   },
+  {
+    id: BUILTIN_WEB_SEARCH_IDS.tdkSozluk,
+    name: 'TDK Sözlük',
+    nameKey: 'TDK Sözlük',
+    urlTemplate: 'https://sozluk.gov.tr/?ara=%WORD%',
+  },
 ];
 
 const BUILTIN_BY_ID = new Map(BUILTIN_WEB_SEARCHES.map((t) => [t.id, t]));

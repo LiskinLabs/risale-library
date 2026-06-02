@@ -50,40 +50,34 @@ const BookItem: React.FC<BookItemProps> = ({
   const { settings } = useSettingsStore();
   const iconSize15 = useResponsiveSize(15);
 
-  const [coverAspect, setCoverAspect] = useState<number | null>(null);
+  const [_coverAspect, setCoverAspect] = useState<number | null>(null);
   useEffect(() => {
     setCoverAspect(null);
   }, [book.hash, book.metadata?.coverImageUrl, book.coverImageUrl]);
 
-  const CELL_ASPECT_RATIO = 28 / 41;
-  const fitCoverInGrid = mode === 'grid' && coverFit === 'fit' && coverAspect !== null;
-  const shouldShrinkWidth = fitCoverInGrid && coverAspect! < CELL_ASPECT_RATIO;
-  const bookitemMainStyle = fitCoverInGrid
-    ? {
-        aspectRatio: coverAspect!,
-        ...(shouldShrinkWidth ? { width: `${(coverAspect! / CELL_ASPECT_RATIO) * 100}%` } : {}),
-      }
-    : undefined;
+  const bookitemMainStyle = undefined; // Unified sizes for all covers
 
   return (
     <div
       role='none'
       className={clsx(
-        'book-item flex',
+        'book-item flex group',
         mode === 'grid' && 'h-full flex-col justify-end',
         mode === 'list' && 'h-28 flex-row gap-4 overflow-hidden',
         mode === 'list' ? 'library-list-item' : 'library-grid-item',
         appService?.hasContextMenu ? 'cursor-pointer' : '',
+        'transition-all duration-300 hover:z-10',
       )}
       onClick={(e) => e.stopPropagation()}
     >
       <div
         className={clsx(
-          'bookitem-main relative flex justify-center overflow-hidden rounded',
-          !fitCoverInGrid && 'aspect-[28/41]',
+          'bookitem-main relative flex w-full justify-center overflow-hidden rounded',
+          'aspect-[28/41]', // Always unified aspect ratio
           coverFit === 'crop' && 'shadow-md',
           mode === 'grid' && 'items-end',
           mode === 'list' && 'min-w-20 items-center',
+          'transition-all duration-500 cubic-bezier(0.25, 0.46, 0.45, 0.94) sm:group-hover:-translate-y-2 sm:group-hover:shadow-2xl sm:group-hover:scale-[1.04]',
         )}
         style={bookitemMainStyle}
       >
@@ -95,6 +89,8 @@ const BookItem: React.FC<BookItemProps> = ({
           imageClassName='rounded shadow-md'
           onAspectRatioChange={setCoverAspect}
         />
+        {/* WOW Shine Effect on hover */}
+        <div className='absolute top-0 left-[-150%] w-[100%] h-[200%] bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 group-hover:left-[150%] transition-all duration-[1200ms] ease-in-out z-20 pointer-events-none'></div>
         {bookSelected && (
           <div className='absolute inset-0 bg-black opacity-30 transition-opacity duration-300'></div>
         )}

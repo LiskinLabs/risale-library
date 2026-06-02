@@ -5,6 +5,41 @@ import { Book } from '@/types/book';
 import { LibraryCoverFitType, LibraryViewModeType } from '@/types/settings';
 import { formatAuthors, formatTitle } from '@/utils/book';
 
+const getDynamicCoverStyle = (title: string) => {
+  const hash = title.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+  const styles = [
+    {
+      bg: 'from-primary/20 to-base-300',
+      ribbon: 'bg-primary/80',
+      iconInner: 'bg-primary/30',
+      iconOuter: 'border-primary/40',
+      line: 'bg-primary/60',
+    },
+    {
+      bg: 'from-secondary/20 to-base-300',
+      ribbon: 'bg-secondary/80',
+      iconInner: 'bg-secondary/30',
+      iconOuter: 'border-secondary/40',
+      line: 'bg-secondary/60',
+    },
+    {
+      bg: 'from-accent/20 to-base-300',
+      ribbon: 'bg-accent/80',
+      iconInner: 'bg-accent/30',
+      iconOuter: 'border-accent/40',
+      line: 'bg-accent/60',
+    },
+    {
+      bg: 'from-neutral/20 to-base-300',
+      ribbon: 'bg-neutral/80',
+      iconInner: 'bg-neutral/30',
+      iconOuter: 'border-neutral/40',
+      line: 'bg-neutral/60',
+    },
+  ];
+  return styles[hash % styles.length];
+};
+
 interface BookCoverProps {
   book: Book;
   mode?: LibraryViewModeType;
@@ -34,6 +69,7 @@ const BookCover: React.FC<BookCoverProps> = memo<BookCoverProps>(
     const coverRef = useRef<HTMLDivElement>(null);
     const [imageLoaded, setImageLoaded] = useState(false);
     const [imageError, setImageError] = useState(false);
+    const dynamicStyle = getDynamicCoverStyle(book.title || '')!;
 
     const coverSrc = book.metadata?.coverImageUrl || book.coverImageUrl;
     const hasValidSrc = coverSrc && coverSrc.length > 0;
@@ -125,6 +161,7 @@ const BookCover: React.FC<BookCoverProps> = memo<BookCoverProps>(
                     'cover-image fit-cover-img h-auto max-h-full w-auto max-w-full shadow-md',
                     is3d && 'book-gold-edge',
                     imageClassName,
+                    imageError && 'hidden', // Hide broken image so it doesn't break layout
                   )}
                   onLoad={handleImageLoad}
                   onError={handleImageError}
@@ -138,33 +175,68 @@ const BookCover: React.FC<BookCoverProps> = memo<BookCoverProps>(
 
           <div
             className={clsx(
-              'fallback-cover invisible absolute inset-0 p-2',
-              'text-neutral-content text-center font-serif font-medium',
-              isPreview ? 'bg-base-200/50' : 'bg-base-100',
+              'fallback-cover invisible absolute inset-0 p-3 premium-grain flex flex-col',
+              `bg-gradient-to-br ${dynamicStyle.bg} shadow-[inset_0_0_20px_rgba(0,0,0,0.1)]`,
               is3d && 'book-gold-edge',
               imageClassName,
             )}
           >
-            <div className='flex h-1/2 items-center justify-center'>
+            <div className='absolute inset-[3px] border border-base-content/10 rounded-sm'></div>
+            <div className='absolute inset-[6px] border border-base-content/5 rounded-sm pointer-events-none'></div>
+
+            {/* Premium WOW bookmark ribbon */}
+            {!isPreview && mode === 'grid' && (
+              <div
+                className={clsx(
+                  'absolute top-0 right-4 w-4 h-10 shadow-md z-10',
+                  dynamicStyle.ribbon,
+                )}
+              >
+                <div className='absolute bottom-0 w-0 h-0 border-l-[8px] border-r-[8px] border-b-[8px] border-l-transparent border-r-transparent border-b-base-300 transform translate-y-full opacity-80'></div>
+              </div>
+            )}
+
+            <div className='flex-1 flex flex-col items-center justify-center z-10 p-2'>
               <span
                 className={clsx(
-                  isPreview ? 'line-clamp-2' : mode === 'grid' ? 'line-clamp-3' : 'line-clamp-2',
-                  isPreview ? 'text-[0.5em]' : mode === 'grid' ? 'text-lg' : 'text-sm',
+                  'font-serif font-bold tracking-wide text-center text-base-content drop-shadow-sm',
+                  isPreview
+                    ? 'line-clamp-2 text-[0.5em]'
+                    : mode === 'grid'
+                      ? 'line-clamp-4 text-lg'
+                      : 'line-clamp-2 text-sm',
                 )}
+                style={{ fontFamily: 'Playfair Display, Lora, serif' }}
               >
                 {formatTitle(book.title)}
               </span>
-            </div>
-            <div className='h-1/6'></div>
-            <div className='flex h-1/3 items-center justify-center'>
+
+              <div className={clsx('w-8 h-[2px] my-2 sm:my-3', dynamicStyle.line)}></div>
+
               <span
                 className={clsx(
-                  'text-neutral-content/50 line-clamp-1',
-                  isPreview ? 'text-[0.4em]' : mode === 'grid' ? 'text-base' : 'text-xs',
+                  'text-base-content/80 uppercase tracking-widest text-center font-medium px-1',
+                  isPreview
+                    ? 'text-[0.4em] line-clamp-1'
+                    : mode === 'grid'
+                      ? 'text-[9px] leading-tight line-clamp-3'
+                      : 'text-[8px] line-clamp-2',
                 )}
+                style={{ wordBreak: 'break-word' }}
               >
                 {formatAuthors(book.author || book.metadata?.author || '')}
               </span>
+            </div>
+
+            <div className='h-1/5 flex items-end justify-center pb-1 z-10'>
+              <div
+                className={clsx(
+                  'w-5 h-5 rounded-full border flex items-center justify-center',
+                  dynamicStyle.iconOuter,
+                )}
+              >
+                <div className={clsx('w-2.5 h-2.5 rounded-full', dynamicStyle.iconInner)}></div>
+              </div>
             </div>
           </div>
         </div>

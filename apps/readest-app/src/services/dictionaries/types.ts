@@ -204,6 +204,7 @@ export const BUILTIN_WEB_SEARCH_IDS = {
   google: 'web:builtin:google',
   urban: 'web:builtin:urban',
   merriamWebster: 'web:builtin:merriam-webster',
+  tdkSozluk: 'web:builtin:tdk-sozluk',
 } as const;
 
 export type BuiltinWebSearchId =

@@ -135,12 +135,12 @@ export const getEnabledProviders = ({
     // annotator's "Dictionary" button.
     if (id === BUILTIN_PROVIDER_IDS.systemDictionary) continue;
     if (id.startsWith('builtin:')) {
-      const provider = getOrCreate(id, undefined, undefined, settings);
+      const provider = getOrCreate(id, undefined, fs, settings);
       if (provider) out.push(provider);
       continue;
     }
     if (id.startsWith('web:')) {
-      const provider = getOrCreate(id, undefined, undefined, settings);
+      const provider = getOrCreate(id, undefined, fs, settings);
       if (provider) out.push(provider);
       continue;
     }

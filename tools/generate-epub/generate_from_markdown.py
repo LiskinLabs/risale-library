@@ -297,10 +297,24 @@ def markdown_to_html(text: str, book_slug: str) -> tuple[str, list[dict]]:
     # 1. Extract footnotes
     body_text, footnotes_dict = extract_footnotes(text)
     
-    # 2. Convert headers
+    # 2. Convert headers (with inline formatting support)
+    def format_inline(text: str) -> str:
+        """Apply bold, italic, and footnote refs to inline text (headings, etc.)."""
+        text = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", text)
+        text = re.sub(r"\*([^*]+)\*", r"<em>\1</em>", text)
+        text = re.sub(r"_([^_]+)_", r"<em>\1</em>", text)
+        text = re.sub(
+            r"\[\^([^\]]+)\]",
+            rf'<a href="#fn-{book_slug}-\1" id="fnref-{book_slug}-\1" epub:type="noteref"><sup>\1</sup></a>',
+            text,
+        )
+        return text
+
     def repl_h(m):
         level = len(m.group(1))
         content = m.group(2).strip()
+        # Apply inline formatting to heading content
+        content = format_inline(content)
         # Create anchor ID for TOC
         anchor = f"h-{level}-{hash(content) & 0xffffff}"
         return f'<h{level} id="{anchor}">{content}</h{level}>', level, content, anchor
@@ -329,7 +343,29 @@ def markdown_to_html(text: str, book_slug: str) -> tuple[str, list[dict]]:
         if line_strip == "***" or line_strip == "---":
             html_lines.append('<p class="separator">•&ensp;•&ensp;•</p>')
             continue
-            
+
+        # ── Apply markdown formatting FIRST (before Arabic/layout checks) ──
+        # This ensures italic/bold on lines with mixed Arabic+Latin text work.
+        is_sual_elcevap = False
+        if "***" in line_strip:
+            # Match ***Word:*** or the typo variant ***Word:** (missing one star)
+            new_line, count = re.subn(r"\*\*\*([^*]+)\*{1,3}", r'<span class="mark-label">\1</span>', line_strip)
+            if count > 0:
+                line_strip = new_line
+                is_sual_elcevap = True
+
+        # Format bold and italic (simple markdown regexes)
+        line_strip = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", line_strip)
+        line_strip = re.sub(r"\*([^*]+)\*", r"<em>\1</em>", line_strip)
+        line_strip = re.sub(r"_([^_]+)_", r"<em>\1</em>", line_strip)
+
+        # Replace footnote references [^1]
+        line_strip = re.sub(
+            r"\[\^([^\]]+)\]",
+            rf'<a href="#fn-{book_slug}-\1" id="fnref-{book_slug}-\1" epub:type="noteref"><sup>\1</sup></a>',
+            line_strip
+        )
+
         # Check if line is block-level Arabic (starts with Arabic tag or is purely Arabic script)
         if line_strip.startswith('<p class="arabic"') or is_arabic_text(line_strip):
             # If it's already an HTML paragraph, keep as is
@@ -338,28 +374,7 @@ def markdown_to_html(text: str, book_slug: str) -> tuple[str, list[dict]]:
             else:
                 html_lines.append(f'<p class="arabic" dir="rtl">{line_strip}</p>')
             continue
-            
-        # Check Sual / Elcevap / Ihtar / Elhasil blocks and any markers in ***Word***
-        is_sual_elcevap = False
-        if "***" in line_strip:
-            new_line, count = re.subn(r"\*\*\*([^*]+)\*\*\*", r'<span class="mark-label">\1</span>', line_strip)
-            if count > 0:
-                line_strip = new_line
-                is_sual_elcevap = True
-        
-        # Format bold and italic (simple markdown regexes)
-        line_strip = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", line_strip)
-        line_strip = re.sub(r"\*([^*]+)\*", r"<em>\1</em>", line_strip)
-        line_strip = re.sub(r"_([^_]+)_", r"<em>\1</em>", line_strip)
-        
-        # Replace inline Arabic spans if they aren't fully Tag-enclosed
-        # We also replace footnote references [^1]
-        line_strip = re.sub(
-            r"\[\^([^\]]+)\]", 
-            rf'<a href="#fn-{book_slug}-\1" id="fnref-{book_slug}-\1" epub:type="noteref"><sup>\1</sup></a>', 
-            line_strip
-        )
-        
+
         # Wrap in appropriate paragraph
         if is_sual_elcevap:
             html_lines.append(f'<p class="sual-elcevap">{line_strip}</p>')
