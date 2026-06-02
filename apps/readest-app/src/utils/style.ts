@@ -83,10 +83,12 @@ const getFontStyles = (
     }`);
   }
   if (latinFont) {
+    const extraStyles = latinFont === 'ITC Souvenir' ? 'font-weight: 300;' : '';
     scriptFontStyles.push(`
     :lang(tr), :lang(en), :lang(de), :lang(fr), :lang(es), :lang(nl), :lang(pl), :lang(pt),
     [lang|=tr], [lang|=en] {
       font-family: "${escapeFontFamily(latinFont)}", "Georgia", "Times New Roman", serif;
+      ${extraStyles}
     }`);
   }
   // Legacy hattiKuran toggle — overrides Arabic font when enabled
@@ -842,8 +844,9 @@ export const getStyles = (viewSettings: ViewSettings, themeCode?: ThemeCode) => 
   const translationStyles = getTranslationStyles(viewSettings.showTranslateSource!);
   const warichuStyles = getWarichuStyles();
   const rubyStyles = getRubyStyles();
+  const hasiyeStyles = getHasiyeStyles();
   const userStylesheet = viewSettings.userStylesheet!;
-  return `${pageLayoutStyles}\n${paragraphLayoutStyles}\n${fontStyles}\n${colorStyles}\n${translationStyles}\n${warichuStyles}\n${rubyStyles}\n${userStylesheet}`;
+  return `${pageLayoutStyles}\n${paragraphLayoutStyles}\n${fontStyles}\n${colorStyles}\n${translationStyles}\n${warichuStyles}\n${rubyStyles}\n${hasiyeStyles}\n${userStylesheet}`;
 };
 
 export const applyTranslationStyle = (viewSettings: ViewSettings) => {

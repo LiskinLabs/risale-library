@@ -39,7 +39,7 @@ import {
   keepTextAlignment,
   transformStylesheet,
 } from '@/utils/style';
-import { mountAdditionalFonts, mountCustomFont } from '@/styles/fonts';
+import { mountAdditionalFonts, mountCustomFont, injectBuiltinFontFaces } from '@/styles/fonts';
 import { layoutWarichu, relayoutWarichu } from '@/utils/warichu';
 import { getBookDirFromLanguage, getBookDirFromWritingMode } from '@/utils/book';
 import { getIndexFromCfi } from '@/utils/cfi';
@@ -244,6 +244,11 @@ const FoliateViewer: React.FC<{
 
       if (!bookData?.isFixedLayout) {
         mountAdditionalFonts(detail.doc, isCJKLang(bookData.book?.primaryLanguage));
+        injectBuiltinFontFaces(detail.doc, {
+          latin: viewSettings.latinFont,
+          cyrillic: viewSettings.cyrillicFont,
+          arabic: viewSettings.arabicFont,
+        });
       }
 
       getLoadedFonts().forEach((font) => {

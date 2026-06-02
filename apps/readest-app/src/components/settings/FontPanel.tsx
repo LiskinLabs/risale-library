@@ -378,25 +378,17 @@ const FontPanel: React.FC<SettingsPanelPanelProp> = ({ bookKey, onRegisterReset 
             step={100}
           />
         </SettingsRow>
-        <SettingsSwitchRow
-          label={_("Hatt-ı Kur'ân")}
-          description={_('Use Ottoman fonts for Arabic text')}
-          checked={hattiKuran}
-          onChange={() => setHattiKuran(!hattiKuran)}
-          data-setting-id='settings.font.hattiKuran'
-        />
       </BoxedList>
 
-      <BoxedList title={_('Per-Script Fonts')}>
-        <SettingsRow label={_('Latin Font')} data-setting-id='settings.font.latinFont'>
+      <BoxedList title={_('Per-Script Fonts (Advanced)')}>
+        <SettingsRow label={_('Latin (tr/en/de/fr...)')} data-setting-id='settings.font.latinFont'>
           <FontDropdown
             options={[
-              { option: '', label: _('Default') },
-              { option: 'ITC Souvenir', label: 'ITC Souvenir' },
+              { option: '', label: _('Off') },
               { option: 'Minion Pro', label: 'Minion Pro' },
+              { option: 'ITC Souvenir', label: 'ITC Souvenir' },
               { option: 'Bitter', label: 'Bitter' },
               { option: 'Literata', label: 'Literata' },
-              { option: 'Merriweather', label: 'Merriweather' },
               ...customFonts.map((f) => ({ option: f, label: f })),
             ]}
             selected={latinFont || ''}
@@ -404,13 +396,15 @@ const FontPanel: React.FC<SettingsPanelPanelProp> = ({ bookKey, onRegisterReset 
             onGetFontFamily={handleFontFamilyFont}
           />
         </SettingsRow>
-        <SettingsRow label={_('Cyrillic Font')} data-setting-id='settings.font.cyrillicFont'>
+        <SettingsRow
+          label={_('Cyrillic (ru/bg/uk...)')}
+          data-setting-id='settings.font.cyrillicFont'
+        >
           <FontDropdown
             options={[
-              { option: '', label: _('Default') },
+              { option: '', label: _('Off') },
               { option: 'Kazimir Text', label: 'Kazimir Text' },
               { option: 'PT Serif', label: 'PT Serif' },
-              { option: 'PT Sans', label: 'PT Sans' },
               ...customFonts.map((f) => ({ option: f, label: f })),
             ]}
             selected={cyrillicFont || ''}
@@ -418,13 +412,15 @@ const FontPanel: React.FC<SettingsPanelPanelProp> = ({ bookKey, onRegisterReset 
             onGetFontFamily={handleFontFamilyFont}
           />
         </SettingsRow>
-        <SettingsRow label={_('Arabic Font')} data-setting-id='settings.font.arabicFont'>
+        <SettingsRow
+          label={_('Arabic (ar/ota/fa/ur...)')}
+          data-setting-id='settings.font.arabicFont'
+        >
           <FontDropdown
             options={[
-              { option: '', label: _('Default') },
+              { option: '', label: _('Off') },
               { option: 'Nassim Arabic Pro', label: 'Nassim Arabic Pro' },
               { option: 'Scheherazade New', label: 'Scheherazade New' },
-              { option: 'Traditional Arabic', label: 'Traditional Arabic' },
               ...customFonts.map((f) => ({ option: f, label: f })),
             ]}
             selected={arabicFont || ''}
@@ -433,10 +429,8 @@ const FontPanel: React.FC<SettingsPanelPanelProp> = ({ bookKey, onRegisterReset 
           />
         </SettingsRow>
         <SettingsSwitchRow
-          label={_("Hatt-ı Kur'ân Override")}
-          description={_(
-            'Override Arabic font with Ottoman style when no custom Arabic font is set',
-          )}
+          label={_("Hatt-ı Kur'ân")}
+          description={_('Use Ottoman styling for Arabic text when no Arabic font is set')}
           checked={hattiKuran}
           onChange={() => setHattiKuran(!hattiKuran)}
           data-setting-id='settings.font.hattiKuran'

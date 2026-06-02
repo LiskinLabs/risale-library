@@ -649,6 +649,7 @@ describe('customDictionaryStore — loadCustomDictionaries reconciliation', () =
       'builtin:wikipedia',
       'imp-known',
       'builtin:system',
+      'builtin:risale-lugat',
       'web:builtin:google',
       'web:builtin:urban',
       'web:builtin:merriam-webster',

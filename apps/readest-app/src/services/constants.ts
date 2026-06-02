@@ -224,7 +224,7 @@ export const DEFAULT_BOOK_FONT: BookFont = {
   defaultFontSize: 16,
   minimumFontSize: 8,
   fontWeight: 400,
-  latinFont: 'ITC Souvenir',
+  latinFont: 'Minion Pro',
   cyrillicFont: 'Kazimir Text',
   arabicFont: 'Nassim Arabic Pro',
 };

@@ -35,7 +35,6 @@ const getAdditionalBasicFontLinks = () => `
     )
     .join('&')}&display=swap" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/opendyslexic@2.11.3/opendyslexic.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="/fonts/builtin-fonts.css" crossorigin="anonymous">
 `;
 
 const getAdditionalCJKFontLinks = () => `
@@ -95,6 +94,45 @@ const getAdditionalCJKFontFaces = () => `
     url("https://db.onlinewebfonts.com/t/4f0b783ba4a1b381fc7e7af81ecab481.svg#STHeiti J Light")format("svg");
 }
 `;
+
+/** Built-in font @font-face declarations — only injected for selected fonts. */
+const BUILTIN_FACES: Record<string, string> = {
+  'ITC Souvenir': `
+    @font-face{font-family:"ITC Souvenir";src:url("/fonts/latin/ITCSouvenir/ITC Souvenir Light.ttf") format("truetype");font-weight:300;font-style:normal;font-display:swap}
+    @font-face{font-family:"ITC Souvenir";src:url("/fonts/latin/ITCSouvenir/ITC Souvenir Light Italic.ttf") format("truetype");font-weight:300;font-style:italic;font-display:swap}
+    @font-face{font-family:"ITC Souvenir";src:url("/fonts/latin/ITCSouvenir/ITC Souvenir Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
+    @font-face{font-family:"ITC Souvenir";src:url("/fonts/latin/ITCSouvenir/ITC Souvenir Bold Italic.ttf") format("truetype");font-weight:700;font-style:italic;font-display:swap}`,
+  'Minion Pro': `
+    @font-face{font-family:"Minion Pro";src:url("/fonts/latin/MinionPro/MinionPro-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+    @font-face{font-family:"Minion Pro";src:url("/fonts/latin/MinionPro/MinionPro-It.ttf") format("truetype");font-weight:400;font-style:italic;font-display:swap}
+    @font-face{font-family:"Minion Pro";src:url("/fonts/latin/MinionPro/MinionPro-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
+    @font-face{font-family:"Minion Pro";src:url("/fonts/latin/MinionPro/MinionPro-BoldIt.ttf") format("truetype");font-weight:700;font-style:italic;font-display:swap}`,
+  'Nassim Arabic Pro': `
+    @font-face{font-family:"Nassim Arabic Pro";src:url("/fonts/arabic/NassimPro/fonnts.com-Nassim-Arabic-Pro-.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap}
+    @font-face{font-family:"Nassim Arabic Pro";src:url("/fonts/arabic/NassimPro/fonnts.com-Nassim-Arabic-Pro-Medium.otf") format("opentype");font-weight:500;font-style:normal;font-display:swap}
+    @font-face{font-family:"Nassim Arabic Pro";src:url("/fonts/arabic/NassimPro/fonnts.com-Nassim-Arabic-Pro-Semibold-.otf") format("opentype");font-weight:600;font-style:normal;font-display:swap}
+    @font-face{font-family:"Nassim Arabic Pro";src:url("/fonts/arabic/NassimPro/fonnts.com-Nassim-Arabic-Pro-Extrabold-.otf") format("opentype");font-weight:700;font-style:normal;font-display:swap}`,
+  'Kazimir Text': `
+    @font-face{font-family:"Kazimir Text";src:url("/fonts/cyrillic/KazimirText/kazimirtext-regular.woff2") format("woff2"),url("/fonts/cyrillic/KazimirText/kazimirtext-regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}`,
+};
+
+export const injectBuiltinFontFaces = (
+  doc: Document,
+  fonts: { latin?: string; cyrillic?: string; arabic?: string },
+) => {
+  const styleId = 'builtin-font-faces';
+  let el = doc.getElementById(styleId);
+  if (!el) {
+    el = doc.createElement('style');
+    el.id = styleId;
+    doc.head.appendChild(el);
+  }
+  const selected = new Set([fonts.latin, fonts.cyrillic, fonts.arabic].filter(Boolean));
+  el.textContent = Array.from(selected)
+    .map((name) => BUILTIN_FACES[name!] || '')
+    .filter(Boolean)
+    .join('\n');
+};
 
 export const mountAdditionalFonts = async (document: Document, isCJK = false) => {
   const mountCJKFonts = isCJK || isCJKEnv();
