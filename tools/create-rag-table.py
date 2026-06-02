@@ -4,9 +4,24 @@
 import sys
 import os
 import httpx
+from pathlib import Path
 
-SUPABASE_URL = "https://kdivpadatbovgqwoxzqr.supabase.co"
-SUPABASE_KEY = os.getenv("SUPABASE_ADMIN_KEY") or "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtkaXZwYWRhdGJvdmdxd294enFyIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4MDMwNTM3NywiZXhwIjoyMDk1ODgxMzc3fQ.EAgpCXFhgzB98HWRuRlfRpIM4erejanOUEyXoVyRD3Y"
+# Load env from project .env.local
+ENV_FILE = Path(__file__).parent.parent / "apps" / "readest-app" / ".env.local"
+if ENV_FILE.exists():
+    for line in ENV_FILE.read_text().splitlines():
+        line = line.strip()
+        if line and not line.startswith('#') and '=' in line:
+            k, v = line.split('=', 1)
+            if k not in os.environ:
+                os.environ[k] = v.strip().strip('"').strip("'")
+
+SUPABASE_URL = os.getenv("NEXT_PUBLIC_SUPABASE_URL") or os.getenv("SUPABASE_URL") or ""
+SUPABASE_KEY = os.getenv("SUPABASE_ADMIN_KEY") or ""
+
+if not SUPABASE_URL or not SUPABASE_KEY:
+    print("ERROR: Set NEXT_PUBLIC_SUPABASE_URL and SUPABASE_ADMIN_KEY in .env.local", file=sys.stderr)
+    sys.exit(1)
 
 SQL = """
 CREATE EXTENSION IF NOT EXISTS vector WITH SCHEMA public;

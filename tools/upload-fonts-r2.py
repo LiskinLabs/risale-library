@@ -1,16 +1,40 @@
 #!/usr/bin/env python3
-"""Upload built-in fonts to Cloudflare R2 for web access."""
+"""Upload built-in fonts to Cloudflare R2 for web access.
+
+Requires R2 credentials in .env.local:
+  R2_ACCOUNT_ID=...
+  R2_ACCESS_KEY_ID=...
+  R2_SECRET_ACCESS_KEY=...
+  R2_BUCKET_NAME=...
+"""
 
 import boto3
+import os
+import sys
 from pathlib import Path
 
-FONTS_DIR = Path("C:/Users/silvestr.liskin/Desktop/risale-ai-studio/apps/readest-app/public/fonts")
+# Load env from project .env.local
+PROJECT_ROOT = Path(__file__).parent.parent
+ENV_FILE = PROJECT_ROOT / "apps" / "readest-app" / ".env.local"
+if ENV_FILE.exists():
+    for line in ENV_FILE.read_text().splitlines():
+        line = line.strip()
+        if line and not line.startswith('#') and '=' in line:
+            k, v = line.split('=', 1)
+            if k not in os.environ:
+                os.environ[k] = v.strip().strip('"').strip("'")
 
-# R2 credentials (matching Cloudflare R2 S3-compatible API)
-R2_ACCESS_KEY = "8b085bf2dabf4afdcfb365539ca539ab"
-R2_SECRET_KEY = "724e00001eb1c7dd6293c776c468d621422765464e09b5b7c34989ee42127277"
-R2_ACCOUNT_ID = "ac7696f5a479d3d82ab1d3b998e67255"
-R2_BUCKET = "risale-ai-studio"
+R2_ACCESS_KEY = os.getenv("R2_ACCESS_KEY_ID")
+R2_SECRET_KEY = os.getenv("R2_SECRET_ACCESS_KEY")
+R2_ACCOUNT_ID = os.getenv("R2_ACCOUNT_ID")
+R2_BUCKET = os.getenv("R2_BUCKET_NAME", "risale-ai-studio")
+
+if not R2_ACCESS_KEY or not R2_SECRET_KEY or not R2_ACCOUNT_ID:
+    print("ERROR: Set R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY, R2_ACCOUNT_ID in .env.local",
+          file=sys.stderr)
+    sys.exit(1)
+
+FONTS_DIR = PROJECT_ROOT / "apps" / "readest-app" / "public" / "fonts"
 R2_ENDPOINT = f"https://{R2_ACCOUNT_ID}.r2.cloudflarestorage.com"
 
 def main():
