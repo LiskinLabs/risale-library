@@ -15,6 +15,7 @@ from xml.sax.saxutils import escape
 # ── Config ──────────────────────────────────────────────────────────
 SOURCE_DIR = Path("C:/Users/silvestr.liskin/Desktop/risale_extraction/source_diyanet/obsidian-markdown")
 OUTPUT_DIR = Path("C:/Users/silvestr.liskin/Desktop/risale-ai-studio/apps/readest-app/builtin-books")
+PUBLIC_DIR = Path("C:/Users/silvestr.liskin/Desktop/risale-ai-studio/apps/readest-app/public/builtin-books")
 MANIFEST_FILE = Path("C:/Users/silvestr.liskin/Desktop/risale-ai-studio/apps/readest-app/src/services/builtinBooks.ts")
 
 # Full list of 15 books with Turkish titles and matching directory names
@@ -517,6 +518,13 @@ class ObsidianEPUBGenerator:
             zf.writestr("OEBPS/nav.xhtml", self._nav())
 
         print(f"  Generated EPUB: {out_path.name} ({out_path.stat().st_size:,} bytes)")
+
+        # Copy to public/ directory for web (Next.js static serving)
+        import shutil
+        public_path = PUBLIC_DIR / f"{self.book_slug}.epub"
+        public_path.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(out_path, public_path)
+        print(f"  → Synced to public/: {public_path.name}")
 
     def _opf(self, book_id, xhtml_files):
         items = [
