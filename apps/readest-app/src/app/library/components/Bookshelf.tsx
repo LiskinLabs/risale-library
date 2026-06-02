@@ -20,7 +20,6 @@ import {
   useSensors,
   PointerSensor,
   TouchSensor,
-  MouseSensor,
   DragEndEvent,
   DragStartEvent,
 } from '@dnd-kit/core';
