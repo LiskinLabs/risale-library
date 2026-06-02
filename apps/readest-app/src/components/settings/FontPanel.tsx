@@ -28,7 +28,13 @@ import { useResetViewSettings } from '@/hooks/useResetSettings';
 import { useKeyDownActions } from '@/hooks/useKeyDownActions';
 import { saveViewSettings } from '@/helpers/settings';
 import { SettingsPanelPanelProp } from './SettingsDialog';
-import { BoxedList, NavigationRow, SettingLabel, SettingsRow } from './primitives';
+import {
+  BoxedList,
+  NavigationRow,
+  SettingLabel,
+  SettingsRow,
+  SettingsSwitchRow,
+} from './primitives';
 import NumberInput from './NumberInput';
 import FontDropdown from './FontDropDown';
 import CustomFonts from './CustomFonts';
@@ -142,6 +148,7 @@ const FontPanel: React.FC<SettingsPanelPanelProp> = ({ bookKey, onRegisterReset 
   const [sansSerifFont, setSansSerifFont] = useState(viewSettings.sansSerifFont);
   const [monospaceFont, setMonospaceFont] = useState(viewSettings.monospaceFont);
   const [fontWeight, setFontWeight] = useState(viewSettings.fontWeight);
+  const [hattiKuran, setHattiKuran] = useState(viewSettings.hattiKuran);
 
   const [customFonts, setCustomFonts] = useState<string[]>(getFontFamilies());
   const [CJKFonts, setCJKFonts] = useState<string[]>(() => {
@@ -161,6 +168,7 @@ const FontPanel: React.FC<SettingsPanelPanelProp> = ({ bookKey, onRegisterReset 
       sansSerifFont: setSansSerifFont,
       monospaceFont: setMonospaceFont,
       fontWeight: setFontWeight,
+      hattiKuran: setHattiKuran,
     });
   };
 
@@ -278,6 +286,11 @@ const FontPanel: React.FC<SettingsPanelPanelProp> = ({ bookKey, onRegisterReset 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [overrideFont]);
 
+  useEffect(() => {
+    saveViewSettings(envConfig, bookKey, 'hattiKuran', hattiKuran);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [hattiKuran]);
+
   const handleFontFamilyFont = (option: string) => {
     switch (option) {
       case 'Serif':
@@ -333,14 +346,23 @@ const FontPanel: React.FC<SettingsPanelPanelProp> = ({ bookKey, onRegisterReset 
         />
       </BoxedList>
 
-      <BoxedList title={_('Font Weight')} data-setting-id='settings.font.fontWeight'>
-        <NumberInput
-          label={_('Font Weight')}
-          value={fontWeight}
-          onChange={setFontWeight}
-          min={100}
-          max={900}
-          step={100}
+      <BoxedList title={_('Font Weight & Style')}>
+        <SettingsRow label={_('Font Weight')} data-setting-id='settings.font.fontWeight'>
+          <NumberInput
+            label={_('Font Weight')}
+            value={fontWeight}
+            onChange={setFontWeight}
+            min={100}
+            max={900}
+            step={100}
+          />
+        </SettingsRow>
+        <SettingsSwitchRow
+          label={_("Hatt-ı Kur'ân")}
+          description={_('Use Ottoman fonts for Arabic text')}
+          checked={hattiKuran}
+          onChange={() => setHattiKuran(!hattiKuran)}
+          data-setting-id='settings.font.hattiKuran'
         />
       </BoxedList>
 

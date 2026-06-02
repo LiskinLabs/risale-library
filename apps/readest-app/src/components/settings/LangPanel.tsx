@@ -49,6 +49,7 @@ const LangPanel: React.FC<SettingsPanelPanelProp> = ({ bookKey, onRegisterReset 
   const [convertChineseVariant, setConvertChineseVariant] = useState(
     viewSettings.convertChineseVariant,
   );
+  const [dictionaryLevel, setDictionaryLevel] = useState(viewSettings.dictionaryLevel);
   const [showCustomDictionaries, setShowCustomDictionaries] = useState(false);
 
   // Android Back / Esc: when the Manage Dictionaries sub-page is open,
@@ -83,6 +84,7 @@ const LangPanel: React.FC<SettingsPanelPanelProp> = ({ bookKey, onRegisterReset 
       showTranslateSource: setShowTranslateSource,
       ttsReadAloudText: setTtsReadAloudText,
       replaceQuotationMarks: setReplaceQuotationMarks,
+      dictionaryLevel: setDictionaryLevel,
     });
   };
 
@@ -233,6 +235,25 @@ const LangPanel: React.FC<SettingsPanelPanelProp> = ({ bookKey, onRegisterReset 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [replaceQuotationMarks]);
 
+  useEffect(() => {
+    if (dictionaryLevel === viewSettings.dictionaryLevel) return;
+    saveViewSettings(envConfig, bookKey, 'dictionaryLevel', dictionaryLevel, false, false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dictionaryLevel]);
+
+  const getDictionaryLevelOptions = () => {
+    return [
+      { value: '0', label: _('Beginner (A1-A2)') },
+      { value: '1', label: _('Intermediate (B1-B2)') },
+      { value: '2', label: _('Advanced (C1-C2)') },
+      { value: '3', label: _('All Terms') },
+    ];
+  };
+
+  const handleSelectDictionaryLevel = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setDictionaryLevel(parseInt(event.target.value, 10));
+  };
+
   const getConvertModeOptions: () => { value: ConvertChineseVariant; label: string }[] = () => {
     return [
       { value: 'none', label: _('No Conversion') },
@@ -304,6 +325,14 @@ const LangPanel: React.FC<SettingsPanelPanelProp> = ({ bookKey, onRegisterReset 
           onClick={() => setShowCustomDictionaries(true)}
           className='h-14'
         />
+        <SettingsRow label={_('Sözlük Seviyesi (Word Level)')}>
+          <SettingsSelect
+            value={dictionaryLevel.toString()}
+            onChange={handleSelectDictionaryLevel}
+            ariaLabel={_('Word Level')}
+            options={getDictionaryLevelOptions()}
+          />
+        </SettingsRow>
       </BoxedList>
 
       <BoxedList title={_('Translation')} data-setting-id='settings.language.translationEnabled'>

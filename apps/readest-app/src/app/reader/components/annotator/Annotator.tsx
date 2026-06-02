@@ -1366,6 +1366,7 @@ const Annotator: React.FC<{ bookKey: string }> = ({ bookKey }) => {
               <DictionarySheet
                 word={selection?.text as string}
                 lang={bookData.bookDoc?.metadata.language as string}
+                bookKey={bookKey}
                 onDismiss={handleDismissPopupAndSelection}
                 onManage={onManage}
               />
@@ -1376,6 +1377,7 @@ const Annotator: React.FC<{ bookKey: string }> = ({ bookKey }) => {
             <DictionaryPopup
               word={selection?.text as string}
               lang={bookData.bookDoc?.metadata.language as string}
+              bookKey={bookKey}
               position={dictPopupPosition}
               trianglePosition={trianglePosition}
               popupWidth={dictPopupWidth}

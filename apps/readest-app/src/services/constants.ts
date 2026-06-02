@@ -283,6 +283,7 @@ export const DEFAULT_BOOK_STYLE: BookStyle = {
   overrideLayout: false,
   overrideColor: false,
   useBookLayout: false,
+  hattiKuran: false,
 
   zoomMode: 'fit-page',
   spreadMode: 'auto',
@@ -351,8 +352,10 @@ export const DEFAULT_VIEW_CONFIG: ViewConfig = {
   readingRulerEnabled: false,
   readingRulerLines: 2,
   readingRulerPosition: 33,
-  readingRulerOpacity: 0.5,
+  readingRulerOpacity: 0.15,
   readingRulerColor: 'transparent',
+
+  dictionaryLevel: 3,
 };
 
 export const DEFAULT_TTS_CONFIG: TTSConfig = {
@@ -425,6 +428,7 @@ export const SERIF_FONTS = [
   'PT Serif',
   'Georgia',
   'Times New Roman',
+  'Scheherazade New',
 ];
 
 export const NON_FREE_FONTS = ['Georgia', 'Times New Roman'];
@@ -440,7 +444,14 @@ export const CJK_SERIF_FONTS = [
 
 export const CJK_SANS_SERIF_FONTS = ['Noto Sans SC', 'Noto Sans TC'];
 
-export const SANS_SERIF_FONTS = ['Roboto', 'Noto Sans', 'Open Sans', 'PT Sans', 'Helvetica'];
+export const SANS_SERIF_FONTS = [
+  'Roboto',
+  'Noto Sans',
+  'Open Sans',
+  'PT Sans',
+  'Helvetica',
+  'OpenDyslexic',
+];
 
 export const MONOSPACE_FONTS = [
   'Fira Code',

@@ -230,6 +230,7 @@ const renderSheet = (
     <DictionarySheet
       word={props.word ?? 'hello'}
       lang={props.lang}
+      bookKey='test-book'
       onDismiss={props.onDismiss ?? (() => {})}
       onManage={props.onManage}
     />,

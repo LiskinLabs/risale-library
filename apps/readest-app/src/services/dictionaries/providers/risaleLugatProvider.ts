@@ -22,21 +22,17 @@ export const createRisaleLugatProvider = (appService: AppService): DictionaryPro
       try {
         // On web platform, we need to ensure the DB exists in OPFS.
         // It's shipped in the public/data directory.
-        if (appService.isWebApp) {
+        if (appService.appPlatform === 'web') {
           try {
             const root = await navigator.storage.getDirectory();
-            // The opfsName is generated in webAppService.ts as fullPath with replaced slashes
-            const opfsName = 'Risale_AI_Studio_Dictionaries_lugat.db'; // typically Data maps to Risale AI Studio/Dictionaries or similar
-            // Actually let's just write to all possible OPFS names to be safe, or
-            // wait, we can just use the path that libSQL will use.
-            const pathInfo = await (appService as any).resolveFilePath?.('lugat.db', 'Data');
+            const pathInfo = await appService.resolveFilePath?.('lugat.db', 'Data');
             const targetName = pathInfo
               ? pathInfo.replace(/[/\\]+/g, '_').replace(/^_+/, '')
-              : 'Risale_AI_Studio_Data_lugat.db';
+              : 'lugat.db';
 
             try {
               await root.getFileHandle(targetName);
-            } catch (e) {
+            } catch (_e) {
               // File doesn't exist in OPFS, fetch it
               console.log('Fetching lugat.db into OPFS...', targetName);
               const response = await fetch('/data/lugat.db');
@@ -78,18 +74,36 @@ export const createRisaleLugatProvider = (appService: AppService): DictionaryPro
 
       try {
         const query = word.toLowerCase();
+        const level = ctx.dictionaryLevel ?? 3; // Default to Tümü
+
+        // level 3 means show everything
+        const levelClause = level < 3 ? 'AND level >= ?' : '';
+        const params = level < 3 ? [query, level] : [query];
+
         // 1. Try exact term match
         let results = await database.select<LugatEntry>(
-          'SELECT term, arabic, definition FROM lugat WHERE term = ? LIMIT 1',
-          [query],
+          `SELECT term, arabic, definition FROM lugat WHERE term = ? ${levelClause} LIMIT 1`,
+          params,
         );
 
-        // 2. Fallback to FTS if no exact match or word has potential suffixes
+        // 2. Fallback to search if no exact match or word has potential suffixes
         if ((!results || results.length === 0) && query.length > 2) {
-          results = await database.select<LugatEntry>(
-            'SELECT term, arabic, definition FROM lugat WHERE id IN (SELECT rowid FROM lugat_fts WHERE term MATCH ? LIMIT 1)',
-            [query],
-          );
+          if (appService.appPlatform === 'web') {
+            // FTS5 is not available in WASM, use LIKE
+            const likeParams = level < 3 ? [`${query}%`, level] : [`${query}%`];
+            results = await database.select<LugatEntry>(
+              `SELECT term, arabic, definition FROM lugat WHERE term LIKE ? ${levelClause} LIMIT 1`,
+              likeParams,
+            );
+          } else {
+            const ftsLevelClause =
+              level < 3 ? 'AND id IN (SELECT id FROM lugat WHERE level >= ?)' : '';
+            const ftsParams = level < 3 ? [query, level] : [query];
+            results = await database.select<LugatEntry>(
+              `SELECT term, arabic, definition FROM lugat WHERE id IN (SELECT rowid FROM lugat_fts WHERE term MATCH ?) ${ftsLevelClause} LIMIT 1`,
+              ftsParams,
+            );
+          }
         }
 
         if (!results || results.length === 0) {

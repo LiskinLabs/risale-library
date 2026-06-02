@@ -1,4 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
+'use client';
+
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from '@/hooks/useTranslation';
 import { getPopupPosition, getPosition, Position } from '@/utils/sel';
 import { lookupMeal } from '@/services/hasiye/mealIndex';
@@ -6,6 +8,7 @@ import { eventDispatcher } from '@/utils/event';
 import { Overlay } from '@/components/Overlay';
 import Popup from '@/components/Popup';
 import { useResponsiveSize } from '@/hooks/useResponsiveSize';
+import { useEnv } from '@/context/EnvContext';
 
 interface HasiyePopupProps {
   bookKey: string;
@@ -13,46 +16,78 @@ interface HasiyePopupProps {
 
 const HasiyePopup: React.FC<HasiyePopupProps> = ({ bookKey }) => {
   const _ = useTranslation();
+  const { appService } = useEnv();
   const [showPopup, setShowPopup] = useState(false);
   const [translationText, setTranslationText] = useState('');
   const [arabicText, setArabicText] = useState('');
   const [popupPosition, setPopupPosition] = useState<Position | null>(null);
   const [trianglePosition, setTrianglePosition] = useState<Position | null>(null);
-  const [gridRect, setGridRect] = useState<DOMRect | null>(null);
 
   const popupPadding = useResponsiveSize(10);
-  const maxWidth = Math.min(400, window.innerWidth - popupPadding * 2);
-  const maxHeight = Math.min(300, window.innerHeight - popupPadding * 2);
+  const popupWidth = Math.min(400, window.innerWidth - popupPadding * 2);
+  const popupHeight = Math.min(300, window.innerHeight - popupPadding * 2);
 
   useEffect(() => {
-    const handlePopup = (e: CustomEvent) => {
-      const detail = e.detail;
+    const handlePopup = async (e: Event) => {
+      const detail = (e as CustomEvent).detail;
       if (detail.bookKey !== bookKey) return;
 
       const element = detail.element as HTMLElement;
       const encodedText = detail.encodedText;
       if (!element || !encodedText) return;
 
-      const decodedText = Buffer.from(encodedText, 'base64').toString('utf-8');
-      const meal = lookupMeal(decodedText);
+      let decodedText = '';
+      try {
+        // Universal way to decode base64 utf-8
+        decodedText = decodeURIComponent(escape(atob(encodedText)));
+      } catch (_e) {
+        // Fallback for cases where it's just plain ascii base64
+        try {
+          decodedText = atob(encodedText);
+        } catch (e2) {
+          console.warn('Failed to decode hasiye text:', e2);
+          return;
+        }
+      }
 
-      if (!meal) {
-        console.log('No meal found for:', decodedText);
+      let translation = lookupMeal(decodedText);
+
+      // Try Lugat fallback for Arabic/Farsi phrases
+      if (!translation && appService) {
+        try {
+          const db = await appService.openDatabase('lugat', 'lugat.db', 'Data');
+          if (db) {
+            const results = await db.select<{ term: string; definition: string }>(
+              'SELECT term, definition FROM lugat WHERE arabic = ? LIMIT 1',
+              [decodedText.trim()],
+            );
+            if (results && results.length > 0 && results[0]) {
+              const entry = results[0];
+              translation = `(${entry.term}) ${entry.definition}`;
+            }
+          }
+        } catch (err) {
+          console.error('Lugat fallback failed', err);
+        }
+      }
+
+      if (!translation) {
+        console.log('No meal or lugat found for:', decodedText);
         return;
       }
 
       setArabicText(decodedText);
-      setTranslationText(meal);
+      setTranslationText(translation);
 
       const gridCell = document.getElementById(`gridcell-${bookKey}`);
       if (gridCell) {
         const rect = gridCell.getBoundingClientRect();
-        setGridRect(rect);
 
-        const point = getPosition(element, rect);
-        const trianglePos = getPopupPosition(element, point, rect);
-        setTrianglePosition(trianglePos);
-        setPopupPosition({ ...trianglePos });
+        const triangPos = getPosition(element, rect, popupPadding, false);
+        const popPos = getPopupPosition(triangPos, rect, popupWidth, popupHeight, popupPadding);
+
+        setTrianglePosition(triangPos);
+        setPopupPosition(popPos);
       }
 
       setShowPopup(true);
@@ -62,25 +97,26 @@ const HasiyePopup: React.FC<HasiyePopupProps> = ({ bookKey }) => {
     return () => {
       eventDispatcher.off('hasiye-popup', handlePopup);
     };
-  }, [bookKey]);
+  }, [bookKey, popupPadding, popupWidth, popupHeight, appService]);
 
   if (!showPopup || !popupPosition || !trianglePosition) return null;
 
   return (
-    <>
-      <Overlay onDismiss={() => setShowPopup(false)} />
+    <div role='toolbar' tabIndex={-1}>
+      {showPopup && <Overlay onDismiss={() => setShowPopup(false)} />}
       <Popup
-        point={popupPosition.point}
-        dir={popupPosition.dir}
-        maxWidth={maxWidth}
-        maxHeight={maxHeight}
+        isOpen={showPopup}
+        width={popupWidth}
+        height={popupHeight}
+        position={popupPosition}
         trianglePosition={trianglePosition}
         className='hasiye-popup-container'
+        onDismiss={() => setShowPopup(false)}
       >
         <div
           id='popup-container'
           className='bg-base-100 flex h-full w-full flex-col overflow-hidden rounded shadow-lg'
-          style={{ width: maxWidth, maxHeight: maxHeight }}
+          style={{ width: popupWidth, maxHeight: popupHeight }}
         >
           <div className='flex items-center border-b border-base-content/10 px-4 py-2'>
             <span className='text-sm font-semibold opacity-70'>{_('Meal (Translation)')}</span>
@@ -93,11 +129,13 @@ const HasiyePopup: React.FC<HasiyePopupProps> = ({ bookKey }) => {
             >
               {arabicText}
             </div>
-            <div className='text-sm leading-relaxed opacity-90'>{translationText}</div>
+            <div className='text-sm leading-relaxed opacity-90 whitespace-pre-wrap'>
+              {translationText}
+            </div>
           </div>
         </div>
       </Popup>
-    </>
+    </div>
   );
 };
 

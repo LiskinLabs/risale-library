@@ -8,6 +8,8 @@ import { openUrl } from '@tauri-apps/plugin-opener';
 import { useTranslation } from '@/hooks/useTranslation';
 import { useEnv } from '@/context/EnvContext';
 import { useThemeStore } from '@/store/themeStore';
+import { useSettingsStore } from '@/store/settingsStore';
+import { useReaderStore } from '@/store/readerStore';
 import { useCustomDictionaryStore } from '@/store/customDictionaryStore';
 import { getEnabledProviders } from '@/services/dictionaries/registry';
 import { buildLookupCandidates } from '@/services/dictionaries/lookupCandidates';
@@ -34,6 +36,7 @@ interface CardState {
 export interface UseDictionaryResultsArgs {
   word: string;
   lang?: string;
+  bookKey?: string;
 }
 
 export interface DictionaryResultsState {
@@ -67,14 +70,20 @@ export interface DictionaryResultsState {
 export function useDictionaryResults({
   word,
   lang,
+  bookKey,
 }: UseDictionaryResultsArgs): DictionaryResultsState {
   const { appService } = useEnv();
-  const { dictionaries, settings } = useCustomDictionaryStore();
+  const { dictionaries, settings: dictSettings } = useCustomDictionaryStore();
   const isDarkMode = useThemeStore((s) => s.isDarkMode);
   const themeCode = useThemeStore((s) => s.themeCode);
+  const { getViewSettings } = useReaderStore();
+  const { settings: generalSettings } = useSettingsStore();
+
+  const viewSettings = bookKey ? getViewSettings(bookKey) : generalSettings.globalViewSettings;
+  const dictionaryLevel = viewSettings?.dictionaryLevel ?? 3;
 
   const computedProviders = getEnabledProviders({
-    settings,
+    settings: dictSettings,
     dictionaries,
     fs: appService ?? undefined,
   });
@@ -226,6 +235,7 @@ export function useDictionaryResults({
                 isDarkMode,
                 bg: themeCode.bg,
                 fg: themeCode.fg,
+                dictionaryLevel,
               });
               if (controller.signal.aborted) return;
               if (outcome.ok || outcome.reason !== 'empty') break;
@@ -256,7 +266,16 @@ export function useDictionaryResults({
     });
 
     return () => controllers.forEach((c) => c.abort());
-  }, [currentWord, definitionProviders, lang, pushWord, isDarkMode, themeCode.bg, themeCode.fg]);
+  }, [
+    currentWord,
+    definitionProviders,
+    lang,
+    pushWord,
+    isDarkMode,
+    themeCode.bg,
+    themeCode.fg,
+    dictionaryLevel,
+  ]);
 
   // Visible cards = providers that are still loading or finished with a
   // result. Empty/unsupported/error cards are removed entirely.
@@ -272,12 +291,12 @@ export function useDictionaryResults({
         const tpl = getBuiltinWebSearch(id);
         return tpl ? substituteUrlTemplate(tpl.urlTemplate, currentWord) : undefined;
       }
-      const list: WebSearchEntry[] = settings.webSearches ?? [];
+      const list: WebSearchEntry[] = dictSettings.webSearches ?? [];
       const tpl = list.find((t) => t.id === id);
       if (!tpl || tpl.deletedAt) return undefined;
       return substituteUrlTemplate(tpl.urlTemplate, currentWord);
     },
-    [currentWord, settings.webSearches],
+    [currentWord, dictSettings.webSearches],
   );
 
   const onWebSearchClickTauri = useCallback(

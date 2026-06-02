@@ -26,6 +26,7 @@ const getFontStyles = (
   minFontSize: number,
   fontWeight: number,
   overrideFont: boolean,
+  hattiKuran: boolean,
 ) => {
   const lastSerifFonts = ['Georgia', 'Times New Roman'];
   const serifFonts = [
@@ -49,6 +50,15 @@ const getFontStyles = (
   ];
   const monospaceFonts = [monospace, ...MONOSPACE_FONTS.filter((font) => font !== monospace)];
   const defaultFontFamily = defaultFont.toLowerCase() === 'serif' ? '--serif' : '--sans-serif';
+  const hattiKuranStyles = hattiKuran
+    ? `
+    .arabic, .hasiye-arabic, [dir="rtl"] {
+      font-family: "Scheherazade New", "Traditional Arabic", serif !important;
+      font-size: 1.25em !important;
+    }
+  `
+    : '';
+
   const fontStyles = `
     html {
       --serif: ${serifFonts.map((font) => `"${font}"`).join(', ')}, serif;
@@ -72,6 +82,7 @@ const getFontStyles = (
     html body {
       ${overrideFont ? `font-family: var(${defaultFontFamily}) !important;` : ''}
     }
+    ${hattiKuranStyles}
     font[size="1"] {
       font-size: ${minFontSize}px;
     }
@@ -732,6 +743,7 @@ export const getStyles = (viewSettings: ViewSettings, themeCode?: ThemeCode) => 
     viewSettings.minimumFontSize!,
     viewSettings.fontWeight!,
     viewSettings.overrideFont!,
+    viewSettings.hattiKuran || false,
   );
   const colorStyles = getColorStyles(
     viewSettings.overrideColor!,

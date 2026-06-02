@@ -351,7 +351,7 @@ describe('mountAdditionalFonts', () => {
 
     const links = document.head.querySelectorAll('link');
     const hrefs = Array.from(links).map((l) => l.getAttribute('href') || '');
-    expect(hrefs.some((h) => h.includes('jsdelivr.net'))).toBe(false);
+    expect(hrefs.some((h) => h.includes('misans-webfont'))).toBe(false);
   });
 
   it('should mount CJK fonts when isCJK is true', async () => {

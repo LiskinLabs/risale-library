@@ -108,6 +108,8 @@ export interface Book {
   primaryLanguage?: string;
   /** Built-in book that ships with the app — cannot be deleted by the user. */
   builtin?: boolean;
+  builtinVersion?: number;
+  builtinGroup?: string;
 
   metadata?: BookMetadata;
 }
@@ -219,6 +221,7 @@ export interface BookStyle {
   overrideLayout: boolean;
   overrideColor: boolean;
   useBookLayout: boolean;
+  hattiKuran: boolean;
 
   // fixed-layout specific
   zoomMode: 'fit-page' | 'fit-width' | 'original-size' | 'custom';
@@ -289,6 +292,8 @@ export interface ViewConfig {
   readingRulerPosition: number;
   readingRulerOpacity: number;
   readingRulerColor: ReadingRulerColor;
+
+  dictionaryLevel: number;
 }
 
 export interface TTSConfig {

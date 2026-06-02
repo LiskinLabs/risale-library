@@ -17,6 +17,7 @@ const basicGoogleFonts = [
   { family: 'PT Sans', weights: 'ital,wght@0,400;0,700;1,400;1,700' },
   { family: 'PT Serif', weights: 'ital,wght@0,400;0,700;1,400;1,700' },
   { family: 'PT Mono', weights: '' },
+  { family: 'Scheherazade New', weights: 'wght@400;700' },
 ];
 
 const cjkGoogleFonts = [
@@ -33,6 +34,7 @@ const getAdditionalBasicFontLinks = () => `
         `family=${encodeURIComponent(family)}${weights ? `:${weights}` : ''}`,
     )
     .join('&')}&display=swap" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/opendyslexic@2.11.3/opendyslexic.min.css" crossorigin="anonymous">
 `;
 
 const getAdditionalCJKFontLinks = () => `

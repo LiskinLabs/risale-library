@@ -13,15 +13,24 @@ export const hasiyeTransformer: Transformer = {
   transform: async (ctx) => {
     let result = ctx.content;
 
-    // Wrap <p class="arabic" ...> with haşiye metadata so the UI layer
-    // can show a popup on click/tap.
+    // Wrap <p class="arabic" ...> and <span class="arabic" ...> or <span dir="rtl" ...> with haşiye metadata
+    // so the UI layer can show a popup on click/tap.
     result = result.replace(
-      /<p([^>]*)class=["'][^"']*arabic[^"']*["']([^>]*)>(.*?)<\/p>/gs,
-      (_match: string, beforeCls: string, afterCls: string, inner: string) => {
+      /<(p|span)([^>]*(?:class=["'][^"']*arabic[^"']*["']|dir=["']rtl["'])[^>]*)>(.*?)<\/\1>/gs,
+      (_match: string, tag: string, attrs: string, inner: string) => {
         // Extract plain text for meal matching
         const plain = inner.replace(/<[^>]+>/g, '').trim();
         const encoded = Buffer.from(plain).toString('base64');
-        return `<p${beforeCls}class="arabic hasiye-arabic"${afterCls} data-hasiye-text="${encoded}">${inner}</p>`;
+
+        // Ensure hasiye-arabic is added to the class attribute without duplicating class attr
+        let newAttrs = attrs;
+        if (/class=["']/.test(newAttrs)) {
+          newAttrs = newAttrs.replace(/class=["']([^"']*)["']/, 'class="$1 hasiye-arabic"');
+        } else {
+          newAttrs += ' class="hasiye-arabic"';
+        }
+
+        return `<${tag}${newAttrs} data-hasiye-text="${encoded}">${inner}</${tag}>`;
       },
     );
 

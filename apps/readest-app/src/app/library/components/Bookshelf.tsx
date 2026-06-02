@@ -30,7 +30,6 @@ import { useTranslation } from '@/hooks/useTranslation';
 import { useResponsiveSize } from '@/hooks/useResponsiveSize';
 import { navigateToLibrary, navigateToReader, showReaderWindow } from '@/utils/nav';
 import {
-  createBookFilter,
   createBookGroups,
   createBookSorter,
   createGroupSorter,
@@ -226,6 +225,11 @@ const Bookshelf: React.FC<BookshelfProps> = ({
   }, [libraryBooks, queryTerm, searchResults]);
 
   const currentBookshelfItems = useMemo(() => {
+    // If we have a search query, show results globally, ignoring current group/folder
+    if (queryTerm) {
+      return filteredBooks;
+    }
+
     if (groupBy === LibraryGroupByType.Group) {
       // Use existing generateBookshelfItems for group mode
       const groupName = getGroupName(groupId) || '';

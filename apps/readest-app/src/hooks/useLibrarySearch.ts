@@ -8,7 +8,7 @@ import { useLibraryStore } from '@/store/libraryStore';
  * Provides instant full-text search over book metadata.
  */
 export const useLibrarySearch = (query: string) => {
-  const { visibleLibrary } = useLibraryStore();
+  const { library } = useLibraryStore();
   const [db, setDb] = useState<unknown>(null);
   const [results, setResults] = useState<Book[]>([]);
 
@@ -23,45 +23,51 @@ export const useLibrarySearch = (query: string) => {
         },
       });
 
-      for (const book of visibleLibrary) {
+      const nonDeletedBooks = library.filter((b) => !b.deletedAt);
+
+      for (const book of nonDeletedBooks) {
         await insert(oramaDb, {
-          id: book.hash,
           title: book.title,
           author: book.author || book.metadata?.author || '',
-          tags: book.tags || [],
+          tags: (book.tags || []) as string[],
           description: book.metadata?.description || '',
-          // biome-ignore lint/suspicious/noExplicitAny: required by Orama types
-        } as any);
+        });
       }
 
       setDb(oramaDb);
     };
 
-    if (visibleLibrary.length > 0) {
+    if (library.length > 0) {
       initDb();
     }
-  }, [visibleLibrary]);
+  }, [library]);
 
   useEffect(() => {
     const performSearch = async () => {
+      const nonDeletedBooks = library.filter((b) => !b.deletedAt);
       if (!db || !query) {
-        setResults(visibleLibrary);
+        setResults(nonDeletedBooks);
         return;
       }
 
-      // biome-ignore lint/suspicious/noExplicitAny: required by Orama types
-      const searchResults = await search(db as any, {
-        term: query,
-        properties: ['title', 'author', 'tags', 'description'],
-        tolerance: 1,
-      });
+      try {
+        // biome-ignore lint/suspicious/noExplicitAny: required by Orama types
+        const searchResults = await search(db as any, {
+          term: query,
+          properties: ['title', 'author', 'tags', 'description'],
+          tolerance: 1,
+        });
 
-      const matchedHashes = new Set(searchResults.hits.map((hit) => hit.id));
-      setResults(visibleLibrary.filter((book) => matchedHashes.has(book.hash)));
+        const matchedHashes = new Set(searchResults.hits.map((hit) => hit.id));
+        setResults(nonDeletedBooks.filter((book) => matchedHashes.has(book.hash)));
+      } catch (e) {
+        console.error('Orama search error:', e);
+        setResults(nonDeletedBooks);
+      }
     };
 
     performSearch();
-  }, [query, db, visibleLibrary]);
+  }, [query, db, library]);
 
   return results;
 };

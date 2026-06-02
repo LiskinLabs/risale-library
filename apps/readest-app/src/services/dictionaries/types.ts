@@ -32,6 +32,8 @@ export interface DictionaryLookupContext {
   bg?: string;
   /** Theme foreground color (e.g. `#1a1a1a`). Forwarded into shadow-scoped CSS. */
   fg?: string;
+  /** Filter level for the lookup. */
+  dictionaryLevel?: number;
 }
 
 export type DictionaryLookupOutcome =
