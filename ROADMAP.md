@@ -249,22 +249,25 @@
 |---|---|---|---|
 | 0.1 | EPUB generator | 0 | ✅ |
 | 0.2 | Lugat import | 0 | ✅ |
-| 0.3 | RAG passages import | 0 | ⬜ |
-| 0.4 | Meal import | 0 | ⬜ |
+| 0.3 | RAG passages import | 0 | 🔶 (скрипт готов, нет env) |
+| 0.4 | Meal import | 0 | ✅ |
 | 0.5 | Diyanet validation | 0 | ⬜ |
 | 1.1 | Protected books | 1 | ✅ |
 | 1.2 | Full-text search | 1 | ✅ |
 | 1.3 | RisaleLugatProvider | 1 | ✅ |
-| 1.4 | Sözlük seviyesi | 1 | ⬜ |
-| 1.5 | Haşiye transformer | 1 | ⬜ |
-| 1.6 | Osmanlı fonts | 1 | ⬜ |
-| 2.1 | Parallel translation | 2 | ⬜ |
+| 1.4 | Sözlük seviyesi | 1 | 🔶 (UI готов, нет frekans-данных) |
+| 1.5 | Haşiye transformer | 1 | ✅ |
+| 1.6 | Osmanlı fonts | 1 | 🔶 (UI/CSS готовы, нет шрифтов) |
+| 2.1 | Parallel translation | 2 | 🔶 (store есть, sync отсутствует) |
 | 2.2 | Annotation layers | 2 | ⬜ |
 | 2.3 | Anlam Açık Modu | 2 | ⬜ |
-| 2.4 | AI assistant (RAG) | 2 | ⬜ |
+| 2.4 | AI assistant (RAG) | 2 | 🔶 (общая AI-инфра готова, нет Risale-специфики) |
 | 2.5 | Author notes | 2 | ⬜ |
 | 2.6 | Quote widget | 2 | ⬜ |
 | 3.1 | EPUB tools | 3 | ⬜ |
 | 3.2 | Mobile apps | 3 | ⬜ |
 | 3.3 | Community features | 3 | ⬜ |
 | 3.4 | KOReader sync | 3 | ⬜ |
+
+> 🔶 = частично реализовано | ✅ = полностью | ⬜ = не начато
+> Обновлено: 2026-06-02 (аудит кодовой базы)
