@@ -86,7 +86,14 @@
 ### AI-ассистент
 - `apps/readest-app/src/store/aiChatStore.ts` — состояние чата
 - `apps/readest-app/src/app/reader/components/notebook/AIAssistant.tsx` — UI ассистента
-- `apps/readest-app/src/services/ai/` — провайдеры (OpenRouter, Ollama), RAG-сервис
+- **Reedy Runtime (канонический):** `apps/readest-app/src/services/reedy/` — агентный рантайм с RAG
+  - `retrieval/BookIndexer.ts` — индексация книг (chunk → embed → store)
+  - `retrieval/BookRetriever.ts` — гибридный поиск (vector cosine + Tantivy FTS + RRF fusion)
+  - `tools/builtins/lookupPassage.ts` — инструмент поиска пассажей с Zod-схемой
+  - `tools/builtins/createHighlight.ts`, `createNote.ts`, `navigateToCfi.ts` — write/navigate инструменты
+  - `db/ReedyDb.ts` — SQLite (Tantivy FTS) + векторы
+  - `store/reedyStore.ts` — Zustand-стор сообщений агента
+- **Legacy RAG (deprecated):** `apps/readest-app/src/services/ai/ragService.ts` — Vercel AI SDK-based. ⚠️ Не добавлять новый функционал. Использовать `reedy/` для новых фич.
 
 ### Синхронизация и параллельный просмотр
 - `apps/readest-app/src/store/parallelViewStore.ts` — пары книг (оригинал↔перевод)
@@ -108,6 +115,8 @@
 - `tools/import-passages/import.py` — импорт 3136 чанков в Supabase (нужен ключ)
 - `tools/create-rag-table.sql` — SQL для создания таблицы (запустить вручную в Supabase SQL Editor)
 - `tools/create-rag-table.py` — скрипт-обёртка
+- **Локальный RAG (Reedy):** `apps/readest-app/src/services/reedy/retrieval/` — работает без облака
+- ⚠️ Supabase RAG (облачный) всё ещё ждёт ручного запуска SQL
 
 ---
 
@@ -209,9 +218,9 @@ cp apps/readest-app/data/lugat.db apps/readest-app/public/data/lugat.db
 ✅ 1.5 Haşiye transformer v2 + popup (block + inline, meal-индекс)
 ✅ 1.6 Fonts (ITC Souvenir, Minion Pro, Nassim Arabic Pro, Kazimir Text)
 🔶 2.1 Parallel translation (useParallelSync готов, CFI-mapping отсутствует, EPUB-переводы не сгенерированы)
-✅ 2.2 Annotation layers (типы + LayerToggle UI готов)
+✅ 2.2 Annotation layers (типы + LayerToggle в ViewMenu + LayersPanel в Settings)
 ✅ 2.3 Anlam Açık Modu (meaningMode трансформер + stoplist + lugat-terms.json; управляется через dictionaryLevel)
-🔶 2.4 AI assistant RAG (инфра готова, таблица ждёт SQL в Supabase)
+✅ 2.4 AI assistant RAG (Reedy: BookIndexer + BookRetriever + hybrid FTS/vector search; ai/ragService deprecated)
 ✅ 2.5 Author notes (сервис authorNotes.ts готов, загрузка из EPUB)
 ✅ 2.6 Quote widget (quotes.ts + QuoteWidget.tsx)
 ⬜ 3.1 EPUB tools (GUI-редактор аннотаций — не начато)

@@ -259,9 +259,9 @@
 | 1.5 | Haşiye transformer | 1 | ✅ |
 | 1.6 | Osmanlı fonts | 1 | ✅ (53 шрифта на R2) |
 | 2.1 | Parallel translation | 2 | 🔶 (store + sync hook готовы) |
-| 2.2 | Annotation layers | 2 | ✅ (типы + LayerToggle + authorNotes) |
+| 2.2 | Annotation layers | 2 | ✅ (типы + LayerToggle в ViewMenu + LayersPanel) |
 | 2.3 | Anlam Açık Modu | 2 | ✅ (трансформер + toggle + stoplist) |
-| 2.4 | AI assistant (RAG) | 2 | 🔶 (инфра готова, таблица ждёт SQL) |
+| 2.4 | AI assistant (RAG) | 2 | ✅ (Reedy: BookIndexer + BookRetriever + hybrid FTS/vector; ai/ragService deprecated) |
 | 2.5 | Author notes | 2 | ✅ (сервис загрузки из EPUB) |
 | 2.6 | Quote widget | 2 | ✅ (27 vecize + QuoteWidget) |
 | 3.1 | EPUB tools | 3 | ⬜ |
@@ -270,4 +270,4 @@
 | 3.4 | KOReader sync | 3 | ⬜ |
 
 > 🔶 = частично | ✅ = полностью | ⬜ = не начато
-> Обновлено: 2026-06-02 (полный цикл — шрифты R2, Sözlük, Anlam, Layers, Quotes, Parallel, RAG)
+> Обновлено: 2026-06-03 (LayerToggle UI + LayersPanel + Reedy RAG v2: BookIndexer/BookRetriever/hybrid-search; ai/ragService → deprecated; TS 0 ошибок, lint 0 ошибок, тесты 5087 passed)

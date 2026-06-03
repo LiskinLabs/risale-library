@@ -1,3 +1,4 @@
+import React from 'react';
 import { useTranslation } from '@/hooks/useTranslation';
 import { PlanType } from '@/types/quota';
 import { getLocale } from '@/utils/misc';

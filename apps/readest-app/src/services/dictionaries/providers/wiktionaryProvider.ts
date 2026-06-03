@@ -32,13 +32,8 @@ type Result = {
   language: string;
 };
 
-const interceptDictLinks = (
-  definitionHtml: string,
-  onNavigate?: (word: string) => void,
-): HTMLElement[] => {
-  const wrapper = document.createElement('div');
-  wrapper.innerHTML = definitionHtml;
-  const links = wrapper.querySelectorAll<HTMLAnchorElement>('a[rel="mw:WikiLink"]');
+const applyDictLinks = (container: HTMLElement, onNavigate?: (word: string) => void): void => {
+  const links = container.querySelectorAll<HTMLAnchorElement>('a[rel="mw:WikiLink"]');
   links.forEach((link) => {
     const title = link.getAttribute('title');
     if (!title) return;
@@ -48,7 +43,6 @@ const interceptDictLinks = (
     });
     link.className = 'not-eink:text-primary underline cursor-pointer';
   });
-  return Array.from(wrapper.childNodes) as HTMLElement[];
 };
 
 const renderChinese = async (
@@ -134,7 +128,10 @@ const renderWiktionary = async (
         lastError = `404 (${new URL(url).hostname})`;
         continue; // try fallback
       }
-      return { ok: false, reason: 'error', message: `HTTP ${response.status}` };
+      lastError = `HTTP ${response.status}`;
+      if (url === urls[urls.length - 1]) {
+        return { ok: false, reason: 'error', message: lastError };
+      }
     } catch (err) {
       if ((err as { name?: string }).name === 'AbortError') throw err;
       lastError = (err as Error).message;
@@ -194,8 +191,7 @@ const renderWiktionary = async (
     definitions.forEach(({ definition, examples }: Definition) => {
       if (!definition) return;
       const li = document.createElement('li');
-      const processed = interceptDictLinks(definition, onNavigate);
-      li.append(...processed);
+      li.innerHTML = definition;
       if (examples) {
         const ul = document.createElement('ul');
         ul.className = 'pl-8 list-disc text-sm italic not-eink:opacity-75';
@@ -211,6 +207,8 @@ const renderWiktionary = async (
     container.appendChild(h2);
     container.appendChild(ol);
   });
+
+  applyDictLinks(container, onNavigate);
 
   return { ok: true, headword: word, sourceLabel };
 };
@@ -228,6 +226,7 @@ export const wiktionaryProvider: DictionaryProvider = {
     const cached = dictCache.get(cacheKey);
     if (cached && !ctx.signal.aborted) {
       ctx.container.innerHTML = cached.html;
+      applyDictLinks(ctx.container, ctx.onNavigate);
       return { ok: true, headword: word, sourceLabel: cached.sourceLabel };
     }
 

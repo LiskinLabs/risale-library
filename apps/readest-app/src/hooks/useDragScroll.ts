@@ -1,3 +1,4 @@
+import React from 'react';
 import { RefObject, useCallback, useEffect, useRef, useState } from 'react';
 
 interface UseDragScrollOptions {

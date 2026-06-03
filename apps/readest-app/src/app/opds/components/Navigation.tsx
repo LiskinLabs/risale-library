@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import clsx from 'clsx';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';

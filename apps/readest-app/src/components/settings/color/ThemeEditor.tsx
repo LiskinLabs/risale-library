@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import { useTranslation } from '@/hooks/useTranslation';
 import { CustomTheme } from '@/styles/themes';

@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useRef } from 'react';
 
 // Track last keyboard activity to distinguish keyboard vs mouse activation.

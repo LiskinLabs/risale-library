@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import { useEnv } from '@/context/EnvContext';
 import { useReaderStore } from '@/store/readerStore';
@@ -20,21 +20,6 @@ const LayersPanel: React.FC<SettingsPanelPanelProp> = ({ bookKey }) => {
   const [enabledLayers, setEnabledLayers] = useState<AnnotationLayer[]>(
     viewSettings.enabledLayers || ['user', 'author', 'hasiye', 'lugat'],
   );
-
-  /*
-  const resetToDefaults = useResetViewSettings();
-
-  const handleReset = () => {
-    resetToDefaults({
-      enabledLayers: setEnabledLayers as any,
-    });
-  };
-  */
-
-  useEffect(() => {
-    // onRegisterReset(handleReset);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   const handleToggleLayer = (layer: AnnotationLayer) => {
     const next = enabledLayers.includes(layer)

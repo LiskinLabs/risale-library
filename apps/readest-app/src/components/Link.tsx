@@ -1,3 +1,4 @@
+import React from 'react';
 import { isTauriAppPlatform } from '@/services/environment';
 import { openUrl } from '@tauri-apps/plugin-opener';
 

@@ -1,3 +1,4 @@
+import React from 'react';
 import clsx from 'clsx';
 import Image from 'next/image';
 import { memo, useEffect, useRef, useState } from 'react';
@@ -70,7 +71,7 @@ const BookCover: React.FC<BookCoverProps> = memo<BookCoverProps>(
     book,
     mode = 'grid',
     coverFit = 'crop',
-    showSpine = false,
+    showSpine: _showSpine = false,
     className,
     imageClassName,
     isPreview,
@@ -79,7 +80,6 @@ const BookCover: React.FC<BookCoverProps> = memo<BookCoverProps>(
     onAspectRatioChange,
   }) => {
     const coverRef = useRef<HTMLDivElement>(null);
-    const [imageLoaded, setImageLoaded] = useState(false);
     const [imageError, setImageError] = useState(false);
     const dynamicStyle = getDynamicCoverStyle(book.title || '')!;
 
@@ -87,8 +87,6 @@ const BookCover: React.FC<BookCoverProps> = memo<BookCoverProps>(
     // For builtin Risale books, their EPUB covers are half-white. We force the
     // beautiful dynamic themed fallback cover to achieve the "full length" wow-effect.
     const hasValidSrc = coverSrc && coverSrc.length > 0 && !book.builtin;
-
-    const shouldShowSpine = showSpine && imageLoaded && !imageError;
 
     const toggleImageVisibility = (showImage: boolean) => {
       if (coverRef.current) {
@@ -104,7 +102,6 @@ const BookCover: React.FC<BookCoverProps> = memo<BookCoverProps>(
     };
 
     const handleImageLoad = (e: React.SyntheticEvent<HTMLImageElement>) => {
-      setImageLoaded(true);
       setImageError(false);
       toggleImageVisibility(true);
       const img = e.currentTarget;
@@ -114,7 +111,6 @@ const BookCover: React.FC<BookCoverProps> = memo<BookCoverProps>(
     };
 
     const handleImageError = () => {
-      setImageLoaded(false);
       setImageError(true);
       toggleImageVisibility(false);
       onImageError?.();
@@ -131,16 +127,18 @@ const BookCover: React.FC<BookCoverProps> = memo<BookCoverProps>(
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
       if (!coverRef.current) return;
       const rect = coverRef.current.getBoundingClientRect();
-      const x = ((e.clientX - rect.left) / rect.width) * 100;
-      const y = ((e.clientY - rect.top) / rect.height) * 100;
-      coverRef.current.style.setProperty('--mouse-x', `${x}%`);
-      coverRef.current.style.setProperty('--mouse-y', `${y}%`);
+      const x = (e.clientX - rect.left) / rect.width;
+      const y = (e.clientY - rect.top) / rect.height;
+      coverRef.current.style.setProperty('--mouse-x', `${x}`);
+      coverRef.current.style.setProperty('--mouse-y', `${y}`);
       coverRef.current.style.setProperty('--glare-opacity', '1');
     };
 
     const handleMouseLeave = () => {
       if (!coverRef.current) return;
       coverRef.current.style.setProperty('--glare-opacity', '0');
+      coverRef.current.style.setProperty('--mouse-x', '0.5');
+      coverRef.current.style.setProperty('--mouse-y', '0.5');
     };
 
     return (
@@ -156,180 +154,204 @@ const BookCover: React.FC<BookCoverProps> = memo<BookCoverProps>(
         style={
           {
             '--book-bg': dynamicStyle.bgValue,
-            '--mouse-x': '50%',
-            '--mouse-y': '50%',
+            '--mouse-x': '0.5',
+            '--mouse-y': '0.5',
             '--glare-opacity': '0',
           } as React.CSSProperties
         }
       >
-        <div className={clsx('relative h-full w-full', is3d && 'book-3d-wrapper')}>
-          {is3d && (
-            <>
-              <div className='book-3d-back'></div>
-              <div className='book-3d-spine'></div>
-              <div className='book-3d-page page-5'></div>
-              <div className='book-3d-page page-4'></div>
-              <div className='book-3d-page page-3'></div>
-              <div className='book-3d-page page-2'></div>
-              <div className='book-3d-page page-1 flex flex-col items-center justify-center p-3 text-center overflow-hidden bg-base-100'>
-                <div className='w-full h-full border border-base-content/10 rounded-sm flex flex-col items-center justify-center p-2'>
-                  <h3 className='font-serif text-[10px] leading-tight font-bold text-base-content'>
-                    {formatTitle(book.title)}
-                  </h3>
-                  <div className={clsx('mt-2 w-4 h-[1px]', dynamicStyle.line)}></div>
-                  <p className='text-[7px] text-base-content/70 mt-2 uppercase tracking-wider'>
-                    {formatAuthors(book.author || book.metadata?.author || '')}
-                  </p>
-                </div>
-              </div>
-            </>
-          )}
-
-          <div className={clsx(is3d ? 'book-3d-front' : 'relative h-full w-full')}>
-            {is3d && <div className='book-3d-front-inside'></div>}
-
-            <div
-              className={clsx(
-                'relative w-full h-full z-10 overflow-hidden',
-                is3d ? 'rounded-r-[4px] book-front-content' : 'rounded-[4px]',
-                dynamicStyle.bgClass,
-              )}
-            >
-              {hasValidSrc && coverFit === 'crop' ? (
-                <>
+        <div className={clsx('relative h-full w-full', is3d && 'book-minimal-hover-wrapper')}>
+          <div
+            className={clsx(
+              'relative w-full h-full z-10 overflow-hidden',
+              is3d ? 'rounded-md shadow-apple-book' : 'rounded-[4px]',
+            )}
+          >
+            {hasValidSrc && coverFit === 'crop' ? (
+              <Image
+                src={coverSrc!}
+                alt={book.title}
+                fill={true}
+                sizes='(max-width: 640px) 45vw, (max-width: 768px) 30vw, (max-width: 1024px) 20vw, 15vw'
+                loading={isPreview ? 'eager' : 'lazy'}
+                draggable={false}
+                className={clsx('cover-image crop-cover-img object-cover', imageClassName)}
+                onLoad={handleImageLoad}
+                onError={handleImageError}
+              />
+            ) : hasValidSrc ? (
+              <div className={clsx('flex h-full w-full justify-start bg-base-100')}>
+                <div
+                  className={clsx(
+                    'flex h-full max-h-full',
+                    mode === 'grid' ? 'items-end' : 'items-center',
+                  )}
+                >
                   <Image
                     src={coverSrc!}
                     alt={book.title}
-                    fill={true}
-                    loading='lazy'
+                    width={0}
+                    height={0}
+                    sizes='(max-width: 640px) 45vw, (max-width: 768px) 30vw, (max-width: 1024px) 20vw, 15vw'
+                    loading={isPreview ? 'eager' : 'lazy'}
                     draggable={false}
                     className={clsx(
-                      'cover-image crop-cover-img object-cover',
-                      is3d && 'book-gold-edge',
+                      'cover-image fit-cover-img h-auto max-h-full w-auto max-w-full',
                       imageClassName,
+                      imageError && 'hidden',
                     )}
                     onLoad={handleImageLoad}
                     onError={handleImageError}
                   />
-                  <div
-                    className={`book-spine absolute inset-0 ${shouldShowSpine ? 'visible' : 'invisible'}`}
-                  />
-                </>
-              ) : hasValidSrc ? (
-                <div className={clsx('flex h-full w-full justify-start bg-base-100')}>
-                  <div
-                    className={clsx(
-                      'flex h-full max-h-full',
-                      mode === 'grid' ? 'items-end' : 'items-center',
-                    )}
-                  >
-                    <Image
-                      src={coverSrc!}
-                      alt={book.title}
-                      width={0}
-                      height={0}
-                      sizes='100vw'
-                      loading='lazy'
-                      draggable={false}
-                      className={clsx(
-                        'cover-image fit-cover-img h-auto max-h-full w-auto max-w-full',
-                        is3d && 'book-gold-edge',
-                        imageClassName,
-                        imageError && 'hidden',
-                      )}
-                      onLoad={handleImageLoad}
-                      onError={handleImageError}
-                    />
-                    <div
-                      className={`book-spine absolute inset-0 ${shouldShowSpine ? 'visible' : 'invisible'}`}
-                    />
-                  </div>
                 </div>
-              ) : null}
+              </div>
+            ) : null}
 
-              <div
-                className={clsx(
-                  'fallback-cover invisible absolute inset-0 p-[4cqi] premium-grain flex flex-col @container shadow-[inset_0_0_24px_rgba(0,0,0,0.4)]',
-                  is3d && 'book-gold-edge',
-                  dynamicStyle.bgClass,
-                  imageClassName,
-                  dynamicStyle.text,
-                )}
-                style={{ containerType: 'inline-size' }}
-              >
-                <div className='absolute inset-[3px] border border-white/10 rounded-sm'></div>
-                <div className='absolute inset-[6px] border border-white/5 rounded-sm pointer-events-none'></div>
-                <div
-                  className='glare-overlay absolute inset-0 pointer-events-none mix-blend-overlay'
-                  style={{
-                    background: `radial-gradient(
-                    circle at var(--mouse-x) var(--mouse-y),
-                    rgba(255, 255, 255, 0.4) 0%,
-                    rgba(255, 255, 255, 0) 50%
-                  )`,
-                    opacity: 'var(--glare-opacity)',
-                  }}
-                ></div>
+            <div
+              className={clsx(
+                'fallback-cover invisible absolute inset-0 flex flex-col justify-between items-center text-center p-[4cqi] overflow-hidden',
+                imageClassName,
+              )}
+              style={{ backgroundColor: '#a3161c', containerType: 'inline-size' }}
+            >
+              {/* Outer Golden Border Frame */}
+              <div className='absolute inset-[3.5cqi] border-[1px] border-[#e4cc7b] z-0 opacity-80'></div>
+              <div className='absolute inset-[4.5cqi] border-[2px] border-[#e4cc7b] z-0'></div>
+              <div className='absolute inset-[6cqi] border-[1px] border-[#e4cc7b] z-0 opacity-80'></div>
 
-                {!isPreview && mode === 'grid' && (
-                  <div
-                    className={clsx(
-                      'absolute top-0 right-[8cqi] w-[12cqi] h-[30cqi] shadow-md z-10',
-                      dynamicStyle.ribbon,
-                    )}
-                  >
-                    <div className='absolute bottom-0 w-0 h-0 border-l-[6cqi] border-r-[6cqi] border-b-[6cqi] border-l-transparent border-r-transparent border-b-base-300 transform translate-y-full opacity-80 mix-blend-overlay'></div>
-                  </div>
-                )}
+              {/* Corner Ornaments (Simplified via CSS) */}
+              <div className='absolute top-[4.5cqi] left-[4.5cqi] w-[3cqi] h-[3cqi] border-r-[2px] border-b-[2px] border-[#e4cc7b] z-0'></div>
+              <div className='absolute top-[4.5cqi] right-[4.5cqi] w-[3cqi] h-[3cqi] border-l-[2px] border-b-[2px] border-[#e4cc7b] z-0'></div>
+              <div className='absolute bottom-[4.5cqi] left-[4.5cqi] w-[3cqi] h-[3cqi] border-r-[2px] border-t-[2px] border-[#e4cc7b] z-0'></div>
+              <div className='absolute bottom-[4.5cqi] right-[4.5cqi] w-[3cqi] h-[3cqi] border-l-[2px] border-t-[2px] border-[#e4cc7b] z-0'></div>
 
-                <div className='flex-1 flex flex-col items-center justify-center z-10 p-[2cqi] relative'>
+              <div className='z-10 flex flex-col items-center justify-start w-full pt-[8cqi] h-full relative'>
+                {/* Top Text */}
+                <span
+                  className={clsx(
+                    'text-[#e4cc7b] drop-shadow-sm',
+                    isPreview ? 'text-[0.6em]' : mode === 'grid' ? 'text-[6cqi]' : 'text-xs',
+                  )}
+                  style={{ fontFamily: "'Great Vibes', cursive", opacity: 0.95 }}
+                >
+                  Risale-i Nur Külliyatından
+                </span>
+
+                {/* Title */}
+                <div className='flex-1 flex items-center justify-center w-[90%]'>
                   <span
                     className={clsx(
-                      'font-serif font-bold tracking-wide text-center drop-shadow-md gold-foil',
+                      'font-bold tracking-wide text-center drop-shadow-md',
                       isPreview
-                        ? 'line-clamp-2 text-[0.8em]'
+                        ? 'line-clamp-3 text-[1em]'
                         : mode === 'grid'
                           ? 'line-clamp-4'
-                          : 'line-clamp-2 text-sm',
+                          : 'line-clamp-3 text-lg',
                     )}
                     style={{
-                      fontFamily: 'Playfair Display, Lora, serif',
+                      fontFamily: "'Philosopher', 'Playfair Display', serif",
                       fontSize: '15cqi',
-                      lineHeight: '1.25',
+                      lineHeight: '1.2',
+                      background: 'linear-gradient(180deg, #fff3c4 0%, #e4cc7b 50%, #b8973b 100%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      filter: 'drop-shadow(0px 1px 2px rgba(0,0,0,0.4))',
                     }}
                   >
                     {formatTitle(book.title)}
                   </span>
-
-                  <div
-                    className={clsx('my-[4cqi] w-8 h-[2px] opacity-70', dynamicStyle.line)}
-                  ></div>
-
-                  <span
-                    className={clsx(
-                      'uppercase tracking-widest text-center font-medium opacity-80 gold-foil',
-                      isPreview ? 'text-[0.5em]' : 'text-[7cqi]',
-                    )}
-                    style={{ wordBreak: 'break-word', fontSize: '6cqi', lineHeight: '1.3' }}
-                  >
-                    {formatAuthors(book.author || book.metadata?.author || '')}
-                  </span>
                 </div>
 
-                <div className='h-[20cqi] flex items-end justify-center pb-[2cqi] z-10'>
-                  <div
-                    className={clsx(
-                      'w-[8cqi] h-[8cqi] rounded-full border flex items-center justify-center shadow-sm',
-                      dynamicStyle.iconOuter,
-                    )}
-                  >
-                    <div
-                      className={clsx('w-[4cqi] h-[4cqi] rounded-full', dynamicStyle.iconInner)}
-                    ></div>
+                {/* Author Info */}
+                <div className='flex flex-col items-center pb-[4cqi] w-full'>
+                  {(() => {
+                    const authorName = formatAuthors(book.author || book.metadata?.author || '');
+                    const isRisaleAuthor =
+                      !authorName ||
+                      authorName.toLowerCase().includes('said nursi') ||
+                      authorName.toLowerCase().includes('bediüzzaman');
+
+                    if (isRisaleAuthor) {
+                      return (
+                        <>
+                          <span
+                            className={clsx(
+                              'font-serif font-bold text-[#e4cc7b]',
+                              isPreview
+                                ? 'text-[0.4em]'
+                                : mode === 'grid'
+                                  ? 'text-[4.5cqi]'
+                                  : 'text-[10px]',
+                            )}
+                          >
+                            Müellifi
+                          </span>
+                          <span
+                            className={clsx(
+                              'font-serif font-bold text-[#e4cc7b]',
+                              isPreview
+                                ? 'text-[0.5em]'
+                                : mode === 'grid'
+                                  ? 'text-[5.5cqi]'
+                                  : 'text-xs',
+                            )}
+                          >
+                            Bediüzzaman
+                          </span>
+                          <span
+                            className={clsx(
+                              'font-serif font-bold uppercase text-[#e4cc7b] tracking-wider',
+                              isPreview
+                                ? 'text-[0.6em]'
+                                : mode === 'grid'
+                                  ? 'text-[6cqi]'
+                                  : 'text-sm',
+                            )}
+                          >
+                            SAİD NURSİ
+                          </span>
+                        </>
+                      );
+                    }
+
+                    return (
+                      <span
+                        className={clsx(
+                          'font-serif font-bold text-[#e4cc7b]',
+                          isPreview ? 'text-[0.6em]' : mode === 'grid' ? 'text-[6cqi]' : 'text-sm',
+                        )}
+                      >
+                        {authorName}
+                      </span>
+                    );
+                  })()}
+
+                  {/* Fake Logo Element */}
+                  <div className='mt-[2cqi] w-[14cqi] h-[14cqi] border-[1.5px] border-[#e4cc7b] rounded-full flex items-center justify-center'>
+                    <div className='w-[10cqi] h-[10cqi] border border-[#e4cc7b] rounded-full flex items-center justify-center opacity-80'>
+                      <div className='w-[6cqi] h-[3cqi] border-b border-[#e4cc7b] rounded-[50%]'></div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            {/* Apple Books Style Reflections and Glare */}
+            {is3d && (
+              <>
+                <div className='absolute inset-0 border border-white/10 rounded-md pointer-events-none z-20 mix-blend-overlay shadow-[inset_1px_1px_2px_rgba(255,255,255,0.3)]'></div>
+                <div className='absolute left-0 top-0 bottom-0 w-[4px] bg-gradient-to-r from-white/30 to-transparent pointer-events-none z-20 mix-blend-overlay rounded-l-md'></div>
+                <div
+                  className='glare-overlay absolute inset-0 pointer-events-none mix-blend-overlay rounded-md z-30'
+                  style={{
+                    background:
+                      'radial-gradient(circle at calc(var(--mouse-x) * 100%) calc(var(--mouse-y) * 100%), rgba(255,255,255,0.4) 0%, transparent 60%)',
+                    opacity: 'var(--glare-opacity)',
+                    transition: 'opacity 0.2s ease-out',
+                  }}
+                ></div>
+              </>
+            )}
           </div>
         </div>
       </div>

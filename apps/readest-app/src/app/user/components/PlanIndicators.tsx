@@ -1,3 +1,4 @@
+import React from 'react';
 import { PlanDetails } from '../utils/plan';
 
 interface PlanIndicatorsProps {

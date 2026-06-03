@@ -221,8 +221,8 @@ const BooknoteView: React.FC<{
     if (nearestCfi === lastScrolledCfiRef.current) return;
     // Skip the very first scroll — it's handled by initialTopMostItemIndex
     // (Virtuoso native centering) + the initialized re-apply above.
-    if (!initialScrollHandledRef.current) {
-      initialScrollHandledRef.current = true;
+    if (initialScrollHandledRef.current) {
+      initialScrollHandledRef.current = false;
       lastScrolledCfiRef.current = nearestCfi;
       return;
     }
@@ -239,7 +239,7 @@ const BooknoteView: React.FC<{
       behavior: isEink || far ? 'auto' : 'smooth',
     });
     lastScrolledCfiRef.current = nearestCfi;
-  }, [nearestCfi, flatItems, nearestIndex]);
+  }, [nearestCfi, flatItems, nearestIndex, initialTopIndex]);
 
   const renderItem = useCallback(
     (index: number) => {
@@ -314,7 +314,9 @@ const BooknoteView: React.FC<{
             computeItemKey={(index) => flatItems[index]?.key ?? index}
             itemContent={renderItem}
             overscan={500}
-            initialTopMostItemIndex={initialTopIndex > 0 ? initialTopIndex : undefined}
+            initialTopMostItemIndex={
+              initialTopIndex > 0 ? { index: initialTopIndex, align: 'center' } : undefined
+            }
             rangeChanged={({ startIndex, endIndex }) => {
               visibleCenterRef.current = Math.floor((startIndex + endIndex) / 2);
             }}

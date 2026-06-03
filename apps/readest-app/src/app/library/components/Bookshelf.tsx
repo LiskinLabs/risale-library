@@ -60,6 +60,7 @@ import { MIMETYPES, EXTS } from '@/libs/document';
 import { makeSafeFilename } from '@/utils/misc';
 
 import { useSpatialNavigation } from '../hooks/useSpatialNavigation';
+import BookCover from '@/components/BookCover';
 import Alert from '@/components/Alert';
 import Spinner from '@/components/Spinner';
 import ModalPortal from '@/components/ModalPortal';
@@ -98,6 +99,8 @@ interface BookshelfProps {
 type BookshelfListContext = {
   autoColumns: boolean;
   fixedColumns: number;
+  featuredBooks?: Book[];
+  isRootGroup?: boolean;
 };
 
 const BOOKSHELF_GRID_CLASSES =
@@ -105,6 +108,72 @@ const BOOKSHELF_GRID_CLASSES =
   'grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6';
 
 const BOOKSHELF_LIST_CLASSES = 'bookshelf-items transform-wrapper flex flex-col';
+
+const FeaturedBooksHeader = React.forwardRef<HTMLDivElement, { context?: BookshelfListContext }>(
+  ({ context }, ref) => {
+    if (!context?.isRootGroup || !context?.featuredBooks || context.featuredBooks.length === 0) {
+      return null;
+    }
+    return (
+      <div
+        ref={ref}
+        className='w-full px-4 sm:px-6 mb-8 mt-2'
+        style={{ containerType: 'inline-size' }}
+      >
+        <h2 className='text-lg font-serif font-bold text-base-content drop-shadow-sm mb-4 uppercase tracking-wider'>
+          Продолжить чтение
+        </h2>
+        <div className='flex gap-5 overflow-x-auto pb-4 snap-x' style={{ scrollbarWidth: 'none' }}>
+          {context.featuredBooks.map((book) => (
+            <div
+              key={book.hash}
+              className={clsx(
+                'snap-start flex-shrink-0',
+                context?.autoColumns
+                  ? 'w-[calc((100cqi-1*20px)/2)] sm:w-[calc((100cqi-2*20px)/3)] md:w-[calc((100cqi-3*20px)/4)] lg:w-[calc((100cqi-4*20px)/5)] xl:w-[calc((100cqi-5*20px)/6)]'
+                  : '',
+              )}
+              style={
+                !context?.autoColumns && context?.fixedColumns
+                  ? {
+                      width: `calc((100cqi - ${context.fixedColumns - 1} * 20px) / ${context.fixedColumns})`,
+                    }
+                  : {}
+              }
+            >
+              <div
+                className='w-full aspect-[28/41] rounded-md cursor-pointer'
+                onClick={() => {
+                  if (typeof window !== 'undefined') {
+                    window.location.href = `/reader?id=${book.hash}`;
+                  }
+                }}
+              >
+                <BookCover book={book} mode='grid' coverFit='crop' is3d={true} />
+              </div>
+              {book.progress && Array.isArray(book.progress) && book.progress[0] > 0 && (
+                <div className='mt-2 h-1 bg-black/10 dark:bg-white/10 rounded-full overflow-hidden'>
+                  <div
+                    className='h-full bg-primary'
+                    style={{
+                      width: `${Math.round((book.progress[0] / Math.max(book.progress[1], 1)) * 100)}%`,
+                    }}
+                  ></div>
+                </div>
+              )}
+              {book.progress && typeof book.progress === 'number' && book.progress > 0 && (
+                <div className='mt-2 h-1 bg-black/10 dark:bg-white/10 rounded-full overflow-hidden'>
+                  <div className='h-full bg-primary' style={{ width: `${book.progress}%` }}></div>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  },
+);
+FeaturedBooksHeader.displayName = 'FeaturedBooksHeader';
 
 const BookshelfGridList: GridComponents<BookshelfListContext>['List'] = React.forwardRef<
   HTMLDivElement,
@@ -138,6 +207,7 @@ BookshelfLinearList.displayName = 'BookshelfLinearList';
 
 const GRID_VIRTUOSO_COMPONENTS: GridComponents<BookshelfListContext> = {
   List: BookshelfGridList,
+  Header: FeaturedBooksHeader as React.ComponentType<{ context: BookshelfListContext }>,
   Footer: () => <div style={{ height: 34 }} />,
 };
 const LIST_VIRTUOSO_COMPONENTS: Components = {
@@ -732,12 +802,22 @@ const Bookshelf: React.FC<BookshelfProps> = ({
   // last book; list mode doesn't have an import tile.
   const gridTotalCount = hasItems ? sortedBookshelfItems.length + 1 : 0;
 
+  const featuredBooks = useMemo(() => {
+    // Only featured books that have some progress or were recently opened
+    return libraryBooks
+      .filter((b) => b.progress && b.progress[0] > 0)
+      .sort((a, b) => (b.updatedAt || 0) - (a.updatedAt || 0))
+      .slice(0, 8);
+  }, [libraryBooks]);
+
   const listContext = useMemo<BookshelfListContext>(
     () => ({
       autoColumns: settings.libraryAutoColumns,
       fixedColumns: settings.libraryColumns,
+      featuredBooks,
+      isRootGroup: !groupId && !queryTerm,
     }),
-    [settings.libraryAutoColumns, settings.libraryColumns],
+    [settings.libraryAutoColumns, settings.libraryColumns, featuredBooks, groupId, queryTerm],
   );
 
   const renderBookshelfItem = useCallback(

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Insets } from '@/types/misc';
 
 interface DoubleBorderProps {

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
-import { ViewTransitions } from 'next-view-transitions';
+import TransitionProvider from '@/components/TransitionProvider';
 import { EnvProvider } from '@/context/EnvContext';
 import Providers from '@/components/Providers';
 
@@ -137,6 +137,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={process.env['NEXT_PUBLIC_APP_PLATFORM'] === 'tauri' ? 'edge-to-edge' : ''}
     >
       <head>
+        <link rel='preconnect' href='https://fonts.googleapis.com' />
+        <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
+        <link
+          href='https://fonts.googleapis.com/css2?family=Great+Vibes&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap'
+          rel='stylesheet'
+        />
+
         {shouldInjectRuntimeConfig ? (
           <Script src='/runtime-config.js' strategy='beforeInteractive' />
         ) : null}
@@ -145,11 +152,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         ) : null}
       </head>
       <body>
-        <ViewTransitions>
+        <TransitionProvider>
           <EnvProvider>
             <Providers>{children}</Providers>
           </EnvProvider>
-        </ViewTransitions>
+        </TransitionProvider>
       </body>
     </html>
   );

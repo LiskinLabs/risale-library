@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { useEffect, useRef, useState } from 'react';
 import { VList, type VListHandle } from 'virtua';
 import type { ReedyMessage } from '../store/reedyStore';

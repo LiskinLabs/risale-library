@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useRef } from 'react';
 import { useReaderStore } from '@/store/readerStore';
 import { useBookDataStore } from '@/store/bookDataStore';

@@ -65,37 +65,44 @@ const ReaderContent: React.FC<{ ids?: string; settings: SystemSettings }> = ({ i
   useGamepad();
 
   useEffect(() => {
-    if (isInitiating.current) return;
-    isInitiating.current = true;
+    const init = async () => {
+      if (isInitiating.current) return;
+      isInitiating.current = true;
 
-    const pathname = window.location.pathname;
-    const bookIds = ids || searchParams?.get('ids') || pathname.split('/reader/')[1] || '';
-    const initialIds = bookIds.split(BOOK_IDS_SEPARATOR).filter(Boolean);
-    const initialBookKeys = initialIds.map((id) => `${id}-${uniqueId()}`);
-    setBookKeys(initialBookKeys);
-    const uniqueIds = new Set<string>();
-    console.log('Initialize books', initialBookKeys);
-    initialBookKeys.forEach((key, index) => {
-      const id = key.split('-')[0]!;
-      const isPrimary = !uniqueIds.has(id);
-      uniqueIds.add(id);
-      if (!getViewState(key)) {
-        initViewState(envConfig, id, key, isPrimary).catch((error) => {
-          console.log('Error initializing book', key, error);
-          setErrorLoading(true);
-          eventDispatcher.dispatch('toast', {
-            message: _('Unable to open book'),
-            callback: async () => {
-              const service = await envConfig.getAppService();
-              await closeReaderWindowOrGoToLibrary(service, router);
-            },
-            timeout: 2000,
-            type: 'error',
+      const pathname = window.location.pathname;
+      const bookIds = ids || searchParams?.get('ids') || pathname.split('/reader/')[1] || '';
+      const initialIds = bookIds.split(BOOK_IDS_SEPARATOR).filter(Boolean);
+      const initialBookKeys = initialIds.map((id) => `${id}-${uniqueId()}`);
+      setBookKeys(initialBookKeys);
+      const uniqueIds = new Set<string>();
+      console.log('Initialize books', initialBookKeys);
+      initialBookKeys.forEach((key, index) => {
+        const id = key.split('-')[0]!;
+        const isPrimary = !uniqueIds.has(id);
+        uniqueIds.add(id);
+        if (!getViewState(key)) {
+          initViewState(envConfig, id, key, isPrimary).catch((error) => {
+            console.log('Error initializing book', key, error);
+            setErrorLoading(true);
+            eventDispatcher.dispatch('toast', {
+              message: _('Unable to open book'),
+              callback: async () => {
+                const service = await envConfig.getAppService();
+                await closeReaderWindowOrGoToLibrary(service, router);
+              },
+              timeout: 2000,
+              type: 'error',
+            });
           });
-        });
-        if (index === 0) setSideBarBookKey(key);
-      }
-    });
+          if (index === 0) setSideBarBookKey(key);
+        }
+      });
+    };
+
+    // Defer initialization to the next tick to ensure the DOM update phase
+    // of View Transitions (if any) is completed and doesn't timeout.
+    const timer = setTimeout(init, 0);
+    return () => clearTimeout(timer);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

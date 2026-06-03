@@ -1,3 +1,4 @@
+import React from 'react';
 import { useTranslation } from '@/hooks/useTranslation';
 import { PlanDetails } from '../utils/plan';
 

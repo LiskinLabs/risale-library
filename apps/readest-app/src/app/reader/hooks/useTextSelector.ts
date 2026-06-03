@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useRef } from 'react';
 import { BookNote } from '@/types/book';
 import { useEnv } from '@/context/EnvContext';

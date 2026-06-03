@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import { useEnv } from '@/context/EnvContext';
 import { useTranslation } from '@/hooks/useTranslation';

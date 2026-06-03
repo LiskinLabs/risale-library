@@ -28,6 +28,8 @@ import { saveViewSettings } from '@/helpers/settings';
 import { tauriHandleToggleFullScreen } from '@/utils/window';
 import MenuItem from '@/components/MenuItem';
 import Menu from '@/components/Menu';
+import LayerToggle from '@/components/reader/LayerToggle';
+import type { AnnotationLayer } from '@/types/book';
 
 interface ViewMenuProps {
   bookKey: string;
@@ -46,7 +48,8 @@ const ViewMenu: React.FC<ViewMenuProps> = ({
   const { envConfig, appService } = useEnv();
   const { getConfig, getBookData } = useBookDataStore();
   const { setSettingsDialogOpen, setSettingsDialogBookKey } = useSettingsStore();
-  const { getView, getViewSettings, getViewState, getProgress, setViewSettings } = useReaderStore();
+  const { getView, getViewSettings, getViewState, getProgress, setViewSettings, recreateViewer } =
+    useReaderStore();
   const config = getConfig(bookKey)!;
   const bookData = getBookData(bookKey)!;
   const viewSettings = getViewSettings(bookKey)!;
@@ -65,6 +68,28 @@ const ViewMenu: React.FC<ViewMenuProps> = ({
     viewSettings!.invertImgColorInDark,
   );
   const [applyThemeToPDF, setApplyThemeToPDF] = useState(viewSettings!.applyThemeToPDF!);
+
+  // Annotation layers state
+  const [enabledLayers, setEnabledLayers] = useState<Set<AnnotationLayer>>(
+    new Set(viewSettings.enabledLayers || ['user', 'author', 'hasiye', 'lugat']),
+  );
+
+  const handleToggleLayer = (layer: AnnotationLayer) => {
+    const next = new Set(enabledLayers);
+    if (next.has(layer)) next.delete(layer);
+    else next.add(layer);
+    setEnabledLayers(next);
+
+    const nextLayers = Array.from(next);
+    viewSettings.enabledLayers = nextLayers;
+    setViewSettings(bookKey, viewSettings);
+    saveViewSettings(envConfig, bookKey, 'enabledLayers', nextLayers, true, false);
+
+    // Some transformers (like meaningMode or hasiye) modify the HTML content.
+    // To apply changes to the currently visible page, we must recreate the viewer
+    // so the transform pipeline runs again for all sections.
+    recreateViewer(envConfig, bookKey);
+  };
 
   const zoomIn = () => setZoomLevel((prev) => Math.min(prev + ZOOM_STEP, MAX_ZOOM_LEVEL));
   const zoomOut = () => setZoomLevel((prev) => Math.max(prev - ZOOM_STEP, MIN_ZOOM_LEVEL));
@@ -377,6 +402,12 @@ const ViewMenu: React.FC<ViewMenuProps> = ({
         Icon={invertImgColorInDark ? MdCheck : undefined}
         onClick={() => setInvertImgColorInDark(!invertImgColorInDark)}
       />
+
+      <hr aria-hidden='true' className='border-base-300 my-1' />
+
+      <div className='px-3 py-2'>
+        <LayerToggle enabled={enabledLayers} onToggle={handleToggleLayer} />
+      </div>
 
       <hr aria-hidden='true' className='border-base-300 my-1' />
 

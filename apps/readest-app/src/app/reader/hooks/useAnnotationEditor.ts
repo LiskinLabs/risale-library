@@ -1,3 +1,4 @@
+import React from 'react';
 import { useCallback, useRef, useState } from 'react';
 import { BookNote } from '@/types/book';
 import { Point, TextSelection, snapRangeToWords } from '@/utils/sel';

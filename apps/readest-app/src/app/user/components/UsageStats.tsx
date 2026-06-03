@@ -1,3 +1,4 @@
+import React from 'react';
 import Quota from '@/components/Quota';
 import { QuotaType } from '@/types/quota';
 

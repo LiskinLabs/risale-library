@@ -1,3 +1,4 @@
+import React from 'react';
 import { IoCheckmark } from 'react-icons/io5';
 import { useTranslation } from '@/hooks/useTranslation';
 import { getLocale } from '@/utils/misc';

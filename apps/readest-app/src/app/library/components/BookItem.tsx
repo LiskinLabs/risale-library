@@ -1,3 +1,4 @@
+import React from 'react';
 import clsx from 'clsx';
 import { useEffect, useState } from 'react';
 import { MdCheckCircle, MdCheckCircleOutline } from 'react-icons/md';
@@ -95,7 +96,6 @@ const BookItem: React.FC<BookItemProps> = ({
           )}
           style={bookitemMainStyle}
         >
-          {mode === 'grid' && <div className='mahogany-shelf' style={{ bottom: '-12px' }}></div>}
           <BookCover
             mode={mode}
             book={book}
@@ -105,11 +105,19 @@ const BookItem: React.FC<BookItemProps> = ({
             imageClassName='rounded-lg shadow-md'
             onAspectRatioChange={setCoverAspect}
           />
+          {mode === 'grid' && (book.progress || book.readingStatus) && (
+            <div
+              className='absolute bottom-0 left-0 right-0 z-30 opacity-90'
+              style={{ transform: 'translateZ(1px)' }}
+            >
+              <ReadingProgress book={book} />
+            </div>
+          )}
           {bookSelected && (
-            <div className='absolute inset-0 bg-black opacity-30 transition-opacity duration-300'></div>
+            <div className='absolute inset-0 bg-black opacity-30 transition-opacity duration-300 z-40'></div>
           )}
           {isSelectMode && (
-            <div className='absolute bottom-1 right-1'>
+            <div className='absolute bottom-1 right-1 z-50'>
               {bookSelected ? (
                 <MdCheckCircle className='fill-blue-500' />
               ) : (
@@ -129,8 +137,8 @@ const BookItem: React.FC<BookItemProps> = ({
         <div className={clsx('min-w-0 flex-1', mode === 'list' && 'flex flex-col gap-2')}>
           <h4
             className={clsx(
-              'book-card-title font-semibold',
-              mode === 'grid' && 'text-sm mt-1 text-white drop-shadow-md',
+              'book-card-title font-semibold text-base-content',
+              mode === 'grid' && 'text-sm mt-1',
               mode === 'list' && 'text-base',
             )}
           >
@@ -139,9 +147,7 @@ const BookItem: React.FC<BookItemProps> = ({
           <p
             className={clsx(
               'line-clamp-1',
-              mode === 'grid'
-                ? 'text-xs text-white/80 drop-shadow-sm'
-                : 'text-sm text-neutral-content',
+              mode === 'grid' ? 'text-xs text-base-content/70' : 'text-sm text-neutral-content',
             )}
           >
             {formatAuthors(book.author, book.primaryLanguage) || ''}
@@ -155,14 +161,18 @@ const BookItem: React.FC<BookItemProps> = ({
         <div
           className={clsx(
             'flex items-center',
-            book.progress || book.readingStatus ? 'justify-between' : 'justify-end',
+            mode === 'list' && (book.progress || book.readingStatus)
+              ? 'justify-between'
+              : 'justify-end',
           )}
           style={{
             height: `${iconSize15}px`,
             minHeight: `${iconSize15}px`,
           }}
         >
-          {(book.progress || book.readingStatus) && <ReadingProgress book={book} />}
+          {mode === 'list' && (book.progress || book.readingStatus) && (
+            <ReadingProgress book={book} />
+          )}
           <div className='flex items-center justify-center gap-x-2'>
             {!appService?.isMobile && (
               <button
@@ -226,4 +236,4 @@ const BookItem: React.FC<BookItemProps> = ({
   );
 };
 
-export default BookItem;
+export default React.memo(BookItem);

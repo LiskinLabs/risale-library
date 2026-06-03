@@ -74,6 +74,22 @@ export class DictCache {
     }
     // Can't efficiently clear localStorage entries — they'll expire naturally
   }
+
+  /** Drop EVERYTHING. Test helper. */
+  clear(): void {
+    this.memory.clear();
+    // Also clear localStorage entries we created
+    try {
+      for (let i = localStorage.length - 1; i >= 0; i--) {
+        const key = localStorage.key(i);
+        if (key?.startsWith('dict:')) {
+          localStorage.removeItem(key);
+        }
+      }
+    } catch {
+      // ignore
+    }
+  }
 }
 
 /** Singleton instance shared across all dictionary providers. */

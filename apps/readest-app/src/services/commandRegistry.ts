@@ -6,7 +6,7 @@ import { LiaHandPointerSolid } from 'react-icons/lia';
 import { IoAccessibilityOutline } from 'react-icons/io5';
 import { PiRobot, PiSpeakerHigh, PiSun, PiMoon } from 'react-icons/pi';
 import { TbSunMoon } from 'react-icons/tb';
-import { MdRefresh } from 'react-icons/md';
+import { MdRefresh, MdLayers } from 'react-icons/md';
 import { IconType } from 'react-icons';
 import { stubTranslation as _ } from '@/utils/misc';
 
@@ -149,6 +149,7 @@ export const groupResultsByCategory = (
 const panelIcons: Record<SettingsPanelType, IconType> = {
   Font: RiFontSize,
   Layout: RiDashboardLine,
+  Layers: MdLayers,
   Color: VscSymbolColor,
   Control: LiaHandPointerSolid,
   TTS: PiSpeakerHigh,

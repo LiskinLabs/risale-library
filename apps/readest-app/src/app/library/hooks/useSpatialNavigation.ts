@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useCallback } from 'react';
 
 const ARROW_KEYS = new Set(['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown']);

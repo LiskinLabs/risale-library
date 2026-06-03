@@ -1363,7 +1363,7 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
       ref={pageRef}
       aria-label={_('Your Library')}
       className={clsx(
-        'library-page text-base-content full-height flex select-none flex-col overflow-hidden library-bg-mahogany',
+        'library-page text-base-content full-height flex select-none flex-col overflow-hidden',
         viewSettings?.isEink ? 'bg-base-100' : 'bg-base-200',
         appService?.hasRoundedWindow && isRoundedWindow && 'window-border rounded-window',
       )}

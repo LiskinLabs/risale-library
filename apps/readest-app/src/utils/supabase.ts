@@ -1,18 +1,31 @@
 import { createClient } from '@supabase/supabase-js';
 import { getRuntimeConfig } from '@/services/runtimeConfig';
 
+const safeAtob = (str?: string): string => {
+  if (!str) return '';
+  try {
+    return atob(str.replace(/["']/g, ''));
+  } catch (e) {
+    console.error('Failed to decode base64 string:', str, e);
+    return '';
+  }
+};
+
 const supabaseUrl =
   getRuntimeConfig()?.supabaseUrl ||
   process.env['SUPABASE_URL'] ||
   process.env['NEXT_PUBLIC_SUPABASE_URL'] ||
-  atob(process.env['NEXT_PUBLIC_DEFAULT_SUPABASE_URL_BASE64']!);
+  safeAtob(process.env['NEXT_PUBLIC_DEFAULT_SUPABASE_URL_BASE64']);
 const supabaseAnonKey =
   getRuntimeConfig()?.supabaseAnonKey ||
   process.env['SUPABASE_ANON_KEY'] ||
   process.env['NEXT_PUBLIC_SUPABASE_ANON_KEY'] ||
-  atob(process.env['NEXT_PUBLIC_DEFAULT_SUPABASE_KEY_BASE64']!);
+  safeAtob(process.env['NEXT_PUBLIC_DEFAULT_SUPABASE_KEY_BASE64']);
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+export const supabase = createClient(
+  supabaseUrl || 'https://placeholder.supabase.co',
+  supabaseAnonKey || 'placeholder',
+);
 
 export const createSupabaseClient = (accessToken?: string) => {
   return createClient(supabaseUrl, supabaseAnonKey, {
