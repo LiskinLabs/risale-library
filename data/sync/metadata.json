@@ -1,0 +1,19 @@
+{
+  "title": "Малые Слова (Параллельный перевод)",
+  "author": "Бадиуззаман Саид Нурси",
+  "language": "ru",
+  "bookId": "ru-malye-slova-parallel",
+  "source": "Risale AI Studio Sync",
+  "chapters": [
+    { "title": "Первое Слово", "file": "chapter1.md" },
+    { "title": "Второе Слово", "file": "chapter2.md" },
+    { "title": "Третье Слово", "file": "chapter3.md" },
+    { "title": "Четвертое Слово", "file": "chapter4.md" },
+    { "title": "Пятое Слово", "file": "chapter5.md" },
+    { "title": "Шестое Слово", "file": "chapter6.md" },
+    { "title": "Седьмое Слово", "file": "chapter7.md" },
+    { "title": "Восьмое Слово", "file": "chapter8.md" },
+    { "title": "Девятое Слово", "file": "chapter9.md" },
+    { "title": "Десятое Слово", "file": "chapter10.md" }
+  ]
+}

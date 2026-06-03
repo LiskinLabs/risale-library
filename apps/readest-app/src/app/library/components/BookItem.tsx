@@ -28,6 +28,7 @@ interface BookItemProps {
   isSelectMode: boolean;
   bookSelected: boolean;
   transferProgress: number | null;
+  isOpening?: boolean;
   handleBookUpload: (book: Book) => void;
   handleBookDownload: (book: Book, options?: { redownload?: boolean; queued?: boolean }) => void;
   showBookDetailsModal: (book: Book) => void;
@@ -40,6 +41,7 @@ const BookItem: React.FC<BookItemProps> = ({
   isSelectMode,
   bookSelected,
   transferProgress,
+  isOpening,
   handleBookUpload,
   handleBookDownload,
   showBookDetailsModal,
@@ -75,7 +77,7 @@ const BookItem: React.FC<BookItemProps> = ({
         mode === 'list' && 'h-28 flex-row gap-4 overflow-hidden',
         mode === 'list' ? 'library-list-item' : 'library-grid-item',
         appService?.hasContextMenu ? 'cursor-pointer' : '',
-        'transition-all duration-300 hover:z-10',
+        isOpening ? 'book-opening z-50' : 'transition-all duration-300 hover:z-10',
       )}
       onClick={(e) => e.stopPropagation()}
     >
@@ -93,6 +95,7 @@ const BookItem: React.FC<BookItemProps> = ({
           )}
           style={bookitemMainStyle}
         >
+          {mode === 'grid' && <div className='mahogany-shelf' style={{ bottom: '-12px' }}></div>}
           <BookCover
             mode={mode}
             book={book}
@@ -119,7 +122,7 @@ const BookItem: React.FC<BookItemProps> = ({
       <div
         className={clsx(
           'flex w-full flex-col p-0',
-          mode === 'grid' && 'pt-2',
+          mode === 'grid' && 'pt-4',
           mode === 'list' && 'gap-2 py-0',
         )}
       >
@@ -127,7 +130,7 @@ const BookItem: React.FC<BookItemProps> = ({
           <h4
             className={clsx(
               'book-card-title font-semibold',
-              mode === 'grid' && 'text-sm mt-1',
+              mode === 'grid' && 'text-sm mt-1 text-white drop-shadow-md',
               mode === 'list' && 'text-base',
             )}
           >
@@ -135,8 +138,10 @@ const BookItem: React.FC<BookItemProps> = ({
           </h4>
           <p
             className={clsx(
-              'text-neutral-content line-clamp-1',
-              mode === 'grid' ? 'text-xs' : 'text-sm',
+              'line-clamp-1',
+              mode === 'grid'
+                ? 'text-xs text-white/80 drop-shadow-sm'
+                : 'text-sm text-neutral-content',
             )}
           >
             {formatAuthors(book.author, book.primaryLanguage) || ''}

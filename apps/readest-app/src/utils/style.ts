@@ -889,7 +889,31 @@ export const getStyles = (viewSettings: ViewSettings, themeCode?: ThemeCode) => 
   const hasiyeStyles = getHasiyeStyles();
   const meaningModeStyles = getMeaningModeStyles();
   const userStylesheet = viewSettings.userStylesheet!;
-  return `${pageLayoutStyles}\n${paragraphLayoutStyles}\n${fontStyles}\n${colorStyles}\n${translationStyles}\n${warichuStyles}\n${rubyStyles}\n${hasiyeStyles}\n${meaningModeStyles}\n${userStylesheet}`;
+
+  // Multi-layer annotation system: hide layers if disabled
+  let layerOverrides = '';
+  const enabledLayers = viewSettings.enabledLayers || ['user', 'author', 'hasiye', 'lugat'];
+  if (!enabledLayers.includes('hasiye')) {
+    layerOverrides += `
+      .hasiye-arabic {
+        text-decoration: none !important;
+        cursor: text !important;
+      }
+    `;
+  }
+  if (!enabledLayers.includes('lugat')) {
+    layerOverrides += `
+      .meaning-annotated {
+        border-bottom: none !important;
+        cursor: text !important;
+      }
+      .meaning-annotated::after {
+        display: none !important;
+      }
+    `;
+  }
+
+  return `${pageLayoutStyles}\n${paragraphLayoutStyles}\n${fontStyles}\n${colorStyles}\n${translationStyles}\n${warichuStyles}\n${rubyStyles}\n${hasiyeStyles}\n${meaningModeStyles}\n${layerOverrides}\n${userStylesheet}`;
 };
 
 export const applyTranslationStyle = (viewSettings: ViewSettings) => {

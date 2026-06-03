@@ -88,6 +88,10 @@ export const meaningModeTransformer: Transformer = {
     // Only transform reflowable content; skip fixed-layout
     if (ctx.isFixedLayout) return ctx.content;
 
+    // Respect layer toggle
+    const enabledLayers = ctx.viewSettings.enabledLayers || ['user', 'author', 'hasiye', 'lugat'];
+    if (!enabledLayers.includes('lugat')) return ctx.content;
+
     const level = ctx.viewSettings.dictionaryLevel ?? 3;
     if (level >= 3) return ctx.content; // Tümü — no annotations
 

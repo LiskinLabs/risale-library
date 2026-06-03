@@ -26,7 +26,7 @@ def main():
 
     print(f"Importing passages from {file_path}")
     count = 0
-    batch_size = 100
+    batch_size = 50
     batch = []
 
     with open(file_path, "r", encoding="utf-8") as f:
@@ -35,16 +35,26 @@ def main():
                 continue
             try:
                 data = json.loads(line)
+                
+                # Robust mapping to match the actual JSON structure
                 record = {
                     "chunk_id": data.get("chunk_id"),
-                    "book_name": data.get("book_name", "Unknown"),
+                    "book_name": data.get("book_title") or data.get("book_name", "Unknown"),
                     "content": data.get("text", data.get("content", "")),
-                    "embedding": data.get("embedding_text"),
-                    "keywords": data.get("keywords", []),
-                    "tags": data.get("tags", []),
+                    # Skip embedding for now because the JSON contains text, not a vector [float, ...]
+                    # "embedding": data.get("embedding_text"), 
+                    "keywords": data.get("book_keywords", data.get("keywords", [])),
+                    "tags": data.get("book_tags", data.get("tags", [])),
                     "citation": data.get("citation", ""),
-                    "official_alignment_status": data.get("official_alignment_status", True),
                 }
+                
+                # Handle boolean alignment status
+                status = data.get("official_alignment_status")
+                if isinstance(status, str):
+                    record["official_alignment_status"] = (status.lower() in ["true", "identical", "almost-identical", "verified"])
+                else:
+                    record["official_alignment_status"] = bool(status) if status is not None else True
+
                 batch.append(record)
                 
                 if len(batch) >= batch_size:
@@ -56,8 +66,11 @@ def main():
                 print(f"Error processing line: {e}")
                 
     if batch:
-        supabase.table("risale_passages").upsert(batch, on_conflict="chunk_id").execute()
-        count += len(batch)
+        try:
+            supabase.table("risale_passages").upsert(batch, on_conflict="chunk_id").execute()
+            count += len(batch)
+        except Exception as e:
+            print(f"Final batch error: {e}")
 
     print(f"Import complete! Total passages inserted: {count}")
 

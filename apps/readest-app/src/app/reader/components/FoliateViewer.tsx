@@ -181,8 +181,8 @@ const FoliateViewer: React.FC<{
                 'style',
                 'punctuation',
                 'footnote',
-                'hasiye',
-                'meaning-mode',
+                ...(viewSettings.enabledLayers?.includes('hasiye') ? ['hasiye'] : []),
+                ...(viewSettings.enabledLayers?.includes('lugat') ? ['meaning-mode'] : []),
                 'ui-effects',
                 'whitespace',
                 'language',
@@ -190,7 +190,7 @@ const FoliateViewer: React.FC<{
                 'simplecc',
                 'proofread',
                 'warichu',
-              ],
+              ] as string[],
             };
             return Promise.resolve(transformContent(ctx));
           }

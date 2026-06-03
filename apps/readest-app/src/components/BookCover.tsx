@@ -84,7 +84,9 @@ const BookCover: React.FC<BookCoverProps> = memo<BookCoverProps>(
     const dynamicStyle = getDynamicCoverStyle(book.title || '')!;
 
     const coverSrc = book.metadata?.coverImageUrl || book.coverImageUrl;
-    const hasValidSrc = coverSrc && coverSrc.length > 0;
+    // For builtin Risale books, their EPUB covers are half-white. We force the
+    // beautiful dynamic themed fallback cover to achieve the "full length" wow-effect.
+    const hasValidSrc = coverSrc && coverSrc.length > 0 && !book.builtin;
 
     const shouldShowSpine = showSpine && imageLoaded && !imageError;
 
@@ -119,18 +121,46 @@ const BookCover: React.FC<BookCoverProps> = memo<BookCoverProps>(
     };
 
     useEffect(() => {
-      toggleImageVisibility(true);
-    }, [book.metadata?.coverImageUrl, book.coverImageUrl]);
+      // If we don't have a valid source, we must show the fallback cover immediately.
+      // If we do have a valid source, we start by showing the image (which might still be loading)
+      // or we can start with fallback and let onLoad toggle it.
+      // The old logic was starting with true.
+      toggleImageVisibility(hasValidSrc);
+    }, [book.metadata?.coverImageUrl, book.coverImageUrl, hasValidSrc]);
+
+    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+      if (!coverRef.current) return;
+      const rect = coverRef.current.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      coverRef.current.style.setProperty('--mouse-x', `${x}%`);
+      coverRef.current.style.setProperty('--mouse-y', `${y}%`);
+      coverRef.current.style.setProperty('--glare-opacity', '1');
+    };
+
+    const handleMouseLeave = () => {
+      if (!coverRef.current) return;
+      coverRef.current.style.setProperty('--glare-opacity', '0');
+    };
 
     return (
       <div
         ref={coverRef}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
         className={clsx(
           'book-cover-container relative flex h-full w-full',
           is3d && 'book-3d-container',
           className,
         )}
-        style={{ '--book-bg': dynamicStyle.bgValue } as React.CSSProperties}
+        style={
+          {
+            '--book-bg': dynamicStyle.bgValue,
+            '--mouse-x': '50%',
+            '--mouse-y': '50%',
+            '--glare-opacity': '0',
+          } as React.CSSProperties
+        }
       >
         <div className={clsx('relative h-full w-full', is3d && 'book-3d-wrapper')}>
           {is3d && (
@@ -162,6 +192,7 @@ const BookCover: React.FC<BookCoverProps> = memo<BookCoverProps>(
               className={clsx(
                 'relative w-full h-full z-10 overflow-hidden',
                 is3d ? 'rounded-r-[4px] book-front-content' : 'rounded-[4px]',
+                dynamicStyle.bgClass,
               )}
             >
               {hasValidSrc && coverFit === 'crop' ? (
@@ -228,6 +259,17 @@ const BookCover: React.FC<BookCoverProps> = memo<BookCoverProps>(
               >
                 <div className='absolute inset-[3px] border border-white/10 rounded-sm'></div>
                 <div className='absolute inset-[6px] border border-white/5 rounded-sm pointer-events-none'></div>
+                <div
+                  className='glare-overlay absolute inset-0 pointer-events-none mix-blend-overlay'
+                  style={{
+                    background: `radial-gradient(
+                    circle at var(--mouse-x) var(--mouse-y),
+                    rgba(255, 255, 255, 0.4) 0%,
+                    rgba(255, 255, 255, 0) 50%
+                  )`,
+                    opacity: 'var(--glare-opacity)',
+                  }}
+                ></div>
 
                 {!isPreview && mode === 'grid' && (
                   <div
@@ -240,10 +282,10 @@ const BookCover: React.FC<BookCoverProps> = memo<BookCoverProps>(
                   </div>
                 )}
 
-                <div className='flex-1 flex flex-col items-center justify-center z-10 p-[2cqi]'>
+                <div className='flex-1 flex flex-col items-center justify-center z-10 p-[2cqi] relative'>
                   <span
                     className={clsx(
-                      'font-serif font-bold tracking-wide text-center drop-shadow-md',
+                      'font-serif font-bold tracking-wide text-center drop-shadow-md gold-foil',
                       isPreview
                         ? 'line-clamp-2 text-[0.8em]'
                         : mode === 'grid'
@@ -259,16 +301,14 @@ const BookCover: React.FC<BookCoverProps> = memo<BookCoverProps>(
                     {formatTitle(book.title)}
                   </span>
 
-                  <div className={clsx('w-[20cqi] h-[2px] my-[3cqi]', dynamicStyle.line)}></div>
+                  <div
+                    className={clsx('my-[4cqi] w-8 h-[2px] opacity-70', dynamicStyle.line)}
+                  ></div>
 
                   <span
                     className={clsx(
-                      'uppercase tracking-widest text-center font-medium opacity-80',
-                      isPreview
-                        ? 'text-[0.4em] line-clamp-1'
-                        : mode === 'grid'
-                          ? 'line-clamp-3'
-                          : 'text-[8px] line-clamp-2',
+                      'uppercase tracking-widest text-center font-medium opacity-80 gold-foil',
+                      isPreview ? 'text-[0.5em]' : 'text-[7cqi]',
                     )}
                     style={{ wordBreak: 'break-word', fontSize: '6cqi', lineHeight: '1.3' }}
                   >

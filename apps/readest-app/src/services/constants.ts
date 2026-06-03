@@ -361,6 +361,7 @@ export const DEFAULT_VIEW_CONFIG: ViewConfig = {
   dictionaryLevel: 3,
   dictionaryLanguage: 'en',
   meaningDisplayMode: 'closed',
+  enabledLayers: ['user', 'author', 'hasiye', 'lugat'],
 };
 
 export const DEFAULT_TTS_CONFIG: TTSConfig = {

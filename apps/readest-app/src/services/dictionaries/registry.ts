@@ -70,12 +70,12 @@ const findWebTemplate = (id: string, settings: DictionarySettings): WebSearchEnt
 const getOrCreate = (
   id: string,
   dict: ImportedDictionary | undefined,
-  fs: DictionaryFileOpener | undefined,
+  fs: AppService | undefined,
   settings: DictionarySettings,
 ): DictionaryProvider | undefined => {
   const cached = instanceCache.get(id);
   if (cached) return cached;
-  const builtin = builtinFor(id);
+  const builtin = builtinFor(id, fs);
   if (builtin) {
     instanceCache.set(id, builtin);
     return builtin;

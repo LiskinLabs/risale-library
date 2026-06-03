@@ -17,6 +17,7 @@ import {
   MdChevronLeft,
   MdChevronRight,
   MdClose,
+  MdLayers,
 } from 'react-icons/md';
 import { FiSearch } from 'react-icons/fi';
 import { getDirFromUILanguage } from '@/utils/rtl';
@@ -33,10 +34,12 @@ import LangPanel from './LangPanel';
 import MiscPanel from './MiscPanel';
 import AIPanel from './AIPanel';
 import TTSPanel from './TTSPanel';
+import LayersPanel from './LayersPanel';
 
 export type SettingsPanelType =
   | 'Font'
   | 'Layout'
+  | 'Layers'
   | 'Color'
   | 'Control'
   | 'TTS'
@@ -90,6 +93,11 @@ const SettingsDialog: React.FC<{ bookKey: string }> = ({ bookKey }) => {
       tab: 'Layout',
       icon: RiDashboardLine,
       label: _('Layout'),
+    },
+    {
+      tab: 'Layers',
+      icon: MdLayers,
+      label: _('Layers'),
     },
     {
       tab: 'Color',
@@ -174,6 +182,7 @@ const SettingsDialog: React.FC<{ bookKey: string }> = ({ bookKey }) => {
   >({
     Font: null,
     Layout: null,
+    Layers: null,
     Color: null,
     Control: null,
     TTS: null,
@@ -208,6 +217,7 @@ const SettingsDialog: React.FC<{ bookKey: string }> = ({ bookKey }) => {
       const panelMap: Record<string, SettingsPanelType> = {
         font: 'Font',
         layout: 'Layout',
+        layers: 'Layers',
         color: 'Color',
         control: 'Control',
         tts: 'TTS',
@@ -444,6 +454,12 @@ const SettingsDialog: React.FC<{ bookKey: string }> = ({ bookKey }) => {
           <LayoutPanel
             bookKey={bookKey}
             onRegisterReset={(fn) => registerResetFunction('Layout', fn)}
+          />
+        )}
+        {activePanel === 'Layers' && (
+          <LayersPanel
+            bookKey={bookKey}
+            onRegisterReset={(fn) => registerResetFunction('Layers', fn)}
           />
         )}
         {activePanel === 'Color' && (

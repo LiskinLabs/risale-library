@@ -308,6 +308,8 @@ export interface ViewConfig {
   dictionaryLanguage: string;
   /** Anlam Açık Modu: 'open' = inline definitions, 'closed' = clean text */
   meaningDisplayMode: 'open' | 'closed';
+  /** Currently enabled annotation layers */
+  enabledLayers: AnnotationLayer[];
 }
 
 /** Annotation layers for multi-layer annotation system */

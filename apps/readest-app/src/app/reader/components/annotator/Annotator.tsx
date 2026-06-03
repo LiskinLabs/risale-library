@@ -383,6 +383,9 @@ const Annotator: React.FC<{ bookKey: string }> = ({ bookKey }) => {
   const onCreateOverlay = (event: Event) => {
     const detail = (event as CustomEvent).detail;
     const { booknotes = [] } = getConfig(bookKey)!;
+    const viewSettings = getViewSettings(bookKey);
+    const enabledLayers = viewSettings?.enabledLayers || ['user', 'author', 'hasiye', 'lugat'];
+
     // Resolve the live (doc, overlayer) pair for this section so we can
     // fan out global annotations across every text-occurrence in it.
     const sectionContent = view?.renderer?.getContents().find((c) => c.index === detail.index) as
@@ -390,7 +393,11 @@ const Annotator: React.FC<{ bookKey: string }> = ({ bookKey }) => {
       | undefined;
     const sectionDoc = sectionContent?.doc;
 
-    const activeAnnotations = booknotes.filter((b) => b.type === 'annotation' && !b.deletedAt);
+    const activeAnnotations = booknotes.filter((b) => {
+      if (b.type !== 'annotation' || b.deletedAt) return false;
+      const layer = b.layer || 'user';
+      return enabledLayers.includes(layer);
+    });
 
     // 1. Draw native overlays only for notes whose anchor (cfi) lives
     //    inside this section — same as before.
@@ -514,6 +521,22 @@ const Annotator: React.FC<{ bookKey: string }> = ({ bookKey }) => {
   };
 
   useFoliateEvents(view, { onLoad, onCreateOverlay, onDrawAnnotation, onShowAnnotation });
+
+  useEffect(() => {
+    if (!view || !view.renderer) return;
+    const viewSettings = getViewSettings(bookKey);
+    const layersHash = (viewSettings?.enabledLayers || []).join(',');
+
+    // When enabled layers change, we need to refresh the current overlays.
+    // We can try to force a redraw by calling recreateOverlays for visible sections.
+    const contents = view.renderer.getContents();
+    contents.forEach(({ index }) => {
+      if (index === undefined) return;
+      // Re-trigger overlay creation for visible sections
+      view.renderer.recreateOverlays?.(index);
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [bookKey, view, (getViewSettings(bookKey)?.enabledLayers || []).join(',')]);
 
   useEffect(() => {
     handleShowPopup(showingPopup);
@@ -752,6 +775,7 @@ const Annotator: React.FC<{ bookKey: string }> = ({ bookKey }) => {
     const annotation: BookNote = {
       id: uniqueId(),
       type: 'excerpt',
+      layer: 'user',
       cfi,
       note: '',
       text: selection.text,
@@ -791,6 +815,7 @@ const Annotator: React.FC<{ bookKey: string }> = ({ bookKey }) => {
     const annotation: BookNote = {
       id: uniqueId(),
       type: 'annotation',
+      layer: 'user',
       cfi,
       style,
       color,

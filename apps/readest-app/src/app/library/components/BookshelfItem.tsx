@@ -159,21 +159,15 @@ const BookshelfItem: React.FC<BookshelfItemProps> = ({
     return true;
   };
 
+  const [isOpening, setIsOpening] = useState(false);
+
   const handleBookClick = useCallback(
     async (book: Book) => {
       if (isSelectMode) {
         toggleSelection(book.hash);
         return;
       }
-      // In-place books point at a file outside Books/<hash>/ that the user
-      // (or another app) may have moved, renamed, or deleted between sessions.
-      // Probe the source before navigating: if it's gone, drop the stale
-      // library record instead of opening the reader only to fail inside
-      // loadBookContent and bounce back with a toast. We restrict this to
-      // purely-local in-place books — cloud-synced books (`uploadedAt`) still
-      // go through `makeBookAvailable`'s on-demand download path below, and
-      // hash-copy books (no `filePath`) shouldn't lose their Books/<hash>/
-      // file under normal use, so we don't second-guess those here.
+
       if (book.filePath && !book.uploadedAt && !book.deletedAt) {
         const available = await appService?.isBookAvailable(book);
         if (!available) {
@@ -187,15 +181,20 @@ const BookshelfItem: React.FC<BookshelfItemProps> = ({
           return;
         }
       }
+
       const available = await makeBookAvailable(book);
       if (!available) return;
-      if (appService?.hasWindow && settings.openBookInNewWindow) {
-        showReaderWindow(appService, [book.hash]);
-      } else {
-        setTimeout(() => {
+
+      setIsOpening(true);
+
+      setTimeout(() => {
+        if (appService?.hasWindow && settings.openBookInNewWindow) {
+          showReaderWindow(appService, [book.hash]);
+        } else {
           navigateToReader(router, [book.hash]);
-        }, 0);
-      }
+        }
+        setIsOpening(false);
+      }, 600);
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [isSelectMode, settings.openBookInNewWindow, appService],
@@ -419,12 +418,14 @@ const BookshelfItem: React.FC<BookshelfItemProps> = ({
   };
 
   return (
-    <div className={clsx(mode === 'grid' ? 'h-full' : 'sm:hover:bg-base-300/50 px-4 sm:px-6')}>
+    <div
+      className={clsx(mode === 'grid' ? 'h-full relative' : 'sm:hover:bg-base-300/50 px-4 sm:px-6')}
+    >
       <div
         className={clsx(
-          'visible-focus-inset-2 group',
+          'visible-focus-inset-2 group relative z-10',
           mode === 'grid' &&
-            'sm:hover:bg-base-300/50 flex h-full flex-col px-0 py-2 sm:rounded-md sm:px-4 sm:py-4',
+            'sm:hover:bg-base-300/50 flex h-full flex-col px-0 py-2 sm:rounded-md sm:px-4 sm:py-4 drop-shadow-[0_15px_15px_rgba(0,0,0,0.4)]',
           mode === 'list' && 'border-base-300 flex flex-col border-b py-2',
           appService?.isMobileApp && 'no-context-menu',
           pressing && mode === 'grid' ? 'not-eink:scale-95' : 'scale-100',
@@ -447,6 +448,7 @@ const BookshelfItem: React.FC<BookshelfItemProps> = ({
               isSelectMode={isSelectMode}
               bookSelected={itemSelected}
               transferProgress={transferProgress}
+              isOpening={isOpening}
               handleBookUpload={handleBookUpload}
               handleBookDownload={handleBookDownload}
               showBookDetailsModal={showBookDetailsModal}

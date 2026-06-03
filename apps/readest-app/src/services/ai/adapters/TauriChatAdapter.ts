@@ -119,12 +119,17 @@ export function createTauriAdapter(getOptions: () => TauriAdapterOptions): ChatM
             sourceStore,
             spoilerBoundPosition: settings.spoilerProtection ? currentPage : undefined,
           });
+          const globalTool = buildGlobalLookupTool({ settings, turnId, sourceStore });
+
           const systemPrompt = buildReedySystemPrompt(bookTitle, authorName, currentPage);
           const result = streamText({
             model: provider.getModel(),
             system: systemPrompt,
             messages: aiMessages,
-            tools: { lookupPassage: tool },
+            tools: {
+              lookupPassage: tool,
+              lookupGlobalRisale: globalTool,
+            },
             stopWhen: stepCountIs(3),
             abortSignal,
           });

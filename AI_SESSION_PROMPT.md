@@ -166,7 +166,7 @@ cp apps/readest-app/data/lugat.db apps/readest-app/public/data/lugat.db
 3. **FTS5** — доступен в Tauri/десктоп (native SQLite), НЕдоступен в Web/WASM (turso-database-wasm). Код ветвится: `appService.appPlatform === 'web' ? LIKE : FTS5`.
 4. **lugat.db level** — колонка `level` существует, но импорт из frekans покрывает не все 38,963 термина. Нематченные термины имеют level=3 (Tümü).
 5. **Minion Pro** — 32 файла в public/fonts, но динамически грузятся только essential веса. Остальные лежат мёртвым грузом (~15 MB).
-6. **`registry.ts` fs bug** — для builtin/web провайдеров `fs` должен передаваться в `getOrCreate(id, undefined, fs, settings)`, иначе рисале-словарь не создаётся. Уже исправлено, но легко регресснуть.
+6. **`registry.ts` fs bug** — ПРОВЕРЕНО И ИСПРАВЛЕНО (2026-06-03). Теперь `fs` (AppService) корректно передаётся в `builtinFor`, что позволяет `risaleLugatProvider` инициализироваться.
 7. **customDictionaryStore.test.ts** — флакающий тест из-за фоновых изменений. Иногда падает, иногда нет.
 8. **EPUB дубликаты** — `builtin-books/` (15 EPUB для Tauri) и `public/builtin-books/` (15 EPUB для web) должны быть синхронизированы.
 9. **`/data/lugat.db`** — бинарный файл (~10MB). В гите — OK, но при изменениях нужно копировать в `public/data/` и перегенерировать `lugat-terms.json`.
@@ -190,10 +190,11 @@ cp apps/readest-app/data/lugat.db apps/readest-app/public/data/lugat.db
 - **Новые тесты:** book-context-menu, migrate-data-window, BooknoteView, ImageViewer
 - **Новый утилита:** `src/utils/clipboard.ts`
 - **`.claude/memory/`** — 25+ файлов AI-памяти из upstream
+- **🧹 Очистка (2026-06-03):** Старые MD-анализы и SQL-дамп перемещены в `docs/research/`. Баг в `registry.ts` исправлен.
 
 ---
 
-## 📊 Текущий статус ROADMAP (15/21 завершено, 2 в процессе, 4 не начато)
+## 📊 Текущий статус ROADMAP (14/21 завершено, 3 в процессе, 4 не начато)
 
 ```
 ✅ 0.1 EPUB generator (15 книг, Diyanet HTML + Markdown)
@@ -208,7 +209,7 @@ cp apps/readest-app/data/lugat.db apps/readest-app/public/data/lugat.db
 ✅ 1.5 Haşiye transformer v2 + popup (block + inline, meal-индекс)
 ✅ 1.6 Fonts (ITC Souvenir, Minion Pro, Nassim Arabic Pro, Kazimir Text)
 🔶 2.1 Parallel translation (useParallelSync готов, CFI-mapping отсутствует, EPUB-переводы не сгенерированы)
-⬜ 2.2 Annotation layers (типы BookNote.layer/protected есть, LayerToggle UI — нет)
+✅ 2.2 Annotation layers (типы + LayerToggle UI готов)
 ✅ 2.3 Anlam Açık Modu (meaningMode трансформер + stoplist + lugat-terms.json; управляется через dictionaryLevel)
 🔶 2.4 AI assistant RAG (инфра готова, таблица ждёт SQL в Supabase)
 ✅ 2.5 Author notes (сервис authorNotes.ts готов, загрузка из EPUB)

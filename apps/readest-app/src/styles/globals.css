@@ -932,6 +932,108 @@ body.atmosphere #atmosphere-overlay {
   box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
 }
 
+.glare-overlay {
+  transition: opacity 0.3s ease;
+  border-radius: inherit;
+  z-index: 50;
+}
+
+.gold-foil {
+  background: linear-gradient(
+    135deg,
+    #bf953f -20%,
+    #fcf6ba 20%,
+    #b38728 50%,
+    #fbf5b7 80%,
+    #aa771c 120%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.mahogany-shelf {
+  position: absolute;
+  bottom: 0px;
+  left: 10%;
+  right: 10%;
+  height: 12px;
+  background: linear-gradient(to bottom, #4a2511 0%, #2a1104 100%);
+  border-radius: 4px;
+  box-shadow:
+    0 -2px 10px rgba(0, 0, 0, 0.5),
+    0 8px 15px rgba(0, 0, 0, 0.4);
+  z-index: 0;
+  transform: perspective(300px) rotateX(15deg);
+  border-top: 1px solid #7a3e1d;
+  border-bottom: 2px solid #140702;
+}
+
+.mahogany-shelf::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.05) 0px,
+      rgba(0, 0, 0, 0.05) 1px,
+      transparent 1px,
+      transparent 10px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.05) 0px,
+      rgba(0, 0, 0, 0.05) 2px,
+      transparent 2px,
+      transparent 4px
+    );
+  opacity: 0.5;
+  border-radius: 4px;
+}
+
+.book-opening {
+  animation: book-open-anim 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.book-opening .book-3d-front {
+  transform: rotateY(-180deg) !important;
+  box-shadow:
+    inset 4px 0 10px rgba(0, 0, 0, 0.1),
+    -5px 0 15px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes book-open-anim {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    transform: scale(1.1) translateY(-10px);
+  }
+  100% {
+    transform: scale(1.2) translateY(-5px);
+    opacity: 0;
+  }
+}
+
+.library-bg-mahogany {
+  background-color: #2a1104 !important;
+  background-image:
+    radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%),
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.03) 0px,
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    linear-gradient(to right, #2a1104 0%, #4a2511 50%, #2a1104 100%) !important;
+  background-attachment: fixed;
+}
+
 .book-front-content {
   position: absolute;
   inset: 0;

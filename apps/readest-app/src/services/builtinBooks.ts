@@ -136,6 +136,13 @@ export const BUILTIN_BOOKS: BuiltinBookEntry[] = [
     language: 'tr',
     group: 'nur',
   },
+  {
+    filename: 'ru-kucuk-sozler-parallel.epub',
+    title: 'Малые Слова (Параллельный перевод)',
+    author: 'Бадиуззаман Саид Нурси',
+    language: 'ru',
+    group: 'nur',
+  },
 ];
 
 /** URL prefix for fetching builtin books.

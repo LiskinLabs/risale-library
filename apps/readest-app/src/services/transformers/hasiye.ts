@@ -20,6 +20,10 @@ export const hasiyeTransformer: Transformer = {
   name: 'hasiye',
 
   transform: async (ctx) => {
+    // respect layer toggle
+    const enabledLayers = ctx.viewSettings.enabledLayers || ['user', 'author', 'hasiye', 'lugat'];
+    if (!enabledLayers.includes('hasiye')) return ctx.content;
+
     let result = ctx.content;
 
     // ── Pattern 1: Block-level Arabic (p.arabic, p.hadith, p.basmala) ──
