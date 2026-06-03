@@ -524,8 +524,6 @@ const Annotator: React.FC<{ bookKey: string }> = ({ bookKey }) => {
 
   useEffect(() => {
     if (!view || !view.renderer) return;
-    const viewSettings = getViewSettings(bookKey);
-    const layersHash = (viewSettings?.enabledLayers || []).join(',');
 
     // When enabled layers change, we need to refresh the current overlays.
     // We can try to force a redraw by calling recreateOverlays for visible sections.
@@ -533,7 +531,7 @@ const Annotator: React.FC<{ bookKey: string }> = ({ bookKey }) => {
     contents.forEach(({ index }) => {
       if (index === undefined) return;
       // Re-trigger overlay creation for visible sections
-      view.renderer.recreateOverlays?.(index);
+      (view.renderer as any).recreateOverlays?.(index);
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [bookKey, view, (getViewSettings(bookKey)?.enabledLayers || []).join(',')]);

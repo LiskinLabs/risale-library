@@ -125,7 +125,7 @@ const BookCover: React.FC<BookCoverProps> = memo<BookCoverProps>(
       // If we do have a valid source, we start by showing the image (which might still be loading)
       // or we can start with fallback and let onLoad toggle it.
       // The old logic was starting with true.
-      toggleImageVisibility(hasValidSrc);
+      toggleImageVisibility(!!hasValidSrc);
     }, [book.metadata?.coverImageUrl, book.coverImageUrl, hasValidSrc]);
 
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {

@@ -24,7 +24,7 @@ import { isSystemDictionarySupported } from './systemDictionary';
 import { wiktionaryProvider } from './providers/wiktionaryProvider';
 import { wikipediaProvider } from './providers/wikipediaProvider';
 import { createRisaleLugatProvider } from './providers/risaleLugatProvider';
-import { createStarDictProvider, type DictionaryFileOpener } from './providers/starDictProvider';
+import { createStarDictProvider } from './providers/starDictProvider';
 import { createMdictProvider } from './providers/mdictProvider';
 import { createDictProvider } from './providers/dictProvider';
 import { createSlobProvider } from './providers/slobProvider';

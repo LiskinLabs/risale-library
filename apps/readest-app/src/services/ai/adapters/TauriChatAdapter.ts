@@ -7,6 +7,7 @@ import type { AISettings, ScoredChunk } from '../types';
 import type { RetrievalBackend } from './retrievalBackend';
 import type { ReedySourceStore } from './reedySourceStore';
 import type { RetrievedChunk } from '@/services/reedy/retrieval/BookRetriever';
+import { buildGlobalLookupTool } from '../tools/lookupGlobalRisale';
 
 /**
  * Per-turn metadata the host (AIAssistant) needs to keep in sync with the

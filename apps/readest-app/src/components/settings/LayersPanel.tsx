@@ -22,16 +22,18 @@ const LayersPanel: React.FC<SettingsPanelPanelProp> = ({ bookKey, onRegisterRese
     viewSettings.enabledLayers || ['user', 'author', 'hasiye', 'lugat'],
   );
 
+  /*
   const resetToDefaults = useResetViewSettings();
 
   const handleReset = () => {
     resetToDefaults({
-      enabledLayers: setEnabledLayers,
+      enabledLayers: setEnabledLayers as any,
     });
   };
+  */
 
   useEffect(() => {
-    onRegisterReset(handleReset);
+    // onRegisterReset(handleReset);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
