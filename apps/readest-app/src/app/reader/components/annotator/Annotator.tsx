@@ -531,6 +531,7 @@ const Annotator: React.FC<{ bookKey: string }> = ({ bookKey }) => {
     contents.forEach(({ index }) => {
       if (index === undefined) return;
       // Re-trigger overlay creation for visible sections
+      // biome-ignore lint/suspicious/noExplicitAny: Foliate-js renderer has dynamic methods not in standard types
       (view.renderer as any).recreateOverlays?.(index);
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
