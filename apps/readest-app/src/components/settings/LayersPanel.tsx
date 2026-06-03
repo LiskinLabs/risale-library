@@ -4,14 +4,13 @@ import { useEnv } from '@/context/EnvContext';
 import { useReaderStore } from '@/store/readerStore';
 import { useSettingsStore } from '@/store/settingsStore';
 import { useTranslation } from '@/hooks/useTranslation';
-import { useResetViewSettings } from '@/hooks/useResetSettings';
 import { SettingsPanelPanelProp } from './SettingsDialog';
 import { saveViewSettings } from '@/helpers/settings';
 import { BoxedList } from './primitives';
 import LayerToggle from '@/components/reader/LayerToggle';
 import type { AnnotationLayer } from '@/types/book';
 
-const LayersPanel: React.FC<SettingsPanelPanelProp> = ({ bookKey, onRegisterReset }) => {
+const LayersPanel: React.FC<SettingsPanelPanelProp> = ({ bookKey }) => {
   const _ = useTranslation();
   const { envConfig } = useEnv();
   const { settings } = useSettingsStore();
