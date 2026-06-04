@@ -156,6 +156,13 @@ export const aiDictionaryProvider: DictionaryProvider = {
     const targetLang = dictionaryLanguage || lang || 'ru';
     const complexity = isSimpleWord(word, lang) ? 'simple' : 'complex';
 
+    // ── Check if any API key is configured ──────────────────────────────
+    const keys = getAiKeys();
+    if (Object.keys(keys).length === 0) {
+      renderNoKeyMessage(container, targetLang);
+      return { ok: false, reason: 'error', message: 'No API key configured' };
+    }
+
     // ── Simple word: fast basic definition ────────────────────────────
     if (complexity === 'simple') {
       const cached = simpleDefinitionCache.get(word);
@@ -169,8 +176,8 @@ export const aiDictionaryProvider: DictionaryProvider = {
         simpleDefinitionCache.set(word, { definition, timestamp: Date.now() });
         renderSimpleDefinition(container, word, definition, targetLang);
         return { ok: true, headword: word, sourceLabel: 'AI Sözlük' };
-      } catch {
-        // Fall through to next provider
+      } catch (err) {
+        renderApiError(container, err);
         return { ok: false, reason: 'error', message: 'AI unavailable' };
       }
     }
@@ -286,6 +293,39 @@ async function fetchFullDefinition(
 }
 
 // ── Rendering ──────────────────────────────────────────────────────────
+
+function renderNoKeyMessage(container: HTMLElement, _targetLang: string): void {
+  container.innerHTML = '';
+  const div = document.createElement('div');
+  div.style.cssText =
+    'padding:12px;font-size:13px;line-height:1.5;color:var(--text-muted,inherit);text-align:center;';
+  div.innerHTML = `
+    <div style="font-size:28px;margin-bottom:8px;">🔑</div>
+    <div style="font-weight:600;margin-bottom:4px;">AI Sözlük</div>
+    <div style="opacity:0.7;">API anahtar yapılandırması yok</div>
+    <div style="font-size:11px;opacity:0.5;margin-top:4px;">
+      Ayarlar → AI → Gemini veya DeepSeek API anahtarı ekleyin
+    </div>
+  `;
+  container.appendChild(div);
+}
+
+function renderApiError(container: HTMLElement, error: unknown): void {
+  container.innerHTML = '';
+  const div = document.createElement('div');
+  div.style.cssText =
+    'padding:12px;font-size:13px;line-height:1.5;color:var(--text-muted,inherit);text-align:center;';
+  const msg = error instanceof Error ? error.message : String(error);
+  div.innerHTML = `
+    <div style="font-size:28px;margin-bottom:8px;">⚠️</div>
+    <div style="font-weight:600;margin-bottom:4px;">AI Sözlük — Hata</div>
+    <div style="font-size:11px;opacity:0.6;word-break:break-all;">${msg}</div>
+    <div style="font-size:11px;opacity:0.5;margin-top:4px;">
+      Diğer sözlükler aşağıda gösteriliyor
+    </div>
+  `;
+  container.appendChild(div);
+}
 
 function renderSimpleDefinition(
   container: HTMLElement,
