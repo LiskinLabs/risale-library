@@ -38,16 +38,13 @@ const HasiyePopup: React.FC<HasiyePopupProps> = ({ bookKey }) => {
 
       let decodedText = '';
       try {
-        // Universal way to decode base64 utf-8
-        decodedText = decodeURIComponent(escape(atob(encodedText)));
+        // Decode Base64 → UTF-8 using standard Web APIs (TextDecoder)
+        const binaryString = atob(encodedText);
+        const bytes = Uint8Array.from(binaryString, (c) => c.charCodeAt(0));
+        decodedText = new TextDecoder().decode(bytes);
       } catch (_e) {
-        // Fallback for cases where it's just plain ascii base64
-        try {
-          decodedText = atob(encodedText);
-        } catch (e2) {
-          console.warn('Failed to decode hasiye text:', e2);
-          return;
-        }
+        console.warn('Failed to decode hasiye text:', _e);
+        return;
       }
 
       let translation = lookupMeal(decodedText);
@@ -79,7 +76,8 @@ const HasiyePopup: React.FC<HasiyePopupProps> = ({ bookKey }) => {
       setArabicText(decodedText);
       setTranslationText(translation);
 
-      const gridCell = document.getElementById(`gridcell-${bookKey}`);
+      // Use data-book-key attribute for robust lookup instead of fragile ID-based selector
+      const gridCell = document.querySelector(`[data-book-key="${CSS.escape(bookKey)}"]`);
       if (gridCell) {
         const rect = gridCell.getBoundingClientRect();
 

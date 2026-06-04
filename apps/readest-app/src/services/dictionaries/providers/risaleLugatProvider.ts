@@ -10,6 +10,49 @@ interface LugatEntry extends Record<string, string | null> {
   definition: string;
 }
 
+// ── Turkish normalization ───────────────────────────────────────────
+
+/**
+ * Strip common Turkish suffixes to find the root/stem form.
+ * This is a heuristic normalizer — not a full morphological analyzer.
+ * It handles the most common derivational and inflectional suffixes
+ * that prevent LIKE 'query%' from matching in agglutinated lookups.
+ *
+ * Examples:
+ *   "kitabı"    → "kitap"   (possessive + consonant mutation)
+ *   "eserlerin" → "eser"    (plural + genitive)
+ *   "imanın"    → "iman"    (genitive)
+ *   "Allah'ın"  → "Allah"   (genitive with apostrophe)
+ */
+function turkishNormalize(word: string): string[] {
+  const candidates: string[] = [word];
+
+  // Remove apostrophized suffixes: Allah'ın → Allah
+  const apostropheIdx = word.indexOf("'");
+  if (apostropheIdx > 0) {
+    candidates.push(word.slice(0, apostropheIdx));
+  }
+
+  // Aggressive suffix stripping — try removing common suffixes
+  const stem = word
+    // Plural: -lar, -ler
+    .replace(/(?:l[ae]r)$/i, '')
+    // Possessive: -(s)I, -(s)i, -(s)ı, -(s)u, -(s)ü, -(n)ın, -(n)in, -(n)un, -(n)ün
+    .replace(/(?:[sş]?(?:[ıiuü]|in?[a-z]?))$/i, '')
+    // Case suffixes: -da, -de, -ta, -te, -dan, -den, -tan, -ten
+    .replace(/(?:[dt][ae]n?)$/i, '')
+    // Dative: -(y)A, -(y)a, -(y)e
+    .replace(/(?:y?[ae])$/i, '')
+    // Other common: -ki, -ken, -ce, -ca, -le, -la
+    .replace(/(?:k[ei]|k[ae]n|[cj][ae]|l[ae])$/i, '');
+
+  if (stem && stem !== word && stem.length >= 3) {
+    candidates.push(stem);
+  }
+
+  return candidates;
+}
+
 export const createRisaleLugatProvider = (appService: AppService): DictionaryProvider => {
   let db: DatabaseService | null = null;
   let initPromise: Promise<DatabaseService | null> | null = null;
@@ -92,24 +135,48 @@ export const createRisaleLugatProvider = (appService: AppService): DictionaryPro
       try {
         const query = word.toLowerCase();
         const level = ctx.dictionaryLevel ?? 3; // Default to Tümü
-
-        // level 3 means show everything
         const levelClause = level < 3 ? 'AND level >= ?' : '';
-        const params = level < 3 ? [query, level] : [query];
 
-        // 1. Try exact term match
-        let results = await database.select<LugatEntry>(
+        let results: LugatEntry[] | null = null;
+
+        // ── Multi-step lookup (Turkish agglutination aware) ──
+
+        // Step 1: Exact match on original query
+        const exactParams = level < 3 ? [query, level] : [query];
+        results = await database.select<LugatEntry>(
           `SELECT term, arabic, definition FROM lugat WHERE term = ? ${levelClause} LIMIT 1`,
-          params,
+          exactParams,
         );
 
-        // 2. Fallback to prefix search using LIKE (FTS5 not available in WASM)
+        // Step 2: Prefix LIKE on original query
         if ((!results || results.length === 0) && query.length > 2) {
           const likeParams = level < 3 ? [`${query}%`, level] : [`${query}%`];
           results = await database.select<LugatEntry>(
-            `SELECT term, arabic, definition FROM lugat WHERE term LIKE ? ${levelClause} LIMIT 1`,
+            `SELECT term, arabic, definition FROM lugat WHERE term LIKE ? ${levelClause} LIMIT 3`,
             likeParams,
           );
+        }
+
+        // Step 3: Try normalized candidates (handles agglutination)
+        if ((!results || results.length === 0) && query.length > 3) {
+          const candidates = turkishNormalize(query);
+          for (const cand of candidates) {
+            if (cand === query || cand.length < 3) continue;
+            // Exact on normalized
+            const normParams = level < 3 ? [cand, level] : [cand];
+            results = await database.select<LugatEntry>(
+              `SELECT term, arabic, definition FROM lugat WHERE term = ? ${levelClause} LIMIT 1`,
+              normParams,
+            );
+            if (results && results.length > 0) break;
+            // Prefix on normalized
+            const normLikeParams = level < 3 ? [`${cand}%`, level] : [`${cand}%`];
+            results = await database.select<LugatEntry>(
+              `SELECT term, arabic, definition FROM lugat WHERE term LIKE ? ${levelClause} LIMIT 1`,
+              normLikeParams,
+            );
+            if (results && results.length > 0) break;
+          }
         }
 
         if (!results || results.length === 0) {

@@ -1,6 +1,6 @@
 # Risale AI Studio — Универсальный промт для AI-ассистента
 
-> v1.2 | 2026-06-03 | Полный аудит, исправлены пути, добавлены пропущенные инструменты, синхронизация с Readest v0.11.4
+> v1.3 | 2026-06-04 | Тяжёлый аудит + P0/P1/P2 исправления: TextDecoder, font stripping (11→4.9MB), MeaningMode IndexedDB+бинарный поиск, Lugat турецкая нормализация, HasiyePopup data-attribute refactor
 
 ---
 
@@ -49,8 +49,8 @@
 - `tools/build-lugat-json.py` — экспорт lugat.db → JSON для meaningMode
 
 ### Книги (EPUB)
-- `apps/readest-app/builtin-books/` — 15 EPUB для Tauri
-- `apps/readest-app/public/builtin-books/` — 15 EPUB для web (Next.js static)
+- `apps/readest-app/builtin-books/` — 16 EPUB для Tauri
+- `apps/readest-app/public/builtin-books/` — 16 EPUB для web (Next.js static)
 - `tools/generate-epub/generate.py` — генератор EPUB из Diyanet HTML (основной)
 - `tools/generate-epub/generate_from_markdown.py` — генератор EPUB из Obsidian Markdown (альтернативный)
 - `tools/verify-epub.py` — проверка markdown→EPUB
@@ -66,10 +66,10 @@
 - ⚠️ Порядок важен: `hasiye` → `meaning-mode` → `ui-effects` → ...
 
 ### Шрифты
-- `apps/readest-app/public/fonts/latin/ITCSouvenir/` — 8 TTF (Light→Bold + Italics) 
-- `apps/readest-app/public/fonts/latin/MinionPro/` — 32 TTF/WOFF2 (Regular→Bold + Italics + Display + Caption) 
-- `apps/readest-app/public/fonts/arabic/NassimPro/` — 8 OTF (4 веса: Regular/Medium/Semibold/Extrabold)
-- `apps/readest-app/public/fonts/cyrillic/KazimirText/` — 6 TTF/WOFF2 
+- `apps/readest-app/public/fonts/latin/ITCSouvenir/` — 4 TTF (Light + Light Italic + Bold + Bold Italic) 
+- `apps/readest-app/public/fonts/latin/MinionPro/` — 8 TTF/WOFF2 (Regular + Italic + Bold + BoldItalic) 
+- `apps/readest-app/public/fonts/arabic/NassimPro/` — 4 OTF (4 веса: Regular/Medium/Semibold/Extrabold)
+- `apps/readest-app/public/fonts/cyrillic/KazimirText/` — 2 TTF/WOFF2 (Regular only)
 - `apps/readest-app/public/fonts/builtin-fonts.css` — @font-face для всех встроенных шрифтов
 - `apps/readest-app/src/styles/fonts.ts` — динамическая загрузка шрифтов + injectBuiltinFontFaces()
 - `apps/readest-app/src/utils/style.ts` — getFontStyles() с per-script шрифтами + escapeFontFamily()
@@ -152,13 +152,13 @@ git push origin main --no-verify
 git push gitlab main --no-verify
 
 # 7. Перегенерация EPUB после правок генератора
-PYTHONIOENCODING=utf-8 python tools/generate-epub/generate.py          # из Diyanet HTML
-PYTHONIOENCODING=utf-8 python tools/generate-epub/generate_from_markdown.py  # из Markdown
+PYTHONUTF8=1 python tools/generate-epub/generate.py          # из Diyanet HTML
+PYTHONUTF8=1 python tools/generate-epub/generate_from_markdown.py  # из Markdown
 
 # 8. Верификация EPUB
-PYTHONIOENCODING=utf-8 python tools/verify-epub.py
-PYTHONIOENCODING=utf-8 python tools/verify-diyanet.py
-PYTHONIOENCODING=utf-8 python tools/verify-kitaplar.py
+PYTHONUTF8=1 python tools/verify-epub.py
+PYTHONUTF8=1 python tools/verify-diyanet.py
+PYTHONUTF8=1 python tools/verify-kitaplar.py
 
 # 9. После изменения lugat.db — перегенерировать JSON для meaningMode
 python tools/build-lugat-json.py
@@ -170,18 +170,20 @@ cp apps/readest-app/data/lugat.db apps/readest-app/public/data/lugat.db
 
 ## 🐛 Известные баги и особенности
 
-1. **HasiyePopup** — хрупкий DOM-селектор `getElementById('gridcell-...')`. При изменении структуры BooksGrid сломается.
-2. **risaleLugatProvider** — LIKE-фолбек на Web (`term LIKE 'query%'`) не работает с турецкой агглютинацией. Нужен stemming или триграмный поиск.
-3. **FTS5** — доступен в Tauri/десктоп (native SQLite), НЕдоступен в Web/WASM (turso-database-wasm). Код ветвится: `appService.appPlatform === 'web' ? LIKE : FTS5`.
-4. **lugat.db level** — колонка `level` существует, но импорт из frekans покрывает не все 38,963 термина. Нематченные термины имеют level=3 (Tümü).
-5. **Minion Pro** — 32 файла в public/fonts, но динамически грузятся только essential веса. Остальные лежат мёртвым грузом (~15 MB).
+1. ~~**HasiyePopup** — хрупкий DOM-селектор `getElementById('gridcell-...')`.~~ **ИСПРАВЛЕНО (2026-06-04):** заменён на `querySelector('[data-book-key="..."]')` с CSS.escape().
+2. ~~**risaleLugatProvider** — LIKE-фолбек на Web (`term LIKE 'query%'`) не работает с турецкой агглютинацией.~~ **ИСПРАВЛЕНО (2026-06-04):** добавлен многошаговый поиск с турецкой нормализацией (апострофы, падежные/притяжательные/множественные суффиксы).
+3. **FTS5** — доступен в Tauri/десктоп (native SQLite), НЕдоступен в Web/WASM (turso-database-wasm). Код ветвится: `appService.appPlatform === 'web' ? LIKE+normalization : FTS5`.
+4. **lugat.db level** — колонка `level` существует, но импорт из frekans покрывает не все 38,963 термина. Нематченные термины имеют level=3 (Tümü) — 25,157 из 38,963 (64.6%).
+5. **Font Stripping** — выполнена очистка (2026-06-04): удалены неиспользуемые начертания Minion Pro (Condensed/Medium/Semibold — 24 файла), ITC Souvenir (Demi/Medium — 4 файла), Nassim Latin (4 файла). Размер fonts/: 11 MB → 4.9 MB (55% экономии).
 6. **`registry.ts` fs bug** — ПРОВЕРЕНО И ИСПРАВЛЕНО (2026-06-03). Теперь `fs` (AppService) корректно передаётся в `builtinFor`, что позволяет `risaleLugatProvider` инициализироваться.
 7. **customDictionaryStore.test.ts** — флакающий тест из-за фоновых изменений. Иногда падает, иногда нет.
-8. **EPUB дубликаты** — `builtin-books/` (15 EPUB для Tauri) и `public/builtin-books/` (15 EPUB для web) должны быть синхронизированы.
+8. **EPUB дубликаты** — `builtin-books/` (16 EPUB для Tauri) и `public/builtin-books/` (16 EPUB для web) должны быть синхронизированы.
 9. **`/data/lugat.db`** — бинарный файл (~10MB). В гите — OK, но при изменениях нужно копировать в `public/data/` и перегенерировать `lugat-terms.json`.
 10. **reactCompiler** — отключён в next.config.mjs. Требует `babel-plugin-react-compiler` в node_modules (нестабильно в pnpm).
 11. **Cargo fmt** — на Windows может не быть Rust. Если CI падает на `rust_lint` → установить Rust через winget.
-12. **meaningMode** — трансформер загружает 4.6 MB JSON на первой странице. При медленном интернете — задержка. Кешируется в module scope.
+12. ~~**meaningMode** — трансформер загружает 4.6 MB JSON на первой странице.~~ **ОПТИМИЗИРОВАНО (2026-06-04):** бинарный поиск по сортированному массиву (O(log n)) + IndexedDB-кеш. Первый запуск: JSON-загрузка → кеш в IDB. Последующие: загрузка из IDB (без сети).
+13. **Dirty Submodules** — `packages/js-mdict` и `apps/readest-app/src-tauri/plugins/tauri-plugin-webview-upgrade` имеют незакоммиченные локальные изменения. При `git clone --recurse-submodules` на новой машине изменения потеряются. Нужно либо закоммитить в форк, либо откатить.
+14. **lugat-terms.json рассинхрон** — после каждого `import-frekans/import.py` или ручного изменения `lugat.db` нужно перегенерировать JSON: `python tools/build-lugat-json.py`. Иначе meaningMode в Web работает с устаревшими данными.
 
 ---
 
@@ -203,10 +205,10 @@ cp apps/readest-app/data/lugat.db apps/readest-app/public/data/lugat.db
 
 ---
 
-## 📊 Текущий статус ROADMAP (14/21 завершено, 3 в процессе, 4 не начато)
+## 📊 Текущий статус ROADMAP (15/21 завершено, 2 в процессе, 4 не начато)
 
 ```
-✅ 0.1 EPUB generator (15 книг, Diyanet HTML + Markdown)
+✅ 0.1 EPUB generator (16 книг, Diyanet HTML + Markdown)
 ✅ 0.2 Lugat import (38,963 терминов, level 0-3)
 🔶 0.3 RAG passages (скрипт готов, нужен SUPABASE_ADMIN_KEY и запуск SQL)
 ✅ 0.4 Meal import (68 JSON файлов)

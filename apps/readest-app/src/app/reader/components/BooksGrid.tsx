@@ -111,6 +111,7 @@ const BooksGrid: React.FC<BooksGridProps> = ({ bookKeys, onCloseBook, onGoToLibr
         return (
           <div
             id={`gridcell-${bookKey}`}
+            data-book-key={bookKey}
             key={bookKey}
             className={clsx(
               'relative h-full w-full overflow-hidden',

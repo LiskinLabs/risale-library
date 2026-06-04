@@ -1,6 +1,16 @@
 import type { Transformer } from './types';
 
 /**
+ * Encode a UTF-8 string as Base64 using standard Web APIs.
+ * Uses TextEncoder + btoa — works in browser, Node.js, Workers, and WASM.
+ */
+function encodeBase64(str: string): string {
+  const bytes = new TextEncoder().encode(str);
+  const binString = Array.from(bytes, (b) => String.fromCodePoint(b)).join('');
+  return btoa(binString);
+}
+
+/**
  * Haşiye transformer — makes Arabic/Quranic text interactive.
  *
  * Wraps Arabic/rtl elements with data attributes so the reader UI can
@@ -33,7 +43,7 @@ export const hasiyeTransformer: Transformer = {
         const plain = inner.replace(/<[^>]+>/g, '').trim();
         if (!plain) return match; // skip empty
 
-        const encoded = Buffer.from(plain).toString('base64');
+        const encoded = encodeBase64(plain);
 
         // Ensure hasiye-arabic marker class is present
         let newAttrs = attrs;
@@ -67,7 +77,7 @@ export const hasiyeTransformer: Transformer = {
         let hasArabic = false;
         const processed = inner.replace(arabicWordRegex, (arabic: string) => {
           hasArabic = true;
-          const encoded = Buffer.from(arabic.trim()).toString('base64');
+          const encoded = encodeBase64(arabic.trim());
           return `<span class="arabic-inline hasiye-arabic" data-hasiye-text="${encoded}">${arabic}</span>`;
         });
         return hasArabic ? `${openTag}${processed}${closeTag}` : `${openTag}${inner}${closeTag}`;
