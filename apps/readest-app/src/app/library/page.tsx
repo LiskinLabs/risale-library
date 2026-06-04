@@ -1,6 +1,8 @@
 'use client';
 
 import clsx from 'clsx';
+
+const debug = process.env['NODE_ENV'] === 'development' ? console.log : (..._args: unknown[]) => {};
 import * as React from 'react';
 import { MdChevronRight } from 'react-icons/md';
 import { useState, useRef, useEffect, Suspense, useCallback } from 'react';
@@ -451,7 +453,7 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
       const settings = await appService.loadSettings();
       const bookIds: string[] = [];
       for (const file of openWithFiles) {
-        console.log('Open with book:', file);
+        debug('Open with book:', file);
         try {
           const temp = appService.isMobile ? false : !settings.autoImportBooksOnOpen;
           // A file shared into Readest on mobile (the OS share-sheet) is a
@@ -470,13 +472,13 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
             bookIds.push(book.hash);
           }
         } catch (error) {
-          console.log('Failed to import book:', file, error);
+          debug('Failed to import book:', file, error);
         }
       }
       setLibrary(libraryBooks);
       appService.saveLibraryBooks(libraryBooks);
 
-      console.log('Opening books:', bookIds);
+      debug('Opening books:', bookIds);
       if (bookIds.length > 0) {
         setPendingNavigationBookIds(bookIds);
         return true;
@@ -500,7 +502,7 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
         bookIds.push(book.hash);
       }
     }
-    console.log('Opening last books:', bookIds);
+    debug('Opening last books:', bookIds);
     if (bookIds.length > 0) {
       setPendingNavigationBookIds(bookIds);
       return true;
@@ -979,7 +981,7 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
 
   const handleImportBooksFromFiles = async () => {
     setIsSelectMode(false);
-    console.log('Importing books from files...');
+    debug('Importing books from files...');
     selectFiles({ type: 'books', multiple: true }).then((result) => {
       if (result.files.length === 0 || result.error) return;
       const groupId = searchParams?.get('group') || '';
@@ -996,26 +998,26 @@ const LibraryPageContent = ({ searchParams }: { searchParams: ReadonlyURLSearchP
     // file path — no inbox, no upload-then-download, no server round-trip
     // — `importBooks` is the same call drag-drop uses.
     if (!isTauriAppPlatform()) return;
-    console.log('[clip] start', { url });
+    debug('[clip] start', { url });
     setIsSelectMode(false);
     const t0 = performance.now();
     const html = await invoke<string>('clip_url', { url, options: getClipOptions(_) });
-    console.log('[clip] fetched', {
+    debug('[clip] fetched', {
       bytes: html.length,
       ms: Math.round(performance.now() - t0),
     });
     const t1 = performance.now();
     const book = await convertToEpubWithWorker({ kind: 'page', html, url });
-    console.log('[clip] epub built', {
+    debug('[clip] epub built', {
       title: book.title,
       author: book.author || undefined,
       bytes: book.file.size,
       ms: Math.round(performance.now() - t1),
     });
     const groupId = searchParams?.get('group') || '';
-    console.log('[clip] importing locally', { name: book.file.name, groupId: groupId || null });
+    debug('[clip] importing locally', { name: book.file.name, groupId: groupId || null });
     await importBooks([{ file: book.file }], groupId);
-    console.log('[clip] done');
+    debug('[clip] done');
   };
 
   const handleImportBooksFromDirectory = async (dirPath?: string) => {

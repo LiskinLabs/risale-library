@@ -54,8 +54,13 @@ export function buildGlobalLookupTool(args: BuildGlobalLookupToolArgs) {
         }
 
         // 3. Map to RetrievedChunk format and append to sourceStore
-        // biome-ignore lint/suspicious/noExplicitAny: Supabase RPC returns dynamic data
-        const chunks: RetrievedChunk[] = data.map((d: any) => ({
+        interface RpcRow {
+          id: string;
+          book_name: string;
+          content: string;
+          similarity: number;
+        }
+        const chunks: RetrievedChunk[] = (data as RpcRow[]).map((d, i) => ({
           id: d.id,
           bookHash: 'global',
           cfi: '', // No CFI for global search yet
@@ -63,6 +68,7 @@ export function buildGlobalLookupTool(args: BuildGlobalLookupToolArgs) {
           sectionIndex: 0,
           chapterTitle: `${d.book_name} | Global`,
           text: d.content,
+          positionIndex: i,
           score: d.similarity,
         }));
 

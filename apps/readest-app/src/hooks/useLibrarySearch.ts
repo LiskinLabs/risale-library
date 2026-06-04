@@ -26,11 +26,7 @@ export const useLibrarySearch = (query: string) => {
       const nonDeletedBooks = library.filter((b) => !b.deletedAt);
 
       for (const book of nonDeletedBooks) {
-        const author =
-          typeof book.author === 'string'
-            ? book.author
-            : // biome-ignore lint/suspicious/noExplicitAny: required for polymorphic author type
-              ((book.author as any)?.name as string) || (book.metadata?.author as string) || '';
+        const author = book.author || (book.metadata?.author as string) || '';
 
         await insert(oramaDb, {
           title: book.title,
@@ -57,8 +53,7 @@ export const useLibrarySearch = (query: string) => {
       }
 
       try {
-        // biome-ignore lint/suspicious/noExplicitAny: required by Orama types
-        const searchResults = await search(db as any, {
+        const searchResults = await search(db as Parameters<typeof search>[0], {
           term: query,
           properties: ['title', 'author', 'tags', 'description'],
           tolerance: 1,

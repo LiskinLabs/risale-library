@@ -1,6 +1,5 @@
 import DOMPurify from 'dompurify';
 import type { Transformer } from './types';
-// import { diff } from '@/utils/diff';
 
 const DOCTYPE_XHTML11 = `<!DOCTYPE html PUBLIC
 "-//W3C//DTD XHTML 1.1//EN"
@@ -50,8 +49,6 @@ export const sanitizerTransformer: Transformer = {
     serialized = '<?xml version="1.0" encoding="utf-8"?>' + DOCTYPE_XHTML11 + serialized;
     serialized = serialized.replace(/(<head[^>]*>)/i, '\n$1');
     serialized = serialized.replace(/(<\/body>)(<\/html>)/i, '$1\n$2');
-
-    // console.log(`Sanitizer diff:\n${diff(result, serialized)}`);
 
     return serialized;
   },
