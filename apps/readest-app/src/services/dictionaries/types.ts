@@ -182,6 +182,7 @@ export const BUILTIN_PROVIDER_IDS = {
   wiktionary: 'builtin:wiktionary',
   wikipedia: 'builtin:wikipedia',
   risaleLugat: 'builtin:risale-lugat',
+  aiDictionary: 'builtin:ai-dictionary',
   /**
    * "Sentinel" id for the OS-native dictionary (macOS Dictionary.app via the
    * `dict://` URL scheme; iOS `UIReferenceLibraryViewController`; Android

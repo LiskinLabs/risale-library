@@ -160,11 +160,10 @@ const Annotator: React.FC<{ bookKey: string }> = ({ bookKey }) => {
   const trianglePadding = popupPadding * 2 + 6;
   const maxWidth = window.innerWidth - 2 * popupPadding;
   const maxHeight = window.innerHeight - 2 * popupPadding;
-  const dictPopupWidth = Math.min(480, maxWidth);
-  // Tall enough to fit a header + 2-3 expanded cards comfortably. The popup
-  // shows all enabled providers stacked (no tabs) so it needs more vertical
-  // room than the legacy single-tab layout.
-  const dictPopupHeight = Math.min(360, maxHeight);
+  const dictPopupWidth = Math.min(540, maxWidth);
+  // Tall enough to fit AI-synthesized definitions with passages, grammar notes,
+  // and multiple provider cards. Increased from 360 to 600 for rich AI content.
+  const dictPopupHeight = Math.min(600, maxHeight);
   const transPopupWidth = Math.min(480, maxWidth);
   const transPopupHeight = Math.min(265, maxHeight);
   const proofreadPopupWidth = Math.min(440, maxWidth);

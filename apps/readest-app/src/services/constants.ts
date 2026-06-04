@@ -137,8 +137,14 @@ export const DEFAULT_SYSTEM_SETTINGS: Partial<SystemSettings> = {
 
   customDictionaries: [],
   dictionarySettings: {
-    providerOrder: ['builtin:risale-lugat', 'builtin:wiktionary', 'builtin:wikipedia'],
+    providerOrder: [
+      'builtin:ai-dictionary',
+      'builtin:risale-lugat',
+      'builtin:wiktionary',
+      'builtin:wikipedia',
+    ],
     providerEnabled: {
+      'builtin:ai-dictionary': true,
       'builtin:risale-lugat': true,
       'builtin:wiktionary': true,
       'builtin:wikipedia': true,
