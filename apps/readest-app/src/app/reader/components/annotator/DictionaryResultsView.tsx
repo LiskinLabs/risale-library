@@ -362,7 +362,16 @@ interface DictionaryResultsHeaderProps {
   canGoBack: boolean;
   goBack: () => void;
   onManage?: () => void;
+  dictionaryLanguage?: string;
+  onLanguageChange?: (lang: string) => void;
 }
+
+const DICT_LANGS: { code: string; label: string; flag: string }[] = [
+  { code: 'ru', label: 'Русский', flag: '🇷🇺' },
+  { code: 'tr', label: 'Türkçe', flag: '🇹🇷' },
+  { code: 'en', label: 'English', flag: '🇬🇧' },
+  { code: 'ar', label: 'العربية', flag: '🇸🇦' },
+];
 
 export const DictionaryResultsHeader: React.FC<DictionaryResultsHeaderProps> = ({
   headerClassName,
@@ -370,6 +379,8 @@ export const DictionaryResultsHeader: React.FC<DictionaryResultsHeaderProps> = (
   canGoBack,
   goBack,
   onManage,
+  dictionaryLanguage,
+  onLanguageChange,
 }) => {
   const _ = useTranslation();
   return (
@@ -386,9 +397,26 @@ export const DictionaryResultsHeader: React.FC<DictionaryResultsHeaderProps> = (
           </button>
         ) : null}
       </div>
-      <span data-testid='dict-title' className='line-clamp-1 flex-1 text-center font-bold'>
-        {currentWord}
-      </span>
+      <div className='flex flex-1 items-center justify-center gap-1'>
+        <span data-testid='dict-title' className='line-clamp-1 text-center font-bold'>
+          {currentWord}
+        </span>
+        {onLanguageChange && (
+          <select
+            className='select select-ghost select-xs text-base-content/60 h-6 min-h-6 w-auto text-[11px]'
+            value={dictionaryLanguage || 'ru'}
+            onChange={(e) => onLanguageChange(e.target.value)}
+            aria-label={_('Dictionary language')}
+            title={_('Dictionary language')}
+          >
+            {DICT_LANGS.map((l) => (
+              <option key={l.code} value={l.code}>
+                {l.flag} {l.label}
+              </option>
+            ))}
+          </select>
+        )}
+      </div>
       <div className='flex h-8 w-8 items-center justify-center'>
         {onManage ? (
           <button

@@ -1,9 +1,12 @@
 'use client';
 
-import React from 'react';
+import React, { useCallback } from 'react';
 
 import Popup from '@/components/Popup';
 import { Position } from '@/utils/sel';
+import { useEnv } from '@/context/EnvContext';
+import { useReaderStore } from '@/store/readerStore';
+import { saveViewSettings } from '@/helpers/settings';
 import {
   useDictionaryResults,
   DictionaryResultsHeader,
@@ -19,11 +22,6 @@ interface DictionaryPopupProps {
   popupWidth: number;
   popupHeight: number;
   onDismiss?: () => void;
-  /**
-   * Invoked when the user clicks the header gear. The host (Annotator)
-   * decides how to navigate — typically by opening the SettingsDialog and
-   * deep-linking to the dictionaries sub-page.
-   */
   onManage?: () => void;
 }
 
@@ -38,7 +36,25 @@ const DictionaryPopup: React.FC<DictionaryPopupProps> = ({
   onDismiss,
   onManage,
 }) => {
+  const { envConfig } = useEnv();
+  const { getViewSettings, setViewSettings } = useReaderStore();
   const state = useDictionaryResults({ word, lang, bookKey });
+
+  const handleLanguageChange = useCallback(
+    (newLang: string) => {
+      const viewSettings = getViewSettings(bookKey);
+      if (!viewSettings) return;
+      viewSettings.dictionaryLanguage = newLang;
+      setViewSettings(bookKey, viewSettings);
+      saveViewSettings(envConfig, bookKey, 'dictionaryLanguage', newLang, true, false);
+    },
+    [bookKey, envConfig, getViewSettings, setViewSettings],
+  );
+
+  // Read current language from viewSettings for the dropdown
+  const viewSettings = getViewSettings(bookKey);
+  const currentLang = viewSettings?.dictionaryLanguage || 'ru';
+
   return (
     <Popup
       width={popupWidth}
@@ -48,8 +64,6 @@ const DictionaryPopup: React.FC<DictionaryPopupProps> = ({
       className='select-text'
       onDismiss={onDismiss}
     >
-      {/* `overflow-hidden rounded-lg` clips the body's section backgrounds /
-          borders to the Popup's rounded shape. */}
       <div className='flex h-full flex-col overflow-hidden rounded-lg pt-4'>
         <DictionaryResultsHeader
           headerClassName='-mt-2'
@@ -57,6 +71,8 @@ const DictionaryPopup: React.FC<DictionaryPopupProps> = ({
           canGoBack={state.canGoBack}
           goBack={state.goBack}
           onManage={onManage}
+          dictionaryLanguage={currentLang}
+          onLanguageChange={handleLanguageChange}
         />
         <div className='min-h-0 flex-1'>
           <DictionaryResultsBody {...state} />
