@@ -133,6 +133,8 @@ const HoverDictionaryOverlay: React.FC<{ bookKey: string }> = ({ bookKey }) => {
       if (!iframe?.contentWindow) return;
 
       try {
+        // JSON.stringify for safe serialization — prevents injection via bookKey
+        const safeKey = JSON.stringify(bookKey);
         iframe.contentWindow.eval(`
 (function() {
   if (window.__hoverDictV2) return;
@@ -158,16 +160,16 @@ const HoverDictionaryOverlay: React.FC<{ bookKey: string }> = ({ bookKey }) => {
     throttle = setTimeout(function() {
       throttle = null;
       var w = getWordAt(e.clientX, e.clientY);
-      if (!w) { if (lastWord) { window.parent.postMessage({ type:'hover-leave', bookKey:'${bookKey}' }, '*'); lastWord=''; } return; }
+      if (!w) { if (lastWord) { window.parent.postMessage({ type:'hover-leave', bookKey:${safeKey} }, '*'); lastWord=''; } return; }
       if (w !== lastWord) {
         lastWord = w;
-        window.parent.postMessage({ type:'hover-word', word:w, x:e.clientX, y:e.clientY, bookKey:'${bookKey}' }, '*');
+        window.parent.postMessage({ type:'hover-word', word:w, x:e.clientX, y:e.clientY, bookKey:${safeKey} }, '*');
       }
     }, 180);
   }, { passive:true });
 
   document.addEventListener('mouseleave', function() {
-    window.parent.postMessage({ type:'hover-leave', bookKey:'${bookKey}' }, '*');
+    window.parent.postMessage({ type:'hover-leave', bookKey:${safeKey} }, '*');
     lastWord = '';
   });
 })();
