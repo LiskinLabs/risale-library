@@ -336,12 +336,14 @@ function renderSimpleDefinition(
 ): void {
   container.innerHTML = '';
   const root = document.createElement('div');
+  root.setAttribute('data-ai-result', 'simple');
   root.style.cssText = 'font-size:14px;line-height:1.6;padding:4px 0;';
   root.innerHTML = `
     <div style="font-weight:600;font-size:16px;margin-bottom:8px;">${escapeHtml(word)}</div>
     <div style="color:var(--text-secondary, inherit);">${escapeHtml(definition)}</div>
-    <div style="margin-top:10px;font-size:11px;opacity:0.5;">✨ Risale AI Sözlük</div>
   `;
+  root.appendChild(saveButtonEl(container, word));
+  root.appendChild(poweredByEl());
   container.appendChild(root);
 }
 
@@ -355,6 +357,7 @@ function renderFullDefinition(
 ): void {
   container.innerHTML = '';
   const root = document.createElement('div');
+  root.setAttribute('data-ai-result', 'full');
   root.style.cssText =
     'font-size:14px;line-height:1.7;padding:4px 0;display:flex;flex-direction:column;gap:10px;';
 
@@ -435,6 +438,8 @@ function renderFullDefinition(
     root.appendChild(src);
   }
 
+  // Save button
+  root.appendChild(saveButtonEl(container, word));
   // Powered by
   root.appendChild(poweredByEl());
   container.appendChild(root);
@@ -450,6 +455,7 @@ function renderPassageAnalysis(
 ): void {
   container.innerHTML = '';
   const root = document.createElement('div');
+  root.setAttribute('data-ai-result', 'passage');
   root.style.cssText =
     'font-size:14px;line-height:1.7;padding:4px 0;display:flex;flex-direction:column;gap:12px;';
 
@@ -504,6 +510,7 @@ function renderPassageAnalysis(
     root.appendChild(src);
   }
 
+  root.appendChild(saveButtonEl(container, originalText.slice(0, 50)));
   root.appendChild(poweredByEl());
   container.appendChild(root);
 }
@@ -599,4 +606,42 @@ function poweredByEl(): HTMLElement {
   el.style.cssText = 'margin-top:4px;font-size:11px;opacity:0.4;text-align:right;';
   el.textContent = '✨ Risale AI Sözlük';
   return el;
+}
+
+function saveButtonEl(container: HTMLElement, word: string): HTMLElement {
+  const btn = document.createElement('button');
+  btn.style.cssText =
+    'display:inline-flex;align-items:center;gap:4px;margin-top:8px;padding:5px 12px;' +
+    'font-size:12px;border:1px solid var(--btn-border,rgba(128,128,128,0.3));' +
+    'border-radius:6px;background:transparent;cursor:pointer;' +
+    'transition:background 0.15s;color:var(--text-secondary,inherit);';
+  btn.textContent = '📝 ' + _('Notlara Kaydet');
+  btn.title = _('Save AI response as a note');
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    // Get the full rendered HTML of the parent card (all content above the button)
+    const parent = btn.closest('[data-ai-result]') || container;
+    const html = parent.innerHTML;
+    // Dispatch custom event for the note-saving hook to pick up
+    window.dispatchEvent(
+      new CustomEvent('risale:save-ai-note', {
+        detail: { word, html, timestamp: Date.now() },
+      }),
+    );
+    // Visual feedback
+    btn.textContent = '✅ ' + _('Kaydedildi');
+    btn.style.background = 'var(--badge-bg, #e5e7eb)';
+    setTimeout(() => {
+      btn.textContent = '📝 ' + _('Notlara Kaydet');
+      btn.style.background = 'transparent';
+    }, 2000);
+  });
+  // Hover effect
+  btn.addEventListener('mouseenter', () => {
+    btn.style.background = 'var(--btn-hover-bg, rgba(128,128,128,0.1))';
+  });
+  btn.addEventListener('mouseleave', () => {
+    if (btn.textContent?.startsWith('📝')) btn.style.background = 'transparent';
+  });
+  return btn;
 }

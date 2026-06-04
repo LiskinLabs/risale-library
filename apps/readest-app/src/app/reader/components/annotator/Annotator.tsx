@@ -73,6 +73,7 @@ import ImportAnnotationsDialog from './ImportAnnotationsDialog';
 import Alert from '@/components/Alert';
 import ModalPortal from '@/components/ModalPortal';
 import { useFileSelector } from '@/hooks/useFileSelector';
+import { useSaveAiNote } from '@/hooks/useSaveAiNote';
 import { parseMrexpt } from '@/utils/mrexpt';
 import {
   convertMrexptEntriesToBookNotes,
@@ -96,6 +97,7 @@ const Annotator: React.FC<{ bookKey: string }> = ({ bookKey }) => {
   useNotesSync(bookKey);
   useReadwiseSync(bookKey);
   useHardcoverSync(bookKey);
+  useSaveAiNote(bookKey);
 
   useEffect(() => {
     void loadCustomDictionaries(envConfig).catch((error) => {
