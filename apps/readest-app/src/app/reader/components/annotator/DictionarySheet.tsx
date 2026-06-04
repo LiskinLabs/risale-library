@@ -1,8 +1,11 @@
 'use client';
 
-import React from 'react';
+import React, { useCallback } from 'react';
 
 import Dialog from '@/components/Dialog';
+import { useEnv } from '@/context/EnvContext';
+import { useReaderStore } from '@/store/readerStore';
+import { saveViewSettings } from '@/helpers/settings';
 import {
   useDictionaryResults,
   DictionaryResultsHeader,
@@ -24,7 +27,24 @@ const DictionarySheet: React.FC<DictionarySheetProps> = ({
   onDismiss,
   onManage,
 }) => {
+  const { envConfig } = useEnv();
+  const { getViewSettings, setViewSettings } = useReaderStore();
   const state = useDictionaryResults({ word, lang, bookKey });
+
+  const handleLanguageChange = useCallback(
+    (newLang: string) => {
+      const viewSettings = getViewSettings(bookKey);
+      if (!viewSettings) return;
+      viewSettings.dictionaryLanguage = newLang;
+      setViewSettings(bookKey, viewSettings);
+      saveViewSettings(envConfig, bookKey, 'dictionaryLanguage', newLang, true, false);
+    },
+    [bookKey, envConfig, getViewSettings, setViewSettings],
+  );
+
+  const viewSettings = getViewSettings(bookKey);
+  const currentLang = viewSettings?.dictionaryLanguage || 'ru';
+
   return (
     <Dialog
       isOpen
@@ -37,6 +57,8 @@ const DictionarySheet: React.FC<DictionarySheetProps> = ({
           canGoBack={state.canGoBack}
           goBack={state.goBack}
           onManage={onManage}
+          dictionaryLanguage={currentLang}
+          onLanguageChange={handleLanguageChange}
         />
       }
       contentClassName='!px-0 !mt-0'
