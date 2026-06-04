@@ -147,16 +147,11 @@ export async function POST(req: Request): Promise<Response> {
       return Response.json({ ok: true, definition: def });
     }
 
-    // Auth: skip app auth if the user provides their own API key OR if the server
-    // has API keys in environment variables (DEEPSEEK_API_KEY / GEMINI_API_KEY).
-    // Only require app login when using AI_GATEWAY_API_KEY (shared server resource).
-    const hasOwnKey = !!(
-      body['geminiApiKey'] ||
-      body['deepseekApiKey'] ||
-      process.env['DEEPSEEK_API_KEY'] ||
-      process.env['GEMINI_API_KEY']
-    );
-    if (!hasOwnKey) {
+    // Auth: skip app auth ONLY when the user provides their OWN API key in the request.
+    // Keys from server env vars (DEEPSEEK_API_KEY / GEMINI_API_KEY) are server resources
+    // and REQUIRE authentication to prevent unauthorized usage/quota theft.
+    const userProvidedKey = !!(body['geminiApiKey'] || body['deepseekApiKey']);
+    if (!userProvidedKey) {
       const { user, token } = await validateUserAndToken(req.headers.get('authorization'));
       if (!user || !token) {
         return Response.json({ error: 'Not authenticated' }, { status: 403 });
