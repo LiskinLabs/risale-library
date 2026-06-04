@@ -156,12 +156,8 @@ export const aiDictionaryProvider: DictionaryProvider = {
     const targetLang = dictionaryLanguage || lang || 'ru';
     const complexity = isSimpleWord(word, lang) ? 'simple' : 'complex';
 
-    // ── Check if any API key is configured ──────────────────────────────
-    const keys = getAiKeys();
-    if (Object.keys(keys).length === 0) {
-      renderNoKeyMessage(container, targetLang);
-      return { ok: false, reason: 'error', message: 'No API key configured' };
-    }
+    // ── Try server (which may have env var keys even if user hasn't configured) ──
+    // Don't bail early if no user keys — server may have DEEPSEEK_API_KEY / GEMINI_API_KEY
 
     // ── Simple word: fast basic definition ────────────────────────────
     if (complexity === 'simple') {
@@ -295,7 +291,12 @@ async function fetchFullDefinition(
   if (!data.ok) throw new Error(data.error || 'Unknown error');
 
   try {
-    const parsed = JSON.parse(data.json);
+    // Strip markdown code blocks (```json ... ```) that some models wrap JSON in
+    let jsonStr = data.json.trim();
+    if (jsonStr.startsWith('```')) {
+      jsonStr = jsonStr.replace(/^```(?:json)?\s*\n?/, '').replace(/\n?```\s*$/, '');
+    }
+    const parsed = JSON.parse(jsonStr);
     return {
       headword: parsed.headword || word,
       meaning: parsed.meaning || '',
@@ -312,33 +313,6 @@ async function fetchFullDefinition(
 }
 
 // ── Rendering ──────────────────────────────────────────────────────────
-
-function renderNoKeyMessage(container: HTMLElement, _targetLang: string): void {
-  container.innerHTML = '';
-
-  const wrapper = document.createElement('div');
-  wrapper.style.cssText =
-    'padding:12px;font-size:13px;line-height:1.5;color:var(--text-muted,inherit);text-align:center;';
-
-  const icon = document.createElement('div');
-  icon.style.cssText = 'font-size:28px;margin-bottom:8px;';
-  icon.textContent = '🔑';
-
-  const title = document.createElement('div');
-  title.style.cssText = 'font-weight:600;margin-bottom:4px;';
-  title.textContent = 'AI Sözlük';
-
-  const desc = document.createElement('div');
-  desc.style.cssText = 'opacity:0.7;';
-  desc.textContent = 'API anahtar yapılandırması yok';
-
-  const hint = document.createElement('div');
-  hint.style.cssText = 'font-size:11px;opacity:0.5;margin-top:4px;';
-  hint.textContent = 'Ayarlar → AI → Gemini veya DeepSeek API anahtarı ekleyin';
-
-  wrapper.append(icon, title, desc, hint);
-  container.appendChild(wrapper);
-}
 
 function renderApiError(container: HTMLElement, error: unknown): void {
   container.innerHTML = '';

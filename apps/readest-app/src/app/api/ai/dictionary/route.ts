@@ -11,7 +11,7 @@ interface ModelConfig {
 }
 
 function resolveModel(body: Record<string, unknown>): ModelConfig | { error: string } {
-  // 1. AI Gateway (env var)
+  // 1. AI Gateway (env var) — explicit server-wide key
   const gatewayKey = process.env['AI_GATEWAY_API_KEY'];
   if (gatewayKey) {
     const gateway = createGateway({ apiKey: gatewayKey });
@@ -22,16 +22,17 @@ function resolveModel(body: Record<string, unknown>): ModelConfig | { error: str
     return { provider: 'gateway', model: gateway(modelName) };
   }
 
-  // 2. Direct Gemini API key (from user settings)
-  const geminiKey = body['geminiApiKey'] as string | undefined;
+  // 2. Gemini API key (user setting → env var fallback)
+  const geminiKey = (body['geminiApiKey'] as string | undefined) || process.env['GEMINI_API_KEY'];
   if (geminiKey) {
     const google = createGoogleGenerativeAI({ apiKey: geminiKey });
     const modelName = (body['geminiModel'] as string) || 'gemini-2.5-flash-lite';
     return { provider: 'gemini', model: google(modelName) };
   }
 
-  // 3. Direct DeepSeek API key (from user settings)
-  const deepseekKey = body['deepseekApiKey'] as string | undefined;
+  // 3. DeepSeek API key (user setting → env var fallback)
+  const deepseekKey =
+    (body['deepseekApiKey'] as string | undefined) || process.env['DEEPSEEK_API_KEY'];
   if (deepseekKey) {
     const client = createOpenAICompatible({
       name: 'deepseek',
@@ -43,7 +44,8 @@ function resolveModel(body: Record<string, unknown>): ModelConfig | { error: str
   }
 
   return {
-    error: 'No AI provider configured. Set AI_GATEWAY_API_KEY, geminiApiKey, or deepseekApiKey.',
+    error:
+      'No AI provider configured. Set DEEPSEEK_API_KEY, GEMINI_API_KEY, or AI_GATEWAY_API_KEY in .env.local, or configure in Settings → AI.',
   };
 }
 
@@ -145,9 +147,15 @@ export async function POST(req: Request): Promise<Response> {
       return Response.json({ ok: true, definition: def });
     }
 
-    // Auth: if user provides their own API key, skip app auth (it's their paid resource).
-    // If using the server's AI_GATEWAY_API_KEY, require app login.
-    const hasOwnKey = !!(body['geminiApiKey'] || body['deepseekApiKey']);
+    // Auth: skip app auth if the user provides their own API key OR if the server
+    // has API keys in environment variables (DEEPSEEK_API_KEY / GEMINI_API_KEY).
+    // Only require app login when using AI_GATEWAY_API_KEY (shared server resource).
+    const hasOwnKey = !!(
+      body['geminiApiKey'] ||
+      body['deepseekApiKey'] ||
+      process.env['DEEPSEEK_API_KEY'] ||
+      process.env['GEMINI_API_KEY']
+    );
     if (!hasOwnKey) {
       const { user, token } = await validateUserAndToken(req.headers.get('authorization'));
       if (!user || !token) {
@@ -169,12 +177,17 @@ export async function POST(req: Request): Promise<Response> {
       return Response.json({ ok: true, definition, headword: word });
     }
 
-    const jsonText = await fullDefinition(
+    let jsonText = await fullDefinition(
       word,
       targetLang || 'ru',
       sourceLang || 'tr',
       resolved.model,
     );
+    // Strip markdown code blocks that some models wrap JSON in
+    jsonText = jsonText.trim();
+    if (jsonText.startsWith('```')) {
+      jsonText = jsonText.replace(/^```(?:json)?\s*\n?/, '').replace(/\n?```\s*$/, '');
+    }
     return Response.json({ ok: true, json: jsonText, headword: word });
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : 'Unknown error';
