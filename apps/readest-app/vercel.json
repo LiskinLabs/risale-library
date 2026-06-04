@@ -1,5 +1,5 @@
 {
-  "buildCommand": "next build",
+  "buildCommand": "git submodule update --init --recursive && next build",
   "outputDirectory": ".next",
   "installCommand": "pnpm install --frozen-lockfile",
   "framework": "nextjs"
