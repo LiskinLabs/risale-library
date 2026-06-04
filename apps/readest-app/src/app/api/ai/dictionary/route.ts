@@ -135,6 +135,17 @@ export async function POST(req: Request): Promise<Response> {
     const body = await req.json();
     const { word, targetLang, sourceLang, complexity = 'complex' } = body;
 
+    // Health check mode — just verify the API key works, no auth required for settings UI
+    if (complexity === 'health') {
+      if (!word) return Response.json({ ok: true }); // just checking connectivity
+      const resolved = resolveModel(body);
+      if ('error' in resolved) {
+        return Response.json({ ok: false, error: resolved.error });
+      }
+      const def = await simpleDefinition(word, targetLang || 'en', resolved.model);
+      return Response.json({ ok: true, definition: def });
+    }
+
     if (!word) {
       return Response.json({ error: 'Word required' }, { status: 400 });
     }

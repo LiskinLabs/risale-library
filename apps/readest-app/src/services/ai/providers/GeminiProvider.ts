@@ -4,6 +4,7 @@ import type { AIProvider, AISettings, AIProviderName } from '../types';
 import { aiLogger } from '../logger';
 import { AI_TIMEOUTS } from '../utils/retry';
 import { GEMINI_MODELS } from '../constants';
+import { getAIFetch } from '../utils/httpFetch';
 
 const DEFAULT_MODEL = GEMINI_MODELS.FLASH;
 const DEFAULT_EMBEDDING_MODEL = GEMINI_MODELS.EMBEDDING;
@@ -36,7 +37,9 @@ export class GeminiProvider implements AIProvider {
       throw new Error('Gemini API key required');
     }
     this.apiKey = settings.geminiApiKey;
-    this.google = createGoogleGenerativeAI({ apiKey: this.apiKey });
+    // Use the same custom fetch as DeepSeek/OpenRouter/Ollama providers:
+    // on Tauri desktop → Rust HTTP plugin (no CORS), on web → normal fetch
+    this.google = createGoogleGenerativeAI({ apiKey: this.apiKey, fetch: getAIFetch() });
     aiLogger.provider.init('gemini', settings.geminiModel || DEFAULT_MODEL);
   }
 

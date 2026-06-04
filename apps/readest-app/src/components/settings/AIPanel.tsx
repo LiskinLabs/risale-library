@@ -508,6 +508,33 @@ const AIPanel: React.FC = () => {
     setErrorMessage('');
 
     try {
+      // For web builds, Gemini/DeepSeek APIs block browser-origin requests (CORS).
+      // Test via the server-side /api/ai/dictionary endpoint instead.
+      const isWeb = typeof window !== 'undefined' && !window['__TAURI_INTERNALS__'];
+      if (isWeb && (provider === 'gemini' || provider === 'deepseek')) {
+        const body: Record<string, string> = {
+          word: 'hello',
+          targetLang: 'en',
+          complexity: 'health',
+        };
+        if (provider === 'gemini' && geminiKey) body['geminiApiKey'] = geminiKey;
+        if (provider === 'deepseek' && deepseekKey) body['deepseekApiKey'] = deepseekKey;
+
+        const response = await fetch('/api/ai/dictionary', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(body),
+        });
+        const data = await response.json();
+        if (data.ok) {
+          setConnectionStatus('success');
+        } else {
+          setConnectionStatus('error');
+          setErrorMessage(data.error || _('Invalid API key or connection failed'));
+        }
+        return;
+      }
+
       const effectiveModel = getEffectiveModelId();
       const testSettings: AISettings = {
         ...aiSettings,
