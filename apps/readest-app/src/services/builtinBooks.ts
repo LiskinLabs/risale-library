@@ -8,6 +8,10 @@ export interface BuiltinBookEntry {
   group: 'risale' | 'nur';
   url?: string;
   coverFilename?: string;
+  /** When true, this book is a translation meant for parallel view with a Turkish original */
+  translation?: boolean;
+  /** The filename of the Turkish original this translation pairs with */
+  pairedWith?: string;
 }
 
 export const BUILTIN_BOOKS: BuiltinBookEntry[] = [
@@ -115,6 +119,89 @@ export const BUILTIN_BOOKS: BuiltinBookEntry[] = [
     author: 'Bediüzzaman Said Nursi',
     language: 'tr',
     group: 'nur',
+  },
+
+  // ── Russian Translations (Parallel View) ──
+  {
+    filename: 'ru-sozler-parallel.epub',
+    title: 'Слова',
+    author: 'Бадиуззаман Саид Нурси',
+    language: 'ru',
+    group: 'risale',
+    translation: true,
+    pairedWith: 'sozler.epub',
+  },
+  {
+    filename: 'ru-lemalar-parallel.epub',
+    title: "Лем'алар",
+    author: 'Бадиуззаман Саид Нурси',
+    language: 'ru',
+    group: 'risale',
+    translation: true,
+    pairedWith: 'lemalar.epub',
+  },
+  {
+    filename: 'ru-mektubat-parallel.epub',
+    title: 'Мектубат',
+    author: 'Бадиуззаман Саид Нурси',
+    language: 'ru',
+    group: 'risale',
+    translation: true,
+    pairedWith: 'mektubat.epub',
+  },
+  {
+    filename: 'ru-sualar-parallel.epub',
+    title: 'Шуалар',
+    author: 'Бадиуззаман Саид Нурси',
+    language: 'ru',
+    group: 'risale',
+    translation: true,
+    pairedWith: 'sualar.epub',
+  },
+  {
+    filename: 'ru-mesnevi-parallel.epub',
+    title: 'Месневи-и Нурие',
+    author: 'Бадиуззаман Саид Нурси',
+    language: 'ru',
+    group: 'risale',
+    translation: true,
+    pairedWith: 'mesnevi-i-nuriye.epub',
+  },
+  {
+    filename: 'ru-tarihce-parallel.epub',
+    title: 'История жизни',
+    author: 'Бадиуззаман Саид Нурси',
+    language: 'ru',
+    group: 'risale',
+    translation: true,
+    pairedWith: 'tarihce-i-hayat.epub',
+  },
+  {
+    filename: 'ru-asamusa-parallel.epub',
+    title: 'Аса-йы Муса',
+    author: 'Бадиуззаман Саид Нурси',
+    language: 'ru',
+    group: 'risale',
+    translation: true,
+    pairedWith: 'asa-yi-musa.epub',
+  },
+  {
+    filename: 'ru-emirdag1-parallel.epub',
+    title: 'Эмирдаг Ляхикасы-1',
+    author: 'Бадиуззаман Саид Нурси',
+    language: 'ru',
+    group: 'risale',
+    translation: true,
+    pairedWith: 'emirdag-lahikasi-1.epub',
+  },
+  {
+    filename: 'ru-kucuk-sozler-parallel.epub',
+    title: 'Малые Слова',
+    author: 'Бадиуззаман Саид Нурси',
+    language: 'ru',
+    group: 'nur',
+    translation: true,
+    pairedWith: 'kucuk-kitaplar.epub',
   },
 ];
 
