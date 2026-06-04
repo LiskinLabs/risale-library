@@ -127,23 +127,24 @@ async function fullDefinition(
 
 export async function POST(req: Request): Promise<Response> {
   try {
-    const { user, token } = await validateUserAndToken(req.headers.get('authorization'));
-    if (!user || !token) {
-      return Response.json({ error: 'Not authenticated' }, { status: 403 });
-    }
-
     const body = await req.json();
     const { word, targetLang, sourceLang, complexity = 'complex' } = body;
 
-    // Health check mode — just verify the API key works, no auth required for settings UI
+    // Health check mode — verify API key works, NO auth (called from Settings UI)
     if (complexity === 'health') {
-      if (!word) return Response.json({ ok: true }); // just checking connectivity
+      if (!word) return Response.json({ ok: true });
       const resolved = resolveModel(body);
       if ('error' in resolved) {
         return Response.json({ ok: false, error: resolved.error });
       }
       const def = await simpleDefinition(word, targetLang || 'en', resolved.model);
       return Response.json({ ok: true, definition: def });
+    }
+
+    // Real dictionary lookups require auth
+    const { user, token } = await validateUserAndToken(req.headers.get('authorization'));
+    if (!user || !token) {
+      return Response.json({ error: 'Not authenticated' }, { status: 403 });
     }
 
     if (!word) {
