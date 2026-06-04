@@ -296,35 +296,57 @@ async function fetchFullDefinition(
 
 function renderNoKeyMessage(container: HTMLElement, _targetLang: string): void {
   container.innerHTML = '';
-  const div = document.createElement('div');
-  div.style.cssText =
+
+  const wrapper = document.createElement('div');
+  wrapper.style.cssText =
     'padding:12px;font-size:13px;line-height:1.5;color:var(--text-muted,inherit);text-align:center;';
-  div.innerHTML = `
-    <div style="font-size:28px;margin-bottom:8px;">🔑</div>
-    <div style="font-weight:600;margin-bottom:4px;">AI Sözlük</div>
-    <div style="opacity:0.7;">API anahtar yapılandırması yok</div>
-    <div style="font-size:11px;opacity:0.5;margin-top:4px;">
-      Ayarlar → AI → Gemini veya DeepSeek API anahtarı ekleyin
-    </div>
-  `;
-  container.appendChild(div);
+
+  const icon = document.createElement('div');
+  icon.style.cssText = 'font-size:28px;margin-bottom:8px;';
+  icon.textContent = '🔑';
+
+  const title = document.createElement('div');
+  title.style.cssText = 'font-weight:600;margin-bottom:4px;';
+  title.textContent = 'AI Sözlük';
+
+  const desc = document.createElement('div');
+  desc.style.cssText = 'opacity:0.7;';
+  desc.textContent = 'API anahtar yapılandırması yok';
+
+  const hint = document.createElement('div');
+  hint.style.cssText = 'font-size:11px;opacity:0.5;margin-top:4px;';
+  hint.textContent = 'Ayarlar → AI → Gemini veya DeepSeek API anahtarı ekleyin';
+
+  wrapper.append(icon, title, desc, hint);
+  container.appendChild(wrapper);
 }
 
 function renderApiError(container: HTMLElement, error: unknown): void {
   container.innerHTML = '';
-  const div = document.createElement('div');
-  div.style.cssText =
-    'padding:12px;font-size:13px;line-height:1.5;color:var(--text-muted,inherit);text-align:center;';
   const msg = error instanceof Error ? error.message : String(error);
-  div.innerHTML = `
-    <div style="font-size:28px;margin-bottom:8px;">⚠️</div>
-    <div style="font-weight:600;margin-bottom:4px;">AI Sözlük — Hata</div>
-    <div style="font-size:11px;opacity:0.6;word-break:break-all;">${msg}</div>
-    <div style="font-size:11px;opacity:0.5;margin-top:4px;">
-      Diğer sözlükler aşağıda gösteriliyor
-    </div>
-  `;
-  container.appendChild(div);
+
+  const wrapper = document.createElement('div');
+  wrapper.style.cssText =
+    'padding:12px;font-size:13px;line-height:1.5;color:var(--text-muted,inherit);text-align:center;';
+
+  const icon = document.createElement('div');
+  icon.style.cssText = 'font-size:28px;margin-bottom:8px;';
+  icon.textContent = '⚠️';
+
+  const title = document.createElement('div');
+  title.style.cssText = 'font-weight:600;margin-bottom:4px;';
+  title.textContent = 'AI Sözlük — Hata';
+
+  const msgDiv = document.createElement('div');
+  msgDiv.style.cssText = 'font-size:11px;opacity:0.6;word-break:break-all;';
+  msgDiv.textContent = msg; // textContent prevents XSS
+
+  const hint = document.createElement('div');
+  hint.style.cssText = 'font-size:11px;opacity:0.5;margin-top:4px;';
+  hint.textContent = 'Diğer sözlükler aşağıda gösteriliyor';
+
+  wrapper.append(icon, title, msgDiv, hint);
+  container.appendChild(wrapper);
 }
 
 function renderSimpleDefinition(
