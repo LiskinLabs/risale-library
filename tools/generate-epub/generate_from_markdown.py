@@ -418,9 +418,42 @@ class ObsidianEPUBGenerator:
         return f'<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="tr" lang="tr"><head><title>{escape(self.title)} — İçindekiler</title></head><body><nav epub:type="toc" id="toc"><h1>İçindekiler</h1>{render_nav(self._build_toc_tree())}</nav></body></html>'
 
 def update_ts_manifest():
-    entries = [f"  {{ filename: '{b['filename']}', title: '{b['title'].replace(\"'\", \"\\\\'\")}', author: '{b['author'].replace(\"'\", \"\\\\'\")}', language: 'tr', group: '{b['group']}' }}," for b in BOOKS]
-    ts_code = f"import type {{ Book }} from '@/types/book';\nexport interface BuiltinBookEntry {{ filename: string; title: string; author: string; language: string; group: 'risale' | 'nur'; url?: string; coverFilename?: string; }}\nexport const BUILTIN_BOOKS: BuiltinBookEntry[] = [\n{chr(10).join(entries)}\n];\nexport function getBuiltinBooksBaseUrl(): string {{ if (typeof window !== 'undefined') return `${{window.location.origin}}/builtin-books`; return process.env['NEXT_PUBLIC_BUILTIN_BOOKS_URL'] || 'http://localhost:3000/builtin-books'; }}\nexport const BUILTIN_BOOKS_BASE_URL = '/builtin-books';\nexport function isBuiltinBook(book: Book): boolean {{ return book.builtin === true; }}\nexport function findBuiltinEntry(book: Book): BuiltinBookEntry | undefined {{ return BUILTIN_BOOKS.find((entry) => book.builtin && (book.title === entry.title || book.sourceTitle === entry.filename)); }}\n"
-    with open(MANIFEST_FILE, "w", encoding="utf-8") as f: f.write(ts_code)
+    manifest_entries = []
+    for b in BOOKS:
+        t = b["title"].replace("'", "\\'")
+        a = b["author"].replace("'", "\\'")
+        manifest_entries.append(f"  {{ filename: '{b['filename']}', title: '{t}', author: '{a}', language: 'tr', group: '{b['group']}' }},")
+    
+    ts_code = f"""import type {{ Book }} from '@/types/book';
+
+export interface BuiltinBookEntry {{
+  filename: string;
+  title: string;
+  author: string;
+  language: string;
+  group: 'risale' | 'nur';
+  url?: string;
+  coverFilename?: string;
+}}
+
+export const BUILTIN_BOOKS: BuiltinBookEntry[] = [
+{chr(10).join(manifest_entries)}
+];
+
+export function getBuiltinBooksBaseUrl(): string {{
+  if (typeof window !== 'undefined') return `${{window.location.origin}}/builtin-books`;
+  return process.env['NEXT_PUBLIC_BUILTIN_BOOKS_URL'] || 'http://localhost:3000/builtin-books';
+}}
+
+export const BUILTIN_BOOKS_BASE_URL = '/builtin-books';
+export function isBuiltinBook(book: Book): boolean {{ return book.builtin === true; }}
+export function findBuiltinEntry(book: Book): BuiltinBookEntry | undefined {{
+  return BUILTIN_BOOKS.find((entry) => book.builtin && (book.title === entry.title || book.sourceTitle === entry.filename));
+}}
+"""
+    with open(MANIFEST_FILE, "w", encoding="utf-8") as f:
+        f.write(ts_code)
+    print(f"Updated JS/TS manifest: {MANIFEST_FILE.name}")
 
 def main():
     for book in BOOKS:

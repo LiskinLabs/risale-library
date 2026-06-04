@@ -39,18 +39,19 @@ const LayerToggle: React.FC<LayerToggleProps> = ({ enabled, onToggle, className 
           return (
             <button
               key={layer}
+              type='button'
               onClick={() => onToggle(layer)}
-              className='flex items-center gap-2 px-2 py-1 rounded text-xs transition-colors hover:bg-base-300/50'
-              aria-label={`${isOn ? 'Hide' : 'Show'} ${label}`}
+              className='hover:bg-base-300/50 flex w-full items-center gap-3 rounded-md px-3 py-2 text-sm transition-colors'
+              aria-label={`${isOn ? _('Hide') : _('Show')}: ${_(label)}`}
             >
               {/* Color indicator dot */}
               <span
-                className={`w-2.5 h-2.5 rounded-full transition-opacity ${isOn ? 'opacity-100' : 'opacity-25'}`}
+                className={`h-3 w-3 rounded-full transition-opacity ${isOn ? 'opacity-100' : 'opacity-30'}`}
                 style={{ backgroundColor: color }}
               />
-              <span className={`flex-1 text-left ${isOn ? '' : 'opacity-40'}`}>{_(label)}</span>
+              <span className={`flex-1 text-left ${isOn ? '' : 'opacity-50'}`}>{_(label)}</span>
               {/* Toggle state */}
-              <span className={`text-[10px] ${isOn ? 'text-primary' : 'text-base-content/30'}`}>
+              <span className={`text-xs ${isOn ? 'text-primary' : 'text-base-content/30'}`}>
                 {isOn ? '●' : '○'}
               </span>
             </button>
