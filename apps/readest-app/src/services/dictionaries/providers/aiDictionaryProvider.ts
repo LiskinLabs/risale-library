@@ -214,35 +214,26 @@ interface FullDefinition {
   sourceSummary: string;
 }
 
+/**
+ * Call the server-side /api/ai/dictionary endpoint.
+ * The API key stays on the server — never exposed to the client.
+ */
 async function fetchSimpleDefinition(
   word: string,
   targetLang: string,
   signal: AbortSignal,
 ): Promise<string> {
-  const apiKey = getApiKey();
-  if (!apiKey) throw new Error('No AI Gateway API key');
-
-  const response = await fetch('https://ai-gateway.risale-ai-studio.com/v1/chat/completions', {
+  const response = await fetch('/api/ai/dictionary', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${apiKey}` },
-    body: JSON.stringify({
-      model: process.env['AI_GATEWAY_MODEL'] || 'google/gemini-2.5-flash-lite',
-      messages: [
-        {
-          role: 'system',
-          content: `Ты — словарь. Дай КРАТКОЕ определение слова на языке "${targetLang}". Один абзац, только значение. Не используй маркдаун.`,
-        },
-        { role: 'user', content: word },
-      ],
-      max_tokens: 150,
-      temperature: 0.3,
-    }),
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ word, targetLang, complexity: 'simple' }),
     signal,
   });
 
-  if (!response.ok) throw new Error(`AI Gateway error: ${response.status}`);
+  if (!response.ok) throw new Error(`Dictionary API error: ${response.status}`);
   const data = await response.json();
-  return data.choices?.[0]?.message?.content?.trim() || word;
+  if (!data.ok) throw new Error(data.error || 'Unknown error');
+  return data.definition || word;
 }
 
 async function fetchFullDefinition(
@@ -251,34 +242,19 @@ async function fetchFullDefinition(
   sourceLang: string,
   signal: AbortSignal,
 ): Promise<FullDefinition> {
-  const apiKey = getApiKey();
-  if (!apiKey) throw new Error('No AI Gateway API key');
-
-  const systemPrompt = buildFullDefinitionPrompt(targetLang, sourceLang);
-
-  const response = await fetch('https://ai-gateway.risale-ai-studio.com/v1/chat/completions', {
+  const response = await fetch('/api/ai/dictionary', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${apiKey}` },
-    body: JSON.stringify({
-      model: process.env['AI_GATEWAY_MODEL'] || 'google/gemini-2.5-flash-lite',
-      messages: [
-        { role: 'system', content: systemPrompt },
-        { role: 'user', content: word },
-      ],
-      max_tokens: 800,
-      temperature: 0.5,
-      response_format: { type: 'json_object' },
-    }),
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ word, targetLang, sourceLang, complexity: 'complex' }),
     signal,
   });
 
-  if (!response.ok) throw new Error(`AI Gateway error: ${response.status}`);
+  if (!response.ok) throw new Error(`Dictionary API error: ${response.status}`);
   const data = await response.json();
-  const content = data.choices?.[0]?.message?.content?.trim();
-  if (!content) throw new Error('Empty AI response');
+  if (!data.ok) throw new Error(data.error || 'Unknown error');
 
   try {
-    const parsed = JSON.parse(content);
+    const parsed = JSON.parse(data.json);
     return {
       headword: parsed.headword || word,
       meaning: parsed.meaning || '',
@@ -290,77 +266,8 @@ async function fetchFullDefinition(
       sourceSummary: parsed.source_summary || '',
     };
   } catch {
-    // If JSON parse fails, treat as simple definition
-    return {
-      headword: word,
-      meaning: content,
-      passages: [],
-      sourceSummary: '',
-    };
+    return { headword: word, meaning: data.json, passages: [], sourceSummary: '' };
   }
-}
-
-function getApiKey(): string | undefined {
-  // Try AI Gateway key first, then fall back to local env
-  return (
-    process.env['AI_GATEWAY_API_KEY'] || process.env['NEXT_PUBLIC_AI_GATEWAY_KEY'] || undefined
-  );
-}
-
-function buildFullDefinitionPrompt(targetLang: string, sourceLang: string): string {
-  const langNames: Record<string, string> = {
-    ru: 'русский',
-    tr: 'Türkçe',
-    en: 'English',
-    ar: 'العربية',
-    fa: 'فارسی',
-    uz: 'Oʻzbekcha',
-    kk: 'Қазақша',
-    az: 'Azərbaycanca',
-    de: 'Deutsch',
-    fr: 'Français',
-    es: 'Español',
-    it: 'Italiano',
-    bn: 'বাংলা',
-    hi: 'हिन्दी',
-    ur: 'اردو',
-    id: 'Bahasa Indonesia',
-    ms: 'Bahasa Melayu',
-    zh: '中文',
-    ja: '日本語',
-    ko: '한국어',
-  };
-  const tl = langNames[targetLang] || targetLang;
-  const sl = langNames[sourceLang] || sourceLang;
-
-  return `Ты — исламский теологический словарь Risale-i Nur (Рисале-и Нур). Твоя задача — дать полное, точное определение слова или термина.
-
-Язык оригинала: ${sl}
-Язык ответа: ${tl}
-
-ОБЯЗАТЕЛЬНО ответь в формате JSON:
-{
-  "headword": "оригинальное слово",
-  "meaning": "ПОЛНОЕ толкование на языке ${tl}. Включи: (1) буквальное значение, (2) терминологическое значение в контексте Рисале-и Нур, (3) коранический контекст если применимо. Минимум 2-3 предложения.",
-  "arabic_equivalent": "арабский эквивалент (если есть, иначе null)",
-  "ottoman_equivalent": "османский вариант написания (если есть, иначе null)",
-  "grammatical_notes": "грамматические особенности: часть речи, падеж, происхождение (если применимо, иначе null)",
-  "usage_level": "уровень сложности: 'basic' | 'intermediate' | 'advanced'",
-  "passages": [
-    {
-      "bookName": "Название книги (на языке ${tl})",
-      "chapterName": "Название главы/раздела (на языке ${tl})",
-      "sentence": "Оригинальное предложение из книги (на ${sl}) где встречается слово",
-      "sentenceTranslation": "Перевод этого предложения на ${tl}",
-      "wordInContext": "Как слово используется в этом контексте (на языке ${tl})"
-    }
-  ],
-  "sourceSummary": "Кратко: какие источники были использованы для этого определения (Lugat, TDK, Osmanlıca Sözlük, etc.)"
-}
-
-ВАЖНО: passages должен содержать 1-2 РЕАЛИСТИЧНЫХ примера использования слова в контексте Рисале-и Нур. Укажи конкретные книги (например, "Sözler", "Mektubat", "Lem'alar", "Şualar") и главы.
-
-Если слово простое — дай краткое определение и пустой массив passages. Если теологический термин — дай полный ответ с passages.`;
 }
 
 // ── Rendering ──────────────────────────────────────────────────────────
