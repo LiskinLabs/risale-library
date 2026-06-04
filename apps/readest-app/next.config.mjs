@@ -17,6 +17,8 @@ const exportOutput = appPlatform !== 'web' && !isDev;
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Type checking is done separately via tsgo in CI — don't fail builds
+  typescript: { ignoreBuildErrors: true },
   // Ensure Next.js uses SSG instead of SSR
   // https://nextjs.org/docs/pages/building-your-application/deploying/static-exports
   output: exportOutput ? 'export' : undefined,
