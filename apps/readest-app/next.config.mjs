@@ -41,7 +41,7 @@ const nextConfig = {
   assetPrefix: '',
   reactStrictMode: true,
   serverExternalPackages: ['isows'],
-  allowedDevOrigins: ['192.168.2.120'],
+  allowedDevOrigins: isDev ? ['192.168.2.120'] : [],
   webpack: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
@@ -127,6 +127,40 @@ const nextConfig = {
             value: isDev
               ? 'public, max-age=0, must-revalidate'
               : 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin',
+          },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=63072000; includeSubDomains; preload',
+          },
+          {
+            key: 'Content-Security-Policy',
+            value:
+              "default-src 'self'; " +
+              "script-src 'self' 'unsafe-inline' https://*.posthog.com https://*.stripe.com; " +
+              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; " +
+              "img-src 'self' blob: data: https:; " +
+              "font-src 'self' data: https://fonts.gstatic.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; " +
+              "connect-src 'self' https://*.supabase.co https://*.posthog.com https://*.stripe.com https://*.deepl.com https://*.wikipedia.org https://*.wiktionary.org https://*.cloudflarestorage.com https://*.microsofttranslator.com https://translate.googleapis.com https://edge.microsoft.com https://*.googleusercontent.com https://*.sentry.io wss://speech.platform.bing.com; " +
+              "frame-src 'self' https://*.stripe.com; " +
+              "media-src 'self' blob:; " +
+              "worker-src 'self' blob:;",
           },
         ],
       },

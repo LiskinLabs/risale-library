@@ -9,13 +9,13 @@ export async function POST(req: Request): Promise<Response> {
       return NextResponse.json({ error: 'Not authenticated' }, { status: 403 });
     }
 
-    const { texts, single, apiKey } = await req.json();
+    const { texts, single } = await req.json();
 
     if (!texts || !Array.isArray(texts) || texts.length === 0) {
       return NextResponse.json({ error: 'Texts array required' }, { status: 400 });
     }
 
-    const gatewayApiKey = apiKey || process.env['AI_GATEWAY_API_KEY'];
+    const gatewayApiKey = process.env['AI_GATEWAY_API_KEY'];
     if (!gatewayApiKey) {
       return NextResponse.json({ error: 'API key required' }, { status: 401 });
     }

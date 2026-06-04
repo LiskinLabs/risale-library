@@ -55,5 +55,15 @@ RUN corepack prepare pnpm@11.1.1 --activate
 WORKDIR /app
 COPY --from=build /app /app
 WORKDIR /app/apps/readest-app
+
+# Run as non-root user for security
+RUN addgroup --system --gid 1001 appuser && \
+    adduser --system --uid 1001 --gid 1001 appuser && \
+    chown -R appuser:appuser /app
+USER appuser
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
+  CMD pnpm exec next start -H 0.0.0.0 -p 3000 & sleep 2 && curl -f http://localhost:3000/api/health || exit 1
+
 ENTRYPOINT ["pnpm", "start-web", "-H", "0.0.0.0"]
 EXPOSE 3000

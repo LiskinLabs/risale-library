@@ -9,7 +9,7 @@ export async function POST(req: Request): Promise<Response> {
       return Response.json({ error: 'Not authenticated' }, { status: 403 });
     }
 
-    const { messages, system, apiKey, model } = await req.json();
+    const { messages, system, model } = await req.json();
 
     if (!messages || !Array.isArray(messages)) {
       return new Response(JSON.stringify({ error: 'Messages required' }), {
@@ -18,7 +18,7 @@ export async function POST(req: Request): Promise<Response> {
       });
     }
 
-    const gatewayApiKey = apiKey || process.env['AI_GATEWAY_API_KEY'];
+    const gatewayApiKey = process.env['AI_GATEWAY_API_KEY'];
     if (!gatewayApiKey) {
       return new Response(JSON.stringify({ error: 'API key required' }), {
         status: 401,

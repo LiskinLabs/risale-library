@@ -1,4 +1,4 @@
-const DEBUG = true;
+const DEBUG = process.env['NODE_ENV'] === 'development' || process.env['AI_DEBUG'] === 'true';
 const PREFIX = '[AI]';
 
 type LogLevel = 'info' | 'warn' | 'error' | 'debug';

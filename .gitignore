@@ -30,6 +30,11 @@ yarn-error.log*
 # local env files
 .env*.local
 
+# env files (use .example templates instead)
+.env
+.env.tauri
+.env.web
+
 # vercel
 .vercel
 
