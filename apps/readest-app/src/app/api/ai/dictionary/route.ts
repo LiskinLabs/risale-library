@@ -143,10 +143,14 @@ export async function POST(req: Request): Promise<Response> {
       return Response.json({ ok: true, definition: def });
     }
 
-    // Real dictionary lookups require auth
-    const { user, token } = await validateUserAndToken(req.headers.get('authorization'));
-    if (!user || !token) {
-      return Response.json({ error: 'Not authenticated' }, { status: 403 });
+    // Auth: if user provides their own API key, skip app auth (it's their paid resource).
+    // If using the server's AI_GATEWAY_API_KEY, require app login.
+    const hasOwnKey = !!(body['geminiApiKey'] || body['deepseekApiKey']);
+    if (!hasOwnKey) {
+      const { user, token } = await validateUserAndToken(req.headers.get('authorization'));
+      if (!user || !token) {
+        return Response.json({ error: 'Not authenticated' }, { status: 403 });
+      }
     }
 
     if (!word) {
