@@ -19,6 +19,7 @@ import { setProofreadRulesVisibility } from '@/app/reader/components/ProofreadRu
 import { setAboutDialogVisible } from '@/components/AboutWindow';
 import useBooksManager from '../../hooks/useBooksManager';
 import MenuItem from '@/components/MenuItem';
+import MenuSectionHeader from '@/components/MenuSectionHeader';
 import Menu from '@/components/Menu';
 
 interface BookMenuProps {
@@ -130,6 +131,7 @@ const BookMenu: React.FC<BookMenuProps> = ({ menuClassName, setIsDropdownOpen })
       className={clsx('book-menu dropdown-content z-20 shadow-2xl', menuClassName)}
       onCancel={() => setIsDropdownOpen?.(false)}
     >
+      <MenuSectionHeader label={_('Reading')} />
       <MenuItem
         label={_('Parallel Read')}
         buttonClass={bookKeys.length > 1 ? 'lg:tooltip lg:tooltip-bottom' : ''}
@@ -169,35 +171,8 @@ const BookMenu: React.FC<BookMenuProps> = ({ menuClassName, setIsDropdownOpen })
         ) : (
           <MenuItem label={_('Enter Parallel Read')} onClick={handleSetParallel} />
         ))}
-      {(settings.kosync.enabled || settings.readwise.enabled || settings.hardcover.enabled) && (
-        <hr aria-hidden='true' className='border-base-200 my-1' />
-      )}
-      {settings.kosync.enabled && (
-        <MenuItem label={_('KOReader Sync')} detailsOpen={false} buttonClass='py-2'>
-          <ul className='flex flex-col ps-1'>
-            <MenuItem label={_('Push Progress')} noIcon onClick={handlePushKOSync} />
-            <MenuItem label={_('Pull Progress')} noIcon onClick={handlePullKOSync} />
-          </ul>
-        </MenuItem>
-      )}
-      {settings.readwise.enabled && (
-        <MenuItem label={_('Readwise Sync')} detailsOpen={false} buttonClass='py-2'>
-          <ul className='flex flex-col ps-1'>
-            <MenuItem label={_('Push Highlights')} noIcon onClick={handlePushReadwise} />
-          </ul>
-        </MenuItem>
-      )}
-      {settings.hardcover.enabled && (
-        <MenuItem label={_('Hardcover Sync')} detailsOpen={false} buttonClass='py-2'>
-          <ul className='flex flex-col ps-1'>
-            <MenuItem label={_('Push Progress')} noIcon onClick={handlePushHardcoverProgress} />
-            <MenuItem label={_('Push Notes')} noIcon onClick={handlePushHardcoverNotes} />
-          </ul>
-        </MenuItem>
-      )}
-      <hr aria-hidden='true' className='border-base-200 my-1' />
-      <MenuItem label={_('Proofread')} onClick={showProofreadRulesWindow} />
-      <hr aria-hidden='true' className='border-base-200 my-1' />
+
+      <MenuSectionHeader label={_('Annotations')} />
       <MenuItem label={_('Export Annotations')} onClick={handleExportAnnotations} />
       <MenuItem label={_('Import Annotations')} onClick={handleImportAnnotations} />
       <MenuItem
@@ -205,13 +180,46 @@ const BookMenu: React.FC<BookMenuProps> = ({ menuClassName, setIsDropdownOpen })
         disabled={annotationsToClear === 0}
         onClick={handleClearAnnotations}
       />
+
+      <MenuSectionHeader label={_('Tools')} />
+      <MenuItem label={_('Proofread')} onClick={showProofreadRulesWindow} />
       <MenuItem
         label={_('Sort TOC by Page')}
         Icon={isSortedTOC ? MdCheck : undefined}
         onClick={handleToggleSortTOC}
       />
       <MenuItem label={_('Reload Page')} shortcut='Shift+R' onClick={handleReloadPage} />
-      <hr aria-hidden='true' className='border-base-200 my-1' />
+
+      {(settings.kosync.enabled || settings.readwise.enabled || settings.hardcover.enabled) && (
+        <>
+          <MenuSectionHeader label={_('Sync')} />
+          {settings.kosync.enabled && (
+            <MenuItem label={_('KOReader Sync')} detailsOpen={false} buttonClass='py-2'>
+              <ul className='flex flex-col ps-1'>
+                <MenuItem label={_('Push Progress')} noIcon onClick={handlePushKOSync} />
+                <MenuItem label={_('Pull Progress')} noIcon onClick={handlePullKOSync} />
+              </ul>
+            </MenuItem>
+          )}
+          {settings.readwise.enabled && (
+            <MenuItem label={_('Readwise Sync')} detailsOpen={false} buttonClass='py-2'>
+              <ul className='flex flex-col ps-1'>
+                <MenuItem label={_('Push Highlights')} noIcon onClick={handlePushReadwise} />
+              </ul>
+            </MenuItem>
+          )}
+          {settings.hardcover.enabled && (
+            <MenuItem label={_('Hardcover Sync')} detailsOpen={false} buttonClass='py-2'>
+              <ul className='flex flex-col ps-1'>
+                <MenuItem label={_('Push Progress')} noIcon onClick={handlePushHardcoverProgress} />
+                <MenuItem label={_('Push Notes')} noIcon onClick={handlePushHardcoverNotes} />
+              </ul>
+            </MenuItem>
+          )}
+        </>
+      )}
+
+      <MenuSectionHeader label={_('About')} />
       {isWebAppPlatform() && (
         <MenuItem label={_('Download Risale AI Studio')} onClick={downloadRisaleAIStudio} />
       )}

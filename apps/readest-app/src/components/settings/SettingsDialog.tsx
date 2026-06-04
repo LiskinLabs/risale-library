@@ -95,14 +95,14 @@ const SettingsDialog: React.FC<{ bookKey: string }> = ({ bookKey }) => {
       label: _('Layout'),
     },
     {
-      tab: 'Layers',
-      icon: MdLayers,
-      label: _('Layers'),
-    },
-    {
       tab: 'Color',
       icon: VscSymbolColor,
       label: _('Color'),
+    },
+    {
+      tab: 'Layers',
+      icon: MdLayers,
+      label: _('Layers'),
     },
     {
       tab: 'Control',
@@ -115,6 +115,11 @@ const SettingsDialog: React.FC<{ bookKey: string }> = ({ bookKey }) => {
       label: _('Language'),
     },
     {
+      tab: 'TTS',
+      icon: PiSpeakerHigh,
+      label: _('TTS'),
+    },
+    {
       tab: 'Integrations',
       icon: RiShareLine,
       label: _('Integrations'),
@@ -124,11 +129,6 @@ const SettingsDialog: React.FC<{ bookKey: string }> = ({ bookKey }) => {
       icon: PiRobot,
       label: _('AI Assistant'),
       disabled: process.env.NODE_ENV === 'production',
-    },
-    {
-      tab: 'TTS',
-      icon: PiSpeakerHigh,
-      label: _('TTS'),
     },
     {
       tab: 'Custom',

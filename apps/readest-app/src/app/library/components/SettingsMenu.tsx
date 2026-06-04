@@ -31,6 +31,7 @@ import { selectDirectory } from '@/utils/bridge';
 import dayjs from 'dayjs';
 import UserAvatar from '@/components/UserAvatar';
 import MenuItem from '@/components/MenuItem';
+import MenuSectionHeader from '@/components/MenuSectionHeader';
 import Quota from '@/components/Quota';
 import Menu from '@/components/Menu';
 import { type AppLockDialogMode, useAppLockStore } from '@/store/appLockStore';
@@ -365,12 +366,12 @@ const SettingsMenu: React.FC<SettingsMenuProps> = ({ onPullLibrary, setIsDropdow
         <MenuItem label={_('Sign In')} Icon={PiUserCircle} onClick={handleUserLogin}></MenuItem>
       )}
 
+      <MenuSectionHeader label={_('Behavior')} />
       <MenuItem
         label={_('Auto Upload Books to Cloud')}
         toggled={isAutoUpload}
         onClick={toggleAutoUploadBooks}
       />
-
       {isTauriAppPlatform() && !appService?.isMobile && (
         <MenuItem
           label={_('Auto Import on File Open')}
@@ -392,7 +393,13 @@ const SettingsMenu: React.FC<SettingsMenuProps> = ({ onPullLibrary, setIsDropdow
           onClick={toggleAutoCheckUpdates}
         />
       )}
-      <hr aria-hidden='true' className='border-base-200 my-1' />
+
+      <MenuSectionHeader label={_('Appearance')} />
+      <MenuItem
+        label={themeModeLabel}
+        Icon={themeMode === 'dark' ? PiMoon : themeMode === 'light' ? PiSun : TbSunMoon}
+        onClick={cycleThemeMode}
+      />
       {appService?.hasWindow && (
         <MenuItem
           label={_('Open Book in New Window')}
@@ -418,54 +425,49 @@ const SettingsMenu: React.FC<SettingsMenuProps> = ({ onPullLibrary, setIsDropdow
           onClick={toggleAlwaysInForeground}
         />
       )}
-      <MenuItem
-        label={themeModeLabel}
-        Icon={themeMode === 'dark' ? PiMoon : themeMode === 'light' ? PiSun : TbSunMoon}
-        onClick={cycleThemeMode}
-      />
       <MenuItem label={_('Settings')} Icon={PiGear} onClick={openSettingsDialog} />
-      <hr aria-hidden='true' className='border-base-200 my-1' />
-      <MenuItem label={_('Advanced Settings')}>
-        <ul className='ms-0 flex flex-col ps-0 before:hidden'>
-          <MenuItem label={_('Backup & Restore')} onClick={handleBackupRestore} />
-          {appService?.canCustomizeRootDir && (
-            <MenuItem label={_('Change Data Location')} onClick={handleSetRootDir} />
-          )}
-          {user && <MenuItem label={_('Data Sync')} onClick={handleManageSync} />}
-          <MenuItem
-            label={_('Refresh Metadata')}
-            description={refreshMetadataProgress}
-            onClick={handleRefreshMetadata}
-            disabled={isRefreshingMetadata}
-          />
-          {appService?.isMobileApp && (
-            <MenuItem label={_('Manage Cache')} onClick={handleManageCache} />
-          )}
-          {!isPinEnabled && (
-            <MenuItem
-              label={_('Set PIN…')}
-              tooltip={_('Require a 4-digit PIN to open Risale AI Studio')}
-              onClick={() => openAppLockDialog('set')}
-            />
-          )}
-          {isPinEnabled && (
-            <MenuItem label={_('Change PIN…')} onClick={() => openAppLockDialog('change')} />
-          )}
-          {isPinEnabled && (
-            <MenuItem label={_('Disable PIN…')} onClick={() => openAppLockDialog('disable')} />
-          )}
-          {appService?.isAndroidApp && appService?.distChannel !== 'playstore' && (
-            <MenuItem
-              label={_('Save Book Cover')}
-              tooltip={_('Auto-save last book cover')}
-              description={savedBookCoverForLockScreen ? savedBookCoverDescription : ''}
-              toggled={!!savedBookCoverForLockScreen}
-              onClick={handleSetSavedBookCoverForLockScreen}
-            />
-          )}
-        </ul>
-      </MenuItem>
-      <hr aria-hidden='true' className='border-base-200 my-1' />
+
+      <MenuSectionHeader label={_('Data')} />
+      <MenuItem label={_('Backup & Restore')} onClick={handleBackupRestore} />
+      {appService?.canCustomizeRootDir && (
+        <MenuItem label={_('Change Data Location')} onClick={handleSetRootDir} />
+      )}
+      {user && <MenuItem label={_('Data Sync')} onClick={handleManageSync} />}
+      <MenuItem
+        label={_('Refresh Metadata')}
+        description={refreshMetadataProgress}
+        onClick={handleRefreshMetadata}
+        disabled={isRefreshingMetadata}
+      />
+      {appService?.isMobileApp && (
+        <MenuItem label={_('Manage Cache')} onClick={handleManageCache} />
+      )}
+
+      <MenuSectionHeader label={_('Security')} />
+      {!isPinEnabled && (
+        <MenuItem
+          label={_('Set PIN…')}
+          tooltip={_('Require a 4-digit PIN to open Risale AI Studio')}
+          onClick={() => openAppLockDialog('set')}
+        />
+      )}
+      {isPinEnabled && (
+        <MenuItem label={_('Change PIN…')} onClick={() => openAppLockDialog('change')} />
+      )}
+      {isPinEnabled && (
+        <MenuItem label={_('Disable PIN…')} onClick={() => openAppLockDialog('disable')} />
+      )}
+      {appService?.isAndroidApp && appService?.distChannel !== 'playstore' && (
+        <MenuItem
+          label={_('Save Book Cover')}
+          tooltip={_('Auto-save last book cover')}
+          description={savedBookCoverForLockScreen ? savedBookCoverDescription : ''}
+          toggled={!!savedBookCoverForLockScreen}
+          onClick={handleSetSavedBookCoverForLockScreen}
+        />
+      )}
+
+      <MenuSectionHeader label={_('About')} />
       {user && userProfilePlan === 'free' && (
         <MenuItem label={_('Upgrade to Risale AI Studio Premium')} onClick={handleUpgrade} />
       )}
