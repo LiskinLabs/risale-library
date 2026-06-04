@@ -179,7 +179,7 @@ export const aiDictionaryProvider: DictionaryProvider = {
       const result = await fetchFullDefinition(word, targetLang, lang || 'tr', signal);
       renderFullDefinition(container, word, result, targetLang);
       return { ok: true, headword: word, sourceLabel: 'Risale AI Sözlük' };
-    } catch (err) {
+    } catch (_err) {
       // Try simple fallback
       try {
         const definition = await fetchSimpleDefinition(word, targetLang, signal);
