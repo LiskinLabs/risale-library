@@ -1,16 +1,59 @@
 import { validateUserAndToken } from '@/utils/access';
 import { generateText, createGateway } from 'ai';
+import { createGoogleGenerativeAI } from '@ai-sdk/google';
+import { createOpenAICompatible } from '@ai-sdk/openai-compatible';
 
-const GATEWAY_MODEL = process.env['AI_GATEWAY_MODEL'] || 'google/gemini-2.5-flash-lite';
+// ── Model resolution ───────────────────────────────────────────────────
 
-// Simple words get a fast, short response (no JSON parsing needed)
-async function simpleDefinition(word: string, targetLang: string): Promise<string> {
-  const gatewayApiKey = process.env['AI_GATEWAY_API_KEY'];
-  if (!gatewayApiKey) throw new Error('AI Gateway not configured');
+interface ModelConfig {
+  provider: 'gateway' | 'gemini' | 'deepseek';
+  model: ReturnType<ReturnType<typeof createGateway>>; // LanguageModel
+}
 
-  const gateway = createGateway({ apiKey: gatewayApiKey });
-  const model = gateway(GATEWAY_MODEL);
+function resolveModel(body: Record<string, unknown>): ModelConfig | { error: string } {
+  // 1. AI Gateway (env var)
+  const gatewayKey = process.env['AI_GATEWAY_API_KEY'];
+  if (gatewayKey) {
+    const gateway = createGateway({ apiKey: gatewayKey });
+    const modelName =
+      (body['gatewayModel'] as string) ||
+      process.env['AI_GATEWAY_MODEL'] ||
+      'google/gemini-2.5-flash-lite';
+    return { provider: 'gateway', model: gateway(modelName) };
+  }
 
+  // 2. Direct Gemini API key (from user settings)
+  const geminiKey = body['geminiApiKey'] as string | undefined;
+  if (geminiKey) {
+    const google = createGoogleGenerativeAI({ apiKey: geminiKey });
+    const modelName = (body['geminiModel'] as string) || 'gemini-2.5-flash-lite';
+    return { provider: 'gemini', model: google(modelName) };
+  }
+
+  // 3. Direct DeepSeek API key (from user settings)
+  const deepseekKey = body['deepseekApiKey'] as string | undefined;
+  if (deepseekKey) {
+    const client = createOpenAICompatible({
+      name: 'deepseek',
+      baseURL: 'https://api.deepseek.com',
+      apiKey: deepseekKey,
+    });
+    const modelName = (body['deepseekModel'] as string) || 'deepseek-v4-pro';
+    return { provider: 'deepseek', model: client(modelName) };
+  }
+
+  return {
+    error: 'No AI provider configured. Set AI_GATEWAY_API_KEY, geminiApiKey, or deepseekApiKey.',
+  };
+}
+
+// ── Handlers ───────────────────────────────────────────────────────────
+
+async function simpleDefinition(
+  word: string,
+  targetLang: string,
+  model: ModelConfig['model'],
+): Promise<string> {
   const result = await generateText({
     model,
     system: `You are a dictionary. Give a SHORT, 1-paragraph definition of the word in "${targetLang}". Only the meaning, no formatting.`,
@@ -18,22 +61,15 @@ async function simpleDefinition(word: string, targetLang: string): Promise<strin
     maxOutputTokens: 150,
     temperature: 0.3,
   });
-
   return result.text?.trim() || word;
 }
 
-// Complex words get a full JSON-structured response with Risale passages
 async function fullDefinition(
   word: string,
   targetLang: string,
   sourceLang: string,
+  model: ModelConfig['model'],
 ): Promise<string> {
-  const gatewayApiKey = process.env['AI_GATEWAY_API_KEY'];
-  if (!gatewayApiKey) throw new Error('AI Gateway not configured');
-
-  const gateway = createGateway({ apiKey: gatewayApiKey });
-  const model = gateway(GATEWAY_MODEL);
-
   const langNames: Record<string, string> = {
     ru: 'русский',
     tr: 'Türkçe',
@@ -78,7 +114,7 @@ async function fullDefinition(
 }
 
 Примеры книг: Sözler, Mektubat, Lem'alar, Şualar, İşaratü'l-İ'caz, Mesnevi-i Nuriye.
-Для сложных терминов дай 1-2 реалистичных примера из этих книг. Для простых слов — пустой passages.`,
+Для сложных терминов дай 1-2 примера из этих книг. Для простых слов — пустой passages.`,
     prompt: word,
     maxOutputTokens: 900,
     temperature: 0.5,
@@ -87,6 +123,8 @@ async function fullDefinition(
   return result.text?.trim() || '';
 }
 
+// ── Route handler ──────────────────────────────────────────────────────
+
 export async function POST(req: Request): Promise<Response> {
   try {
     const { user, token } = await validateUserAndToken(req.headers.get('authorization'));
@@ -94,18 +132,29 @@ export async function POST(req: Request): Promise<Response> {
       return Response.json({ error: 'Not authenticated' }, { status: 403 });
     }
 
-    const { word, targetLang, sourceLang, complexity = 'complex' } = await req.json();
+    const body = await req.json();
+    const { word, targetLang, sourceLang, complexity = 'complex' } = body;
 
     if (!word) {
       return Response.json({ error: 'Word required' }, { status: 400 });
     }
 
+    const resolved = resolveModel(body);
+    if ('error' in resolved) {
+      return Response.json({ error: resolved.error }, { status: 400 });
+    }
+
     if (complexity === 'simple') {
-      const definition = await simpleDefinition(word, targetLang || 'ru');
+      const definition = await simpleDefinition(word, targetLang || 'ru', resolved.model);
       return Response.json({ ok: true, definition, headword: word });
     }
 
-    const jsonText = await fullDefinition(word, targetLang || 'ru', sourceLang || 'tr');
+    const jsonText = await fullDefinition(
+      word,
+      targetLang || 'ru',
+      sourceLang || 'tr',
+      resolved.model,
+    );
     return Response.json({ ok: true, json: jsonText, headword: word });
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : 'Unknown error';

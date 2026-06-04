@@ -18,6 +18,7 @@ import type {
   DictionaryLookupOutcome,
 } from '../types';
 import { stubTranslation as _ } from '@/utils/misc';
+import { useSettingsStore } from '@/store/settingsStore';
 
 // ── Complexity detection ──────────────────────────────────────────────
 
@@ -216,8 +217,22 @@ interface FullDefinition {
 
 /**
  * Call the server-side /api/ai/dictionary endpoint.
- * The API key stays on the server — never exposed to the client.
+ * API keys from user settings are passed in the request body;
+ * server-side env vars also checked (AI_GATEWAY_API_KEY).
  */
+function getAiKeys(): Record<string, string> {
+  const keys: Record<string, string> = {};
+  try {
+    const aiSettings = useSettingsStore.getState().settings?.aiSettings;
+    if (aiSettings?.['geminiApiKey']) keys['geminiApiKey'] = aiSettings['geminiApiKey'] as string;
+    if (aiSettings?.['deepseekApiKey'])
+      keys['deepseekApiKey'] = aiSettings['deepseekApiKey'] as string;
+  } catch {
+    // Store not available — keys stay empty, server falls back to env vars
+  }
+  return keys;
+}
+
 async function fetchSimpleDefinition(
   word: string,
   targetLang: string,
@@ -226,7 +241,7 @@ async function fetchSimpleDefinition(
   const response = await fetch('/api/ai/dictionary', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ word, targetLang, complexity: 'simple' }),
+    body: JSON.stringify({ word, targetLang, complexity: 'simple', ...getAiKeys() }),
     signal,
   });
 
@@ -245,7 +260,7 @@ async function fetchFullDefinition(
   const response = await fetch('/api/ai/dictionary', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ word, targetLang, sourceLang, complexity: 'complex' }),
+    body: JSON.stringify({ word, targetLang, sourceLang, complexity: 'complex', ...getAiKeys() }),
     signal,
   });
 
