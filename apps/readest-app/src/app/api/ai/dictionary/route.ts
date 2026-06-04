@@ -130,14 +130,16 @@ export async function POST(req: Request): Promise<Response> {
     const body = await req.json();
     const { word, targetLang, sourceLang, complexity = 'complex' } = body;
 
-    // Health check mode — verify API key works, NO auth (called from Settings UI)
+    // Health check mode — verify API key works.
+    // Only tests with a fixed word ("hello") to prevent abuse.
+    // No app auth needed because the API key itself acts as the secret.
     if (complexity === 'health') {
-      if (!word) return Response.json({ ok: true });
       const resolved = resolveModel(body);
       if ('error' in resolved) {
         return Response.json({ ok: false, error: resolved.error });
       }
-      const def = await simpleDefinition(word, targetLang || 'en', resolved.model);
+      // Always use a fixed test word — client cannot override
+      const def = await simpleDefinition('hello', targetLang || 'en', resolved.model);
       return Response.json({ ok: true, definition: def });
     }
 
