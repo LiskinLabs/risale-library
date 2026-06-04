@@ -1,6 +1,6 @@
 # Risale AI Studio — Универсальный промт для AI-ассистента
 
-> v1.4 | 2026-06-04 | +upstream синхронизация: foliate-js обновлён, cfi-skip, scrollable.ts, window_state.rs, +10 тестовых файлов, +40 тестов (5127 passed)
+> v1.5 | 2026-06-04 | +dictionary overhaul: AI timeout, Turkish normalization v2, frequency import 35→78%, compact JSON, vecize 26→150, 11 Russian parallel EPUBs
 
 ---
 
@@ -171,9 +171,9 @@ cp apps/readest-app/data/lugat.db apps/readest-app/public/data/lugat.db
 ## 🐛 Известные баги и особенности
 
 1. ~~**HasiyePopup** — хрупкий DOM-селектор `getElementById('gridcell-...')`.~~ **ИСПРАВЛЕНО (2026-06-04):** заменён на `querySelector('[data-book-key="..."]')` с CSS.escape().
-2. ~~**risaleLugatProvider** — LIKE-фолбек на Web (`term LIKE 'query%'`) не работает с турецкой агглютинацией.~~ **ИСПРАВЛЕНО (2026-06-04):** добавлен многошаговый поиск с турецкой нормализацией (апострофы, падежные/притяжательные/множественные суффиксы).
+2. ~~**risaleLugatProvider** — LIKE-фолбек на Web (`term LIKE 'query%'`) не работает с турецкой агглютинацией.~~ **ИСПРАВЛЕНО (2026-06-04):** полная переработка: 70+ суффиксов с вариантами гармонии гласных, реверс мутаций согласных, infix LIKE fallback. 4-шаговый поиск: exact → prefix → normalize → infix.
 3. **FTS5** — доступен в Tauri/десктоп (native SQLite), НЕдоступен в Web/WASM (turso-database-wasm). Код ветвится: `appService.appPlatform === 'web' ? LIKE+normalization : FTS5`.
-4. **lugat.db level** — колонка `level` существует, но импорт из frekans покрывает не все 38,963 термина. Нематченные термины имеют level=3 (Tümü) — 25,157 из 38,963 (64.6%).
+4. ~~**lugat.db level** — колонка `level` существует, но импорт из frekans покрывает не все 38,963 термина. Нематченные термины имеют level=3 (Tümü) — 25,157 из 38,963 (64.6%).~~ **ИСПРАВЛЕНО (2026-06-04):** улучшен `import-frekans/import.py`: 4 прохода (нормализация 70+ суффиксов → first-word → definition keywords → heuristic). Покрытие: 35.4% → 78.5%. Level 0: 240→2,315, Level 1: 492→2,420.
 5. **Font Stripping** — выполнена очистка (2026-06-04): удалены неиспользуемые начертания Minion Pro (Condensed/Medium/Semibold — 24 файла), ITC Souvenir (Demi/Medium — 4 файла), Nassim Latin (4 файла). Размер fonts/: 11 MB → 4.9 MB (55% экономии).
 6. **`registry.ts` fs bug** — ПРОВЕРЕНО И ИСПРАВЛЕНО (2026-06-03). Теперь `fs` (AppService) корректно передаётся в `builtinFor`, что позволяет `risaleLugatProvider` инициализироваться.
 7. **customDictionaryStore.test.ts** — флакающий тест из-за фоновых изменений. Иногда падает, иногда нет.
@@ -181,9 +181,10 @@ cp apps/readest-app/data/lugat.db apps/readest-app/public/data/lugat.db
 9. **`/data/lugat.db`** — бинарный файл (~10MB). В гите — OK, но при изменениях нужно копировать в `public/data/` и перегенерировать `lugat-terms.json`.
 10. **reactCompiler** — отключён в next.config.mjs. Требует `babel-plugin-react-compiler` в node_modules (нестабильно в pnpm).
 11. **Cargo fmt** — на Windows может не быть Rust. Если CI падает на `rust_lint` → установить Rust через winget.
-12. ~~**meaningMode** — трансформер загружает 4.6 MB JSON на первой странице.~~ **ОПТИМИЗИРОВАНО (2026-06-04):** бинарный поиск по сортированному массиву (O(log n)) + IndexedDB-кеш. Первый запуск: JSON-загрузка → кеш в IDB. Последующие: загрузка из IDB (без сети).
+12. ~~**meaningMode** — трансформер загружает 4.6 MB JSON на первой странице.~~ **ОПТИМИЗИРОВАНО (2026-06-04):** бинарный поиск по сортированному массиву (O(log n)) + IndexedDB-кеш + компактный JSON (3.8 MB, −17%). Первый запуск: JSON-загрузка → кеш в IDB. Последующие: загрузка из IDB (без сети).
+15. ~~**AI Dictionary timeout** — нет таймаута на fetch() и generateText(), может висеть бесконечно.~~ **ИСПРАВЛЕНО (2026-06-04):** клиент: 15s/25s таймауты через AbortSignal.timeout(). Сервер: AbortSignal на generateText().
 13. **Dirty Submodules** — `packages/js-mdict` и `apps/readest-app/src-tauri/plugins/tauri-plugin-webview-upgrade` имеют незакоммиченные локальные изменения. При `git clone --recurse-submodules` на новой машине изменения потеряются. Нужно либо закоммитить в форк, либо откатить.
-14. **lugat-terms.json рассинхрон** — после каждого `import-frekans/import.py` или ручного изменения `lugat.db` нужно перегенерировать JSON: `python tools/build-lugat-json.py`. Иначе meaningMode в Web работает с устаревшими данными.
+14. ~~**lugat-terms.json рассинхрон** — после каждого `import-frekans/import.py` или ручного изменения `lugat.db` нужно перегенерировать JSON: `python tools/build-lugat-json.py`. Иначе meaningMode в Web работает с устаревшими данными.~~ **ИСПРАВЛЕНО (2026-06-04):** JSON теперь в компактном формате (`t`/`d` ключи), 4.6→3.8 MB. Автоматически генерируется после import-frekans.
 
 ---
 
@@ -253,7 +254,7 @@ cp apps/readest-app/data/lugat.db apps/readest-app/public/data/lugat.db
 1. **Запустить RAG**: SQL в Supabase → `python tools/import-passages/import.py`
 2. **LayerToggle UI** — переключатель слоёв в читалке (аяты/словарь/заметки). Типы готовы, трансформеры работают, нужен только UI.
 3. **Параллельный перевод** — сгенерировать EPUB-переводы из `risale_extraction/kitaplar/` (`.txt` → EPUB), построить CFI-mapping, доделать синхронизацию.
-4. **Решить проблему stemming** — LIKE `'query%'` не находит слова с турецкими суффиксами. Нужен триграмный поиск или SQLite FTS5 с UNICODE61 tokenizer для Web.
+4. ~~**Решить проблему stemming** — LIKE `'query%'` не находит слова с турецкими суффиксами.~~ **ИСПРАВЛЕНО (2026-06-04):** 70+ суффиксов + infix LIKE + улучшенный frequency import.
 5. **Расширить vecize** — автоматическое извлечение цитат из книг.
 
 ---
