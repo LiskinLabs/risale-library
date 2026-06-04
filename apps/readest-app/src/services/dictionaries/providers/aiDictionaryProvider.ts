@@ -1,15 +1,14 @@
 /**
- * AI-Powered Dictionary Provider
+ * AI-Powered Dictionary Provider — Context-Aware Risale-i Nur Dictionary
  *
- * Synthesizes definitions from multiple sources (Lugat, Wiktionary, TDK, Sesli)
- * with AI, enriched with Risale-i Nur usage examples and clickable navigation.
+ * Modes:
+ *   - word (single word click): contextual definition with Quran/Hadith/Risale references
+ *   - passage (text selection): full passage analysis — summary, translation, term extraction
  *
- * Complexity-adaptive:
- * - Simple words (common pronouns, particles, etc.) → fast basic definition
- * - Complex words (theological terms, rare words) → full AI synthesis with examples
- *
- * Offline fallback:
- * - Fails gracefully to next providers in chain (Lugat → Wiktionary → Wikipedia)
+ * Graceful degradation:
+ *   AI works → full contextual explanation
+ *   AI fails → falls back to Lugat + web sources
+ *   No internet → Lugat only (handled by risaleLugatProvider)
  */
 
 import type {
@@ -50,28 +49,8 @@ const SIMPLE_TR_WORDS = new Set([
   'biz',
   'siz',
   'onlar',
-  'beni',
-  'seni',
-  'onu',
-  'bizi',
-  'sizi',
-  'onları',
-  'bende',
-  'sende',
-  'onda',
-  'bizde',
-  'sizde',
-  'onlarda',
-  'benden',
-  'senden',
-  'ondan',
-  'bizden',
-  'sizden',
-  'onlardan',
   'bu',
   'şu',
-  'şunlar',
-  'bunlar',
   'öyle',
   'böyle',
   'şöyle',
@@ -81,7 +60,6 @@ const SIMPLE_TR_WORDS = new Set([
   'hayır',
   'değil',
   'belki',
-  'tabii',
   'bir',
   'iki',
   'üç',
@@ -98,38 +76,12 @@ const SIMPLE_TR_WORDS = new Set([
   'tüm',
   'başka',
   'diğer',
-  'eder',
-  'olur',
-  'yapar',
-  'gelir',
-  'gider',
-  'alır',
-  'verir',
-  'der',
-  'ise',
-  'iken',
-  'olarak',
-  'üzere',
-  'dair',
-  'ait',
-  'nasıl',
-  'niçin',
-  'neden',
-  'nerede',
-  'ne zaman',
-  'kim',
-  'hangi',
-  'kaç',
-  'kaçıncı',
-  'nereden',
-  'nereye',
 ]);
 
 function isSimpleWord(word: string, lang?: string): boolean {
   const lower = word.trim().toLowerCase();
   if (lower.length <= 3) return true;
   if (lang === 'tr' && SIMPLE_TR_WORDS.has(lower)) return true;
-  // Common English function words
   if (
     /^(the|a|an|is|are|was|were|be|been|has|have|had|do|does|did|will|would|can|could|may|might|shall|should|to|of|in|on|at|by|for|with|from|and|or|but|if|so|as|than|that|this|these|those|it|he|she|they|we|you|I|me|him|her|us|them|my|your|his|its|our|their|not|no|yes|very|just|only|also|then|now|here|there)$/.test(
       lower,
@@ -142,31 +94,32 @@ function isSimpleWord(word: string, lang?: string): boolean {
 // ── Simple definition cache ────────────────────────────────────────────
 
 const simpleDefinitionCache = new Map<string, { definition: string; timestamp: number }>();
-const CACHE_TTL = 30 * 60 * 1000; // 30 minutes
+const CACHE_TTL = 30 * 60 * 1000;
 
 // ── Provider ───────────────────────────────────────────────────────────
 
 export const aiDictionaryProvider: DictionaryProvider = {
   id: 'builtin:ai-dictionary',
   kind: 'builtin',
-  label: 'AI Sözlük',
+  label: 'Risale AI Sözlük',
 
   async lookup(word: string, ctx: DictionaryLookupContext): Promise<DictionaryLookupOutcome> {
     const { container, signal, lang, dictionaryLanguage } = ctx;
     const targetLang = dictionaryLanguage || lang || 'ru';
-    const complexity = isSimpleWord(word, lang) ? 'simple' : 'complex';
+    const sourceLang = lang || 'tr';
+    const isPassage = word.trim().split(/\s+/).length > 3;
 
-    // ── Try server (which may have env var keys even if user hasn't configured) ──
-    // Don't bail early if no user keys — server may have DEEPSEEK_API_KEY / GEMINI_API_KEY
+    // Determine mode: passage analysis for multi-word selections, word mode for single words
+    const mode: 'word' | 'passage' = isPassage ? 'passage' : 'word';
+    const complexity = isPassage ? 'complex' : isSimpleWord(word, lang) ? 'simple' : 'complex';
 
-    // ── Simple word: fast basic definition ────────────────────────────
-    if (complexity === 'simple') {
+    // Simple word (not passage) → fast definition
+    if (complexity === 'simple' && mode === 'word') {
       const cached = simpleDefinitionCache.get(word);
       if (cached && Date.now() - cached.timestamp < CACHE_TTL) {
         renderSimpleDefinition(container, word, cached.definition, targetLang);
-        return { ok: true, headword: word, sourceLabel: 'AI Sözlük (cache)' };
+        return { ok: true, headword: word, sourceLabel: 'AI Sözlük' };
       }
-
       try {
         const definition = await fetchSimpleDefinition(word, targetLang, signal);
         simpleDefinitionCache.set(word, { definition, timestamp: Date.now() });
@@ -178,13 +131,35 @@ export const aiDictionaryProvider: DictionaryProvider = {
       }
     }
 
-    // ── Complex word: full AI synthesis with examples ─────────────────
+    // ── Passage mode: full passage analysis ────────────────────────────
+    if (mode === 'passage') {
+      try {
+        const result = await fetchPassageAnalysis(word, targetLang, sourceLang, signal);
+        renderPassageAnalysis(container, word, result, targetLang);
+        return {
+          ok: true,
+          headword: word.slice(0, 50) + '…',
+          sourceLabel: 'Risale AI — Metin Analizi',
+        };
+      } catch (_err) {
+        // Fallback: try word-mode on the first significant word
+        const firstWord = word.trim().split(/\s+/)[0] || word;
+        try {
+          const result = await fetchFullDefinition(firstWord, targetLang, sourceLang, signal);
+          renderFullDefinition(container, firstWord, result, targetLang);
+          return { ok: true, headword: firstWord, sourceLabel: 'Risale AI Sözlük (ilk kelime)' };
+        } catch {
+          return { ok: false, reason: 'error', message: 'AI passage analysis unavailable' };
+        }
+      }
+    }
+
+    // ── Word mode: contextual definition ──────────────────────────────
     try {
-      const result = await fetchFullDefinition(word, targetLang, lang || 'tr', signal);
+      const result = await fetchFullDefinition(word, targetLang, sourceLang, signal);
       renderFullDefinition(container, word, result, targetLang);
       return { ok: true, headword: word, sourceLabel: 'Risale AI Sözlük' };
     } catch (_err) {
-      // Try simple fallback
       try {
         const definition = await fetchSimpleDefinition(word, targetLang, signal);
         simpleDefinitionCache.set(word, { definition, timestamp: Date.now() });
@@ -201,28 +176,39 @@ export const aiDictionaryProvider: DictionaryProvider = {
 
 interface FullDefinition {
   headword: string;
-  meaning: string;
+  contextualMeaning?: string;
+  generalMeaning?: string;
+  meaning?: string;
   arabicEquivalent?: string;
   ottomanEquivalent?: string;
   grammaticalNotes?: string;
-  usageLevel?: string;
-  passages: Array<{
+  quranicReference?: string;
+  hadithReference?: string;
+  risalePassages: Array<{
     bookName: string;
-    chapterName?: string;
-    sentence: string;
-    sentenceTranslation: string;
-    wordInContext: string;
-    bookHash?: string;
-    cfi?: string;
+    context: string;
+    relevance: string;
   }>;
+  usageLevel?: string;
   sourceSummary: string;
 }
 
-/**
- * Call the server-side /api/ai/dictionary endpoint.
- * API keys from user settings are passed in the request body;
- * server-side env vars also checked (AI_GATEWAY_API_KEY).
- */
+interface PassageAnalysis {
+  passageSummary: string;
+  approximateTranslation: string;
+  contextNote: string;
+  complexTerms: Array<{
+    term: string;
+    contextualDefinition: string;
+    generalDefinition: string;
+    arabic?: string;
+    quranicRef?: string;
+    hadithRef?: string;
+  }>;
+  keyInsight: string;
+  sourceSummary: string;
+}
+
 function getAiKeys(): Record<string, string> {
   const keys: Record<string, string> = {};
   try {
@@ -231,7 +217,7 @@ function getAiKeys(): Record<string, string> {
     if (aiSettings?.['deepseekApiKey'])
       keys['deepseekApiKey'] = aiSettings['deepseekApiKey'] as string;
   } catch {
-    // Store not available — keys stay empty, server falls back to env vars
+    /* store not available */
   }
   return keys;
 }
@@ -246,21 +232,15 @@ async function fetchSimpleDefinition(
   targetLang: string,
   signal: AbortSignal,
 ): Promise<string> {
-  // Combine the caller's abort signal with a hard 15s timeout
   const timeout = AbortSignal.timeout(15000);
   const combined = AbortSignal.any([signal, timeout].filter(Boolean));
-
   const response = await fetch('/api/ai/dictionary', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
     body: JSON.stringify({ word, targetLang, complexity: 'simple', ...getAiKeys() }),
     signal: combined,
   });
-
-  if (!response.ok) {
-    if (timeout.aborted) throw new Error('AI Dictionary timed out (15s)');
-    throw new Error(`Dictionary API error: ${response.status}`);
-  }
+  if (!response.ok) throw new Error(`API error: ${response.status}`);
   const data = await response.json();
   if (!data.ok) throw new Error(data.error || 'Unknown error');
   return data.definition || word;
@@ -272,75 +252,81 @@ async function fetchFullDefinition(
   sourceLang: string,
   signal: AbortSignal,
 ): Promise<FullDefinition> {
-  // Combine the caller's abort signal with a hard 25s timeout (complex queries take longer)
   const timeout = AbortSignal.timeout(25000);
   const combined = AbortSignal.any([signal, timeout].filter(Boolean));
-
   const response = await fetch('/api/ai/dictionary', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
-    body: JSON.stringify({ word, targetLang, sourceLang, complexity: 'complex', ...getAiKeys() }),
+    body: JSON.stringify({
+      word,
+      targetLang,
+      sourceLang,
+      complexity: 'complex',
+      mode: 'word',
+      ...getAiKeys(),
+    }),
     signal: combined,
   });
-
-  if (!response.ok) {
-    if (timeout.aborted) throw new Error('AI Dictionary timed out (25s)');
-    throw new Error(`Dictionary API error: ${response.status}`);
-  }
+  if (!response.ok) throw new Error(`API error: ${response.status}`);
   const data = await response.json();
   if (!data.ok) throw new Error(data.error || 'Unknown error');
+  return parseJsonResponse(data.json, word);
+}
 
+async function fetchPassageAnalysis(
+  text: string,
+  targetLang: string,
+  sourceLang: string,
+  signal: AbortSignal,
+): Promise<PassageAnalysis> {
+  const timeout = AbortSignal.timeout(35000);
+  const combined = AbortSignal.any([signal, timeout].filter(Boolean));
+  const response = await fetch('/api/ai/dictionary', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
+    body: JSON.stringify({
+      word: text,
+      targetLang,
+      sourceLang,
+      complexity: 'complex',
+      mode: 'passage',
+      ...getAiKeys(),
+    }),
+    signal: combined,
+  });
+  if (!response.ok) throw new Error(`API error: ${response.status}`);
+  const data = await response.json();
+  if (!data.ok) throw new Error(data.error || 'Unknown error');
+  return parseJsonResponse(data.json, text) as unknown as PassageAnalysis;
+}
+
+function parseJsonResponse(jsonStr: string, fallbackWord: string): FullDefinition {
+  let cleaned = jsonStr.trim();
+  if (cleaned.startsWith('```')) {
+    cleaned = cleaned.replace(/^```(?:json)?\s*\n?/, '').replace(/\n?```\s*$/, '');
+  }
   try {
-    // Strip markdown code blocks (```json ... ```) that some models wrap JSON in
-    let jsonStr = data.json.trim();
-    if (jsonStr.startsWith('```')) {
-      jsonStr = jsonStr.replace(/^```(?:json)?\s*\n?/, '').replace(/\n?```\s*$/, '');
-    }
-    const parsed = JSON.parse(jsonStr);
+    const parsed = JSON.parse(cleaned);
     return {
-      headword: parsed.headword || word,
-      meaning: parsed.meaning || '',
-      arabicEquivalent: parsed.arabic_equivalent,
-      ottomanEquivalent: parsed.ottoman_equivalent,
-      grammaticalNotes: parsed.grammatical_notes,
-      usageLevel: parsed.usage_level,
-      passages: Array.isArray(parsed.passages) ? parsed.passages : [],
-      sourceSummary: parsed.source_summary || '',
+      headword: parsed.headword || fallbackWord,
+      contextualMeaning: parsed.contextualMeaning,
+      generalMeaning: parsed.generalMeaning,
+      meaning: parsed.meaning,
+      arabicEquivalent: parsed.arabic_equivalent || parsed.arabicEquivalent,
+      ottomanEquivalent: parsed.ottoman_equivalent || parsed.ottomanEquivalent,
+      grammaticalNotes: parsed.grammatical_notes || parsed.grammaticalNotes,
+      quranicReference: parsed.quranicReference || parsed.quranic_reference,
+      hadithReference: parsed.hadithReference || parsed.hadith_reference,
+      risalePassages: Array.isArray(parsed.risalePassages) ? parsed.risalePassages : [],
+      usageLevel: parsed.usage_level || parsed.usageLevel,
+      sourceSummary: parsed.sourceSummary || parsed.source_summary || '',
     };
   } catch {
-    return { headword: word, meaning: data.json, passages: [], sourceSummary: '' };
+    return { headword: fallbackWord, meaning: jsonStr, risalePassages: [], sourceSummary: '' };
   }
 }
 
-// ── Rendering ──────────────────────────────────────────────────────────
-
-function renderApiError(container: HTMLElement, error: unknown): void {
-  container.innerHTML = '';
-  const msg = error instanceof Error ? error.message : String(error);
-
-  const wrapper = document.createElement('div');
-  wrapper.style.cssText =
-    'padding:12px;font-size:13px;line-height:1.5;color:var(--text-muted,inherit);text-align:center;';
-
-  const icon = document.createElement('div');
-  icon.style.cssText = 'font-size:28px;margin-bottom:8px;';
-  icon.textContent = '⚠️';
-
-  const title = document.createElement('div');
-  title.style.cssText = 'font-weight:600;margin-bottom:4px;';
-  title.textContent = 'AI Sözlük — Hata';
-
-  const msgDiv = document.createElement('div');
-  msgDiv.style.cssText = 'font-size:11px;opacity:0.6;word-break:break-all;';
-  msgDiv.textContent = msg; // textContent prevents XSS
-
-  const hint = document.createElement('div');
-  hint.style.cssText = 'font-size:11px;opacity:0.5;margin-top:4px;';
-  hint.textContent = 'Diğer sözlükler aşağıda gösteriliyor';
-
-  wrapper.append(icon, title, msgDiv, hint);
-  container.appendChild(wrapper);
-}
+// ── Rendering: Simple definition ───────────────────────────────────────
 
 function renderSimpleDefinition(
   container: HTMLElement,
@@ -351,24 +337,15 @@ function renderSimpleDefinition(
   container.innerHTML = '';
   const root = document.createElement('div');
   root.style.cssText = 'font-size:14px;line-height:1.6;padding:4px 0;';
-
-  const headword = document.createElement('div');
-  headword.style.cssText = 'font-weight:600;font-size:16px;margin-bottom:8px;';
-  headword.textContent = word;
-  root.appendChild(headword);
-
-  const meaning = document.createElement('div');
-  meaning.style.cssText = 'color:var(--text-secondary, inherit);';
-  meaning.textContent = definition;
-  root.appendChild(meaning);
-
-  const powered = document.createElement('div');
-  powered.style.cssText = 'margin-top:10px;font-size:11px;opacity:0.5;';
-  powered.textContent = '✨ AI Sözlük';
-  root.appendChild(powered);
-
+  root.innerHTML = `
+    <div style="font-weight:600;font-size:16px;margin-bottom:8px;">${escapeHtml(word)}</div>
+    <div style="color:var(--text-secondary, inherit);">${escapeHtml(definition)}</div>
+    <div style="margin-top:10px;font-size:11px;opacity:0.5;">✨ Risale AI Sözlük</div>
+  `;
   container.appendChild(root);
 }
+
+// ── Rendering: Full definition ─────────────────────────────────────────
 
 function renderFullDefinition(
   container: HTMLElement,
@@ -379,174 +356,247 @@ function renderFullDefinition(
   container.innerHTML = '';
   const root = document.createElement('div');
   root.style.cssText =
-    'font-size:14px;line-height:1.7;padding:4px 0;display:flex;flex-direction:column;gap:12px;';
+    'font-size:14px;line-height:1.7;padding:4px 0;display:flex;flex-direction:column;gap:10px;';
 
   // Headword
-  const headword = document.createElement('div');
-  headword.style.cssText = 'font-weight:700;font-size:17px;';
-  headword.textContent = result.headword || word;
-  root.appendChild(headword);
+  root.appendChild(headerEl('', result.headword || word, 'font-weight:700;font-size:17px;'));
 
-  // Arabic / Ottoman equivalents
+  // Arabic / Ottoman
   if (result.arabicEquivalent || result.ottomanEquivalent) {
-    const equivRow = document.createElement('div');
-    equivRow.style.cssText = 'display:flex;gap:16px;flex-wrap:wrap;font-size:13px;';
-
+    const row = rowEl();
     if (result.arabicEquivalent) {
-      const arabic = document.createElement('span');
-      arabic.style.cssText =
+      const a = document.createElement('span');
+      a.style.cssText =
         'font-family:"Traditional Arabic","Scheherazade New",serif;font-size:18px;direction:rtl;';
-      arabic.textContent = result.arabicEquivalent;
-      equivRow.appendChild(arabic);
+      a.textContent = result.arabicEquivalent;
+      row.appendChild(a);
     }
-
     if (result.ottomanEquivalent) {
-      const ottoman = document.createElement('span');
-      ottoman.style.cssText = 'opacity:0.7;font-style:italic;';
-      ottoman.textContent = `(${result.ottomanEquivalent})`;
-      equivRow.appendChild(ottoman);
+      const o = document.createElement('span');
+      o.style.cssText = 'opacity:0.7;font-style:italic;margin-left:12px;';
+      o.textContent = `(${result.ottomanEquivalent})`;
+      row.appendChild(o);
     }
-
-    root.appendChild(equivRow);
+    root.appendChild(row);
   }
 
-  // Meaning
-  const meaningSection = document.createElement('div');
-  const meaningLabel = document.createElement('div');
-  meaningLabel.style.cssText =
-    'font-weight:600;font-size:12px;text-transform:uppercase;opacity:0.6;margin-bottom:4px;';
-  meaningLabel.textContent = '📖 ' + _('Anlamı');
-  meaningSection.appendChild(meaningLabel);
+  // Contextual meaning (most important!)
+  if (result.contextualMeaning) {
+    root.appendChild(sectionEl('📍 ' + _('Bu Bağlamda'), result.contextualMeaning));
+  }
 
-  const meaning = document.createElement('div');
-  meaning.style.cssText = 'white-space:pre-wrap;';
-  meaning.textContent = result.meaning;
-  meaningSection.appendChild(meaning);
-  root.appendChild(meaningSection);
+  // General meaning
+  const general = result.generalMeaning || result.meaning;
+  if (general) {
+    root.appendChild(sectionEl('📖 ' + _('Genel Anlamı'), general));
+  } else if (!result.contextualMeaning && result.meaning) {
+    root.appendChild(sectionEl('📖 ' + _('Anlamı'), result.meaning));
+  }
 
-  // Grammatical notes
+  // Quranic reference
+  if (result.quranicReference) {
+    root.appendChild(sectionEl('☪️ ' + _("Kur'an"), result.quranicReference, 'color:#2d7d46;'));
+  }
+
+  // Hadith reference
+  if (result.hadithReference) {
+    root.appendChild(sectionEl('🕌 ' + _('Hadis'), result.hadithReference, 'color:#7d5e2d;'));
+  }
+
+  // Risale passages
+  if (result.risalePassages.length > 0) {
+    const ps = document.createElement('div');
+    ps.appendChild(labelEl('📚 ' + _("Risale-i Nur'da")));
+    for (const p of result.risalePassages) {
+      ps.appendChild(passageCard(p));
+    }
+    root.appendChild(ps);
+  }
+
+  // Grammar notes
   if (result.grammaticalNotes) {
-    const gramSection = document.createElement('div');
-    const gramLabel = document.createElement('div');
-    gramLabel.style.cssText =
-      'font-weight:600;font-size:12px;text-transform:uppercase;opacity:0.6;margin-bottom:2px;';
-    gramLabel.textContent = '📝 ' + _('Gramer');
-    gramSection.appendChild(gramLabel);
-
-    const gram = document.createElement('div');
-    gram.style.cssText = 'font-size:13px;opacity:0.85;';
-    gram.textContent = result.grammaticalNotes;
-    gramSection.appendChild(gram);
-    root.appendChild(gramSection);
+    root.appendChild(sectionEl('📝 ' + _('Gramer'), result.grammaticalNotes));
   }
 
   // Usage level badge
   if (result.usageLevel) {
     const badge = document.createElement('span');
     badge.style.cssText =
-      'display:inline-block;padding:2px 8px;border-radius:9999px;font-size:11px;' +
-      'background:var(--badge-bg, #e5e7eb);color:var(--badge-color, inherit);';
+      'display:inline-block;padding:2px 8px;border-radius:9999px;font-size:11px;background:var(--badge-bg,#e5e7eb);color:var(--badge-color,inherit);align-self:flex-start;';
     badge.textContent = result.usageLevel.toUpperCase();
     root.appendChild(badge);
   }
 
-  // Passages from Risale-i Nur
-  if (result.passages.length > 0) {
-    const passagesSection = document.createElement('div');
-    const passagesLabel = document.createElement('div');
-    passagesLabel.style.cssText =
-      'font-weight:600;font-size:12px;text-transform:uppercase;opacity:0.6;margin-bottom:6px;';
-    passagesLabel.textContent = '📚 ' + _("Risale-i Nur'da Kullanımı");
-    passagesSection.appendChild(passagesLabel);
-
-    for (const passage of result.passages) {
-      const card = renderPassageCard(passage);
-      passagesSection.appendChild(card);
-    }
-    root.appendChild(passagesSection);
-  }
-
-  // Source summary
+  // Source
   if (result.sourceSummary) {
-    const sourceSection = document.createElement('div');
-    sourceSection.style.cssText = 'font-size:11px;opacity:0.5;margin-top:4px;';
-    sourceSection.textContent = 'Kaynak: ' + result.sourceSummary;
-    root.appendChild(sourceSection);
+    const src = document.createElement('div');
+    src.style.cssText = 'font-size:11px;opacity:0.5;margin-top:4px;';
+    src.textContent = '📎 ' + result.sourceSummary;
+    root.appendChild(src);
   }
 
   // Powered by
-  const powered = document.createElement('div');
-  powered.style.cssText = 'margin-top:4px;font-size:11px;opacity:0.4;text-align:right;';
-  powered.textContent = '✨ Risale AI Sözlük';
-  root.appendChild(powered);
-
+  root.appendChild(poweredByEl());
   container.appendChild(root);
 }
 
-function renderPassageCard(passage: FullDefinition['passages'][0]): HTMLElement {
-  const card = document.createElement('div');
-  card.style.cssText =
-    'border:1px solid var(--card-border, rgba(128,128,128,0.2));' +
-    'border-radius:8px;padding:10px;margin-bottom:8px;' +
-    'background:var(--card-bg, rgba(128,128,128,0.05));' +
-    'font-size:13px;display:flex;flex-direction:column;gap:6px;';
+// ── Rendering: Passage analysis ────────────────────────────────────────
 
-  // Book & chapter
-  const location = document.createElement('div');
-  location.style.cssText = 'font-weight:600;font-size:12px;opacity:0.7;';
-  location.textContent = [passage.bookName, passage.chapterName].filter(Boolean).join(' › ');
-  card.appendChild(location);
+function renderPassageAnalysis(
+  container: HTMLElement,
+  originalText: string,
+  result: PassageAnalysis,
+  _targetLang: string,
+): void {
+  container.innerHTML = '';
+  const root = document.createElement('div');
+  root.style.cssText =
+    'font-size:14px;line-height:1.7;padding:4px 0;display:flex;flex-direction:column;gap:12px;';
 
-  // Original sentence (highlighted)
-  const original = document.createElement('div');
-  original.style.cssText =
-    'font-style:italic;padding:6px 8px;border-left:3px solid var(--accent-color, #60a5fa);' +
-    'background:var(--quote-bg, rgba(128,128,128,0.03));border-radius:0 4px 4px 0;';
-  original.textContent = `«${passage.sentence}»`;
-  card.appendChild(original);
+  // Original text (highlighted)
+  const origBox = document.createElement('div');
+  origBox.style.cssText =
+    'font-style:italic;padding:10px 12px;border-left:3px solid var(--accent-color, #8b191b);background:var(--quote-bg, rgba(128,128,128,0.05));border-radius:0 6px 6px 0;font-size:15px;';
+  origBox.textContent = `«${originalText.slice(0, 300)}${originalText.length > 300 ? '…' : ''}»`;
+  root.appendChild(origBox);
+
+  // Passage summary
+  if (result.passageSummary) {
+    root.appendChild(sectionEl('📋 ' + _('Özet'), result.passageSummary));
+  }
 
   // Translation
-  if (passage.sentenceTranslation) {
-    const translation = document.createElement('div');
-    translation.style.cssText = 'opacity:0.85;';
-    translation.textContent = passage.sentenceTranslation;
-    card.appendChild(translation);
+  if (result.approximateTranslation) {
+    root.appendChild(
+      sectionEl(
+        '🌐 ' + _('Tercüme'),
+        result.approximateTranslation,
+        'color:var(--text-secondary, inherit);',
+      ),
+    );
   }
 
-  // Word in context
-  if (passage.wordInContext) {
-    const context = document.createElement('div');
-    context.style.cssText = 'font-size:12px;opacity:0.65;margin-top:2px;';
-    context.textContent = '💡 ' + passage.wordInContext;
-    card.appendChild(context);
+  // Context note
+  if (result.contextNote) {
+    root.appendChild(sectionEl('🔗 ' + _('Bağlam'), result.contextNote));
   }
 
-  // Navigation button
-  if (passage.bookHash) {
-    const navBtn = document.createElement('button');
-    navBtn.style.cssText =
-      'align-self:flex-start;margin-top:4px;padding:4px 10px;font-size:11px;' +
-      'border:1px solid var(--btn-border, rgba(128,128,128,0.3));border-radius:6px;' +
-      'background:transparent;cursor:pointer;' +
-      'transition:background 0.15s;';
-    navBtn.textContent = '📖 ' + _('Kitapta Aç');
-    navBtn.title = _('Open this passage in the reader');
-    navBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      // Navigate to the book in the reader
-      const url = new URL(window.location.origin + '/reader/' + passage.bookHash);
-      if (passage.cfi) url.searchParams.set('cfi', passage.cfi);
-      window.open(url.toString(), '_self');
-    });
-    // Hover effect
-    navBtn.addEventListener('mouseenter', () => {
-      navBtn.style.background = 'var(--btn-hover-bg, rgba(128,128,128,0.1))';
-    });
-    navBtn.addEventListener('mouseleave', () => {
-      navBtn.style.background = 'transparent';
-    });
-    card.appendChild(navBtn);
+  // Complex terms
+  if (result.complexTerms.length > 0) {
+    const termsDiv = document.createElement('div');
+    termsDiv.appendChild(labelEl('📖 ' + _('Terimler')));
+    for (const t of result.complexTerms) {
+      termsDiv.appendChild(termCard(t));
+    }
+    root.appendChild(termsDiv);
   }
 
+  // Key insight
+  if (result.keyInsight) {
+    root.appendChild(sectionEl('💡 ' + _('Ana Fikir'), result.keyInsight, 'font-weight:600;'));
+  }
+
+  // Source
+  if (result.sourceSummary) {
+    const src = document.createElement('div');
+    src.style.cssText = 'font-size:11px;opacity:0.5;margin-top:4px;';
+    src.textContent = '📎 ' + result.sourceSummary;
+    root.appendChild(src);
+  }
+
+  root.appendChild(poweredByEl());
+  container.appendChild(root);
+}
+
+// ── Rendering: Error ───────────────────────────────────────────────────
+
+function renderApiError(container: HTMLElement, error: unknown): void {
+  container.innerHTML = '';
+  const msg = error instanceof Error ? error.message : String(error);
+  container.innerHTML = `
+    <div style="padding:12px;font-size:13px;line-height:1.5;color:var(--text-muted,inherit);text-align:center;">
+      <div style="font-size:28px;margin-bottom:8px;">⚠️</div>
+      <div style="font-weight:600;margin-bottom:4px;">AI Sözlük — Hata</div>
+      <div style="font-size:11px;opacity:0.6;word-break:break-all;">${escapeHtml(msg)}</div>
+      <div style="font-size:11px;opacity:0.5;margin-top:4px;">Diğer sözlükler aşağıda gösteriliyor</div>
+    </div>
+  `;
+}
+
+// ── DOM helpers ────────────────────────────────────────────────────────
+
+function escapeHtml(s: string): string {
+  return s
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function headerEl(_icon: string, text: string, extraCss = ''): HTMLElement {
+  const el = document.createElement('div');
+  el.style.cssText = extraCss;
+  el.textContent = text;
+  return el;
+}
+
+function labelEl(text: string): HTMLElement {
+  const el = document.createElement('div');
+  el.style.cssText =
+    'font-weight:600;font-size:12px;text-transform:uppercase;opacity:0.6;margin-bottom:4px;';
+  el.textContent = text;
+  return el;
+}
+
+function sectionEl(label: string, text: string, extraCss = ''): HTMLElement {
+  const div = document.createElement('div');
+  div.appendChild(labelEl(label));
+  const p = document.createElement('div');
+  p.style.cssText = `white-space:pre-wrap;${extraCss}`;
+  p.textContent = text;
+  div.appendChild(p);
+  return div;
+}
+
+function rowEl(): HTMLElement {
+  const el = document.createElement('div');
+  el.style.cssText = 'display:flex;gap:16px;flex-wrap:wrap;font-size:13px;';
+  return el;
+}
+
+function passageCard(p: FullDefinition['risalePassages'][0]): HTMLElement {
+  const card = document.createElement('div');
+  card.style.cssText =
+    'border:1px solid var(--card-border,rgba(128,128,128,0.2));border-radius:8px;padding:10px;margin-bottom:6px;background:var(--card-bg,rgba(128,128,128,0.05));font-size:13px;';
+  card.innerHTML = `
+    <div style="font-weight:600;font-size:12px;opacity:0.7;">📗 ${escapeHtml(p.bookName)}</div>
+    <div style="margin-top:4px;">${escapeHtml(p.context)}</div>
+    ${p.relevance ? `<div style="margin-top:4px;font-size:12px;opacity:0.7;">🔗 ${escapeHtml(p.relevance)}</div>` : ''}
+  `;
   return card;
+}
+
+function termCard(t: PassageAnalysis['complexTerms'][0]): HTMLElement {
+  const card = document.createElement('div');
+  card.style.cssText =
+    'border:1px solid var(--card-border,rgba(128,128,128,0.2));border-radius:8px;padding:10px;margin-bottom:6px;background:var(--card-bg,rgba(128,128,128,0.05));font-size:13px;';
+  let html = `<div style="font-weight:700;font-size:14px;">${escapeHtml(t.term)}`;
+  if (t.arabic)
+    html += ` <span style="font-family:'Traditional Arabic',serif;font-size:16px;direction:rtl;">${escapeHtml(t.arabic)}</span>`;
+  html += `</div>`;
+  html += `<div style="margin-top:4px;"><span style="opacity:0.6;">Bağlamda:</span> ${escapeHtml(t.contextualDefinition)}</div>`;
+  html += `<div style="margin-top:2px;"><span style="opacity:0.6;">Genel:</span> ${escapeHtml(t.generalDefinition)}</div>`;
+  if (t.quranicRef)
+    html += `<div style="margin-top:2px;color:#2d7d46;">☪️ ${escapeHtml(t.quranicRef)}</div>`;
+  if (t.hadithRef)
+    html += `<div style="margin-top:2px;color:#7d5e2d;">🕌 ${escapeHtml(t.hadithRef)}</div>`;
+  card.innerHTML = html;
+  return card;
+}
+
+function poweredByEl(): HTMLElement {
+  const el = document.createElement('div');
+  el.style.cssText = 'margin-top:4px;font-size:11px;opacity:0.4;text-align:right;';
+  el.textContent = '✨ Risale AI Sözlük';
+  return el;
 }

@@ -7,11 +7,10 @@ import { createOpenAICompatible } from '@ai-sdk/openai-compatible';
 
 interface ModelConfig {
   provider: 'gateway' | 'gemini' | 'deepseek';
-  model: ReturnType<ReturnType<typeof createGateway>>; // LanguageModel
+  model: ReturnType<ReturnType<typeof createGateway>>;
 }
 
 function resolveModel(body: Record<string, unknown>): ModelConfig | { error: string } {
-  // 1. AI Gateway (env var) — explicit server-wide key
   const gatewayKey = process.env['AI_GATEWAY_API_KEY'];
   if (gatewayKey) {
     const gateway = createGateway({ apiKey: gatewayKey });
@@ -22,7 +21,6 @@ function resolveModel(body: Record<string, unknown>): ModelConfig | { error: str
     return { provider: 'gateway', model: gateway(modelName) };
   }
 
-  // 2. Gemini API key (user setting → env var fallback)
   const geminiKey = (body['geminiApiKey'] as string | undefined) || process.env['GEMINI_API_KEY'];
   if (geminiKey) {
     const google = createGoogleGenerativeAI({ apiKey: geminiKey });
@@ -30,7 +28,6 @@ function resolveModel(body: Record<string, unknown>): ModelConfig | { error: str
     return { provider: 'gemini', model: google(modelName) };
   }
 
-  // 3. DeepSeek API key (user setting → env var fallback)
   const deepseekKey =
     (body['deepseekApiKey'] as string | undefined) || process.env['DEEPSEEK_API_KEY'];
   if (deepseekKey) {
@@ -49,23 +46,30 @@ function resolveModel(body: Record<string, unknown>): ModelConfig | { error: str
   };
 }
 
-// ── Handlers ───────────────────────────────────────────────────────────
+// ── Language helpers ───────────────────────────────────────────────────
+
+const LANG_NAMES: Record<string, string> = {
+  ru: 'русский',
+  tr: 'Türkçe',
+  en: 'English',
+  ar: 'العربية',
+};
+
+function langName(code: string): string {
+  return LANG_NAMES[code] || code;
+}
+
+// ── Simple definition ──────────────────────────────────────────────────
 
 async function simpleDefinition(
   word: string,
   targetLang: string,
   model: ModelConfig['model'],
 ): Promise<string> {
-  const langNames: Record<string, string> = {
-    ru: 'русском',
-    tr: 'Türkçe',
-    en: 'English',
-    ar: 'العربية',
-  };
-  const tl = langNames[targetLang] || targetLang;
+  const tl = langName(targetLang);
   const result = await generateText({
     model,
-    system: `You are an Islamic theological dictionary specializing in Risale-i Nur terminology. Give a concise 1-2 sentence definition in ${tl}. Include both the literal meaning and the theological significance. No formatting, no greetings — just the definition.`,
+    system: `You are an Islamic theological dictionary specializing in Risale-i Nur. Give a concise 1-2 sentence definition in ${tl}. Include literal meaning + theological significance. No formatting, no greetings.`,
     prompt: word,
     maxOutputTokens: 200,
     temperature: 0.3,
@@ -74,83 +78,228 @@ async function simpleDefinition(
   return result.text?.trim() || word;
 }
 
+// ── Full word definition (with context) ────────────────────────────────
+
 async function fullDefinition(
   word: string,
   targetLang: string,
   sourceLang: string,
+  context: { before?: string; after?: string } | undefined,
   model: ModelConfig['model'],
 ): Promise<string> {
-  const langNames: Record<string, string> = {
-    ru: 'русский',
-    tr: 'Türkçe',
-    en: 'English',
-    ar: 'العربية',
-    fa: 'فارسی',
-    uz: 'Oʻzbekcha',
-    kk: 'Қазақша',
-    az: 'Azərbaycanca',
-    de: 'Deutsch',
-    fr: 'Français',
-    es: 'Español',
-  };
-  const sl = langNames[sourceLang] || sourceLang;
+  const sl = langName(sourceLang);
+  const ctxBefore = context?.before ? `"${context.before.slice(-300)}"` : 'нет';
+  const ctxAfter = context?.after ? `"${context.after.slice(0, 300)}"` : 'нет';
 
   const systemPrompts: Record<string, string> = {
-    ru: `Ты — словарь исламских терминов Рисале-и Нур.
-Оригинал: ${sl}. Отвечай на: русском.
+    ru: `Ты — эксперт по Рисале-и Нур. Объясни термин "${word}" (язык: ${sl}) на русском языке.
 
-СТРОГО JSON (без markdown-блоков):
+КОНТЕКСТ (где встретился термин):
+Перед: ${ctxBefore}
+После: ${ctxAfter}
+
+ОТВЕТЬ СТРОГО JSON (без \`\`\`):
 {
-  "headword": "слово",
-  "meaning": "2-3 предложения: буквальное значение + терминология Рисале-и Нур + коранический контекст",
-  "arabic_equivalent": "арабский или null",
-  "ottoman_equivalent": "османский или null",
-  "grammatical_notes": "грамматика или null",
+  "headword": "${word}",
+  "contextualMeaning": "Что значит этот термин ИМЕННО В ДАННОМ КОНТЕКСТЕ. 1-2 предложения.",
+  "generalMeaning": "Общее значение термина в Рисале-и Нур. 2-3 предложения.",
+  "arabic_equivalent": "арабский эквивалент или null",
+  "ottoman_equivalent": "османский вариант или null",
+  "grammatical_notes": "грамматика, корень, происхождение или null",
+  "quranicReference": "Если термин из Корана — сура:аят и объяснение через Коран. Иначе null.",
+  "hadithReference": "Если есть хадис с этим термином — текст хадиса и источник. Иначе null.",
+  "risalePassages": [
+    {
+      "bookName": "Название книги Рисале-и Нур",
+      "context": "Как этот термин раскрывается в данном месте книги",
+      "relevance": "Почему это относится к контексту запроса"
+    }
+  ],
   "usage_level": "basic|intermediate|advanced",
-  "passages": [],
-  "sourceSummary": "Risale Lugat + TDK + Sesli Sözlük"
+  "sourceSummary": "Какие источники реально использованы"
 }
-Для важных терминов (iman, tevhid, haşir, ubudiyet, etc.) добавь 1-2 passages. Для обычных — пустой массив.`,
-    en: `You are a Risale-i Nur Islamic terminology dictionary.
-Source language: ${sl}. Respond in: English.
+ВАЖНО: объясняй термин В КОНТЕКСТЕ окружающего текста. Если термин из Корана — дай кораническое объяснение. Приведи 1-2 места из Рисале-и Нур где этот термин раскрывается.`,
+    en: `You are a Risale-i Nur expert. Explain the term "${word}" (source: ${sl}) in English.
 
-STRICT JSON only (no markdown blocks):
+CONTEXT (where the term appears):
+Before: ${ctxBefore}
+After: ${ctxAfter}
+
+RESPOND STRICT JSON (no \`\`\`):
 {
-  "headword": "word",
-  "meaning": "2-3 sentences: literal meaning + Risale-i Nur terminology + Quranic context",
-  "arabic_equivalent": "Arabic or null",
-  "ottoman_equivalent": "Ottoman or null",
-  "grammatical_notes": "grammar or null",
+  "headword": "${word}",
+  "contextualMeaning": "What this term means IN THIS SPECIFIC CONTEXT. 1-2 sentences.",
+  "generalMeaning": "General meaning in Risale-i Nur. 2-3 sentences.",
+  "arabic_equivalent": "Arabic equivalent or null",
+  "ottoman_equivalent": "Ottoman variant or null",
+  "grammatical_notes": "Grammar, root, origin or null",
+  "quranicReference": "If from Quran — surah:ayah and explanation. Otherwise null.",
+  "hadithReference": "If hadith exists — text and source. Otherwise null.",
+  "risalePassages": [
+    {
+      "bookName": "Risale-i Nur book name",
+      "context": "How this term is elaborated here",
+      "relevance": "Why this relates to the query context"
+    }
+  ],
   "usage_level": "basic|intermediate|advanced",
-  "passages": [],
-  "sourceSummary": "Risale Lugat + TDK + Sesli Sözlük"
+  "sourceSummary": "Sources actually used"
 }
-For important theological terms, add 1-2 passages from Risale books. For common words, empty passages array.`,
-    tr: `Sen Risale-i Nur İslami terminoloji sözlüğüsün.
-Kaynak dil: ${sl}. Cevap dili: Türkçe.
+IMPORTANT: explain the term IN THE CONTEXT of the surrounding text. Use Quran and Hadith where applicable. Cite 1-2 Risale passages.`,
+    tr: `Sen Risale-i Nur uzmanısın. "${word}" terimini (kaynak: ${sl}) Türkçe açıkla.
 
-SADECE JSON (markdown bloğu olmadan):
+BAĞLAM (terimin geçtiği yer):
+Önce: ${ctxBefore}
+Sonra: ${ctxAfter}
+
+SADECE JSON ( \`\`\` olmadan):
 {
-  "headword": "kelime",
-  "meaning": "2-3 cümle: kelime anlamı + Risale-i Nur terminolojisi + Kur'ani bağlam",
+  "headword": "${word}",
+  "contextualMeaning": "Bu terim BU BAĞLAMDA ne anlama geliyor. 1-2 cümle.",
+  "generalMeaning": "Risale-i Nur'daki genel anlamı. 2-3 cümle.",
   "arabic_equivalent": "Arapçası veya null",
   "ottoman_equivalent": "Osmanlıcası veya null",
-  "grammatical_notes": "gramer veya null",
+  "grammatical_notes": "Gramer, köken veya null",
+  "quranicReference": "Kuran'dan ise — sure:ayet ve açıklama. Değilse null.",
+  "hadithReference": "Hadis varsa — metin ve kaynak. Yoksa null.",
+  "risalePassages": [
+    {
+      "bookName": "Risale-i Nur kitap adı",
+      "context": "Bu terim burada nasıl açıklanıyor",
+      "relevance": "Sorgu bağlamıyla ilgisi"
+    }
+  ],
   "usage_level": "basic|intermediate|advanced",
-  "passages": [],
-  "sourceSummary": "Risale Lugat + TDK + Sesli Sözlük"
+  "sourceSummary": "Kullanılan kaynaklar"
 }
-Önemli terimler için Risale kitaplarından 1-2 passages ekle. Basit kelimeler için boş passages.`,
+ÖNEMLİ: Terimi ÇEVRELEYEN METİN BAĞLAMINDA açıkla. Kuran ve Hadis varsa kullan. Risale'den 1-2 pasaj ver.`,
   };
   const system = systemPrompts[targetLang] ?? systemPrompts['en']!;
 
   const result = await generateText({
     model,
     system,
-    prompt: word,
-    maxOutputTokens: 900,
+    prompt: `Объясни термин: ${word}`,
+    maxOutputTokens: 1200,
     temperature: 0.5,
     abortSignal: AbortSignal.timeout(25000),
+  });
+
+  return result.text?.trim() || '';
+}
+
+// ── Passage analysis ───────────────────────────────────────────────────
+
+async function analyzePassage(
+  text: string,
+  targetLang: string,
+  sourceLang: string,
+  context: { before?: string; after?: string } | undefined,
+  model: ModelConfig['model'],
+): Promise<string> {
+  const sl = langName(sourceLang);
+  const ctxBefore = context?.before ? context.before.slice(-500) : 'нет';
+  const ctxAfter = context?.after ? context.after.slice(0, 500) : 'нет';
+
+  const systemPrompts: Record<string, string> = {
+    ru: `Ты — эксперт по Рисале-и Нур. Проанализируй выделенный ОТРЫВОК на русском языке.
+
+Выделенный отрывок (${sl}):
+"${text}"
+
+КОНТЕКСТ (что вокруг):
+ПЕРЕД отрывком: ${ctxBefore}
+ПОСЛЕ отрывка: ${ctxAfter}
+
+ОТВЕТЬ СТРОГО JSON (без \`\`\`):
+{
+  "passageSummary": "О чём этот отрывок? Краткий смысл. 2-3 предложения на русском.",
+  "approximateTranslation": "Примерный смысловой перевод отрывка на русский язык.",
+  "contextNote": "Как этот отрывок связан с тем, что идёт до и после него? 1-2 предложения.",
+  "complexTerms": [
+    {
+      "term": "сложный термин из отрывка",
+      "contextualDefinition": "Что значит в данном контексте",
+      "generalDefinition": "Общее значение в Рисале-и Нур",
+      "arabic": "арабский эквивалент или null",
+      "quranicRef": "кораническая ссылка или null",
+      "hadithRef": "ссылка на хадис или null"
+    }
+  ],
+  "keyInsight": "Главный урок/мысль этого отрывка. 1 предложение.",
+  "sourceSummary": "Какие источники использованы"
+}
+ВАЖНО:
+- Выдели ВСЕ сложные термины из отрывка (минимум 2-3).
+- Для каждого термина дай объяснение В КОНТЕКСТЕ отрывка.
+- Используй Коран и Хадисы где уместно.
+- Объясни связь с окружающим текстом.`,
+    en: `You are a Risale-i Nur expert. Analyze the selected PASSAGE in English.
+
+Selected passage (${sl}):
+"${text}"
+
+SURROUNDING CONTEXT:
+BEFORE: ${ctxBefore}
+AFTER: ${ctxAfter}
+
+STRICT JSON (no \`\`\`):
+{
+  "passageSummary": "What is this passage about? 2-3 sentences.",
+  "approximateTranslation": "Approximate translation to English.",
+  "contextNote": "How does this connect to surrounding text? 1-2 sentences.",
+  "complexTerms": [
+    {
+      "term": "complex term from passage",
+      "contextualDefinition": "Meaning in this context",
+      "generalDefinition": "General Risale-i Nur meaning",
+      "arabic": "Arabic equivalent or null",
+      "quranicRef": "Quranic reference or null",
+      "hadithRef": "Hadith reference or null"
+    }
+  ],
+  "keyInsight": "Main lesson from this passage. 1 sentence.",
+  "sourceSummary": "Sources used"
+}
+Extract ALL complex theological terms (min 2-3). Explain each in context. Use Quran/Hadith.`,
+    tr: `Sen Risale-i Nur uzmanısın. Seçili METNİ Türkçe analiz et.
+
+Seçili metin (${sl}):
+"${text}"
+
+BAĞLAM:
+ÖNCE: ${ctxBefore}
+SONRA: ${ctxAfter}
+
+SADECE JSON ( \`\`\` olmadan):
+{
+  "passageSummary": "Bu metin ne hakkında? 2-3 cümle.",
+  "approximateTranslation": "Metnin yaklaşık Türkçe çevirisi.",
+  "contextNote": "Çevreleyen metinle bağlantısı. 1-2 cümle.",
+  "complexTerms": [
+    {
+      "term": "metindeki karmaşık terim",
+      "contextualDefinition": "Bu bağlamda anlamı",
+      "generalDefinition": "Risale-i Nur'daki genel anlamı",
+      "arabic": "Arapçası veya null",
+      "quranicRef": "Kuran referansı veya null",
+      "hadithRef": "Hadis referansı veya null"
+    }
+  ],
+  "keyInsight": "Ana ders. 1 cümle.",
+  "sourceSummary": "Kullanılan kaynaklar"
+}
+TÜM karmaşık terimleri çıkar (en az 2-3). Her birini bağlamda açıkla. Kuran/Hadis kullan.`,
+  };
+  const system = systemPrompts[targetLang] ?? systemPrompts['en']!;
+
+  const result = await generateText({
+    model,
+    system,
+    prompt: `Проанализируй отрывок из Рисале-и Нур`,
+    maxOutputTokens: 2000,
+    temperature: 0.5,
+    abortSignal: AbortSignal.timeout(35000),
   });
 
   return result.text?.trim() || '';
@@ -161,24 +310,26 @@ SADECE JSON (markdown bloğu olmadan):
 export async function POST(req: Request): Promise<Response> {
   try {
     const body = await req.json();
-    const { word, targetLang, sourceLang, complexity = 'complex' } = body;
+    const {
+      word,
+      targetLang = 'ru',
+      sourceLang = 'tr',
+      complexity = 'complex',
+      mode = 'word',
+      context,
+    } = body;
 
-    // Health check mode — verify API key works.
-    // Only tests with a fixed word ("hello") to prevent abuse.
-    // No app auth needed because the API key itself acts as the secret.
+    // Health check
     if (complexity === 'health') {
       const resolved = resolveModel(body);
       if ('error' in resolved) {
         return Response.json({ ok: false, error: resolved.error });
       }
-      // Always use a fixed test word — client cannot override
       const def = await simpleDefinition('hello', targetLang || 'en', resolved.model);
       return Response.json({ ok: true, definition: def });
     }
 
-    // Auth: skip app auth ONLY when the user provides their OWN API key in the request.
-    // Keys from server env vars (DEEPSEEK_API_KEY / GEMINI_API_KEY) are server resources
-    // and REQUIRE authentication to prevent unauthorized usage/quota theft.
+    // Auth
     const userProvidedKey = !!(body['geminiApiKey'] || body['deepseekApiKey']);
     if (!userProvidedKey) {
       const { user, token } = await validateUserAndToken(req.headers.get('authorization'));
@@ -196,23 +347,41 @@ export async function POST(req: Request): Promise<Response> {
       return Response.json({ error: resolved.error }, { status: 400 });
     }
 
+    // Simple definition
     if (complexity === 'simple') {
-      const definition = await simpleDefinition(word, targetLang || 'ru', resolved.model);
-      return Response.json({ ok: true, definition, headword: word });
+      const definition = await simpleDefinition(word, targetLang, resolved.model);
+      return Response.json({ ok: true, definition, headword: word, mode: 'word' });
     }
 
+    // Passage analysis mode (selection of sentence/paragraph)
+    if (mode === 'passage') {
+      let jsonText = await analyzePassage(
+        word, // In passage mode, 'word' contains the full selected text
+        targetLang,
+        sourceLang,
+        context as { before?: string; after?: string } | undefined,
+        resolved.model,
+      );
+      jsonText = jsonText.trim();
+      if (jsonText.startsWith('```')) {
+        jsonText = jsonText.replace(/^```(?:json)?\s*\n?/, '').replace(/\n?```\s*$/, '');
+      }
+      return Response.json({ ok: true, json: jsonText, headword: word, mode: 'passage' });
+    }
+
+    // Full word definition (with context)
     let jsonText = await fullDefinition(
       word,
-      targetLang || 'ru',
-      sourceLang || 'tr',
+      targetLang,
+      sourceLang,
+      context as { before?: string; after?: string } | undefined,
       resolved.model,
     );
-    // Strip markdown code blocks that some models wrap JSON in
     jsonText = jsonText.trim();
     if (jsonText.startsWith('```')) {
       jsonText = jsonText.replace(/^```(?:json)?\s*\n?/, '').replace(/\n?```\s*$/, '');
     }
-    return Response.json({ ok: true, json: jsonText, headword: word });
+    return Response.json({ ok: true, json: jsonText, headword: word, mode: 'word' });
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : 'Unknown error';
     return Response.json({ error: `Dictionary lookup failed: ${errorMessage}` }, { status: 500 });
