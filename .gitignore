@@ -61,6 +61,13 @@ result*
 
 __pycache__/
 
+# Temporary extraction/data files
+*_raw.txt
+*_clean.txt
+*_from_html.txt
+extract_*.py
+clean_text.py
+
 # Purchased/commercial fonts — stored locally for dev, served via CDN in production
 apps/readest-app/public/fonts/latin/
 apps/readest-app/public/fonts/arabic/
