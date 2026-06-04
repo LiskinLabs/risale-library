@@ -19,12 +19,19 @@ const shouldOptOutAtBoot = () => {
   return localStorage.getItem(TELEMETRY_OPT_OUT_KEY) !== 'false';
 };
 
+const safeAtob = (s: string | undefined) => {
+  try {
+    return s ? atob(s) : '';
+  } catch {
+    return '';
+  }
+};
 const posthogUrl =
   process.env['NEXT_PUBLIC_POSTHOG_HOST'] ||
-  atob(process.env['NEXT_PUBLIC_DEFAULT_POSTHOG_URL_BASE64']!);
+  safeAtob(process.env['NEXT_PUBLIC_DEFAULT_POSTHOG_URL_BASE64']);
 const posthogKey =
   process.env['NEXT_PUBLIC_POSTHOG_KEY'] ||
-  atob(process.env['NEXT_PUBLIC_DEFAULT_POSTHOG_KEY_BASE64']!);
+  safeAtob(process.env['NEXT_PUBLIC_DEFAULT_POSTHOG_KEY_BASE64']);
 
 if (typeof window !== 'undefined' && process.env['NODE_ENV'] === 'production' && posthogKey) {
   posthog.init(posthogKey, {
