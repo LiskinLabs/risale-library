@@ -1,6 +1,6 @@
 # Risale AI Studio — Универсальный промт для AI-ассистента
 
-> v1.3 | 2026-06-04 | Тяжёлый аудит + P0/P1/P2 исправления: TextDecoder, font stripping (11→4.9MB), MeaningMode IndexedDB+бинарный поиск, Lugat турецкая нормализация, HasiyePopup data-attribute refactor
+> v1.4 | 2026-06-04 | +upstream синхронизация: foliate-js обновлён, cfi-skip, scrollable.ts, window_state.rs, +10 тестовых файлов, +40 тестов (5127 passed)
 
 ---
 
@@ -188,6 +188,21 @@ cp apps/readest-app/data/lugat.db apps/readest-app/public/data/lugat.db
 ---
 
 ## 📥 Последние изменения из upstream (Readest v0.11.4)
+
+**Синхронизация 2026-06-04:** проверено — новых коммитов после v0.11.4 нет. Обнаружены и интегрированы 10 пропущенных файлов:
+
+| Файл | Зачем |
+|---|---|
+| `packages/foliate-js/` (submodule → `cc86688`) | cfi-skip wrapper, фикс фона пагинации, текстур |
+| `utils/scrollable.ts` | Горизонтальный скролл широких таблиц |
+| `utils/xcfi.ts` | CFI-skip прозрачность для XPointer |
+| `src-tauri/src/window_state.rs` | Санитизация повреждённого .window-state.json |
+| `__tests__/utils/scrollable.test.ts` | Тесты scrollable |
+| `__tests__/utils/epubcfi-skip.test.ts` | Тесты CFI-skip прозрачности |
+| `__tests__/document/paginator-table-layout.browser.test.ts` | Браузерные тесты таблиц |
+| `__tests__/document/paginator-background-segments.test.ts` | Регрессионные тесты фона |
+| `__tests__/fixtures/data/sample-table-layout.epub` | EPUB-фикстура |
+| `__tests__/fixtures/data/sample-table-wide.epub` | EPUB-фикстура |
 
 Внедрены 2026-06-03:
 - **Исправление фона таблиц в тёмной теме** — `style.ts` (только с `overrideColor`)

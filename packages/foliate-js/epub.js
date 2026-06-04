@@ -910,17 +910,6 @@ class Loader {
         }
         if (!str) return null
 
-        // replace common HTML entities that might not be defined in XHTML
-        if (mediaType === MIME.XHTML) {
-            str = str
-                .replace(/&ensp;/g, '&#8194;')
-                .replace(/&emsp;/g, '&#8195;')
-                .replace(/&thinsp;/g, '&#8201;')
-                .replace(/&zwnj;/g, '&#8204;')
-                .replace(/&zwj;/g, '&#8205;')
-                .replace(/&nbsp;/g, '&#160;')
-        }
-
         // note that one can also just use `replaceString` for everything:
         // ```
         // const replaced = await this.replaceString(str, href, parents)

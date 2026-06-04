@@ -39,62 +39,69 @@ BOOKS = [
 
 CSS = r"""/* ── Premium Risale-i Nur EPUB CSS ────── */
 body {
-  font-family: "Georgia", "Noto Serif", "Crimson Text", serif;
+  font-family: "Minion Pro", "Georgia", "Noto Serif", serif;
   line-height: 1.85;
   text-align: justify;
-  margin: 1.2rem;
+  margin: 1.5rem;
   color: #2b2b2b;
+  font-size: 1.1rem;
 }
 
 h1 {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   font-weight: bold;
   text-align: center;
-  margin: 2.2rem 0 1.2rem;
-  line-height: 1.3;
+  margin: 2.5rem 0 1.5rem;
+  line-height: 1.2;
   color: #8b191b;
   page-break-before: always;
+  font-family: "ITC Souvenir", sans-serif;
 }
 
 h2 {
-  font-size: 1.45rem;
+  font-size: 1.55rem;
   font-weight: bold;
   text-align: center;
-  margin: 1.8rem 0 0.9rem;
-  line-height: 1.35;
+  margin: 2rem 0 1rem;
+  line-height: 1.3;
   color: #8b191b;
+  font-family: "ITC Souvenir", sans-serif;
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: bold;
   text-align: center;
-  margin: 1.5rem 0 0.8rem;
+  margin: 1.7rem 0 0.9rem;
   color: #8b191b;
+  font-family: "ITC Souvenir", sans-serif;
 }
 
 h4 {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
-  margin: 1.3rem 0 0.6rem;
+  margin: 1.4rem 0 0.7rem;
   color: #8b191b;
+  font-family: "ITC Souvenir", sans-serif;
 }
 
 h5 {
-  font-size: 1.08rem;
+  font-size: 1.12rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 1.2rem 0 0.6rem;
+  color: #8b191b;
+  font-family: "ITC Souvenir", sans-serif;
+}
+
+h6 {
+  font-size: 1.05rem;
   font-weight: bold;
   text-align: center;
   margin: 1.1rem 0 0.5rem;
   color: #8b191b;
-}
-
-h6 {
-  font-size: 1.02rem;
-  font-weight: bold;
-  text-align: center;
-  margin: 1rem 0 0.4rem;
-  color: #8b191b;
+  font-family: "ITC Souvenir", sans-serif;
 }
 
 /* Block-level Arabic (Quranic verses and Hadiths) */
@@ -102,10 +109,10 @@ h6 {
   display: block;
   text-align: center;
   direction: rtl;
-  font-family: "Traditional Arabic", "Scheherazade New", "Amiri", "Noto Naskh Arabic", serif;
-  font-size: 1.6rem;
-  line-height: 2.3;
-  margin: 1.5rem 0;
+  font-family: "Nassim Arabic Pro", "Traditional Arabic", "Scheherazade New", serif;
+  font-size: 1.75rem;
+  line-height: 2.4;
+  margin: 1.8rem 0;
   padding: 0.5rem 1rem;
   color: #8b191b;
 }
@@ -113,8 +120,8 @@ h6 {
 /* Inline Arabic inside Turkish sentences */
 .arabic-inline, span.arabic {
   direction: rtl;
-  font-family: "Traditional Arabic", "Scheherazade New", "Amiri", "Noto Naskh Arabic", serif;
-  font-size: 1.3rem;
+  font-family: "Nassim Arabic Pro", "Traditional Arabic", serif;
+  font-size: 1.4rem;
   unicode-bidi: embed;
   color: #8b191b;
 }
@@ -124,55 +131,57 @@ h6 {
   color: #8b191b;
   font-weight: bold;
   font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
 }
 
 .sual-elcevap {
-  margin: 0.8rem 0 1rem;
-  text-indent: 1.5rem;
+  margin: 1rem 0 1.2rem;
+  text-indent: 1.8rem;
 }
 
 .sual-elcevap strong, .sual-elcevap em {
   color: #8b191b;
 }
 
-/* Blockquotes styling (inspired by eRisale premium quotes) */
+/* Blockquotes styling (Premium quotes) */
 blockquote, .text-blockquote {
   font-style: italic;
-  margin: 1.2rem 2rem;
-  padding-left: 1.2rem;
-  border-left: 3px solid #8b191b;
-  color: #4a4a4a;
-  line-height: 1.75;
+  margin: 1.5rem 2.5rem;
+  padding-left: 1.5rem;
+  border-left: 4px solid #8b191b;
+  color: #444;
+  line-height: 1.8;
   text-indent: 0;
 }
 
 /* Separators */
 .separator {
   text-align: center;
-  margin: 1.5rem 0;
-  font-size: 1.2rem;
-  letter-spacing: 0.5rem;
+  margin: 2.2rem 0;
+  font-size: 1.5rem;
+  letter-spacing: 1rem;
   color: #8b191b;
 }
 
 p {
-  margin: 0.4rem 0 0.8rem;
-  text-indent: 1.5rem;
+  margin: 0.6rem 0 1.2rem;
+  text-indent: 1.8rem;
 }
 
 p.arabic, p.separator, p.sual-elcevap, p.text-blockquote, blockquote p {
   text-indent: 0;
 }
 
-/* EPUB 3 Footnotes styling (Clean book haşiye look) */
+/* EPUB 3 Footnotes styling */
 .footnote, aside[epub\:type="footnote"] {
-  font-size: 0.88rem;
-  line-height: 1.6;
-  color: #555;
-  margin-top: 1rem;
-  padding: 0.6rem 0.8rem;
-  background-color: #fcfaf7;
-  border-left: 2px solid #8b191b;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #444;
+  margin-top: 1.2rem;
+  padding: 0.8rem 1rem;
+  background-color: #fdfaf8;
+  border-left: 3px solid #8b191b;
   border-top: none;
 }
 
@@ -185,7 +194,7 @@ p.arabic, p.separator, p.sual-elcevap, p.text-blockquote, blockquote p {
   color: #8b191b;
   text-decoration: none;
   font-weight: bold;
-  margin-left: 0.3rem;
+  margin-left: 0.5rem;
 }
 
 .footnote .arabic, .footnote span.arabic {
@@ -195,9 +204,9 @@ p.arabic, p.separator, p.sual-elcevap, p.text-blockquote, blockquote p {
 }
 
 .footnotes-container {
-  margin-top: 3rem;
+  margin-top: 3.5rem;
   border-top: 1px double #8b191b;
-  padding-top: 1.5rem;
+  padding-top: 1.8rem;
 }
 """
 
