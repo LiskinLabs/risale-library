@@ -153,7 +153,7 @@ const nextConfig = {
             key: 'Content-Security-Policy',
             value:
               "default-src 'self'; " +
-              "script-src 'self' 'unsafe-inline' https://*.posthog.com https://*.stripe.com; " +
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.posthog.com https://*.stripe.com; " +
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; " +
               "img-src 'self' blob: data: https:; " +
               "font-src 'self' data: https://fonts.gstatic.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; " +

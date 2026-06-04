@@ -137,7 +137,7 @@ const FontQuickPopover: React.FC<FontQuickPopoverProps> = ({ bookKey }) => {
             onChange={(e) => {
               const val = Number(e.target.value);
               setFontSize(val);
-              saveViewSettings(envConfig, bookKey, 'defaultFontSize', val, true, false);
+              saveViewSettings(envConfig, bookKey, 'defaultFontSize', val);
             }}
             className='range range-xs range-primary w-full'
             aria-label={_('Font Size')}
@@ -159,7 +159,7 @@ const FontQuickPopover: React.FC<FontQuickPopoverProps> = ({ bookKey }) => {
             onChange={(e) => {
               const val = Number(e.target.value);
               setLineHeight(val);
-              saveViewSettings(envConfig, bookKey, 'lineHeight', val, true, false);
+              saveViewSettings(envConfig, bookKey, 'lineHeight', val);
             }}
             className='range range-xs range-primary w-full'
             aria-label={_('Line Spacing')}
@@ -176,7 +176,7 @@ const FontQuickPopover: React.FC<FontQuickPopoverProps> = ({ bookKey }) => {
               type='button'
               onClick={() => {
                 setFontFamily('Serif');
-                saveViewSettings(envConfig, bookKey, 'defaultFont', 'Serif', true, false);
+                saveViewSettings(envConfig, bookKey, 'defaultFont', 'Serif');
               }}
               className={`flex-1 rounded px-3 py-1.5 text-xs font-medium transition-colors ${
                 fontFamily === 'Serif'
@@ -190,7 +190,7 @@ const FontQuickPopover: React.FC<FontQuickPopoverProps> = ({ bookKey }) => {
               type='button'
               onClick={() => {
                 setFontFamily('Sans-serif');
-                saveViewSettings(envConfig, bookKey, 'defaultFont', 'Sans-serif', true, false);
+                saveViewSettings(envConfig, bookKey, 'defaultFont', 'Sans-serif');
               }}
               className={`flex-1 rounded px-3 py-1.5 text-xs font-medium transition-colors ${
                 fontFamily === 'Sans-serif'
@@ -212,10 +212,10 @@ const FontQuickPopover: React.FC<FontQuickPopoverProps> = ({ bookKey }) => {
               const val = e.target.value;
               if (fontFamily === 'Serif') {
                 setSerifFont(val);
-                saveViewSettings(envConfig, bookKey, 'serifFont', val, true, false);
+                saveViewSettings(envConfig, bookKey, 'serifFont', val);
               } else {
                 setSansSerifFont(val);
-                saveViewSettings(envConfig, bookKey, 'sansSerifFont', val, true, false);
+                saveViewSettings(envConfig, bookKey, 'sansSerifFont', val);
               }
             }}
             className='select select-bordered select-xs w-full'
@@ -237,7 +237,7 @@ const FontQuickPopover: React.FC<FontQuickPopoverProps> = ({ bookKey }) => {
             onChange={(e) => {
               const val = Number(e.target.value);
               setFontWeight(val);
-              saveViewSettings(envConfig, bookKey, 'fontWeight', val, true, false);
+              saveViewSettings(envConfig, bookKey, 'fontWeight', val);
             }}
             className='select select-bordered select-xs w-full'
             aria-label={_('Font Weight')}
@@ -260,7 +260,7 @@ const FontQuickPopover: React.FC<FontQuickPopoverProps> = ({ bookKey }) => {
             onChange={() => {
               const val = !overrideFont;
               setOverrideFont(val);
-              saveViewSettings(envConfig, bookKey, 'overrideFont', val, true, false);
+              saveViewSettings(envConfig, bookKey, 'overrideFont', val);
             }}
           />
         </label>
@@ -291,7 +291,7 @@ const FontQuickPopover: React.FC<FontQuickPopoverProps> = ({ bookKey }) => {
                 onChange={(e) => {
                   const val = e.target.value;
                   setLatinFont(val);
-                  saveViewSettings(envConfig, bookKey, 'latinFont', val || '', true, false);
+                  saveViewSettings(envConfig, bookKey, 'latinFont', val || '');
                 }}
                 className='select select-bordered select-xs w-full'
                 aria-label={_('Latin Font')}
@@ -313,7 +313,7 @@ const FontQuickPopover: React.FC<FontQuickPopoverProps> = ({ bookKey }) => {
                 onChange={(e) => {
                   const val = e.target.value;
                   setCyrillicFont(val);
-                  saveViewSettings(envConfig, bookKey, 'cyrillicFont', val || '', true, false);
+                  saveViewSettings(envConfig, bookKey, 'cyrillicFont', val || '');
                 }}
                 className='select select-bordered select-xs w-full'
                 aria-label={_('Cyrillic Font')}
@@ -335,7 +335,7 @@ const FontQuickPopover: React.FC<FontQuickPopoverProps> = ({ bookKey }) => {
                 onChange={(e) => {
                   const val = e.target.value;
                   setArabicFont(val);
-                  saveViewSettings(envConfig, bookKey, 'arabicFont', val || '', true, false);
+                  saveViewSettings(envConfig, bookKey, 'arabicFont', val || '');
                 }}
                 className='select select-bordered select-xs w-full'
                 aria-label={_('Arabic Font')}
