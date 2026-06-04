@@ -70,15 +70,22 @@
 | **Feature**                            | **Description**                                                                                     | **Status** |
 | -------------------------------------- | --------------------------------------------------------------------------------------------------- | ---------- |
 | **Built-in Risale Books (15 EPUBs)**   | Sözler, Mektubat, Lemalar, Şualar, and 11 more — auto-imported on first launch                     | ✅         |
+| **Russian Translations (11 EPUBs)**    | Parallel Russian EPUBs for side-by-side reading — generated from risale_extraction corpus           | ✅         |
 | **Külliyat Search**                    | Full-text search across all 15 Risale books simultaneously using Orama FTS                          | ✅         |
-| **Risale Lugat (Ottoman Dictionary)**  | 38,963 terms with FTS5/LIKE search, 4 proficiency levels (Temel→Tümü)                              | ✅         |
+| **Risale Lugat (Ottoman Dictionary)**  | 38,963 terms with FTS5/LIKE search, 78.5% frequency coverage, 70+ suffix stemming                  | ✅         |
+| **AI Dictionary (Context-Aware)**      | DeepSeek/Gemini-powered definitions IN CONTEXT of the paragraph, with Quran/Hadith/Risale refs      | ✅         |
+| **AI Passage Analysis**                | Select a sentence or paragraph → AI extracts all complex terms, translates, explains context        | ✅         |
+| **Hover Dictionary Tooltip**           | Hover any word → instant Lugat definition popup (desktop)                                           | ✅         |
+| **Dictionary Language Selector**       | Switch definition language on-the-fly: 🇷🇺 Русский / 🇹🇷 Türkçe / 🇬🇧 English / 🇸🇦 العربية              | ✅         |
+| **Save AI Responses to Notes**         | One-click save AI definitions as formatted book notes with full HTML preserved                      | ✅         |
 | **Anlam Açık Modu**                    | Inline word definitions from the dictionary with green dashed underline + tooltip                   | ✅         |
 | **Haşiye (Verse Commentary)**          | Arabic verse popups with meal index — block-level + inline dotted underline                         | ✅         |
 | **Professional Typography**            | ITC Souvenir, Minion Pro, Nassim Arabic Pro, Kazimir Text — per-script font system                  | ✅         |
 | **Parallel Translation Sync**          | Side-by-side reading of original + translation with shared scroll position                          | 🛠         |
 | **AI Assistant with RAG**              | Ask questions about the Risale with context-aware AI (Reedy RAG, OpenRouter/Ollama)                | 🛠         |
-| **Quote Widget (Vecize)**              | Daily wisdom from the Risale collection                                                            | ✅         |
-| **Annotation Layers**                  | Multiple annotation layers: personal notes, haşiye, dictionary, author notes                        | 🛠         |
+| **Quote Widget (Vecize)**              | 150 daily wisdom quotes from all 15 Risale books                                                    | ✅         |
+| **Annotation Layers**                  | Multiple annotation layers: personal notes, haşiye, dictionary, author notes — toggleable in reader  | ✅         |
+| **Mobile AI Access**                   | Dedicated 🤖 AI and 📓 Notebook buttons in mobile reader toolbar                                    | ✅         |
 
 ## Planned Features
 
