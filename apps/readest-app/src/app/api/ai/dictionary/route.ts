@@ -56,13 +56,20 @@ async function simpleDefinition(
   targetLang: string,
   model: ModelConfig['model'],
 ): Promise<string> {
+  const langNames: Record<string, string> = {
+    ru: 'русском',
+    tr: 'Türkçe',
+    en: 'English',
+    ar: 'العربية',
+  };
+  const tl = langNames[targetLang] || targetLang;
   const result = await generateText({
     model,
-    system: `You are a dictionary. Give a SHORT, 1-paragraph definition of the word in "${targetLang}". Only the meaning, no formatting.`,
+    system: `You are an Islamic theological dictionary specializing in Risale-i Nur terminology. Give a concise 1-2 sentence definition in ${tl}. Include both the literal meaning and the theological significance. No formatting, no greetings — just the definition.`,
     prompt: word,
-    maxOutputTokens: 150,
+    maxOutputTokens: 200,
     temperature: 0.3,
-    abortSignal: AbortSignal.timeout(15000), // 15s server-side timeout
+    abortSignal: AbortSignal.timeout(15000),
   });
   return result.text?.trim() || word;
 }
@@ -86,42 +93,64 @@ async function fullDefinition(
     fr: 'Français',
     es: 'Español',
   };
-  const tl = langNames[targetLang] || targetLang;
   const sl = langNames[sourceLang] || sourceLang;
+
+  const systemPrompts: Record<string, string> = {
+    ru: `Ты — словарь исламских терминов Рисале-и Нур.
+Оригинал: ${sl}. Отвечай на: русском.
+
+СТРОГО JSON (без markdown-блоков):
+{
+  "headword": "слово",
+  "meaning": "2-3 предложения: буквальное значение + терминология Рисале-и Нур + коранический контекст",
+  "arabic_equivalent": "арабский или null",
+  "ottoman_equivalent": "османский или null",
+  "grammatical_notes": "грамматика или null",
+  "usage_level": "basic|intermediate|advanced",
+  "passages": [],
+  "sourceSummary": "Risale Lugat + TDK + Sesli Sözlük"
+}
+Для важных терминов (iman, tevhid, haşir, ubudiyet, etc.) добавь 1-2 passages. Для обычных — пустой массив.`,
+    en: `You are a Risale-i Nur Islamic terminology dictionary.
+Source language: ${sl}. Respond in: English.
+
+STRICT JSON only (no markdown blocks):
+{
+  "headword": "word",
+  "meaning": "2-3 sentences: literal meaning + Risale-i Nur terminology + Quranic context",
+  "arabic_equivalent": "Arabic or null",
+  "ottoman_equivalent": "Ottoman or null",
+  "grammatical_notes": "grammar or null",
+  "usage_level": "basic|intermediate|advanced",
+  "passages": [],
+  "sourceSummary": "Risale Lugat + TDK + Sesli Sözlük"
+}
+For important theological terms, add 1-2 passages from Risale books. For common words, empty passages array.`,
+    tr: `Sen Risale-i Nur İslami terminoloji sözlüğüsün.
+Kaynak dil: ${sl}. Cevap dili: Türkçe.
+
+SADECE JSON (markdown bloğu olmadan):
+{
+  "headword": "kelime",
+  "meaning": "2-3 cümle: kelime anlamı + Risale-i Nur terminolojisi + Kur'ani bağlam",
+  "arabic_equivalent": "Arapçası veya null",
+  "ottoman_equivalent": "Osmanlıcası veya null",
+  "grammatical_notes": "gramer veya null",
+  "usage_level": "basic|intermediate|advanced",
+  "passages": [],
+  "sourceSummary": "Risale Lugat + TDK + Sesli Sözlük"
+}
+Önemli terimler için Risale kitaplarından 1-2 passages ekle. Basit kelimeler için boş passages.`,
+  };
+  const system = systemPrompts[targetLang] ?? systemPrompts['en']!;
 
   const result = await generateText({
     model,
-    system: `Ты — исламский теологический словарь Risale-i Nur (Рисале-и Нур). Дай ПОЛНОЕ определение слова.
-
-Язык оригинала: ${sl}
-Язык ответа: ${tl}
-
-ОТВЕТЬ СТРОГО В JSON:
-{
-  "headword": "оригинальное слово",
-  "meaning": "ПОЛНОЕ толкование на ${tl}: (1) буквальное значение, (2) терминологическое значение в Рисале-и Нур, (3) коранический контекст. 2-3 предложения.",
-  "arabic_equivalent": "арабский эквивалент или null",
-  "ottoman_equivalent": "османский вариант или null",
-  "grammatical_notes": "часть речи, падеж, происхождение или null",
-  "usage_level": "basic | intermediate | advanced",
-  "passages": [
-    {
-      "bookName": "Название книги на ${tl}",
-      "chapterName": "Название главы или null",
-      "sentence": "Оригинальное предложение из Рисале-и Нур на ${sl}",
-      "sentenceTranslation": "Перевод этого предложения на ${tl}",
-      "wordInContext": "Как слово используется в этом контексте, на ${tl}"
-    }
-  ],
-  "sourceSummary": "Какие источники использованы"
-}
-
-Примеры книг: Sözler, Mektubat, Lem'alar, Şualar, İşaratü'l-İ'caz, Mesnevi-i Nuriye.
-Для сложных терминов дай 1-2 примера из этих книг. Для простых слов — пустой passages.`,
+    system,
     prompt: word,
     maxOutputTokens: 900,
     temperature: 0.5,
-    abortSignal: AbortSignal.timeout(25000), // 25s server-side timeout for complex queries
+    abortSignal: AbortSignal.timeout(25000),
   });
 
   return result.text?.trim() || '';

@@ -149,15 +149,35 @@ export function useDictionaryResults({
     setManuallyToggled({});
   }, [currentWord]);
 
-  // Auto-expand decision: when ≤ 3 providers have settled with results,
-  // default-expand all of them. With > 3, default-collapse. User toggles
-  // are sticky (tracked in `manuallyToggled`).
+  // Track whether auto-expand has already been applied for the current
+  // lookup cycle, so we only run it once when all providers settle.
+  const autoExpandAppliedRef = useRef<string>('');
+
+  // Apply auto-expand once when all providers have responded (none left in
+  // 'loading' state). Debounced to avoid cascading re-renders on each
+  // individual provider result, which was causing "Transition was aborted
+  // because of timeout in DOM update" errors.
   useEffect(() => {
-    const loadedIds = Object.entries(cards)
-      .filter(([, c]) => c.state === 'loaded')
-      .map(([id]) => id);
+    const entries = Object.entries(cards);
+    if (entries.length === 0) return;
+
+    const hasLoading = entries.some(([, c]) => c.state === 'loading');
+    if (hasLoading) {
+      // Still waiting for some providers — reset the flag so we re-check later
+      autoExpandAppliedRef.current = '';
+      return;
+    }
+
+    // All providers have settled — apply auto-expand once
+    const loadKey = entries[0]?.[1]?.loadKey ?? '';
+    if (autoExpandAppliedRef.current === loadKey) return; // Already applied
+
+    const loadedIds = entries.filter(([, c]) => c.state === 'loaded').map(([id]) => id);
     if (loadedIds.length === 0) return;
+
     const shouldExpand = loadedIds.length <= 3;
+    autoExpandAppliedRef.current = loadKey;
+
     setCards((prev) => {
       let changed = false;
       const next = { ...prev };
