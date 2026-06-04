@@ -250,14 +250,21 @@ async function fetchSimpleDefinition(
   targetLang: string,
   signal: AbortSignal,
 ): Promise<string> {
+  // Combine the caller's abort signal with a hard 15s timeout
+  const timeout = AbortSignal.timeout(15000);
+  const combined = AbortSignal.any([signal, timeout].filter(Boolean));
+
   const response = await fetch('/api/ai/dictionary', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
     body: JSON.stringify({ word, targetLang, complexity: 'simple', ...getAiKeys() }),
-    signal,
+    signal: combined,
   });
 
-  if (!response.ok) throw new Error(`Dictionary API error: ${response.status}`);
+  if (!response.ok) {
+    if (timeout.aborted) throw new Error('AI Dictionary timed out (15s)');
+    throw new Error(`Dictionary API error: ${response.status}`);
+  }
   const data = await response.json();
   if (!data.ok) throw new Error(data.error || 'Unknown error');
   return data.definition || word;
@@ -269,14 +276,21 @@ async function fetchFullDefinition(
   sourceLang: string,
   signal: AbortSignal,
 ): Promise<FullDefinition> {
+  // Combine the caller's abort signal with a hard 25s timeout (complex queries take longer)
+  const timeout = AbortSignal.timeout(25000);
+  const combined = AbortSignal.any([signal, timeout].filter(Boolean));
+
   const response = await fetch('/api/ai/dictionary', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
     body: JSON.stringify({ word, targetLang, sourceLang, complexity: 'complex', ...getAiKeys() }),
-    signal,
+    signal: combined,
   });
 
-  if (!response.ok) throw new Error(`Dictionary API error: ${response.status}`);
+  if (!response.ok) {
+    if (timeout.aborted) throw new Error('AI Dictionary timed out (25s)');
+    throw new Error(`Dictionary API error: ${response.status}`);
+  }
   const data = await response.json();
   if (!data.ok) throw new Error(data.error || 'Unknown error');
 

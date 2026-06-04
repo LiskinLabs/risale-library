@@ -60,6 +60,7 @@ async function simpleDefinition(
     prompt: word,
     maxOutputTokens: 150,
     temperature: 0.3,
+    abortSignal: AbortSignal.timeout(15000), // 15s server-side timeout
   });
   return result.text?.trim() || word;
 }
@@ -118,6 +119,7 @@ async function fullDefinition(
     prompt: word,
     maxOutputTokens: 900,
     temperature: 0.5,
+    abortSignal: AbortSignal.timeout(25000), // 25s server-side timeout for complex queries
   });
 
   return result.text?.trim() || '';

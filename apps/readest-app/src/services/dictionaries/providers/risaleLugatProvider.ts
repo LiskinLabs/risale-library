@@ -13,44 +13,194 @@ interface LugatEntry extends Record<string, string | null> {
 // ── Turkish normalization ───────────────────────────────────────────
 
 /**
- * Strip common Turkish suffixes to find the root/stem form.
- * This is a heuristic normalizer — not a full morphological analyzer.
- * It handles the most common derivational and inflectional suffixes
- * that prevent LIKE 'query%' from matching in agglutinated lookups.
+ * Common Turkish inflectional/derivational suffixes.
+ * Each suffix may have vowel-harmony variants (e/a, ı/i/u/ü).
  *
- * Examples:
- *   "kitabı"    → "kitap"   (possessive + consonant mutation)
- *   "eserlerin" → "eser"    (plural + genitive)
- *   "imanın"    → "iman"    (genitive)
- *   "Allah'ın"  → "Allah"   (genitive with apostrophe)
+ * Ordered from longest → shortest to avoid partial stripping.
+ */
+const TR_SUFFIXES = [
+  // Possessive + case combos
+  'larındaki',
+  'lerindeki',
+  'larından',
+  'lerinden',
+  'larında',
+  'lerinde',
+  'larına',
+  'lerine',
+  'larıyla',
+  'leriyle',
+  // Plural + possessive
+  'larımız',
+  'lerimiz',
+  'larınız',
+  'leriniz',
+  'larının',
+  'lerinin',
+  'larıma',
+  'lerime',
+  // Plural
+  'lardan',
+  'lerden',
+  'larda',
+  'lerde',
+  'ları',
+  'leri',
+  'lar',
+  'ler',
+  // Verbal nouns (mastar)
+  'maktan',
+  'mekten',
+  'makta',
+  'mekte',
+  'masına',
+  'mesine',
+  'masını',
+  'mesini',
+  'ması',
+  'mesi',
+  // Participles / gerunds
+  'dıktan',
+  'dikten',
+  'duktan',
+  'dükten',
+  'dığında',
+  'diğinde',
+  'duğunda',
+  'düğünde',
+  'dığını',
+  'diğini',
+  'duğunu',
+  'düğünü',
+  'dığı',
+  'diği',
+  'duğu',
+  'düğü',
+  // Possessive
+  'ımız',
+  'imiz',
+  'umuz',
+  'ümüz',
+  'ınız',
+  'iniz',
+  'unuz',
+  'ünüz',
+  'ının',
+  'inin',
+  'unun',
+  'ünün',
+  'ına',
+  'ine',
+  'una',
+  'üne',
+  'ım',
+  'im',
+  'um',
+  'üm',
+  'ın',
+  'in',
+  'un',
+  'ün',
+  'ı',
+  'i',
+  'u',
+  'ü',
+  'sı',
+  'si',
+  'su',
+  'sü',
+  // Case suffixes
+  'ndan',
+  'nden',
+  'ndan',
+  'nden',
+  'nda',
+  'nde',
+  'nda',
+  'nde',
+  'dan',
+  'den',
+  'tan',
+  'ten',
+  'da',
+  'de',
+  'ta',
+  'te',
+  // Dative: -(y)a, -(y)e
+  'ya',
+  'ye',
+  // Ablative/instrumental
+  'yla',
+  'yle',
+  'la',
+  'le',
+  // Other
+  'ken',
+  'ki',
+  'ce',
+  'ca',
+  'çe',
+  'ça',
+  'dir',
+  'dır',
+  'dur',
+  'dür',
+  'tir',
+  'tır',
+  // Compound markers
+  'lık',
+  'lik',
+  'luk',
+  'lük',
+  'sız',
+  'siz',
+  'suz',
+  'süz',
+  'cık',
+  'cik',
+  'cuk',
+  'cük',
+];
+
+/**
+ * Strip known Turkish suffixes from a word to find the root.
+ * Returns candidates sorted from most → least aggressive removal.
+ *
+ * Handles consonant mutation (k→ğ, p→b, ç→c, t→d) at the new stem boundary.
  */
 function turkishNormalize(word: string): string[] {
   const candidates: string[] = [word];
+  const lower = word.toLowerCase();
 
   // Remove apostrophized suffixes: Allah'ın → Allah
-  const apostropheIdx = word.indexOf("'");
+  const apostropheIdx = lower.indexOf("'");
   if (apostropheIdx > 0) {
-    candidates.push(word.slice(0, apostropheIdx));
+    const after = lower.slice(0, apostropheIdx);
+    if (after.length >= 3) candidates.push(after);
   }
 
-  // Aggressive suffix stripping — try removing common suffixes
-  const stem = word
-    // Plural: -lar, -ler
-    .replace(/(?:l[ae]r)$/i, '')
-    // Possessive: -(s)I, -(s)i, -(s)ı, -(s)u, -(s)ü, -(n)ın, -(n)in, -(n)un, -(n)ün
-    .replace(/(?:[sş]?(?:[ıiuü]|in?[a-z]?))$/i, '')
-    // Case suffixes: -da, -de, -ta, -te, -dan, -den, -tan, -ten
-    .replace(/(?:[dt][ae]n?)$/i, '')
-    // Dative: -(y)A, -(y)a, -(y)e
-    .replace(/(?:y?[ae])$/i, '')
-    // Other common: -ki, -ken, -ce, -ca, -le, -la
-    .replace(/(?:k[ei]|k[ae]n|[cj][ae]|l[ae])$/i, '');
+  // Try stripping known suffixes
+  for (const suffix of TR_SUFFIXES) {
+    if (lower.endsWith(suffix) && lower.length - suffix.length >= 3) {
+      const stem = lower.slice(0, -suffix.length);
 
-  if (stem && stem !== word && stem.length >= 3) {
-    candidates.push(stem);
+      // Consonant mutation: when suffix was added, final consonant may have changed
+      // k→ğ (kitap→kitabı), p→b, ç→c, t→d
+      const MUTATIONS: Record<string, string> = { ğ: 'k', b: 'p', c: 'ç', d: 't' };
+      const last = stem[stem.length - 1];
+      if (last && MUTATIONS[last]) {
+        const mutated = stem.slice(0, -1) + MUTATIONS[last]!;
+        candidates.push(mutated);
+      }
+
+      if (stem.length >= 3) {
+        candidates.push(stem);
+      }
+    }
   }
 
-  return candidates;
+  // Deduplicate — keep order
+  return [...new Set(candidates)];
 }
 
 export const createRisaleLugatProvider = (appService: AppService): DictionaryProvider => {
@@ -177,6 +327,15 @@ export const createRisaleLugatProvider = (appService: AppService): DictionaryPro
             );
             if (results && results.length > 0) break;
           }
+        }
+
+        // Step 4: Last resort — infix LIKE (slower but catches compound/suffixed words)
+        if ((!results || results.length === 0) && query.length > 4) {
+          const infixParams = level < 3 ? [`%${query}%`, level] : [`%${query}%`];
+          results = await database.select<LugatEntry>(
+            `SELECT term, arabic, definition FROM lugat WHERE term LIKE ? ${levelClause} LIMIT 1`,
+            infixParams,
+          );
         }
 
         if (!results || results.length === 0) {

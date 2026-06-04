@@ -17,12 +17,14 @@ def main():
     cursor = conn.cursor()
     cursor.execute("SELECT term, definition FROM lugat ORDER BY term")
     rows = cursor.fetchall()
-    entries = [{"term": term, "definition": definition} for term, definition in rows]
+    # Compact format: short keys ('t'/'d' instead of 'term'/'definition')
+    # saves ~30% file size (4.6 MB → ~3.2 MB for 39K entries)
+    entries = [{"t": term, "d": definition} for term, definition in rows]
     conn.close()
 
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     with open(OUT_PATH, "w", encoding="utf-8") as f:
-        json.dump(entries, f, ensure_ascii=False)
+        json.dump(entries, f, ensure_ascii=False, separators=(',', ':'))
 
     file_size = OUT_PATH.stat().st_size
     print(f"Exported {len(entries)} terms to {OUT_PATH} ({file_size:,} bytes)")

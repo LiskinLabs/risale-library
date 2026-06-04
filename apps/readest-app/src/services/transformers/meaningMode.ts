@@ -128,11 +128,14 @@ async function loadDictionary(): Promise<TermEntry[]> {
       const jsonUrl = '/data/lugat-terms.json';
       const jsonResp = await fetch(jsonUrl);
       if (jsonResp.ok) {
-        const raw: { term: string; definition: string }[] = await jsonResp.json();
-        entries = raw.map((e) => ({
-          term: e.term.toLowerCase().trim(),
-          definition: e.definition.trim(),
-        }));
+        // Support both compact ({t,d}) and legacy ({term,definition}) formats
+        const raw: ({ t: string; d: string } | { term: string; definition: string })[] =
+          await jsonResp.json();
+        entries = raw.map((e) => {
+          const term = ('t' in e ? e.t : (e as { term: string }).term).toLowerCase().trim();
+          const definition = ('d' in e ? e.d : (e as { definition: string }).definition).trim();
+          return { term, definition };
+        });
         console.log(`[MeaningMode] Loaded ${entries.length} dictionary terms from JSON`);
         // Cache in background (don't block first paint)
         saveToIndexedDB(entries).catch(() => {});
