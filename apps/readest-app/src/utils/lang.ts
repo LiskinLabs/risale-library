@@ -30,6 +30,7 @@ export const isCaselessLang = (lang: string | null | undefined): boolean => {
     'ko', // CJK
     'ar',
     'fa', // Arabic script
+    'ug', // Uyghur
     'he', // Hebrew
     'hi',
     'bn',
