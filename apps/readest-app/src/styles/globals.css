@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Logo animations — used by Logo.tsx */
+@keyframes dash {
+  from {
+    stroke-dashoffset: 283;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 @font-face {
   font-family: 'Inter';
   src: url('/fonts/InterVariable.woff2') format('woff2');
