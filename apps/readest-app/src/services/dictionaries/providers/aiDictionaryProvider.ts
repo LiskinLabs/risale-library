@@ -240,6 +240,11 @@ function getAiKeys(): Record<string, string> {
   return keys;
 }
 
+function getAuthHeaders(): Record<string, string> {
+  const token = typeof localStorage !== 'undefined' ? localStorage.getItem('token') : null;
+  return token ? { Authorization: `Bearer ${token}` } : {};
+}
+
 async function fetchSimpleDefinition(
   word: string,
   targetLang: string,
@@ -247,7 +252,7 @@ async function fetchSimpleDefinition(
 ): Promise<string> {
   const response = await fetch('/api/ai/dictionary', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
     body: JSON.stringify({ word, targetLang, complexity: 'simple', ...getAiKeys() }),
     signal,
   });
@@ -266,7 +271,7 @@ async function fetchFullDefinition(
 ): Promise<FullDefinition> {
   const response = await fetch('/api/ai/dictionary', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
     body: JSON.stringify({ word, targetLang, sourceLang, complexity: 'complex', ...getAiKeys() }),
     signal,
   });
