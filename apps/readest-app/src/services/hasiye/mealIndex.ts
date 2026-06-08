@@ -10,7 +10,6 @@
  */
 
 import mealData0 from './meal-data/meal-0.json';
-import mealData1 from './meal-data/meal-1.json';
 
 // ── Build-time meal index ───────────────────────────────────────────
 
@@ -30,7 +29,6 @@ function indexMeals(entries: MealEntry[]) {
 }
 
 indexMeals(mealData0 as MealEntry[]);
-indexMeals(mealData1 as MealEntry[]);
 
 // ── Public API ──────────────────────────────────────────────────────
 

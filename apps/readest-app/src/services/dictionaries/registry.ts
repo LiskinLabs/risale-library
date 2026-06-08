@@ -49,7 +49,15 @@ interface RegistryArgs {
 const builtinFor = (id: string, fs?: AppService): DictionaryProvider | undefined => {
   if (id === BUILTIN_PROVIDER_IDS.wiktionary) return wiktionaryProvider;
   if (id === BUILTIN_PROVIDER_IDS.wikipedia) return wikipediaProvider;
-  if (id === BUILTIN_PROVIDER_IDS.risaleLugat && fs) return createRisaleLugatProvider(fs);
+  if (id === BUILTIN_PROVIDER_IDS.risaleLugat) {
+    if (fs) return createRisaleLugatProvider(fs);
+    console.warn(
+      '[Dictionary Registry] Risale Lugat is enabled but AppService is not available — ' +
+        'the provider will be skipped. This may happen during initial app mount. ' +
+        'If this persists, check the EnvContext provider.',
+    );
+    return undefined;
+  }
   if (id === BUILTIN_PROVIDER_IDS.aiDictionary) return aiDictionaryProvider;
   // System dictionary is a sentinel — it has no in-popup UI. The
   // annotator handles it before reaching the popup; the registry

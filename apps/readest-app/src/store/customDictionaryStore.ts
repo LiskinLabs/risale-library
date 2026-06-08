@@ -37,13 +37,15 @@ const BUILTIN_WEB_ORDER = [
 
 const DEFAULT_DICTIONARY_SETTINGS: DictionarySettings = {
   providerOrder: [
-    BUILTIN_PROVIDER_IDS.systemDictionary,
+    BUILTIN_PROVIDER_IDS.aiDictionary,
     BUILTIN_PROVIDER_IDS.risaleLugat,
+    BUILTIN_PROVIDER_IDS.systemDictionary,
     BUILTIN_PROVIDER_IDS.wiktionary,
     BUILTIN_PROVIDER_IDS.wikipedia,
     ...BUILTIN_WEB_ORDER,
   ],
   providerEnabled: {
+    [BUILTIN_PROVIDER_IDS.aiDictionary]: true,
     [BUILTIN_PROVIDER_IDS.systemDictionary]: false,
     [BUILTIN_PROVIDER_IDS.risaleLugat]: true,
     [BUILTIN_PROVIDER_IDS.wiktionary]: true,

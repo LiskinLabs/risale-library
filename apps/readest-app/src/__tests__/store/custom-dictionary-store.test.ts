@@ -638,18 +638,18 @@ describe('customDictionaryStore — loadCustomDictionaries reconciliation', () =
     // so user-imported dicts stay at the top of the list (rather than
     // stranded after the builtins where the user might miss them).
     // Existing imp-known is already after builtins (intentional user
-    // choice persisted in providerOrder) so it stays put. The
-    // `builtin:system` sentinel was added in the default order when
-    // the system-dictionary provider landed; backfill appends it
-    // after the persisted builtins on hydration.
+    // choice persisted in providerOrder) so it stays put.
+    // Backfill appends missing defaults: ai-dictionary, risale-lugat,
+    // system-dictionary, and web searches in their default order.
     expect(after.providerOrder).toEqual([
       'imp-orphaned-1',
       'imp-orphaned-2',
       'builtin:wiktionary',
       'builtin:wikipedia',
       'imp-known',
-      'builtin:system',
+      'builtin:ai-dictionary',
       'builtin:risale-lugat',
+      'builtin:system',
       'web:builtin:google',
       'web:builtin:tdk-sozluk',
       'web:builtin:sesli-sozluk',

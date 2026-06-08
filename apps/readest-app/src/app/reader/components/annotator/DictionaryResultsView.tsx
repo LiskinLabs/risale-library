@@ -302,13 +302,10 @@ export function useDictionaryResults({
     dictionaryLanguage,
   ]);
 
-  // Visible cards = providers that are still loading or finished with a
-  // result. Empty/unsupported/error cards are removed entirely.
-  const visibleDefinitionProviders = definitionProviders.filter((p) => {
-    const card = cards[p.id];
-    if (!card) return true;
-    return card.state === 'loading' || card.state === 'loaded';
-  });
+  // Visible cards = all providers regardless of state. We show error/empty
+  // states with a message so the user knows what went wrong instead of
+  // silently hiding failed providers.
+  const visibleDefinitionProviders = definitionProviders;
 
   const resolveWebSearchUrl = useCallback(
     (id: string): string | undefined => {
@@ -446,6 +443,7 @@ export const DictionaryResultsBody: React.FC<DictionaryResultsBodyProps> = ({
   resolveWebSearchUrl,
   onWebSearchClickTauri,
   noProvidersAtAll,
+  currentWord,
 }) => {
   const _ = useTranslation();
   return (
@@ -469,11 +467,17 @@ export const DictionaryResultsBody: React.FC<DictionaryResultsBodyProps> = ({
                   {visibleDefinitionProviders.map((p) => {
                     const card = cards[p.id];
                     const isLoading = !card || card.state === 'loading';
+                    const isError = card?.state === 'error';
+                    const isEmpty = card?.state === 'empty';
+                    const isUnsupported = card?.state === 'unsupported';
+                    const isFailed = isError || isEmpty || isUnsupported;
                     const expanded = card?.expanded ?? false;
                     const sourceLabel =
                       card?.outcome?.ok && card.outcome.sourceLabel
                         ? card.outcome.sourceLabel
                         : _(p.label);
+                    const errorMessage =
+                      card?.outcome && !card.outcome.ok ? card.outcome.message || '' : '';
                     return (
                       <li key={p.id}>
                         <div
@@ -514,12 +518,51 @@ export const DictionaryResultsBody: React.FC<DictionaryResultsBodyProps> = ({
                               isLoading && 'hidden',
                               !isLoading &&
                                 !expanded &&
+                                !isFailed &&
                                 'line-clamp-4 max-h-40 overflow-hidden [-webkit-box-orient:vertical] [display:-webkit-box]',
                             )}
                           />
                           {!isLoading && (
-                            <div className='border-base-content/10 -me-4 mt-2 border-b pb-2'>
+                            <div
+                              className={clsx(
+                                'border-base-content/10 -me-4 mt-2 border-b pb-2',
+                                isFailed && 'border-dashed',
+                              )}
+                            >
                               <span className='not-eink:opacity-60 text-xs'>{sourceLabel}</span>
+                              {isFailed && (
+                                <div
+                                  data-testid='dict-card-error'
+                                  className='not-eink:opacity-50 mt-1 text-xs italic'
+                                >
+                                  {isEmpty && (
+                                    <span>
+                                      {' — '}
+                                      {_('No results found for')} &quot;{currentWord}&quot;
+                                    </span>
+                                  )}
+                                  {isUnsupported && (
+                                    <span>
+                                      {' — '}
+                                      {errorMessage
+                                        ? _('Unsupported dictionary: {{reason}}').replace(
+                                            '{{reason}}',
+                                            errorMessage,
+                                          )
+                                        : _('Unsupported dictionary: {{reason}}').replace(
+                                            '{{reason}}',
+                                            _('Unknown error'),
+                                          )}
+                                    </span>
+                                  )}
+                                  {isError && (
+                                    <span>
+                                      {' — '}
+                                      {errorMessage || _('An error occurred')}
+                                    </span>
+                                  )}
+                                </div>
+                              )}
                             </div>
                           )}
                         </div>
