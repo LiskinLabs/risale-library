@@ -19,147 +19,110 @@ interface LugatEntry extends Record<string, string | null> {
  * Ordered from longest → shortest to avoid partial stripping.
  */
 const TR_SUFFIXES = [
-  // Possessive + case combos
-  'larındaki',
-  'lerindeki',
-  'larından',
-  'lerinden',
-  'larında',
-  'lerinde',
-  'larına',
-  'lerine',
-  'larıyla',
-  'leriyle',
-  // Plural + possessive
-  'larımız',
-  'lerimiz',
-  'larınız',
-  'leriniz',
-  'larının',
-  'lerinin',
-  'larıma',
-  'lerime',
-  // Plural
-  'lardan',
-  'lerden',
-  'larda',
-  'lerde',
-  'ları',
-  'leri',
-  'lar',
-  'ler',
-  // Verbal nouns (mastar)
-  'maktan',
-  'mekten',
-  'makta',
-  'mekte',
-  'masına',
-  'mesine',
-  'masını',
-  'mesini',
-  'ması',
-  'mesi',
-  // Participles / gerunds
-  'dıktan',
-  'dikten',
-  'duktan',
-  'dükten',
-  'dığında',
-  'diğinde',
-  'duğunda',
-  'düğünde',
-  'dığını',
-  'diğini',
-  'duğunu',
-  'düğünü',
-  'dığı',
-  'diği',
-  'duğu',
-  'düğü',
-  // Possessive
-  'ımız',
-  'imiz',
-  'umuz',
-  'ümüz',
-  'ınız',
-  'iniz',
-  'unuz',
-  'ünüz',
-  'ının',
-  'inin',
-  'unun',
-  'ünün',
-  'ına',
-  'ine',
-  'una',
-  'üne',
-  'ım',
-  'im',
-  'um',
-  'üm',
-  'ın',
-  'in',
-  'un',
-  'ün',
-  'ı',
-  'i',
-  'u',
-  'ü',
-  'sı',
-  'si',
-  'su',
-  'sü',
+  // Possessive + case + postposition combos (longest first)
+  'larındaki', 'lerindeki',
+  'larındaki', 'lerindeki',
+  'larından', 'lerinden',
+  'larındaki', 'lerindeki',
+  'larında', 'lerinde',
+  'larına', 'lerine',
+  'larıyla', 'leriyle',
+  'larıdır', 'leridir',
+  // Plural + possessive + case
+  'larımızdan', 'lerimizden',
+  'larımızda', 'lerimizde',
+  'larımıza', 'lerimize',
+  'larımızı', 'lerimizi',
+  'larımız', 'lerimiz',
+  'larınızdan', 'lerinizden',
+  'larınızda', 'lerinizde',
+  'larınıza', 'lerinize',
+  'larınızı', 'lerinizi',
+  'larınız', 'leriniz',
+  'larının', 'lerinin',
+  'larıma', 'lerime',
+  'larını', 'lerini',
+  // Plural + case
+  'lardan', 'lerden',
+  'larda', 'lerde',
+  'lara', 'lere',
+  'ları', 'leri',
+  'lar', 'ler',
+  // Verbal nouns (mastar) + case/possessive
+  'maktandır', 'mektendir',
+  'maktan', 'mekten',
+  'makta', 'mekte',
+  'maktır', 'mektir',
+  'masından', 'mesinden',
+  'masında', 'mesinde',
+  'masına', 'mesine',
+  'masını', 'mesini',
+  'masıdır', 'mesidir',
+  'ması', 'mesi',
+  'makla', 'mekle',
+  'mak', 'mek',
+  // Participles / gerunds with case endings
+  'dıklarından', 'diklerinden',
+  'dıklarında', 'diklerinde',
+  'dıkları', 'dikleri',
+  'dıktan', 'dikten', 'duktan', 'dükten',
+  'dığından', 'diğinden', 'duğundan', 'düğünden',
+  'dığında', 'diğinde', 'duğunda', 'düğünde',
+  'dığını', 'diğini', 'duğunu', 'düğünü',
+  'dığıdır', 'diğidir', 'duğudur', 'düğüdür',
+  'dığı', 'diği', 'duğu', 'düğü',
+  // Adverbial participles (ulaç/gerund)
+  'arak', 'erek',
+  'ınca', 'ince', 'unca', 'ünce',
+  'ıp', 'ip', 'up', 'üp',
+  'alı', 'eli',
+  'madan', 'meden',
+  // Possessive suffixes
+  'ımız', 'imiz', 'umuz', 'ümüz',
+  'ınız', 'iniz', 'unuz', 'ünüz',
+  'ının', 'inin', 'unun', 'ünün',
+  'ına', 'ine', 'una', 'üne',
+  'ım', 'im', 'um', 'üm',
+  'ın', 'in', 'un', 'ün',
+  'ı', 'i', 'u', 'ü',
+  'sı', 'si', 'su', 'sü',
   // Case suffixes
-  'ndan',
-  'nden',
-  'ndan',
-  'nden',
-  'nda',
-  'nde',
-  'nda',
-  'nde',
-  'dan',
-  'den',
-  'tan',
-  'ten',
-  'da',
-  'de',
-  'ta',
-  'te',
-  // Dative: -(y)a, -(y)e
-  'ya',
-  'ye',
-  // Ablative/instrumental
-  'yla',
-  'yle',
-  'la',
-  'le',
-  // Other
+  'ndan', 'nden', 'ntan', 'nten',
+  'nda', 'nde', 'nta', 'nte',
+  'dan', 'den', 'tan', 'ten',
+  'da', 'de', 'ta', 'te',
+  'a', 'e', // dative: -(y)a, -(y)e (stripped after buffer-letter removal)
+  'ı', 'i', 'u', 'ü', // accusative: -(y)ı
+  // Buffer letter + case (y-insertion)
+  'nın', 'nin', 'nun', 'nün',
+  'na', 'ne',
+  'nı', 'ni', 'nu', 'nü',
+  'yla', 'yle',
+  'la', 'le',
+  // Copula / predicative
+  'dir', 'dır', 'dur', 'dür',
+  'tir', 'tır', 'tur', 'tür',
+  // Derivational
+  'lık', 'lik', 'luk', 'lük',
+  'sız', 'siz', 'suz', 'süz',
+  'lı', 'li', 'lu', 'lü',
+  'cı', 'ci', 'cu', 'cü',
+  'çı', 'çi', 'çu', 'çü',
+  'cık', 'cik', 'cuk', 'cük',
+  'ceğiz', 'cağız',
+  'ce', 'ca', 'çe', 'ça',
+  'cik', 'cık',
+  // Other common endings
   'ken',
-  'ki',
-  'ce',
-  'ca',
-  'çe',
-  'ça',
-  'dir',
-  'dır',
-  'dur',
-  'dür',
-  'tir',
-  'tır',
-  // Compound markers
-  'lık',
-  'lik',
-  'luk',
-  'lük',
-  'sız',
-  'siz',
-  'suz',
-  'süz',
-  'cık',
-  'cik',
-  'cuk',
-  'cük',
+  'ki', 'kü',
+  'deki', 'daki', 'teki', 'taki',
+  // Diminutive / affective
+  'cik', 'cık', 'cük', 'cuk',
+  'ciğim', 'cığım', 'cüğüm', 'cuğum',
+  // Agentive
+  'ici', 'ıcı', 'ücü', 'ucu',
+  // Gerundial
+  'ış', 'iş', 'uş', 'üş',
 ];
 
 /**
@@ -336,6 +299,34 @@ export const createRisaleLugatProvider = (appService: AppService): DictionaryPro
             `SELECT term, arabic, definition FROM lugat WHERE term LIKE ? ${levelClause} LIMIT 1`,
             infixParams,
           );
+        }
+
+        // Step 5: FTS fallback — token-based search catches words the stemmer missed.
+        // Splits the query into tokens and searches each term individually.
+        if ((!results || results.length === 0) && query.length > 3) {
+          try {
+            const tokens = query
+              .split(/[\s\-',.!?]+/)
+              .filter((t) => t.length >= 3)
+              .slice(0, 3); // max 3 tokens
+            for (const token of tokens) {
+              const ftsParams = level < 3 ? [token, level] : [token];
+              results = await database.select<LugatEntry>(
+                `SELECT term, arabic, definition FROM lugat WHERE term = ? ${levelClause} LIMIT 1`,
+                ftsParams,
+              );
+              if (results && results.length > 0) break;
+              // Prefix on token
+              const ftsLikeParams = level < 3 ? [`${token}%`, level] : [`${token}%`];
+              results = await database.select<LugatEntry>(
+                `SELECT term, arabic, definition FROM lugat WHERE term LIKE ? ${levelClause} LIMIT 1`,
+                ftsLikeParams,
+              );
+              if (results && results.length > 0) break;
+            }
+          } catch {
+            // FTS fallback is best-effort; silent failure is acceptable
+          }
         }
 
         if (!results || results.length === 0) {

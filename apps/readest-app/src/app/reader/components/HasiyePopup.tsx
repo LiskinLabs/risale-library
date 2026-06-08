@@ -3,7 +3,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { getPopupPosition, getPosition, Position } from '@/utils/sel';
-import { lookupMeal, getMealLanguage } from '@/services/hasiye/mealIndex';
+import { lookupMeal, getMealLanguage, type MealResult } from '@/services/hasiye/mealIndex';
 import { eventDispatcher } from '@/utils/event';
 import { Overlay } from '@/components/Overlay';
 import Popup from '@/components/Popup';
@@ -18,14 +18,14 @@ const HasiyePopup: React.FC<HasiyePopupProps> = ({ bookKey }) => {
   const { t: _, i18n } = useTranslation();
   const { appService } = useEnv();
   const [showPopup, setShowPopup] = useState(false);
-  const [translationText, setTranslationText] = useState('');
+  const [mealResult, setMealResult] = useState<MealResult | null>(null);
   const [arabicText, setArabicText] = useState('');
   const [popupPosition, setPopupPosition] = useState<Position | null>(null);
   const [trianglePosition, setTrianglePosition] = useState<Position | null>(null);
 
   const popupPadding = useResponsiveSize(10);
-  const popupWidth = Math.min(400, window.innerWidth - popupPadding * 2);
-  const popupHeight = Math.min(300, window.innerHeight - popupPadding * 2);
+  const popupWidth = Math.min(420, window.innerWidth - popupPadding * 2);
+  const popupHeight = Math.min(350, window.innerHeight - popupPadding * 2);
   const mealLang = useMemo(() => getMealLanguage(i18n.language || 'tr'), [i18n.language]);
 
   useEffect(() => {
@@ -39,7 +39,6 @@ const HasiyePopup: React.FC<HasiyePopupProps> = ({ bookKey }) => {
 
       let decodedText = '';
       try {
-        // Decode Base64 → UTF-8 using standard Web APIs (TextDecoder)
         const binaryString = atob(encodedText);
         const bytes = Uint8Array.from(binaryString, (c) => c.charCodeAt(0));
         decodedText = new TextDecoder().decode(bytes);
@@ -48,9 +47,11 @@ const HasiyePopup: React.FC<HasiyePopupProps> = ({ bookKey }) => {
         return;
       }
 
-      let translation = await lookupMeal(decodedText, mealLang);
+      const result = await lookupMeal(decodedText, mealLang);
 
-      // Try Lugat fallback for Arabic/Farsi phrases
+      // Try Lugat fallback
+      let translation = result?.meal || null;
+      let reference = result?.reference || '';
       if (!translation && appService) {
         try {
           const db = await appService.openDatabase('lugat', 'lugat.db', 'Data');
@@ -62,6 +63,7 @@ const HasiyePopup: React.FC<HasiyePopupProps> = ({ bookKey }) => {
             if (results && results.length > 0 && results[0]) {
               const entry = results[0];
               translation = `(${entry.term}) ${entry.definition}`;
+              reference = '';
             }
           }
         } catch (err) {
@@ -75,16 +77,13 @@ const HasiyePopup: React.FC<HasiyePopupProps> = ({ bookKey }) => {
       }
 
       setArabicText(decodedText);
-      setTranslationText(translation);
+      setMealResult({ meal: translation, reference });
 
-      // Use data-book-key attribute for robust lookup instead of fragile ID-based selector
       const gridCell = document.querySelector(`[data-book-key="${CSS.escape(bookKey)}"]`);
       if (gridCell) {
         const rect = gridCell.getBoundingClientRect();
-
         const triangPos = getPosition(element, rect, popupPadding, false);
         const popPos = getPopupPosition(triangPos, rect, popupWidth, popupHeight, popupPadding);
-
         setTrianglePosition(triangPos);
         setPopupPosition(popPos);
       }
@@ -96,9 +95,9 @@ const HasiyePopup: React.FC<HasiyePopupProps> = ({ bookKey }) => {
     return () => {
       eventDispatcher.off('hasiye-popup', handlePopup);
     };
-  }, [bookKey, popupPadding, popupWidth, popupHeight, appService]);
+  }, [bookKey, popupPadding, popupWidth, popupHeight, appService, mealLang]);
 
-  if (!showPopup || !popupPosition || !trianglePosition) return null;
+  if (!showPopup || !popupPosition || !trianglePosition || !mealResult) return null;
 
   return (
     <div role='toolbar' tabIndex={-1}>
@@ -124,13 +123,18 @@ const HasiyePopup: React.FC<HasiyePopupProps> = ({ bookKey }) => {
           <div className='flex-1 overflow-y-auto p-4'>
             <div
               dir='rtl'
-              className='mb-3 font-arabic text-xl opacity-80'
+              className='mb-3 font-arabic text-xl leading-relaxed opacity-80'
               style={{ fontFamily: '"Traditional Arabic", "Scheherazade New", serif' }}
             >
               {arabicText}
             </div>
+            {mealResult.reference && (
+              <div className='mb-2 text-xs font-medium tracking-wide opacity-50'>
+                {mealResult.reference}
+              </div>
+            )}
             <div className='text-sm leading-relaxed opacity-90 whitespace-pre-wrap'>
-              {translationText}
+              {mealResult.meal}
             </div>
           </div>
         </div>

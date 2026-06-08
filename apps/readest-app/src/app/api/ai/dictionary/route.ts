@@ -98,6 +98,14 @@ async function fullDefinition(
 Перед: ${ctxBefore}
 После: ${ctxAfter}
 
+ПОЛНЫЙ СПИСОК КНИГ РИСАЛЕ-И НУР (используй разные, не только Слова/Лучи):
+1. Слова (Sözler) • 2. Письма (Mektubat) • 3. Лучи (Lemalar) • 4. Сияния (Şualar)
+5. Знамения чудес (İşarat-ül İcaz) • 6. Месневи-и Нурие (Mesnevi-i Nuriye)
+7. Посох Моисея (Asa-yı Musa) • 8. Печать сокровенного (Sikke-i Tasdik-i Gaybi)
+9. Биография (Tarihçe-i Hayat) • 10. Рассуждения (Muhakemat)
+11. Диспуты (Münazarat) • 12. Дамасская проповедь (Hutbe-i Şamiye)
+13. Зульфикар (Zülfikar) • 14. Светильник (Sirac-ün Nur) • 15. Сборник талисманов (Tılsımlar Mecmuası)
+
 ОТВЕТЬ СТРОГО JSON (без \`\`\`):
 {
   "headword": "${word}",
@@ -110,20 +118,36 @@ async function fullDefinition(
   "hadithReference": "Если есть хадис с этим термином — текст хадиса и источник. Иначе null.",
   "risalePassages": [
     {
-      "bookName": "Название книги Рисале-и Нур",
-      "context": "Как этот термин раскрывается в данном месте книги",
-      "relevance": "Почему это относится к контексту запроса"
+      "bookName": "Название книги (из списка выше)",
+      "quote": "Точная цитата из книги на турецком (оригинал), где раскрывается этот термин. 1-3 предложения.",
+      "quoteTranslation": "Перевод этой цитаты на русский язык.",
+      "context": "Как этот термин раскрывается в данной цитате. Какая грань смысла показана.",
+      "relevance": "Почему это место относится к контексту запроса"
     }
   ],
   "usage_level": "basic|intermediate|advanced",
-  "sourceSummary": "Какие источники реально использованы"
+  "sourceSummary": "Какие источники реально использованы (конкретные книги и главы)"
 }
-ВАЖНО: объясняй термин В КОНТЕКСТЕ окружающего текста. Если термин из Корана — дай кораническое объяснение. Приведи 1-2 места из Рисале-и Нур где этот термин раскрывается.`,
+КРИТИЧЕСКИ ВАЖНО:
+- Приведи 2-3 места из РАЗНЫХ книг (не только Слова/Лучи). Разнообразие источников обязательно.
+- Каждая цитата должна быть ТОЧНОЙ (как в оригинале) на турецком + перевод на русский.
+- Если термин из Корана — дай кораническое объяснение с аятом.
+- Объясняй В КОНТЕКСТЕ окружающего текста.`,
     en: `You are a Risale-i Nur expert. Explain the term "${word}" (source: ${sl}) in English.
 
 CONTEXT (where the term appears):
 Before: ${ctxBefore}
 After: ${ctxAfter}
+
+COMPLETE LIST OF RISALE-I NUR BOOKS (draw from diverse sources, not just Sözler/Lemalar):
+1. Sözler (The Words) • 2. Mektubat (The Letters) • 3. Lemalar (The Flashes)
+4. Şualar (The Rays) • 5. İşarat-ül İcaz (Signs of Miraculousness)
+6. Mesnevi-i Nuriye • 7. Asa-yı Musa (The Staff of Moses)
+8. Sikke-i Tasdik-i Gaybi (The Seal of Hidden Affirmation)
+9. Tarihçe-i Hayat (Biography) • 10. Muhakemat (Reasonings)
+11. Münazarat (Debates) • 12. Hutbe-i Şamiye (The Damascus Sermon)
+13. Zülfikar • 14. Sirac-ün Nur (The Lamp of Light)
+15. Tılsımlar Mecmuası (Collection of Talismans)
 
 RESPOND STRICT JSON (no \`\`\`):
 {
@@ -137,22 +161,34 @@ RESPOND STRICT JSON (no \`\`\`):
   "hadithReference": "If hadith exists — text and source. Otherwise null.",
   "risalePassages": [
     {
-      "bookName": "Risale-i Nur book name",
-      "context": "How this term is elaborated here",
+      "bookName": "Book name (from the list above)",
+      "quote": "Exact quote from the book in Turkish (original) where this term is elaborated. 1-3 sentences.",
+      "quoteTranslation": "English translation of this quote.",
+      "context": "How this term is elaborated in this passage. What aspect of meaning is shown.",
       "relevance": "Why this relates to the query context"
     }
   ],
   "usage_level": "basic|intermediate|advanced",
-  "sourceSummary": "Sources actually used"
+  "sourceSummary": "Sources actually used (specific books and chapters)"
 }
-IMPORTANT: explain the term IN THE CONTEXT of the surrounding text. Use Quran and Hadith where applicable. Cite 1-2 Risale passages.`,
+CRITICAL:
+- Provide 2-3 passages from DIFFERENT books (not just Sözler/Lemalar). Source diversity is mandatory.
+- Each passage MUST include an exact Turkish quote + English translation.
+- If the term is from the Quran — provide the ayah with explanation.
+- Explain IN THE CONTEXT of the surrounding text.`,
     tr: `Sen Risale-i Nur uzmanısın. "${word}" terimini (kaynak: ${sl}) Türkçe açıkla.
 
 BAĞLAM (terimin geçtiği yer):
 Önce: ${ctxBefore}
 Sonra: ${ctxAfter}
 
-SADECE JSON ( \`\`\` olmadan):
+RİSALE-İ NUR KÜLLİYATI (farklı kitaplardan alıntı yap, sadece Sözler/Lemalar değil):
+1. Sözler • 2. Mektubat • 3. Lemalar • 4. Şualar • 5. İşarat-ül İcaz
+6. Mesnevi-i Nuriye • 7. Asa-yı Musa • 8. Sikke-i Tasdik-i Gaybi
+9. Tarihçe-i Hayat • 10. Muhakemat • 11. Münazarat • 12. Hutbe-i Şamiye
+13. Zülfikar • 14. Sirac-ün Nur • 15. Tılsımlar Mecmuası
+
+SADECE JSON (\`\`\` olmadan):
 {
   "headword": "${word}",
   "contextualMeaning": "Bu terim BU BAĞLAMDA ne anlama geliyor. 1-2 cümle.",
@@ -164,15 +200,21 @@ SADECE JSON ( \`\`\` olmadan):
   "hadithReference": "Hadis varsa — metin ve kaynak. Yoksa null.",
   "risalePassages": [
     {
-      "bookName": "Risale-i Nur kitap adı",
-      "context": "Bu terim burada nasıl açıklanıyor",
+      "bookName": "Kitap adı (yukarıdaki listeden)",
+      "quote": "Terimin geçtiği orijinal Türkçe metinden tam alıntı. 1-3 cümle.",
+      "quoteTranslation": "Bu alıntının Türkçe çevirisi (osmanlıca ise sadeleştir).",
+      "context": "Bu pasajda terim nasıl açıklanıyor. Hangi anlam boyutu gösteriliyor.",
       "relevance": "Sorgu bağlamıyla ilgisi"
     }
   ],
   "usage_level": "basic|intermediate|advanced",
-  "sourceSummary": "Kullanılan kaynaklar"
+  "sourceSummary": "Kullanılan kaynaklar (hangi kitap ve bölüm)"
 }
-ÖNEMLİ: Terimi ÇEVRELEYEN METİN BAĞLAMINDA açıkla. Kuran ve Hadis varsa kullan. Risale'den 1-2 pasaj ver.`,
+KRİTİK:
+- 2-3 FARKLI kitaptan alıntı yap (sadece Sözler/Lemalar değil). Kaynak çeşitliliği zorunlu.
+- Her alıntı TAM Türkçe orijinal metin + çeviri içermeli.
+- Terim Kuran'dan ise — ayet ile açıkla.
+- ÇEVRELEYEN metin bağlamında açıkla.`,
   };
   const system = systemPrompts[targetLang] ?? systemPrompts['en']!;
 

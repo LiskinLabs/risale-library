@@ -135,7 +135,7 @@ export const aiDictionaryProvider: DictionaryProvider = {
     if (mode === 'passage') {
       try {
         const result = await fetchPassageAnalysis(
-          word, targetLang, sourceLang, signal,
+          word, targetLang, sourceLang, signal, ctx.context,
         );
         renderPassageAnalysis(container, word, result, targetLang);
         return {
@@ -148,7 +148,7 @@ export const aiDictionaryProvider: DictionaryProvider = {
         const firstWord = word.trim().split(/\s+/)[0] || word;
         try {
           const result = await fetchFullDefinition(
-            firstWord, targetLang, sourceLang, signal,
+            firstWord, targetLang, sourceLang, signal, ctx.context,
           );
           renderFullDefinition(container, firstWord, result, targetLang);
           return { ok: true, headword: firstWord, sourceLabel: 'Risale AI Sözlük (ilk kelime)' };
@@ -161,7 +161,7 @@ export const aiDictionaryProvider: DictionaryProvider = {
     // ── Word mode: contextual definition ──────────────────────────────
     try {
       const result = await fetchFullDefinition(
-        word, targetLang, sourceLang, signal,
+        word, targetLang, sourceLang, signal, ctx.context,
       );
       renderFullDefinition(container, word, result, targetLang);
       return { ok: true, headword: word, sourceLabel: 'Risale AI Sözlük' };
@@ -192,6 +192,8 @@ interface FullDefinition {
   hadithReference?: string;
   risalePassages: Array<{
     bookName: string;
+    quote?: string;
+    quoteTranslation?: string;
     context: string;
     relevance: string;
   }>;
@@ -327,7 +329,18 @@ function parseJsonResponse(jsonStr: string, fallbackWord: string): FullDefinitio
       grammaticalNotes: parsed.grammatical_notes || parsed.grammaticalNotes,
       quranicReference: parsed.quranicReference || parsed.quranic_reference,
       hadithReference: parsed.hadithReference || parsed.hadith_reference,
-      risalePassages: Array.isArray(parsed.risalePassages) ? parsed.risalePassages : [],
+      risalePassages: Array.isArray(parsed.risalePassages)
+        ? parsed.risalePassages.map((p: Record<string, unknown>) => ({
+            bookName: (p['bookName'] as string) || (p['book_name'] as string) || '',
+            quote: (p['quote'] as string) || undefined,
+            quoteTranslation:
+              (p['quoteTranslation'] as string) ||
+              (p['quote_translation'] as string) ||
+              undefined,
+            context: (p['context'] as string) || '',
+            relevance: (p['relevance'] as string) || '',
+          }))
+        : [],
       usageLevel: parsed.usage_level || parsed.usageLevel,
       sourceSummary: parsed.sourceSummary || parsed.source_summary || '',
     };
@@ -623,8 +636,12 @@ function passageCard(p: FullDefinition['risalePassages'][0]): HTMLElement {
   const card = document.createElement('div');
   card.style.cssText =
     'border:1px solid var(--card-border,rgba(128,128,128,0.2));border-radius:8px;padding:10px;margin-bottom:6px;background:var(--card-bg,rgba(128,128,128,0.05));font-size:13px;';
+  const hasQuote = p.quote && p.quote.trim().length > 0;
+  const hasTranslation = p.quoteTranslation && p.quoteTranslation.trim().length > 0;
   card.innerHTML = `
     <div style="font-weight:600;font-size:12px;opacity:0.7;">📗 ${escapeHtml(p.bookName)}</div>
+    ${hasQuote ? `<blockquote style="margin:6px 0 4px 0;padding:6px 8px;border-left:3px solid var(--accent-color,#8b191b);background:var(--quote-bg,rgba(128,128,128,0.05));border-radius:0 4px 4px 0;font-style:italic;line-height:1.5;">${escapeHtml(p.quote!)}</blockquote>` : ''}
+    ${hasTranslation ? `<div style="margin:4px 0;font-size:12px;opacity:0.85;line-height:1.5;">${escapeHtml(p.quoteTranslation!)}</div>` : ''}
     <div style="margin-top:4px;">${escapeHtml(p.context)}</div>
     ${p.relevance ? `<div style="margin-top:4px;font-size:12px;opacity:0.7;">🔗 ${escapeHtml(p.relevance)}</div>` : ''}
   `;
