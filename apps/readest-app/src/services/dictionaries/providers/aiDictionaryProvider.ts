@@ -336,7 +336,7 @@ function parseJsonResponse(jsonStr: string, fallbackWord: string): FullDefinitio
   }
 }
 
-function parsePassageJsonResponse(jsonStr: string, fallbackText: string): PassageAnalysis {
+function parsePassageJsonResponse(jsonStr: string, _fallbackText: string): PassageAnalysis {
   let cleaned = jsonStr.trim();
   if (cleaned.startsWith('```')) {
     cleaned = cleaned.replace(/^```(?:json)?\s*\n?/, '').replace(/\n?```\s*$/, '');
@@ -350,12 +350,12 @@ function parsePassageJsonResponse(jsonStr: string, fallbackText: string): Passag
       complexTerms: Array.isArray(parsed.complexTerms)
         ? parsed.complexTerms.map(
             (t: Record<string, unknown>): PassageAnalysis['complexTerms'][0] => ({
-              term: (t.term as string) || '',
-              contextualDefinition: (t.contextualDefinition as string) || '',
-              generalDefinition: (t.generalDefinition as string) || '',
-              arabic: (t.arabic as string) || undefined,
-              quranicRef: (t.quranicRef as string) || undefined,
-              hadithRef: (t.hadithRef as string) || undefined,
+              term: (t['term'] as string) || '',
+              contextualDefinition: (t['contextualDefinition'] as string) || '',
+              generalDefinition: (t['generalDefinition'] as string) || '',
+              arabic: (t['arabic'] as string) || undefined,
+              quranicRef: (t['quranicRef'] as string) || undefined,
+              hadithRef: (t['hadithRef'] as string) || undefined,
             }),
           )
         : [],
