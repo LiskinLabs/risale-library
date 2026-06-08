@@ -38,8 +38,8 @@ import type { AISettings } from '@/services/ai/types';
 import { DEFAULT_AI_SETTINGS, GATEWAY_MODELS } from '@/services/ai/constants';
 
 describe('DEFAULT_AI_SETTINGS', () => {
-  test('should have enabled set to false by default', () => {
-    expect(DEFAULT_AI_SETTINGS.enabled).toBe(false);
+  test('should have enabled set to true by default', () => {
+    expect(DEFAULT_AI_SETTINGS.enabled).toBe(true);
   });
 
   test('should have ollama as default provider', () => {

@@ -37,7 +37,7 @@ export const DEEPSEEK_MODELS = {
 } as const;
 
 export const DEFAULT_AI_SETTINGS: AISettings = {
-  enabled: false,
+  enabled: true,
   provider: 'ollama',
 
   ollamaBaseUrl: 'http://127.0.0.1:11434',
@@ -64,5 +64,5 @@ export const DEFAULT_AI_SETTINGS: AISettings = {
   spoilerProtection: true,
   maxContextChunks: 10,
   indexingMode: 'on-demand',
-  reedy: { enabled: false },
+  reedy: { enabled: true },
 };

@@ -115,6 +115,11 @@ const SettingsDialog: React.FC<{ bookKey: string }> = ({ bookKey }) => {
       label: _('Language'),
     },
     {
+      tab: 'AI',
+      icon: PiRobot,
+      label: _('AI Assistant'),
+    },
+    {
       tab: 'TTS',
       icon: PiSpeakerHigh,
       label: _('TTS'),
@@ -123,11 +128,6 @@ const SettingsDialog: React.FC<{ bookKey: string }> = ({ bookKey }) => {
       tab: 'Integrations',
       icon: RiShareLine,
       label: _('Integrations'),
-    },
-    {
-      tab: 'AI',
-      icon: PiRobot,
-      label: _('AI Assistant'),
     },
     {
       tab: 'Custom',
