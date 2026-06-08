@@ -17,6 +17,7 @@ interface DictionaryPopupProps {
   word: string;
   lang?: string;
   bookKey: string;
+  context?: { before?: string; after?: string };
   position: Position;
   trianglePosition: Position;
   popupWidth: number;
@@ -29,6 +30,7 @@ const DictionaryPopup: React.FC<DictionaryPopupProps> = ({
   word,
   lang,
   bookKey,
+  context,
   position,
   trianglePosition,
   popupWidth,
@@ -38,7 +40,7 @@ const DictionaryPopup: React.FC<DictionaryPopupProps> = ({
 }) => {
   const { envConfig } = useEnv();
   const { getViewSettings, setViewSettings } = useReaderStore();
-  const state = useDictionaryResults({ word, lang, bookKey });
+  const state = useDictionaryResults({ word, lang, bookKey, context });
 
   const handleLanguageChange = useCallback(
     (newLang: string) => {

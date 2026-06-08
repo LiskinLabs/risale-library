@@ -80,6 +80,51 @@ import {
   mergeImportedBookNotes,
 } from '@/services/annotation/providers/mrexpt';
 
+/**
+ * Extract surrounding text context from a browser Range.
+ * Returns up to `maxChars` of text before and after the selection,
+ * walking sibling text nodes without crossing block boundaries.
+ */
+function getSurroundingContext(range: Range, maxChars = 500): { before: string; after: string } {
+  const walker = (node: Node | null, dir: 'before' | 'after'): string => {
+    const parts: string[] = [];
+    let current: Node | null = node;
+    while (current && parts.join('').length < maxChars) {
+      if (current.nodeType === Node.TEXT_NODE) {
+        const text = current.textContent || '';
+        if (dir === 'before') {
+          parts.unshift(text);
+        } else {
+          parts.push(text);
+        }
+      }
+      current = dir === 'before' ? current.previousSibling : current.nextSibling;
+    }
+    const joined = parts.join('');
+    return dir === 'before' ? joined.slice(-maxChars) : joined.slice(0, maxChars);
+  };
+
+  const startNode = range.startContainer;
+  const endNode = range.endContainer;
+
+  // Text before: remaining text in startContainer + previous siblings
+  const startText = startNode.textContent || '';
+  const beforeInNode = startText.slice(0, range.startOffset);
+  const beforeSiblings = walker(startNode.previousSibling, 'before');
+  const before = (beforeSiblings + beforeInNode).slice(-maxChars);
+
+  // Text after: remaining text in endContainer + next siblings
+  const endText = endNode.textContent || '';
+  const afterInNode = endText.slice(range.endOffset);
+  const afterSiblings = walker(endNode.nextSibling, 'after');
+  const after = (afterInNode + afterSiblings).slice(0, maxChars);
+
+  return {
+    before: before.trim() || '',
+    after: after.trim() || '',
+  };
+}
+
 const Annotator: React.FC<{ bookKey: string }> = ({ bookKey }) => {
   const _ = useTranslation();
   const { envConfig, appService } = useEnv();
@@ -119,6 +164,9 @@ const Annotator: React.FC<{ bookKey: string }> = ({ bookKey }) => {
   const [selection, setSelection] = useState<TextSelection | null>(null);
   const [showAnnotPopup, setShowAnnotPopup] = useState(false);
   const [showDictionaryPopup, setShowDictionaryPopup] = useState(false);
+  const [dictContext, setDictContext] = useState<{ before: string; after: string } | undefined>(
+    undefined,
+  );
   const [showDeepLPopup, setShowDeepLPopup] = useState(false);
   const [showProofreadPopup, setShowProofreadPopup] = useState(false);
   const [trianglePosition, setTrianglePosition] = useState<Position>();
@@ -975,6 +1023,9 @@ const Annotator: React.FC<{ bookKey: string }> = ({ bookKey }) => {
       handleDismissPopupAndSelection();
       return;
     }
+    // Extract surrounding text for AI context-aware definitions
+    const ctx = selection.range ? getSurroundingContext(selection.range, 500) : undefined;
+    setDictContext(ctx);
     setShowAnnotPopup(false);
     setShowDictionaryPopup(true);
   };
@@ -1392,6 +1443,7 @@ const Annotator: React.FC<{ bookKey: string }> = ({ bookKey }) => {
                 word={selection?.text as string}
                 lang={bookData.bookDoc?.metadata.language as string}
                 bookKey={bookKey}
+                context={dictContext}
                 onDismiss={handleDismissPopupAndSelection}
                 onManage={onManage}
               />
@@ -1403,6 +1455,7 @@ const Annotator: React.FC<{ bookKey: string }> = ({ bookKey }) => {
               word={selection?.text as string}
               lang={bookData.bookDoc?.metadata.language as string}
               bookKey={bookKey}
+              context={dictContext}
               position={dictPopupPosition}
               trianglePosition={trianglePosition}
               popupWidth={dictPopupWidth}

@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
-import { useTranslation } from '@/hooks/useTranslation';
+import React, { useEffect, useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { getPopupPosition, getPosition, Position } from '@/utils/sel';
-import { lookupMeal } from '@/services/hasiye/mealIndex';
+import { lookupMeal, getMealLanguage } from '@/services/hasiye/mealIndex';
 import { eventDispatcher } from '@/utils/event';
 import { Overlay } from '@/components/Overlay';
 import Popup from '@/components/Popup';
@@ -15,7 +15,7 @@ interface HasiyePopupProps {
 }
 
 const HasiyePopup: React.FC<HasiyePopupProps> = ({ bookKey }) => {
-  const _ = useTranslation();
+  const { t: _, i18n } = useTranslation();
   const { appService } = useEnv();
   const [showPopup, setShowPopup] = useState(false);
   const [translationText, setTranslationText] = useState('');
@@ -26,6 +26,7 @@ const HasiyePopup: React.FC<HasiyePopupProps> = ({ bookKey }) => {
   const popupPadding = useResponsiveSize(10);
   const popupWidth = Math.min(400, window.innerWidth - popupPadding * 2);
   const popupHeight = Math.min(300, window.innerHeight - popupPadding * 2);
+  const mealLang = useMemo(() => getMealLanguage(i18n.language || 'tr'), [i18n.language]);
 
   useEffect(() => {
     const handlePopup = async (e: Event) => {
@@ -47,7 +48,7 @@ const HasiyePopup: React.FC<HasiyePopupProps> = ({ bookKey }) => {
         return;
       }
 
-      let translation = lookupMeal(decodedText);
+      let translation = lookupMeal(decodedText, mealLang);
 
       // Try Lugat fallback for Arabic/Farsi phrases
       if (!translation && appService) {
@@ -116,8 +117,9 @@ const HasiyePopup: React.FC<HasiyePopupProps> = ({ bookKey }) => {
           className='bg-base-100 flex h-full w-full flex-col overflow-hidden rounded shadow-lg'
           style={{ width: popupWidth, maxHeight: popupHeight }}
         >
-          <div className='flex items-center border-b border-base-content/10 px-4 py-2'>
+          <div className='flex items-center justify-between border-b border-base-content/10 px-4 py-2'>
             <span className='text-sm font-semibold opacity-70'>{_('Meal (Translation)')}</span>
+            <span className='badge badge-sm text-[10px] opacity-50'>{mealLang.toUpperCase()}</span>
           </div>
           <div className='flex-1 overflow-y-auto p-4'>
             <div

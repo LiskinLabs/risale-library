@@ -37,6 +37,8 @@ export interface UseDictionaryResultsArgs {
   word: string;
   lang?: string;
   bookKey?: string;
+  /** Surrounding text context for AI-powered dictionary providers. */
+  context?: { before?: string; after?: string };
 }
 
 export interface DictionaryResultsState {
@@ -71,6 +73,7 @@ export function useDictionaryResults({
   word,
   lang,
   bookKey,
+  context,
 }: UseDictionaryResultsArgs): DictionaryResultsState {
   const { appService } = useEnv();
   const { dictionaries, settings: dictSettings } = useCustomDictionaryStore();
@@ -260,6 +263,7 @@ export function useDictionaryResults({
                 fg: themeCode.fg,
                 dictionaryLevel,
                 dictionaryLanguage,
+                context,
               });
               if (controller.signal.aborted) return;
               if (outcome.ok || outcome.reason !== 'empty') break;

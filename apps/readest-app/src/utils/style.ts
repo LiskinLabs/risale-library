@@ -717,34 +717,44 @@ const getRubyStyles = () => `
 const getHasiyeStyles = () => `
   /* ── Haşiye: interactive Arabic text ──────────── */
   .hasiye-arabic {
-    /* Subtle golden dotted underline as "you can tap me" hint */
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.2s ease, text-decoration-color 0.2s ease;
+  }
+
+  /* Hover: golden highlight + dotted underline appears */
+  .hasiye-arabic:hover {
+    background-color: rgba(180, 150, 50, 0.12);
     text-decoration: underline;
-    text-decoration-color: rgba(180, 150, 50, 0.4);
+    text-decoration-color: rgba(180, 150, 50, 0.6);
     text-decoration-style: dotted;
     text-underline-offset: 0.3em;
-    cursor: pointer;
-    transition: text-decoration-color 0.2s ease;
-  }
-  .hasiye-arabic:hover {
-    text-decoration-color: rgba(180, 150, 50, 0.8);
   }
 
   /* Basmala — no interaction hint needed, it's decorative */
   .basmala {
     cursor: default;
   }
+  .basmala:hover {
+    background-color: transparent;
+    text-decoration: none;
+  }
 
-  /* Block-level aya — subtle top/bottom borders via EPUB CSS,
-     interaction hint via haşiye class */
+  /* Block-level aya */
   .arabic.hasiye-arabic,
   .hadith.hasiye-arabic {
     cursor: pointer;
   }
 
-  /* Inline Arabic word — matching underline */
+  /* Inline Arabic word */
   .arabic-inline.hasiye-arabic {
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  .arabic-inline.hasiye-arabic:hover {
+    background-color: rgba(180, 150, 50, 0.12);
     text-decoration: underline;
-    text-decoration-color: rgba(180, 150, 50, 0.35);
+    text-decoration-color: rgba(180, 150, 50, 0.6);
     text-decoration-style: dotted;
     text-underline-offset: 0.2em;
   }

@@ -1,34 +1,47 @@
 /**
  * Quran Meal (Translation) Index
  *
- * Data loaded at build time from risale_extraction/meal/tr/*.json.
- * Provides O(1) lookup of Turkish meal translations for Quranic Arabic
- * text fragments that appear in Risale-i Nur books.
+ * Data loaded at build time from:
+ * - risale_extraction/meal/tr/*.json (Turkish, Risale-specific)
+ * - quran-json (English: Saheeh Intl, Russian: Kuliev)
  *
- * In production this should be a proper SQLite/pgvector index;
- * for MVP we use an in-memory Map keyed by a simple Arabic fingerprint.
+ * Provides lookup of Quran translations for Arabic text fragments
+ * that appear in Risale-i Nur books.
+ *
+ * Supported languages: tr, en, ru
  */
 
-import mealData0 from './meal-data/meal-0.json';
+import mealDataTR from './meal-data/meal-0.json';
+import mealDataEN from './meal-data/meal-en.json';
+import mealDataRU from './meal-data/meal-ru.json';
 
-// ── Build-time meal index ───────────────────────────────────────────
+// ── Types ─────────────────────────────────────────────────────────────
 
 interface MealEntry {
   id: string; // surah:ayah or just ID
-  meal: string; // Turkish translation text
+  meal: string; // translation text
   arabic?: string;
 }
 
-/** All meal entries indexed by their numeric ID for fast lookup. */
-const mealById = new Map<string, MealEntry>();
+type MealLanguage = 'tr' | 'en' | 'ru';
 
-function indexMeals(entries: MealEntry[]) {
+// ── Build-time meal indexes (one per language) ────────────────────────
+
+const mealsByLang: Record<MealLanguage, Map<string, MealEntry>> = {
+  tr: new Map(),
+  en: new Map(),
+  ru: new Map(),
+};
+
+function indexMeals(lang: MealLanguage, entries: MealEntry[]) {
   for (const e of entries) {
-    mealById.set(e.id, e);
+    mealsByLang[lang].set(e.id, e);
   }
 }
 
-indexMeals(mealData0 as MealEntry[]);
+indexMeals('tr', mealDataTR as MealEntry[]);
+indexMeals('en', mealDataEN as MealEntry[]);
+indexMeals('ru', mealDataRU as MealEntry[]);
 
 // ── Public API ──────────────────────────────────────────────────────
 
@@ -46,34 +59,54 @@ function normalizeArabic(text: string): string {
 
 /**
  * Try to find a meal translation for the given Arabic text.
+ * Searches in the specified language's index.
  * Returns null if no match found.
  */
-export function lookupMeal(arabicText: string): string | null {
+export function lookupMeal(arabicText: string, lang: MealLanguage = 'tr'): string | null {
   const norm = normalizeArabic(arabicText);
+  const meals = mealsByLang[lang];
 
   // Direct lookup by normalized text
-  for (const [, entry] of mealById) {
+  for (const [, entry] of meals) {
     if (entry.arabic && normalizeArabic(entry.arabic) === norm) {
       return entry.meal;
     }
   }
 
   // Substring match: the book often quotes partial ayahs
-  for (const [, entry] of mealById) {
+  for (const [, entry] of meals) {
     if (entry.arabic && normalizeArabic(entry.arabic).includes(norm.substring(0, 30))) {
       return entry.meal;
     }
+  }
+
+  // Fallback to Turkish if not found in requested language
+  if (lang !== 'tr') {
+    return lookupMeal(arabicText, 'tr');
   }
 
   return null;
 }
 
 /**
- * Get a meal entry by its numeric ID.
+ * Get the user's preferred meal language based on UI language.
  */
-export function getMealById(id: string): MealEntry | undefined {
-  return mealById.get(id);
+export function getMealLanguage(uiLang: string): MealLanguage {
+  if (uiLang === 'ru' || uiLang === 'ru-RU') return 'ru';
+  if (uiLang === 'en' || uiLang === 'en-US') return 'en';
+  return 'tr'; // default to Turkish
 }
 
-/** Number of loaded meal entries */
-export const mealCount = mealById.size;
+/**
+ * Get a meal entry by its numeric ID.
+ */
+export function getMealById(id: string, lang: MealLanguage = 'tr'): MealEntry | undefined {
+  return mealsByLang[lang].get(id);
+}
+
+/** Number of loaded meal entries per language */
+export const mealCounts: Record<MealLanguage, number> = {
+  tr: mealsByLang.tr.size,
+  en: mealsByLang.en.size,
+  ru: mealsByLang.ru.size,
+};

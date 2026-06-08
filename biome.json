@@ -3,6 +3,7 @@
   "vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": true },
   "files": {
     "ignoreUnknown": true,
+    "maxSize": 10485760,
     "includes": [
       "**",
       "!**/node_modules",

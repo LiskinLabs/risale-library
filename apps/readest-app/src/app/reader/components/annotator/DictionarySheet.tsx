@@ -16,6 +16,7 @@ interface DictionarySheetProps {
   word: string;
   lang?: string;
   bookKey: string;
+  context?: { before?: string; after?: string };
   onDismiss: () => void;
   onManage?: () => void;
 }
@@ -24,12 +25,13 @@ const DictionarySheet: React.FC<DictionarySheetProps> = ({
   word,
   lang,
   bookKey,
+  context,
   onDismiss,
   onManage,
 }) => {
   const { envConfig } = useEnv();
   const { getViewSettings, setViewSettings } = useReaderStore();
-  const state = useDictionaryResults({ word, lang, bookKey });
+  const state = useDictionaryResults({ word, lang, bookKey, context });
 
   const handleLanguageChange = useCallback(
     (newLang: string) => {

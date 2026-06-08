@@ -37,6 +37,13 @@ export interface DictionaryLookupContext {
   /** Preferred language for dictionary definitions (ISO 639-1, e.g. 'ru', 'tr', 'en').
    *  Providers use this to select which language edition to query. */
   dictionaryLanguage?: string;
+  /**
+   * Surrounding text context for AI-powered providers. When the user selects
+   * a word or passage, the annotator extracts a window of text before and
+   * after the selection so the AI can give a context-aware definition.
+   * Optional — providers that don't need context can ignore it.
+   */
+  context?: { before?: string; after?: string };
 }
 
 export type DictionaryLookupOutcome =
