@@ -100,7 +100,7 @@ export async function lookupMeal(
 }
 
 export function getMealLanguage(uiLang: string): MealLanguage {
-  const code = (uiLang || 'tr').split('-')[0].toLowerCase();
+  const code = ((uiLang || 'tr').split('-')[0] || 'tr').toLowerCase();
   const available = new Set<MealLanguage>([
     'tr', 'en', 'ru', 'bn', 'es', 'fr', 'id', 'sv', 'ur', 'zh',
   ]);
