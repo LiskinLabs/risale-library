@@ -66,7 +66,6 @@ const SettingsDialog: React.FC<{ bookKey: string }> = ({ bookKey }) => {
   const [isRtl] = useState(() => getDirFromUILanguage() === 'rtl');
   const tabsRef = useRef<HTMLDivElement | null>(null);
   const panelRef = useRef<HTMLDivElement | null>(null);
-  const [showAllTabLabels, setShowAllTabLabels] = useState(false);
   const [canScrollTabsForward, setCanScrollTabsForward] = useState(false);
   const {
     setFontPanelView,
@@ -255,30 +254,6 @@ const SettingsDialog: React.FC<{ bookKey: string }> = ({ bookKey }) => {
     const container = tabsRef.current;
     if (!container) return;
 
-    const checkButtonWidths = () => {
-      const threshold = (container.clientWidth - 64) / tabConfig.filter((t) => !t.disabled).length;
-      const hideLabel = Array.from(container.querySelectorAll('button')).some((button) => {
-        const labelSpan = button.querySelector('span');
-        const labelText = labelSpan?.textContent || '';
-        const clone = button.cloneNode(true) as HTMLButtonElement;
-        clone.style.position = 'absolute';
-        clone.style.visibility = 'hidden';
-        clone.style.width = 'auto';
-        const cloneSpan = clone.querySelector('span');
-        if (cloneSpan) {
-          cloneSpan.classList.remove('hidden');
-          cloneSpan.textContent = labelText;
-        }
-        document.body.appendChild(clone);
-        const fullWidth = clone.scrollWidth;
-        document.body.removeChild(clone);
-        return fullWidth > threshold;
-      });
-      setShowAllTabLabels(!hideLabel);
-    };
-
-    // |scrollLeft| (Math.abs) handles RTL, where modern browsers use 0 → -max
-    // for scrolling toward the visual-leading end of the strip.
     const updateScrollState = () => {
       const overflow = container.scrollWidth - container.clientWidth;
       const scrolled = Math.abs(container.scrollLeft);
@@ -286,7 +261,6 @@ const SettingsDialog: React.FC<{ bookKey: string }> = ({ bookKey }) => {
     };
 
     const recompute = () => {
-      checkButtonWidths();
       updateScrollState();
     };
 
@@ -404,20 +378,12 @@ const SettingsDialog: React.FC<{ bookKey: string }> = ({ bookKey }) => {
                     tabIndex={0}
                     title={label}
                     className={clsx(
-                      'btn btn-ghost text-base-content btn-sm gap-1 px-2 max-[350px]:px-1',
+                      'btn btn-ghost text-base-content btn-sm h-9 min-h-0 w-9 p-0',
                       activePanel === tab ? 'btn-active' : '',
                     )}
                     onClick={() => handleSetActivePanel(tab)}
                   >
-                    <Icon className='mr-0' />
-                    <span
-                      className={clsx(
-                        window.innerWidth < 640 && 'hidden',
-                        !(showAllTabLabels || activePanel === tab) && 'hidden',
-                      )}
-                    >
-                      {label}
-                    </span>
+                    <Icon size={18} />
                   </button>
                 ))}
             </div>

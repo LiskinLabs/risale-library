@@ -14,28 +14,39 @@ from pathlib import Path
 from xml.sax.saxutils import escape
 
 # ── Config ──────────────────────────────────────────────────────────
-SOURCE_DIR = Path("C:/Users/silvestr.liskin/Desktop/risale_extraction/source_diyanet/obsidian-markdown")
+SOURCE_DIR = Path("C:/Users/silvestr.liskin/Desktop/risale_extraction/source_markdown/books")
 OUTPUT_DIR = Path("C:/Users/silvestr.liskin/Desktop/risale-ai-studio/apps/readest-app/builtin-books")
 PUBLIC_DIR = Path("C:/Users/silvestr.liskin/Desktop/risale-ai-studio/apps/readest-app/public/builtin-books")
 MANIFEST_FILE = Path("C:/Users/silvestr.liskin/Desktop/risale-ai-studio/apps/readest-app/src/services/builtinBooks.ts")
 
-# Full list of 15 books
+# Full list of 26 books (Küçük Kitaplar split)
 BOOKS = [
-    {"dir": "01 Sözler", "filename": "sozler.epub", "title": "Sözler", "author": "Bediüzzaman Said Nursi", "group": "risale"},
-    {"dir": "02 Mektubat", "filename": "mektubat.epub", "title": "Mektubat", "author": "Bediüzzaman Said Nursi", "group": "risale"},
-    {"dir": "03 Lem'alar", "filename": "lemalar.epub", "title": "Lem'alar", "author": "Bediüzzaman Said Nursi", "group": "risale"},
-    {"dir": "04 Şuâlar", "filename": "sualar.epub", "title": "Şuâlar", "author": "Bediüzzaman Said Nursi", "group": "risale"},
-    {"dir": "05 Tarihçe-i Hayat", "filename": "tarihce-i-hayat.epub", "title": "Tarihçe-i Hayat", "author": "Bediüzzaman Said Nursi", "group": "risale"},
-    {"dir": "06 Mesnevî-i Nuriye", "filename": "mesnevi-i-nuriye.epub", "title": "Mesnevî-i Nuriye", "author": "Bediüzzaman Said Nursi", "group": "risale"},
-    {"dir": "07 İşaratü'l-i'caz", "filename": "isaratul-icaz.epub", "title": "İşaratü'l-i'caz", "author": "Bediüzzaman Said Nursi", "group": "risale"},
-    {"dir": "08 Sikke-i Tasdik-i Gaybî", "filename": "sikke-i-tasdik-i-gaybi.epub", "title": "Sikke-i Tasdik-i Gaybî", "author": "Bediüzzaman Said Nursi", "group": "risale"},
-    {"dir": "09 Barla Lâhikası", "filename": "barla-lahikasi.epub", "title": "Barla Lâhikası", "author": "Bediüzzaman Said Nursi", "group": "risale"},
-    {"dir": "10 Kastamonu Lâhikası", "filename": "kastamonu-lahikasi.epub", "title": "Kastamonu Lâhikası", "author": "Bediüzzaman Said Nursi", "group": "risale"},
-    {"dir": "11 Emirdağ Lâhikası 1", "filename": "emirdag-lahikasi-1.epub", "title": "Emirdağ Lâhikası 1", "author": "Bediüzzaman Said Nursi", "group": "risale"},
-    {"dir": "12 Emirdağ Lâhikası 2", "filename": "emirdag-lahikasi-2.epub", "title": "Emirdağ Lâhikası 2", "author": "Bediüzzaman Said Nursi", "group": "risale"},
-    {"dir": "13 Asâ-yı Musa", "filename": "asa-yi-musa.epub", "title": "Asâ-yı Musa", "author": "Bediüzzaman Said Nursi", "group": "risale"},
-    {"dir": "14 Muhakemat", "filename": "muhakemat.epub", "title": "Muhakemat", "author": "Bediüzzaman Said Nursi", "group": "risale"},
-    {"dir": "15 Küçük Kitaplar", "filename": "kucuk-kitaplar.epub", "title": "Küçük Kitaplar", "author": "Bediüzzaman Said Nursi", "group": "nur"},
+    {"dir": "sozler/by_heading", "filename": "sozler.epub", "title": "Sözler", "author": "Bediüzzaman Said Nursi", "group": "risale"},
+    {"dir": "mektubat/by_heading", "filename": "mektubat.epub", "title": "Mektubat", "author": "Bediüzzaman Said Nursi", "group": "risale"},
+    {"dir": "lemalar/by_heading", "filename": "lemalar.epub", "title": "Lem'alar", "author": "Bediüzzaman Said Nursi", "group": "risale"},
+    {"dir": "sualar/by_heading", "filename": "sualar.epub", "title": "Şuâlar", "author": "Bediüzzaman Said Nursi", "group": "risale"},
+    {"dir": "tarihce-i-hayat/by_heading", "filename": "tarihce-i-hayat.epub", "title": "Tarihçe-i Hayat", "author": "Bediüzzaman Said Nursi", "group": "risale"},
+    {"dir": "mesnevi-i-nuriye/by_heading", "filename": "mesnevi-i-nuriye.epub", "title": "Mesnevî-i Nuriye", "author": "Bediüzzaman Said Nursi", "group": "risale"},
+    {"dir": "isaratul-icaz/by_heading", "filename": "isaratul-icaz.epub", "title": "İşaratü'l-İ'caz", "author": "Bediüzzaman Said Nursi", "group": "risale"},
+    {"dir": "sikke-i-tasdik-i-gaybi/by_heading", "filename": "sikke-i-tasdik-i-gaybi.epub", "title": "Sikke-i Tasdik-i Gaybî", "author": "Bediüzzaman Said Nursi", "group": "risale"},
+    {"dir": "barla-lahikasi/by_heading", "filename": "barla-lahikasi.epub", "title": "Barla Lâhikası", "author": "Bediüzzaman Said Nursi", "group": "risale"},
+    {"dir": "kastamonu-lahikasi/by_heading", "filename": "kastamonu-lahikasi.epub", "title": "Kastamonu Lâhikası", "author": "Bediüzzaman Said Nursi", "group": "risale"},
+    {"dir": "emirdag-lahikasi-1/by_heading", "filename": "emirdag-lahikasi-1.epub", "title": "Emirdağ Lâhikası 1", "author": "Bediüzzaman Said Nursi", "group": "risale"},
+    {"dir": "emirdag-lahikasi-2/by_heading", "filename": "emirdag-lahikasi-2.epub", "title": "Emirdağ Lâhikası 2", "author": "Bediüzzaman Said Nursi", "group": "risale"},
+    {"dir": "asa-yi-musa/by_heading", "filename": "asa-yi-musa.epub", "title": "Asâ-yı Musa", "author": "Bediüzzaman Said Nursi", "group": "risale"},
+    {"dir": "muhakemat/by_heading", "filename": "muhakemat.epub", "title": "Muhakemat", "author": "Bediüzzaman Said Nursi", "group": "risale"},
+    {"dir": "sunuhat/by_heading", "filename": "sunuhat.epub", "title": "Sünûhat", "author": "Bediüzzaman Said Nursi", "group": "kucuk"},
+    {"dir": "isarat/by_heading", "filename": "isarat.epub", "title": "İşârât", "author": "Bediüzzaman Said Nursi", "group": "kucuk"},
+    {"dir": "tuluat/by_heading", "filename": "tuluat.epub", "title": "Tulûât", "author": "Bediüzzaman Said Nursi", "group": "kucuk"},
+    {"dir": "nurun-ilk-kapisi/by_heading", "filename": "nurun-ilk-kapisi.epub", "title": "Nur'un İlk Kapısı", "author": "Bediüzzaman Said Nursi", "group": "kucuk"},
+    {"dir": "nur-cesmesi/by_heading", "filename": "nur-cesmesi.epub", "title": "Nur Çeşmesi", "author": "Bediüzzaman Said Nursi", "group": "kucuk"},
+    {"dir": "divan-i-harb-i-orfi/by_heading", "filename": "divan-i-harb-i-orfi.epub", "title": "Divan-ı Harb-i Örfî", "author": "Bediüzzaman Said Nursi", "group": "kucuk"},
+    {"dir": "hutbe-i-samiye/by_heading", "filename": "hutbe-i-samiye.epub", "title": "Hutbe-i Şamiye", "author": "Bediüzzaman Said Nursi", "group": "kucuk"},
+    {"dir": "munazarat/by_heading", "filename": "munazarat.epub", "title": "Münazarat", "author": "Bediüzzaman Said Nursi", "group": "kucuk"},
+    {"dir": "genclik-rehberi/by_heading", "filename": "genclik-rehberi.epub", "title": "Gençlik Rehberi", "author": "Bediüzzaman Said Nursi", "group": "kucuk"},
+    {"dir": "hanimlar-rehberi/by_heading", "filename": "hanimlar-rehberi.epub", "title": "Hanımlar Rehberi", "author": "Bediüzzaman Said Nursi", "group": "kucuk"},
+    {"dir": "konferans/by_heading", "filename": "konferans.epub", "title": "Konferans", "author": "Bediüzzaman Said Nursi", "group": "kucuk"},
+    {"dir": "tilsimlar/by_heading", "filename": "tilsimlar.epub", "title": "Tılsımlar", "author": "Bediüzzaman Said Nursi", "group": "kucuk"},
 ]
 
 CSS = r"""/* ── Premium Risale-i Nur EPUB CSS ────── */
