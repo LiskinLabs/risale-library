@@ -61,6 +61,62 @@ export class BookIndexer {
     }
   }
 
+  async indexKulliyatFromUrl(
+    url: string,
+    model: EmbeddingModel,
+    options: IndexBookOptions = {},
+  ): Promise<void> {
+    const bookHash = 'kulliyat';
+    await this.reedy.upsertBookMeta({
+      bookHash,
+      indexingStatus: 'indexing',
+      chunkCount: 0,
+      embeddingModel: model.id,
+      embeddingDim: model.dim,
+      indexedAt: null,
+      error: null,
+    });
+    await this.reedy.clearBookChunks(bookHash);
+
+    try {
+      const response = await fetch(url);
+      if (!response.ok) throw new Error(`Failed to fetch Külliyat data: ${response.statusText}`);
+      const text = await response.text();
+      const lines = text.split('\n').filter((l) => l.trim().length > 0);
+
+      const chunks: ChunkRow[] = lines.map((line, i) => {
+        const data = JSON.parse(line);
+        return {
+          id: `kulliyat-${i}`,
+          bookHash,
+          sectionIndex: 0,
+          chapterTitle: data.book_title || 'Külliyat',
+          startCfi: data.chunk_id || `kulliyat-${i}`,
+          endCfi: '',
+          positionIndex: i,
+          text: data.text,
+          tokenCount: Math.ceil(data.text.length / 4),
+        };
+      });
+
+      options.onProgress?.({ phase: 'chunking', current: chunks.length, total: chunks.length });
+
+      await this.reedy.ensureEmbeddingsTable(model.dim);
+      await this.reedy.insertChunks(chunks);
+      await this.embedAndStore(chunks, model, options);
+
+      await this.reedy.setIndexingStatus(bookHash, 'indexed', {
+        chunkCount: chunks.length,
+        indexedAt: Date.now(),
+        error: null,
+      });
+    } catch (err) {
+      const message = err instanceof Error ? err.message : String(err);
+      await this.reedy.setIndexingStatus(bookHash, 'failed', { error: message });
+      throw err;
+    }
+  }
+
   private async runIndex(
     bookDoc: BookDoc,
     bookHash: string,

@@ -87,12 +87,15 @@
 - `apps/readest-app/src/store/aiChatStore.ts` — состояние чата
 - `apps/readest-app/src/app/reader/components/notebook/AIAssistant.tsx` — UI ассистента
 - **Reedy Runtime (канонический):** `apps/readest-app/src/services/reedy/` — агентный рантайм с RAG
-  - `retrieval/BookIndexer.ts` — индексация книг (chunk → embed → store)
-  - `retrieval/BookRetriever.ts` — гибридный поиск (vector cosine + Tantivy FTS + RRF fusion)
-  - `tools/builtins/lookupPassage.ts` — инструмент поиска пассажей с Zod-схемой
-  - `tools/builtins/createHighlight.ts`, `createNote.ts`, `navigateToCfi.ts` — write/navigate инструменты
-  - `db/ReedyDb.ts` — SQLite (Tantivy FTS) + векторы
-  - `store/reedyStore.ts` — Zustand-стор сообщений агента
+  - `retrieval/BookIndexer.ts` — индексация книг (chunk → embed → store). **Добавлен `indexKulliyatFromUrl`** для пакетного импорта всего Куллията из JSONL.
+  - `retrieval/BookRetriever.ts` — гибридный поиск (vector cosine + Tantivy FTS + RRF fusion). **Поддерживает `globalSearch`**.
+  - `tools/builtins/lookupPassage.ts` — локальный поиск по книге.
+  - `tools/builtins/lookupGlobalPassage.ts` — **НОВЫЙ: поиск по всему Куллияту (Külliyat Search)**.
+  - `skills/builtins/kulliyatDeepDive.ts` — **НОВЫЙ скилл** для глубокого тематического анализа всех книг.
+  - `tools/builtins/createHighlight.ts`, `createNote.ts`, `navigateToCfi.ts` — write/navigate инструменты.
+  - `ui/ReedyAssistant.tsx` — **Интеграция: переходы по CFI между книгами и сохранение ответов ИИ в `booknotes` (Save to Notes)**.
+  - `db/ReedyDb.ts` — SQLite (Tantivy FTS) + векторы.
+  - `store/reedyStore.ts` — Zustand-стор сообщений агента.
 - **Legacy RAG (deprecated):** `apps/readest-app/src/services/ai/ragService.ts` — Vercel AI SDK-based. ⚠️ Не добавлять новый функционал. Использовать `reedy/` для новых фич.
 
 ### Синхронизация и параллельный просмотр
@@ -116,6 +119,7 @@
 - `tools/create-rag-table.sql` — SQL для создания таблицы (запустить вручную в Supabase SQL Editor)
 - `tools/create-rag-table.py` — скрипт-обёртка
 - **Локальный RAG (Reedy):** `apps/readest-app/src/services/reedy/retrieval/` — работает без облака
+- **Локальные данные:** `apps/readest-app/public/data/all-passages.jsonl` — источник для локальной индексации Куллията.
 - ⚠️ Supabase RAG (облачный) всё ещё ждёт ручного запуска SQL
 
 ---
@@ -124,11 +128,11 @@
 
 ```bash
 # 1. Проверить сервер
-curl -s -o /dev/null -w "%{http_code}" http://localhost:3000/
+# http://localhost:3000 (port 3001 fallback)
 
 # 2. Запустить если не работает
 cd "C:\Users\silvestr.liskin\Desktop\risale-ai-studio" && pnpm dev-web
-
+```
 # 3. Перед коммитом — формат + линт + типы
 cd apps/readest-app
 npx biome format --write .

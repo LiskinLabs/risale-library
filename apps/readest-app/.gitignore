@@ -42,6 +42,9 @@ Entitlements*.plist
 # local confs
 tauri.*.conf.json
 
+# large data files (served from R2 in production)
+/public/data/all-passages.jsonl
+
 # vercel
 .vercel
 

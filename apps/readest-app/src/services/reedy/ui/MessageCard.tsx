@@ -1,6 +1,7 @@
 'use client';
 
-import { memo } from 'react';
+import { memo, useCallback } from 'react';
+import { BookmarkPlus } from 'lucide-react';
 import type { ReedyMessage, ReedyMessagePart } from '../store/reedyStore';
 import { AssistantTextPart, UserTextPart } from './parts/TextPart';
 import { ToolCallPart } from './parts/ToolCallPart';
@@ -19,10 +20,22 @@ import { AbortPart, ErrorPart } from './parts/StatusParts';
 export const MessageCard = memo(function MessageCard({
   message,
   onSourceClick,
+  onSaveNote,
 }: {
   message: ReedyMessage;
-  onSourceClick?: (cfi: string) => void;
+  onSourceClick?: (cfi: string, bookHash?: string) => void;
+  onSaveNote?: (text: string) => void;
 }) {
+  const handleSave = useCallback(() => {
+    if (message.role === 'assistant' && onSaveNote) {
+      const fullText = message.parts
+        .filter((p): p is Extract<ReedyMessagePart, { type: 'text' }> => p.type === 'text')
+        .map((p) => p.text)
+        .join('\n\n');
+      if (fullText) onSaveNote(fullText);
+    }
+  }, [message, onSaveNote]);
+
   if (message.role === 'user') {
     return (
       <div className='animate-in fade-in mx-auto mb-3 flex w-full justify-end duration-200'>
@@ -34,13 +47,27 @@ export const MessageCard = memo(function MessageCard({
   }
 
   return (
-    <div className='animate-in fade-in mb-4 flex w-full duration-200'>
+    <div className='animate-in fade-in group relative mb-4 flex w-full duration-200'>
       <div className='flex w-full min-w-0 flex-col gap-1'>
         {message.parts.map((part, i) => (
           <PartDispatcher key={partKey(part, i)} part={part} onSourceClick={onSourceClick} />
         ))}
         {message.finishReason === 'error' && message.parts.every((p) => p.type !== 'error') && (
           <ErrorPart part={{ type: 'error', kind: 'unknown', message: 'Turn ended in error.' }} />
+        )}
+
+        {onSaveNote && message.role === 'assistant' && message.finishReason === 'stop' && (
+          <div className='mt-2 flex justify-start opacity-0 transition-opacity group-hover:opacity-100'>
+            <button
+              type='button'
+              onClick={handleSave}
+              className='btn btn-ghost btn-xs text-base-content/60 flex items-center gap-1 hover:text-primary'
+              title='Save to book notes'
+            >
+              <BookmarkPlus size={14} />
+              <span>Save to Notes</span>
+            </button>
+          </div>
         )}
       </div>
     </div>
@@ -52,7 +79,7 @@ function PartDispatcher({
   onSourceClick,
 }: {
   part: ReedyMessagePart;
-  onSourceClick?: (cfi: string) => void;
+  onSourceClick?: (cfi: string, bookHash?: string) => void;
 }) {
   switch (part.type) {
     case 'text':

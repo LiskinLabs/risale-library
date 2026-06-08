@@ -1,9 +1,15 @@
 'use client';
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import type { AppService } from '@/types/system';
 import type { BookDoc } from '@/libs/document';
 import type { AISettings } from '@/services/ai/types';
+import { useBookDataStore } from '@/store/bookDataStore';
+import { useSettingsStore } from '@/store/settingsStore';
+import { useEnv } from '@/context/EnvContext';
+import { eventDispatcher } from '@/utils/event';
+import { useTranslation } from '@/hooks/useTranslation';
 import { AgentRuntime } from '../runtime/AgentRuntime';
 import { BookIndexer } from '../retrieval/BookIndexer';
 import { BookRetriever } from '../retrieval/BookRetriever';
@@ -15,6 +21,7 @@ import {
   createGetReadingContextTool,
   createGetSelectionTool,
   createLookupPassageTool,
+  createLookupGlobalPassageTool,
   createSearchBookMemoryTool,
   createSearchSessionMemoryTool,
   createSearchUserMemoryTool,
@@ -52,8 +59,8 @@ export interface ReedyAssistantProps {
   readingContext: ReadingContextSnapshot;
   /** Stable id for the current user (used as the scope_key for user memory). */
   userId?: string;
-  /** Wired by the notebook to `getView(bookKey)?.goTo(cfi)` on click. */
-  onNavigateToCfi?: (cfi: string) => void;
+  /** Wired by the notebook to handle navigation, including cross-book. */
+  onNavigateToCfi?: (cfi: string, bookHash?: string) => void;
 }
 
 /**
@@ -69,12 +76,56 @@ export function ReedyAssistant({
   appService,
   bookDoc,
   bookHash,
+  bookKey,
   aiSettings,
   readingContext,
   userId = 'local',
   onNavigateToCfi,
 }: ReedyAssistantProps) {
+  const _ = useTranslation();
+  const router = useRouter();
+  const { envConfig } = useEnv();
+  const { getBookData, updateBooknotes, saveConfig } = useBookDataStore();
   const models = useMemo(() => createReedyModels(aiSettings), [aiSettings]);
+
+  const handleNavigate = useCallback(
+    (cfi: string, targetBookHash?: string) => {
+      if (targetBookHash && targetBookHash !== bookHash && targetBookHash !== 'kulliyat') {
+        // Cross-book navigation: navigate to the reader route for that book.
+        // ReaderContent will pick up the CFI from search params if we add it.
+        router.push(`/reader/${targetBookHash}?cfi=${encodeURIComponent(cfi)}`);
+        return;
+      }
+      onNavigateToCfi?.(cfi);
+    },
+    [bookHash, onNavigateToCfi, router],
+  );
+
+  const handleSaveNote = useCallback(
+    async (text: string) => {
+      const data = getBookData(bookKey);
+      if (!data || !data.config) return;
+
+      const newNote = {
+        id: `ai-${Date.now()}`,
+        type: 'annotation' as const,
+        cfi: readingContext.cfi || '',
+        note: text,
+        createdAt: Date.now(),
+        updatedAt: Date.now(),
+        layer: 'user' as const,
+      };
+
+      const notes = [...(data.config.booknotes || []), newNote];
+      const updatedConfig = updateBooknotes(bookKey, notes);
+      if (updatedConfig) {
+        const settings = useSettingsStore.getState().settings;
+        await saveConfig(envConfig, bookKey, updatedConfig, settings);
+        eventDispatcher.dispatch('toast', { message: _('Saved to notes') });
+      }
+    },
+    [bookKey, getBookData, readingContext.cfi, updateBooknotes, saveConfig, envConfig, _],
+  );
 
   // Lazily open reedy.db on first mount. The promise resolves once and
   // we share the same ReedyDb + Indexer + Retriever + MemoryService +
@@ -180,6 +231,12 @@ export function ReedyAssistant({
     reg.register(
       createLookupPassageTool({
         bookHash,
+        retriever: reedy.retriever,
+        activeEmbeddingModel: models.embedding,
+      }),
+    );
+    reg.register(
+      createLookupGlobalPassageTool({
         retriever: reedy.retriever,
         activeEmbeddingModel: models.embedding,
       }),
@@ -369,7 +426,8 @@ export function ReedyAssistant({
         <AgentThread
           messages={messages}
           isRunning={isRunning}
-          onSourceClick={onNavigateToCfi}
+          onSourceClick={handleNavigate}
+          onSaveNote={handleSaveNote}
           emptyState={
             <div className='text-base-content/60 px-6 text-center text-sm'>
               Ask anything about this book.

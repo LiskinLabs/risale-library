@@ -14,7 +14,7 @@ export function CitationPart({
   onClick,
 }: {
   part: Extract<ReedyMessagePart, { type: 'citation' }>;
-  onClick?: (cfi: string) => void;
+  onClick?: (cfi: string, bookHash?: string) => void;
 }) {
   const baseClass =
     'border-base-content/10 bg-base-200/60 my-1 flex items-start gap-1.5 rounded-md border px-2 py-1.5 text-[11px]';
@@ -23,6 +23,7 @@ export function CitationPart({
       <BookOpen className='text-base-content/60 mt-0.5 size-3 shrink-0' />
       <div className='flex min-w-0 flex-col gap-0.5 text-start'>
         <div className='text-base-content font-medium'>
+          {part.bookHash && part.bookHash !== 'kulliyat' ? `${part.bookHash.toUpperCase()} — ` : ''}
           {part.chapterTitle ?? `Section ${part.sectionIndex + 1}`}
         </div>
         <div className='text-base-content/70 line-clamp-3'>{part.snippet}</div>
@@ -34,7 +35,7 @@ export function CitationPart({
       <button
         type='button'
         className={`${baseClass} hover:bg-base-200 transition-colors`}
-        onClick={() => onClick(part.cfi)}
+        onClick={() => onClick(part.cfi, part.bookHash)}
         title={part.cfi}
       >
         {body}

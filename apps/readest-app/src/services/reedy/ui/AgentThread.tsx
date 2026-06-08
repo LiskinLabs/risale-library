@@ -18,11 +18,13 @@ export function AgentThread({
   messages,
   isRunning,
   onSourceClick,
+  onSaveNote,
   emptyState,
 }: {
   messages: ReedyMessage[];
   isRunning: boolean;
-  onSourceClick?: (cfi: string) => void;
+  onSourceClick?: (cfi: string, bookHash?: string) => void;
+  onSaveNote?: (text: string) => void;
   emptyState?: React.ReactNode;
 }) {
   const ref = useRef<VListHandle>(null);
@@ -56,7 +58,7 @@ export function AgentThread({
   return (
     <VList ref={ref} className='reedy-agent-thread h-full w-full' onScroll={handleScroll}>
       {messages.map((m) => (
-        <MessageCard key={m.id} message={m} onSourceClick={onSourceClick} />
+        <MessageCard key={m.id} message={m} onSourceClick={onSourceClick} onSaveNote={onSaveNote} />
       ))}
       {isRunning && messages.length > 0 && (
         <div className='text-base-content/40 mb-4 px-3 text-[11px] italic'>Reedy is thinking…</div>

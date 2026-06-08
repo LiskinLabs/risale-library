@@ -44,6 +44,7 @@ export type ReedyEvent =
       sectionIndex: number;
       chapterTitle?: string;
       snippet: string;
+      bookHash?: string;
     }
   | { type: 'memory_write'; scope: 'user' | 'book'; key: string; summary: string }
   | { type: 'step_finish'; step: number; reason: 'stop' | 'tool-calls' | 'length' }
@@ -94,6 +95,7 @@ export const events = {
     sectionIndex: number;
     chapterTitle?: string;
     snippet: string;
+    bookHash?: string;
   }): ReedyEvent {
     return { type: 'citation', ...args };
   },

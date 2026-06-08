@@ -49,6 +49,7 @@ export interface CitationLike {
   sectionIndex: number;
   chapterTitle?: string;
   snippet: string;
+  bookHash?: string;
 }
 
 export interface AgentRuntimeOptions {
@@ -274,13 +275,18 @@ export class AgentRuntime {
 }
 
 function defaultExtractCitations(toolName: string, result: unknown): CitationLike[] {
-  if (toolName === 'lookupPassage' && result && typeof result === 'object') {
+  if (
+    (toolName === 'lookupPassage' || toolName === 'lookupGlobalPassage') &&
+    result &&
+    typeof result === 'object'
+  ) {
     const r = result as {
       passages?: Array<{
         cfi?: string;
         chapter?: string;
         sectionIndex?: number;
         text?: string;
+        bookHash?: string;
       }>;
     };
     if (!Array.isArray(r.passages)) return [];
@@ -291,6 +297,7 @@ function defaultExtractCitations(toolName: string, result: unknown): CitationLik
         sectionIndex: p.sectionIndex ?? 0,
         chapterTitle: p.chapter,
         snippet: (p.text ?? '').slice(0, 200),
+        bookHash: p.bookHash,
       }));
   }
   if (toolName === 'addCitation' && result && typeof result === 'object') {
