@@ -48,7 +48,7 @@ const HasiyePopup: React.FC<HasiyePopupProps> = ({ bookKey }) => {
         return;
       }
 
-      let translation = lookupMeal(decodedText, mealLang);
+      let translation = await lookupMeal(decodedText, mealLang);
 
       // Try Lugat fallback for Arabic/Farsi phrases
       if (!translation && appService) {
