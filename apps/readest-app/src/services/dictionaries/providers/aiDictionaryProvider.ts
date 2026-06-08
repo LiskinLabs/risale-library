@@ -134,7 +134,9 @@ export const aiDictionaryProvider: DictionaryProvider = {
     // ── Passage mode: full passage analysis ────────────────────────────
     if (mode === 'passage') {
       try {
-        const result = await fetchPassageAnalysis(word, targetLang, sourceLang, signal);
+        const result = await fetchPassageAnalysis(
+          word, targetLang, sourceLang, signal,
+        );
         renderPassageAnalysis(container, word, result, targetLang);
         return {
           ok: true,
@@ -145,7 +147,9 @@ export const aiDictionaryProvider: DictionaryProvider = {
         // Fallback: try word-mode on the first significant word
         const firstWord = word.trim().split(/\s+/)[0] || word;
         try {
-          const result = await fetchFullDefinition(firstWord, targetLang, sourceLang, signal);
+          const result = await fetchFullDefinition(
+            firstWord, targetLang, sourceLang, signal,
+          );
           renderFullDefinition(container, firstWord, result, targetLang);
           return { ok: true, headword: firstWord, sourceLabel: 'Risale AI Sözlük (ilk kelime)' };
         } catch {
@@ -156,7 +160,9 @@ export const aiDictionaryProvider: DictionaryProvider = {
 
     // ── Word mode: contextual definition ──────────────────────────────
     try {
-      const result = await fetchFullDefinition(word, targetLang, sourceLang, signal);
+      const result = await fetchFullDefinition(
+        word, targetLang, sourceLang, signal,
+      );
       renderFullDefinition(container, word, result, targetLang);
       return { ok: true, headword: word, sourceLabel: 'Risale AI Sözlük' };
     } catch (_err) {
@@ -251,6 +257,7 @@ async function fetchFullDefinition(
   targetLang: string,
   sourceLang: string,
   signal: AbortSignal,
+  context?: { before?: string; after?: string },
 ): Promise<FullDefinition> {
   const timeout = AbortSignal.timeout(25000);
   const combined = AbortSignal.any([signal, timeout].filter(Boolean));
@@ -263,6 +270,7 @@ async function fetchFullDefinition(
       sourceLang,
       complexity: 'complex',
       mode: 'word',
+      context: context || undefined,
       ...getAiKeys(),
     }),
     signal: combined,
@@ -278,6 +286,7 @@ async function fetchPassageAnalysis(
   targetLang: string,
   sourceLang: string,
   signal: AbortSignal,
+  context?: { before?: string; after?: string },
 ): Promise<PassageAnalysis> {
   const timeout = AbortSignal.timeout(35000);
   const combined = AbortSignal.any([signal, timeout].filter(Boolean));
@@ -290,6 +299,7 @@ async function fetchPassageAnalysis(
       sourceLang,
       complexity: 'complex',
       mode: 'passage',
+      context: context || undefined,
       ...getAiKeys(),
     }),
     signal: combined,
@@ -297,7 +307,7 @@ async function fetchPassageAnalysis(
   if (!response.ok) throw new Error(`API error: ${response.status}`);
   const data = await response.json();
   if (!data.ok) throw new Error(data.error || 'Unknown error');
-  return parseJsonResponse(data.json, text) as unknown as PassageAnalysis;
+  return parsePassageJsonResponse(data.json, text);
 }
 
 function parseJsonResponse(jsonStr: string, fallbackWord: string): FullDefinition {
@@ -323,6 +333,44 @@ function parseJsonResponse(jsonStr: string, fallbackWord: string): FullDefinitio
     };
   } catch {
     return { headword: fallbackWord, meaning: jsonStr, risalePassages: [], sourceSummary: '' };
+  }
+}
+
+function parsePassageJsonResponse(jsonStr: string, fallbackText: string): PassageAnalysis {
+  let cleaned = jsonStr.trim();
+  if (cleaned.startsWith('```')) {
+    cleaned = cleaned.replace(/^```(?:json)?\s*\n?/, '').replace(/\n?```\s*$/, '');
+  }
+  try {
+    const parsed = JSON.parse(cleaned);
+    return {
+      passageSummary: parsed.passageSummary || '',
+      approximateTranslation: parsed.approximateTranslation || '',
+      contextNote: parsed.contextNote || '',
+      complexTerms: Array.isArray(parsed.complexTerms)
+        ? parsed.complexTerms.map(
+            (t: Record<string, unknown>): PassageAnalysis['complexTerms'][0] => ({
+              term: (t.term as string) || '',
+              contextualDefinition: (t.contextualDefinition as string) || '',
+              generalDefinition: (t.generalDefinition as string) || '',
+              arabic: (t.arabic as string) || undefined,
+              quranicRef: (t.quranicRef as string) || undefined,
+              hadithRef: (t.hadithRef as string) || undefined,
+            }),
+          )
+        : [],
+      keyInsight: parsed.keyInsight || '',
+      sourceSummary: parsed.sourceSummary || parsed.source_summary || '',
+    };
+  } catch {
+    return {
+      passageSummary: '',
+      approximateTranslation: '',
+      contextNote: '',
+      complexTerms: [],
+      keyInsight: '',
+      sourceSummary: jsonStr.slice(0, 200),
+    };
   }
 }
 
