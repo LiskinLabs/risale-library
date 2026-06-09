@@ -25,6 +25,7 @@ import HintInfo from './HintInfo';
 import ReadingRuler from './ReadingRuler';
 import DoubleBorder from './DoubleBorder';
 import HasiyePopup from './HasiyePopup';
+import LugatPopup from './LugatPopup';
 
 interface BooksGridProps {
   bookKeys: string[];
@@ -225,6 +226,7 @@ const BooksGrid: React.FC<BooksGridProps> = ({ bookKeys, onCloseBook, onGoToLibr
             <BooknotesNav bookKey={bookKey} gridInsets={gridInsets} toc={bookDoc.toc || []} />
             <FootnotePopup bookKey={bookKey} bookDoc={bookDoc} />
             <HasiyePopup bookKey={bookKey} />
+            <LugatPopup bookKey={bookKey} />
             <FooterBar
               bookKey={bookKey}
               bookFormat={book.format}

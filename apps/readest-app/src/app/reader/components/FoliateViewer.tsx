@@ -183,7 +183,7 @@ const FoliateViewer: React.FC<{
                 'punctuation',
                 'footnote',
                 ...(viewSettings.enabledLayers?.includes('hasiye') ? ['hasiye'] : []),
-                ...(viewSettings.enabledLayers?.includes('lugat') ? ['meaning-mode'] : []),
+                ...(viewSettings.enabledLayers?.includes('lugat') ? ['lugat', 'meaning-mode'] : []),
                 'ui-effects',
                 'whitespace',
                 'language',

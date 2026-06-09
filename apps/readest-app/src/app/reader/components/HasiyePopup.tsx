@@ -190,7 +190,7 @@ const HasiyePopup: React.FC<HasiyePopupProps> = ({ bookKey }) => {
 
             {isAiTranslation && (
               <div className='mb-2 text-[9px] leading-tight opacity-30'>
-                {_('AI-generated semantic translation — conveys meaning in context, not literal.')}
+                {_('AI semantic translation. For detailed analysis, select text and open Dictionary.')}
               </div>
             )}
 
@@ -234,19 +234,13 @@ async function fetchAiTranslation(arabicText: string, targetLang: string): Promi
   try { parsed = JSON.parse(data.json) as Record<string, unknown>; } catch { return data.json; }
 
   const parts: string[] = [];
-  const summary = parsed['passageSummary'] || parsed['summary'] as string | undefined;
-  const translation = parsed['approximateTranslation'] || parsed['translation'] as string | undefined;
-  const context = parsed['contextNote'] || parsed['note'] as string | undefined;
-  const insight = parsed['keyInsight'] || parsed['insight'] as string | undefined;
+  const translation = (parsed['approximateTranslation'] || parsed['translation']) as string | undefined;
   const terms = parsed['complexTerms'] as Array<Record<string, string>> | undefined;
 
-  if (summary) parts.push(`**${summary}**`);
-  if (translation) parts.push(`📖 ${translation}`);
-  if (context) parts.push(`💡 ${context}`);
-  if (insight) parts.push(`✨ ${insight}`);
+  if (translation) parts.push(translation);
   if (terms?.length) {
     parts.push('');
-    for (const t of terms) {
+    for (const t of terms.slice(0, 8)) {
       const term = t['term'] || '';
       const def = t['contextualDefinition'] || t['generalDefinition'] || '';
       if (term && def) parts.push(`• **${term}** — ${def}`);

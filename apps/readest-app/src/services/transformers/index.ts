@@ -9,6 +9,7 @@ import { styleTransformer } from './style';
 import { proofreadTransformer } from './proofread';
 import { warichuTransformer } from './warichu';
 import { hasiyeTransformer } from './hasiye';
+import { lugatTransformer } from './lugat';
 import { uiEffectsTransformer } from './uiEffects';
 import { meaningModeTransformer } from './meaningMode';
 
@@ -16,6 +17,7 @@ export const availableTransformers: Transformer[] = [
   punctuationTransformer,
   footnoteTransformer,
   hasiyeTransformer,
+  lugatTransformer,
   meaningModeTransformer,
   uiEffectsTransformer,
   languageTransformer,

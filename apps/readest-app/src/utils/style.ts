@@ -760,6 +760,22 @@ const getHasiyeStyles = () => `
   }
 `;
 
+const getLugatStyles = () => `
+  /* ── Lugat: interactive dictionary terms ──────────── */
+  .lugat-term {
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background-color 0.15s ease, text-decoration-color 0.15s ease;
+  }
+  .lugat-term:hover {
+    background-color: rgba(100, 180, 120, 0.12);
+    text-decoration: underline;
+    text-decoration-color: rgba(100, 180, 120, 0.5);
+    text-decoration-style: dotted;
+    text-underline-offset: 0.2em;
+  }
+`;
+
 const getMeaningModeStyles = () => `
   .meaning-annotated {
     border-bottom: 1px dashed rgba(100, 150, 100, 0.5);
@@ -897,6 +913,7 @@ export const getStyles = (viewSettings: ViewSettings, themeCode?: ThemeCode) => 
   const warichuStyles = getWarichuStyles();
   const rubyStyles = getRubyStyles();
   const hasiyeStyles = getHasiyeStyles();
+  const lugatStyles = getLugatStyles();
   const meaningModeStyles = getMeaningModeStyles();
   const userStylesheet = viewSettings.userStylesheet!;
 
@@ -913,6 +930,13 @@ export const getStyles = (viewSettings: ViewSettings, themeCode?: ThemeCode) => 
   }
   if (!enabledLayers.includes('lugat')) {
     layerOverrides += `
+      .lugat-term {
+        cursor: text !important;
+      }
+      .lugat-term:hover {
+        background-color: transparent !important;
+        text-decoration: none !important;
+      }
       .meaning-annotated {
         border-bottom: none !important;
         cursor: text !important;
@@ -923,7 +947,7 @@ export const getStyles = (viewSettings: ViewSettings, themeCode?: ThemeCode) => 
     `;
   }
 
-  return `${pageLayoutStyles}\n${paragraphLayoutStyles}\n${fontStyles}\n${colorStyles}\n${translationStyles}\n${warichuStyles}\n${rubyStyles}\n${hasiyeStyles}\n${meaningModeStyles}\n${layerOverrides}\n${userStylesheet}`;
+  return `${pageLayoutStyles}\n${paragraphLayoutStyles}\n${fontStyles}\n${colorStyles}\n${translationStyles}\n${warichuStyles}\n${rubyStyles}\n${hasiyeStyles}\n${lugatStyles}\n${meaningModeStyles}\n${layerOverrides}\n${userStylesheet}`;
 };
 
 export const applyTranslationStyle = (viewSettings: ViewSettings) => {

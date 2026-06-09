@@ -220,6 +220,16 @@ export const handleClick = (
       return;
     }
 
+    const lugat = element?.closest('.lugat-term');
+    if (lugat) {
+      eventDispatcher.dispatch('lugat-popup', {
+        bookKey,
+        element: lugat,
+        term: lugat.getAttribute('data-lugat-term') || '',
+      });
+      return;
+    }
+
     // if long hold is detected, we don't want to send single click event
     if (!longHoldTimeout) {
       return;
