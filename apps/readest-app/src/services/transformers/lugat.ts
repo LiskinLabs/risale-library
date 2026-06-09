@@ -15,8 +15,8 @@ function loadTerms(): Promise<Set<string>> {
 
 /**
  * Lugat transformer — highlights Ottoman/Turkish words that exist in the
- * built-in Risale Lugat dictionary. Only wraps terms at frequency level ≤ 1
- * (most common words readers look up).
+ * built-in Risale Lugat dictionary. Only wraps text nodes, not HTML tags.
+ * Uses a two-pass approach: collect terms → replace in text content only.
  */
 export const lugatTransformer: Transformer = {
   name: 'lugat',
@@ -30,21 +30,26 @@ export const lugatTransformer: Transformer = {
 
     let result = ctx.content;
 
-    // Match whole words — Turkish/Latin script words, 3+ chars
-    const wordRegex = /\b([a-zçğıöşüâîûA-ZÇĞİÖŞÜÂÎÛ][a-zçğıöşüâîûA-ZÇĞİÖŞÜÂÎÛ']{2,})\b/g;
+    // Push all matching terms into a single pass — find text between > and <
+    result = result.replace(
+      />([^<]+)</g,
+      (_full: string, text: string) => {
+        let wrapped = text;
+        // Match whole words (Turkish/Latin, 3+ chars)
+        const wordRe = /\b([a-zçğıöşüâîûA-ZÇĞİÖŞÜÂÎÛ'][a-zçğıöşüâîûA-ZÇĞİÖŞÜÂÎÛ']{2,})\b/g;
 
-    const alreadyWrapped = new Set<string>();
+        const alreadyDone = new Set<string>();
 
-    result = result.replace(wordRegex, (match: string) => {
-      const lower = match.toLowerCase();
-      if (alreadyWrapped.has(lower)) return match;
-      if (!terms.has(lower)) return match;
+        wrapped = wrapped.replace(wordRe, (match: string) => {
+          const lower = match.toLowerCase();
+          if (alreadyDone.has(lower) || !terms.has(lower)) return match;
+          alreadyDone.add(lower);
+          return `<span class="lugat-term" ${MARKER}="${lower}">${match}</span>`;
+        });
 
-      alreadyWrapped.add(lower);
-      // Don't wrap if already inside a hasiye or existing lugat span
-      // (handled by word boundary — won't match inside tags)
-      return `<span class="lugat-term" ${MARKER}="${lower}">${match}</span>`;
-    });
+        return `>${wrapped}<`;
+      },
+    );
 
     return result;
   },
