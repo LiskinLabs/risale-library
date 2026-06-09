@@ -69,22 +69,26 @@
 
 | **Feature**                            | **Description**                                                                                     | **Status** |
 | -------------------------------------- | --------------------------------------------------------------------------------------------------- | ---------- |
-| **Built-in Risale Books (15 EPUBs)**   | Sözler, Mektubat, Lemalar, Şualar, and 11 more — auto-imported on first launch                     | ✅         |
+| **Built-in Risale Books (27 EPUBs)**   | 16 Turkish + 11 Russian parallel translations — auto-imported on first launch                       | ✅         |
 | **Russian Translations (11 EPUBs)**    | Parallel Russian EPUBs for side-by-side reading — generated from risale_extraction corpus           | ✅         |
 | **Külliyat Search**                    | Full-text search across all 15 Risale books simultaneously using Orama FTS                          | ✅         |
 | **Risale Lugat (Ottoman Dictionary)**  | 38,963 terms with FTS5/LIKE search, 78.5% frequency coverage, 70+ suffix stemming                  | ✅         |
+| **Lugat In-Text Highlighting**         | Green dotted underline + click popup for 4,724 frequent dictionary terms directly in book text      | ✅         |
+| **Quran Meal (10 languages)**          | Click any Arabic verse → instant translation in TR/EN/RU/BN/ES/FR/ID/SV/UR/ZH with surah:ayah ref  | ✅         |
+| **Meal AI Fallback**                   | If verse not in database → AI semantic translation + term breakdown (3-tier: DB→Lugat→AI)           | ✅         |
 | **AI Dictionary (Context-Aware)**      | DeepSeek/Gemini-powered definitions IN CONTEXT of the paragraph, with Quran/Hadith/Risale refs      | ✅         |
 | **AI Passage Analysis**                | Select a sentence or paragraph → AI extracts all complex terms, translates, explains context        | ✅         |
+| **AI Assistant with RAG**              | Ask questions about the Risale with context-aware AI (Reedy RAG — BookIndexer + hybrid FTS/vector)  | ✅         |
+| **Külliyat Deep Dive (Reedy)**         | AI agent searches across ALL indexed Risale books for thematic analysis                             | ✅         |
+| **Save AI Responses to Notes**         | One-click save AI definitions and Reedy responses as formatted book notes                           | ✅         |
 | **Hover Dictionary Tooltip**           | Hover any word → instant Lugat definition popup (desktop)                                           | ✅         |
 | **Dictionary Language Selector**       | Switch definition language on-the-fly: 🇷🇺 Русский / 🇹🇷 Türkçe / 🇬🇧 English / 🇸🇦 العربية              | ✅         |
-| **Save AI Responses to Notes**         | One-click save AI definitions as formatted book notes with full HTML preserved                      | ✅         |
 | **Anlam Açık Modu**                    | Inline word definitions from the dictionary with green dashed underline + tooltip                   | ✅         |
-| **Haşiye (Verse Commentary)**          | Arabic verse popups with meal index — block-level + inline dotted underline                         | ✅         |
-| **Professional Typography**            | ITC Souvenir, Minion Pro, Nassim Arabic Pro, Kazimir Text — per-script font system                  | ✅         |
+| **Haşiye (Verse Commentary)**          | Arabic verse popups with meal index — block-level + inline dotted underline, golden hover effect    | ✅         |
+| **Professional Typography**            | ITC Souvenir, Minion Pro, Nassim Arabic Pro, Kazimir Text — per-script font system, 53 fonts on R2 | ✅         |
 | **Parallel Translation Sync**          | Side-by-side reading of original + translation with shared scroll position                          | 🛠         |
-| **AI Assistant with RAG**              | Ask questions about the Risale with context-aware AI (Reedy RAG, OpenRouter/Ollama)                | 🛠         |
-| **Quote Widget (Vecize)**              | 150 daily wisdom quotes from all 15 Risale books                                                    | ✅         |
-| **Annotation Layers**                  | Multiple annotation layers: personal notes, haşiye, dictionary, author notes — toggleable in reader  | ✅         |
+| **Quote Widget (Vecize)**              | 150 daily wisdom quotes from all Risale books                                                       | ✅         |
+| **Annotation Layers**                  | Multiple annotation layers: personal notes, haşiye, lugat, author notes — toggleable in reader      | ✅         |
 | **Mobile AI Access**                   | Dedicated 🤖 AI and 📓 Notebook buttons in mobile reader toolbar                                    | ✅         |
 
 ## Planned Features
@@ -94,11 +98,18 @@
 
 | **Feature**                     | **Description**                                                            | **Priority** |
 | ------------------------------- | -------------------------------------------------------------------------- | ------------ |
+| **Parallel Translation UI**     | Wire up parallelViewStore + useParallelSync to reader (11 RU EPUBs ready)  | 🛠           |
+| **SorularlaRisale RAG**         | Scrape Q&A from sorularlarisale.com → load into Reedy RAG (1000+ answers)  | 🛠           |
+| **Meal Matching Improvement**   | Smarter Arabic scoring — better normalization, fewer wrong matches          | 🛠           |
 | **AI-Powered Summarization**    | Generate summaries of books or chapters using AI for quick insights.       | 🛠           |
-| **Advanced Reading Stats**      | Track reading time, pages read, and more for detailed insights.            | 🛠           |
+| **Advanced Reading Stats**      | Track reading time, pages read, and more for detailed insights.            | 🔄           |
 | **Audiobook Support**           | Extend functionality to play and manage audiobooks.                        | 🔄           |
 | **Handwriting Annotations**     | Add support for handwriting annotations using a pen on compatible devices. | 🔄           |
 | **In-Library Full-Text Search** | Search across your entire ebook library to find topics and quotes.         | 🔄           |
+| **EPUB Tools GUI**              | Visual editor for EPUB annotations, validator, CI/CD pipeline               | 🔄           |
+| **Mobile Apps (Store)**         | Google Play + App Store publication via Tauri                               | 🔄           |
+| **KOReader Sync**               | Bidirectional sync of annotations/progress with KOReader e-ink devices      | 🔄           |
+| **Community Features**          | Shared annotation layers, group reading, 120-day program, quizzes           | 🔄           |
 
 Stay tuned for continuous improvements and updates! Contributions and suggestions are always welcome—let's build the ultimate reading experience together. 😊
 
