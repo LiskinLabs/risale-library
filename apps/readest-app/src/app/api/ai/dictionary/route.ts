@@ -2,6 +2,75 @@ import { validateUserAndToken } from '@/utils/access';
 import { generateText, createGateway } from 'ai';
 import { createGoogleGenerativeAI } from '@ai-sdk/google';
 import { createOpenAICompatible } from '@ai-sdk/openai-compatible';
+import { readFile } from 'node:fs/promises';
+import { join } from 'node:path';
+
+// ── RAG: Real Risale passage retrieval ─────────────────────────────────
+
+interface RisalePassage {
+  bookTitle: string;
+  bookSlug: string;
+  sectionTitle: string;
+  citation: string;
+  text: string;
+  wordCount: number;
+}
+
+/** In-memory cache of all-passages.jsonl — loaded lazily once per process. */
+let _passagesCache: RisalePassage[] | null = null;
+
+async function loadPassages(): Promise<RisalePassage[]> {
+  if (_passagesCache) return _passagesCache;
+  try {
+    const jsonlPath = join(process.cwd(), 'public', 'data', 'all-passages.jsonl');
+    const raw = await readFile(jsonlPath, 'utf-8');
+    _passagesCache = raw
+      .split('\n')
+      .filter((l) => l.trim().length > 0)
+      .map((line) => {
+        const d = JSON.parse(line);
+        return {
+          bookTitle: d.book_title || '',
+          bookSlug: d.book_slug || '',
+          sectionTitle: d.section_title || '',
+          citation: d.citation || '',
+          text: (d.text || '').replace(/<[^>]+>/g, ''), // strip HTML tags
+          wordCount: d.word_count || 0,
+        };
+      });
+    console.log(`[RAG] Loaded ${_passagesCache.length} Risale passages into memory`);
+  } catch (err) {
+    console.warn('[RAG] Failed to load passages:', (err as Error).message);
+    _passagesCache = [];
+  }
+  return _passagesCache;
+}
+
+/**
+ * Search the Risale corpus for passages containing the given term.
+ * Simple case-insensitive substring match — fast enough for 3136 chunks.
+ * Returns up to 5 best matches, preferring shorter passages (more focused).
+ */
+async function searchRisalePassages(
+  term: string,
+  maxResults = 5,
+): Promise<RisalePassage[]> {
+  const passages = await loadPassages();
+  if (!passages.length) return [];
+
+  const lowerTerm = term.toLowerCase();
+  const scored = passages
+    .filter((p) => p.text.toLowerCase().includes(lowerTerm))
+    // Score: prefer passages where the term appears closer to the beginning and shorter passages
+    .map((p) => {
+      const idx = p.text.toLowerCase().indexOf(lowerTerm);
+      return { passage: p, score: idx + p.text.length * 0.001 };
+    })
+    .sort((a, b) => a.score - b.score)
+    .slice(0, maxResults);
+
+  return scored.map((s) => s.passage);
+}
 
 // ── Model resolution ───────────────────────────────────────────────────
 
@@ -69,7 +138,7 @@ async function simpleDefinition(
   const tl = langName(targetLang);
   const result = await generateText({
     model,
-    system: `You are an Islamic theological dictionary specializing in Risale-i Nur. Give a concise 1-2 sentence definition in ${tl}. Include literal meaning + theological significance. No formatting, no greetings.`,
+    system: `You are a Muslim theological scholar. Give a concise 1-2 sentence definition of the word or phrase in ${tl}. Include literal meaning, Islamic theological significance, and — if this concept is elaborated in the Risale-i Nur collection — a brief mention of how Bediuzzaman Said Nursi explains it. No formatting, no greetings.`,
     prompt: word,
     maxOutputTokens: 200,
     temperature: 0.3,
@@ -91,129 +160,144 @@ async function fullDefinition(
   const ctxBefore = context?.before ? `"${context.before.slice(-300)}"` : 'нет';
   const ctxAfter = context?.after ? `"${context.after.slice(0, 300)}"` : 'нет';
 
-  const systemPrompts: Record<string, string> = {
-    ru: `Ты — эксперт по Рисале-и Нур. Объясни термин "${word}" (язык: ${sl}) на русском языке.
+  // Retrieve REAL passages from the Risale corpus
+  const realPassages = await searchRisalePassages(word, 5);
+  const passagesBlock = realPassages.length
+    ? realPassages
+        .map(
+          (p, i) =>
+            `[ПАССАЖ ${i + 1}]\nКнига: ${p.bookTitle} (bookSlug: ${p.bookSlug})\nРаздел: ${p.sectionTitle}\nЦитата: ${p.citation}\nТЕКСТ: ${p.text.slice(0, 600)}`,
+        )
+        .join('\n\n')
+    : 'РЕАЛЬНЫЕ ЦИТАТЫ НЕ НАЙДЕНЫ — НЕ ВЫДУМЫВАЙ ИХ. Укажи: "В доступном корпусе Рисале-и Нур этот термин не обнаружен."';
 
-КОНТЕКСТ (где встретился термин):
+  const systemPrompts: Record<string, string> = {
+    ru: `Ты — исламский учёный-теолог. Объясняй термины через призму Ислама, Корана и Сунны — в традиции Bediüzzaman Said Nursi (Рисале-и Нур).
+
+Ты работаешь с ЛЮБОЙ книгой. Термин может быть из философии, науки, литературы — объясняй через исламское мировоззрение.
+
+ТЕРМИН: "${word}" (язык оригинала: ${sl})
+
+КОНТЕКСТ:
 Перед: ${ctxBefore}
 После: ${ctxAfter}
 
-ПОЛНЫЙ СПИСОК КНИГ РИСАЛЕ-И НУР (используй разные, не только Слова/Лучи):
-1. Слова (Sözler) • 2. Письма (Mektubat) • 3. Лучи (Lemalar) • 4. Сияния (Şualar)
-5. Знамения чудес (İşarat-ül İcaz) • 6. Месневи-и Нурие (Mesnevi-i Nuriye)
-7. Посох Моисея (Asa-yı Musa) • 8. Печать сокровенного (Sikke-i Tasdik-i Gaybi)
-9. Биография (Tarihçe-i Hayat) • 10. Рассуждения (Muhakemat)
-11. Диспуты (Münazarat) • 12. Дамасская проповедь (Hutbe-i Şamiye)
-13. Зульфикар (Zülfikar) • 14. Светильник (Sirac-ün Nur) • 15. Сборник талисманов (Tılsımlar Mecmuası)
+РЕАЛЬНЫЕ ЦИТАТЫ ИЗ КОРПУСА РИСАЛЕ-И НУР:
+${passagesBlock}
 
 ОТВЕТЬ СТРОГО JSON (без \`\`\`):
 {
   "headword": "${word}",
-  "contextualMeaning": "Что значит этот термин ИМЕННО В ДАННОМ КОНТЕКСТЕ. 1-2 предложения.",
-  "generalMeaning": "Общее значение термина в Рисале-и Нур. 2-3 предложения.",
+  "contextualMeaning": "Что значит ИМЕННО В ДАННОМ КОНТЕКСТЕ. 1-2 предложения на русском.",
+  "generalMeaning": "Общее значение в исламском богословии. 2-3 предложения.",
   "arabic_equivalent": "арабский эквивалент или null",
   "ottoman_equivalent": "османский вариант или null",
   "grammatical_notes": "грамматика, корень, происхождение или null",
-  "quranicReference": "Если термин из Корана — сура:аят и объяснение через Коран. Иначе null.",
-  "hadithReference": "Если есть хадис с этим термином — текст хадиса и источник. Иначе null.",
+  "quranicReference": "Если из Корана — сура:аят и толкование. Иначе null.",
+  "hadithReference": "Если есть хадис — текст и источник. Иначе null.",
   "risalePassages": [
     {
-      "bookName": "Название книги (из списка выше)",
-      "quote": "Точная цитата из книги на турецком (оригинал), где раскрывается этот термин. 1-3 предложения.",
-      "quoteTranslation": "Перевод этой цитаты на русский язык.",
-      "context": "Как этот термин раскрывается в данной цитате. Какая грань смысла показана.",
-      "relevance": "Почему это место относится к контексту запроса"
+      "bookName": "Название книги (из реальных цитат выше)",
+      "bookSlug": "bookSlug из цитаты выше (например asa-yi-musa)",
+      "citation": "citation из цитаты выше (например Asa-yi Musa > Birinci Mesele)",
+      "quote": "Точная цитата на турецком — скопируй из ТЕКСТА выше, не выдумывай.",
+      "quoteTranslation": "Перевод цитаты на русский язык.",
+      "context": "Как Bediüzzaman раскрывает этот термин в данной цитате.",
+      "relevance": "Почему это место релевантно запросу"
     }
   ],
   "usage_level": "basic|intermediate|advanced",
-  "sourceSummary": "Какие источники реально использованы (конкретные книги и главы)"
+  "sourceSummary": "Какие источники реально использованы"
 }
 КРИТИЧЕСКИ ВАЖНО:
-- Приведи 2-3 места из РАЗНЫХ книг Рисале-и Нур. Разнообразие источников обязательно.
-- Каждая цитата должна быть ТОЧНОЙ (как в оригинале) на турецком + перевод на русский.
-- Если термин из Корана — дай кораническое объяснение с аятом.
+- ИСПОЛЬЗУЙ ТОЛЬКО реальные цитаты из списка выше. НЕ ВЫДУМЫВАЙ цитаты.
+- Скопируй quote ТОЧНО как в ТЕКСТЕ. Не придумывай турецкий текст.
+- bookSlug и citation скопируй из метаданных цитаты БЕЗ ИЗМЕНЕНИЙ.
+- Если список цитат пуст — укажи: "В доступном корпусе Рисале-и Нур этот термин не обнаружен."
 - Объясняй В КОНТЕКСТЕ окружающего текста.`,
-    en: `You are a Risale-i Nur expert. Explain the term "${word}" (source: ${sl}) in English.
+    en: `You are an Islamic theological scholar. Explain terms through the lens of Islam, the Quran, and the Sunnah — in the tradition of Bediuzzaman Said Nursi's Risale-i Nur.
 
-CONTEXT (where the term appears):
+You work with ANY book. The term may be from philosophy, science, or literature — explain it through an Islamic worldview.
+
+TERM: "${word}" (source language: ${sl})
+
+CONTEXT:
 Before: ${ctxBefore}
 After: ${ctxAfter}
 
-COMPLETE LIST OF RISALE-I NUR BOOKS (draw from diverse sources, not just Sözler/Lemalar):
-1. Sözler (The Words) • 2. Mektubat (The Letters) • 3. Lemalar (The Flashes)
-4. Şualar (The Rays) • 5. İşarat-ül İcaz (Signs of Miraculousness)
-6. Mesnevi-i Nuriye • 7. Asa-yı Musa (The Staff of Moses)
-8. Sikke-i Tasdik-i Gaybi (The Seal of Hidden Affirmation)
-9. Tarihçe-i Hayat (Biography) • 10. Muhakemat (Reasonings)
-11. Münazarat (Debates) • 12. Hutbe-i Şamiye (The Damascus Sermon)
-13. Zülfikar • 14. Sirac-ün Nur (The Lamp of Light)
-15. Tılsımlar Mecmuası (Collection of Talismans)
+REAL QUOTES FROM THE RISALE-I NUR CORPUS (use these, do NOT invent):
+${passagesBlock}
 
 RESPOND STRICT JSON (no \`\`\`):
 {
   "headword": "${word}",
-  "contextualMeaning": "What this term means IN THIS SPECIFIC CONTEXT. 1-2 sentences.",
-  "generalMeaning": "General meaning in Risale-i Nur. 2-3 sentences.",
+  "contextualMeaning": "What this means IN THIS SPECIFIC CONTEXT. 1-2 sentences.",
+  "generalMeaning": "General meaning in Islamic theology. 2-3 sentences.",
   "arabic_equivalent": "Arabic equivalent or null",
   "ottoman_equivalent": "Ottoman variant or null",
   "grammatical_notes": "Grammar, root, origin or null",
-  "quranicReference": "If from Quran — surah:ayah and explanation. Otherwise null.",
+  "quranicReference": "If from Quran — surah:ayah. Otherwise null.",
   "hadithReference": "If hadith exists — text and source. Otherwise null.",
   "risalePassages": [
     {
-      "bookName": "Book name (from the list above)",
-      "quote": "Exact quote from the book in Turkish (original) where this term is elaborated. 1-3 sentences.",
-      "quoteTranslation": "English translation of this quote.",
-      "context": "How this term is elaborated in this passage. What aspect of meaning is shown.",
-      "relevance": "Why this relates to the query context"
+      "bookName": "Book name (from real quotes above)",
+      "bookSlug": "bookSlug from the quote metadata above",
+      "citation": "citation from the quote metadata above",
+      "quote": "Exact Turkish text — COPY from the TEXT field above, do NOT invent.",
+      "quoteTranslation": "English translation of the quote.",
+      "context": "How Bediuzzaman elaborates this term here.",
+      "relevance": "Why this reference is relevant"
     }
   ],
   "usage_level": "basic|intermediate|advanced",
-  "sourceSummary": "Sources actually used (specific books and chapters)"
+  "sourceSummary": "Sources actually used"
 }
 CRITICAL:
-- Provide 2-3 passages from DIFFERENT books (not just Sözler/Lemalar). Source diversity is mandatory.
-- Each passage MUST include an exact Turkish quote + English translation.
-- If the term is from the Quran — provide the ayah with explanation.
-- Explain IN THE CONTEXT of the surrounding text.`,
-    tr: `Sen Risale-i Nur uzmanısın. "${word}" terimini (kaynak: ${sl}) Türkçe açıkla.
+- ONLY use real quotes from the list above. DO NOT FABRICATE Turkish text.
+- Copy quote EXACTLY from TEXT. bookSlug and citation EXACTLY from metadata.
+- If the quotes list is empty: say "This term was not found in the available Risale-i Nur corpus."
+- Explain IN CONTEXT of the surrounding text.`,
+    tr: `Sen bir İslam alimi ve ilahiyatçısın. Terimleri İslam, Kur'an ve Sünnet merceğinden — Bediüzzaman Said Nursi'nin Risale-i Nur geleneğinde — açıkla.
 
-BAĞLAM (terimin geçtiği yer):
+HERHANGİ bir kitapla çalışıyorsun. Terim felsefe, bilim, edebiyattan olabilir — İslami dünya görüşüyle açıkla.
+
+TERİM: "${word}" (kaynak dil: ${sl})
+
+BAĞLAM:
 Önce: ${ctxBefore}
 Sonra: ${ctxAfter}
 
-RİSALE-İ NUR KÜLLİYATI (farklı kitaplardan alıntı yap, sadece Sözler/Lemalar değil):
-1. Sözler • 2. Mektubat • 3. Lemalar • 4. Şualar • 5. İşarat-ül İcaz
-6. Mesnevi-i Nuriye • 7. Asa-yı Musa • 8. Sikke-i Tasdik-i Gaybi
-9. Tarihçe-i Hayat • 10. Muhakemat • 11. Münazarat • 12. Hutbe-i Şamiye
-13. Zülfikar • 14. Sirac-ün Nur • 15. Tılsımlar Mecmuası
+RİSALE-İ NUR KORPUSUNDAN GERÇEK ALINTILAR (bunları kullan, UYDURMA):
+${passagesBlock}
 
 SADECE JSON (\`\`\` olmadan):
 {
   "headword": "${word}",
   "contextualMeaning": "Bu terim BU BAĞLAMDA ne anlama geliyor. 1-2 cümle.",
-  "generalMeaning": "Risale-i Nur'daki genel anlamı. 2-3 cümle.",
+  "generalMeaning": "İslam ilahiyatındaki genel anlamı. 2-3 cümle.",
   "arabic_equivalent": "Arapçası veya null",
   "ottoman_equivalent": "Osmanlıcası veya null",
   "grammatical_notes": "Gramer, köken veya null",
-  "quranicReference": "Kuran'dan ise — sure:ayet ve açıklama. Değilse null.",
+  "quranicReference": "Kuran'dan ise — sure:ayet. Değilse null.",
   "hadithReference": "Hadis varsa — metin ve kaynak. Yoksa null.",
   "risalePassages": [
     {
-      "bookName": "Kitap adı (yukarıdaki listeden)",
-      "quote": "Terimin geçtiği orijinal Türkçe metinden tam alıntı. 1-3 cümle.",
-      "quoteTranslation": "Bu alıntının Türkçe çevirisi (osmanlıca ise sadeleştir).",
-      "context": "Bu pasajda terim nasıl açıklanıyor. Hangi anlam boyutu gösteriliyor.",
-      "relevance": "Sorgu bağlamıyla ilgisi"
+      "bookName": "Kitap adı (yukarıdaki gerçek alıntılardan)",
+      "bookSlug": "Yukarıdaki alıntının bookSlug'u (aynen kopyala)",
+      "citation": "Yukarıdaki alıntının citation'ı (aynen kopyala)",
+      "quote": "Tam Türkçe metin — yukarıdaki TEXT'ten KOPYALA, uydurma.",
+      "quoteTranslation": "Alıntının çevirisi.",
+      "context": "Bediüzzaman bu pasajda terimi nasıl açıklıyor.",
+      "relevance": "Bu referans sorguyla neden alakalı"
     }
   ],
   "usage_level": "basic|intermediate|advanced",
-  "sourceSummary": "Kullanılan kaynaklar (hangi kitap ve bölüm)"
+  "sourceSummary": "Kullanılan kaynaklar"
 }
 KRİTİK:
-- 2-3 FARKLI kitaptan alıntı yap (sadece Sözler/Lemalar değil). Kaynak çeşitliliği zorunlu.
-- Her alıntı TAM Türkçe orijinal metin + çeviri içermeli.
-- Terim Kuran'dan ise — ayet ile açıkla.
+- SADECE yukarıdaki GERÇEK alıntıları kullan. Türkçe metin UYDURMA.
+- quote'u TEXT'ten AYNEN kopyala. bookSlug ve citation'ı METADATA'dan AYNEN kopyala.
+- Alıntı listesi boşsa: "Bu terim mevcut Risale-i Nur külliyatında bulunamadı." de.
 - ÇEVRELEYEN metin bağlamında açıkla.`,
   };
   const system = systemPrompts[targetLang] ?? systemPrompts['en']!;
@@ -244,14 +328,14 @@ async function analyzePassage(
   const ctxAfter = context?.after ? context.after.slice(0, 500) : 'нет';
 
   const systemPrompts: Record<string, string> = {
-    ru: `Ты — эксперт по Рисале-и Нур. Проанализируй выделенный ОТРЫВОК на русском языке.
+    ru: `Ты — исламский учёный-теолог. Проанализируй отрывок из ЛЮБОЙ книги через призму Ислама и трудов Bediüzzaman Said Nursi.
 
 Выделенный отрывок (${sl}):
 "${text}"
 
-КОНТЕКСТ (что вокруг):
-ПЕРЕД отрывком: ${ctxBefore}
-ПОСЛЕ отрывка: ${ctxAfter}
+КОНТЕКСТ:
+ПЕРЕД: ${ctxBefore}
+ПОСЛЕ: ${ctxAfter}
 
 ОТВЕТЬ СТРОГО JSON (без \`\`\`):
 {
@@ -262,26 +346,25 @@ async function analyzePassage(
     {
       "term": "сложный термин из отрывка",
       "contextualDefinition": "Что значит в данном контексте",
-      "generalDefinition": "Общее значение в Рисале-и Нур",
+      "generalDefinition": "Общее значение — если религиозный, дай исламское объяснение; если нет, светское",
       "arabic": "арабский эквивалент или null",
       "quranicRef": "кораническая ссылка или null",
       "hadithRef": "ссылка на хадис или null"
     }
   ],
-  "keyInsight": "Главный урок/мысль этого отрывка. 1 предложение.",
+  "keyInsight": "Главный урок/мысль. 1-2 предложения.",
   "sourceSummary": "Какие источники использованы"
 }
 ВАЖНО:
-- Выдели ВСЕ сложные термины из отрывка (минимум 2-3).
-- Для каждого термина дай объяснение В КОНТЕКСТЕ отрывка.
-- Используй Коран и Хадисы где уместно.
-- Объясни связь с окружающим текстом.`,
-    en: `You are a Risale-i Nur expert. Analyze the selected PASSAGE in English.
+- Выдели ВСЕ сложные термины (минимум 2-3).
+- Для религиозных терминов дай исламское объяснение. Для светских — обычное определение.
+- Используй Коран и Хадисы где уместно.`,
+    en: `You are an Islamic theological scholar. Analyze this passage from ANY book through the lens of Islam and the works of Bediuzzaman Said Nursi.
 
 Selected passage (${sl}):
 "${text}"
 
-SURROUNDING CONTEXT:
+CONTEXT:
 BEFORE: ${ctxBefore}
 AFTER: ${ctxAfter}
 
@@ -294,17 +377,17 @@ STRICT JSON (no \`\`\`):
     {
       "term": "complex term from passage",
       "contextualDefinition": "Meaning in this context",
-      "generalDefinition": "General Risale-i Nur meaning",
+      "generalDefinition": "General meaning — if religious, Islamic explanation; if secular, standard definition",
       "arabic": "Arabic equivalent or null",
       "quranicRef": "Quranic reference or null",
       "hadithRef": "Hadith reference or null"
     }
   ],
-  "keyInsight": "Main lesson from this passage. 1 sentence.",
+  "keyInsight": "Main lesson. 1-2 sentences.",
   "sourceSummary": "Sources used"
 }
-Extract ALL complex theological terms (min 2-3). Explain each in context. Use Quran/Hadith.`,
-    tr: `Sen Risale-i Nur uzmanısın. Seçili METNİ Türkçe analiz et.
+Extract ALL complex terms (min 2-3). Use Quran/Hadith where applicable.`,
+    tr: `Sen bir İslam alimi ve ilahiyatçısın. HERHANGİ bir kitaptan bu metni İslam ve Bediüzzaman Said Nursi'nin eserleri merceğinden analiz et.
 
 Seçili metin (${sl}):
 "${text}"
@@ -313,7 +396,7 @@ BAĞLAM:
 ÖNCE: ${ctxBefore}
 SONRA: ${ctxAfter}
 
-SADECE JSON ( \`\`\` olmadan):
+SADECE JSON (\`\`\` olmadan):
 {
   "passageSummary": "Bu metin ne hakkında? 2-3 cümle.",
   "approximateTranslation": "Metnin yaklaşık Türkçe çevirisi.",
@@ -322,16 +405,16 @@ SADECE JSON ( \`\`\` olmadan):
     {
       "term": "metindeki karmaşık terim",
       "contextualDefinition": "Bu bağlamda anlamı",
-      "generalDefinition": "Risale-i Nur'daki genel anlamı",
+      "generalDefinition": "Genel anlamı — dini ise İslami açıklama, değilse standart tanım",
       "arabic": "Arapçası veya null",
       "quranicRef": "Kuran referansı veya null",
       "hadithRef": "Hadis referansı veya null"
     }
   ],
-  "keyInsight": "Ana ders. 1 cümle.",
+  "keyInsight": "Ana ders. 1-2 cümle.",
   "sourceSummary": "Kullanılan kaynaklar"
 }
-TÜM karmaşık terimleri çıkar (en az 2-3). Her birini bağlamda açıkla. Kuran/Hadis kullan.`,
+TÜM karmaşık terimleri çıkar (en az 2-3). Dini terimlere İslami açıklama ver. Kuran/Hadis kullan.`,
   };
   const system = systemPrompts[targetLang] ?? systemPrompts['en']!;
 

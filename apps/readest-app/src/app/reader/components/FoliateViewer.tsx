@@ -76,6 +76,7 @@ import Spinner from '@/components/Spinner';
 import KOSyncConflictResolver from './KOSyncResolver';
 import ImageViewer from './ImageViewer';
 import TableViewer from './TableViewer';
+import { eventDispatcher } from '@/utils/event';
 
 declare global {
   interface Window {
@@ -626,6 +627,19 @@ const FoliateViewer: React.FC<{
         await view.goToFraction(0);
       }
       setViewInited(bookKey, true);
+
+      // If the URL carries ?search=... (e.g. opened from a dictionary quote
+      // click), trigger a text search in the primary book after init.
+      const searchParam = searchParams?.get('search');
+      if (searchParam && primaryId === thisId) {
+        // Small delay so the book content is fully rendered before search
+        setTimeout(() => {
+          eventDispatcher.dispatch('search-term', {
+            term: decodeURIComponent(searchParam),
+            bookKey,
+          });
+        }, 500);
+      }
 
       // The reader is showing a deep-link target, not the user's actual reading
       // position. Mark the view as a preview so progress writers (auto-save,

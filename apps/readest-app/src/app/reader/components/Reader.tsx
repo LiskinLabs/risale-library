@@ -17,6 +17,7 @@ import { useDeviceControlStore } from '@/store/deviceStore';
 import { useScreenWakeLock } from '@/hooks/useScreenWakeLock';
 import { useTransferQueue } from '@/hooks/useTransferQueue';
 import { useReplicaPull } from '@/hooks/useReplicaPull';
+import { useQuoteNavigation } from '@/hooks/useQuoteNavigation';
 import { eventDispatcher } from '@/utils/event';
 import { interceptWindowOpen } from '@/utils/open';
 import { mountAdditionalFonts } from '@/styles/fonts';
@@ -77,6 +78,8 @@ const Reader: React.FC<{ ids?: string }> = ({ ids }) => {
   // `pages/reader/[ids].tsx` also gets the pull. Module-scoped dedup
   // means navigating between library and reader doesn't re-pull.
   useReplicaPull({ kinds: ['dictionary', 'font', 'texture'] });
+  // Listen for clicks on dictionary quotes → navigate to the book
+  useQuoteNavigation();
 
   useEffect(() => {
     mountAdditionalFonts(document);

@@ -192,6 +192,8 @@ interface FullDefinition {
   hadithReference?: string;
   risalePassages: Array<{
     bookName: string;
+    bookSlug?: string;
+    citation?: string;
     quote?: string;
     quoteTranslation?: string;
     context: string;
@@ -332,6 +334,8 @@ function parseJsonResponse(jsonStr: string, fallbackWord: string): FullDefinitio
       risalePassages: Array.isArray(parsed.risalePassages)
         ? parsed.risalePassages.map((p: Record<string, unknown>) => ({
             bookName: (p['bookName'] as string) || (p['book_name'] as string) || '',
+            bookSlug: (p['bookSlug'] as string) || (p['book_slug'] as string) || undefined,
+            citation: (p['citation'] as string) || undefined,
             quote: (p['quote'] as string) || undefined,
             quoteTranslation:
               (p['quoteTranslation'] as string) ||
@@ -638,13 +642,38 @@ function passageCard(p: FullDefinition['risalePassages'][0]): HTMLElement {
     'border:1px solid var(--card-border,rgba(128,128,128,0.2));border-radius:8px;padding:10px;margin-bottom:6px;background:var(--card-bg,rgba(128,128,128,0.05));font-size:13px;';
   const hasQuote = p.quote && p.quote.trim().length > 0;
   const hasTranslation = p.quoteTranslation && p.quoteTranslation.trim().length > 0;
+  const hasBookLink = p.bookSlug && p.quote;
+
+  // Build a clickable link that dispatches a navigation event
+  const bookLinkAttrs = hasBookLink
+    ? `data-risale-book="${escapeHtml(p.bookSlug!)}" data-risale-search="${escapeHtml(p.quote!.slice(0, 80))}" class="risale-quote-link" style="cursor:pointer;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px;" title="Нажмите чтобы открыть книгу на этой цитате"`
+    : '';
+
   card.innerHTML = `
-    <div style="font-weight:600;font-size:12px;opacity:0.7;">📗 ${escapeHtml(p.bookName)}</div>
-    ${hasQuote ? `<blockquote style="margin:6px 0 4px 0;padding:6px 8px;border-left:3px solid var(--accent-color,#8b191b);background:var(--quote-bg,rgba(128,128,128,0.05));border-radius:0 4px 4px 0;font-style:italic;line-height:1.5;">${escapeHtml(p.quote!)}</blockquote>` : ''}
+    <div style="font-weight:600;font-size:12px;opacity:0.7;">📗 ${escapeHtml(p.bookName)}${p.citation ? ` <span style="opacity:0.5;font-weight:400;">— ${escapeHtml(p.citation)}</span>` : ''}</div>
+    ${hasQuote ? `<blockquote ${bookLinkAttrs} style="margin:6px 0 4px 0;padding:6px 8px;border-left:3px solid var(--accent-color,#8b191b);background:var(--quote-bg,rgba(128,128,128,0.05));border-radius:0 4px 4px 0;font-style:italic;line-height:1.5;">${escapeHtml(p.quote!)}</blockquote>` : ''}
     ${hasTranslation ? `<div style="margin:4px 0;font-size:12px;opacity:0.85;line-height:1.5;">${escapeHtml(p.quoteTranslation!)}</div>` : ''}
     <div style="margin-top:4px;">${escapeHtml(p.context)}</div>
     ${p.relevance ? `<div style="margin-top:4px;font-size:12px;opacity:0.7;">🔗 ${escapeHtml(p.relevance)}</div>` : ''}
   `;
+
+  // Add click handler for navigation
+  if (hasBookLink) {
+    const quote = card.querySelector('.risale-quote-link');
+    quote?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const bookSlug = (e.currentTarget as HTMLElement).dataset['risaleBook'] || '';
+      const searchQuery = (e.currentTarget as HTMLElement).dataset['risaleSearch'] || '';
+      if (bookSlug && searchQuery) {
+        window.dispatchEvent(
+          new CustomEvent('risale:navigate-to-quote', {
+            detail: { bookSlug, searchQuery },
+          }),
+        );
+      }
+    });
+  }
+
   return card;
 }
 

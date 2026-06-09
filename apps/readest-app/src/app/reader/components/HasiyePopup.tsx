@@ -49,31 +49,38 @@ const HasiyePopup: React.FC<HasiyePopupProps> = ({ bookKey }) => {
 
       const result = await lookupMeal(decodedText, mealLang);
 
-      // Try Lugat fallback
       let translation = result?.meal || null;
       let reference = result?.reference || '';
+
+      // SQLite Lugat fallback (Tauri only — 160 entries have arabic text)
       if (!translation && appService) {
         try {
           const db = await appService.openDatabase('lugat', 'lugat.db', 'Data');
           if (db) {
-            const results = await db.select<{ term: string; definition: string }>(
-              'SELECT term, definition FROM lugat WHERE arabic = ? LIMIT 1',
-              [decodedText.trim()],
+            const words = decodedText
+              .split(/[\s،۔؛,]+/)
+              .map((w: string) => w.trim())
+              .filter((w: string) => w.length >= 3)
+              .slice(0, 5);
+            const placeholders = words.map(() => '?').join(',');
+            const rows = await db.select<{ term: string; definition: string }>(
+              `SELECT term, definition FROM lugat WHERE arabic IN (${placeholders}) LIMIT 5`,
+              words,
             );
-            if (results && results.length > 0 && results[0]) {
-              const entry = results[0];
-              translation = `(${entry.term}) ${entry.definition}`;
+            if (rows?.length) {
+              translation = rows.map((r) => `(${r.term}) ${r.definition}`).join(' | ');
               reference = '';
             }
           }
-        } catch (err) {
-          console.error('Lugat fallback failed', err);
+        } catch {
+          /* lugat not available */
         }
       }
 
       if (!translation) {
-        console.log('No meal or lugat found for:', decodedText);
-        return;
+        // Show Arabic text with note — better than silent failure
+        translation = _('No translation found in database.');
+        reference = '';
       }
 
       setArabicText(decodedText);
