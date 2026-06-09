@@ -112,8 +112,26 @@ function parseReference(id: string): string {
 
 function normalizeArabic(text: string): string {
   return text
-    .replace(/[ً-ٰٟۖ-ۭ]/g, '')
+    // Remove diacritics (fatḥa, kasra, ḍamma, tanwīn, šadda, sukūn, etc.)
+    .replace(/[ً-ٰٟۖ-ۭ۪-ۭ]/g, '')
+    // Replace dagger alef (ٱ ٱ) and superscript alef with plain alef
+    .replace(/[ٱإأآ]/g, 'ا') // dagger/superscript/hamza alef → plain alef
+    // Replace alif wasla
+    .replace(/ٱ/g, 'ا')
+    // Remove tatweel (kashida)
     .replace(/[ـ]/g, '')
+    // Collapse whitespace
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+/**
+ * Heavy normalize: strip ALL marks, only keep bare Arabic letters.
+ * Used for fallback matching when standard normalize fails.
+ */
+function stripAllMarks(text: string): string {
+  return text
+    .replace(/[^ء-غف-يکیپچژگکی ]/g, '')
     .replace(/\s+/g, ' ')
     .trim();
 }
@@ -132,10 +150,20 @@ export async function lookupMeal(
     }
   }
 
-  // Substring match
+  // Substring match (standard normalize)
   for (const [, entry] of meals) {
     if (entry.arabic && normalizeArabic(entry.arabic).includes(norm.substring(0, 30))) {
       return { meal: entry.meal, reference: parseReference(entry.id) };
+    }
+  }
+
+  // Heavy normalize: strip ALL marks, compare bare consonants
+  const bare = stripAllMarks(arabicText);
+  if (bare.length >= 4) {
+    for (const [, entry] of meals) {
+      if (entry.arabic && stripAllMarks(entry.arabic).includes(bare.substring(0, 20))) {
+        return { meal: entry.meal, reference: parseReference(entry.id) };
+      }
     }
   }
 

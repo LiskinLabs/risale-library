@@ -1,23 +1,19 @@
 import type { Transformer } from './types';
 
-/**
- * Encode a UTF-8 string as Base64 using standard Web APIs.
- */
 function encodeBase64(str: string): string {
   const bytes = new TextEncoder().encode(str);
   const binString = Array.from(bytes, (b) => String.fromCodePoint(b)).join('');
   return btoa(binString);
 }
 
+const MARKER = 'data-hasiye-done';
+
 /**
  * Haşiye transformer — makes Arabic/Quranic text interactive.
  *
- * Wraps Arabic blocks with data attributes so the reader UI can
- * attach popup handlers. Meal lookups are performed client-side against
- * the pre-built meal index.
- *
- * v3 — groups consecutive inline Arabic into one unit,
- *      block-level ayahs get the full paragraph as one clickable element.
+ * Pass 1: Block-level — wraps <p.arabic>, <p.hadith>, <p.basmala> as one clickable unit.
+ * Pass 2: Inline — wraps consecutive Arabic text within non-arabic paragraphs.
+ *          Skips already-marked blocks (no double-wrapping).
  */
 export const hasiyeTransformer: Transformer = {
   name: 'hasiye',
@@ -28,15 +24,12 @@ export const hasiyeTransformer: Transformer = {
 
     let result = ctx.content;
 
-    // ── Pattern 1: Block-level Arabic (p.arabic, p.hadith, p.basmala) ──
-    // Wrap the ENTIRE block as one clickable unit
+    // ── Pass 1: Block-level Arabic ────────────────────────────────
     result = result.replace(
-      /<(p|span)([^>]*(?:class=["'][^"']*(?:arabic(?:-inline)?|hadith|basmala)[^"']*["']|dir=["']rtl["'])[^>]*)>(.*?)<\/\1>/gs,
-      (match: string, tag: string, attrs: string, inner: string) => {
+      /<(p|span)([^>]*(?:class=["'][^"']*(?:arabic|hadith|basmala)[^"']*["']|dir=["']rtl["'])[^>]*)>(.*?)<\/\1>/gs,
+      (_m: string, tag: string, attrs: string, inner: string) => {
         const plain = inner.replace(/<[^>]+>/g, '').trim();
-        if (!plain) return match;
-
-        const encoded = encodeBase64(plain);
+        if (!plain) return _m;
 
         let newAttrs = attrs;
         if (/class=["']/.test(newAttrs)) {
@@ -46,45 +39,39 @@ export const hasiyeTransformer: Transformer = {
         } else {
           newAttrs += ' class="hasiye-arabic"';
         }
-
-        if (!newAttrs.includes('data-hasiye-text=')) {
-          newAttrs += ` data-hasiye-text="${encoded}"`;
-        }
+        newAttrs += ` data-hasiye-text="${encodeBase64(plain)}" ${MARKER}=""`;
 
         return `<${tag}${newAttrs}>${inner}</${tag}>`;
       },
     );
 
-    // ── Pattern 2: Inline Arabic within non-arabic paragraphs ──────────
-    // Groups CONSECUTIVE Arabic text into one clickable unit
+    // ── Pass 2: Inline Arabic within non-arabic paragraphs ─────────
     result = result.replace(
       /(<p(?!\s[^>]*class=["'][^"']*(?:arabic|hadith|basmala))[^>]*>)(.*?)(<\/p>)/gs,
-      (_match: string, openTag: string, inner: string, closeTag: string) => {
-        // Find Arabic segments (words + spaces between them) of 4+ chars
-        const arabicSegmentRegex = /[؀-ۿݐ-ݿࢠ-ࣿ](?:[\s؀-ۿݐ-ݿࢠ-ࣿ]{3,})?[؀-ۿݐ-ݿࢠ-ࣿ]/g;
+      (_m: string, openTag: string, inner: string, closeTag: string) => {
+        if (inner.includes(MARKER)) return _m;
 
-        let result2 = inner;
-        const seen = new Set<string>();
+        // Match Arabic segments: a stretch of Arabic chars + spaces, 4+ chars total
+        const arabicRe = /[؀-ۿݐ-ݿࢠ-ࣿ][؀-ۿݐ-ݿࢠ-ࣿ\s]{2,}[؀-ۿݐ-ݿࢠ-ࣿ]/g;
 
-        // Replace matching Arabic segments, longest first
-        const matches: Array<{ text: string; index: number }> = [];
+        let out = inner;
+        const done = new Set<string>();
+
         let m: RegExpExecArray | null;
-        while ((m = arabicSegmentRegex.exec(inner)) !== null) {
-          matches.push({ text: m[0], index: m.index });
+        while ((m = arabicRe.exec(inner)) !== null) {
+          const text = m[0];
+          const key = text.trim();
+          if (done.has(key) || key.length < 4) continue;
+          done.add(key);
+
+          const replacement = `<span class="arabic-inline hasiye-arabic" data-hasiye-text="${encodeBase64(key)}" ${MARKER}="">${text}</span>`;
+          const idx = out.indexOf(text);
+          if (idx >= 0) {
+            out = out.substring(0, idx) + replacement + out.substring(idx + text.length);
+          }
         }
 
-        // Process from right to left to preserve indices
-        for (const match of matches.reverse()) {
-          const key = match.text.trim();
-          if (seen.has(key)) continue;
-          seen.add(key);
-
-          const encoded = encodeBase64(key);
-          const replacement = `<span class="arabic-inline hasiye-arabic" data-hasiye-text="${encoded}">${match.text}</span>`;
-          result2 = result2.substring(0, match.index) + replacement + result2.substring(match.index + match.text.length);
-        }
-
-        return seen.size > 0 ? `${openTag}${result2}${closeTag}` : `${openTag}${inner}${closeTag}`;
+        return done.size > 0 ? `${openTag}${out}${closeTag}` : _m;
       },
     );
 

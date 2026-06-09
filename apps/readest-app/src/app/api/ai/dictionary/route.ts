@@ -129,7 +129,7 @@ async function fullDefinition(
   "sourceSummary": "Какие источники реально использованы (конкретные книги и главы)"
 }
 КРИТИЧЕСКИ ВАЖНО:
-- Приведи 2-3 места из РАЗНЫХ книг (не только Слова/Лучи). Разнообразие источников обязательно.
+- Приведи 2-3 места из РАЗНЫХ книг Рисале-и Нур. Разнообразие источников обязательно.
 - Каждая цитата должна быть ТОЧНОЙ (как в оригинале) на турецком + перевод на русский.
 - Если термин из Корана — дай кораническое объяснение с аятом.
 - Объясняй В КОНТЕКСТЕ окружающего текста.`,
@@ -371,9 +371,17 @@ export async function POST(req: Request): Promise<Response> {
       return Response.json({ ok: true, definition: def });
     }
 
-    // Auth
+    // Auth: skip when user provides their own API key, OR when the server
+    // has a default key configured (e.g. DEEPSEEK_API_KEY in env).
+    // This lets the app work out-of-the-box for all users while still
+    // allowing individuals to override with their own keys via Settings → AI.
     const userProvidedKey = !!(body['geminiApiKey'] || body['deepseekApiKey']);
-    if (!userProvidedKey) {
+    const serverHasDefaultKey = !!(
+      process.env['AI_GATEWAY_API_KEY'] ||
+      process.env['GEMINI_API_KEY'] ||
+      process.env['DEEPSEEK_API_KEY']
+    );
+    if (!userProvidedKey && !serverHasDefaultKey) {
       const { user, token } = await validateUserAndToken(req.headers.get('authorization'));
       if (!user || !token) {
         return Response.json({ error: 'Not authenticated' }, { status: 403 });

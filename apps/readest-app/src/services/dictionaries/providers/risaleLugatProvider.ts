@@ -176,50 +176,29 @@ export const createRisaleLugatProvider = (appService: AppService): DictionaryPro
 
     initPromise = (async () => {
       try {
-        // On web platform, we need to ensure the DB exists in OPFS.
-        // It's shipped in the public/data directory.
-        if (appService.appPlatform === 'web') {
+        // On web / node platforms, the lugat.db SQLite file ships in
+        // public/data/ but needs to be copied to the app's Data directory
+        // before `openDatabase` can find it. Web uses OPFS; Node dev server
+        // uses the local filesystem.
+        const DB_VERSION = 2;
+        const platform = appService.appPlatform;
+        if (platform === 'web' || platform === 'node') {
           try {
-            const root = await navigator.storage.getDirectory();
-            const pathInfo = await appService.resolveFilePath?.('lugat.db', 'Data');
-            const targetName = pathInfo
-              ? pathInfo.replace(/[/\\]+/g, '_').replace(/^_+/, '')
-              : 'lugat.db';
-            // Cache-busting key — bump DB_VERSION when lugat.db schema changes
-            const DB_VERSION = 2;
-            const versionKey = `${targetName}.version`;
-
-            let needsFetch = true;
-            try {
-              const versionHandle = await root.getFileHandle(versionKey);
-              const versionFile = await versionHandle.getFile();
-              const storedVersion = parseInt(await versionFile.text()) || 0;
-              if (storedVersion >= DB_VERSION) {
-                needsFetch = false;
-              }
-            } catch (_e) {
-              needsFetch = true;
-            }
-
-            if (needsFetch) {
-              console.log(`Fetching lugat.db v${DB_VERSION} into OPFS...`, targetName);
+            const exists = await appService.exists('lugat.db', 'Data');
+            if (!exists) {
+              console.log(`Seeding lugat.db v${DB_VERSION} for ${platform} platform...`);
               const response = await fetch('/data/lugat.db');
               if (response.ok) {
-                const arrayBuffer = await response.arrayBuffer();
-                const fileHandle = await root.getFileHandle(targetName, { create: true });
-                const writable = await fileHandle.createWritable();
-                await writable.write(arrayBuffer);
-                await writable.close();
-                // Write version stamp
-                const vHandle = await root.getFileHandle(versionKey, { create: true });
-                const vWritable = await vHandle.createWritable();
-                await vWritable.write(String(DB_VERSION));
-                await vWritable.close();
-                console.log('lugat.db successfully written to OPFS');
+                const blob = await response.blob();
+                const file = new File([blob], 'lugat.db');
+                await appService.writeFile('lugat.db', 'Data', file);
+                console.log('lugat.db seeded successfully');
+              } else {
+                console.warn(`Failed to fetch lugat.db: HTTP ${response.status}`);
               }
             }
           } catch (e) {
-            console.warn('OPFS preloading failed:', e);
+            console.warn('lugat.db seeding failed:', e);
           }
         }
 
