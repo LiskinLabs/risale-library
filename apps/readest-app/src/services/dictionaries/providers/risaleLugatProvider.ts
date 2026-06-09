@@ -176,51 +176,28 @@ export const createRisaleLugatProvider = (appService: AppService): DictionaryPro
 
     initPromise = (async () => {
       try {
-        // On web / node platforms, the lugat.db SQLite file ships in
-        // public/data/ but needs to be copied to the app's Data directory.
+        // On web/node/tauri the lugat.db shipped in public/data/ must be
+        // copied to the runtime Data directory before opening. We always
+        // fetch and overwrite on first call — simple, reliable, no version
+        // drift or stale-empty-file issues.
         const platform = appService.appPlatform;
-        const needsSeeding = platform === 'web' || platform === 'node' || platform === 'tauri';
-
-        if (needsSeeding) {
-          // Open first (may create an empty DB if file is missing or stale)
-          const candidate = await appService.openDatabase('lugat', 'lugat.db', 'Data');
+        if (platform === 'web' || platform === 'node' || platform === 'tauri') {
           try {
-            const rows = await candidate.select<{ cnt: number }>(
-              'SELECT COUNT(*) as cnt FROM lugat',
-            );
-            if (!rows?.[0] || rows[0].cnt === 0) {
-              // DB is empty — close it and replace with the real data
-              await candidate.close();
-              console.log(
-                `Seeding lugat.db for ${platform} (DB was empty or missing)...`,
+            console.log(`Seeding lugat.db for ${platform}...`);
+            const response = await fetch('/data/lugat.db');
+            if (response.ok) {
+              const buf = await response.arrayBuffer();
+              await appService.writeFile(
+                'lugat.db',
+                'Data',
+                new File([new Uint8Array(buf)], 'lugat.db'),
               );
-              const response = await fetch('/data/lugat.db');
-              if (response.ok) {
-                const buf = await response.arrayBuffer();
-                const file = new File([buf], 'lugat.db');
-                try {
-                  await appService.writeFile('lugat.db', 'Data', file);
-                } catch (writeErr) {
-                  console.error('Failed to write lugat.db:', writeErr);
-                  // Fallback: try direct copy via saveFile if writeFile fails
-                }
-                db = await appService.openDatabase('lugat', 'lugat.db', 'Data');
-                const verify = await db.select<{ cnt: number }>(
-                  'SELECT COUNT(*) as cnt FROM lugat',
-                );
-                console.log(
-                  `lugat.db seeded: ${verify?.[0]?.cnt ?? '?'} rows`,
-                );
-                return db;
-              }
-              console.warn(`Failed to fetch lugat.db: HTTP ${response.status}`);
+              console.log('lugat.db seeded successfully');
             } else {
-              db = candidate;
-              return db;
+              console.warn(`Failed to fetch lugat.db: HTTP ${response.status}`);
             }
           } catch (e) {
-            await candidate.close().catch(() => {});
-            console.warn('lugat.db seed check failed, will try fresh open:', e);
+            console.warn('lugat.db seeding failed:', e);
           }
         }
 

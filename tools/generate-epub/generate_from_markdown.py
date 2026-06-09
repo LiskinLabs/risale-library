@@ -317,12 +317,12 @@ def markdown_to_html(text: str, book_slug: str) -> tuple[str, list[dict]]:
 
         # 3. Special Markers
         is_special = False
-        markers = ["Sual:", "Elcevap:", "İhtar:", "Elhasıl:", "Fasıl:", "Nükte:"]
+        markers = ["Sual:", "Suâl:", "Elcevap:", "İhtar:", "Elhasıl:", "Fasıl:", "Nükte:"]
         for marker in markers:
-            pattern = rf"^(\*\*\*)?({marker})(\*\*\*)?\s*(.*)$"
+            pattern = rf"^[*]*({marker})[*]*\s*[*]*\s*(.*)$"
             match = re.match(pattern, ls, re.IGNORECASE)
             if match:
-                html_lines.append(f'<p class="sual-elcevap"><span class="mark-label">{match.group(2)}</span> {format_inline(match.group(4))}</p>')
+                html_lines.append(f'<p class="sual-elcevap"><span class="mark-label">{match.group(1)}</span> {format_inline(match.group(2))}</p>')
                 is_special = True
                 break
         if is_special: continue

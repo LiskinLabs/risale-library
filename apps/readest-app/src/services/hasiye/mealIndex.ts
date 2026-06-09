@@ -112,12 +112,16 @@ function parseReference(id: string): string {
 
 function normalizeArabic(text: string): string {
   return text
-    // Remove diacritics (fatḥa, kasra, ḍamma, tanwīn, šadda, sukūn, etc.)
+    // Remove diacritics: fatḥa, kasra, ḍamma, tanwīn, šadda, sukūn, superscript alef, etc.
     .replace(/[ً-ٰٟۖ-ۭ۪-ۭ]/g, '')
-    // Replace dagger alef (ٱ ٱ) and superscript alef with plain alef
-    .replace(/[ٱإأآ]/g, 'ا') // dagger/superscript/hamza alef → plain alef
-    // Replace alif wasla
-    .replace(/ٱ/g, 'ا')
+    // Normalize alef variants → plain alef (ا)
+    .replace(/[ٱإأآﺇﺃ]/g, 'ا')
+    // Normalize yeh variants → plain yeh (ي)
+    .replace(/[ىۍېۓےۆۋۈۉۊۋﯤﯥﯦﯧﯼﯽﯾﯿ]/g, 'ي')
+    // Normalize waw variants → plain waw (و)
+    .replace(/[ؤۄۅۆۏۉۋ]/g, 'و')
+    // Normalize teh marbuta → heh (ة → ه)
+    .replace(/[ة]/g, 'ه')
     // Remove tatweel (kashida)
     .replace(/[ـ]/g, '')
     // Collapse whitespace
@@ -125,12 +129,17 @@ function normalizeArabic(text: string): string {
     .trim();
 }
 
-/** Heavy normalize: strip ALL marks, only keep bare Arabic letters. */
+/** Heavy normalize: strip ALL marks, only keep bare Arabic consonants. */
 function stripAllMarks(text: string): string {
   return text
     .replace(/[^؀-ۿ ]/g, "")
     .replace(/\s+/g, " ")
     .trim();
+}
+
+interface ScoredMatch {
+  entry: MealEntry;
+  score: number; // higher = better match
 }
 
 export async function lookupMeal(
@@ -139,41 +148,58 @@ export async function lookupMeal(
 ): Promise<MealResult | null> {
   const norm = normalizeArabic(arabicText);
   const meals = await loadMeals(lang);
-
-  // 1. Exact match
-  for (const [, entry] of meals) {
-    if (entry.arabic && normalizeArabic(entry.arabic) === norm) {
-      return { meal: entry.meal, reference: parseReference(entry.id) };
-    }
-  }
-
-  // 2. String contains — database Arabic IN search text (EPUB has longer passage)
-  for (const [, entry] of meals) {
-    if (entry.arabic && norm.includes(normalizeArabic(entry.arabic))) {
-      return { meal: entry.meal, reference: parseReference(entry.id) };
-    }
-  }
-
-  // 3. String contains — search text IN database Arabic (EPUB has partial ayah)
-  for (const [, entry] of meals) {
-    if (entry.arabic && normalizeArabic(entry.arabic).includes(norm.substring(0, 20))) {
-      return { meal: entry.meal, reference: parseReference(entry.id) };
-    }
-  }
-
-  // 4. Heavy normalize (bare consonants) — both directions
+  const normLen = norm.length;
   const bare = stripAllMarks(arabicText);
-  if (bare.length >= 4) {
-    for (const [, entry] of meals) {
-      if (!entry.arabic) continue;
-      const entryBare = stripAllMarks(entry.arabic);
-      if (entryBare.includes(bare.substring(0, 20)) || bare.includes(entryBare.substring(0, 20))) {
-        return { meal: entry.meal, reference: parseReference(entry.id) };
+
+  let best: ScoredMatch | null = null;
+
+  for (const [, entry] of meals) {
+    if (!entry.arabic) continue;
+    const entryNorm = normalizeArabic(entry.arabic);
+    const entryBare = stripAllMarks(entry.arabic);
+    let score = 0;
+
+    // 1. Exact match (normalized) — highest confidence
+    if (entryNorm === norm) {
+      score = 1000;
+    }
+    // 2. DB arabic fully contained in search text (EPUB quotes full ayah + extra)
+    else if (norm.includes(entryNorm) && entryNorm.length >= 20) {
+      score = 800 + entryNorm.length; // longer match = better
+    }
+    // 3. Search text fully contained in DB arabic (partial ayah in EPUB)
+    else if (entryNorm.includes(norm) && normLen >= 20) {
+      score = 700 + normLen;
+    }
+    // 4. Substantial overlap in bare consonants
+    else if (bare.length >= 15) {
+      const minLen = Math.min(bare.length, entryBare.length);
+      // Check if one contains the other (at least 60% of the shorter one)
+      if (entryBare.includes(bare) || bare.includes(entryBare)) {
+        const ratio = minLen / Math.max(bare.length, entryBare.length);
+        if (ratio >= 0.4) {
+          score = 500 + Math.floor(ratio * 500);
+        }
+      }
+      // Partial overlap: check substring match of at least 15 chars
+      else if (bare.length >= 15 && entryBare.length >= 15) {
+        const needle = bare.substring(0, Math.min(25, bare.length));
+        if (entryBare.includes(needle)) {
+          score = 300 + needle.length;
+        }
       }
     }
+
+    if (score > 0 && (!best || score > best.score)) {
+      best = { entry, score };
+    }
   }
 
-  // 5. Fallback to Turkish
+  if (best) {
+    return { meal: best.entry.meal, reference: parseReference(best.entry.id) };
+  }
+
+  // Fallback to Turkish
   if (lang !== 'tr') {
     return lookupMeal(arabicText, 'tr');
   }
