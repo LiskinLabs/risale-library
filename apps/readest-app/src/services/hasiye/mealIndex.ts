@@ -140,31 +140,40 @@ export async function lookupMeal(
   const norm = normalizeArabic(arabicText);
   const meals = await loadMeals(lang);
 
-  // Exact match first
+  // 1. Exact match
   for (const [, entry] of meals) {
     if (entry.arabic && normalizeArabic(entry.arabic) === norm) {
       return { meal: entry.meal, reference: parseReference(entry.id) };
     }
   }
 
-  // Substring match (standard normalize)
+  // 2. String contains — database Arabic IN search text (EPUB has longer passage)
   for (const [, entry] of meals) {
-    if (entry.arabic && normalizeArabic(entry.arabic).includes(norm.substring(0, 30))) {
+    if (entry.arabic && norm.includes(normalizeArabic(entry.arabic))) {
       return { meal: entry.meal, reference: parseReference(entry.id) };
     }
   }
 
-  // Heavy normalize: strip ALL marks, compare bare consonants
+  // 3. String contains — search text IN database Arabic (EPUB has partial ayah)
+  for (const [, entry] of meals) {
+    if (entry.arabic && normalizeArabic(entry.arabic).includes(norm.substring(0, 20))) {
+      return { meal: entry.meal, reference: parseReference(entry.id) };
+    }
+  }
+
+  // 4. Heavy normalize (bare consonants) — both directions
   const bare = stripAllMarks(arabicText);
   if (bare.length >= 4) {
     for (const [, entry] of meals) {
-      if (entry.arabic && stripAllMarks(entry.arabic).includes(bare.substring(0, 20))) {
+      if (!entry.arabic) continue;
+      const entryBare = stripAllMarks(entry.arabic);
+      if (entryBare.includes(bare.substring(0, 20)) || bare.includes(entryBare.substring(0, 20))) {
         return { meal: entry.meal, reference: parseReference(entry.id) };
       }
     }
   }
 
-  // Fallback to Turkish if requested lang wasn't found
+  // 5. Fallback to Turkish
   if (lang !== 'tr') {
     return lookupMeal(arabicText, 'tr');
   }
