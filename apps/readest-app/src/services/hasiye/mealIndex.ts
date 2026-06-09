@@ -125,14 +125,11 @@ function normalizeArabic(text: string): string {
     .trim();
 }
 
-/**
- * Heavy normalize: strip ALL marks, only keep bare Arabic letters.
- * Used for fallback matching when standard normalize fails.
- */
+/** Heavy normalize: strip ALL marks, only keep bare Arabic letters. */
 function stripAllMarks(text: string): string {
   return text
-    .replace(/[^ء-غف-يکیپچژگکی ]/g, '')
-    .replace(/\s+/g, ' ')
+    .replace(/[^؀-ۿ ]/g, "")
+    .replace(/\s+/g, " ")
     .trim();
 }
 
