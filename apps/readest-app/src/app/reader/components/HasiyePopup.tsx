@@ -1,19 +1,22 @@
 'use client';
 
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { MdArrowBack } from 'react-icons/md';
 import { getPopupPosition, getPosition, Position } from '@/utils/sel';
 import { lookupMeal, getMealLanguage, type MealResult } from '@/services/hasiye/mealIndex';
 import { eventDispatcher } from '@/utils/event';
 import { Overlay } from '@/components/Overlay';
 import Popup from '@/components/Popup';
-import { useResponsiveSize } from '@/hooks/useResponsiveSize';
 import { useEnv } from '@/context/EnvContext';
-import { Loader2Icon, SparklesIcon } from 'lucide-react';
+import { Loader2Icon, SparklesIcon, BookOpenIcon } from 'lucide-react';
 
 interface HasiyePopupProps {
   bookKey: string;
 }
+
+const POPUP_WIDTH = 480;
+const POPUP_MAX_HEIGHT = 500;
 
 const HasiyePopup: React.FC<HasiyePopupProps> = ({ bookKey }) => {
   const { t: _, i18n } = useTranslation();
@@ -25,11 +28,18 @@ const HasiyePopup: React.FC<HasiyePopupProps> = ({ bookKey }) => {
   const [trianglePosition, setTrianglePosition] = useState<Position | null>(null);
   const [isAiLoading, setIsAiLoading] = useState(false);
   const [isAiTranslation, setIsAiTranslation] = useState(false);
+  const bodyRef = useRef<HTMLDivElement>(null);
+  const [bodyHeight, setBodyHeight] = useState(200);
 
-  const popupPadding = useResponsiveSize(10);
-  const popupWidth = Math.min(460, window.innerWidth - popupPadding * 2);
-  const popupHeight = Math.min(420, window.innerHeight - popupPadding * 2);
   const mealLang = useMemo(() => getMealLanguage(i18n.language || 'tr'), [i18n.language]);
+
+  // Auto-size height to content
+  useEffect(() => {
+    if (bodyRef.current && mealResult) {
+      const h = bodyRef.current.scrollHeight + 56; // header
+      setBodyHeight(Math.min(h, POPUP_MAX_HEIGHT));
+    }
+  }, [mealResult, isAiLoading]);
 
   useEffect(() => {
     const handlePopup = async (e: Event) => {
@@ -42,66 +52,54 @@ const HasiyePopup: React.FC<HasiyePopupProps> = ({ bookKey }) => {
 
       let decodedText = '';
       try {
-        const binaryString = atob(encodedText);
-        const bytes = Uint8Array.from(binaryString, (c) => c.charCodeAt(0));
-        decodedText = new TextDecoder().decode(bytes);
-      } catch (_e) {
-        console.warn('Failed to decode hasiye text:', _e);
+        decodedText = new TextDecoder().decode(
+          Uint8Array.from(atob(encodedText), (c) => c.charCodeAt(0)),
+        );
+      } catch {
         return;
       }
 
-      // Show popup immediately with loading state
-      setArabicText(decodedText);
-      setMealResult(null);
       setIsAiLoading(true);
       setIsAiTranslation(false);
-      setShowPopup(false);
+      setMealResult(null);
+      setArabicText(decodedText);
 
       let translation = '';
       let reference = '';
 
-      // ── Tier 1: Quran meal lookup ──────────────────────────────
+      // Tier 1: Quran meal
       const result = await lookupMeal(decodedText, mealLang);
       if (result) {
         translation = result.meal;
         reference = result.reference;
         setIsAiLoading(false);
-        setIsAiTranslation(false);
       }
 
-      // ── Tier 2: Lugat SQLite fallback ──────────────────────────
+      // Tier 2: Lugat SQLite
       if (!translation && appService) {
         try {
           const db = await appService.openDatabase('lugat', 'lugat.db', 'Data');
           if (db) {
-            const words = decodedText
-              .split(/[\s،۔؛,]+/)
-              .map((w: string) => w.trim())
-              .filter((w: string) => w.length >= 3)
-              .slice(0, 5);
-            const placeholders = words.map(() => '?').join(',');
+            const words = decodedText.split(/[\s،۔؛,]+/).filter((w: string) => w.trim().length >= 3).slice(0, 5);
+            const ph = words.map(() => '?').join(',');
             const rows = await db.select<{ term: string; definition: string }>(
-              `SELECT term, definition FROM lugat WHERE arabic IN (${placeholders}) LIMIT 5`,
-              words,
-            );
+              `SELECT term, definition FROM lugat WHERE arabic IN (${ph}) LIMIT 3`, words);
             if (rows?.length) {
               translation = rows.map((r) => `(${r.term}) ${r.definition}`).join(' | ');
               setIsAiLoading(false);
             }
           }
-        } catch {
-          /* lugat not available */
-        }
+        } catch { /* */ }
       }
 
-      // ── Tier 3: AI semantic translation ────────────────────────
+      // Tier 3: AI
       if (!translation) {
         try {
           translation = await fetchAiTranslation(decodedText, mealLang);
           setIsAiTranslation(true);
         } catch (err) {
-          console.error('AI translation failed:', err);
-          translation = _('Translation unavailable. Try again later.');
+          console.error('AI translate error:', err);
+          translation = _('Translation unavailable.');
         }
         setIsAiLoading(false);
       }
@@ -112,90 +110,92 @@ const HasiyePopup: React.FC<HasiyePopupProps> = ({ bookKey }) => {
       const gridCell = document.querySelector(`[data-book-key="${CSS.escape(bookKey)}"]`);
       if (gridCell) {
         const rect = gridCell.getBoundingClientRect();
-        const triangPos = getPosition(element, rect, popupPadding, false);
-        const popPos = getPopupPosition(triangPos, rect, popupWidth, popupHeight, popupPadding);
-        setTrianglePosition(triangPos);
-        setPopupPosition(popPos);
+        const w = Math.min(POPUP_WIDTH, window.innerWidth - 20);
+        setTrianglePosition(getPosition(element, rect, 10, false));
+        setPopupPosition(getPopupPosition(getPosition(element, rect, 10, false), rect, w, bodyHeight, 10));
       }
 
       setShowPopup(true);
     };
 
     eventDispatcher.on('hasiye-popup', handlePopup);
-    return () => {
-      eventDispatcher.off('hasiye-popup', handlePopup);
-    };
-  }, [bookKey, popupPadding, popupWidth, popupHeight, appService, mealLang, _]);
+    return () => eventDispatcher.off('hasiye-popup', handlePopup);
+  }, [bookKey, appService, mealLang, bodyHeight, _]);
 
   if (!showPopup || !popupPosition || !trianglePosition) return null;
 
+  const headerLabel = isAiTranslation
+    ? _('AI Translation')
+    : mealResult?.reference
+      ? _('Meal (Translation)')
+      : _('Dictionary');
+
   return (
     <div role='toolbar' tabIndex={-1}>
-      {showPopup && <Overlay onDismiss={() => setShowPopup(false)} />}
+      <Overlay onDismiss={() => setShowPopup(false)} />
       <Popup
-        isOpen={showPopup}
-        width={popupWidth}
-        height={popupHeight}
+        width={POPUP_WIDTH}
+        height={bodyHeight}
         position={popupPosition}
         trianglePosition={trianglePosition}
-        className='hasiye-popup-container'
+        className='select-text'
         onDismiss={() => setShowPopup(false)}
       >
-        <div
-          id='popup-container'
-          className='bg-base-100 flex h-full w-full flex-col overflow-hidden rounded shadow-lg'
-          style={{ width: popupWidth, maxHeight: popupHeight }}
-        >
-          {/* Header */}
-          <div className='flex items-center justify-between border-b border-base-content/10 px-4 py-2'>
-            <span className='text-sm font-semibold opacity-70'>{_('Meal (Translation)')}</span>
-            <div className='flex items-center gap-1'>
+        <div className='flex h-full flex-col overflow-hidden rounded-lg pt-4' ref={bodyRef}>
+          {/* Compact header — matches Dictionary style */}
+          <div className='-mt-2 flex items-center gap-2 px-4 pb-2'>
+            <button
+              type='button'
+              onClick={() => setShowPopup(false)}
+              className='btn btn-ghost btn-circle btn-xs flex shrink-0'
+              title={_('Close')}
+            >
+              <MdArrowBack size={16} />
+            </button>
+            <span className='min-w-0 flex-1 truncate text-sm font-semibold opacity-70'>
+              {headerLabel}
+            </span>
+            <div className='flex shrink-0 items-center gap-1'>
               {isAiTranslation && (
-                <span className='badge badge-sm gap-1 border-amber-400/40 bg-amber-400/10 text-[10px] text-amber-600'>
-                  <SparklesIcon size={10} />
-                  AI
+                <span className='badge badge-xs gap-0.5 border-amber-400/40 bg-amber-400/10 text-[9px] text-amber-600'>
+                  <SparklesIcon size={9} /> AI
                 </span>
               )}
-              <span className='badge badge-sm text-[10px] opacity-50'>{mealLang.toUpperCase()}</span>
+              {mealResult?.reference && (
+                <span className='flex items-center gap-0.5 text-[10px] opacity-40'>
+                  <BookOpenIcon size={10} />
+                  {mealResult.reference}
+                </span>
+              )}
             </div>
           </div>
 
-          {/* Body */}
-          <div className='flex-1 overflow-y-auto p-4'>
-            {/* Arabic text */}
+          {/* Body — compact, auto-sized */}
+          <div className='min-h-0 flex-1 overflow-y-auto px-4 pb-4'>
+            {/* Arabic text — smaller, inline */}
             <div
               dir='rtl'
-              className='mb-3 font-arabic text-xl leading-relaxed opacity-80'
+              className='mb-2 font-arabic text-lg leading-relaxed opacity-75'
               style={{ fontFamily: '"Traditional Arabic", "Scheherazade New", serif' }}
             >
               {arabicText}
             </div>
 
-            {/* Reference (Quran only) */}
-            {mealResult?.reference && (
-              <div className='mb-2 text-xs font-medium tracking-wide opacity-50'>
-                {mealResult.reference}
-              </div>
-            )}
-
-            {/* Loading */}
             {isAiLoading && (
-              <div className='flex items-center gap-2 py-4 text-sm opacity-50'>
-                <Loader2Icon size={16} className='animate-spin' />
-                {_('AI is translating...')}
+              <div className='flex items-center gap-2 py-2 text-xs opacity-40'>
+                <Loader2Icon size={14} className='animate-spin' />
+                {_('Translating...')}
               </div>
             )}
 
-            {/* AI disclaimer */}
-            {isAiTranslation && mealResult && (
-              <div className='mb-2 text-[10px] leading-tight opacity-40'>
-                {_('This is an AI-generated semantic translation. It conveys the meaning in context but is not a literal Quran translation.')}
+            {isAiTranslation && (
+              <div className='mb-2 text-[9px] leading-tight opacity-30'>
+                {_('AI-generated semantic translation — conveys meaning in context, not literal.')}
               </div>
             )}
 
-            {/* Translation text */}
             {mealResult && (
-              <div className='text-sm leading-relaxed opacity-90 whitespace-pre-wrap'>
+              <div className='text-sm leading-relaxed whitespace-pre-wrap'>
                 {mealResult.meal}
               </div>
             )}
@@ -206,7 +206,7 @@ const HasiyePopup: React.FC<HasiyePopupProps> = ({ bookKey }) => {
   );
 };
 
-// ── AI translation helper ───────────────────────────────────────────
+// ── AI helper ───────────────────────────────────────────────────────
 
 async function fetchAiTranslation(arabicText: string, targetLang: string): Promise<string> {
   const token = typeof localStorage !== 'undefined' ? localStorage.getItem('token') : null;
@@ -225,39 +225,20 @@ async function fetchAiTranslation(arabicText: string, targetLang: string): Promi
     }),
   });
 
-  if (!res.ok) {
-    const err = await res.json().catch(() => ({}));
-    throw new Error((err as { error?: string }).error || `AI API error: ${res.status}`);
-  }
-
-  const data = (await res.json()) as {
-    ok?: boolean;
-    json?: string;
-    error?: string;
-  };
-
+  if (!res.ok) throw new Error(`AI API: ${res.status}`);
+  const data = (await res.json()) as { ok?: boolean; json?: string; error?: string };
   if (data.error) throw new Error(data.error);
-  if (!data.json) throw new Error('Empty AI response');
+  if (!data.json) throw new Error('Empty response');
 
-  // Parse the AI's JSON response — it returns a PassageAnalysis object
   let parsed: Record<string, unknown> | null = null;
-  try {
-    parsed = JSON.parse(data.json) as Record<string, unknown>;
-  } catch {
-    // Not JSON — return raw markdown
-    return data.json;
-  }
+  try { parsed = JSON.parse(data.json) as Record<string, unknown>; } catch { return data.json; }
 
-  // Build a rich formatted response from the parsed AI output
   const parts: string[] = [];
-
-  const summary = (parsed['passageSummary'] || parsed['summary']) as string | undefined;
-  const translation = (parsed['approximateTranslation'] || parsed['translation']) as
-    | string
-    | undefined;
-  const context = (parsed['contextNote'] || parsed['note']) as string | undefined;
+  const summary = parsed['passageSummary'] || parsed['summary'] as string | undefined;
+  const translation = parsed['approximateTranslation'] || parsed['translation'] as string | undefined;
+  const context = parsed['contextNote'] || parsed['note'] as string | undefined;
+  const insight = parsed['keyInsight'] || parsed['insight'] as string | undefined;
   const terms = parsed['complexTerms'] as Array<Record<string, string>> | undefined;
-  const insight = (parsed['keyInsight'] || parsed['insight']) as string | undefined;
 
   if (summary) parts.push(`**${summary}**`);
   if (translation) parts.push(`📖 ${translation}`);
@@ -265,14 +246,12 @@ async function fetchAiTranslation(arabicText: string, targetLang: string): Promi
   if (insight) parts.push(`✨ ${insight}`);
   if (terms?.length) {
     parts.push('');
-    parts.push('**Terms:**');
     for (const t of terms) {
       const term = t['term'] || '';
       const def = t['contextualDefinition'] || t['generalDefinition'] || '';
       if (term && def) parts.push(`• **${term}** — ${def}`);
     }
   }
-
   return parts.length > 0 ? parts.join('\n\n') : data.json;
 }
 

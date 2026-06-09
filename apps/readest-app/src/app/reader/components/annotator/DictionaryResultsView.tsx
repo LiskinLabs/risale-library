@@ -111,6 +111,8 @@ export function useDictionaryResults({
   }, [word]);
 
   const [cards, setCards] = useState<Record<string, CardState>>({});
+  // Bump this to force a re-lookup (e.g. when user clicks refresh on AI card)
+  const [refreshKey, setRefreshKey] = useState(0);
   // Cards the user has manually toggled. The auto-expand reconciliation
   // (≤ 3 results → default expanded) only writes to cards NOT in this set.
   const [manuallyToggled, setManuallyToggled] = useState<Record<string, boolean>>({});
@@ -304,7 +306,16 @@ export function useDictionaryResults({
     themeCode.fg,
     dictionaryLevel,
     dictionaryLanguage,
+    context,
+    refreshKey,
   ]);
+
+  // Listen for refresh-AI event from the AI card's refresh button
+  useEffect(() => {
+    const handler = () => setRefreshKey((k) => k + 1);
+    window.addEventListener('risale:refresh-ai-dictionary', handler);
+    return () => window.removeEventListener('risale:refresh-ai-dictionary', handler);
+  }, []);
 
   // Visible cards = all providers regardless of state. We show error/empty
   // states with a message so the user knows what went wrong instead of

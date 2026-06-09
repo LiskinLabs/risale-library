@@ -160,13 +160,13 @@ async function fullDefinition(
   const ctxBefore = context?.before ? `"${context.before.slice(-300)}"` : 'нет';
   const ctxAfter = context?.after ? `"${context.after.slice(0, 300)}"` : 'нет';
 
-  // Retrieve REAL passages from the Risale corpus
-  const realPassages = await searchRisalePassages(word, 5);
+  // Retrieve REAL passages from the Risale corpus (max 3, trimmed)
+  const realPassages = await searchRisalePassages(word, 3);
   const passagesBlock = realPassages.length
     ? realPassages
         .map(
           (p, i) =>
-            `[ПАССАЖ ${i + 1}]\nКнига: ${p.bookTitle} (bookSlug: ${p.bookSlug})\nРаздел: ${p.sectionTitle}\nЦитата: ${p.citation}\nТЕКСТ: ${p.text.slice(0, 600)}`,
+            `[ПАССАЖ ${i + 1}]\nКнига: ${p.bookTitle} (bookSlug: ${p.bookSlug})\nРаздел: ${p.sectionTitle}\nЦитата: ${p.citation}\nТЕКСТ: ${p.text.slice(0, 400)}`,
         )
         .join('\n\n')
     : 'РЕАЛЬНЫЕ ЦИТАТЫ НЕ НАЙДЕНЫ — НЕ ВЫДУМЫВАЙ ИХ. Укажи: "В доступном корпусе Рисале-и Нур этот термин не обнаружен."';
@@ -306,9 +306,9 @@ KRİTİK:
     model,
     system,
     prompt: `Объясни термин: ${word}`,
-    maxOutputTokens: 1200,
+    maxOutputTokens: 3000,
     temperature: 0.5,
-    abortSignal: AbortSignal.timeout(25000),
+    abortSignal: AbortSignal.timeout(35000),
   });
 
   return result.text?.trim() || '';

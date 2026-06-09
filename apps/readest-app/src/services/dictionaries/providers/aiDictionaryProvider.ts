@@ -96,6 +96,11 @@ function isSimpleWord(word: string, lang?: string): boolean {
 const simpleDefinitionCache = new Map<string, { definition: string; timestamp: number }>();
 const CACHE_TTL = 30 * 60 * 1000;
 
+/** Cache key includes word + language so switching languages busts the cache. */
+function cacheKey(word: string, lang: string): string {
+  return `${lang}:${word.toLowerCase()}`;
+}
+
 // ── Provider ───────────────────────────────────────────────────────────
 
 export const aiDictionaryProvider: DictionaryProvider = {
@@ -115,14 +120,14 @@ export const aiDictionaryProvider: DictionaryProvider = {
 
     // Simple word (not passage) → fast definition
     if (complexity === 'simple' && mode === 'word') {
-      const cached = simpleDefinitionCache.get(word);
+      const cached = simpleDefinitionCache.get(cacheKey(word, targetLang));
       if (cached && Date.now() - cached.timestamp < CACHE_TTL) {
         renderSimpleDefinition(container, word, cached.definition, targetLang);
         return { ok: true, headword: word, sourceLabel: 'AI Sözlük' };
       }
       try {
         const definition = await fetchSimpleDefinition(word, targetLang, signal);
-        simpleDefinitionCache.set(word, { definition, timestamp: Date.now() });
+        simpleDefinitionCache.set(cacheKey(word, targetLang), { definition, timestamp: Date.now() });
         renderSimpleDefinition(container, word, definition, targetLang);
         return { ok: true, headword: word, sourceLabel: 'AI Sözlük' };
       } catch (err) {
@@ -168,7 +173,7 @@ export const aiDictionaryProvider: DictionaryProvider = {
     } catch (_err) {
       try {
         const definition = await fetchSimpleDefinition(word, targetLang, signal);
-        simpleDefinitionCache.set(word, { definition, timestamp: Date.now() });
+        simpleDefinitionCache.set(cacheKey(word, targetLang), { definition, timestamp: Date.now() });
         renderSimpleDefinition(container, word, definition, targetLang);
         return { ok: true, headword: word, sourceLabel: 'AI Sözlük (basit)' };
       } catch {
@@ -408,6 +413,7 @@ function renderSimpleDefinition(
     <div style="color:var(--text-secondary, inherit);">${escapeHtml(definition)}</div>
   `;
   root.appendChild(saveButtonEl(container, word));
+  root.appendChild(refreshButtonEl());
   root.appendChild(poweredByEl());
   container.appendChild(root);
 }
@@ -505,6 +511,7 @@ function renderFullDefinition(
 
   // Save button
   root.appendChild(saveButtonEl(container, word));
+  root.appendChild(refreshButtonEl());
   // Powered by
   root.appendChild(poweredByEl());
   container.appendChild(root);
@@ -576,6 +583,7 @@ function renderPassageAnalysis(
   }
 
   root.appendChild(saveButtonEl(container, originalText.slice(0, 50)));
+  root.appendChild(refreshButtonEl());
   root.appendChild(poweredByEl());
   container.appendChild(root);
 }
@@ -700,6 +708,35 @@ function poweredByEl(): HTMLElement {
   el.style.cssText = 'margin-top:4px;font-size:11px;opacity:0.4;text-align:right;';
   el.textContent = '✨ Risale AI Sözlük';
   return el;
+}
+
+function refreshButtonEl(): HTMLElement {
+  const wrapper = document.createElement('div');
+  wrapper.style.cssText = 'margin-top:6px;display:flex;align-items:center;gap:6px;';
+  const btn = document.createElement('button');
+  btn.style.cssText =
+    'display:inline-flex;align-items:center;gap:3px;padding:3px 10px;' +
+    'font-size:11px;border:1px solid var(--btn-border,rgba(128,128,128,0.25));' +
+    'border-radius:4px;background:transparent;cursor:pointer;' +
+    'color:var(--text-secondary,inherit);';
+  btn.textContent = '🔄 ' + _('Yenile');
+  btn.title = _('Refresh AI response');
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    window.dispatchEvent(new CustomEvent('risale:refresh-ai-dictionary'));
+    btn.textContent = '⏳ ' + _('Yenileniyor...');
+    btn.style.opacity = '0.6';
+    setTimeout(() => {
+      btn.textContent = '🔄 ' + _('Yenile');
+      btn.style.opacity = '1';
+    }, 3000);
+  });
+  const hint = document.createElement('span');
+  hint.style.cssText = 'font-size:10px;opacity:0.35;';
+  hint.textContent = _('If the AI response looks wrong, try refreshing.');
+  wrapper.appendChild(btn);
+  wrapper.appendChild(hint);
+  return wrapper;
 }
 
 function saveButtonEl(container: HTMLElement, word: string): HTMLElement {
